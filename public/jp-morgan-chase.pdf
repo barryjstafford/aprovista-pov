@@ -1,0 +1,261 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 5155 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(JPMorgan Chase & Co. ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(JPMorgan Chase & Co.) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Financial Services, Banking \(Global Universal Bank\)) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: ~$177B \(FY24 net revenue\)  | Employees: ~317,000  | HQ: New York, NY, USA) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Tableau, Analytics Cloud, Service Cloud, Agentforce \(Flex Credits) Tj
+-60 -707 Td
+60 694 Td
+(purchased Jan 2026\), Expert Services / Signature Success) Tj
+-60 -694 Td
+60 681 Td
+(Current Non-Salesforce Systems: Not confirmed [field verify with Naveen / Anish Bhimani org]) Tj
+-60 -681 Td
+60 668 Td
+(Relevant Open Opps: Tableau + Analytics + Platform renewal \( $16.4M \) | Expert Services FY27) Tj
+-60 -668 Td
+60 655 Td
+(New Business \( $1.0M \) | Tab CTO + Expertise Hours Renewal \( $1.0M \)) Tj
+-60 -655 Td
+60 642 Td
+(AFPI AE: Charlie Stuard) Tj
+-60 -642 Td
+60 629 Td
+(Sales Motion: Co-Sell with Agentforce Operations) Tj
+-60 -629 Td
+60 616 Td
+(Propensity to Buy: 88/100 ? T1 Pursue) Tj
+-60 -616 Td
+60 603 Td
+(Category) Tj
+-60 -603 Td
+60 590 Td
+(Score) Tj
+-60 -590 Td
+60 577 Td
+(Vertical fit & process complexity \(regulated banking at scale\)) Tj
+-60 -577 Td
+60 564 Td
+(12/12) Tj
+-60 -564 Td
+60 551 Td
+(Compliance / regulatory pressure \(Basel III, CCAR, Dodd-Frank, OCC\)) Tj
+-60 -551 Td
+60 538 Td
+(12/12) Tj
+-60 -538 Td
+60 525 Td
+(Existing Salesforce footprint \(Tableau, Analytics, Service, Agentforce\)) Tj
+-60 -525 Td
+60 512 Td
+(12/12) Tj
+-60 -512 Td
+60 499 Td
+(Executive AI mandate \(FINS CAB, Agentforce Flex Credit purchase\)) Tj
+-60 -499 Td
+60 486 Td
+(11/12) Tj
+-60 -486 Td
+60 473 Td
+(Stated intent in Apromore/Regrello \(CAB Nov 2025\)) Tj
+-60 -473 Td
+60 460 Td
+(11/12) Tj
+-60 -460 Td
+/FB 13 Tf
+60 447 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -447 Td
+/FN 10 Tf
+60 429 Td
+(1. Consumer Onboarding & KYC/AML Cycle Time. Chase Consumer & Community Banking onboards) Tj
+-60 -429 Td
+60 416 Td
+(millions of retail and small-business customers a year through a fragmented KYC/AML workflow) Tj
+-60 -416 Td
+60 403 Td
+(that spans branch, digital, and back-office review queues. AFPI mines the actual account-) Tj
+-60 -403 Td
+60 390 Td
+(opening event log to expose rework loops, manual escalations, and stalled cases that quietly) Tj
+-60 -390 Td
+60 377 Td
+(push regulatory SLAs. The play plugs directly into the existing Agentforce Flex Credit) Tj
+-60 -377 Td
+60 364 Td
+(footprint so Chase pays for outcomes, not implementation; the metric it moves is median) Tj
+-60 -364 Td
+60 351 Td
+(onboarding cycle time and first-touch-resolution rate. Engage Anish Bhimani \(CPO, Global) Tj
+-60 -351 Td
+60 338 Td
+(Banking\) ? already on the Salesforce FINS CAB and publicly flagged Apromore interest.) Tj
+-60 -338 Td
+60 325 Td
+(2. Commercial & Investment Bank Deal Lifecycle. The end-to-end path from pitch ? mandate ?) Tj
+-60 -325 Td
+60 312 Td
+(syndication ? booking spans dozens of internal systems and every desk runs its own variant.) Tj
+-60 -312 Td
+60 299 Td
+(AFPI reconstructs the real process from CRM, deal-management, and settlement events to show) Tj
+-60 -299 Td
+60 286 Td
+(where mandates leak, where legal review re-queues, and where booking breaks. Value framing) Tj
+-60 -286 Td
+60 273 Td
+(against TPL: the process-mining tier reveals the top three revenue-leak paths inside a quarter,) Tj
+-60 -273 Td
+60 260 Td
+(well under a single lost mandate. Metric: mandate-to-book cycle time and revenue leakage per) Tj
+-60 -260 Td
+60 247 Td
+(stage. Engage Sanoke Viswanathan \(CEO, International Consumer Bank / former CAO of CIB\) or the) Tj
+-60 -247 Td
+60 234 Td
+(CIB COO team.) Tj
+-60 -234 Td
+60 221 Td
+(3. Service Case Deflection for the $100M+ Service Cloud Estate. JPMC is a Service Cloud RED) Tj
+-60 -221 Td
+60 208 Td
+(account with active escalations and sensitive routing \(see internal Support Ops thread, Apr) Tj
+-60 -208 Td
+60 195 Td
+(2026\). AFPI mines the case-handling event log ? swivel-chair between agents, hold-and-resume,) Tj
+-60 -195 Td
+60 182 Td
+(escalation ping-pong ? and hands the highest-frequency broken flows straight to Agentforce for) Tj
+-60 -182 Td
+60 169 Td
+(automation. This is the fastest Compliance-Center wedge: same process log surfaces reg-mandated) Tj
+-60 -169 Td
+60 156 Td
+(complaint SLAs. Metric: cost-to-serve per case and % cases fully agent-resolved. Engage the) Tj
+-60 -156 Td
+60 143 Td
+(Service Cloud CSM already in #jpmorgan-support-csm-collabration .) Tj
+-60 -143 Td
+60 130 Td
+(4. Wholesale Payments & Wire Exception Handling. JPM Payments processes ~$10T/day; every wire) Tj
+-60 -130 Td
+60 117 Td
+(that lands in exception review is a manual cost and a customer-experience risk. AFPI mines the) Tj
+-60 -117 Td
+60 104 Td
+(exception queue to distinguish repeatable failure patterns \(data quality, sanctions hit, cutoff) Tj
+-60 -104 Td
+60 91 Td
+(timing\) from true one-offs, then routes the repeatable ones to Agentforce Operations. This is) Tj
+-60 -91 Td
+60 78 Td
+(the clearest 2-4 week time-to-value story vs. Celonis ? no PQL specialist, one no-code analyst) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 1255 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(inside Payments Ops can pilot. Metric: exception-clear rate per FTE and STP percentage. Engage) Tj
+-60 -782 Td
+60 769 Td
+(Takis Georgakopoulos \(Global Head of Payments\) or his COO.) Tj
+-60 -769 Td
+60 756 Td
+(5. Regulatory Reporting & Compliance Center Wedge. Basel III endgame, CCAR, LCR, and OCC) Tj
+-60 -756 Td
+60 743 Td
+(reporting all consume upstream operational data whose lineage is only partly documented. AFPI's) Tj
+-60 -743 Td
+60 730 Td
+(Compliance Center lays a process-lineage view over reporting workflows so audit and internal) Tj
+-60 -730 Td
+60 717 Td
+(risk see the same picture control functions do ? a defensible answer to "prove the process.") Tj
+-60 -717 Td
+60 704 Td
+(Metric: audit-finding count and reporting close-cycle days. Engage Elena Korablina \(Global) Tj
+-60 -704 Td
+60 691 Td
+(Controller\) or the Chief Data & Analytics Office.) Tj
+-60 -691 Td
+60 678 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -678 Td
+60 665 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -665 Td
+60 652 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: High) Tj
+-60 -652 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005533 00000 n 
+0000005678 00000 n 
+0000006985 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+7130
+%%EOF

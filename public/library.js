@@ -1,5 +1,6 @@
 const LIBRARY = [
-  { name: "United States Department of Defense", slug: "us-department-of-defense" }
+  { name: "United States Department of Defense", slug: "us-department-of-defense" },
+  { name: "JPMorgan Chase & Co.", slug: "jp-morgan-chase" }
 ];
 
 function toggleLib() {
