@@ -51,6 +51,14 @@
   .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
                  padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
   .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+    background: #f0f4ff; color: #032d60; text-decoration: none;
+    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
+  .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
+  .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
+    cursor: not-allowed; }
 </style>
 </head>
 <body>
@@ -114,7 +122,16 @@
   </ul>
   <p><strong>Recommended handoff:</strong> Share the Air Force Agentforce pilot signal with the Missionforce National Security team. Flag CDAO ADVANA as a long-term data-readiness indicator. Revisit when FedRAMP authorization is in progress.</p>
 
-  <hr>
+  <div class="actions">
+    <a href="/us-department-of-defense.pdf" target="_blank">Generate PDF</a>
+    <a href="https://salesforce.enterprise.slack.com/docs/T026QPGMQ/F0BE84QCAF7" target="_blank">Generate Slack Canvas</a>
+    <a href="https://aprovista-pov.vercel.app/us-department-of-defense">Generate Vercel Page</a>
+    <a href="mailto:?subject=AFPI%20POV%20%E2%80%94%20United%20States%20Department%20of%20Defense&body=Sharing%20an%20AFPI%20Point-of-View%20on%20the%20US%20Department%20of%20Defense%3A%0A%0Ahttps%3A%2F%2Faprovista-pov.vercel.app%2Fus-department-of-defense%0A%0AScore%3A%2024%2F100%20(T4%20Deprioritize)%0A%0APrepared%20by%20AproVista.">Generate Customer Email (Beta)</a>
+    <span class="disabled">Generate Proposal Template (coming soon)</span>
+    <a href="https://salesforce.enterprise.slack.com/archives/C09LK6XLXAL" target="_blank">Deal Support Request</a>
+    <span class="disabled">Deeper Dive POV (coming soon)</span>
+  </div>
+
   <footer class="fine">
     Prepared by AproVista &nbsp;|&nbsp; Created by
     <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
