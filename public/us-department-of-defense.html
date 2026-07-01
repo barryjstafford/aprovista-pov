@@ -7,8 +7,25 @@
 <style>
   body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
          color: #1a1a1a; line-height: 1.65; background: #fff; }
-  .banner { background: #032d60; padding: 18px 0; text-align: center; }
-  .banner img { max-height: 110px; max-width: 880px; display: block; margin: 0 auto; }
+  .banner { background: #032d60; padding: 16px 0; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; }
+  .banner img { height: 72px; width: auto; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: rgba(255,255,255,.15); color: #fff;
+             border: 1px solid rgba(255,255,255,.35); padding: 8px 14px;
+             border-radius: 6px; cursor: pointer; font-size: .88em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: rgba(255,255,255,.25); }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 260px; z-index: 100; }
+  .lib-menu.open { display: block; }
+  .lib-menu a { display: block; padding: 9px 16px; color: #032d60;
+                text-decoration: none; font-size: .88em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-menu a:last-child { border-bottom: none; }
+  .lib-menu a:hover { background: #f0f4ff; }
   main { max-width: 880px; margin: 32px auto; padding: 0 28px; }
   h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 10px;
        margin-bottom: 18px; font-size: 2em; }
@@ -26,24 +43,35 @@
   .fine { text-align: center; color: #aaa; font-size: .75em;
           margin-top: 48px; padding-top: 14px; border-top: 1px solid #eee; }
   .fine a { color: #aaa; }
-  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100; padding: 14px 18px;
-                 border-radius: 0 6px 6px 0; margin: 18px 0; }
+  .snapshot { padding-left: 24px; line-height: 1.85; margin-bottom: 8px; }
+  .snapshot p { margin: 2px 0; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 14px 18px; border-radius: 0 6px 6px 0; margin: 18px 0; }
   .nurture-box strong { color: #e65100; }
 </style>
 </head>
 <body>
-<header class="banner"><img src="/banner-logo.png" alt="AproVista"></header>
+<header class="banner">
+  <div class="banner-inner">
+    <img src="/banner-logo.png" alt="AproVista">
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <div class="lib-menu" id="libMenu"></div>
+    </div>
+  </div>
+</header>
 <main>
   <h1>United States Department of Defense</h1>
 
-  <p>
-    &nbsp;&nbsp;&nbsp;&nbsp;Public Sector, Federal Defense &amp; National Security<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;Budget: ~$886B (FY2025) &nbsp;|&nbsp; Employees: 2,870,000 &nbsp;|&nbsp; HQ: Washington, DC, US<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<strong>Current Salesforce Products:</strong> Sales Cloud (Government Edition), Gov Cloud Premier Success, Service Cloud Portal, Force.com Unlimited<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<strong>Current Non-Salesforce Systems:</strong> Not confirmed — likely includes SAP ERP, Oracle FBMS, legacy DoD ERP systems (GFEBS, LMP, GCSS-Army) [Unconfirmed — field verify with CIO office]<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<strong>Relevant Open Opps:</strong> <a href="https://org62.my.salesforce.com/006ed00000QOHLjAAP">CDAO ADVANA data modernization ($280K)</a><br>
-    &nbsp;&nbsp;&nbsp;&nbsp;<strong>AFPI AE:</strong> No AFPI AE assigned — Public Sector channel required &nbsp;|&nbsp; <strong>Sales Motion:</strong> Co-Sell with Agentforce Operations (via Missionforce National Security team)
-  </p>
+  <div class="snapshot">
+    <p><strong>Public Sector, Federal Defense &amp; National Security</strong></p>
+    <p><strong>Budget:</strong> ~$886B (FY2025) &nbsp;|&nbsp; <strong>Employees:</strong> 2,870,000 &nbsp;|&nbsp; <strong>HQ:</strong> Washington, DC, US</p>
+    <p><strong>Current Salesforce Products:</strong> Sales Cloud (Government Edition), Gov Cloud Premier Success, Service Cloud Portal, Force.com Unlimited</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with CIO office]</p>
+    <p><strong>Relevant Open Opps:</strong> <a href="https://org62.my.salesforce.com/006ed00000QOHLjAAP">CDAO ADVANA data modernization ($280K)</a></p>
+    <p><strong>AFPI AE:</strong> No AFPI AE assigned — Public Sector channel required</p>
+    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations (via Missionforce National Security team)</p>
+  </div>
 
   <hr>
 
@@ -72,7 +100,7 @@
 
   <p><strong>1. No AFPI territory coverage.</strong> The AFPI AE map covers commercial North America, EMEA, ANZ, and APAC. There is no Public Sector AE. Any engagement must be routed through Salesforce's Missionforce National Security organization before a commercial AFPI play can be attached. [Org62]</p>
 
-  <p><strong>2. Government cloud authorization barrier.</strong> DoD operates on US Government Cloud with FedRAMP High and IL4/IL5 classification requirements. AFPI would need a separate FedRAMP authorization to be deployed in this environment. This is a multi-year certification path. [Web]</p>
+  <p><strong>2. Government cloud authorization barrier.</strong> DoD operates on US Government Cloud with FedRAMP High and IL4/IL5 classification requirements. AFPI would need a separate FedRAMP authorization to be deployed in this environment. This is a multi-year certification path, not a sales cycle blocker to solve in a quarter. [Web]</p>
 
   <p><strong>3. Federal procurement model.</strong> All active Org62 opps for this account are Informatica/INFA data platform deals running through federal contracting vehicles (GWACs, ELAs). The commercial AFPI GTM motion — direct AE engagement with a VP Transformation — does not translate to FAR-compliant federal acquisition. [Org62]</p>
 
@@ -101,5 +129,6 @@
     &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: Med
   </footer>
 </main>
+<script src="/library.js"></script>
 </body>
 </html>
