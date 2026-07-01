@@ -1,0 +1,297 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 4855 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(Architectural Graphics, Inc. ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(Architectural Graphics, Inc.) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Manufacturing, Signage & Wayfinding \(Architectural Branding\)) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: ~$126M  | Employees: ~785  | HQ: Virginia Beach, VA, USA) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Sales Cloud \(80 SFA\), Service Cloud \(43 Call Center\), Field) Tj
+-60 -707 Td
+60 694 Td
+(Service \(150 Dispatcher + 175 Contractor logins in-flight\), Platform \(200 licenses\), MuleSoft) Tj
+-60 -694 Td
+60 681 Td
+(Anypoint, Slack \(expansion pending\), Marketing Cloud \(advanced pending\)) Tj
+-60 -681 Td
+60 668 Td
+(Current Non-Salesforce Systems: Not confirmed [field verify with Olivia Stanziale \(SF AE\)]) Tj
+-60 -668 Td
+60 655 Td
+(Relevant Open Opps: Field Service Swap +325 licenses \( $240K \) | SFA + Call Center + Platform) Tj
+-60 -655 Td
+60 642 Td
+(Renewal \( $219K \) | Agentforce \( $120K \) | MuleSoft Anypoint Add-On \( $70K \) | Slack +300 \() Tj
+-60 -642 Td
+60 629 Td
+($54K \) | Marketing Cloud Advanced \( $25K \)) Tj
+-60 -629 Td
+60 616 Td
+(AFPI AE: Charlie Stuard) Tj
+-60 -616 Td
+60 603 Td
+(Sales Motion: Co-Sell with Agentforce Operations) Tj
+-60 -603 Td
+60 590 Td
+(Propensity to Buy: 50/100 ? T3 Nurture) Tj
+-60 -590 Td
+60 577 Td
+(Category) Tj
+-60 -577 Td
+60 564 Td
+(Score) Tj
+-60 -564 Td
+60 551 Td
+(Salesforce install-base breadth \(7 clouds active, 6 open opps\)) Tj
+-60 -551 Td
+60 538 Td
+(12/15) Tj
+-60 -538 Td
+60 525 Td
+(Executive AI mandate \(Agentforce opp live at Stage 02\)) Tj
+-60 -525 Td
+60 512 Td
+(10/15) Tj
+-60 -512 Td
+60 499 Td
+(Deal timing \(Field Service swap in Stage 04\)) Tj
+-60 -499 Td
+60 486 Td
+(8/10) Tj
+-60 -486 Td
+60 473 Td
+(Vertical fit & process complexity \(mid-size manufacturer\)) Tj
+-60 -473 Td
+60 460 Td
+(7/15) Tj
+-60 -460 Td
+60 447 Td
+(Red-flag deductions: SDR/BDR "Do Not Contact" flag; small AFPI ARR ceiling) Tj
+-60 -447 Td
+60 434 Td
+(?7) Tj
+-60 -434 Td
+60 421 Td
+(Why Not Now) Tj
+-60 -421 Td
+60 408 Td
+(AGI is a full-stack Salesforce customer expanding steadily across Sales, Service, Field) Tj
+-60 -408 Td
+60 395 Td
+(Service, MuleSoft, Slack, and Marketing Cloud ? but three signals put it in T3 Nurture rather) Tj
+-60 -395 Td
+60 382 Td
+(than T1/T2 Pursue:) Tj
+-60 -382 Td
+60 369 Td
+(The Org62 account carries an "SDR/BDR Do Not Contact" flag. The account team has explicitly) Tj
+-60 -369 Td
+60 356 Td
+(protected this relationship. Independent AFPI outreach is off-limits; the wedge has to come) Tj
+-60 -356 Td
+60 343 Td
+(through Olivia Stanziale \(the account owner\).) Tj
+-60 -343 Td
+60 330 Td
+(Total addressable AFPI ARR is modest. With ~$126M revenue and total won ACV of only ~$440K to) Tj
+-60 -330 Td
+60 317 Td
+(date, the process-mining tier that fits AGI's price point is entry-level TPL. Big-ticket AFPI) Tj
+-60 -317 Td
+60 304 Td
+(investments are not realistic without a bigger operational transformation program.) Tj
+-60 -304 Td
+60 291 Td
+(The Agentforce opportunity is still at Stage 02 \(Determining Problem/Impact/Ideal\). AFPI's) Tj
+-60 -291 Td
+60 278 Td
+(fastest wedge is "prove the Agentforce ROI before the check clears" ? but the Agentforce deal) Tj
+-60 -278 Td
+60 265 Td
+(itself hasn't matured enough for that story to land yet. The right moment is when Agentforce) Tj
+-60 -265 Td
+60 252 Td
+(moves to Stage 04/05.) Tj
+-60 -252 Td
+/FB 13 Tf
+60 239 Td
+(What Would Need to Change to Move to T2) Tj
+-60 -239 Td
+/FN 10 Tf
+60 221 Td
+(Agentforce opp advances to Stage 04 or 05. When this opp gets into "Confirming Value with) Tj
+-60 -221 Td
+60 208 Td
+(Power," AFPI becomes the natural discovery layer: mine the actual case/dispatch/service event) Tj
+-60 -208 Td
+60 195 Td
+(log to prove which flows Agentforce should own first. That is the moment to introduce AFPI to) Tj
+-60 -195 Td
+60 182 Td
+(Olivia ? as an accelerator on the deal she is already running, not a standalone play.) Tj
+-60 -182 Td
+60 169 Td
+(Field Service swap closes \($240K opp at Stage 04\). Once 150 dispatchers + 175 contractor logins) Tj
+-60 -169 Td
+60 156 Td
+(are live, AGI has a rich Field Service event stream on day one ? perfect fuel for AFPI process) Tj
+-60 -156 Td
+60 143 Td
+(mining on scheduling, first-time-fix, and technician utilization. The follow-on story writes) Tj
+-60 -143 Td
+60 130 Td
+(itself.) Tj
+-60 -130 Td
+60 117 Td
+(Marketing Cloud + Slack + MuleSoft all closing. If the four small opps \($25K MC, $54K Slack,) Tj
+-60 -117 Td
+60 104 Td
+($70K MuleSoft, $15K renewal automation\) all close in the same fiscal, AGI becomes a "full 360") Tj
+-60 -104 Td
+60 91 Td
+(reference account and the CIO conversation shifts from feature-buying to operational) Tj
+-60 -91 Td
+60 78 Td
+(transformation ? which is when AFPI's cross-cloud process story starts to matter.) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 2238 >>
+stream
+BT
+/FB 13 Tf
+60 782 Td
+(Signals Worth Monitoring) Tj
+-60 -782 Td
+/FN 10 Tf
+60 764 Td
+(Agentforce opp stage advancement ? watch 006ed00000b4KPRAA2 weekly. When it hits Stage 04,) Tj
+-60 -764 Td
+60 751 Td
+(engage.) Tj
+-60 -751 Td
+60 738 Td
+(Field Service go-live signal from CSG ? event-log capture starts the day the SFS Dispatcher) Tj
+-60 -738 Td
+60 725 Td
+(instance goes live. AFPI needs those logs.) Tj
+-60 -725 Td
+60 712 Td
+(Job postings on agi.net for VP Operations, VP Digital Transformation, Chief Customer Officer,) Tj
+-60 -712 Td
+60 699 Td
+(or "Process Excellence" titles ? those hires reset the buying committee.) Tj
+-60 -699 Td
+60 686 Td
+(Renewal negotiation temperature on the $219K SFA + Call Center + Platform renewal \(close date) Tj
+-60 -686 Td
+60 673 Td
+(FY28-01-31\) ? if AGI is expanding at renewal, that's the moment to attach AFPI as an) Tj
+-60 -673 Td
+60 660 Td
+(SES/Signature Success deliverable.) Tj
+-60 -660 Td
+60 647 Td
+(M&A signals ? the wayfinding/signage manufacturing space is consolidating; if AGI acquires or) Tj
+-60 -647 Td
+60 634 Td
+(is acquired, process-integration pain becomes an immediate AFPI wedge.) Tj
+-60 -634 Td
+/FB 13 Tf
+60 621 Td
+(Recommended Cadence & First Play) Tj
+-60 -621 Td
+/FN 10 Tf
+60 603 Td
+(Quarterly touchpoint via Olivia Stanziale only. Do not initiate direct outreach to AGI given) Tj
+-60 -603 Td
+60 590 Td
+(the DNC flag. Suggested first move: send Olivia a one-pager "AFPI on top of the AGI Agentforce) Tj
+-60 -590 Td
+60 577 Td
+(deal" positioning AFPI as a two-week diagnostic that de-risks her Agentforce close. Ask for one) Tj
+-60 -577 Td
+60 564 Td
+(30-minute call with her when the Agentforce opp advances to Stage 04. Economic buyer is likely) Tj
+-60 -564 Td
+60 551 Td
+(the CIO or COO; the champion play is with the Field Service program owner who is closest to the) Tj
+-60 -551 Td
+60 538 Td
+(event logs.) Tj
+-60 -538 Td
+60 525 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -525 Td
+60 512 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -512 Td
+60 499 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-07-01  |  Confidence: Med) Tj
+-60 -499 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005233 00000 n 
+0000005378 00000 n 
+0000007668 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+7813
+%%EOF

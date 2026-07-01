@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Architectural Graphics, Inc. — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 260px; z-index: 100; }
+  .lib-menu.open { display: block; }
+  .lib-menu a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-menu a:last-child { border-bottom: none; }
+  .lib-menu a:hover { background: #f0f4ff; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  h3 { color: #032d60; margin: 1em 0 .3em; font-size: 1.05em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
+  th { background: #f0f4ff; font-weight: 600; }
+  td:last-child { text-align: right; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 4px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+    background: #f0f4ff; color: #032d60; text-decoration: none;
+    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
+  .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
+  .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
+    cursor: not-allowed; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <img src="/banner-logo.png" alt="AproVista">
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <div class="lib-menu" id="libMenu"></div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Architectural Graphics, Inc.</h1>
+  <div class="snapshot">
+    <p><strong>Manufacturing, Signage &amp; Wayfinding (Architectural Branding)</strong></p>
+    <p><strong>Revenue:</strong> ~$126M &nbsp;|&nbsp; <strong>Employees:</strong> ~785 &nbsp;|&nbsp; <strong>HQ:</strong> Virginia Beach, VA, USA</p>
+    <p><strong>Current Salesforce Products:</strong> Sales Cloud (80 SFA), Service Cloud (43 Call Center), Field Service (150 Dispatcher + 175 Contractor logins in-flight), Platform (200 licenses), MuleSoft Anypoint, Slack (expansion pending), Marketing Cloud (advanced pending)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Olivia+Stanziale+Salesforce">Olivia Stanziale</a> (SF AE)]</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Field Service Swap +325 licenses (<a href="https://org62.my.salesforce.com/006ed00000blAt3AAE">$240K</a>) | SFA + Call Center + Platform Renewal (<a href="https://org62.my.salesforce.com/006ed000008RlW5AAK">$219K</a>) | Agentforce (<a href="https://org62.my.salesforce.com/006ed00000b4KPRAA2">$120K</a>) | MuleSoft Anypoint Add-On (<a href="https://org62.my.salesforce.com/006ed00000bka6PAAQ">$70K</a>) | Slack +300 (<a href="https://org62.my.salesforce.com/006ed00000dLOaLAAW">$54K</a>) | Marketing Cloud Advanced (<a href="https://org62.my.salesforce.com/006ed00000bkSnBAAU">$25K</a>)</p>
+    <p><strong>AFPI AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details>
+    <summary>Propensity to Buy: 50/100 — T3 Nurture</summary>
+    <table>
+      <tr><th>Category</th><th>Score</th></tr>
+      <tr><td>Salesforce install-base breadth (7 clouds active, 6 open opps)</td><td>12/15</td></tr>
+      <tr><td>Executive AI mandate (Agentforce opp live at Stage 02)</td><td>10/15</td></tr>
+      <tr><td>Deal timing (Field Service swap in Stage 04)</td><td>8/10</td></tr>
+      <tr><td>Vertical fit &amp; process complexity (mid-size manufacturer)</td><td>7/15</td></tr>
+      <tr><td>Red-flag deductions: SDR/BDR "Do Not Contact" flag; small AFPI ARR ceiling</td><td>−7</td></tr>
+    </table>
+  </details>
+
+  <div class="nurture-box">
+    <strong>Why Not Now</strong>
+    <p>AGI is a full-stack Salesforce customer expanding steadily across Sales, Service, Field Service, MuleSoft, Slack, and Marketing Cloud — but three signals put it in T3 Nurture rather than T1/T2 Pursue:</p>
+    <ol>
+      <li><strong>The Org62 account carries an "SDR/BDR Do Not Contact" flag.</strong> The account team has explicitly protected this relationship. Independent AFPI outreach is off-limits; the wedge has to come through <a href="https://www.linkedin.com/search/results/people/?keywords=Olivia+Stanziale+Salesforce">Olivia Stanziale</a> (the account owner).</li>
+      <li><strong>Total addressable AFPI ARR is modest.</strong> With ~$126M revenue and total won ACV of only ~$440K to date, the process-mining tier that fits AGI's price point is entry-level TPL. Big-ticket AFPI investments are not realistic without a bigger operational transformation program.</li>
+      <li><strong>The Agentforce opportunity is still at Stage 02 (Determining Problem/Impact/Ideal).</strong> AFPI's fastest wedge is "prove the Agentforce ROI before the check clears" — but the Agentforce deal itself hasn't matured enough for that story to land yet. The right moment is when Agentforce moves to Stage 04/05.</li>
+    </ol>
+  </div>
+
+  <h2>What Would Need to Change to Move to T2</h2>
+  <ul>
+    <li><strong>Agentforce opp advances to Stage 04 or 05.</strong> When <a href="https://org62.my.salesforce.com/006ed00000b4KPRAA2">this opp</a> gets into "Confirming Value with Power," AFPI becomes the natural discovery layer: mine the actual case/dispatch/service event log to prove which flows Agentforce should own first. That is the moment to introduce AFPI to Olivia — as an accelerator on the deal she is already running, not a standalone play.</li>
+    <li><strong>Field Service swap closes ($240K opp at Stage 04).</strong> Once 150 dispatchers + 175 contractor logins are live, AGI has a rich Field Service event stream on day one — perfect fuel for AFPI process mining on scheduling, first-time-fix, and technician utilization. The follow-on story writes itself.</li>
+    <li><strong>Marketing Cloud + Slack + MuleSoft all closing.</strong> If the four small opps ($25K MC, $54K Slack, $70K MuleSoft, $15K renewal automation) all close in the same fiscal, AGI becomes a "full 360" reference account and the CIO conversation shifts from feature-buying to operational transformation — which is when AFPI's cross-cloud process story starts to matter.</li>
+  </ul>
+
+  <h2>Signals Worth Monitoring</h2>
+  <ul>
+    <li><strong>Agentforce opp stage advancement</strong> — watch <a href="https://org62.my.salesforce.com/006ed00000b4KPRAA2">006ed00000b4KPRAA2</a> weekly. When it hits Stage 04, engage.</li>
+    <li><strong>Field Service go-live signal from CSG</strong> — event-log capture starts the day the SFS Dispatcher instance goes live. AFPI needs those logs.</li>
+    <li><strong>Job postings on agi.net</strong> for VP Operations, VP Digital Transformation, Chief Customer Officer, or "Process Excellence" titles — those hires reset the buying committee.</li>
+    <li><strong>Renewal negotiation temperature</strong> on the <a href="https://org62.my.salesforce.com/006ed000008RlW5AAK">$219K SFA + Call Center + Platform renewal</a> (close date FY28-01-31) — if AGI is expanding at renewal, that's the moment to attach AFPI as an SES/Signature Success deliverable.</li>
+    <li><strong>M&amp;A signals</strong> — the wayfinding/signage manufacturing space is consolidating; if AGI acquires or is acquired, process-integration pain becomes an immediate AFPI wedge.</li>
+  </ul>
+
+  <h2>Recommended Cadence &amp; First Play</h2>
+  <p>Quarterly touchpoint via Olivia Stanziale only. Do <em>not</em> initiate direct outreach to AGI given the DNC flag. Suggested first move: send Olivia a one-pager "AFPI on top of the AGI Agentforce deal" positioning AFPI as a two-week diagnostic that de-risks her Agentforce close. Ask for one 30-minute call with her when the Agentforce opp advances to Stage 04. Economic buyer is likely the CIO or COO; the champion play is with the Field Service program owner who is closest to the event logs.</p>
+
+  <div class="actions">
+    <a href="/agi-architectural-graphics.pdf" target="_blank">Generate PDF</a>
+    <a href="https://salesforce.enterprise.slack.com/docs/T026QPGMQ/F0BE1NCRGCX" target="_blank">Generate Slack Canvas</a>
+    <a href="https://aprovista-pov.vercel.app/agi-architectural-graphics">Generate Vercel Page</a>
+    <a href="mailto:?subject=AFPI%20POV%20%E2%80%94%20Architectural%20Graphics%2C%20Inc.&body=https%3A%2F%2Faprovista-pov.vercel.app%2Fagi-architectural-graphics">Generate Customer Email (Beta)</a>
+    <span class="disabled">Generate Proposal Template (coming soon)</span>
+    <a href="https://salesforce-internal.slack.com/archives/C09LK6XLXAL" target="_blank">Deal Support Request</a>
+    <span class="disabled">Deeper Dive POV (coming soon)</span>
+  </div>
+  <footer class="fine">
+    Prepared by AproVista &nbsp;|&nbsp; Created by
+    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
+    &nbsp;|&nbsp; 2026-07-01 &nbsp;|&nbsp; Confidence: Med
+  </footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

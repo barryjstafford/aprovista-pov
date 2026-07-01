@@ -1,4 +1,5 @@
 const LIBRARY = [
+  { name: "Architectural Graphics, Inc.", slug: "agi-architectural-graphics" },
   { name: "Alfa Laval Corporate AB", slug: "alfa-laval" },
   { name: "Australian Unity Limited", slug: "australian-unity" },
   { name: "CenterPoint Energy, Inc.", slug: "centerpoint-energy" },
