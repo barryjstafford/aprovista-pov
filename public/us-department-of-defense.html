@@ -6,11 +6,13 @@
 <title>United States Department of Defense — AFPI POV</title>
 <style>
   body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
-         color: #1a1a1a; line-height: 1.5; background: #fff; }
-  .banner { background: #032d60; padding: 14px 0; }
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: linear-gradient(135deg, #00082a 0%, #001558 100%);
+            padding: 10px 0; }
   .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
                   display: flex; align-items: center; justify-content: space-between; }
-  .banner img { height: 64px; width: auto; }
+  .banner img { height: 66px; width: 152px; object-fit: cover;
+                object-position: top left; flex-shrink: 0; display: block; }
   .lib-wrap { position: relative; }
   .lib-btn { background: rgba(255,255,255,.15); color: #fff;
              border: 1px solid rgba(255,255,255,.35); padding: 7px 13px;
@@ -26,30 +28,31 @@
                 border-bottom: 1px solid #f0f4ff; }
   .lib-menu a:last-child { border-bottom: none; }
   .lib-menu a:hover { background: #f0f4ff; }
-  main { max-width: 880px; margin: 22px auto; padding: 0 28px; }
-  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 8px;
-       margin: 0 0 12px; font-size: 1.9em; }
-  h2 { color: #032d60; margin: 1.2em 0 .35em; font-size: 1.25em; }
-  p { margin: .5em 0; }
-  ul { margin: .4em 0 .6em; padding-left: 22px; }
-  ul li { margin: .2em 0; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
   strong { color: #032d60; }
   a { color: #0070d2; }
-  table { border-collapse: collapse; width: 100%; margin: 6px 0; }
-  th, td { padding: 5px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
   th { background: #f0f4ff; font-weight: 600; }
   td:last-child { text-align: right; }
-  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 8px 14px;
-            margin: 6px 0; background: #f9fbff; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 4px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
-  hr { border: none; border-top: 1px solid #dde3f0; margin: 14px 0; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
   .fine { text-align: center; color: #aaa; font-size: .75em;
-          margin-top: 28px; padding-top: 10px; border-top: 1px solid #eee; }
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
   .fine a { color: #aaa; }
-  .snapshot { padding-left: 20px; line-height: 1.4; margin-bottom: 4px; }
-  .snapshot p { margin: 1px 0; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
   .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
-                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+                 padding: 6px 14px; border-radius: 0 6px 6px 0; margin: 8px 0; }
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
@@ -79,7 +82,7 @@
     <p><strong>Budget:</strong> ~$886B (FY2025) &nbsp;|&nbsp; <strong>Employees:</strong> 2,870,000 &nbsp;|&nbsp; <strong>HQ:</strong> Washington, DC, US</p>
     <p><strong>Current Salesforce Products:</strong> Sales Cloud (Government Edition), Gov Cloud Premier Success, Service Cloud Portal, Force.com Unlimited</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with CIO office]</p>
-    <p><strong>Relevant Open Opps:</strong> <a href="https://org62.my.salesforce.com/006ed00000QOHLjAAP">CDAO ADVANA data modernization ($280K)</a></p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> <a href="https://org62.my.salesforce.com/006ed00000QOHLjAAP">CDAO ADVANA data modernization ($280K)</a></p>
     <p><strong>AFPI AE:</strong> No AFPI AE assigned — Public Sector channel required</p>
     <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations (via Missionforce National Security team)</p>
   </div>
