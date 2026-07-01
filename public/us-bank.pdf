@@ -1,0 +1,276 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 5117 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(U.S. Bancorp ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(U.S. Bancorp) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Financial Services, Banking \(Super-Regional Universal Bank\)) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: ~$27B \(FY24 net revenue\)  | Employees: ~70,000  | HQ: Minneapolis, MN, USA) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Sales Cloud \(Own SFA, 33-instance renewal in negotiate\), Service) Tj
+-60 -707 Td
+60 694 Td
+(Cloud, Tableau, Data Cloud \(Enterprise sizing in flight\), Agentforce \(live in contact center ?) Tj
+-60 -694 Td
+60 681 Td
+(Slalom-delivered production use case\), CSG / Expert Services) Tj
+-60 -681 Td
+60 668 Td
+(Current Non-Salesforce Systems: Pega, ServiceNow \(both being actively displaced per open Call-) Tj
+-60 -668 Td
+60 655 Td
+(Center Takeout opp\), Informatica MDM \(co-sell IULA in Validating Benefits\)) Tj
+-60 -655 Td
+60 642 Td
+(Relevant Open Opps: SFA Renewal 33 \( $20.0M \) | Enterprise DC Upside AELA \( $4.95M \) | Agentic) Tj
+-60 -642 Td
+60 629 Td
+(Transformation Services \( $3.7M \) | Call Center Pega/Snow Takeout + AF + Data Cloud \( $2.07M \)) Tj
+-60 -629 Td
+60 616 Td
+(| Data Cloud Conservative Sizing \( $1.98M \) | WCIB Agentforce Upside \( $1.6M \) | Data360 SELA) Tj
+-60 -616 Td
+60 603 Td
+(Upside \( $1.5M \)) Tj
+-60 -603 Td
+60 590 Td
+(AFPI AE: Charlie Stuard) Tj
+-60 -590 Td
+60 577 Td
+(Sales Motion: Co-Sell with Agentforce Operations) Tj
+-60 -577 Td
+60 564 Td
+(Propensity to Buy: 92/100 ? T1 Pursue) Tj
+-60 -564 Td
+60 551 Td
+(Category) Tj
+-60 -551 Td
+60 538 Td
+(Score) Tj
+-60 -538 Td
+60 525 Td
+(Existing SF footprint & open pipe \($48M+ across 15+ opps\)) Tj
+-60 -525 Td
+60 512 Td
+(12/12) Tj
+-60 -512 Td
+60 499 Td
+(Active Agentforce reference \(contact center in production, DF25 keynote\)) Tj
+-60 -499 Td
+60 486 Td
+(12/12) Tj
+-60 -486 Td
+60 473 Td
+(Pega + ServiceNow displacement in flight \(classic AFPI wedge\)) Tj
+-60 -473 Td
+60 460 Td
+(12/12) Tj
+-60 -460 Td
+60 447 Td
+(Regulatory pressure \(Basel III, CCAR, CFPB, OCC\)) Tj
+-60 -447 Td
+60 434 Td
+(11/12) Tj
+-60 -434 Td
+60 421 Td
+(Executive AI mandate \("Agentic Transformation Services" is a live opp\)) Tj
+-60 -421 Td
+60 408 Td
+(11/12) Tj
+-60 -408 Td
+/FB 13 Tf
+60 395 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -395 Td
+/FN 10 Tf
+60 377 Td
+(1. Contact-Center Pega/ServiceNow Displacement ? Prove the "As-Is." USB has an active $2.07M) Tj
+-60 -377 Td
+60 364 Td
+(Pega/Snow takeout opp that pairs Agentforce with Data Cloud, and Slalom already has an) Tj
+-60 -364 Td
+60 351 Td
+(Agentforce contact-center use case running in production. AFPI closes the loop by mining the) Tj
+-60 -351 Td
+60 338 Td
+(actual Pega/SNow event logs ? how calls really move, where holds and transfers eat AHT, which) Tj
+-60 -338 Td
+60 325 Td
+(paths the Agentforce agent needs to own first. This is the "prove the takeout ROI before the) Tj
+-60 -325 Td
+60 312 Td
+(check clears" wedge; no PQL specialist, one Ops analyst pilots it inside two weeks. Metric:) Tj
+-60 -312 Td
+60 299 Td
+(AHT, transfer rate, first-contact resolution. Engage the CCB CIO / VP Contact Center and pull) Tj
+-60 -299 Td
+60 286 Td
+(in the Slalom delivery lead already on-site.) Tj
+-60 -286 Td
+60 273 Td
+(2. Wealth & Investment \(WCIB\) Advisor Onboarding + Client Servicing. Scott Ford \(EVP, President) Tj
+-60 -273 Td
+60 260 Td
+(Wealth Management\) sat at the September 2025 Salesforce AI/Data CRO dinner in NYC, and there is) Tj
+-60 -260 Td
+60 247 Td
+(a live $1.6M WCIB Agentforce upside . Wealth onboarding is a compliance-heavy multi-desk) Tj
+-60 -247 Td
+60 234 Td
+(process \(KYC ? suitability ? account funding ? advisor handoff\) where every stalled case delays) Tj
+-60 -234 Td
+60 221 Td
+(revenue and risks a FINRA finding. AFPI mines the actual advisor workbench event log to expose) Tj
+-60 -221 Td
+60 208 Td
+(rework, then hands the top three broken variants to Agentforce Operations. Metric: advisor) Tj
+-60 -208 Td
+60 195 Td
+(onboarding cycle time and % accounts funded within 5 business days. Engage Scott Ford .) Tj
+-60 -195 Td
+60 182 Td
+(3. Enterprise Data + MDM Lineage Wedge with Informatica. Two large Informatica MDM co-sell opps) Tj
+-60 -182 Td
+60 169 Td
+(are in "Validating Benefits & Value" ? $3.55M and $1.52M ? plus a $1.5M Data360 SELA . AFPI) Tj
+-60 -169 Td
+60 156 Td
+(overlays a process-lineage view on the MDM ingestion and stewardship workflow so USB can prove) Tj
+-60 -156 Td
+60 143 Td
+("the customer record survived the pipeline correctly" to internal risk and OCC examiners. This) Tj
+-60 -143 Td
+60 130 Td
+(differentiates against Celonis, which treats MDM as an outside-in analytics problem, not a) Tj
+-60 -130 Td
+60 117 Td
+(process problem. Metric: data-quality-driven rework hours and audit-finding count. Engage the) Tj
+-60 -117 Td
+60 104 Td
+(Chief Data Officer / EDM lead.) Tj
+-60 -104 Td
+60 91 Td
+(4. Wholesale Payments & Elan Financial Merchant Onboarding. USB owns Elan Financial Services) Tj
+-60 -91 Td
+60 78 Td
+(\(merchant / prepaid\) and processes a very large merchant-onboarding + dispute-management book.) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 1799 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(AFPI mines the merchant-onboarding event log to distinguish repeatable underwriting-return) Tj
+-60 -782 Td
+60 769 Td
+(loops from true one-offs, then routes the repeatable ones to Agentforce Operations. Value) Tj
+-60 -769 Td
+60 756 Td
+(framing against TPL: process-mining tier reveals top three onboarding-drop paths within a) Tj
+-60 -756 Td
+60 743 Td
+(quarter, meaningfully under the cost of a single lost mid-market merchant. Metric: application-) Tj
+-60 -743 Td
+60 730 Td
+(to-boarded cycle time and % applications requiring re-work. Engage Shailesh Kotwal \(Vice Chair,) Tj
+-60 -730 Td
+60 717 Td
+(Payment Services\) or the Elan COO.) Tj
+-60 -717 Td
+60 704 Td
+(5. Regulatory Reporting & Compliance Center ? Category-II Bank Wedge. USB is Category II under) Tj
+-60 -704 Td
+60 691 Td
+(Basel III, so CCAR, LCR, LCR-daily, and OCC exam artifacts all consume upstream operational) Tj
+-60 -691 Td
+60 678 Td
+(data whose process lineage matters. AFPI's Compliance Center gives audit and internal risk a) Tj
+-60 -678 Td
+60 665 Td
+(defensible "prove the process" view over reporting workflows. This lands as the natural) Tj
+-60 -665 Td
+60 652 Td
+(companion to the $4.95M DC Upside AELA ? same data, one more use case that pays back inside the) Tj
+-60 -652 Td
+60 639 Td
+(quarter. Metric: reporting-cycle days and manual-reconciliation FTE. Engage the Controller /) Tj
+-60 -639 Td
+60 626 Td
+(Corporate Audit lead.) Tj
+-60 -626 Td
+60 613 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -613 Td
+60 600 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -600 Td
+60 587 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: High) Tj
+-60 -587 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005495 00000 n 
+0000005640 00000 n 
+0000007491 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+7636
+%%EOF
