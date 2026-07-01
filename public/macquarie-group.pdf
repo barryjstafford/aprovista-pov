@@ -1,0 +1,264 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 4844 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(Macquarie Group Limited ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(Macquarie Group Limited) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Financial Services, Diversified Banking & Asset Management) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: A$17.2B \(FY25\)  | Employees: ~20,600  | HQ: Sydney, Australia) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Financial Services Cloud, Sales Cloud \(Full CRM\), Org Permission) Tj
+-60 -707 Td
+60 694 Td
+(licensing [Org62]) Tj
+-60 -694 Td
+60 681 Td
+(Current Non-Salesforce Systems: Not confirmed [field verify with Nicole Sorbara \(COO\)]) Tj
+-60 -681 Td
+60 668 Td
+(Relevant Open Opps:) Tj
+-60 -668 Td
+60 655 Td
+(AFPI AE: TBH) Tj
+-60 -655 Td
+60 642 Td
+(Sales Motion: Sell Integrated with Salesforce Product \(Financial Services Cloud\)) Tj
+-60 -642 Td
+60 629 Td
+(Propensity to Buy: 84/100 ? T1 Pursue) Tj
+-60 -629 Td
+60 616 Td
+(Category) Tj
+-60 -616 Td
+60 603 Td
+(Score) Tj
+-60 -603 Td
+60 590 Td
+(Process Complexity & Scale) Tj
+-60 -590 Td
+60 577 Td
+(14/15) Tj
+-60 -577 Td
+60 564 Td
+(Regulatory / Compliance Pressure) Tj
+-60 -564 Td
+60 551 Td
+(14/15) Tj
+-60 -551 Td
+60 538 Td
+(Digital Transformation Momentum) Tj
+-60 -538 Td
+60 525 Td
+(12/15) Tj
+-60 -525 Td
+60 512 Td
+(Salesforce Footprint & Wedge Fit) Tj
+-60 -512 Td
+60 499 Td
+(11/15) Tj
+-60 -499 Td
+60 486 Td
+(Buyer Access & Titles Present) Tj
+-60 -486 Td
+60 473 Td
+(11/15) Tj
+-60 -473 Td
+/FB 13 Tf
+60 460 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -460 Td
+/FN 10 Tf
+60 442 Td
+(1. Retail Client Onboarding & KYC Refresh \(Macquarie Bank / BFS\). Onboarding a new retail or) Tj
+-60 -442 Td
+60 429 Td
+(private-wealth client at Macquarie touches origination, identity verification, AUSTRAC AML/CTF) Tj
+-60 -429 Td
+60 416 Td
+(checks, sanctions screening, and periodic KYC refresh ? a process routinely audited by APRA and) Tj
+-60 -416 Td
+60 403 Td
+(ASIC. AFPI mines the FSC + core banking event log to expose rework loops, aged cases waiting on) Tj
+-60 -403 Td
+60 390 Td
+(document upload, and screening false-positive queues; the pain is 10-15 day median TAT vs. a) Tj
+-60 -390 Td
+60 377 Td
+(fintech benchmark of < 48 hours. The metric moved is straight-through-processing rate on new) Tj
+-60 -377 Td
+60 364 Td
+(accounts and days-to-first-transaction. Champion: Greg Ward \(Head of Banking & Financial) Tj
+-60 -364 Td
+60 351 Td
+(Services Group\).) Tj
+-60 -351 Td
+60 338 Td
+(2. Mortgage Origination & Broker Workflow \(Macquarie Home Loans\). Macquarie is the fastest-) Tj
+-60 -338 Td
+60 325 Td
+(growing mortgage lender in Australia \(13.1% market share, FY25\) and 100% broker-distributed,) Tj
+-60 -325 Td
+60 312 Td
+(which makes origination cycle time a direct competitive weapon. AFPI mines the loan-origination) Tj
+-60 -312 Td
+60 299 Td
+(event log across broker submission ? credit assessment ? valuation ? formal approval ?) Tj
+-60 -299 Td
+60 286 Td
+(settlement, exposing the exact hand-offs and rework causing lost deals; today Macquarie touts) Tj
+-60 -286 Td
+60 273 Td
+(~1 business day unconditional approval and needs to defend that. The metric moved is time-to-) Tj
+-60 -273 Td
+60 260 Td
+(formal-approval and application withdrawal rate. Champion: Ben Perham \(Head of Personal) Tj
+-60 -260 Td
+60 247 Td
+(Banking\).) Tj
+-60 -247 Td
+60 234 Td
+(3. Trade Lifecycle & Exceptions in Commodities & Global Markets \(CGM\). CGM runs a globally-) Tj
+-60 -234 Td
+60 221 Td
+(distributed commodities and financial-markets trading business \(energy, metals, fixed income,) Tj
+-60 -221 Td
+60 208 Td
+(FX\) where trade capture, confirmation, settlement, and margin management involve dozens of) Tj
+-60 -208 Td
+60 195 Td
+(systems and CSDR / EMIR / Dodd-Frank / T+1 reporting obligations. AFPI mines the trade event) Tj
+-60 -195 Td
+60 182 Td
+(stream to surface break patterns, aging confirmations, and manual-touch settlements before they) Tj
+-60 -182 Td
+60 169 Td
+(become P&L or regulatory hits ? the classic Celonis flagship use case, delivered in weeks) Tj
+-60 -169 Td
+60 156 Td
+(instead of quarters. The metric moved is same-day-affirmation rate and operational risk loss) Tj
+-60 -156 Td
+60 143 Td
+(events. Champion: Simon Wright \(Head of CGM COO / Operations\).) Tj
+-60 -143 Td
+60 130 Td
+(4. Asset Management Client Servicing & Fund Ops \(MAM\). Macquarie Asset Management runs A$920B) Tj
+-60 -130 Td
+60 117 Td
+(AUM across public and private markets, with client onboarding, subscription/redemption) Tj
+-60 -117 Td
+60 104 Td
+(processing, statement generation, and manager-of-manager oversight spread across custodians,) Tj
+-60 -104 Td
+60 91 Td
+(TAs, and internal platforms. AFPI mines the client-servicing event log to expose rework in NAV) Tj
+-60 -91 Td
+60 78 Td
+(escalations, late statements, and institutional client requests; the pain is retention risk on) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 1439 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(the private markets book and audit exposure. The metric moved is on-time NAV publication and) Tj
+-60 -782 Td
+60 769 Td
+(institutional client NPS. Champion: Ben Way \(Head of Macquarie Asset Management\).) Tj
+-60 -769 Td
+60 756 Td
+(5. Complaints, Dispute Handling & Remediation \(Group-wide, Compliance Center wedge\). Post-) Tj
+-60 -756 Td
+60 743 Td
+(Royal-Commission Australian financial-services players operate under continuous scrutiny;) Tj
+-60 -743 Td
+60 730 Td
+(ASIC's RG 271 mandates strict complaints handling SLAs and Macquarie has publicly-disclosed) Tj
+-60 -730 Td
+60 717 Td
+(remediation programs in-flight. AFPI + Compliance Center mines the complaint event log across) Tj
+-60 -717 Td
+60 704 Td
+(intake channels, triage, root-cause, and remediation payout ? producing the audit-ready process) Tj
+-60 -704 Td
+60 691 Td
+(view APRA and ASIC ask for. The metric moved is % complaints resolved within RG 271 timeframe) Tj
+-60 -691 Td
+60 678 Td
+(and remediation cycle time. Champion: Fiona Herbert \(Chief Risk Officer, Macquarie Bank\).) Tj
+-60 -678 Td
+60 665 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -665 Td
+60 652 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -652 Td
+60 639 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: Med) Tj
+-60 -639 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005222 00000 n 
+0000005367 00000 n 
+0000006858 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+7003
+%%EOF

@@ -1,0 +1,276 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 4935 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(Daimler Truck Holding AG ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(Daimler Truck Holding AG) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Manufacturing, Automotive & Energy) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: ~?55.9B \(FY2024\)  | Employees: ~103,000  | HQ: Leinfelden-Echterdingen, Germany) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Tableau \(renewal in flight [Org62]\); Sales Cloud & Service Cloud) Tj
+-60 -707 Td
+60 694 Td
+(footprint indicated by active CRM/Contact Center opps [Org62]) Tj
+-60 -694 Td
+60 681 Td
+(Current Non-Salesforce Systems: ServiceNow [Org62 opp], SAP \(assumed but not confirmed\) [field) Tj
+-60 -681 Td
+60 668 Td
+(verify with CIO]) Tj
+-60 -668 Td
+60 655 Td
+(Relevant Open Opps: Regrello \(Upside\) Shadow Oppty \( $250k \)  |  Plattform & AI NB \( $200k \)  |) Tj
+-60 -655 Td
+60 642 Td
+(Agentic Pilot \( $200k \)  |  Customer 360 Data Cloud \( $200k \)  |  Own Retail Service \( $200k \)) Tj
+-60 -642 Td
+60 629 Td
+(|  ServiceNow Integration \( $107k \)  |  Contact Center \( $70k \)) Tj
+-60 -629 Td
+60 616 Td
+(AFPI AE: Luciano Tapparo) Tj
+-60 -616 Td
+60 603 Td
+(Sales Motion: Co-Sell with Agentforce Operations) Tj
+-60 -603 Td
+60 590 Td
+(Propensity to Buy: 84/100 ? T1 Pursue) Tj
+-60 -590 Td
+60 577 Td
+(Category) Tj
+-60 -577 Td
+60 564 Td
+(Score) Tj
+-60 -564 Td
+60 551 Td
+(Company size & complexity) Tj
+-60 -551 Td
+60 538 Td
+(15/15) Tj
+-60 -538 Td
+60 525 Td
+(Vertical fit \(Automotive/Manufacturing\)) Tj
+-60 -525 Td
+60 512 Td
+(13/15) Tj
+-60 -512 Td
+60 499 Td
+(Active buying signals) Tj
+-60 -499 Td
+60 486 Td
+(13/15) Tj
+-60 -486 Td
+60 473 Td
+(Systems complexity \(SAP + ServiceNow + multi-plant\)) Tj
+-60 -473 Td
+60 460 Td
+(12/12) Tj
+-60 -460 Td
+60 447 Td
+(Salesforce footprint depth) Tj
+-60 -447 Td
+60 434 Td
+(10/15) Tj
+-60 -434 Td
+/FB 13 Tf
+60 421 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -421 Td
+/FN 10 Tf
+60 403 Td
+(1. Order-to-Delivery for Custom Trucks. Daimler Truck's build-to-order model spans thousands of) Tj
+-60 -403 Td
+60 390 Td
+(chassis, powertrain, and body-builder configurations across Mercedes-Benz Trucks, Freightliner,) Tj
+-60 -390 Td
+60 377 Td
+(Western Star, FUSO, and BharatBenz. Long lead times, missed customer promise dates, and) Tj
+-60 -377 Td
+60 364 Td
+(finished-goods write-downs are chronic pain ? and CFO scrutiny is intense post-IPO. AFPI mines) Tj
+-60 -364 Td
+60 351 Td
+(the SAP order and MES event logs to expose where variants stall, which options trigger rework,) Tj
+-60 -351 Td
+60 338 Td
+(and which plants consistently beat vs. miss cycle time; the wedge is a 3-4 week diagnostic that) Tj
+-60 -338 Td
+60 325 Td
+(pairs with the Customer 360 Data Cloud opp to unify order status across SAP, dealer DMS, and) Tj
+-60 -325 Td
+60 312 Td
+(CRM. Metric moved: on-time delivery to promise date +8-12pp, working-capital tied up in WIP) Tj
+-60 -312 Td
+60 299 Td
+(-5%. Engage Karin RÂdstrˆm \(CEO\) and the head of Mercedes-Benz Trucks Operations.) Tj
+-60 -299 Td
+60 286 Td
+(2. Aftersales & Warranty Claims Handling. Warranty is the single largest controllable cost) Tj
+-60 -286 Td
+60 273 Td
+(lever in commercial vehicles ? every day a claim sits in dealer queues drags NPS and cash.) Tj
+-60 -273 Td
+60 260 Td
+(Today the process spans dealer portals, ServiceNow tickets, and SAP warranty modules with heavy) Tj
+-60 -260 Td
+60 247 Td
+(manual triage. AFPI process-mines the claim event log to find rework loops, dealer outliers,) Tj
+-60 -247 Td
+60 234 Td
+(and codes that consistently escalate to engineering, then feeds an Agentforce Service Agent) Tj
+-60 -234 Td
+60 221 Td
+(\(see the Agentic Pilot and ServiceNow Integration opps\) to auto-triage and route. Metric moved:) Tj
+-60 -221 Td
+60 208 Td
+(warranty cycle time -30-40%, warranty leakage -3-5%. Engage Achim Puchert \(CEO, Mercedes-Benz) Tj
+-60 -208 Td
+60 195 Td
+(Trucks\) and the aftersales director.) Tj
+-60 -195 Td
+60 182 Td
+(3. Dealer & Own-Retail Service Operations. The Daimler Truck Own Retail Service opp is a direct) Tj
+-60 -182 Td
+60 169 Td
+(AFPI wedge ? as Daimler Truck expands company-owned retail \(RoadStar in Europe, Rush/Daimler) Tj
+-60 -169 Td
+60 156 Td
+(Truck North America JVs\), it needs a single view of service-bay throughput, technician) Tj
+-60 -156 Td
+60 143 Td
+(utilization, and parts-availability across hundreds of locations. AFPI mines the service-order) Tj
+-60 -143 Td
+60 130 Td
+(event log, exposes idle-bay time, parts-wait bottlenecks, and appointment-to-close cycle time,) Tj
+-60 -130 Td
+60 117 Td
+(and hands the fix to Agentforce for Service. Metric moved: service-bay utilization +10pp,) Tj
+-60 -117 Td
+60 104 Td
+(parts-fill-rate on first visit +15pp. Engage Karl Deppen \(CEO Trucks Asia\) and the Own Retail) Tj
+-60 -104 Td
+60 91 Td
+(program lead in EMEA.) Tj
+-60 -91 Td
+60 78 Td
+(4. Procure-to-Pay & Supplier Onboarding. With 20,000+ direct suppliers across four brands and a) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 1898 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(full BEV/H2 supplier stand-up underway, PO exception rates, invoice mismatches, and supplier-) Tj
+-60 -782 Td
+60 769 Td
+(onboarding lead time bleed working capital and delay new programs. AFPI mines the SAP P2P event) Tj
+-60 -769 Td
+60 756 Td
+(log to pinpoint the 15-20% of vendors driving 80% of exceptions and the maverick-buying paths) Tj
+-60 -756 Td
+60 743 Td
+(bypassing framework agreements ? a classic Regrello-adjacent wedge that expands the Regrello) Tj
+-60 -743 Td
+60 730 Td
+(\(Upside\) Shadow Oppty . Metric moved: touchless invoice rate 60% ? 80%+, supplier onboarding) Tj
+-60 -730 Td
+60 717 Td
+(cycle -40%. Engage Eva Scherer \(CFO\) and the head of Global Procurement.) Tj
+-60 -717 Td
+60 704 Td
+(5. B2B Fleet Sales & Contact-Center Deflection. The B2B CRM and Contact Center opps line up) Tj
+-60 -704 Td
+60 691 Td
+(perfectly: fleet buyers move slowly through configure-price-quote across dozens of hand-offs) Tj
+-60 -691 Td
+60 678 Td
+(\(sales, financing via Daimler Truck Financial Services, upfit body-builders, regulatory\). AFPI) Tj
+-60 -678 Td
+60 665 Td
+(mines the CPQ + case event log to expose stalled quotes, escalation paths, and repeat-caller) Tj
+-60 -665 Td
+60 652 Td
+(drivers, then feeds an Agentforce Service Agent to deflect Tier-1 fleet inquiries. Metric) Tj
+-60 -652 Td
+60 639 Td
+(moved: quote-to-order cycle -25%, contact-center deflection to agent 40%+. Engage John O'Leary) Tj
+-60 -639 Td
+60 626 Td
+(\(CEO, Daimler Truck North America\) and the head of Fleet Sales EMEA.) Tj
+-60 -626 Td
+60 613 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -613 Td
+60 600 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -600 Td
+60 587 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: High) Tj
+-60 -587 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005313 00000 n 
+0000005458 00000 n 
+0000007408 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+7553
+%%EOF

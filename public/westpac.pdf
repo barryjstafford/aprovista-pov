@@ -1,0 +1,255 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 4825 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(Westpac Banking Corporation ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(Westpac Banking Corporation) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Financial Services, Banking) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: A$33.8B  | Employees: ~40,143  | HQ: Sydney, NSW, Australia) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Not confirmed [field verify with Scott Collary , Group Executive) Tj
+-60 -707 Td
+60 694 Td
+(Customer Services & Technology]) Tj
+-60 -694 Td
+60 681 Td
+(Current Non-Salesforce Systems: Not confirmed [field verify with Scott Collary ]) Tj
+-60 -681 Td
+60 668 Td
+(Relevant Open Opps:) Tj
+-60 -668 Td
+60 655 Td
+(AFPI AE: TBH \(ANZ\)) Tj
+-60 -655 Td
+60 642 Td
+(Sales Motion: Sell AFPI Standalone) Tj
+-60 -642 Td
+60 629 Td
+(Propensity to Buy: 81/100 ? T1 Pursue) Tj
+-60 -629 Td
+60 616 Td
+(Category) Tj
+-60 -616 Td
+60 603 Td
+(Score) Tj
+-60 -603 Td
+60 590 Td
+(Process complexity & scale) Tj
+-60 -590 Td
+60 577 Td
+(14/15) Tj
+-60 -577 Td
+60 564 Td
+(Vertical fit \(Banking\)) Tj
+-60 -564 Td
+60 551 Td
+(14/15) Tj
+-60 -551 Td
+60 538 Td
+(Regulatory pressure \(APRA CPS 230, AUSTRAC\)) Tj
+-60 -538 Td
+60 525 Td
+(13/15) Tj
+-60 -525 Td
+60 512 Td
+(Signals \(ANZ Apromore momentum, CORE program\)) Tj
+-60 -512 Td
+60 499 Td
+(9/10) Tj
+-60 -499 Td
+60 486 Td
+(Timing / cost-out cycle) Tj
+-60 -486 Td
+60 473 Td
+(9/15) Tj
+-60 -473 Td
+/FB 13 Tf
+60 460 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -460 Td
+/FN 10 Tf
+60 442 Td
+(1. Mortgage Origination Cycle Time. Home lending is Westpac's largest earning asset and the) Tj
+-60 -442 Td
+60 429 Td
+(origination journey spans broker submission, credit decisioning, valuation, and settlement) Tj
+-60 -429 Td
+60 416 Td
+(across legacy platforms. Post-remediation, turnaround-time consistency has been a repeated APRA) Tj
+-60 -416 Td
+60 403 Td
+(and broker-channel pain point. AFPI mines the event log across the loan-origination stack to) Tj
+-60 -403 Td
+60 390 Td
+(expose rework loops, verification bottlenecks, and broker abandonment triggers, moving the) Tj
+-60 -390 Td
+60 377 Td
+(median time-to-unconditional-approval and reducing broker churn. Engage Damien MacRae ,) Tj
+-60 -377 Td
+60 364 Td
+(Managing Director Mortgages.) Tj
+-60 -364 Td
+60 351 Td
+(2. AML/KYC Transaction Monitoring Alert Triage. Post-AUSTRAC settlement, Westpac has invested) Tj
+-60 -351 Td
+60 338 Td
+(heavily in financial-crime operations but analysts still face high false-positive rates and) Tj
+-60 -338 Td
+60 325 Td
+(inconsistent case-handling paths. AFPI mines the alert-to-disposition process to surface the) Tj
+-60 -325 Td
+60 312 Td
+(variants that drive re-work and SLA breaches, then targets automation and Agentforce-assist) Tj
+-60 -312 Td
+60 299 Td
+(opportunities on the highest-volume paths. Metric moved: cost per alert closed and productive-) Tj
+-60 -299 Td
+60 286 Td
+(alert ratio. Engage Les Vance , Group Executive Financial Crime, Compliance & Conduct.) Tj
+-60 -286 Td
+60 273 Td
+(3. Complaints Handling & AFCA-Reportable Disputes. APRA CPS 230 \(effective July 2025\) requires) Tj
+-60 -273 Td
+60 260 Td
+(demonstrable operational-resilience controls over customer-facing critical operations, and) Tj
+-60 -260 Td
+60 247 Td
+(complaints handling is one of the most scrutinised. AFPI mines the complaint lifecycle from) Tj
+-60 -247 Td
+60 234 Td
+(first contact through resolution and AFCA escalation, exposing which channels, products, and) Tj
+-60 -234 Td
+60 221 Td
+(handoffs are driving rework and breach risk. The result is a Compliance Center wedge with) Tj
+-60 -221 Td
+60 208 Td
+(process evidence auditors can consume directly, plus a measurable drop in AFCA-escalated) Tj
+-60 -208 Td
+60 195 Td
+(volume. Engage Jason Yetton , Chief Executive Consumer.) Tj
+-60 -195 Td
+60 182 Td
+(4. Business & Institutional Client Onboarding. Onboarding a business or institutional client at) Tj
+-60 -182 Td
+60 169 Td
+(Westpac touches KYB, AML, credit, product setup, and multiple divisional handoffs across) Tj
+-60 -169 Td
+60 156 Td
+(Business & Wealth and WIB. Deal desks report weeks of cycle time and repeated document requests) Tj
+-60 -156 Td
+60 143 Td
+(that erode NPS with corporate treasurers. AFPI mines the end-to-end onboarding process,) Tj
+-60 -143 Td
+60 130 Td
+(quantifies the cost of rework loops, and pinpoints where Agentforce or straight-through-) Tj
+-60 -130 Td
+60 117 Td
+(processing can compress cycle time. Metric moved: time-to-first-transaction and onboarding cost) Tj
+-60 -117 Td
+60 104 Td
+(per client. Engage Anthony Miller , Chief Executive Business & Wealth.) Tj
+-60 -104 Td
+60 91 Td
+(5. Technology Modernisation & Simplification \(CORE / UNITE\). Westpac's multi-year CORE program) Tj
+-60 -91 Td
+60 78 Td
+(is consolidating retail brands onto a single technology stack ? a rare, board-sponsored) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 1046 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(process-redesign event. Without a process-mining ground truth, "to-be" designs are drawn from) Tj
+-60 -782 Td
+60 769 Td
+(interviews and PowerPoint rather than actual event data, which drives rework once code hits) Tj
+-60 -769 Td
+60 756 Td
+(production. AFPI provides the as-is object-centric process model that CORE work-streams can use) Tj
+-60 -756 Td
+60 743 Td
+(to prioritise which processes to simplify first and prove benefit realisation post-migration.) Tj
+-60 -743 Td
+60 730 Td
+(Metric moved: rework in transformation delivery and time-to-benefit. Engage Scott Collary ,) Tj
+-60 -730 Td
+60 717 Td
+(Group Executive Customer Services & Technology.) Tj
+-60 -717 Td
+60 704 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -704 Td
+60 691 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -691 Td
+60 678 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: Med) Tj
+-60 -678 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005203 00000 n 
+0000005348 00000 n 
+0000006446 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+6591
+%%EOF

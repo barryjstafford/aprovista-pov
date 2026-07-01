@@ -1,0 +1,270 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 4872 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(Australian Unity Limited ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(Australian Unity Limited) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Financial Services, Diversified Mutual \(Health Insurance, Wealth, Banking, Aged Care\)) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: A$1.04B  | Employees: ~7,000  | HQ: South Melbourne, VIC, Australia) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Marketing Cloud \(ExactTarget, Datorama, Platform\)) Tj
+-60 -707 Td
+60 694 Td
+(Current Non-Salesforce Systems: Not confirmed [field verify with CIO / Head of Enterprise) Tj
+-60 -694 Td
+60 681 Td
+(Architecture ]) Tj
+-60 -681 Td
+60 668 Td
+(Relevant Open Opps: MC ExactTarget/Platform/CRM Renewal 26105 \( $699k \)) Tj
+-60 -668 Td
+60 655 Td
+(AFPI AE: TBH \(ANZ\)) Tj
+-60 -655 Td
+60 642 Td
+(Sales Motion: Co-Sell with Agentforce Operations) Tj
+-60 -642 Td
+60 629 Td
+(Propensity to Buy: 74/100 ? T2 Develop) Tj
+-60 -629 Td
+60 616 Td
+(Category) Tj
+-60 -616 Td
+60 603 Td
+(Score) Tj
+-60 -603 Td
+60 590 Td
+(Regulatory & Compliance Pressure \(FS + Aged Care\)) Tj
+-60 -590 Td
+60 577 Td
+(14/15) Tj
+-60 -577 Td
+60 564 Td
+(Process Complexity \(multi-LOB mutual\)) Tj
+-60 -564 Td
+60 551 Td
+(12/15) Tj
+-60 -551 Td
+60 538 Td
+(Compliance-Center Wedge Fit) Tj
+-60 -538 Td
+60 525 Td
+(9/10) Tj
+-60 -525 Td
+60 512 Td
+(Deal Momentum \(renewal in-flight\)) Tj
+-60 -512 Td
+60 499 Td
+(9/15) Tj
+-60 -499 Td
+60 486 Td
+(Salesforce Footprint \(MC only, no core CRM\)) Tj
+-60 -486 Td
+60 473 Td
+(8/15) Tj
+-60 -473 Td
+/FB 13 Tf
+60 460 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -460 Td
+/FN 10 Tf
+60 442 Td
+(1. Aged Care & Home Care Package Onboarding. The onboarding journey from initial enquiry) Tj
+-60 -442 Td
+60 429 Td
+(through ACAT assessment, Home Care Package assignment, funding activation, and first service) Tj
+-60 -429 Td
+60 416 Td
+(delivery involves dozens of hand-offs across intake teams, clinical assessors, and government) Tj
+-60 -416 Td
+60 403 Td
+(portals ? with statutory clocks under the Aged Care Act 2024. AFPI mines the actual event log) Tj
+-60 -403 Td
+60 390 Td
+(across CRM, clinical, and Services Australia touchpoints to expose where the median 45?60 day) Tj
+-60 -390 Td
+60 377 Td
+(journey is being blown out by rework and unassigned queues. The metric it moves is time-to-) Tj
+-60 -377 Td
+60 364 Td
+(first-service and unallocated-package leakage, both directly tied to funded revenue and) Tj
+-60 -364 Td
+60 351 Td
+(regulator attestation. Engage the Chief Operating Officer, Home Health as the operational) Tj
+-60 -351 Td
+60 338 Td
+(champion.) Tj
+-60 -338 Td
+60 325 Td
+(2. Private Health Insurance Claims Adjudication. Health insurance claims flow through) Tj
+-60 -325 Td
+60 312 Td
+(eligibility checks, provider validation, gap-cover rules, and manual clinical review ? with) Tj
+-60 -312 Td
+60 299 Td
+(APRA and Private Health Insurance Ombudsman scrutiny on turnaround times. Straight-through-) Tj
+-60 -299 Td
+60 286 Td
+(processing rates in the mid-70s hide the real story: a long tail of claims cycling through) Tj
+-60 -286 Td
+60 273 Td
+(rework loops that consume clinical assessor capacity. AFPI compares the "as-designed" claims) Tj
+-60 -273 Td
+60 260 Td
+(process against the true event log to surface the two or three loop patterns that account for) Tj
+-60 -260 Td
+60 247 Td
+(most of the manual effort, moving STP rate and claims-cost-per-policy. Engage the COO, Health) Tj
+-60 -247 Td
+60 234 Td
+(Insurance .) Tj
+-60 -234 Td
+60 221 Td
+(3. Wealth & Advice Client-Onboarding and KYC Refresh. Post Royal Commission, wealth onboarding) Tj
+-60 -221 Td
+60 208 Td
+(at Australian Unity carries a heavy KYC / DDO / Best-Interest-Duty documentation burden across) Tj
+-60 -208 Td
+60 195 Td
+(advice, platform, and trustee entities. Every remediation cycle from AUSTRAC or ASIC starts) Tj
+-60 -195 Td
+60 182 Td
+(with "show us your process" ? and the actual process only lives in operator memory. AFPI) Tj
+-60 -182 Td
+60 169 Td
+(produces the regulator-defensible process map with variant analysis and compliance-center) Tj
+-60 -169 Td
+60 156 Td
+(controls attached, cutting onboarding cycle time and audit prep hours. Engage the Group) Tj
+-60 -156 Td
+60 143 Td
+(Executive, Wealth & Capital Markets .) Tj
+-60 -143 Td
+60 130 Td
+(4. Marketing Cloud Journey Reconciliation Against Service Outcomes. With a A$699k Marketing) Tj
+-60 -130 Td
+60 117 Td
+(Cloud renewal in flight \(ExactTarget, Platform, plus prior Datorama\), the natural co-sell wedge) Tj
+-60 -117 Td
+60 104 Td
+(is proving that outbound journeys convert to actual serviced outcomes ? enrolments, retained) Tj
+-60 -104 Td
+60 91 Td
+(members, funded packages ? not just click-throughs. AFPI ingests Marketing Cloud send events) Tj
+-60 -91 Td
+60 78 Td
+(alongside downstream CRM and operational events to expose where campaign responders drop out of) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 1542 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(the servicing funnel. This moves conversion-to-serviced-outcome and gives the CMO renewal-cycle) Tj
+-60 -782 Td
+60 769 Td
+(ammunition. Engage the Chief Marketing Officer .) Tj
+-60 -769 Td
+60 756 Td
+(5. Retirement Village Resident Lifecycle & Contract Administration. Australian Unity's) Tj
+-60 -756 Td
+60 743 Td
+(retirement villages \(a distinct Group Services entity in Org62\) run a long-tail contract) Tj
+-60 -743 Td
+60 730 Td
+(process ? from initial deposit through DMF calculation, exit refunds, and estate settlement ?) Tj
+-60 -730 Td
+60 717 Td
+(that is state-legislation-specific and litigation-prone. Contract handoffs between village) Tj
+-60 -717 Td
+60 704 Td
+(managers, legal, finance, and family typically span 60?120 days per exit, with cash and) Tj
+-60 -704 Td
+60 691 Td
+(reputational exposure at each step. AFPI maps the full contract lifecycle event log and) Tj
+-60 -691 Td
+60 678 Td
+(surfaces which villages, contract vintages, or state jurisdictions drive the worst exit-cycle) Tj
+-60 -678 Td
+60 665 Td
+(outliers, moving DMF release time and settlement disputes. Engage the GM, Retirement) Tj
+-60 -665 Td
+60 652 Td
+(Communities .) Tj
+-60 -652 Td
+60 639 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -639 Td
+60 626 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -626 Td
+60 613 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: Med) Tj
+-60 -613 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005250 00000 n 
+0000005395 00000 n 
+0000006989 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+7134
+%%EOF

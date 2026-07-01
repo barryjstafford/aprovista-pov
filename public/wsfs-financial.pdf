@@ -1,0 +1,290 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 5028 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(WSFS Financial Corporation ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(WSFS Financial Corporation) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Financial Services, Banking \(Regional / Community\)) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: ~$1.4B  | Employees: ~2,100  | HQ: Wilmington, DE, USA) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Sales Cloud \(SFA\), Analytics Cloud, MuleSoft, Platform, Marketing) Tj
+-60 -707 Td
+60 694 Td
+(Cloud Engagement, Service Cloud \(in-flight\)) Tj
+-60 -694 Td
+60 681 Td
+(Current Non-Salesforce Systems: Informatica IDMC / MDM \(confirmed via active INFA opp\)) Tj
+-60 -681 Td
+60 668 Td
+(Relevant Open Opps: AEH Org Renewal ? MuleSoft + Platform + CRM \( $1.33M \)  |  Sales Cloud +) Tj
+-60 -668 Td
+60 655 Td
+(Analytics Renewal \( $2.37M \)  |  Agentforce Operations \( $600K \)  |  CTO Extension \( $778K \)  |) Tj
+-60 -655 Td
+60 642 Td
+(Employee Service + Agentforce \( $239K \)  |  Informatica MDM \( $303K \)  |  Agentforce Pilot \() Tj
+-60 -642 Td
+60 629 Td
+($150K \)) Tj
+-60 -629 Td
+60 616 Td
+(AFPI AE: Charlie Stuard) Tj
+-60 -616 Td
+60 603 Td
+(Sales Motion: Co-Sell with Agentforce Operations) Tj
+-60 -603 Td
+/FB 13 Tf
+60 590 Td
+(Propensity to Buy AFPI) Tj
+-60 -590 Td
+/FN 10 Tf
+60 572 Td
+(Score: 86/100 ? T1 Pursue) Tj
+-60 -572 Td
+60 559 Td
+(Category) Tj
+-60 -559 Td
+60 546 Td
+(Score) Tj
+-60 -546 Td
+60 533 Td
+(Active Agentforce / Operations motion in-flight) Tj
+-60 -533 Td
+60 520 Td
+(18/20) Tj
+-60 -520 Td
+60 507 Td
+(Regulated vertical \(bank, KYC/AML, BSA\)) Tj
+-60 -507 Td
+60 494 Td
+(14/15) Tj
+-60 -494 Td
+60 481 Td
+(Salesforce install base breadth \(SFA, MuleSoft, MC, Service, Data Cloud shell\)) Tj
+-60 -481 Td
+60 468 Td
+(13/15) Tj
+-60 -468 Td
+60 455 Td
+(Data & MDM readiness \(active Informatica IDMC / MDM\)) Tj
+-60 -455 Td
+60 442 Td
+(12/15) Tj
+-60 -442 Td
+60 429 Td
+(Recent M&A integration complexity \(Bryn Mawr Trust\)) Tj
+-60 -429 Td
+60 416 Td
+(12/15) Tj
+-60 -416 Td
+/FB 13 Tf
+60 403 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -403 Td
+/FN 10 Tf
+60 385 Td
+(1. Customer / Account Onboarding & KYC. WSFS onboards retail, small-business, and wealth) Tj
+-60 -385 Td
+60 372 Td
+(clients through overlapping teller, digital, and Cash Connect channels ? with KYC/AML checks,) Tj
+-60 -372 Td
+60 359 Td
+(CIP verification, and beneficial-owner reviews stitched across the core, Salesforce, and) Tj
+-60 -359 Td
+60 346 Td
+(Informatica MDM. AFPI can mine the end-to-end onboarding event log to expose rework loops,) Tj
+-60 -346 Td
+60 333 Td
+(manual document chase, and cycle-time variance between branches and the digital channel, then) Tj
+-60 -333 Td
+60 320 Td
+(hand clean, evidenced processes to the Agentforce Operations agent already in-flight \( $600K \).) Tj
+-60 -320 Td
+60 307 Td
+(Metric moved: time-to-fund and abandonment rate on new accounts. Champion: Rodger Levenson) Tj
+-60 -307 Td
+60 294 Td
+(\(CEO\) sponsor; the digital / retail banking operations lead as day-to-day owner.) Tj
+-60 -294 Td
+60 281 Td
+(2. Loan Origination & Underwriting \(Commercial + Small Business\). Commercial and SBA loan files) Tj
+-60 -281 Td
+60 268 Td
+(traverse relationship managers, underwriting, credit, doc prep, and closing ? a classic hand-) Tj
+-60 -268 Td
+60 255 Td
+(off-heavy process where variance and re-work erode NIM in a rising-rate environment. AFPI mines) Tj
+-60 -255 Td
+60 242 Td
+(the origination log across the LOS and Salesforce SFA \(part of the $2.37M renewal\) to quantify) Tj
+-60 -242 Td
+60 229 Td
+(stage-level cycle times, exception paths, and covenant-review rework. That evidence turns the) Tj
+-60 -229 Td
+60 216 Td
+(Agentforce Operations pilot into a targeted underwriter-assist agent rather than a generic) Tj
+-60 -216 Td
+60 203 Td
+(chatbot. Metric moved: application-to-close cycle time and pull-through rate. Champion: the) Tj
+-60 -203 Td
+60 190 Td
+(commercial banking COO or head of credit ops \( commercial banking lead \).) Tj
+-60 -190 Td
+60 177 Td
+(3. Contact Center & Employee Service \(Service + Agentforce\). WSFS has an active Employee) Tj
+-60 -177 Td
+60 164 Td
+(Service + Agentforce opportunity \( $239K \) and an Agentforce Pilot \( $150K \). AFPI mines the) Tj
+-60 -164 Td
+60 151 Td
+(case-handling event log ? Service Cloud statuses, agent actions, escalations, transfers ? to) Tj
+-60 -151 Td
+60 138 Td
+(isolate the top intents by AHT and re-open rate, so the deployed Agentforce agents are pointed) Tj
+-60 -138 Td
+60 125 Td
+(at the flows with the biggest handle-time payoff, not the loudest. AFPI Compliance Center adds) Tj
+-60 -125 Td
+60 112 Td
+(an audit trail for regulator questions on complaint handling and Reg E disputes. Metric moved:) Tj
+-60 -112 Td
+60 99 Td
+(AHT, first-contact resolution, complaint SLA. Champion: the head of customer service /) Tj
+-60 -99 Td
+60 86 Td
+(associate experience \( customer experience lead \).) Tj
+-60 -86 Td
+60 73 Td
+(4. Post-Merger Integration & Data Quality \(Bryn Mawr Trust + Cash Connect + Wealth\). WSFS has) Tj
+-60 -73 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 2283 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(absorbed Bryn Mawr Trust and runs Cash Connect and a wealth arm ? meaning duplicated customer,) Tj
+-60 -782 Td
+60 769 Td
+(party, and account records flow through the active Informatica IDMC / MDM initiative \( $303K \).) Tj
+-60 -769 Td
+60 756 Td
+(AFPI mines the master-data reconciliation and manual-merge processes to show where MDM rules) Tj
+-60 -756 Td
+60 743 Td
+(are firing false positives, where stewards are rubber-stamping, and where the same customer is) Tj
+-60 -743 Td
+60 730 Td
+(being serviced twice. Combined with the MuleSoft integration renewal, this becomes the evidence) Tj
+-60 -730 Td
+60 717 Td
+(that turns MDM from a cost center into a measurable revenue-per-customer story. Metric moved:) Tj
+-60 -717 Td
+60 704 Td
+(single-customer-view coverage, steward hours per 1,000 records. Champion: the head of) Tj
+-60 -704 Td
+60 691 Td
+(enterprise data / CIO organization \( CIO \).) Tj
+-60 -691 Td
+60 678 Td
+(5. BSA / AML Alert Investigation & SAR Filing. As a $20B+ asset bank operating in Delaware,) Tj
+-60 -678 Td
+60 665 Td
+(WSFS is subject to intensive BSA/AML supervision, and alert queues from transaction monitoring) Tj
+-60 -665 Td
+60 652 Td
+(generate huge investigator caseloads. AFPI mines the alert-to-disposition process ? enrichment,) Tj
+-60 -652 Td
+60 639 Td
+(escalations, L1/L2 hand-offs, SAR narrative drafting ? to expose bottlenecks and disparate) Tj
+-60 -639 Td
+60 626 Td
+(reviewer paths, then hand a proven, auditable process to an Agentforce financial-crimes) Tj
+-60 -626 Td
+60 613 Td
+(assistant. Compliance Center provides regulators the evidenced control story. Metric moved:) Tj
+-60 -613 Td
+60 600 Td
+(alerts per investigator per day, SAR filing timeliness, false-positive rate. Champion: the BSA) Tj
+-60 -600 Td
+60 587 Td
+(officer / head of financial crimes \( BSA officer \); economic buyer sits with the Chief Risk) Tj
+-60 -587 Td
+60 574 Td
+(Officer.) Tj
+-60 -574 Td
+60 561 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -561 Td
+60 548 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -548 Td
+60 535 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: High) Tj
+-60 -535 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005406 00000 n 
+0000005551 00000 n 
+0000007886 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+8031
+%%EOF

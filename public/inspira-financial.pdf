@@ -1,0 +1,273 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 4965 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(Inspira Financial Trust, LLC ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(Inspira Financial Trust, LLC) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Financial Services, Health & Retirement Custody / Trust Services) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: $139M  | Employees: 1,200  | HQ: Oak Brook, IL, US) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Sales Cloud \(SFA\), MuleSoft, Marketing Cloud \(ExactTarget +) Tj
+-60 -707 Td
+60 694 Td
+(Datorama\), Slack Enterprise \(pending\), Financial Services Cloud \(in-flight\)) Tj
+-60 -694 Td
+60 681 Td
+(Current Non-Salesforce Systems: Regrello \(workflow\), Apromore \(Phase 1 live\)) Tj
+-60 -681 Td
+60 668 Td
+(Relevant Open Opps: Workflow Discovery - Regrello, Apromore #Phase2 \( $750k \)  |  FSC PxE > AF1) Tj
+-60 -668 Td
+60 655 Td
+(for Service #Phase1 \( $650k \)  |  CTO + Tiger Team - CSG \( $650k \)  |  Agentforce POC Upside \() Tj
+-60 -655 Td
+60 642 Td
+($250k \)) Tj
+-60 -642 Td
+60 629 Td
+(AFPI AE: Charlie Stuard) Tj
+-60 -629 Td
+60 616 Td
+(Sales Motion: Co-Sell with Agentforce Operations) Tj
+-60 -616 Td
+60 603 Td
+(Propensity to Buy: 90/100 ? T1 Pursue) Tj
+-60 -603 Td
+60 590 Td
+(Category) Tj
+-60 -590 Td
+60 577 Td
+(Score) Tj
+-60 -577 Td
+60 564 Td
+(Active AFPI opportunity \(Apromore Phase 2 live\)) Tj
+-60 -564 Td
+60 551 Td
+(15/15) Tj
+-60 -551 Td
+60 538 Td
+(Salesforce install base & active opps) Tj
+-60 -538 Td
+60 525 Td
+(13/15) Tj
+-60 -525 Td
+60 512 Td
+(Process complexity \(custodial ops, IRA admin, H&B\)) Tj
+-60 -512 Td
+60 499 Td
+(13/15) Tj
+-60 -499 Td
+60 486 Td
+(Vertical fit \(trust custody / financial services\)) Tj
+-60 -486 Td
+60 473 Td
+(12/15) Tj
+-60 -473 Td
+60 460 Td
+(Compliance pressure \(ERISA, SEC, IRS custody\)) Tj
+-60 -460 Td
+60 447 Td
+(10/10) Tj
+-60 -447 Td
+/FB 13 Tf
+60 434 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -434 Td
+/FN 10 Tf
+60 416 Td
+(1. IRA / HSA Account Opening & Funding. Inspira administers millions of custodial IRA, HSA, and) Tj
+-60 -416 Td
+60 403 Td
+(health & benefit accounts; the new-account-to-first-funding cycle spans partner intake,) Tj
+-60 -403 Td
+60 390 Td
+(KYC/CIP, account setup, and ACH/check funding ? one of the highest-volume, most-touched) Tj
+-60 -390 Td
+60 377 Td
+(processes in trust custody. Delays or rework here directly slow AUC growth and generate service) Tj
+-60 -377 Td
+60 364 Td
+(tickets. AFPI would mine the SFA + FSC + MuleSoft event streams to expose rework loops, manual) Tj
+-60 -364 Td
+60 351 Td
+(KYC re-checks, and funding-latency variants, then feed the winning happy-path into an) Tj
+-60 -351 Td
+60 338 Td
+(Agentforce for Service agent. Metric moved: reduce account-open-to-funded cycle time by 30?40%) Tj
+-60 -338 Td
+60 325 Td
+(and cut abandoned-open rework. Champion: John Balevic .) Tj
+-60 -325 Td
+60 312 Td
+(2. Distributions, RMDs & Rollovers. Distribution processing \(required minimum distributions,) Tj
+-60 -312 Td
+60 299 Td
+(in-service withdrawals, rollovers to/from other custodians\) is regulated by ERISA and IRS) Tj
+-60 -299 Td
+60 286 Td
+(timing rules, and any process variance surfaces as compliance risk and CX pain during tax) Tj
+-60 -286 Td
+60 273 Td
+(season. Apromore Phase 2 is already positioned around workflow discovery ? this is the natural) Tj
+-60 -273 Td
+60 260 Td
+(first mining target because it has clear regulatory deadlines and heavy manual case-handling.) Tj
+-60 -260 Td
+60 247 Td
+(AFPI would surface off-happy-path cases, aging inventory, and hand-off delays between call) Tj
+-60 -247 Td
+60 234 Td
+(center, ops, and tax reporting. Metric moved: cut aged-distribution inventory by 50% and) Tj
+-60 -234 Td
+60 221 Td
+(eliminate late-RMD penalty exposure. Champion: Meg Zwick .) Tj
+-60 -221 Td
+60 208 Td
+(3. Case & Service Ticket Resolution \(FSC + Agentforce for Service\). The FSC PxE > AF1 for) Tj
+-60 -208 Td
+60 195 Td
+(Service opp indicates Inspira is standing up Agentforce for Service on top of Financial) Tj
+-60 -195 Td
+60 182 Td
+(Services Cloud ? but agent throughput and containment only improve if the underlying case-) Tj
+-60 -182 Td
+60 169 Td
+(handling process is well-understood. AFPI mines the Service Cloud case history to find repeat) Tj
+-60 -169 Td
+60 156 Td
+(contact drivers, escalation loops, and knowledge gaps, then hands the discovered patterns to) Tj
+-60 -156 Td
+60 143 Td
+(the Agentforce team so the agent is trained on real variants, not a whiteboard workflow. Metric) Tj
+-60 -143 Td
+60 130 Td
+(moved: raise Agentforce case containment 15?25 points and cut average handle time. Champion:) Tj
+-60 -130 Td
+60 117 Td
+(David Vogt .) Tj
+-60 -117 Td
+60 104 Td
+(4. Partner / Advisor Onboarding & Data Handoff. Inspira's model depends on advisor and) Tj
+-60 -104 Td
+60 91 Td
+(employer-plan channel partners feeding accounts and contributions in; the onboarding-to-active-) Tj
+-60 -91 Td
+60 78 Td
+(flow process runs across MuleSoft integrations, contracts, and operations teams. Rework or) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 1714 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(delays here directly slow the growth engine and are almost never measured end-to-end. AFPI) Tj
+-60 -782 Td
+60 769 Td
+(would mine the MuleSoft transaction logs and CRM stage history to expose where partner) Tj
+-60 -769 Td
+60 756 Td
+(activations stall and quantify revenue-at-risk. Metric moved: shorten partner-to-first-) Tj
+-60 -756 Td
+60 743 Td
+(contribution cycle by 25% and lift activation conversion. Champion: Amish Merchant .) Tj
+-60 -743 Td
+60 730 Td
+(5. Compliance Reporting & Custody Controls \(Compliance Center wedge\). As a trust company) Tj
+-60 -730 Td
+60 717 Td
+(Inspira has continuous ERISA, SEC, and IRS reporting obligations plus internal custody) Tj
+-60 -717 Td
+60 704 Td
+(controls; today most of that assurance is spreadsheet-and-signoff. AFPI's Compliance Center) Tj
+-60 -704 Td
+60 691 Td
+(wedge would layer conformance checking on the mined processes to prove ? with evidence ? that) Tj
+-60 -691 Td
+60 678 Td
+(every distribution, transfer, and reporting event followed the required control path. This is) Tj
+-60 -678 Td
+60 665 Td
+(the "why AFPI vs. generic BPM" story: same event data, but conformance and audit-ready evidence) Tj
+-60 -665 Td
+60 652 Td
+(for free. Metric moved: cut audit-prep hours 40?60% and reduce control-exception rework.) Tj
+-60 -652 Td
+60 639 Td
+(Champion: Diane Pressley .) Tj
+-60 -639 Td
+60 626 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -626 Td
+60 613 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -613 Td
+60 600 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: High) Tj
+-60 -600 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005343 00000 n 
+0000005488 00000 n 
+0000007254 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+7399
+%%EOF

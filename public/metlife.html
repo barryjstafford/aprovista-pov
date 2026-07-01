@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MetLife, Inc. — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 260px; z-index: 100; }
+  .lib-menu.open { display: block; }
+  .lib-menu a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-menu a:last-child { border-bottom: none; }
+  .lib-menu a:hover { background: #f0f4ff; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
+  th { background: #f0f4ff; font-weight: 600; }
+  td:last-child { text-align: right; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 4px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+    background: #f0f4ff; color: #032d60; text-decoration: none;
+    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
+  .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
+  .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
+    cursor: not-allowed; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <img src="/banner-logo.png" alt="AproVista">
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <div class="lib-menu" id="libMenu"></div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>MetLife, Inc.</h1>
+  <div class="snapshot">
+    <p><strong>Financial Services, Insurance (Life, Annuities, Group Benefits, P&amp;C)</strong></p>
+    <p><strong>Revenue:</strong> ~$63.5B (FY24) &nbsp;|&nbsp; <strong>Employees:</strong> ~69,000 &nbsp;|&nbsp; <strong>HQ:</strong> New York, NY, USA</p>
+    <p><strong>Current Salesforce Products:</strong> Not confirmed [field verify with the MetLife CTO org]</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Informatica MDM, Informatica IDMC, Informatica IDQ, Databricks</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> INFA Restructuring UPSIDE (<a href="https://org62.my.salesforce.com/006ed00000WAvNZAA1">$2.0M</a>) | INFA IPU ELA (<a href="https://org62.my.salesforce.com/006ed00000YO4QKAA1">$1.84M</a>) | INFA Restructuring (<a href="https://org62.my.salesforce.com/006ed00000XO0ruAAD">$1.0M</a>) | MS - MetLife CTO (<a href="https://org62.my.salesforce.com/006ed00000WoFr4AAF">$565K</a>) | INFA Databricks Integration (<a href="https://org62.my.salesforce.com/006ed00000VXThKAAX">$294K</a>) | INFA MFT DX to CDIR (<a href="https://org62.my.salesforce.com/006ed00000QOJvNAAX">$253K</a>)</p>
+    <p><strong>AFPI AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details>
+    <summary>Propensity to Buy: 89/100 — T1 Pursue</summary>
+    <table>
+      <tr><th>Category</th><th>Score</th></tr>
+      <tr><td>Active Informatica MDM/IDMC/IDQ program ($5M+ open pipe across 6 opps)</td><td>14/15</td></tr>
+      <tr><td>Insurance vertical (top AFPI fit — claims, underwriting, policy admin)</td><td>13/15</td></tr>
+      <tr><td>Scale &amp; complexity (69k employees, 40+ countries, life + P&amp;C + group benefits)</td><td>13/15</td></tr>
+      <tr><td>Regulatory pressure (NYDFS, SOX, state insurance, Solvency II in EMEA)</td><td>12/15</td></tr>
+      <tr><td>CTO engagement live ($565K MS-MetLife CTO opp signals executive access)</td><td>12/15</td></tr>
+    </table>
+  </details>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <p><strong>1. Group Benefits Claims Adjudication — The New Frontier Payoff.</strong> MetLife's Group Benefits segment (dental, disability, absence management, voluntary) has publicly declared claims automation and adjudication speed a "New Frontier" strategic priority. AFPI mines the claims event log — intake → triage → medical review → adjudication → payment — to expose where cases stall (missing docs, provider callbacks, adjuster rework) versus where they can be routed straight to an Agentforce claims agent. This is the classic two-week pilot: no PQL specialist, one Ops analyst finds the top three broken variants and hands them to Agentforce Operations. Metric: claims cycle time and % straight-through processed. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Ramy+Tadros+MetLife">Ramy Tadros</a> (President, U.S. Business) or the Group Benefits Operations lead.</p>
+
+  <p><strong>2. Underwriting Cycle Time — Life &amp; Annuities.</strong> Individual life and annuity underwriting is a multi-desk process (application → medical evidence → APS retrieval → risk classification → policy issuance) where every day of delay puts placement at risk to a competitor. AFPI overlays the actual underwriting event log to distinguish "waiting on the APS" from "waiting on internal rework" — a distinction MetLife's own underwriters can rarely quantify today. The wedge lands directly against the active <a href="https://org62.my.salesforce.com/006ed00000WoFr4AAF">$565K MS-MetLife CTO opportunity</a> as a Discovery-phase Signature Success deliverable. Metric: app-to-issue cycle time and NIGO (not-in-good-order) rate. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Bill+Pappas+MetLife">Bill Pappas</a> (EVP, Head of Global Technology &amp; Operations).</p>
+
+  <p><strong>3. MDM/Data Quality Process Lineage — Informatica Co-Sell Wedge.</strong> MetLife has three live Informatica MDM/IDMC restructuring and IPU ELA opps totalling <a href="https://org62.my.salesforce.com/006ed00000WAvNZAA1">$4.8M+</a>, plus an active <a href="https://org62.my.salesforce.com/006ed00000VXThKAAX">Databricks integration workstream</a>. AFPI overlays a process-lineage view on the customer/policyholder MDM ingestion and stewardship workflow — the "did our policyholder record actually survive the pipeline correctly?" question that internal risk and state examiners increasingly ask. This differentiates against Celonis, which treats MDM as an analytics problem, not a process problem: AFPI plugs into Informatica's own event streams and yields a defensible audit trail in weeks, not quarters. Metric: data-quality rework hours and MDM steward FTE reallocation. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Bill+Pappas+MetLife+CIO">Bill Pappas</a> and the Chief Data Officer.</p>
+
+  <p><strong>4. Contact-Center Deflection &amp; Policyholder Servicing.</strong> MetLife runs one of the largest life-insurance contact-center footprints in North America, servicing 90 million+ customers across policy admin, beneficiary changes, and claims status. AFPI mines the actual servicing event log (IVR path, agent handoff, hold time, transfer loop, callback) to identify the top five call reasons that can be fully absorbed by Agentforce — not guessed at from a CSAT survey. This is the natural companion play to the CTO engagement: prove the deflection ROI before the Agentforce contract is signed. Metric: AHT, containment rate, first-contact resolution. Engage the SVP Customer Solutions Center and pull in Ramy Tadros' U.S. Business Ops lead.</p>
+
+  <p><strong>5. Regulatory Reporting &amp; Compliance Center — NYDFS + Solvency II Wedge.</strong> As a New York-domiciled insurer with major EMEA operations (MetLife Europe Services), MetLife carries a heavy NYDFS Part 500 (cyber), SOX, state insurance-department, and Solvency II reporting burden. AFPI's Compliance Center gives internal audit a defensible "prove the process" view over regulatory reporting workflows — evidence that reporting figures came from an approved, unaltered process path. It lands as the second use case on top of the same MDM/data foundation the Informatica deals are already building, and pays back inside a single reporting cycle. Metric: reporting-cycle days and manual-reconciliation FTE. Engage the Controller / Chief Audit Executive.</p>
+
+  <div class="actions">
+    <a href="/metlife.pdf" target="_blank">Generate PDF</a>
+    <a href="https://salesforce.enterprise.slack.com/docs/T026QPGMQ/F0BE8PB9JLV" target="_blank">Generate Slack Canvas</a>
+    <a href="https://aprovista-pov.vercel.app/metlife">Generate Vercel Page</a>
+    <a href="mailto:?subject=AFPI%20POV%20%E2%80%94%20MetLife%2C%20Inc.&body=https%3A%2F%2Faprovista-pov.vercel.app%2Fmetlife">Generate Customer Email (Beta)</a>
+    <span class="disabled">Generate Proposal Template (coming soon)</span>
+    <a href="https://salesforce-internal.slack.com/archives/C09LK6XLXAL" target="_blank">Deal Support Request</a>
+    <span class="disabled">Deeper Dive POV (coming soon)</span>
+  </div>
+  <footer class="fine">
+    Prepared by AproVista &nbsp;|&nbsp; Created by
+    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
+    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: High
+  </footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

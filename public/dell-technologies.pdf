@@ -1,0 +1,282 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 4947 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(Dell Technologies Inc. ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(Dell Technologies Inc.) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Technology, Enterprise Hardware & Infrastructure) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: $95.6B \(FY25\)  | Employees: ~108,000  | HQ: Round Rock, TX, USA) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Sales Cloud \(Unlimited Salesforce Enterprise Subscription\),) Tj
+-60 -707 Td
+60 694 Td
+(Service Cloud \(Field Service, ClickSoftware\), CPQ Plus, CPQ for Partner Community, Marketing) Tj
+-60 -694 Td
+60 681 Td
+(Cloud \(Enterprise + Account Engagement Ultimate\), Data Cloud, Einstein for Sales, CRM Analytics) Tj
+-60 -681 Td
+60 668 Td
+(Growth, Salesforce Shield, Salesforce Connect, Heroku, Quip for Customer 360, ISVForce) Tj
+-60 -668 Td
+60 655 Td
+(Platform, Signature Success Plan) Tj
+-60 -655 Td
+60 642 Td
+(Current Non-Salesforce Systems: Regrello \(confirmed via active Regrello-to-AFO migration opp\),) Tj
+-60 -642 Td
+60 629 Td
+(MuleSoft-adjacent legacy integration \(confirmed via active MuleSoft Migration opp\)) Tj
+-60 -629 Td
+60 616 Td
+(Relevant Open Opps: Dell USA Renewal 1 SFA \( $68.3M \) | Dell - Agentforce Operations -) Tj
+-60 -616 Td
+60 603 Td
+(Expansion \( $3.84M \) | Dell - Agentic Transformation Program \(AES Pod\) - CSG \( $3.7M \) | Dell -) Tj
+-60 -603 Td
+60 590 Td
+(PEM Transformation Phase 1 - CSG \( $3.0M \) | Dell - Regrello to AFO Migration - CSGS \( $2.5M \)) Tj
+-60 -590 Td
+60 577 Td
+(| MS - Dell - MuleSoft Migration - CSG \( $1.99M \) | Dell - Agentforce Operations \( $1.8M \) |) Tj
+-60 -577 Td
+60 564 Td
+(Dell | Data Cloud for Marketing Cloud \( $1.4M \)) Tj
+-60 -564 Td
+60 551 Td
+(AFPI AE: Charlie Stuard) Tj
+-60 -551 Td
+60 538 Td
+(Sales Motion: Co-Sell with Agentforce Operations) Tj
+-60 -538 Td
+60 525 Td
+(Propensity to Buy: 92/100 ? T1 Pursue) Tj
+-60 -525 Td
+60 512 Td
+(Category) Tj
+-60 -512 Td
+60 499 Td
+(Score) Tj
+-60 -499 Td
+60 486 Td
+(Active Agentforce Operations Motion) Tj
+-60 -486 Td
+60 473 Td
+(18/20) Tj
+-60 -473 Td
+60 460 Td
+(Process Complexity & Scale) Tj
+-60 -460 Td
+60 447 Td
+(15/15) Tj
+-60 -447 Td
+60 434 Td
+(SF Install Base Strength) Tj
+-60 -434 Td
+60 421 Td
+(14/15) Tj
+-60 -421 Td
+60 408 Td
+(Named Buyer Access \(Renewal in Flight\)) Tj
+-60 -408 Td
+60 395 Td
+(13/15) Tj
+-60 -395 Td
+60 382 Td
+(Data Readiness \(Data Cloud opp active\)) Tj
+-60 -382 Td
+60 369 Td
+(10/10) Tj
+-60 -369 Td
+/FB 13 Tf
+60 356 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -356 Td
+/FN 10 Tf
+60 338 Td
+(1. Quote-to-Cash cycle time in CSG configure-price-quote. Dell CSG runs one of the largest CPQ) Tj
+-60 -338 Td
+60 325 Td
+(deployments on the platform \(70,000 partner-community CPQ seats, 3,750 CPQ Plus internal\), and) Tj
+-60 -325 Td
+60 312 Td
+(quote velocity directly caps commercial-PC and server bookings. AFPI mines the Salesforce CPQ) Tj
+-60 -312 Td
+60 299 Td
+(event log to expose approval bounce-backs, discount-tier re-work, and configuration-rule dead-) Tj
+-60 -299 Td
+60 286 Td
+(ends that Regrello workflows have been papering over. The play stacks natively on the in-flight) Tj
+-60 -286 Td
+60 273 Td
+(Regrello-to-AFO Migration ? every rework loop AFPI surfaces becomes a targetable AFO agent ?) Tj
+-60 -273 Td
+60 260 Td
+(and moves quote-to-order cycle time and discount leakage. Engage John Byrne \(President, CSG\) as) Tj
+-60 -260 Td
+60 247 Td
+(the executive sponsor.) Tj
+-60 -247 Td
+60 234 Td
+(2. Field Service dispatch and technician utilization \(ProSupport\). With 12,000+ Field Service) Tj
+-60 -234 Td
+60 221 Td
+(Unlimited seats and legacy ClickSoftware forecasting still on the account, Dell's ProSupport) Tj
+-60 -221 Td
+60 208 Td
+(dispatch process is a prime AFPI target: mine the Service Cloud + Field Service event stream to) Tj
+-60 -208 Td
+60 195 Td
+(find travel waste, appointment rescheduling loops, and parts-mismatch truck-rolls that AFO's) Tj
+-60 -195 Td
+60 182 Td
+(autonomous scheduling can eliminate. Metric moved: first-time-fix rate and technician revenue-) Tj
+-60 -182 Td
+60 169 Td
+(hours per week ? a 3-point lift on 12k techs is real EBITDA. This is the highest-ROI wedge tied) Tj
+-60 -169 Td
+60 156 Td
+(to the $1.8M Agentforce Operations deal in stage 5. Champion: Doug Schmitt \(President, Services) Tj
+-60 -156 Td
+60 143 Td
+(& Digital\).) Tj
+-60 -143 Td
+60 130 Td
+(3. Renewal & entitlement process for the $68.3M SFA re-up. Dell's own $68M SFA renewal running) Tj
+-60 -130 Td
+60 117 Td
+(in stage 01 is the internal analog of exactly what AFPI mines for its customers ? Dell's Deal) Tj
+-60 -117 Td
+60 104 Td
+(Desk and Renewals org runs on Salesforce, and internal renewal-cycle friction \(approvals,) Tj
+-60 -104 Td
+60 91 Td
+(entitlement checks, product-family remaps\) is the tell-tale signal that a process-intelligence) Tj
+-60 -91 Td
+60 78 Td
+(layer is missing. Position AFPI as the instrumentation for Dell's own SF-on-SF renewal motion,) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 2148 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(then productize the same mining logic against Dell customer renewals. Metric: forecast-to-close) Tj
+-60 -782 Td
+60 769 Td
+(variance and renewal cycle time. Engage Bill Scannell \(President, Global Sales & Customer Ops\).) Tj
+-60 -769 Td
+60 756 Td
+(4. Order orchestration and MuleSoft-migration process transparency. The active $1.99M MuleSoft) Tj
+-60 -756 Td
+60 743 Td
+(Migration project rewires Dell's order and fulfillment integration fabric; AFPI reads the) Tj
+-60 -743 Td
+60 730 Td
+(MuleSoft + Salesforce event log to surface where orders actually stall \(credit-hold, config-) Tj
+-60 -730 Td
+60 717 Td
+(hold, backorder, entitlement-lookup\) instead of relying on tribal knowledge. Pain today is that) Tj
+-60 -717 Td
+60 704 Td
+(Dell's Order Management team can tell you a truck rolled but not why a $200k server config sat) Tj
+-60 -704 Td
+60 691 Td
+(9 days between "Booked" and "Manufactured." AFPI moves order-to-manufacture cycle time and on-) Tj
+-60 -691 Td
+60 678 Td
+(time shipment. Engage the Global Operations lead .) Tj
+-60 -678 Td
+60 665 Td
+(5. Marketing Cloud + Data Cloud lead-to-opportunity conversion \(ISG demand-gen\). The $1.4M Data) Tj
+-60 -665 Td
+60 652 Td
+(Cloud for Marketing Cloud opp signals Dell is unifying customer data across ExactTarget) Tj
+-60 -652 Td
+60 639 Td
+(Enterprise, Account Engagement Ultimate, and Sales Cloud. AFPI mines the lead-to-opp handoff to) Tj
+-60 -639 Td
+60 626 Td
+(expose where MQLs die \(SDR-to-AE handoff SLAs, dedupe re-work, campaign-attribution loops\) ?) Tj
+-60 -626 Td
+60 613 Td
+(the exact process gap Marketing Ops teams struggle to see with dashboards alone. Metric moved:) Tj
+-60 -613 Td
+60 600 Td
+(MQL-to-SQL conversion and lead-response time. Champion: the CMO / ISG marketing ops lead .) Tj
+-60 -600 Td
+60 587 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -587 Td
+60 574 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -574 Td
+60 561 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: High) Tj
+-60 -561 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005325 00000 n 
+0000005470 00000 n 
+0000007670 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+7815
+%%EOF

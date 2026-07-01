@@ -1,0 +1,282 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 5179 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(MetLife, Inc. ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(MetLife, Inc.) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Financial Services, Insurance \(Life, Annuities, Group Benefits, P&C\)) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: ~$63.5B \(FY24\)  | Employees: ~69,000  | HQ: New York, NY, USA) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Not confirmed [field verify with the MetLife CTO org]) Tj
+-60 -707 Td
+60 694 Td
+(Current Non-Salesforce Systems: Informatica MDM, Informatica IDMC, Informatica IDQ, Databricks) Tj
+-60 -694 Td
+60 681 Td
+(Relevant Open Opps: INFA Restructuring UPSIDE \( $2.0M \) | INFA IPU ELA \( $1.84M \) | INFA) Tj
+-60 -681 Td
+60 668 Td
+(Restructuring \( $1.0M \) | MS - MetLife CTO \( $565K \) | INFA Databricks Integration \( $294K \) |) Tj
+-60 -668 Td
+60 655 Td
+(INFA MFT DX to CDIR \( $253K \)) Tj
+-60 -655 Td
+60 642 Td
+(AFPI AE: Charlie Stuard) Tj
+-60 -642 Td
+60 629 Td
+(Sales Motion: Co-Sell with Agentforce Operations) Tj
+-60 -629 Td
+60 616 Td
+(Propensity to Buy: 89/100 ? T1 Pursue) Tj
+-60 -616 Td
+60 603 Td
+(Category) Tj
+-60 -603 Td
+60 590 Td
+(Score) Tj
+-60 -590 Td
+60 577 Td
+(Active Informatica MDM/IDMC/IDQ program \($5M+ open pipe across 6 opps\)) Tj
+-60 -577 Td
+60 564 Td
+(14/15) Tj
+-60 -564 Td
+60 551 Td
+(Insurance vertical \(top AFPI fit ? claims, underwriting, policy admin\)) Tj
+-60 -551 Td
+60 538 Td
+(13/15) Tj
+-60 -538 Td
+60 525 Td
+(Scale & complexity \(69k employees, 40+ countries, life + P&C + group benefits\)) Tj
+-60 -525 Td
+60 512 Td
+(13/15) Tj
+-60 -512 Td
+60 499 Td
+(Regulatory pressure \(NYDFS, SOX, state insurance, Solvency II in EMEA\)) Tj
+-60 -499 Td
+60 486 Td
+(12/15) Tj
+-60 -486 Td
+60 473 Td
+(CTO engagement live \($565K MS-MetLife CTO opp signals executive access\)) Tj
+-60 -473 Td
+60 460 Td
+(12/15) Tj
+-60 -460 Td
+/FB 13 Tf
+60 447 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -447 Td
+/FN 10 Tf
+60 429 Td
+(1. Group Benefits Claims Adjudication ? The New Frontier Payoff. MetLife's Group Benefits) Tj
+-60 -429 Td
+60 416 Td
+(segment \(dental, disability, absence management, voluntary\) has publicly declared claims) Tj
+-60 -416 Td
+60 403 Td
+(automation and adjudication speed a "New Frontier" strategic priority. AFPI mines the claims) Tj
+-60 -403 Td
+60 390 Td
+(event log ? intake ? triage ? medical review ? adjudication ? payment ? to expose where cases) Tj
+-60 -390 Td
+60 377 Td
+(stall \(missing docs, provider callbacks, adjuster rework\) versus where they can be routed) Tj
+-60 -377 Td
+60 364 Td
+(straight to an Agentforce claims agent. This is the classic two-week pilot: no PQL specialist,) Tj
+-60 -364 Td
+60 351 Td
+(one Ops analyst finds the top three broken variants and hands them to Agentforce Operations.) Tj
+-60 -351 Td
+60 338 Td
+(Metric: claims cycle time and % straight-through processed. Engage Ramy Tadros \(President, U.S.) Tj
+-60 -338 Td
+60 325 Td
+(Business\) or the Group Benefits Operations lead.) Tj
+-60 -325 Td
+60 312 Td
+(2. Underwriting Cycle Time ? Life & Annuities. Individual life and annuity underwriting is a) Tj
+-60 -312 Td
+60 299 Td
+(multi-desk process \(application ? medical evidence ? APS retrieval ? risk classification ?) Tj
+-60 -299 Td
+60 286 Td
+(policy issuance\) where every day of delay puts placement at risk to a competitor. AFPI overlays) Tj
+-60 -286 Td
+60 273 Td
+(the actual underwriting event log to distinguish "waiting on the APS" from "waiting on internal) Tj
+-60 -273 Td
+60 260 Td
+(rework" ? a distinction MetLife's own underwriters can rarely quantify today. The wedge lands) Tj
+-60 -260 Td
+60 247 Td
+(directly against the active $565K MS-MetLife CTO opportunity as a Discovery-phase Signature) Tj
+-60 -247 Td
+60 234 Td
+(Success deliverable. Metric: app-to-issue cycle time and NIGO \(not-in-good-order\) rate. Engage) Tj
+-60 -234 Td
+60 221 Td
+(Bill Pappas \(EVP, Head of Global Technology & Operations\).) Tj
+-60 -221 Td
+60 208 Td
+(3. MDM/Data Quality Process Lineage ? Informatica Co-Sell Wedge. MetLife has three live) Tj
+-60 -208 Td
+60 195 Td
+(Informatica MDM/IDMC restructuring and IPU ELA opps totalling $4.8M+ , plus an active) Tj
+-60 -195 Td
+60 182 Td
+(Databricks integration workstream . AFPI overlays a process-lineage view on the) Tj
+-60 -182 Td
+60 169 Td
+(customer/policyholder MDM ingestion and stewardship workflow ? the "did our policyholder record) Tj
+-60 -169 Td
+60 156 Td
+(actually survive the pipeline correctly?" question that internal risk and state examiners) Tj
+-60 -156 Td
+60 143 Td
+(increasingly ask. This differentiates against Celonis, which treats MDM as an analytics) Tj
+-60 -143 Td
+60 130 Td
+(problem, not a process problem: AFPI plugs into Informatica's own event streams and yields a) Tj
+-60 -130 Td
+60 117 Td
+(defensible audit trail in weeks, not quarters. Metric: data-quality rework hours and MDM) Tj
+-60 -117 Td
+60 104 Td
+(steward FTE reallocation. Engage Bill Pappas and the Chief Data Officer.) Tj
+-60 -104 Td
+60 91 Td
+(4. Contact-Center Deflection & Policyholder Servicing. MetLife runs one of the largest life-) Tj
+-60 -91 Td
+60 78 Td
+(insurance contact-center footprints in North America, servicing 90 million+ customers across) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 2071 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(policy admin, beneficiary changes, and claims status. AFPI mines the actual servicing event log) Tj
+-60 -782 Td
+60 769 Td
+(\(IVR path, agent handoff, hold time, transfer loop, callback\) to identify the top five call) Tj
+-60 -769 Td
+60 756 Td
+(reasons that can be fully absorbed by Agentforce ? not guessed at from a CSAT survey. This is) Tj
+-60 -756 Td
+60 743 Td
+(the natural companion play to the CTO engagement: prove the deflection ROI before the) Tj
+-60 -743 Td
+60 730 Td
+(Agentforce contract is signed. Metric: AHT, containment rate, first-contact resolution. Engage) Tj
+-60 -730 Td
+60 717 Td
+(the SVP Customer Solutions Center and pull in Ramy Tadros' U.S. Business Ops lead.) Tj
+-60 -717 Td
+60 704 Td
+(5. Regulatory Reporting & Compliance Center ? NYDFS + Solvency II Wedge. As a New York-) Tj
+-60 -704 Td
+60 691 Td
+(domiciled insurer with major EMEA operations \(MetLife Europe Services\), MetLife carries a heavy) Tj
+-60 -691 Td
+60 678 Td
+(NYDFS Part 500 \(cyber\), SOX, state insurance-department, and Solvency II reporting burden.) Tj
+-60 -678 Td
+60 665 Td
+(AFPI's Compliance Center gives internal audit a defensible "prove the process" view over) Tj
+-60 -665 Td
+60 652 Td
+(regulatory reporting workflows ? evidence that reporting figures came from an approved,) Tj
+-60 -652 Td
+60 639 Td
+(unaltered process path. It lands as the second use case on top of the same MDM/data foundation) Tj
+-60 -639 Td
+60 626 Td
+(the Informatica deals are already building, and pays back inside a single reporting cycle.) Tj
+-60 -626 Td
+60 613 Td
+(Metric: reporting-cycle days and manual-reconciliation FTE. Engage the Controller / Chief Audit) Tj
+-60 -613 Td
+60 600 Td
+(Executive.) Tj
+-60 -600 Td
+60 587 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -587 Td
+60 574 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -574 Td
+60 561 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: High) Tj
+-60 -561 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005557 00000 n 
+0000005702 00000 n 
+0000007825 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+7970
+%%EOF

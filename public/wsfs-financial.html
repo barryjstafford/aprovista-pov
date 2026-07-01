@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WSFS Financial Corporation — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #001558; padding: 18px 0; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; }
+  .banner img { height: 72px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: rgba(255,255,255,.15); color: #fff;
+             border: 1px solid rgba(255,255,255,.35); padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: rgba(255,255,255,.25); }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 260px; z-index: 100; }
+  .lib-menu.open { display: block; }
+  .lib-menu a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-menu a:last-child { border-bottom: none; }
+  .lib-menu a:hover { background: #f0f4ff; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
+  th { background: #f0f4ff; font-weight: 600; }
+  td:last-child { text-align: right; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 4px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+    background: #f0f4ff; color: #032d60; text-decoration: none;
+    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
+  .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
+  .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
+    cursor: not-allowed; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <img src="/banner-logo.png" alt="AproVista">
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">My POV Library &#9662;</button>
+      <div class="lib-menu" id="libMenu"></div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>WSFS Financial Corporation</h1>
+  <div class="snapshot">
+    <p><strong>Financial Services, Banking (Regional / Community)</strong></p>
+    <p><strong>Revenue:</strong> ~$1.4B &nbsp;|&nbsp; <strong>Employees:</strong> ~2,100 &nbsp;|&nbsp; <strong>HQ:</strong> Wilmington, DE, USA</p>
+    <p><strong>Current Salesforce Products:</strong> Sales Cloud (SFA), Analytics Cloud, MuleSoft, Platform, Marketing Cloud Engagement, Service Cloud (in-flight)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Informatica IDMC / MDM (confirmed via active INFA opp)</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> AEH Org Renewal — MuleSoft + Platform + CRM (<a href="https://org62.my.salesforce.com/006ed00000TfUPdAAN">$1.33M</a>) &nbsp;|&nbsp; Sales Cloud + Analytics Renewal (<a href="https://org62.my.salesforce.com/0063y000018QqtiAAC">$2.37M</a>) &nbsp;|&nbsp; Agentforce Operations (<a href="https://org62.my.salesforce.com/006ed00000cHZDBAA4">$600K</a>) &nbsp;|&nbsp; CTO Extension (<a href="https://org62.my.salesforce.com/006ed00000IJ0ErAAL">$778K</a>) &nbsp;|&nbsp; Employee Service + Agentforce (<a href="https://org62.my.salesforce.com/006ed00000CbEebAAF">$239K</a>) &nbsp;|&nbsp; Informatica MDM (<a href="https://org62.my.salesforce.com/006ed00000Y0ohBAAR">$303K</a>) &nbsp;|&nbsp; Agentforce Pilot (<a href="https://org62.my.salesforce.com/006ed00000O95sHAAR">$150K</a>)</p>
+    <p><strong>AFPI AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <h2>Propensity to Buy AFPI</h2>
+  <details open>
+    <summary>Score: 86/100 &mdash; T1 Pursue</summary>
+    <table>
+      <tr><th>Category</th><th>Score</th></tr>
+      <tr><td>Active Agentforce / Operations motion in-flight</td><td>18/20</td></tr>
+      <tr><td>Regulated vertical (bank, KYC/AML, BSA)</td><td>14/15</td></tr>
+      <tr><td>Salesforce install base breadth (SFA, MuleSoft, MC, Service, Data Cloud shell)</td><td>13/15</td></tr>
+      <tr><td>Data & MDM readiness (active Informatica IDMC / MDM)</td><td>12/15</td></tr>
+      <tr><td>Recent M&amp;A integration complexity (Bryn Mawr Trust)</td><td>12/15</td></tr>
+    </table>
+  </details>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <p><strong>1. Customer / Account Onboarding &amp; KYC.</strong> WSFS onboards retail, small-business, and wealth clients through overlapping teller, digital, and Cash Connect channels — with KYC/AML checks, CIP verification, and beneficial-owner reviews stitched across the core, Salesforce, and Informatica MDM. AFPI can mine the end-to-end onboarding event log to expose rework loops, manual document chase, and cycle-time variance between branches and the digital channel, then hand clean, evidenced processes to the Agentforce Operations agent already in-flight (<a href="https://org62.my.salesforce.com/006ed00000cHZDBAA4">$600K</a>). Metric moved: time-to-fund and abandonment rate on new accounts. Champion: <a href="https://www.linkedin.com/search/results/people/?keywords=Rodger+Levenson+WSFS">Rodger Levenson</a> (CEO) sponsor; the digital / retail banking operations lead as day-to-day owner.</p>
+
+  <p><strong>2. Loan Origination &amp; Underwriting (Commercial + Small Business).</strong> Commercial and SBA loan files traverse relationship managers, underwriting, credit, doc prep, and closing — a classic hand-off-heavy process where variance and re-work erode NIM in a rising-rate environment. AFPI mines the origination log across the LOS and Salesforce SFA (part of the $2.37M renewal) to quantify stage-level cycle times, exception paths, and covenant-review rework. That evidence turns the Agentforce Operations pilot into a targeted underwriter-assist agent rather than a generic chatbot. Metric moved: application-to-close cycle time and pull-through rate. Champion: the commercial banking COO or head of credit ops (<a href="https://www.linkedin.com/search/results/people/?keywords=commercial+banking+lead+WSFS">commercial banking lead</a>).</p>
+
+  <p><strong>3. Contact Center &amp; Employee Service (Service + Agentforce).</strong> WSFS has an active Employee Service + Agentforce opportunity (<a href="https://org62.my.salesforce.com/006ed00000CbEebAAF">$239K</a>) and an Agentforce Pilot (<a href="https://org62.my.salesforce.com/006ed00000O95sHAAR">$150K</a>). AFPI mines the case-handling event log — Service Cloud statuses, agent actions, escalations, transfers — to isolate the top intents by AHT and re-open rate, so the deployed Agentforce agents are pointed at the flows with the biggest handle-time payoff, not the loudest. AFPI Compliance Center adds an audit trail for regulator questions on complaint handling and Reg E disputes. Metric moved: AHT, first-contact resolution, complaint SLA. Champion: the head of customer service / associate experience (<a href="https://www.linkedin.com/search/results/people/?keywords=customer+experience+lead+WSFS">customer experience lead</a>).</p>
+
+  <p><strong>4. Post-Merger Integration &amp; Data Quality (Bryn Mawr Trust + Cash Connect + Wealth).</strong> WSFS has absorbed Bryn Mawr Trust and runs Cash Connect and a wealth arm — meaning duplicated customer, party, and account records flow through the active Informatica IDMC / MDM initiative (<a href="https://org62.my.salesforce.com/006ed00000Y0ohBAAR">$303K</a>). AFPI mines the master-data reconciliation and manual-merge processes to show where MDM rules are firing false positives, where stewards are rubber-stamping, and where the same customer is being serviced twice. Combined with the MuleSoft integration renewal, this becomes the evidence that turns MDM from a cost center into a measurable revenue-per-customer story. Metric moved: single-customer-view coverage, steward hours per 1,000 records. Champion: the head of enterprise data / CIO organization (<a href="https://www.linkedin.com/search/results/people/?keywords=chief+information+officer+WSFS">CIO</a>).</p>
+
+  <p><strong>5. BSA / AML Alert Investigation &amp; SAR Filing.</strong> As a $20B+ asset bank operating in Delaware, WSFS is subject to intensive BSA/AML supervision, and alert queues from transaction monitoring generate huge investigator caseloads. AFPI mines the alert-to-disposition process — enrichment, escalations, L1/L2 hand-offs, SAR narrative drafting — to expose bottlenecks and disparate reviewer paths, then hand a proven, auditable process to an Agentforce financial-crimes assistant. Compliance Center provides regulators the evidenced control story. Metric moved: alerts per investigator per day, SAR filing timeliness, false-positive rate. Champion: the BSA officer / head of financial crimes (<a href="https://www.linkedin.com/search/results/people/?keywords=BSA+officer+WSFS">BSA officer</a>); economic buyer sits with the Chief Risk Officer.</p>
+
+  <div class="actions">
+    <a href="/wsfs-financial.pdf" target="_blank">Generate PDF</a>
+    <a href="https://salesforce.enterprise.slack.com/docs/T026QPGMQ/F0BEFQ8G7DJ" target="_blank">Generate Slack Canvas</a>
+    <a href="https://aprovista-pov.vercel.app/wsfs-financial">Generate Vercel Page</a>
+    <a href="mailto:?subject=AFPI%20POV%20%E2%80%94%20WSFS%20Financial%20Corporation&body=https%3A%2F%2Faprovista-pov.vercel.app%2Fwsfs-financial">Generate Customer Email (Beta)</a>
+    <span class="disabled">Generate Proposal Template (coming soon)</span>
+    <a href="https://salesforce.enterprise.slack.com/archives/apromore-gtm" target="_blank">Deal Support Request</a>
+    <span class="disabled">Deeper Dive POV (coming soon)</span>
+  </div>
+  <footer class="fine">
+    Prepared by AproVista &nbsp;|&nbsp; Created by
+    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
+    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: High
+  </footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

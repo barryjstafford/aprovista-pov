@@ -1,0 +1,264 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 4991 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(Alfa Laval Corporate AB ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(Alfa Laval Corporate AB) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Manufacturing, Industrial Equipment \(Heat Transfer, Separation, Fluid Handling\)) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: ~$4.79B \(SEK ~63B\)  | Employees: ~16,785  | HQ: Lund, Sweden) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Service Cloud, Sales Cloud, Slack, Data Cloud \(in-flight\) [Org62]) Tj
+-60 -707 Td
+60 694 Td
+(Current Non-Salesforce Systems: Not confirmed [field verify with IT PMO lead]) Tj
+-60 -694 Td
+60 681 Td
+(Relevant Open Opps: Alfa laval - Process mining - Apromore \( $250k \)  |  Alfa Laval - Svc) Tj
+-60 -681 Td
+60 668 Td
+(Rollout Phase I \( $210k \)  |  Alfa Laval - Svc Pilot \( $126k \)  |  Alfa Laval AB - Data Cloud \() Tj
+-60 -668 Td
+60 655 Td
+(TBD \)) Tj
+-60 -655 Td
+60 642 Td
+(AFPI AE: Luciano Tapparo) Tj
+-60 -642 Td
+60 629 Td
+(Sales Motion: Sell Integrated with Salesforce Product \(Service Cloud + Data Cloud\)) Tj
+-60 -629 Td
+60 616 Td
+(Propensity to Buy: 88/100 ? T1 Pursue) Tj
+-60 -616 Td
+60 603 Td
+(Category) Tj
+-60 -603 Td
+60 590 Td
+(Score) Tj
+-60 -590 Td
+60 577 Td
+(Active AFPI Opportunity in Late Stage) Tj
+-60 -577 Td
+60 564 Td
+(20/20) Tj
+-60 -564 Td
+60 551 Td
+(Process Complexity & Volume) Tj
+-60 -551 Td
+60 538 Td
+(14/15) Tj
+-60 -538 Td
+60 525 Td
+(Salesforce Footprint & Co-Sell Fit) Tj
+-60 -525 Td
+60 512 Td
+(13/15) Tj
+-60 -512 Td
+60 499 Td
+(Buyer Titles & Champion Access) Tj
+-60 -499 Td
+60 486 Td
+(11/15) Tj
+-60 -486 Td
+60 473 Td
+(Regulatory / Compliance Drivers) Tj
+-60 -473 Td
+60 460 Td
+(10/15) Tj
+-60 -460 Td
+/FB 13 Tf
+60 447 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -447 Td
+/FN 10 Tf
+60 429 Td
+(1. Order-to-Cash across ERP + Service Cloud. Alfa Laval books orders across pumps, heat) Tj
+-60 -429 Td
+60 416 Td
+(exchangers, decanters, and aftermarket parts through a multi-ERP landscape feeding a Service) Tj
+-60 -416 Td
+60 403 Td
+(Cloud rollout now in Stage 02. Manual order-clearing, credit blocks, and delivery-date) Tj
+-60 -403 Td
+60 390 Td
+(renegotiation stretch quote-to-cash cycle times and hurt on-time delivery in a capex-sensitive) Tj
+-60 -390 Td
+60 377 Td
+(industrial buyer market. AFPI mines the full O2C event log without a PQL specialist, exposes) Tj
+-60 -377 Td
+60 364 Td
+(rework loops, and lets the business analyst re-simulate policy changes in weeks, not quarters ?) Tj
+-60 -364 Td
+60 351 Td
+(targeting DSO reduction of 4-6 days and OTIF improvement of 3-5 pts. Champion: Anders Wilhjelm) Tj
+-60 -351 Td
+60 338 Td
+(\(President, Marine Division\) or the Service Cloud program lead named on the rollout opp.) Tj
+-60 -338 Td
+60 325 Td
+(2. Field Service & Aftermarket Case-to-Resolution. The two open Service opps \($126k pilot +) Tj
+-60 -325 Td
+60 312 Td
+($210k Phase I rollout\) signal a live investment in service transformation across ~100 service) Tj
+-60 -312 Td
+60 299 Td
+(centers globally. Aftermarket is Alfa Laval's highest-margin business; every hour a decanter or) Tj
+-60 -299 Td
+60 286 Td
+(heat exchanger is down costs a customer real revenue, so first-time-fix and MTTR are board-) Tj
+-60 -286 Td
+60 273 Td
+(level metrics. AFPI process-mines every case path, spare-parts dispatch, and technician) Tj
+-60 -273 Td
+60 260 Td
+(handoff, then feeds Agentforce Service to auto-route and auto-diagnose ? a 10-15% MTTR) Tj
+-60 -260 Td
+60 247 Td
+(reduction and 5-8 pt FCR lift compound directly into service margin. Champion: Sameer Kalra) Tj
+-60 -247 Td
+60 234 Td
+(\(President, Business Unit Service\).) Tj
+-60 -234 Td
+60 221 Td
+(3. Procure-to-Pay & Supplier On-Boarding. Alfa Laval sources specialty alloys, castings, and) Tj
+-60 -221 Td
+60 208 Td
+(titanium plates from a global supplier base under tightening EU CSRD, CBAM, and dual-use export) Tj
+-60 -208 Td
+60 195 Td
+(controls. Manual PO exceptions, three-way match failures, and supplier onboarding backlogs) Tj
+-60 -195 Td
+60 182 Td
+(today burn CFO-office FTE and slow new product introductions. AFPI mines the P2P event log,) Tj
+-60 -182 Td
+60 169 Td
+(quantifies rework hotspots, and lets Finance re-simulate policy changes with no SQL ?) Tj
+-60 -169 Td
+60 156 Td
+(reclaiming 8-12% of P2P touchless-rate uplift and cutting supplier onboarding from weeks to) Tj
+-60 -156 Td
+60 143 Td
+(days. Champion: Fredrik Ekström \(CFO\).) Tj
+-60 -143 Td
+60 130 Td
+(4. New Product Introduction \(NPI\) & Engineering Change Order. Alfa Laval ships thousands of) Tj
+-60 -130 Td
+60 117 Td
+(engineered-to-order configurations across the Marine, Energy, and Food & Water divisions; ECO) Tj
+-60 -117 Td
+60 104 Td
+(cycle time is the hidden tax on innovation speed. AFPI mines the PLM-to-ERP change-request) Tj
+-60 -104 Td
+60 91 Td
+(flow, exposes bottlenecks between engineering, sourcing, and manufacturing, and pairs) Tj
+-60 -91 Td
+60 78 Td
+(Compliance Center with the AFPI wedge to keep CE/ATEX/marine-class documentation always audit-) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 1408 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(ready. Target: 20-30% reduction in engineering-change lead time and zero missed classification) Tj
+-60 -782 Td
+60 769 Td
+(reviews. Champion: Susanne Pahlén Åklundh \(President, Business Unit Energy\).) Tj
+-60 -769 Td
+60 756 Td
+(5. Marine Decarbonization & Compliance Reporting. Alfa Laval's PureBallast, PureSOx, and boiler) Tj
+-60 -756 Td
+60 743 Td
+(business sit at the center of the IMO 2030/2050 decarbonization mandate and EU ETS-Maritime) Tj
+-60 -743 Td
+60 730 Td
+(rollout ? the customer's reporting obligation IS Alfa Laval's revenue engine. AFPI process-) Tj
+-60 -730 Td
+60 717 Td
+(mines the certification-to-installation-to-service flow for marine retrofits and layers) Tj
+-60 -717 Td
+60 704 Td
+(Compliance Center to auto-evidence each installation against MARPOL and EU-ETS schedules. This) Tj
+-60 -704 Td
+60 691 Td
+(turns a compliance line item into a durable renewal moat and shortens retrofit cycle time by) Tj
+-60 -691 Td
+60 678 Td
+(15-25%. Champion: Anders Wilhjelm \(President, Marine Division\).) Tj
+-60 -678 Td
+60 665 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -665 Td
+60 652 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -652 Td
+60 639 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: High) Tj
+-60 -639 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005369 00000 n 
+0000005514 00000 n 
+0000006974 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+7119
+%%EOF

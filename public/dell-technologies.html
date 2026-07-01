@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dell Technologies Inc. — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #001558; padding: 18px 0; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; }
+  .banner img { height: 72px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: rgba(255,255,255,.15); color: #fff;
+             border: 1px solid rgba(255,255,255,.35); padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: rgba(255,255,255,.25); }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 260px; z-index: 100; }
+  .lib-menu.open { display: block; }
+  .lib-menu a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-menu a:last-child { border-bottom: none; }
+  .lib-menu a:hover { background: #f0f4ff; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
+  th { background: #f0f4ff; font-weight: 600; }
+  td:last-child { text-align: right; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 4px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+    background: #f0f4ff; color: #032d60; text-decoration: none;
+    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
+  .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
+  .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
+    cursor: not-allowed; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <img src="/banner-logo.png" alt="AproVista">
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <div class="lib-menu" id="libMenu"></div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Dell Technologies Inc.</h1>
+  <div class="snapshot">
+    <p><strong>Technology, Enterprise Hardware & Infrastructure</strong></p>
+    <p><strong>Revenue:</strong> $95.6B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~108,000 &nbsp;|&nbsp; <strong>HQ:</strong> Round Rock, TX, USA</p>
+    <p><strong>Current Salesforce Products:</strong> Sales Cloud (Unlimited Salesforce Enterprise Subscription), Service Cloud (Field Service, ClickSoftware), CPQ Plus, CPQ for Partner Community, Marketing Cloud (Enterprise + Account Engagement Ultimate), Data Cloud, Einstein for Sales, CRM Analytics Growth, Salesforce Shield, Salesforce Connect, Heroku, Quip for Customer 360, ISVForce Platform, Signature Success Plan</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Regrello (confirmed via active Regrello-to-AFO migration opp), MuleSoft-adjacent legacy integration (confirmed via active MuleSoft Migration opp)</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Dell USA Renewal 1 SFA (<a href="https://org62.my.salesforce.com/006ed00000I3bLeAAJ">$68.3M</a>) | Dell - Agentforce Operations - Expansion (<a href="https://org62.my.salesforce.com/006ed00000ehyBZAAY">$3.84M</a>) | Dell - Agentic Transformation Program (AES Pod) - CSG (<a href="https://org62.my.salesforce.com/006ed00000XnlM9AAJ">$3.7M</a>) | Dell - PEM Transformation Phase 1 - CSG (<a href="https://org62.my.salesforce.com/006ed00000dkbanAAA">$3.0M</a>) | Dell - Regrello to AFO Migration - CSGS (<a href="https://org62.my.salesforce.com/006ed00000djy3BAAQ">$2.5M</a>) | MS - Dell - MuleSoft Migration - CSG (<a href="https://org62.my.salesforce.com/006ed00000djXJ8AAM">$1.99M</a>) | Dell - Agentforce Operations (<a href="https://org62.my.salesforce.com/006ed00000XEwNhAAL">$1.8M</a>) | Dell | Data Cloud for Marketing Cloud (<a href="https://org62.my.salesforce.com/006ed00000Oyf5hAAB">$1.4M</a>)</p>
+    <p><strong>AFPI AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details>
+    <summary>Propensity to Buy: 92/100 — T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th></tr></thead>
+      <tbody>
+        <tr><td>Active Agentforce Operations Motion</td><td>18/20</td></tr>
+        <tr><td>Process Complexity & Scale</td><td>15/15</td></tr>
+        <tr><td>SF Install Base Strength</td><td>14/15</td></tr>
+        <tr><td>Named Buyer Access (Renewal in Flight)</td><td>13/15</td></tr>
+        <tr><td>Data Readiness (Data Cloud opp active)</td><td>10/10</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <p><strong>1. Quote-to-Cash cycle time in CSG configure-price-quote.</strong> Dell CSG runs one of the largest CPQ deployments on the platform (70,000 partner-community CPQ seats, 3,750 CPQ Plus internal), and quote velocity directly caps commercial-PC and server bookings. AFPI mines the Salesforce CPQ event log to expose approval bounce-backs, discount-tier re-work, and configuration-rule dead-ends that Regrello workflows have been papering over. The play stacks natively on the in-flight <a href="https://org62.my.salesforce.com/006ed00000djy3BAAQ">Regrello-to-AFO Migration</a> — every rework loop AFPI surfaces becomes a targetable AFO agent — and moves quote-to-order cycle time and discount leakage. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=John+Byrne+Dell+Technologies">John Byrne</a> (President, CSG) as the executive sponsor.</p>
+
+  <p><strong>2. Field Service dispatch and technician utilization (ProSupport).</strong> With 12,000+ Field Service Unlimited seats and legacy ClickSoftware forecasting still on the account, Dell's ProSupport dispatch process is a prime AFPI target: mine the Service Cloud + Field Service event stream to find travel waste, appointment rescheduling loops, and parts-mismatch truck-rolls that AFO's autonomous scheduling can eliminate. Metric moved: first-time-fix rate and technician revenue-hours per week — a 3-point lift on 12k techs is real EBITDA. This is the highest-ROI wedge tied to the <a href="https://org62.my.salesforce.com/006ed00000XEwNhAAL">$1.8M Agentforce Operations</a> deal in stage 5. Champion: <a href="https://www.linkedin.com/search/results/people/?keywords=Doug+Schmitt+Dell+Technologies">Doug Schmitt</a> (President, Services & Digital).</p>
+
+  <p><strong>3. Renewal & entitlement process for the $68.3M SFA re-up.</strong> Dell's own $68M SFA renewal running in stage 01 is the internal analog of exactly what AFPI mines for its customers — Dell's Deal Desk and Renewals org runs on Salesforce, and internal renewal-cycle friction (approvals, entitlement checks, product-family remaps) is the tell-tale signal that a process-intelligence layer is missing. Position AFPI as the instrumentation for Dell's own SF-on-SF renewal motion, then productize the same mining logic against Dell customer renewals. Metric: forecast-to-close variance and renewal cycle time. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Bill+Scannell+Dell+Technologies">Bill Scannell</a> (President, Global Sales & Customer Ops).</p>
+
+  <p><strong>4. Order orchestration and MuleSoft-migration process transparency.</strong> The active <a href="https://org62.my.salesforce.com/006ed00000djXJ8AAM">$1.99M MuleSoft Migration</a> project rewires Dell's order and fulfillment integration fabric; AFPI reads the MuleSoft + Salesforce event log to surface where orders actually stall (credit-hold, config-hold, backorder, entitlement-lookup) instead of relying on tribal knowledge. Pain today is that Dell's Order Management team can tell you a truck rolled but not why a $200k server config sat 9 days between "Booked" and "Manufactured." AFPI moves order-to-manufacture cycle time and on-time shipment. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Chuck+Whitten+Dell+Technologies">the Global Operations lead</a>.</p>
+
+  <p><strong>5. Marketing Cloud + Data Cloud lead-to-opportunity conversion (ISG demand-gen).</strong> The <a href="https://org62.my.salesforce.com/006ed00000Oyf5hAAB">$1.4M Data Cloud for Marketing Cloud</a> opp signals Dell is unifying customer data across ExactTarget Enterprise, Account Engagement Ultimate, and Sales Cloud. AFPI mines the lead-to-opp handoff to expose where MQLs die (SDR-to-AE handoff SLAs, dedupe re-work, campaign-attribution loops) — the exact process gap Marketing Ops teams struggle to see with dashboards alone. Metric moved: MQL-to-SQL conversion and lead-response time. Champion: <a href="https://www.linkedin.com/search/results/people/?keywords=Allison+Dew+Dell+Technologies">the CMO / ISG marketing ops lead</a>.</p>
+
+  <div class="actions">
+    <a href="/dell-technologies.pdf" target="_blank">Generate PDF</a>
+    <a href="https://salesforce.enterprise.slack.com/docs/T026QPGMQ/F0BF6DJ6CQ0" target="_blank">Generate Slack Canvas</a>
+    <a href="https://aprovista-pov.vercel.app/dell-technologies">Generate Vercel Page</a>
+    <a href="mailto:?subject=AFPI%20POV%20%E2%80%94%20Dell%20Technologies%20Inc.&body=https://aprovista-pov.vercel.app/dell-technologies">Generate Customer Email (Beta)</a>
+    <span class="disabled">Generate Proposal Template (coming soon)</span>
+    <a href="https://salesforce.enterprise.slack.com/archives/apromore-gtm" target="_blank">Deal Support Request</a>
+    <span class="disabled">Deeper Dive POV (coming soon)</span>
+  </div>
+  <footer class="fine">
+    Prepared by AproVista &nbsp;|&nbsp; Created by
+    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
+    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: High
+  </footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

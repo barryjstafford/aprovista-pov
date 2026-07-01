@@ -1,0 +1,300 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 5303 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(Mastercard Incorporated ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(Mastercard Incorporated) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Financial Services, Payments Network & Data Services) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: ~$32.8B \(FY25\)  | Employees: ~39,800  | HQ: Purchase, NY, USA) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Not confirmed [field verify with Teena Angale ] ? Data Cloud pilot) Tj
+-60 -707 Td
+60 694 Td
+(record and Tableau POC in flight per Org62; no active Sales/Service Cloud footprint verified.) Tj
+-60 -694 Td
+60 681 Td
+(Current Non-Salesforce Systems: Not confirmed [field verify with Teena Angale ]) Tj
+-60 -681 Td
+60 668 Td
+(Relevant Open Opps: ISV - Mastercard - FSC Data Cloud \( ISV Prospect \) | ISV - Mastercard -) Tj
+-60 -668 Td
+60 655 Td
+(Ethoca OEM Native \( ISV Assess \) | Mastercard Technologies Tableau POC \( Identifying \)) Tj
+-60 -655 Td
+60 642 Td
+(AFPI AE: Charlie Stuard) Tj
+-60 -642 Td
+60 629 Td
+(Sales Motion: Co-Sell with Agentforce Operations) Tj
+-60 -629 Td
+60 616 Td
+(Propensity to Buy: 73/100 ? T2 Develop) Tj
+-60 -616 Td
+60 603 Td
+(Category) Tj
+-60 -603 Td
+60 590 Td
+(Score) Tj
+-60 -590 Td
+60 577 Td
+(Regulatory pressure \(PCI DSS, DORA, GDPR, network rules, state MTL\)) Tj
+-60 -577 Td
+60 564 Td
+(12/12) Tj
+-60 -564 Td
+60 551 Td
+(Process-pain surface \(disputes, chargebacks, KYC, merchant onboarding at network scale\)) Tj
+-60 -551 Td
+60 538 Td
+(11/12) Tj
+-60 -538 Td
+60 525 Td
+(Vertical fit ? payments network + Data & Services growth engine) Tj
+-60 -525 Td
+60 512 Td
+(10/12) Tj
+-60 -512 Td
+60 499 Td
+(Agentic AI mandate \(Decision Intelligence, Small Business AI Agent, GenAI in fraud\)) Tj
+-60 -499 Td
+60 486 Td
+(10/12) Tj
+-60 -486 Td
+60 473 Td
+(Active SF pipeline \(Ethoca ISV OEM + FSC Data Cloud + Tableau POC ? no large AELA yet\)) Tj
+-60 -473 Td
+60 460 Td
+(6/12) Tj
+-60 -460 Td
+/FB 13 Tf
+60 447 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -447 Td
+/FN 10 Tf
+60 429 Td
+(1. Ethoca Chargeback & Dispute Resolution ? Prove the ISV OEM Value Before the OEM Contract) Tj
+-60 -429 Td
+60 416 Td
+(Closes. The Ethoca OEM Native ISV opp is in Assess, which means the SF/Mastercard team is still) Tj
+-60 -416 Td
+60 403 Td
+(building the "why now" narrative for embedding Ethoca into Financial Services Cloud. AFPI mines) Tj
+-60 -403 Td
+60 390 Td
+(the actual dispute lifecycle event log ? issuer intake, Ethoca alert, merchant refund path,) Tj
+-60 -390 Td
+60 377 Td
+(network representment ? to expose which variants leak days and dollars, then hands the top) Tj
+-60 -377 Td
+60 364 Td
+(three broken paths to Agentforce Operations to automate. This turns the OEM story from "another) Tj
+-60 -364 Td
+60 351 Td
+(data feed" into "measurable cycle-time and write-off reduction," and does it in the two-week) Tj
+-60 -351 Td
+60 338 Td
+(timeframe an ISV team can absorb. Metric: dispute-to-resolution days, first-cycle refund rate,) Tj
+-60 -338 Td
+60 325 Td
+(chargeback write-off $. Engage Toby Osofsky Baer \(VP, Product Management ? Acquisition / Spend) Tj
+-60 -325 Td
+60 312 Td
+(Optimization / Data & Services\).) Tj
+-60 -312 Td
+60 299 Td
+(2. FSC Data Cloud Pilot ? Add a Process-Lineage Layer for Issuer Analytics. The Mastercard FSC) Tj
+-60 -299 Td
+60 286 Td
+(Data Cloud ISV opp is at the earliest stage; the fastest way to accelerate it is to give the) Tj
+-60 -286 Td
+60 273 Td
+(pilot a use case that only Data Cloud + AFPI can solve. AFPI overlays process lineage on the) Tj
+-60 -273 Td
+60 260 Td
+(issuer-servicing event stream \(auth ? decline ? chargeback ? retention save\) so Mastercard's) Tj
+-60 -260 Td
+60 247 Td
+(issuer customers can see not just the data, but the actual sequence of steps that produced the) Tj
+-60 -247 Td
+60 234 Td
+(outcome ? a dimension Celonis-style tools miss because they treat network telemetry as SQL, not) Tj
+-60 -234 Td
+60 221 Td
+(process. This differentiates AFPI as the collapse of the SQL+PQL two-specialist model into one) Tj
+-60 -221 Td
+60 208 Td
+(Ops analyst, matching Mastercard's own AI-democratization posture. Metric: auth-approval rate) Tj
+-60 -208 Td
+60 195 Td
+(improvement per issuer, false-decline rate, retention-save conversion. Engage Teena Angale \(VP,) Tj
+-60 -195 Td
+60 182 Td
+(Data & Services ? Financial Institutions Segment\).) Tj
+-60 -182 Td
+60 169 Td
+(3. Merchant & Acceptance Onboarding ? Network-Scale Rework Reduction. Mastercard's Commercial) Tj
+-60 -169 Td
+60 156 Td
+(Acceptance Solutions team owns a very high-volume merchant/acquirer onboarding book with global) Tj
+-60 -156 Td
+60 143 Td
+(compliance overlay \(PCI DSS, sanctions, market-specific KYC\). AFPI mines the acceptance-) Tj
+-60 -143 Td
+60 130 Td
+(onboarding event log to distinguish repeatable underwriting-return loops from true one-offs,) Tj
+-60 -130 Td
+60 117 Td
+(then routes the repeatable variants to Agentforce Operations. Framed against TPL, the process-) Tj
+-60 -117 Td
+60 104 Td
+(mining tier surfaces the top three onboarding-drop paths within a quarter ? comfortably under) Tj
+-60 -104 Td
+60 91 Td
+(the cost of a single lost strategic acquirer. Metric: application-to-boarded cycle time and %) Tj
+-60 -91 Td
+60 78 Td
+(applications requiring re-work. Engage Srini Chandrasekharan \(VP, Commercial Acceptance) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 2707 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(Solutions\).) Tj
+-60 -782 Td
+60 769 Td
+(4. Regulatory Reporting & Compliance-Center Wedge ? DORA + PCI + Network Rules. Mastercard) Tj
+-60 -769 Td
+60 756 Td
+(operates under DORA in the EU \(ICT resilience testing, third-party register, incident) Tj
+-60 -756 Td
+60 743 Td
+(classification\), PCI DSS as scheme owner, plus internal network-rule enforcement across issuers) Tj
+-60 -743 Td
+60 730 Td
+(and acquirers. Every one of these requires defensible "prove the process" evidence over) Tj
+-60 -730 Td
+60 717 Td
+(reporting workflows. AFPI's Compliance Center gives Global Compliance and Regulatory Affairs a) Tj
+-60 -717 Td
+60 704 Td
+(mined view over resilience-testing and incident-response workflows that is audit-defensible) Tj
+-60 -704 Td
+60 691 Td
+(without a PQL specialist writing queries. This lands as the natural companion to the FSC Data) Tj
+-60 -691 Td
+60 678 Td
+(Cloud pilot ? same data, one more use case that pays back inside the quarter. Metric:) Tj
+-60 -678 Td
+60 665 Td
+(reporting-cycle days, incident-classification accuracy, examiner-finding count. Engage Randi) Tj
+-60 -665 Td
+60 652 Td
+(Adelstein \(EVP & General Counsel ? Regulatory Affairs\).) Tj
+-60 -652 Td
+60 639 Td
+(5. Healthcare Payments Line-of-Business ? New Data-&-Services Growth Wedge. Mastercard's) Tj
+-60 -639 Td
+60 626 Td
+(Healthcare Business is a strategic growth bet within the Data & Services franchise, and) Tj
+-60 -626 Td
+60 613 Td
+(healthcare-payments processes \(eligibility ? adjudication ? patient responsibility ? provider) Tj
+-60 -613 Td
+60 600 Td
+(settlement\) are famously variant-heavy and rework-heavy. AFPI mines the healthcare-payment) Tj
+-60 -600 Td
+60 587 Td
+(lifecycle event log to expose adjudication-rework loops and hand the top variants to Agentforce) Tj
+-60 -587 Td
+60 574 Td
+(Operations, giving Mastercard a repeatable "AFPI + Ethoca + Data Cloud" bundle to sell into US) Tj
+-60 -574 Td
+60 561 Td
+(health systems and payers ? the same collapse-two-specialists-into-one motion that makes AFPI a) Tj
+-60 -561 Td
+60 548 Td
+(two-to-four-week time-to-value story. Metric: claim-to-settlement cycle time, denial-rework) Tj
+-60 -548 Td
+60 535 Td
+(rate, patient-responsibility collection lift. Engage Shankar Ram \(EVP & Global Head, Strategy &) Tj
+-60 -535 Td
+60 522 Td
+(Partnerships ? Healthcare Business\).) Tj
+-60 -522 Td
+60 509 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -509 Td
+60 496 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -496 Td
+60 483 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: Med) Tj
+-60 -483 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005681 00000 n 
+0000005826 00000 n 
+0000008585 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+8730
+%%EOF

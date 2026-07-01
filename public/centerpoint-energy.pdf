@@ -1,0 +1,267 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 5112 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(CenterPoint Energy, Inc. ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(CenterPoint Energy, Inc.) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Utilities, Electric & Natural Gas Distribution) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: $12.3B \(Org62\)  | Employees: 14,000  | HQ: Houston, TX, US) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Not confirmed [field verify with Charlie Stuard ]) Tj
+-60 -707 Td
+60 694 Td
+(Current Non-Salesforce Systems: SAP S/4HANA \(WAM\), Regrello) Tj
+-60 -694 Td
+60 681 Td
+(Relevant Open Opps: CenterPoint Energy - SAP S4 WAM Program & Systemwide Resiliency Plan POV \() Tj
+-60 -681 Td
+60 668 Td
+($3.0M \)  |  CenterPoint Energy - Regrello \( $1.5M \)  |  Resiliency Planning RFP \( $975k \)  |) Tj
+-60 -668 Td
+60 655 Td
+(CNP - Regrello \( $700k \)  |  Agentic Analytics Big Bet \( $576k \)  |  Stakeholder Relationship) Tj
+-60 -655 Td
+60 642 Td
+(Management \( $200k \)) Tj
+-60 -642 Td
+60 629 Td
+(AFPI AE: Charlie Stuard) Tj
+-60 -629 Td
+60 616 Td
+(Sales Motion: Co-Sell with Agentforce Operations) Tj
+-60 -616 Td
+60 603 Td
+(Propensity to Buy: 92/100 ? T1 Pursue) Tj
+-60 -603 Td
+60 590 Td
+(Category) Tj
+-60 -590 Td
+60 577 Td
+(Score) Tj
+-60 -577 Td
+60 564 Td
+(Signal density \(SAP S/4 WAM, Regrello, Resiliency, Agentic Analytics all in-flight\)) Tj
+-60 -564 Td
+60 551 Td
+(15/15) Tj
+-60 -551 Td
+60 538 Td
+(Process pain \(post-Beryl storm hardening, PUC scrutiny, WAM cutover\)) Tj
+-60 -538 Td
+60 525 Td
+(14/15) Tj
+-60 -525 Td
+60 512 Td
+(Firmographic fit \($12.3B rev, 14k employees, regulated utility\)) Tj
+-60 -512 Td
+60 499 Td
+(14/15) Tj
+-60 -499 Td
+60 486 Td
+(Timing \(SAP S/4 program mid-flight ? process discovery gold\)) Tj
+-60 -486 Td
+60 473 Td
+(9/10) Tj
+-60 -473 Td
+60 460 Td
+(Vertical fit \(Utilities, regulated T&D\)) Tj
+-60 -460 Td
+60 447 Td
+(12/15) Tj
+-60 -447 Td
+/FB 13 Tf
+60 434 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -434 Td
+/FN 10 Tf
+60 416 Td
+(1. SAP S/4HANA Work & Asset Management \(WAM\) Cutover Assurance. The $3M WAM program is the) Tj
+-60 -416 Td
+60 403 Td
+(highest-stakes ERP transformation CenterPoint has run in a decade ? work order creation,) Tj
+-60 -403 Td
+60 390 Td
+(dispatch, meter-to-cash, and asset lifecycle all move. Without event-log-based process) Tj
+-60 -390 Td
+60 377 Td
+(discovery, cutover teams rely on interview-based TO-BE maps that miss 30-40% of real variants) Tj
+-60 -377 Td
+60 364 Td
+(\(emergency work orders, mutual-aid crews, storm exceptions\). AFPI mines the actual SAP + legacy) Tj
+-60 -364 Td
+60 351 Td
+(CIS event logs to expose every variant before go-live, cutting stabilization cost by 15-25% and) Tj
+-60 -351 Td
+60 338 Td
+(moving hypercare from 12 to 6 weeks. Engage Jason Ryan \(CIO\) as executive sponsor.) Tj
+-60 -338 Td
+60 325 Td
+(2. Systemwide Resiliency & Storm Response Orchestration. After Hurricane Beryl, Texas PUC and) Tj
+-60 -325 Td
+60 312 Td
+(the Governor's office put CenterPoint's outage-restoration process under a microscope ? average) Tj
+-60 -312 Td
+60 299 Td
+(restoration time, crew dispatch, damage-assessment cycle, and stakeholder comms all became) Tj
+-60 -299 Td
+60 286 Td
+(reportable metrics. AFPI mines the end-to-end restoration process across OMS, GIS, WFM, and CIS) Tj
+-60 -286 Td
+60 273 Td
+(to expose bottlenecks \(crew staging delays, damage-assessment rework, mutual-aid onboarding) Tj
+-60 -273 Td
+60 260 Td
+(friction\) and quantify what a 10% faster restoration is worth in avoided customer-hours-lost.) Tj
+-60 -260 Td
+60 247 Td
+(Metric moved: SAIDI/SAIFI, mutual-aid mobilization time. Engage Darin Carroll \(SVP, Electric) Tj
+-60 -247 Td
+60 234 Td
+(Business\).) Tj
+-60 -234 Td
+60 221 Td
+(3. Regrello Workflow ? Process Baseline Before You Automate. Two active Regrello opps \($1.5M +) Tj
+-60 -221 Td
+60 208 Td
+($700k\) signal CenterPoint is standardizing cross-functional workflows ? but automating a broken) Tj
+-60 -208 Td
+60 195 Td
+(process just makes it break faster. AFPI runs discovery FIRST on the target workflows) Tj
+-60 -195 Td
+60 182 Td
+(\(permitting, vendor onboarding, capital-project intake\) to map the actual paths, exception) Tj
+-60 -182 Td
+60 169 Td
+(loops, and handoff friction. Regrello then automates the validated happy path, and AFPI) Tj
+-60 -169 Td
+60 156 Td
+(continuously monitors conformance. Metric moved: cycle time, first-pass yield, rework rate.) Tj
+-60 -156 Td
+60 143 Td
+(Champion: Amy Sedgwick \(VP, Business Transformation\) or the digital-transformation lead.) Tj
+-60 -143 Td
+60 130 Td
+(4. Regulatory Rate-Case & Compliance Evidence Automation. CenterPoint files continuously with) Tj
+-60 -130 Td
+60 117 Td
+(PUC Texas, MPUC \(Minnesota\), and Indiana URC ? every rate case, storm-cost recovery filing, and) Tj
+-60 -117 Td
+60 104 Td
+(prudency review demands defensible evidence of operational efficiency. Compliance teams spend) Tj
+-60 -104 Td
+60 91 Td
+(thousands of hours pulling logs and building narratives. AFPI's Compliance Center wedge) Tj
+-60 -91 Td
+60 78 Td
+(produces continuously-updated, audit-grade process evidence for every regulated workflow) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 1499 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(\(outage response, capital deployment, safety inspections\), collapsing rate-case prep from) Tj
+-60 -782 Td
+60 769 Td
+(months to weeks. Metric moved: rate-case cycle time, prudency approval rate. Engage Monica) Tj
+-60 -769 Td
+60 756 Td
+(Karuturi \(EVP & General Counsel\).) Tj
+-60 -756 Td
+60 743 Td
+(5. Meter-to-Cash & Customer Move-In/Out Cycle. With 7M+ metered customers across gas and) Tj
+-60 -743 Td
+60 730 Td
+(electric, move-in/move-out, billing exceptions, and payment plan workflows are high-volume,) Tj
+-60 -730 Td
+60 717 Td
+(high-friction, and touch Salesforce/CIS/AMI. AFPI mines the meter-to-cash event log to quantify) Tj
+-60 -717 Td
+60 704 Td
+(billing rework, days-sales-outstanding, and self-service leakage. Directly feeds the Agentic) Tj
+-60 -704 Td
+60 691 Td
+(Analytics Big Bet \($576k opp\) ? AFPI supplies the process ground truth, Agentforce automates) Tj
+-60 -691 Td
+60 678 Td
+(the top variants. Metric moved: DSO, cost-to-serve per customer, self-service containment.) Tj
+-60 -678 Td
+60 665 Td
+(Champion: Kenneth Coleman \(SVP, Customer Transformation\) or the customer-ops lead.) Tj
+-60 -665 Td
+60 652 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -652 Td
+60 639 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -639 Td
+60 626 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: High) Tj
+-60 -626 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005490 00000 n 
+0000005635 00000 n 
+0000007186 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+7331
+%%EOF

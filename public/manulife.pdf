@@ -1,0 +1,249 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 4770 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(Manulife Financial Corporation ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(Manulife Financial Corporation) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Financial Services, Insurance & Wealth Management) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: ~CAD $60B  | Employees: 38,000+ globally \(18,000 in this Org62 record\)  | HQ: Toronto,) Tj
+-60 -720 Td
+60 707 Td
+(Canada) Tj
+-60 -707 Td
+60 694 Td
+(Current Salesforce Products: Not confirmed [field verify with the CIO's office ]) Tj
+-60 -694 Td
+60 681 Td
+(Current Non-Salesforce Systems: Not confirmed [field verify with the CIO's office ]) Tj
+-60 -681 Td
+60 668 Td
+(Relevant Open Opps:) Tj
+-60 -668 Td
+60 655 Td
+(AFPI AE: Charlie Stuard) Tj
+-60 -655 Td
+60 642 Td
+(Sales Motion: Co-Sell with Agentforce Operations) Tj
+-60 -642 Td
+60 629 Td
+(Propensity to Buy: 78/100 ? T2 Develop) Tj
+-60 -629 Td
+60 616 Td
+(Category) Tj
+-60 -616 Td
+60 603 Td
+(Score) Tj
+-60 -603 Td
+60 590 Td
+(Vertical Fit \(Insurance\)) Tj
+-60 -590 Td
+60 577 Td
+(18/20) Tj
+-60 -577 Td
+60 564 Td
+(Compliance Regime \(OSFI, IFRS 17, state\)) Tj
+-60 -564 Td
+60 551 Td
+(10/10) Tj
+-60 -551 Td
+60 538 Td
+(Size & Complexity) Tj
+-60 -538 Td
+60 525 Td
+(12/15) Tj
+-60 -525 Td
+60 512 Td
+(Process Pain Signals) Tj
+-60 -512 Td
+60 499 Td
+(11/15) Tj
+-60 -499 Td
+60 486 Td
+(Buyer Titles Present) Tj
+-60 -486 Td
+60 473 Td
+(8/10) Tj
+-60 -473 Td
+/FB 13 Tf
+60 460 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -460 Td
+/FN 10 Tf
+60 442 Td
+(1. Claims intake to settlement cycle time. Life, disability and group benefits claims traverse) Tj
+-60 -442 Td
+60 429 Td
+(intake, adjudication, medical review, and payout across Guidewire-style cores and a patchwork) Tj
+-60 -429 Td
+60 416 Td
+(of legacy admin systems. Cycle-time variance is the #1 driver of NPS deterioration and) Tj
+-60 -416 Td
+60 403 Td
+(regulator complaints in Canadian and US insurance. AFPI mines the full claim event log to) Tj
+-60 -403 Td
+60 390 Td
+(expose loop-backs, hand-offs, and adjudicator variance, then routes automation to the two or) Tj
+-60 -390 Td
+60 377 Td
+(three variants that consume 60%+ of the queue. Metric moved: average days-to-settle and rework) Tj
+-60 -377 Td
+60 364 Td
+(rate. Engage the Chief Claims Officer and the VP Operations, Manulife Canada .) Tj
+-60 -364 Td
+60 351 Td
+(2. New business underwriting and policy issuance. Manulife has publicly committed to) Tj
+-60 -351 Td
+60 338 Td
+(accelerated underwriting for John Hancock and Canadian life segments, but rules engines and) Tj
+-60 -338 Td
+60 325 Td
+(third-party data pulls \(MIB, Rx, labs\) still produce weeks-long tails on non-straight-through) Tj
+-60 -325 Td
+60 312 Td
+(cases. AFPI reconstructs the underwriter's actual workflow versus the target STP path and) Tj
+-60 -312 Td
+60 299 Td
+(pinpoints where evidence gathering stalls. Metric moved: STP rate and application-to-issue) Tj
+-60 -299 Td
+60 286 Td
+(days. Engage the Chief Underwriter .) Tj
+-60 -286 Td
+60 273 Td
+(3. Contact center servicing and complaint handling. Policyholder servicing across Canada, US) Tj
+-60 -273 Td
+60 260 Td
+(\(John Hancock\), and Asia sees repeat contacts on beneficiary changes, address updates, and) Tj
+-60 -260 Td
+60 247 Td
+(premium disputes. Each repeat call is a broken process, and each complaint carries a regulatory) Tj
+-60 -247 Td
+60 234 Td
+(clock \(OSFI, state DOIs, HKMA\). AFPI plus Agentforce Operations mines call and case event data) Tj
+-60 -234 Td
+60 221 Td
+(to identify the top five servicing journeys generating rework, then puts an agent on the two) Tj
+-60 -221 Td
+60 208 Td
+(highest-ROI ones. Metric moved: first-contact resolution and repeat-contact rate. Engage the) Tj
+-60 -208 Td
+60 195 Td
+(Head of Customer Operations .) Tj
+-60 -195 Td
+60 182 Td
+(4. Group benefits enrollment and plan changes. Group insurance is Manulife's fastest-growing) Tj
+-60 -182 Td
+60 169 Td
+(Canadian segment, and open-enrollment periods stress the mid-office with high-touch employer) Tj
+-60 -169 Td
+60 156 Td
+(changes, eligibility updates, and premium reconciliations. Errors here flow directly to broker) Tj
+-60 -156 Td
+60 143 Td
+(escalations and lost mandates. AFPI mines the enrollment-to-invoice process to find the) Tj
+-60 -143 Td
+60 130 Td
+(exception paths that eat the margin, and Compliance Center anchors the change-audit trail plan) Tj
+-60 -130 Td
+60 117 Td
+(sponsors expect. Metric moved: enrollment error rate and broker-escalation volume. Engage the) Tj
+-60 -117 Td
+60 104 Td
+(Head of Group Benefits, Canada .) Tj
+-60 -104 Td
+60 91 Td
+(5. Advisor onboarding and licensing operations. Manulife's advisor and MGA channel requires) Tj
+-60 -91 Td
+60 78 Td
+(KYC, licensing verification, contract execution, and product training before any advisor can) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 845 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(transact ? a process that today takes weeks and is a documented drag on distribution) Tj
+-60 -782 Td
+60 769 Td
+(productivity. AFPI mines the onboarding conformance path against target SLAs and shows exactly) Tj
+-60 -769 Td
+60 756 Td
+(where compliance holds, contract redlines, or license checks stall the pipeline. Metric moved:) Tj
+-60 -756 Td
+60 743 Td
+(advisor time-to-first-sale and channel activation rate. Engage the Head of Advisor Services .) Tj
+-60 -743 Td
+60 730 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -730 Td
+60 717 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -717 Td
+60 704 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: Med) Tj
+-60 -704 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005148 00000 n 
+0000005293 00000 n 
+0000006189 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+6334
+%%EOF
