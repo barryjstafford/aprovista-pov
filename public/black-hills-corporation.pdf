@@ -1,0 +1,291 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 5093 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(Black Hills Corporation ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(Black Hills Corporation) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Utilities, Electric & Natural Gas Distribution \(8-state regulated\)) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: ~$2.9B \(Corp\)  | Employees: ~2,867  | HQ: Rapid City, SD, USA) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Salesforce Industries / Energy & Utilities Cloud \(1,510 licenses\),) Tj
+-60 -707 Td
+60 694 Td
+(Sales Cloud, Marketing Cloud \(ExactTarget, Pardot, Datorama\), MuleSoft \(471 licenses\),) Tj
+-60 -694 Td
+60 681 Td
+(Agentforce for Field Service \(1,500-license deal in Stage 02\), ESRI GIS Pilot on E&U Cloud,) Tj
+-60 -681 Td
+60 668 Td
+(Signature Success \(Stage 04\)) Tj
+-60 -668 Td
+60 655 Td
+(Current Non-Salesforce Systems: Legacy CIS \(Work Order to Bill target\), ESRI GIS, AMI meter) Tj
+-60 -655 Td
+60 642 Td
+(platform [field verify with the CIO's office]) Tj
+-60 -642 Td
+60 629 Td
+(Relevant Open Opps: E&U Cloud + Industry Renewal \( $1.79M \) | Agentforce for Field Service) Tj
+-60 -629 Td
+60 616 Td
+(1,500 licenses \( $1.28M \) | MuleSoft Integration #BarryBigBet \( $850K \) | MuleSoft Renewal 471) Tj
+-60 -616 Td
+60 603 Td
+(\( $735K \) | Signature Success Core \( $217K \) | Agentforce Supply Chain \( $200K \) | MC) Tj
+-60 -603 Td
+60 590 Td
+(ExactTarget Renewal \( $196K \) | Commerce Cloud new website \( $80K \) | Flex Credits \( $50K \) |) Tj
+-60 -590 Td
+60 577 Td
+(Work Order to Bill Target \( $50K \) | CleanEnergy Project RFP \( $45K \) | AF for Sales \( $37.5K \)) Tj
+-60 -577 Td
+60 564 Td
+(| ESRI Pilot E&U \( $36K \)) Tj
+-60 -564 Td
+60 551 Td
+(AFPI AE: Charlie Stuard) Tj
+-60 -551 Td
+60 538 Td
+(Sales Motion: Co-Sell with Agentforce Operations) Tj
+-60 -538 Td
+60 525 Td
+(Propensity to Buy: 86/100 ? T1 Pursue) Tj
+-60 -525 Td
+60 512 Td
+(Category) Tj
+-60 -512 Td
+60 499 Td
+(Score) Tj
+-60 -499 Td
+60 486 Td
+(Salesforce footprint & open pipe \(~$5.7M across 20 opps\)) Tj
+-60 -486 Td
+60 473 Td
+(14/15) Tj
+-60 -473 Td
+60 460 Td
+(Vertical fit & process complexity \(regulated multi-state utility\)) Tj
+-60 -460 Td
+60 447 Td
+(14/15) Tj
+-60 -447 Td
+60 434 Td
+(Executive AI mandate \(AF4FS 1,500-license + Supply Chain + AF for Sales all live\)) Tj
+-60 -434 Td
+60 421 Td
+(13/15) Tj
+-60 -421 Td
+60 408 Td
+(Compliance / regulatory pressure \(FERC + 8 state PUCs + PHMSA + NERC CIP\)) Tj
+-60 -408 Td
+60 395 Td
+(13/15) Tj
+-60 -395 Td
+60 382 Td
+(Data readiness \(Field Service + ESRI GIS + MuleSoft integration = event-log gold\)) Tj
+-60 -382 Td
+60 369 Td
+(9/10) Tj
+-60 -369 Td
+/FB 13 Tf
+60 356 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -356 Td
+/FN 10 Tf
+60 338 Td
+(1. Meter-to-Cash "Work Order to Bill" ? Prove the Existing Opp Before It Closes. There is a) Tj
+-60 -338 Td
+60 325 Td
+(live "Work Order to Bill Target" opp already on the account ? this is literally the AFPI wedge) Tj
+-60 -325 Td
+60 312 Td
+(for utilities named in Black Hills' own Salesforce pipeline. Mine the actual event log across) Tj
+-60 -312 Td
+60 299 Td
+(legacy CIS + AMI + WMS + E&U Cloud to distinguish repeatable billing-exception patterns) Tj
+-60 -299 Td
+60 286 Td
+(\(estimated bills, move-in/out cycles, high-usage disputes\) from true one-offs, then route the) Tj
+-60 -286 Td
+60 273 Td
+(top three variants to Agentforce Operations. Metric moved: DSO, billing rework hours, cost-to-) Tj
+-60 -273 Td
+60 260 Td
+(serve per meter. Engage Marne Jones \(SVP, Customer Solutions & External Affairs\) or the SVP) Tj
+-60 -260 Td
+60 247 Td
+(Utility Operations.) Tj
+-60 -247 Td
+60 234 Td
+(2. Field Service Dispatch ? De-Risk the $1.28M Agentforce for Field Service Deal. The) Tj
+-60 -234 Td
+60 221 Td
+(1,500-license AF4FS opp is in Stage 02 \(Determining Problem/Impact/Ideal\). AFPI's fastest wedge) Tj
+-60 -221 Td
+60 208 Td
+(is to mine the actual Field Service event log ? dispatch to close, technician utilization,) Tj
+-60 -208 Td
+60 195 Td
+(first-time-fix, mutual-aid mobilization ? before Agentforce rollout. That turns the AF4FS) Tj
+-60 -195 Td
+60 182 Td
+(conversation from feature-buying to outcome-buying and pulls the deal forward one stage. Metric) Tj
+-60 -182 Td
+60 169 Td
+(moved: bay utilization, first-time-fix, parts-fill-rate. Engage Todd Jacobs \(COO, Utilities\) or) Tj
+-60 -169 Td
+60 156 Td
+(the VP Electric Operations.) Tj
+-60 -156 Td
+60 143 Td
+(3. Storm Response & Multi-State Restoration Orchestration. Black Hills serves 1.3M+ customers) Tj
+-60 -143 Td
+60 130 Td
+(across South Dakota, Wyoming, Montana, Colorado, Kansas, Nebraska, Iowa, and Arkansas ? every) Tj
+-60 -130 Td
+60 117 Td
+(state exposes different weather patterns \(wildfires in CO, blizzards in SD/WY, tornadoes in) Tj
+-60 -117 Td
+60 104 Td
+(KS/NE\). AFPI mines the outage-restoration event log across OMS, GIS/ESRI, WFM, and CIS to) Tj
+-60 -104 Td
+60 91 Td
+(quantify what a 10% faster average restoration is worth in avoided customer-hours-lost, plus) Tj
+-60 -91 Td
+60 78 Td
+(expose which mutual-aid onboarding paths keep stalling. Same pattern that CenterPoint Energy is) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 2348 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(running post-Beryl. Metric moved: SAIDI/SAIFI, mutual-aid ramp-up time. Engage Todd Jacobs) Tj
+-60 -782 Td
+60 769 Td
+(\(COO, Utilities\).) Tj
+-60 -769 Td
+60 756 Td
+(4. Regulatory Rate-Case & Prudency-Filing Evidence Automation. With eight state PUCs \(SD, WY,) Tj
+-60 -756 Td
+60 743 Td
+(MT, CO, KS, NE, IA, AR\) plus FERC, PHMSA, and NERC CIP filings running in near-perpetual) Tj
+-60 -743 Td
+60 730 Td
+(cycles, Black Hills' regulatory team spends thousands of hours pulling logs and building) Tj
+-60 -730 Td
+60 717 Td
+(narratives. AFPI's Compliance Center wedge produces continuously-updated, audit-grade process) Tj
+-60 -717 Td
+60 704 Td
+(evidence for every regulated workflow \(outage response, capital deployment, safety inspections,) Tj
+-60 -704 Td
+60 691 Td
+(cyber-incident handling\). Pairs directly with the $217K Signature Success Core already in Stage) Tj
+-60 -691 Td
+60 678 Td
+(04. Metric moved: rate-case prep cycle time, prudency approval rate. Engage Brian Iverson \(SVP) Tj
+-60 -678 Td
+60 665 Td
+(& Chief Regulatory Officer\).) Tj
+-60 -665 Td
+60 652 Td
+(5. Clean-Energy Capital-Project Stage-Gating \(RFP & Ready Path\). The active $45K CleanEnergy) Tj
+-60 -652 Td
+60 639 Td
+(Project RFP and the ESRI Pilot on E&U Cloud both signal a major clean-energy transition ?) Tj
+-60 -639 Td
+60 626 Td
+(solar/wind interconnection, gas-decarbonization, hydrogen pilots. Capital-project intake spans) Tj
+-60 -626 Td
+60 613 Td
+(dozens of hand-offs \(engineering, environmental permitting, IRP filing, PUC approval,) Tj
+-60 -613 Td
+60 600 Td
+(procurement, construction, commissioning\). AFPI mines the intake-to-commissioning process to) Tj
+-60 -600 Td
+60 587 Td
+(expose which stage-gates stall projects and where re-permitting rework happens. Metric moved:) Tj
+-60 -587 Td
+60 574 Td
+(project-approval cycle time and re-work-rate on regulatory filings. Engage Kimberly Nooney \(SVP) Tj
+-60 -574 Td
+60 561 Td
+(& CFO\) or the SVP Corporate Development.) Tj
+-60 -561 Td
+60 548 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -548 Td
+60 535 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -535 Td
+60 522 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-07-01  |  Confidence: High) Tj
+-60 -522 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005471 00000 n 
+0000005616 00000 n 
+0000008016 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+8161
+%%EOF
