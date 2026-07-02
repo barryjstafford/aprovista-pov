@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optum Financial, Inc. — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 260px; z-index: 100; }
+  .lib-menu.open { display: block; }
+  .lib-menu a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-menu a:last-child { border-bottom: none; }
+  .lib-menu a:hover { background: #f0f4ff; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
+  th { background: #f0f4ff; font-weight: 600; }
+  td:last-child { text-align: right; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 4px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+    background: #f0f4ff; color: #032d60; text-decoration: none;
+    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
+  .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
+  .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
+    cursor: not-allowed; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <img src="/banner-logo.png" alt="AproVista">
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">My POV Library &#x25BE;</button>
+      <div class="lib-menu" id="libMenu"></div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Optum Financial, Inc.</h1>
+  <div class="snapshot">
+    <p><strong>Healthcare &amp; Life Sciences, Health Payments &amp; Financial Services</strong></p>
+    <p><strong>Revenue:</strong> ~$3B segment (parent UnitedHealth Group ~$400B) &nbsp;|&nbsp; <strong>Employees:</strong> ~7,000 (Optum Financial); 400,000+ (Optum) &nbsp;|&nbsp; <strong>HQ:</strong> Eden Prairie, MN, USA</p>
+    <p><strong>Current Salesforce Products:</strong> Tableau (confirmed via Org62 renewal opp) [field verify remainder with Charlie Stuard]</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Charlie Stuard]</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> </p>
+    <p><strong>AFPI AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details>
+    <summary>Propensity to Buy: 74/100 &mdash; T2 Develop</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th></tr></thead>
+      <tbody>
+        <tr><td>Process complexity &amp; volume</td><td>14/15</td></tr>
+        <tr><td>Regulatory / compliance pressure</td><td>13/15</td></tr>
+        <tr><td>Vertical fit (Healthcare payments)</td><td>12/15</td></tr>
+        <tr><td>Salesforce footprint &amp; expansion signal</td><td>9/15</td></tr>
+        <tr><td>Buyer titles present (Ops, Compliance, Digital)</td><td>10/15</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <p><strong>1. HSA/FSA Claim Substantiation &amp; Reimbursement Cycle.</strong> Optum Financial administers ~9M HSAs and processes millions of card swipes and manual claims that must be substantiated against IRS Section 213(d) rules. Manual substantiation, receipt requests, and denial appeals create long cycle times, member abrasion, and CFPB/IRS audit risk. AFPI mines the end-to-end claim flow across Optum Bank, the mobile app, and back-office ops to expose auto-substantiation bypass rates, appeal loop-backs, and rework hot-spots. Metric moved: substantiation auto-rate (%), average days-to-resolve appeal, cost-per-claim. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Bill+Miller+Optum+Financial">Bill Miller (CEO, Optum Financial)</a> or the VP Operations.</p>
+
+  <p><strong>2. Prior Authorization &amp; Payment Integrity Handoffs.</strong> Optum sits at the collision of provider claims, payer adjudication, and member cost-share &mdash; a workflow the DOJ, states, and 2024 Change Healthcare fallout have all put under a microscope. AFPI maps the true prior-auth and payment-integrity handoff paths across UHG, providers, and Optum Financial's member accounts to find rework loops and delay drivers regulators keep asking about. Metric moved: turnaround time, denial-overturn rate, compliance exception count. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Sandeep+Dadlani+Optum">Sandeep Dadlani (Chief Digital &amp; Technology Officer, UnitedHealth Group)</a>.</p>
+
+  <p><strong>3. Member Onboarding &amp; Employer Group Implementation.</strong> Every new employer HSA/FSA/COBRA plan triggers a multi-week implementation involving file feeds, banking setup, card issuance, ID proofing, and IRS reporting &mdash; a classic multi-system, multi-team gauntlet. AFPI mines the full onboarding process across Salesforce, banking core, and card-issuance systems to expose stall points that erode NPS and drive employer churn. Metric moved: time-to-first-card, implementation SLA hit rate, first-year retention. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Optum+Financial+Chief+Operating+Officer">the Optum Financial COO / Head of Implementations</a>.</p>
+
+  <p><strong>4. Contact Center Deflection &amp; Agentforce Readiness.</strong> Optum Financial's member service centers field high call volumes on "why was my claim denied," card lockouts, and IRS 1099-SA questions &mdash; exactly the queries UHG has publicly said it wants agentic AI to absorb. Before deploying Agentforce Service Agent, AFPI mines actual contact-reason paths to prove which intents are true auto-resolve candidates and which are compliance-sensitive escalations. Metric moved: containment rate, average handle time, first-contact resolution. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Optum+Financial+VP+Member+Services">the VP Member Services</a> in partnership with the Salesforce Service Cloud team.</p>
+
+  <p><strong>5. Compliance Center for HIPAA, IRS &amp; State Escheatment.</strong> Optum Financial straddles HIPAA (health data), IRS (HSA custodian), OCC/FDIC (Optum Bank), and 50-state escheatment / unclaimed-property regimes &mdash; a documentation load that grew heavier after the 2024 Change Healthcare breach. AFPI Compliance Center generates evidence packages directly from live process traces, replacing spreadsheet-based control walkthroughs. Metric moved: audit prep hours, control-exception rate, breach-notification cycle time. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Optum+Chief+Compliance+Officer">the Optum Chief Compliance Officer</a> and Internal Audit lead.</p>
+
+  <div class="actions">
+    <a href="/optum-financial.pdf" target="_blank">Generate PDF</a>
+    <a href="https://salesforce.enterprise.slack.com/docs/T026QPGMQ/F0BFMK1KE4Q" target="_blank">Generate Slack Canvas</a>
+    <a href="https://aprovista-pov.vercel.app/optum-financial">Generate Vercel Page</a>
+    <a href="mailto:?subject=AFPI%20POV%20%E2%80%94%20Optum%20Financial%2C%20Inc.&body=See%20the%20AFPI%20point%20of%20view%3A%20https%3A%2F%2Faprovista-pov.vercel.app%2Foptum-financial">Generate Customer Email (Beta)</a>
+    <span class="disabled">Generate Proposal Template (coming soon)</span>
+    <a href="https://salesforce.enterprise.slack.com/archives/apromore-gtm" target="_blank">Deal Support Request</a>
+    <span class="disabled">Deeper Dive POV (coming soon)</span>
+  </div>
+  <footer class="fine">
+    Prepared by AproVista &nbsp;|&nbsp; Created by
+    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
+    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: Med
+  </footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

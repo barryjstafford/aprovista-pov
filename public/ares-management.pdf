@@ -1,0 +1,276 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 5049 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(Ares Management Corporation ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(Ares Management Corporation) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Financial Services, Alternative Asset Management) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: $5.6B  | Employees: ~4,250  | HQ: Los Angeles, CA, USA) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Not confirmed [field verify with Charlie Stuard]) Tj
+-60 -707 Td
+60 694 Td
+(Current Non-Salesforce Systems: Not confirmed [field verify with Charlie Stuard]) Tj
+-60 -694 Td
+60 681 Td
+(Relevant Open Opps:) Tj
+-60 -681 Td
+60 668 Td
+(AFPI AE: Charlie Stuard) Tj
+-60 -668 Td
+60 655 Td
+(Sales Motion: Sell AFPI Standalone) Tj
+-60 -655 Td
+60 642 Td
+(Propensity to Buy: 82/100 ? T1 Pursue) Tj
+-60 -642 Td
+60 629 Td
+(Category) Tj
+-60 -629 Td
+60 616 Td
+(Score) Tj
+-60 -616 Td
+60 603 Td
+(Process complexity \(fund ops, credit underwriting, LP onboarding\)) Tj
+-60 -603 Td
+60 590 Td
+(14/15) Tj
+-60 -590 Td
+60 577 Td
+(Company size & scale \($5.6B, 4,250 FTEs, global\)) Tj
+-60 -577 Td
+60 564 Td
+(13/15) Tj
+-60 -564 Td
+60 551 Td
+(Vertical fit \(alt asset mgmt, private credit boom\)) Tj
+-60 -551 Td
+60 538 Td
+(12/15) Tj
+-60 -538 Td
+60 525 Td
+(Regulatory pressure \(SEC, FCA, AIFMD, Dodd-Frank\)) Tj
+-60 -525 Td
+60 512 Td
+(12/15) Tj
+-60 -512 Td
+60 499 Td
+(Signals & urgency \(rapid AUM growth, M&A integration\)) Tj
+-60 -499 Td
+60 486 Td
+(10/15) Tj
+-60 -486 Td
+/FB 13 Tf
+60 473 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -473 Td
+/FN 10 Tf
+60 455 Td
+(1. Middle-Market Direct Lending ? Deal Origination to Funding Cycle Time. Ares Capital) Tj
+-60 -455 Td
+60 442 Td
+(Corporation and the Ares Credit Group underwrite thousands of middle-market loans annually) Tj
+-60 -442 Td
+60 429 Td
+(across BDC, private credit, and SDL vehicles ? the loop from term sheet through credit) Tj
+-60 -429 Td
+60 416 Td
+(committee, legal docs, KYC/AML, closing, and initial fund draw touches Salesforce, credit-risk) Tj
+-60 -416 Td
+60 403 Td
+(models, doc-management, and treasury systems. Mining the full origination-to-funding process) Tj
+-60 -403 Td
+60 390 Td
+(exposes rework in credit memos, stalled legal reviews, and covenant-tracking handoffs that) Tj
+-60 -390 Td
+60 377 Td
+(stretch closing timelines beyond peer benchmarks. AFPI overlays event logs directly onto the) Tj
+-60 -377 Td
+60 364 Td
+(Ares deal pipeline in Salesforce to show where a $30M unitranche stalls versus a $200M) Tj
+-60 -364 Td
+60 351 Td
+(syndicated deal, cutting avg. days-to-close by 20-30% and freeing origination officer capacity.) Tj
+-60 -351 Td
+60 338 Td
+(Engage Kipp deVeer \(Head of Ares Credit Group\) as the process owner.) Tj
+-60 -338 Td
+60 325 Td
+(2. LP Onboarding, Subscription Docs & Investor KYC. With ~$484B AUM across hundreds of) Tj
+-60 -325 Td
+60 312 Td
+(institutional and HNW investors, LP onboarding is a compliance-heavy, multi-week choreography) Tj
+-60 -312 Td
+60 299 Td
+(of subscription documents, accredited-investor certifications, FATCA/CRS, sanctions screening,) Tj
+-60 -299 Td
+60 286 Td
+(and fund allocations ? historically a top complaint in institutional investor NPS surveys) Tj
+-60 -286 Td
+60 273 Td
+(across alt asset managers. AFPI mines the actual variant paths through Ares Wealth Management) Tj
+-60 -273 Td
+60 260 Td
+(Solutions and the institutional IR teams, isolating where docs bounce back for correction and) Tj
+-60 -260 Td
+60 247 Td
+(where sanctions/enhanced-due-diligence hits create silent queues. The metric moved is time-to-) Tj
+-60 -247 Td
+60 234 Td
+(fund \(goal: cut from 4-6 weeks to under 2\) and IR analyst capacity. Engage Raj Dhanda \(Partner,) Tj
+-60 -234 Td
+60 221 Td
+(Global Head of Wealth Management Solutions\).) Tj
+-60 -221 Td
+60 208 Td
+(3. Fund Accounting, NAV Close & Investor Reporting. Ares runs a hybrid outsourced/in-house) Tj
+-60 -208 Td
+60 195 Td
+(fund-admin model across dozens of credit, PE, real estate, and secondaries vehicles ? the) Tj
+-60 -195 Td
+60 182 Td
+(monthly/quarterly NAV close and LP reporting cycle involves data reconciliation between admins) Tj
+-60 -182 Td
+60 169 Td
+(\(SS&C, State Street\), internal general ledgers, and the LP portal. AFPI reveals where) Tj
+-60 -169 Td
+60 156 Td
+(reconciliation exceptions repeatedly loop back to the same fund families or asset classes,) Tj
+-60 -156 Td
+60 143 Td
+(which admin handoffs cause the biggest lag, and where manual overrides mask systematic data) Tj
+-60 -143 Td
+60 130 Td
+(quality issues. Targeting a 3-5 day compression of quarterly close plus fewer restatements ? a) Tj
+-60 -130 Td
+60 117 Td
+(direct auditor and CFO win. Engage Jarrod Phillips \(Chief Financial Officer\).) Tj
+-60 -117 Td
+60 104 Td
+(4. Portfolio Company Monitoring & Covenant Compliance. With 500+ portfolio borrowers across the) Tj
+-60 -104 Td
+60 91 Td
+(credit book, covenant testing, financial statement collection, and watchlist escalation is a) Tj
+-60 -91 Td
+60 78 Td
+(distributed process split between portfolio managers, ops analysts, and third-party servicers ?) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 1883 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(late or missing financials directly drive credit loss and regulatory ire. AFPI mines the flow) Tj
+-60 -782 Td
+60 769 Td
+(from financial-package request through covenant test through watchlist entry, exposing which) Tj
+-60 -769 Td
+60 756 Td
+(sectors, deal teams, or servicers systematically miss SLAs and where "watchlist" status quietly) Tj
+-60 -756 Td
+60 743 Td
+(ages without escalation. The move-the-needle metric is reduction of non-accrual surprises and) Tj
+-60 -743 Td
+60 730 Td
+(faster restructuring triggers. Engage Mitchell Goldstein \(Co-Head of Ares Credit Group\).) Tj
+-60 -730 Td
+60 717 Td
+(5. Compliance Center ? Regulatory Reporting, Marked-Communications & SEC Exam Readiness. As an) Tj
+-60 -717 Td
+60 704 Td
+(SEC-registered adviser and FCA-authorized manager with a public BDC, Ares navigates Form ADV,) Tj
+-60 -704 Td
+60 691 Td
+(Form PF, AIFMD Annex IV, marketing rule reviews, and 15c3 workflows ? a growing surface as SEC) Tj
+-60 -691 Td
+60 678 Td
+(scrutiny of private credit intensifies. AFPI's Compliance Center wedge maps how marketing) Tj
+-60 -678 Td
+60 665 Td
+(materials, RFPs, and DDQs actually flow through legal/compliance review, quantifies review-) Tj
+-60 -665 Td
+60 652 Td
+(cycle bottlenecks, and produces auditable process evidence for SEC exams and internal control) Tj
+-60 -652 Td
+60 639 Td
+(attestations. The metric is reduction of MRAs/deficiency letters and audit prep hours. Engage) Tj
+-60 -639 Td
+60 626 Td
+(Naseem Sagati Aghili \(General Counsel\).) Tj
+-60 -626 Td
+60 613 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -613 Td
+60 600 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -600 Td
+60 587 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: Med) Tj
+-60 -587 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005427 00000 n 
+0000005572 00000 n 
+0000007507 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+7652
+%%EOF

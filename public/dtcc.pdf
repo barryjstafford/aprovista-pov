@@ -1,0 +1,285 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 5005 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(The Depository Trust & Clearing Corporation ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(The Depository Trust & Clearing Corporation) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Financial Services, Post-Trade Market Infrastructure) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: $2.7B  | Employees: ~1,941  | HQ: New York, NY, US) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Not confirmed [field verify with account team]) Tj
+-60 -707 Td
+60 694 Td
+(Current Non-Salesforce Systems: Not confirmed [field verify with account team]) Tj
+-60 -694 Td
+60 681 Td
+(Relevant Open Opps: DTCC - Core - Agentforce - AELA \( $1.0M \)) Tj
+-60 -681 Td
+60 668 Td
+(AFPI AE: Charlie Stuard) Tj
+-60 -668 Td
+60 655 Td
+(Sales Motion: Co-Sell with Agentforce Operations) Tj
+-60 -655 Td
+60 642 Td
+(Propensity to Buy: 78/100 ? T2 Develop) Tj
+-60 -642 Td
+60 629 Td
+(Category) Tj
+-60 -629 Td
+60 616 Td
+(Score) Tj
+-60 -616 Td
+60 603 Td
+(Vertical fit \(regulated FS / post-trade\)) Tj
+-60 -603 Td
+60 590 Td
+(14/15) Tj
+-60 -590 Td
+60 577 Td
+(Process complexity & volume) Tj
+-60 -577 Td
+60 564 Td
+(13/15) Tj
+-60 -564 Td
+60 551 Td
+(Compliance & audit pressure) Tj
+-60 -551 Td
+60 538 Td
+(13/15) Tj
+-60 -538 Td
+60 525 Td
+(Active Salesforce footprint / open Agentforce opp) Tj
+-60 -525 Td
+60 512 Td
+(12/15) Tj
+-60 -512 Td
+60 499 Td
+(Buyer titles present \(COO, CRO, Ops\)) Tj
+-60 -499 Td
+60 486 Td
+(10/15) Tj
+-60 -486 Td
+/FB 13 Tf
+60 473 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -473 Td
+/FN 10 Tf
+60 455 Td
+(1. Trade Settlement Exception Handling \(T+1 & Beyond\). DTCC clears and settles the vast) Tj
+-60 -455 Td
+60 442 Td
+(majority of US equities and fixed-income trades daily through NSCC, FICC, and DTC ? with T+1) Tj
+-60 -442 Td
+60 429 Td
+(now live in the US and pressure building for T+0, every settlement exception is expensive) Tj
+-60 -429 Td
+60 416 Td
+(latency risk. AFPI mines the end-to-end trade lifecycle across NSCC/CTM/ITP event logs to) Tj
+-60 -416 Td
+60 403 Td
+(expose the exception patterns, hand-off delays, and manual rework loops that erode straight-) Tj
+-60 -403 Td
+60 390 Td
+(through-processing rates. The play is to co-sell alongside the open Agentforce AELA) Tj
+-60 -390 Td
+60 377 Td
+(opportunity: AFPI supplies the process evidence, Agentforce Operations executes the remediation) Tj
+-60 -377 Td
+60 364 Td
+(agents on the exceptions AFPI surfaces. Metric moved: STP rate lift, exception cycle-time) Tj
+-60 -364 Td
+60 351 Td
+(reduction, reduction in manual break resolution FTE ? engage Lynn Bishop \(CIO / Managing) Tj
+-60 -351 Td
+60 338 Td
+(Director\) or the Head of Clearing Operations.) Tj
+-60 -338 Td
+60 325 Td
+(2. Regulatory Reporting & SDR / GTR Workflows. DTCC operates the Global Trade Repository and) Tj
+-60 -325 Td
+60 312 Td
+(Swap Data Repository ? meaning it is simultaneously a regulated entity and the regulator's data) Tj
+-60 -312 Td
+60 299 Td
+(plumbing for CFTC, ESMA, MAS, and JFSA reporting. AFPI mines the reporting workflows to prove) Tj
+-60 -299 Td
+60 286 Td
+(control effectiveness, spot late/failed submissions, and produce audit-grade process evidence ?) Tj
+-60 -286 Td
+60 273 Td
+(the Compliance-Center wedge is a direct fit here for CAT, EMIR REFIT, and DORA obligations.) Tj
+-60 -273 Td
+60 260 Td
+(AFPI shortens control-testing cycles from quarters to weeks and gives the CRO a live) Tj
+-60 -260 Td
+60 247 Td
+(conformance dashboard the auditors can consume. Metric moved: reporting-error rate, control-) Tj
+-60 -247 Td
+60 234 Td
+(testing cost, regulator remediation cycle time ? engage Timothy Cuddihy \(Group Chief Risk) Tj
+-60 -234 Td
+60 221 Td
+(Officer\) or the Head of Regulatory Operations.) Tj
+-60 -221 Td
+60 208 Td
+(3. Client Onboarding & KYC/AML for Institutional Members. Onboarding a new clearing member,) Tj
+-60 -208 Td
+60 195 Td
+(fund, or omnibus account at DTCC touches legal, credit, KYC/AML, connectivity, and testing ? a) Tj
+-60 -195 Td
+60 182 Td
+(multi-week journey with dozens of hand-offs across teams. AFPI mines the onboarding case flow) Tj
+-60 -182 Td
+60 169 Td
+(\(which can be surfaced through Service Cloud plus supporting systems\) to expose bottlenecks,) Tj
+-60 -169 Td
+60 156 Td
+(rework loops, and SLA breaches; Agentforce Ops then executes the standard steps AFPI proves are) Tj
+-60 -156 Td
+60 143 Td
+(safe to automate. This is the fastest-time-to-value co-sell against Agentforce because the) Tj
+-60 -143 Td
+60 130 Td
+(process is bounded, the data is captured, and the pain is quantified. Metric moved: onboarding) Tj
+-60 -130 Td
+60 117 Td
+(cycle time \(days\), first-time-right rate, ops cost per new member ? engage Nikki Poulos) Tj
+-60 -117 Td
+60 104 Td
+(\(General Counsel & Managing Director\) or the Head of Client Services.) Tj
+-60 -104 Td
+60 91 Td
+(4. Corporate Actions Lifecycle Standardization. Corporate actions ? dividends, mergers,) Tj
+-60 -91 Td
+60 78 Td
+(tenders, redemptions ? remain one of the most error-prone processes in post-trade, and DTCC's) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 2209 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(ISO 20022 CA transformation is a multi-year program to industrialize it. AFPI mines the CA) Tj
+-60 -782 Td
+60 769 Td
+(event lifecycle across CA Web, GCA VS, and downstream member workflows to identify where) Tj
+-60 -769 Td
+60 756 Td
+(announcements, elections, and allocations diverge from the target model, and quantifies the) Tj
+-60 -756 Td
+60 743 Td
+(cost of each break. This gives the transformation office an evidence base to prioritize) Tj
+-60 -743 Td
+60 730 Td
+(automation and re-work targets, rather than a swag on where the money is bleeding. Metric) Tj
+-60 -730 Td
+60 717 Td
+(moved: CA break rate, indemnification claims paid, transformation ROI proof ? engage Nadine) Tj
+-60 -717 Td
+60 704 Td
+(Chakar \(Managing Director, Digital Assets\) or the Head of Asset Services.) Tj
+-60 -704 Td
+60 691 Td
+(5. Cyber & Operational Resilience Evidence \(DORA-Ready\). As a Systemically Important Financial) Tj
+-60 -691 Td
+60 678 Td
+(Market Utility \(SIFMU\) DTCC is examined by the Fed, SEC, and CFTC on operational resilience;) Tj
+-60 -678 Td
+60 665 Td
+(DORA extends the same regime to European counterparties DTCC serves. AFPI mines incident,) Tj
+-60 -665 Td
+60 652 Td
+(change, and vendor-management workflows to produce continuous, auditable evidence of control) Tj
+-60 -652 Td
+60 639 Td
+(operation ? collapsing the reactive spreadsheet drill into a live process view. The Compliance) Tj
+-60 -639 Td
+60 626 Td
+(Center is the wedge: it takes the same event data AFPI is already mining and turns it into) Tj
+-60 -626 Td
+60 613 Td
+(regulator-consumable attestations. Metric moved: attestation prep time, control-gap detection) Tj
+-60 -613 Td
+60 600 Td
+(speed, resilience-test coverage ? engage Stephen Scharf \(former CSO / cyber lead\) or the) Tj
+-60 -600 Td
+60 587 Td
+(current Chief Security & Resilience Officer.) Tj
+-60 -587 Td
+60 574 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -574 Td
+60 561 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -561 Td
+60 548 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: Med) Tj
+-60 -548 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005383 00000 n 
+0000005528 00000 n 
+0000007789 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+7934
+%%EOF

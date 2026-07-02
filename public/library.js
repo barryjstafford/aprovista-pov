@@ -1,7 +1,12 @@
 const LIBRARY = [
   { name: "Architectural Graphics, Inc.", slug: "agi-architectural-graphics" },
   { name: "Alfa Laval Corporate AB", slug: "alfa-laval" },
+  { name: "Ares Management Corporation", slug: "ares-management" },
+  { name: "Bank of New York Mellon Corporation", slug: "bny-mellon" },
   { name: "Black Hills Corporation", slug: "black-hills-corporation" },
+  { name: "Corteva, Inc.", slug: "corteva" },
+  { name: "DTCC (Depository Trust & Clearing)", slug: "dtcc" },
+  { name: "Expedia Group, Inc.", slug: "expedia-group" },
   { name: "Australian Unity Limited", slug: "australian-unity" },
   { name: "CenterPoint Energy, Inc.", slug: "centerpoint-energy" },
   { name: "Daimler Truck Holding AG", slug: "daimler-truck" },
@@ -13,9 +18,14 @@ const LIBRARY = [
   { name: "Manulife Financial Corporation", slug: "manulife" },
   { name: "Mastercard Incorporated", slug: "mastercard" },
   { name: "MetLife, Inc.", slug: "metlife" },
+  { name: "National Bank of Canada", slug: "national-bank-of-canada" },
+  { name: "Optum Financial, Inc.", slug: "optum-financial" },
+  { name: "Stellantis Financial Services, Inc.", slug: "stellantis-financial" },
   { name: "Sysco Corporation", slug: "sysco" },
+  { name: "The Hartford Financial Services Group, Inc.", slug: "the-hartford" },
   { name: "U.S. Bancorp", slug: "us-bank" },
   { name: "Westpac Banking Corporation", slug: "westpac" },
+  { name: "Workday, Inc.", slug: "workday" },
   { name: "WSFS Financial Corporation", slug: "wsfs-financial" }
 ];
 

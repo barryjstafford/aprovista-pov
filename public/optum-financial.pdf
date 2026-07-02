@@ -1,0 +1,261 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 4810 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(Optum Financial, Inc. ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(Optum Financial, Inc.) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Healthcare & Life Sciences, Health Payments & Financial Services) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: ~$3B segment \(parent UnitedHealth Group ~$400B\)  | Employees: ~7,000 \(Optum) Tj
+-60 -720 Td
+60 707 Td
+(Financial\); 400,000+ \(Optum\)  | HQ: Eden Prairie, MN, USA) Tj
+-60 -707 Td
+60 694 Td
+(Current Salesforce Products: Tableau \(confirmed via Org62 renewal opp\) [field verify remainder) Tj
+-60 -694 Td
+60 681 Td
+(with Charlie Stuard]) Tj
+-60 -681 Td
+60 668 Td
+(Current Non-Salesforce Systems: Not confirmed [field verify with Charlie Stuard]) Tj
+-60 -668 Td
+60 655 Td
+(Relevant Open Opps:) Tj
+-60 -655 Td
+60 642 Td
+(AFPI AE: Charlie Stuard) Tj
+-60 -642 Td
+60 629 Td
+(Sales Motion: Co-Sell with Agentforce Operations) Tj
+-60 -629 Td
+60 616 Td
+(Propensity to Buy: 74/100 ? T2 Develop) Tj
+-60 -616 Td
+60 603 Td
+(Category) Tj
+-60 -603 Td
+60 590 Td
+(Score) Tj
+-60 -590 Td
+60 577 Td
+(Process complexity & volume) Tj
+-60 -577 Td
+60 564 Td
+(14/15) Tj
+-60 -564 Td
+60 551 Td
+(Regulatory / compliance pressure) Tj
+-60 -551 Td
+60 538 Td
+(13/15) Tj
+-60 -538 Td
+60 525 Td
+(Vertical fit \(Healthcare payments\)) Tj
+-60 -525 Td
+60 512 Td
+(12/15) Tj
+-60 -512 Td
+60 499 Td
+(Salesforce footprint & expansion signal) Tj
+-60 -499 Td
+60 486 Td
+(9/15) Tj
+-60 -486 Td
+60 473 Td
+(Buyer titles present \(Ops, Compliance, Digital\)) Tj
+-60 -473 Td
+60 460 Td
+(10/15) Tj
+-60 -460 Td
+/FB 13 Tf
+60 447 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -447 Td
+/FN 10 Tf
+60 429 Td
+(1. HSA/FSA Claim Substantiation & Reimbursement Cycle. Optum Financial administers ~9M HSAs and) Tj
+-60 -429 Td
+60 416 Td
+(processes millions of card swipes and manual claims that must be substantiated against IRS) Tj
+-60 -416 Td
+60 403 Td
+(Section 213\(d\) rules. Manual substantiation, receipt requests, and denial appeals create long) Tj
+-60 -403 Td
+60 390 Td
+(cycle times, member abrasion, and CFPB/IRS audit risk. AFPI mines the end-to-end claim flow) Tj
+-60 -390 Td
+60 377 Td
+(across Optum Bank, the mobile app, and back-office ops to expose auto-substantiation bypass) Tj
+-60 -377 Td
+60 364 Td
+(rates, appeal loop-backs, and rework hot-spots. Metric moved: substantiation auto-rate \(%\),) Tj
+-60 -364 Td
+60 351 Td
+(average days-to-resolve appeal, cost-per-claim. Engage Bill Miller \(CEO, Optum Financial\) or) Tj
+-60 -351 Td
+60 338 Td
+(the VP Operations.) Tj
+-60 -338 Td
+60 325 Td
+(2. Prior Authorization & Payment Integrity Handoffs. Optum sits at the collision of provider) Tj
+-60 -325 Td
+60 312 Td
+(claims, payer adjudication, and member cost-share ? a workflow the DOJ, states, and 2024 Change) Tj
+-60 -312 Td
+60 299 Td
+(Healthcare fallout have all put under a microscope. AFPI maps the true prior-auth and payment-) Tj
+-60 -299 Td
+60 286 Td
+(integrity handoff paths across UHG, providers, and Optum Financial's member accounts to find) Tj
+-60 -286 Td
+60 273 Td
+(rework loops and delay drivers regulators keep asking about. Metric moved: turnaround time,) Tj
+-60 -273 Td
+60 260 Td
+(denial-overturn rate, compliance exception count. Engage Sandeep Dadlani \(Chief Digital &) Tj
+-60 -260 Td
+60 247 Td
+(Technology Officer, UnitedHealth Group\) .) Tj
+-60 -247 Td
+60 234 Td
+(3. Member Onboarding & Employer Group Implementation. Every new employer HSA/FSA/COBRA plan) Tj
+-60 -234 Td
+60 221 Td
+(triggers a multi-week implementation involving file feeds, banking setup, card issuance, ID) Tj
+-60 -221 Td
+60 208 Td
+(proofing, and IRS reporting ? a classic multi-system, multi-team gauntlet. AFPI mines the full) Tj
+-60 -208 Td
+60 195 Td
+(onboarding process across Salesforce, banking core, and card-issuance systems to expose stall) Tj
+-60 -195 Td
+60 182 Td
+(points that erode NPS and drive employer churn. Metric moved: time-to-first-card,) Tj
+-60 -182 Td
+60 169 Td
+(implementation SLA hit rate, first-year retention. Engage the Optum Financial COO / Head of) Tj
+-60 -169 Td
+60 156 Td
+(Implementations .) Tj
+-60 -156 Td
+60 143 Td
+(4. Contact Center Deflection & Agentforce Readiness. Optum Financial's member service centers) Tj
+-60 -143 Td
+60 130 Td
+(field high call volumes on "why was my claim denied," card lockouts, and IRS 1099-SA questions) Tj
+-60 -130 Td
+60 117 Td
+(? exactly the queries UHG has publicly said it wants agentic AI to absorb. Before deploying) Tj
+-60 -117 Td
+60 104 Td
+(Agentforce Service Agent, AFPI mines actual contact-reason paths to prove which intents are) Tj
+-60 -104 Td
+60 91 Td
+(true auto-resolve candidates and which are compliance-sensitive escalations. Metric moved:) Tj
+-60 -91 Td
+60 78 Td
+(containment rate, average handle time, first-contact resolution. Engage the VP Member Services) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 1220 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(in partnership with the Salesforce Service Cloud team.) Tj
+-60 -782 Td
+60 769 Td
+(5. Compliance Center for HIPAA, IRS & State Escheatment. Optum Financial straddles HIPAA) Tj
+-60 -769 Td
+60 756 Td
+(\(health data\), IRS \(HSA custodian\), OCC/FDIC \(Optum Bank\), and 50-state escheatment /) Tj
+-60 -756 Td
+60 743 Td
+(unclaimed-property regimes ? a documentation load that grew heavier after the 2024 Change) Tj
+-60 -743 Td
+60 730 Td
+(Healthcare breach. AFPI Compliance Center generates evidence packages directly from live) Tj
+-60 -730 Td
+60 717 Td
+(process traces, replacing spreadsheet-based control walkthroughs. Metric moved: audit prep) Tj
+-60 -717 Td
+60 704 Td
+(hours, control-exception rate, breach-notification cycle time. Engage the Optum Chief) Tj
+-60 -704 Td
+60 691 Td
+(Compliance Officer and Internal Audit lead.) Tj
+-60 -691 Td
+60 678 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -678 Td
+60 665 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -665 Td
+60 652 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: Med) Tj
+-60 -652 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005188 00000 n 
+0000005333 00000 n 
+0000006605 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+6750
+%%EOF

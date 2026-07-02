@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>National Bank of Canada — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 260px; z-index: 100; }
+  .lib-menu.open { display: block; }
+  .lib-menu a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-menu a:last-child { border-bottom: none; }
+  .lib-menu a:hover { background: #f0f4ff; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
+  th { background: #f0f4ff; font-weight: 600; }
+  td:last-child { text-align: right; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 4px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+    background: #f0f4ff; color: #032d60; text-decoration: none;
+    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
+  .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
+  .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
+    cursor: not-allowed; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <img src="/banner-logo.png" alt="AproVista">
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <div class="lib-menu" id="libMenu"></div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>National Bank of Canada</h1>
+  <div class="snapshot">
+    <p><strong>Financial Services, Banking</strong></p>
+    <p><strong>Revenue:</strong> C$11.6B (FY2025) &nbsp;|&nbsp; <strong>Employees:</strong> ~30,000 &nbsp;|&nbsp; <strong>HQ:</strong> Montreal, QC, Canada</p>
+    <p><strong>Current Salesforce Products:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Julie+Levesque+National+Bank+of+Canada">Julie Levesque</a>]</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> SAP Core Banking (confirmed via Org62 opp: SAP Core Banking to FSC migration)</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> BNC - CSG - SAP Core Banking to FSC Digital Lending Phase 3 (<a href="https://org62.my.salesforce.com/006ed00000EzgdNAAR">$10.0M</a>) &nbsp;|&nbsp; BNC - CSG - SAP Core Banking to FSC Phase 1 (<a href="https://org62.my.salesforce.com/006ed00000EzfKjAAJ">$5.0M</a>) &nbsp;|&nbsp; BNC - CSG - AES Commercial (<a href="https://org62.my.salesforce.com/006ed00000YsVWJAA3">$3.7M</a>) &nbsp;|&nbsp; MS - BNC - Agentic Omni Gateway (<a href="https://org62.my.salesforce.com/006ed00000Xajq1AAB">$150K</a>) &nbsp;|&nbsp; MS - BNC Wealth Advisor Portal Automation (<a href="https://org62.my.salesforce.com/006ed00000C3v2rAAB">$120K</a>)</p>
+    <p><strong>AFPI AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Financial Services Cloud)</p>
+  </div>
+
+  <details>
+    <summary>Propensity to Buy: 87/100 — T1 Pursue</summary>
+    <table>
+      <tr><th>Category</th><th>Score</th></tr>
+      <tr><td>Active AFPI-adjacent pipeline</td><td>18/20</td></tr>
+      <tr><td>Process complexity &amp; regulatory pressure</td><td>14/15</td></tr>
+      <tr><td>System heterogeneity (SAP + Salesforce)</td><td>13/15</td></tr>
+      <tr><td>Digital transformation mandate</td><td>12/15</td></tr>
+      <tr><td>Buyer titles present (COO/CDO/CTO)</td><td>10/10</td></tr>
+    </table>
+  </details>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <p><strong>1. Core Banking to Financial Services Cloud migration readiness.</strong> The $15M SAP Core Banking → FSC program (Phases 1 &amp; 3) is exactly the kind of multi-year re-platforming where AFPI de-risks the transition by mining the current SAP order-to-cash and loan-origination flows before cutover. Pain: every core-banking migration overruns on unknown process variants (undocumented branch workarounds, dual-entry rework). AFPI plays the "as-is" discovery layer that feeds the FSC to-be design, and it moves the metric that matters — cutover slippage weeks and post-go-live rework hours. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Julie+Levesque+National+Bank+of+Canada">Julie Levesque</a> (EVP Technology &amp; Operations) as champion.</p>
+
+  <p><strong>2. Digital lending origination cycle time.</strong> Phase 3 of the SAP→FSC build is specifically Digital Lending — a domain where funnel drop-off, credit-decision rework, and manual document chase are the top three time sinks. AFPI mines the loan-app event log to expose where applications stall (income verification, KYC re-work, adjudicator queue) and quantifies the automation ROI before Agentforce or FSC Lending workflows are configured. Moves origination cycle time from days to hours and lifts pull-through rate. Champion: the Commercial &amp; Personal Banking CDO — engage <a href="https://www.linkedin.com/search/results/people/?keywords=Lucie+Blanchet+National+Bank+of+Canada">Lucie Blanchet</a> (EVP Personal &amp; Commercial Banking).</p>
+
+  <p><strong>3. Wealth Advisor onboarding &amp; servicing automation.</strong> The open Wealth Advisor Portal Automation opp ($120K, Stage 3) is a natural AFPI wedge: mine the advisor task-completion event log (client onboarding, KYC refresh, portfolio rebalancing hand-offs) to isolate the 5-8 repetitive multi-system steps that account for 60%+ of advisor admin time. AFPI + Agentforce turns that into an agent-executed workflow with human-in-the-loop review. Metric: advisor productive hours per week, and time-to-first-trade for new HNW clients. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Nancy+Paquet+National+Bank+of+Canada">Nancy Paquet</a> (EVP Wealth Management).</p>
+
+  <p><strong>4. Contact center / Agentic Omni Gateway grounding.</strong> The Agentic Omni Gateway opp ($150K) points to an omni-channel service redesign. AFPI provides the process-mined baseline (call reasons, hand-off patterns, first-contact-resolution gaps) that Agentforce agents need as grounding — without it, agents automate the wrong thing. Pain: today's IVR + agent hand-offs create 20-30% repeat contacts; regulator-driven complaint SLAs (FCAC in Canada) make this a compliance issue, not just a cost one. Moves FCR, repeat-contact rate, and complaint aging. Champion: <a href="https://www.linkedin.com/search/results/people/?keywords=Marie+Chantal+Gingras+National+Bank+of+Canada">Marie Chantal Gingras</a> (SVP Customer Experience) — validate title.</p>
+
+  <p><strong>5. Regulatory reporting &amp; AML process compliance (Compliance Center wedge).</strong> As a Canadian D-SIB regulated by OSFI plus FINTRAC AML obligations, NBC runs heavy periodic-review, transaction-monitoring, and adverse-media investigation processes across SAP, FSC (future), and third-party AML tools. AFPI Compliance Center mines these flows to prove control effectiveness, isolate SLA-breach root causes, and produce audit-ready process evidence for OSFI E-13 and FINTRAC reviews. Moves case-closure SLA, false-positive rework, and audit prep hours. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Bill+Bonney+National+Bank+of+Canada">Bill Bonney</a> (Chief Compliance Officer) — validate title.</p>
+
+  <div class="actions">
+    <a href="/national-bank-of-canada.pdf" target="_blank">Generate PDF</a>
+    <a href="https://salesforce.enterprise.slack.com/docs/T026QPGMQ/F0BEX1080MA" target="_blank">Generate Slack Canvas</a>
+    <a href="https://aprovista-pov.vercel.app/national-bank-of-canada">Generate Vercel Page</a>
+    <a href="mailto:?subject=AFPI%20POV%20%E2%80%94%20National%20Bank%20of%20Canada&body=https%3A%2F%2Faprovista-pov.vercel.app%2Fnational-bank-of-canada">Generate Customer Email (Beta)</a>
+    <span class="disabled">Generate Proposal Template (coming soon)</span>
+    <a href="https://salesforce.enterprise.slack.com/archives/apromore-gtm" target="_blank">Deal Support Request</a>
+    <span class="disabled">Deeper Dive POV (coming soon)</span>
+  </div>
+  <footer class="fine">
+    Prepared by AproVista &nbsp;|&nbsp; Created by
+    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
+    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: High
+  </footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

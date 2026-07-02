@@ -1,0 +1,288 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 4853 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(The Hartford Financial Services Group, Inc. ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(The Hartford Financial Services Group, Inc.) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Financial Services, Property & Casualty Insurance \(Commercial Lines, Personal Lines, Group) Tj
+-60 -733 Td
+60 720 Td
+(Benefits, Mutual Funds\)) Tj
+-60 -720 Td
+60 707 Td
+(Revenue: ~$26.5B  | Employees: ~19,100  | HQ: Hartford, CT, USA) Tj
+-60 -707 Td
+60 694 Td
+(Current Salesforce Products: Not confirmed [field verify with the CIO / Head of Enterprise) Tj
+-60 -694 Td
+60 681 Td
+(Architecture ]) Tj
+-60 -681 Td
+60 668 Td
+(Current Non-Salesforce Systems: Not confirmed [field verify with the CIO / Head of Enterprise) Tj
+-60 -668 Td
+60 655 Td
+(Architecture ]) Tj
+-60 -655 Td
+60 642 Td
+(Relevant Open Opps:) Tj
+-60 -642 Td
+60 629 Td
+(AFPI AE: Charlie Stuard) Tj
+-60 -629 Td
+60 616 Td
+(Sales Motion: Sell AFPI Standalone) Tj
+-60 -616 Td
+60 603 Td
+(Propensity to Buy: 72/100 ? T2 Develop) Tj
+-60 -603 Td
+60 590 Td
+(Category) Tj
+-60 -590 Td
+60 577 Td
+(Score) Tj
+-60 -577 Td
+60 564 Td
+(Regulatory & Compliance Pressure \(NAIC, state DOI, SOX, ERM\)) Tj
+-60 -564 Td
+60 551 Td
+(14/15) Tj
+-60 -551 Td
+60 538 Td
+(Process Complexity \(P&C claims, underwriting, group benefits\)) Tj
+-60 -538 Td
+60 525 Td
+(14/15) Tj
+-60 -525 Td
+60 512 Td
+(Compliance-Center Wedge Fit) Tj
+-60 -512 Td
+60 499 Td
+(9/10) Tj
+-60 -499 Td
+60 486 Td
+(Vertical Fit & ICP Alignment \(large-cap insurer\)) Tj
+-60 -486 Td
+60 473 Td
+(13/15) Tj
+-60 -473 Td
+60 460 Td
+(Salesforce Footprint & Deal Momentum) Tj
+-60 -460 Td
+60 447 Td
+(6/15) Tj
+-60 -447 Td
+/FB 13 Tf
+60 434 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -434 Td
+/FN 10 Tf
+60 416 Td
+(1. First Notice of Loss to Claim Closure ? Personal & Small Commercial Auto. The FNOL-to-) Tj
+-60 -416 Td
+60 403 Td
+(closure journey moves across the digital intake channel, adjuster triage, coverage) Tj
+-60 -403 Td
+60 390 Td
+(verification, damage estimation, vendor dispatch, subrogation, and payout ? with state-DOI) Tj
+-60 -390 Td
+60 377 Td
+(unfair claims practice clocks running the entire time. Straight-through-processing rates in P&C) Tj
+-60 -377 Td
+60 364 Td
+(claims typically hide a long tail of files that cycle through reassignment and information-) Tj
+-60 -364 Td
+60 351 Td
+(request loops that quietly consume the majority of adjuster capacity. AFPI mines the actual) Tj
+-60 -351 Td
+60 338 Td
+(event log across the claims platform, the AI triage layer, and the payment system to expose the) Tj
+-60 -338 Td
+60 325 Td
+(two or three loop patterns that drive rework, moving cycle time, LAE \(loss adjustment expense\)) Tj
+-60 -325 Td
+60 312 Td
+(ratio, and DOI complaint volume. Engage the Head of Claims Operations as the operational) Tj
+-60 -312 Td
+60 299 Td
+(champion.) Tj
+-60 -299 Td
+60 286 Td
+(2. Small Commercial Underwriting & Quote-to-Bind. The Hartford's small commercial franchise) Tj
+-60 -286 Td
+60 273 Td
+(runs on speed ? the winning quote is often the first one back to the independent agent ? and) Tj
+-60 -273 Td
+60 260 Td
+(quote-to-bind cycle time is the single biggest lever on hit-ratio. Behind the scenes the actual) Tj
+-60 -260 Td
+60 247 Td
+(workflow ricochets between the agent portal, ordered third-party data \(ISO, MVR, prior-) Tj
+-60 -247 Td
+60 234 Td
+(carrier\), the rating engine, and referrals to underwriters when a rule fires. AFPI produces the) Tj
+-60 -234 Td
+60 221 Td
+(true process graph and exposes which referral rules, data-vendor latencies, or agency segments) Tj
+-60 -221 Td
+60 208 Td
+(are structurally slowing the quote ? the metric moved is bind rate at the target service-level,) Tj
+-60 -208 Td
+60 195 Td
+(and premium per underwriter FTE. Engage the Head of Small Commercial Underwriting .) Tj
+-60 -195 Td
+60 182 Td
+(3. Group Benefits Absence & Disability Case Management. The Hartford is a top-three US carrier) Tj
+-60 -182 Td
+60 169 Td
+(in group disability, absence management, and paid family leave ? a business where the "process") Tj
+-60 -169 Td
+60 156 Td
+(is a case that lives for weeks or months across intake, medical review, employer coordination,) Tj
+-60 -156 Td
+60 143 Td
+(and periodic re-adjudication. State PFML mandates keep multiplying and each one has its own) Tj
+-60 -143 Td
+60 130 Td
+(eligibility clock and appeal SLA. AFPI ingests the case-management event log and surfaces where) Tj
+-60 -130 Td
+60 117 Td
+(cases stall against statutory clocks and which case segments generate disproportionate rework,) Tj
+-60 -117 Td
+60 104 Td
+(moving benefit-decision cycle time, appeals-overturn rate, and PFML compliance exceptions.) Tj
+-60 -104 Td
+60 91 Td
+(Engage the Head of Group Benefits Operations .) Tj
+-60 -91 Td
+60 78 Td
+(4. Policy Servicing & Endorsement Processing \(Commercial Middle Market\). Once a commercial) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 2303 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(policy binds, the real cost sits in mid-term endorsements ? added vehicles, changed limits, new) Tj
+-60 -782 Td
+60 769 Td
+(locations, certificate requests ? that flow across the agent portal, service centers, and) Tj
+-60 -769 Td
+60 756 Td
+(underwriting for anything material. Endorsement backlogs and re-work drive agent NPS almost as) Tj
+-60 -756 Td
+60 743 Td
+(much as claims do, and are invisible in the policy admin system's canned dashboards. AFPI maps) Tj
+-60 -743 Td
+60 730 Td
+(the full endorsement lifecycle event log, isolates the endorsement types and agency segments) Tj
+-60 -730 Td
+60 717 Td
+(that consistently generate the worst cycle-time outliers, and quantifies the servicing-cost-to-) Tj
+-60 -717 Td
+60 704 Td
+(premium ratio by segment. Engage the Head of Middle Market Operations .) Tj
+-60 -704 Td
+60 691 Td
+(5. SOX & Model Risk Compliance ? Reserving and Actuarial Process Attestation. As an SEC-) Tj
+-60 -691 Td
+60 678 Td
+(registered insurer, The Hartford operates under SOX Section 404 for financial reporting and) Tj
+-60 -678 Td
+60 665 Td
+(NAIC Model Audit Rule / Model Risk Management for actuarial models ? and every year the) Tj
+-60 -665 Td
+60 652 Td
+(internal-audit and external-auditor teams reconstruct the actual process by which reserves,) Tj
+-60 -652 Td
+60 639 Td
+(DAC, and reinsurance recoverables are calculated and reviewed. Today that reconstruction is) Tj
+-60 -639 Td
+60 626 Td
+(largely interview-driven. AFPI turns the process-attestation exercise into a live artifact: the) Tj
+-60 -626 Td
+60 613 Td
+(true event log across the actuarial workbench, reserving system, and financial close, with) Tj
+-60 -613 Td
+60 600 Td
+(control points and segregation-of-duty breaks surfaced automatically. The metric moved is) Tj
+-60 -600 Td
+60 587 Td
+(audit-cycle hours and Sarbanes control-deficiency findings. Engage the Chief Auditor and the) Tj
+-60 -587 Td
+60 574 Td
+(Chief Actuary .) Tj
+-60 -574 Td
+60 561 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -561 Td
+60 548 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -548 Td
+60 535 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: Med) Tj
+-60 -535 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005231 00000 n 
+0000005376 00000 n 
+0000007731 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+7876
+%%EOF

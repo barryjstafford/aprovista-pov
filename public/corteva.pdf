@@ -1,0 +1,261 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 5000 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(Corteva, Inc. ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(Corteva, Inc.) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Agriculture & Mining, Agricultural Inputs \(Seed & Crop Protection\)) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: ~$17B \(FY24\)  | Employees: ~22,000  | HQ: Indianapolis, IN, US) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Sales Cloud \(SFA renewal in flight\), Agentforce 1 Edition, B2B) Tj
+-60 -707 Td
+60 694 Td
+(Commerce, Tableau \(Pioneer Hi-Bred\), Experience Cloud) Tj
+-60 -694 Td
+60 681 Td
+(Current Non-Salesforce Systems: Not confirmed [field verify with Corteva IT / Digital lead]) Tj
+-60 -681 Td
+60 668 Td
+(Relevant Open Opps: Corteva Agriscience LLC Renewal 5 SFA \( $4.98M \) | Agentforce Contact) Tj
+-60 -668 Td
+60 655 Td
+(Center \( $450K \) | B2B Commerce \( $320K \) | R&D Compliance Project \( $200K \) | Agronomist Agent) Tj
+-60 -655 Td
+60 642 Td
+(MVP \( $200K \) | Grower 360 Transformation \( $175K \)) Tj
+-60 -642 Td
+60 629 Td
+(AFPI AE: Charlie Stuard) Tj
+-60 -629 Td
+60 616 Td
+(Sales Motion: Co-Sell with Agentforce Operations) Tj
+-60 -616 Td
+60 603 Td
+(Propensity to Buy: 91/100 ? T1 Pursue) Tj
+-60 -603 Td
+60 590 Td
+(Category) Tj
+-60 -590 Td
+60 577 Td
+(Score) Tj
+-60 -577 Td
+60 564 Td
+(Company Size & Complexity) Tj
+-60 -564 Td
+60 551 Td
+(15/15) Tj
+-60 -551 Td
+60 538 Td
+(Salesforce Footprint) Tj
+-60 -538 Td
+60 525 Td
+(15/15) Tj
+-60 -525 Td
+60 512 Td
+(Active Buying Signals) Tj
+-60 -512 Td
+60 499 Td
+(13/15) Tj
+-60 -499 Td
+60 486 Td
+(Process Complexity \(R&D, Grower Ops, CC\)) Tj
+-60 -486 Td
+60 473 Td
+(13/15) Tj
+-60 -473 Td
+60 460 Td
+(Vertical Fit \(Ag / Regulated Manufacturing\)) Tj
+-60 -460 Td
+60 447 Td
+(12/15) Tj
+-60 -447 Td
+/FB 13 Tf
+60 434 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -434 Td
+/FN 10 Tf
+60 416 Td
+(1. Grower Order-to-Cash & Rebate Reconciliation. The Grower 360 Transformation opp signals) Tj
+-60 -416 Td
+60 403 Td
+(Corteva is rebuilding how growers and retailers order seed, crop protection, and traits ? a) Tj
+-60 -403 Td
+60 390 Td
+(process notoriously fragmented across retailer channels, distributor rebates, and season-tied) Tj
+-60 -390 Td
+60 377 Td
+(pricing. AFPI can mine the current O2C event log to expose rework loops \(rebate disputes,) Tj
+-60 -377 Td
+60 364 Td
+(credit-hold escalations, mis-priced orders\) that erode margin at planting-season peak. The) Tj
+-60 -364 Td
+60 351 Td
+(metric moved is DSO and rebate-leakage percentage, both directly tied to working capital.) Tj
+-60 -351 Td
+60 338 Td
+(Engage Sam Eathington \(Chief Technology & Digital Officer\) and the Grower 360 program owner.) Tj
+-60 -338 Td
+60 325 Td
+(2. Agronomist / Field Advisor Case Handling \(Agentforce Contact Center wedge\). With a live) Tj
+-60 -325 Td
+60 312 Td
+($450K Agentforce Contact Center opp and the Agronomist Agent MVP, Corteva is standing up AI-) Tj
+-60 -312 Td
+60 299 Td
+(assisted case deflection for grower & retailer inquiries ? but no one has yet quantified) Tj
+-60 -299 Td
+60 286 Td
+(handle-time variance or first-contact-resolution across the current process. AFPI mines the) Tj
+-60 -286 Td
+60 273 Td
+(case-history log to prove exactly where AI agents win vs. where human agronomists must remain) Tj
+-60 -273 Td
+60 260 Td
+(in the loop, giving the CC program a defensible ROI story before the AI licenses spin up at) Tj
+-60 -260 Td
+60 247 Td
+(scale. Metric moved: AHT, FCR, deflection rate. Engage the contact center program lead paired) Tj
+-60 -247 Td
+60 234 Td
+(with the Agentforce AE.) Tj
+-60 -234 Td
+60 221 Td
+(3. R&D Regulatory Submission & Compliance Cycle. The Corteva R&D Compliance Project opp aligns) Tj
+-60 -221 Td
+60 208 Td
+(with a regulated-product lifecycle that runs across EPA, EU REACH, and dozens of national ag-) Tj
+-60 -208 Td
+60 195 Td
+(chem authorities ? each submission is a 3-7 year process with document handoffs across) Tj
+-60 -195 Td
+60 182 Td
+(toxicology, field trials, and regulatory affairs. AFPI + Compliance Center wedge mines the) Tj
+-60 -182 Td
+60 169 Td
+(submission event log to surface bottlenecks \(usually toxicology sign-off and country-specific) Tj
+-60 -169 Td
+60 156 Td
+(dossier variants\) and gives regulatory ops a live control tower. Metric moved: submission cycle) Tj
+-60 -156 Td
+60 143 Td
+(time, on-time-approval rate, cost per submission. Engage the VP Regulatory Affairs .) Tj
+-60 -143 Td
+60 130 Td
+(4. Seed Production Planning & Field-to-Bag Traceability. Pioneer Hi-Bred \(Corteva's seed brand\)) Tj
+-60 -130 Td
+60 117 Td
+(runs a season-locked production process ? parent seed to production fields to conditioning) Tj
+-60 -117 Td
+60 104 Td
+(plants to bag/tag ? where a two-week slip cascades into next-season shortages. AFPI mines the) Tj
+-60 -104 Td
+60 91 Td
+(S/4HANA-and-MES process to expose deviation patterns \(yield variance, conditioning-plant queue) Tj
+-60 -91 Td
+60 78 Td
+(time, tag-and-treat rework\) that today live in siloed dashboards. Metric moved: on-time-in-full) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 1302 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(to distributor, shrink, planning-cycle accuracy. Engage the Pioneer Seed Supply Chain lead .) Tj
+-60 -782 Td
+60 769 Td
+(5. Sales Force Automation Adoption & Territory Coverage \(SFA Renewal wedge\). The $4.98M SFA) Tj
+-60 -769 Td
+60 756 Td
+(renewal is the anchor conversation ? AFPI mines Sales Cloud activity data to show which) Tj
+-60 -756 Td
+60 743 Td
+(territories, reps, and account tiers are actually driving pipeline vs. which are running on) Tj
+-60 -743 Td
+60 730 Td
+(autopilot. This turns the renewal conversation from "same seats again" into a coverage-and-) Tj
+-60 -730 Td
+60 717 Td
+(adoption optimization play, and directly justifies expanding to Agentforce for Sales. Metric) Tj
+-60 -717 Td
+60 704 Td
+(moved: rep productivity per territory, opportunity aging, cross-sell rate into Pioneer) Tj
+-60 -704 Td
+60 691 Td
+(accounts. Engage the VP Commercial Effectiveness alongside the account owner.) Tj
+-60 -691 Td
+60 678 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -678 Td
+60 665 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -665 Td
+60 652 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: High) Tj
+-60 -652 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005378 00000 n 
+0000005523 00000 n 
+0000006877 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+7022
+%%EOF

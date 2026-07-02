@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ares Management Corporation — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 260px; z-index: 100; }
+  .lib-menu.open { display: block; }
+  .lib-menu a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-menu a:last-child { border-bottom: none; }
+  .lib-menu a:hover { background: #f0f4ff; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
+  th { background: #f0f4ff; font-weight: 600; }
+  td:last-child { text-align: right; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 4px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+    background: #f0f4ff; color: #032d60; text-decoration: none;
+    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
+  .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
+  .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
+    cursor: not-allowed; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <img src="/banner-logo.png" alt="AproVista">
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">My POV Library &#9662;</button>
+      <div class="lib-menu" id="libMenu"></div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Ares Management Corporation</h1>
+  <div class="snapshot">
+    <p><strong>Financial Services, Alternative Asset Management</strong></p>
+    <p><strong>Revenue:</strong> $5.6B &nbsp;|&nbsp; <strong>Employees:</strong> ~4,250 &nbsp;|&nbsp; <strong>HQ:</strong> Los Angeles, CA, USA</p>
+    <p><strong>Current Salesforce Products:</strong> Not confirmed [field verify with Charlie Stuard]</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Charlie Stuard]</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> </p>
+    <p><strong>AFPI AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
+  </div>
+
+  <details>
+    <summary>Propensity to Buy: 82/100 &mdash; T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th></tr></thead>
+      <tbody>
+        <tr><td>Process complexity (fund ops, credit underwriting, LP onboarding)</td><td>14/15</td></tr>
+        <tr><td>Company size &amp; scale ($5.6B, 4,250 FTEs, global)</td><td>13/15</td></tr>
+        <tr><td>Vertical fit (alt asset mgmt, private credit boom)</td><td>12/15</td></tr>
+        <tr><td>Regulatory pressure (SEC, FCA, AIFMD, Dodd-Frank)</td><td>12/15</td></tr>
+        <tr><td>Signals &amp; urgency (rapid AUM growth, M&amp;A integration)</td><td>10/15</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <p><strong>1. Middle-Market Direct Lending &mdash; Deal Origination to Funding Cycle Time.</strong>
+  Ares Capital Corporation and the Ares Credit Group underwrite thousands of middle-market loans annually across BDC, private credit, and SDL vehicles &mdash; the loop from term sheet through credit committee, legal docs, KYC/AML, closing, and initial fund draw touches Salesforce, credit-risk models, doc-management, and treasury systems. Mining the full origination-to-funding process exposes rework in credit memos, stalled legal reviews, and covenant-tracking handoffs that stretch closing timelines beyond peer benchmarks. AFPI overlays event logs directly onto the Ares deal pipeline in Salesforce to show where a $30M unitranche stalls versus a $200M syndicated deal, cutting avg. days-to-close by 20-30% and freeing origination officer capacity. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Kipp+deVeer+Ares+Management">Kipp deVeer</a> (Head of Ares Credit Group) as the process owner.</p>
+
+  <p><strong>2. LP Onboarding, Subscription Docs &amp; Investor KYC.</strong>
+  With ~$484B AUM across hundreds of institutional and HNW investors, LP onboarding is a compliance-heavy, multi-week choreography of subscription documents, accredited-investor certifications, FATCA/CRS, sanctions screening, and fund allocations &mdash; historically a top complaint in institutional investor NPS surveys across alt asset managers. AFPI mines the actual variant paths through Ares Wealth Management Solutions and the institutional IR teams, isolating where docs bounce back for correction and where sanctions/enhanced-due-diligence hits create silent queues. The metric moved is time-to-fund (goal: cut from 4-6 weeks to under 2) and IR analyst capacity. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Raj+Dhanda+Ares+Management">Raj Dhanda</a> (Partner, Global Head of Wealth Management Solutions).</p>
+
+  <p><strong>3. Fund Accounting, NAV Close &amp; Investor Reporting.</strong>
+  Ares runs a hybrid outsourced/in-house fund-admin model across dozens of credit, PE, real estate, and secondaries vehicles &mdash; the monthly/quarterly NAV close and LP reporting cycle involves data reconciliation between admins (SS&amp;C, State Street), internal general ledgers, and the LP portal. AFPI reveals where reconciliation exceptions repeatedly loop back to the same fund families or asset classes, which admin handoffs cause the biggest lag, and where manual overrides mask systematic data quality issues. Targeting a 3-5 day compression of quarterly close plus fewer restatements &mdash; a direct auditor and CFO win. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Jarrod+Phillips+Ares+Management">Jarrod Phillips</a> (Chief Financial Officer).</p>
+
+  <p><strong>4. Portfolio Company Monitoring &amp; Covenant Compliance.</strong>
+  With 500+ portfolio borrowers across the credit book, covenant testing, financial statement collection, and watchlist escalation is a distributed process split between portfolio managers, ops analysts, and third-party servicers &mdash; late or missing financials directly drive credit loss and regulatory ire. AFPI mines the flow from financial-package request through covenant test through watchlist entry, exposing which sectors, deal teams, or servicers systematically miss SLAs and where "watchlist" status quietly ages without escalation. The move-the-needle metric is reduction of non-accrual surprises and faster restructuring triggers. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Mitchell+Goldstein+Ares+Management">Mitchell Goldstein</a> (Co-Head of Ares Credit Group).</p>
+
+  <p><strong>5. Compliance Center &mdash; Regulatory Reporting, Marked-Communications &amp; SEC Exam Readiness.</strong>
+  As an SEC-registered adviser and FCA-authorized manager with a public BDC, Ares navigates Form ADV, Form PF, AIFMD Annex IV, marketing rule reviews, and 15c3 workflows &mdash; a growing surface as SEC scrutiny of private credit intensifies. AFPI's Compliance Center wedge maps how marketing materials, RFPs, and DDQs actually flow through legal/compliance review, quantifies review-cycle bottlenecks, and produces auditable process evidence for SEC exams and internal control attestations. The metric is reduction of MRAs/deficiency letters and audit prep hours. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Naseem+Sagati+Aghili+Ares+Management">Naseem Sagati Aghili</a> (General Counsel).</p>
+
+  <div class="actions">
+    <a href="/ares-management.pdf" target="_blank">Generate PDF</a>
+    <a href="https://salesforce.enterprise.slack.com/docs/T026QPGMQ/F0BEX0UCHU4" target="_blank">Generate Slack Canvas</a>
+    <a href="https://aprovista-pov.vercel.app/ares-management">Generate Vercel Page</a>
+    <a href="mailto:?subject=AFPI%20POV%20%E2%80%94%20Ares%20Management%20Corporation&body=Full%20POV%3A%20https%3A%2F%2Faprovista-pov.vercel.app%2Fares-management">Generate Customer Email (Beta)</a>
+    <span class="disabled">Generate Proposal Template (coming soon)</span>
+    <a href="https://salesforce.enterprise.slack.com/archives/apromore-gtm" target="_blank">Deal Support Request</a>
+    <span class="disabled">Deeper Dive POV (coming soon)</span>
+  </div>
+  <footer class="fine">
+    Prepared by AproVista &nbsp;|&nbsp; Created by
+    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
+    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: Med
+  </footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

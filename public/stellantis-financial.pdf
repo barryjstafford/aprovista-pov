@@ -1,0 +1,294 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 5072 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(Stellantis Financial Services, Inc. ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(Stellantis Financial Services, Inc.) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Financial Services, Captive Auto Finance) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: $229M  | Employees: 550  | HQ: Atlanta, GA) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Sales Cloud, Service Cloud, Experience Cloud \(Customer & Partner) Tj
+-60 -707 Td
+60 694 Td
+(Portals\), MuleSoft, Tableau, CRM Analytics, Platform) Tj
+-60 -694 Td
+60 681 Td
+(Current Non-Salesforce Systems: Informatica MDM, Regrello) Tj
+-60 -681 Td
+60 668 Td
+(Relevant Open Opps: Stellantis Financial Services -Apromore \( $550k \)  |  Stellantis Financial) Tj
+-60 -668 Td
+60 655 Td
+(Data Mining Apromore \( $200k \)  |  INFA MDM Data Fabric \( $800k \)  |  SFA/Portal Renewal \() Tj
+-60 -655 Td
+60 642 Td
+($5.8M \)  |  MuleSoft Renewal \( $2.7M \)  |  SFS Loan Origination PH2 \( $1.0M \)  |  SFS Regrello) Tj
+-60 -642 Td
+60 629 Td
+(\( $500k \)  |  Adaptive Agent for Sales \( $250k \)) Tj
+-60 -629 Td
+60 616 Td
+(AFPI AE: Charlie Stuard) Tj
+-60 -616 Td
+60 603 Td
+(Sales Motion: Sell Integrated with Salesforce Product \(Service Cloud + MuleSoft + Informatica) Tj
+-60 -603 Td
+60 590 Td
+(MDM\)) Tj
+-60 -590 Td
+60 577 Td
+(Propensity to Buy: 92/100 ? T1 Pursue) Tj
+-60 -577 Td
+60 564 Td
+(Category) Tj
+-60 -564 Td
+60 551 Td
+(Score) Tj
+-60 -551 Td
+60 538 Td
+(Active Opportunity Alignment \(Apromore opps already live\)) Tj
+-60 -538 Td
+60 525 Td
+(20/20) Tj
+-60 -525 Td
+60 512 Td
+(Process Complexity & Pain \(loan origination, servicing, collections\)) Tj
+-60 -512 Td
+60 499 Td
+(18/20) Tj
+-60 -499 Td
+60 486 Td
+(Data Readiness \(MuleSoft + Informatica MDM in flight\)) Tj
+-60 -486 Td
+60 473 Td
+(14/15) Tj
+-60 -473 Td
+60 460 Td
+(Buyer Access \(SFS is a known Salesforce anchor account\)) Tj
+-60 -460 Td
+60 447 Td
+(13/15) Tj
+-60 -447 Td
+60 434 Td
+(Regulatory / Compliance Pressure \(CFPB, state DMV, GLBA, FDCPA\)) Tj
+-60 -434 Td
+60 421 Td
+(12/15) Tj
+-60 -421 Td
+/FB 13 Tf
+60 408 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -408 Td
+/FN 10 Tf
+60 390 Td
+(1. Auto Loan Origination ? Time-to-Decision & Dealer Funding Cycle. SFS is standing up a new) Tj
+-60 -390 Td
+60 377 Td
+(loan-origination platform \(SFS Loan Origination Services PH2, $1.0M \) and Adaptive Agent for) Tj
+-60 -377 Td
+60 364 Td
+(Sales ? both create fresh event logs across dealer submission, credit decision, contract) Tj
+-60 -364 Td
+60 351 Td
+(booking, and funds disbursement. Dealers churn to competing captives when funding slips past 24) Tj
+-60 -351 Td
+60 338 Td
+(hours, and manual stipulations reviews add rework loops that never show up in KPI dashboards.) Tj
+-60 -338 Td
+60 325 Td
+(AFPI mines the origination event stream from MuleSoft-integrated dealer, LOS, and Service Cloud) Tj
+-60 -325 Td
+60 312 Td
+(data to expose decisioning bottlenecks, stipulation-driven rework, and dealer variance ?) Tj
+-60 -312 Td
+60 299 Td
+(targeting a 30-40% reduction in cycle time and higher captive penetration. Engage the COO /) Tj
+-60 -299 Td
+60 286 Td
+(Head of Originations at Stellantis Financial Services .) Tj
+-60 -286 Td
+60 273 Td
+(2. Collections & Delinquency Workflow Optimization. In a rising-delinquency auto-finance) Tj
+-60 -273 Td
+60 260 Td
+(market, collections cure rate is the single biggest lever on net charge-offs ? every day) Tj
+-60 -260 Td
+60 247 Td
+(earlier a delinquent account is worked converts directly to basis points saved. Current queues,) Tj
+-60 -247 Td
+60 234 Td
+(dialer strategies, promise-to-pay follow-ups, and legal-handoff triggers are governed by static) Tj
+-60 -234 Td
+60 221 Td
+(rules that no one has time to re-tune against actual behavior. AFPI mines Service Cloud case,) Tj
+-60 -221 Td
+60 208 Td
+(dialer, and payment-event logs to reveal which agent paths, contact channels, and treatment) Tj
+-60 -208 Td
+60 195 Td
+(sequences drive the fastest cure ? feeding Agentforce to route the right contact to the right) Tj
+-60 -195 Td
+60 182 Td
+(agent at the right hour. Metric: 3-5 bps improvement in net loss on portfolio scale. Engage the) Tj
+-60 -182 Td
+60 169 Td
+(Head of Collections at Stellantis Financial Services .) Tj
+-60 -169 Td
+60 156 Td
+(3. Dealer Onboarding & Floor Plan Servicing. Bringing a Chrysler/Dodge/Jeep/Ram/Fiat dealer) Tj
+-60 -156 Td
+60 143 Td
+(live on SFS floor plan and retail programs is a multi-team dance across credit, compliance,) Tj
+-60 -143 Td
+60 130 Td
+(legal, and IT provisioning ? the Experience Cloud Partner Portal \($529K subscribers on the) Tj
+-60 -130 Td
+60 117 Td
+(current SFA renewal, $5.8M \) is the front door but the back-office swivel-chair is invisible.) Tj
+-60 -117 Td
+60 104 Td
+(Every week of onboarding delay is lost paper contracts and lost captive share to Ally, GM) Tj
+-60 -104 Td
+60 91 Td
+(Financial, and Ford Credit. AFPI mines Partner Portal, MuleSoft, and Service Cloud event logs) Tj
+-60 -91 Td
+60 78 Td
+(to expose which onboarding steps stall, why, and by whom ? feeding an Agentforce Operations) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 2539 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(agent that auto-nudges the blocking party. Metric: 40% faster dealer time-to-first-contract.) Tj
+-60 -782 Td
+60 769 Td
+(Engage the Head of Dealer Services at Stellantis Financial Services .) Tj
+-60 -769 Td
+60 756 Td
+(4. Customer Servicing & Contact-Center Deflection. The Service Cloud footprint plus $918K Slack) Tj
+-60 -756 Td
+60 743 Td
+(for US and $250K Adaptive Agent for Sales opp signals an active push toward AI-assisted) Tj
+-60 -743 Td
+60 730 Td
+(servicing. Payoff quotes, extension requests, insurance and title issues, and end-of-lease) Tj
+-60 -730 Td
+60 717 Td
+(inspections dominate call volume ? and each is a repeatable process with clear event trails.) Tj
+-60 -717 Td
+60 704 Td
+(AFPI mines IVR, case, and payment-event streams to find the top 10 high-volume/high-effort call) Tj
+-60 -704 Td
+60 691 Td
+(intents that Agentforce can fully deflect, and quantifies the labor + AHT savings before build.) Tj
+-60 -691 Td
+60 678 Td
+(Metric: 25% call deflection, 15% AHT reduction on retained calls. Engage the Head of Customer) Tj
+-60 -678 Td
+60 665 Td
+(Service at Stellantis Financial Services .) Tj
+-60 -665 Td
+60 652 Td
+(5. Regulatory & Compliance Center ? CFPB, GLBA, FDCPA Evidence. Auto captives are under active) Tj
+-60 -652 Td
+60 639 Td
+(CFPB scrutiny on servicing, add-on products, repossession practices, and Servicemembers Civil) Tj
+-60 -639 Td
+60 626 Td
+(Relief Act ? and Stellantis Financial has publicly disclosed CFPB engagement on servicing) Tj
+-60 -626 Td
+60 613 Td
+(practices. Compliance today is spreadsheets, sampling, and audit-response fire drills. AFPI's) Tj
+-60 -613 Td
+60 600 Td
+(Compliance Center wedge sits on top of the mined loan-servicing and collections process and) Tj
+-60 -600 Td
+60 587 Td
+(produces continuous, defensible evidence that policy-mandated steps were executed on every) Tj
+-60 -587 Td
+60 574 Td
+(account ? converting audits from weeks of manual pulls to on-demand dashboards. Metric: 50%) Tj
+-60 -574 Td
+60 561 Td
+(reduction in audit-response labor, materially lower regulatory risk exposure. Engage the Chief) Tj
+-60 -561 Td
+60 548 Td
+(Compliance Officer at Stellantis Financial Services .) Tj
+-60 -548 Td
+60 535 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -535 Td
+60 522 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -522 Td
+60 509 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: High) Tj
+-60 -509 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005450 00000 n 
+0000005595 00000 n 
+0000008186 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+8331
+%%EOF

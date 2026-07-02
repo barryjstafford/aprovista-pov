@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Hartford Financial Services Group, Inc. — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 260px; z-index: 100; }
+  .lib-menu.open { display: block; }
+  .lib-menu a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-menu a:last-child { border-bottom: none; }
+  .lib-menu a:hover { background: #f0f4ff; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
+  th { background: #f0f4ff; font-weight: 600; }
+  td:last-child { text-align: right; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 4px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+    background: #f0f4ff; color: #032d60; text-decoration: none;
+    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
+  .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
+  .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
+    cursor: not-allowed; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <img src="/banner-logo.png" alt="AproVista">
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <div class="lib-menu" id="libMenu"></div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>The Hartford Financial Services Group, Inc.</h1>
+  <div class="snapshot">
+    <p><strong>Financial Services, Property &amp; Casualty Insurance (Commercial Lines, Personal Lines, Group Benefits, Mutual Funds)</strong></p>
+    <p><strong>Revenue:</strong> ~$26.5B &nbsp;|&nbsp; <strong>Employees:</strong> ~19,100 &nbsp;|&nbsp; <strong>HQ:</strong> Hartford, CT, USA</p>
+    <p><strong>Current Salesforce Products:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=CIO+The+Hartford">the CIO / Head of Enterprise Architecture</a>]</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=CIO+The+Hartford">the CIO / Head of Enterprise Architecture</a>]</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> </p>
+    <p><strong>AFPI AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
+  </div>
+
+  <details>
+    <summary>Propensity to Buy: 72/100 — T2 Develop</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th></tr></thead>
+      <tbody>
+        <tr><td>Regulatory &amp; Compliance Pressure (NAIC, state DOI, SOX, ERM)</td><td>14/15</td></tr>
+        <tr><td>Process Complexity (P&amp;C claims, underwriting, group benefits)</td><td>14/15</td></tr>
+        <tr><td>Compliance-Center Wedge Fit</td><td>9/10</td></tr>
+        <tr><td>Vertical Fit &amp; ICP Alignment (large-cap insurer)</td><td>13/15</td></tr>
+        <tr><td>Salesforce Footprint &amp; Deal Momentum</td><td>6/15</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <p><strong>1. First Notice of Loss to Claim Closure — Personal &amp; Small Commercial Auto.</strong> The FNOL-to-closure journey moves across the digital intake channel, adjuster triage, coverage verification, damage estimation, vendor dispatch, subrogation, and payout — with state-DOI unfair claims practice clocks running the entire time. Straight-through-processing rates in P&amp;C claims typically hide a long tail of files that cycle through reassignment and information-request loops that quietly consume the majority of adjuster capacity. AFPI mines the actual event log across the claims platform, the AI triage layer, and the payment system to expose the two or three loop patterns that drive rework, moving cycle time, LAE (loss adjustment expense) ratio, and DOI complaint volume. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Claims+The+Hartford">the Head of Claims Operations</a> as the operational champion.</p>
+
+  <p><strong>2. Small Commercial Underwriting &amp; Quote-to-Bind.</strong> The Hartford's small commercial franchise runs on speed — the winning quote is often the first one back to the independent agent — and quote-to-bind cycle time is the single biggest lever on hit-ratio. Behind the scenes the actual workflow ricochets between the agent portal, ordered third-party data (ISO, MVR, prior-carrier), the rating engine, and referrals to underwriters when a rule fires. AFPI produces the true process graph and exposes which referral rules, data-vendor latencies, or agency segments are structurally slowing the quote — the metric moved is bind rate at the target service-level, and premium per underwriter FTE. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Small+Commercial+Underwriting+The+Hartford">the Head of Small Commercial Underwriting</a>.</p>
+
+  <p><strong>3. Group Benefits Absence &amp; Disability Case Management.</strong> The Hartford is a top-three US carrier in group disability, absence management, and paid family leave — a business where the "process" is a case that lives for weeks or months across intake, medical review, employer coordination, and periodic re-adjudication. State PFML mandates keep multiplying and each one has its own eligibility clock and appeal SLA. AFPI ingests the case-management event log and surfaces where cases stall against statutory clocks and which case segments generate disproportionate rework, moving benefit-decision cycle time, appeals-overturn rate, and PFML compliance exceptions. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Group+Benefits+Operations+The+Hartford">the Head of Group Benefits Operations</a>.</p>
+
+  <p><strong>4. Policy Servicing &amp; Endorsement Processing (Commercial Middle Market).</strong> Once a commercial policy binds, the real cost sits in mid-term endorsements — added vehicles, changed limits, new locations, certificate requests — that flow across the agent portal, service centers, and underwriting for anything material. Endorsement backlogs and re-work drive agent NPS almost as much as claims do, and are invisible in the policy admin system's canned dashboards. AFPI maps the full endorsement lifecycle event log, isolates the endorsement types and agency segments that consistently generate the worst cycle-time outliers, and quantifies the servicing-cost-to-premium ratio by segment. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Middle+Market+Operations+The+Hartford">the Head of Middle Market Operations</a>.</p>
+
+  <p><strong>5. SOX &amp; Model Risk Compliance — Reserving and Actuarial Process Attestation.</strong> As an SEC-registered insurer, The Hartford operates under SOX Section 404 for financial reporting and NAIC Model Audit Rule / Model Risk Management for actuarial models — and every year the internal-audit and external-auditor teams reconstruct the actual process by which reserves, DAC, and reinsurance recoverables are calculated and reviewed. Today that reconstruction is largely interview-driven. AFPI turns the process-attestation exercise into a live artifact: the true event log across the actuarial workbench, reserving system, and financial close, with control points and segregation-of-duty breaks surfaced automatically. The metric moved is audit-cycle hours and Sarbanes control-deficiency findings. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Auditor+The+Hartford">the Chief Auditor</a> and <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Actuary+The+Hartford">the Chief Actuary</a>.</p>
+
+  <div class="actions">
+    <a href="/the-hartford.pdf" target="_blank">Generate PDF</a>
+    <a href="https://salesforce.enterprise.slack.com/docs/T026QPGMQ/F0BET91TVBL" target="_blank">Generate Slack Canvas</a>
+    <a href="https://aprovista-pov.vercel.app/the-hartford">Generate Vercel Page</a>
+    <a href="mailto:?subject=AFPI%20POV%20%E2%80%94%20The%20Hartford%20Financial%20Services%20Group%2C%20Inc.&body=https%3A%2F%2Faprovista-pov.vercel.app%2Fthe-hartford">Generate Customer Email (Beta)</a>
+    <span class="disabled">Generate Proposal Template (coming soon)</span>
+    <a href="https://salesforce.enterprise.slack.com/archives/apromore-gtm" target="_blank">Deal Support Request</a>
+    <span class="disabled">Deeper Dive POV (coming soon)</span>
+  </div>
+  <footer class="fine">
+    Prepared by AproVista &nbsp;|&nbsp; Created by
+    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
+    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: Med
+  </footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

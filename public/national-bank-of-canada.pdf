@@ -1,0 +1,264 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 4931 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(National Bank of Canada ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(National Bank of Canada) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Financial Services, Banking) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: C$11.6B \(FY2025\)  | Employees: ~30,000  | HQ: Montreal, QC, Canada) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Not confirmed [field verify with Julie Levesque ]) Tj
+-60 -707 Td
+60 694 Td
+(Current Non-Salesforce Systems: SAP Core Banking \(confirmed via Org62 opp: SAP Core Banking to) Tj
+-60 -694 Td
+60 681 Td
+(FSC migration\)) Tj
+-60 -681 Td
+60 668 Td
+(Relevant Open Opps: BNC - CSG - SAP Core Banking to FSC Digital Lending Phase 3 \( $10.0M \)  |) Tj
+-60 -668 Td
+60 655 Td
+(BNC - CSG - SAP Core Banking to FSC Phase 1 \( $5.0M \)  |  BNC - CSG - AES Commercial \( $3.7M \)) Tj
+-60 -655 Td
+60 642 Td
+(|  MS - BNC - Agentic Omni Gateway \( $150K \)  |  MS - BNC Wealth Advisor Portal Automation \() Tj
+-60 -642 Td
+60 629 Td
+($120K \)) Tj
+-60 -629 Td
+60 616 Td
+(AFPI AE: Charlie Stuard) Tj
+-60 -616 Td
+60 603 Td
+(Sales Motion: Sell Integrated with Salesforce Product \(Financial Services Cloud\)) Tj
+-60 -603 Td
+60 590 Td
+(Propensity to Buy: 87/100 ? T1 Pursue) Tj
+-60 -590 Td
+60 577 Td
+(Category) Tj
+-60 -577 Td
+60 564 Td
+(Score) Tj
+-60 -564 Td
+60 551 Td
+(Active AFPI-adjacent pipeline) Tj
+-60 -551 Td
+60 538 Td
+(18/20) Tj
+-60 -538 Td
+60 525 Td
+(Process complexity & regulatory pressure) Tj
+-60 -525 Td
+60 512 Td
+(14/15) Tj
+-60 -512 Td
+60 499 Td
+(System heterogeneity \(SAP + Salesforce\)) Tj
+-60 -499 Td
+60 486 Td
+(13/15) Tj
+-60 -486 Td
+60 473 Td
+(Digital transformation mandate) Tj
+-60 -473 Td
+60 460 Td
+(12/15) Tj
+-60 -460 Td
+60 447 Td
+(Buyer titles present \(COO/CDO/CTO\)) Tj
+-60 -447 Td
+60 434 Td
+(10/10) Tj
+-60 -434 Td
+/FB 13 Tf
+60 421 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -421 Td
+/FN 10 Tf
+60 403 Td
+(1. Core Banking to Financial Services Cloud migration readiness. The $15M SAP Core Banking ?) Tj
+-60 -403 Td
+60 390 Td
+(FSC program \(Phases 1 & 3\) is exactly the kind of multi-year re-platforming where AFPI de-risks) Tj
+-60 -390 Td
+60 377 Td
+(the transition by mining the current SAP order-to-cash and loan-origination flows before) Tj
+-60 -377 Td
+60 364 Td
+(cutover. Pain: every core-banking migration overruns on unknown process variants \(undocumented) Tj
+-60 -364 Td
+60 351 Td
+(branch workarounds, dual-entry rework\). AFPI plays the "as-is" discovery layer that feeds the) Tj
+-60 -351 Td
+60 338 Td
+(FSC to-be design, and it moves the metric that matters ? cutover slippage weeks and post-go-) Tj
+-60 -338 Td
+60 325 Td
+(live rework hours. Engage Julie Levesque \(EVP Technology & Operations\) as champion.) Tj
+-60 -325 Td
+60 312 Td
+(2. Digital lending origination cycle time. Phase 3 of the SAP?FSC build is specifically Digital) Tj
+-60 -312 Td
+60 299 Td
+(Lending ? a domain where funnel drop-off, credit-decision rework, and manual document chase are) Tj
+-60 -299 Td
+60 286 Td
+(the top three time sinks. AFPI mines the loan-app event log to expose where applications stall) Tj
+-60 -286 Td
+60 273 Td
+(\(income verification, KYC re-work, adjudicator queue\) and quantifies the automation ROI before) Tj
+-60 -273 Td
+60 260 Td
+(Agentforce or FSC Lending workflows are configured. Moves origination cycle time from days to) Tj
+-60 -260 Td
+60 247 Td
+(hours and lifts pull-through rate. Champion: the Commercial & Personal Banking CDO ? engage) Tj
+-60 -247 Td
+60 234 Td
+(Lucie Blanchet \(EVP Personal & Commercial Banking\).) Tj
+-60 -234 Td
+60 221 Td
+(3. Wealth Advisor onboarding & servicing automation. The open Wealth Advisor Portal Automation) Tj
+-60 -221 Td
+60 208 Td
+(opp \($120K, Stage 3\) is a natural AFPI wedge: mine the advisor task-completion event log) Tj
+-60 -208 Td
+60 195 Td
+(\(client onboarding, KYC refresh, portfolio rebalancing hand-offs\) to isolate the 5-8 repetitive) Tj
+-60 -195 Td
+60 182 Td
+(multi-system steps that account for 60%+ of advisor admin time. AFPI + Agentforce turns that) Tj
+-60 -182 Td
+60 169 Td
+(into an agent-executed workflow with human-in-the-loop review. Metric: advisor productive hours) Tj
+-60 -169 Td
+60 156 Td
+(per week, and time-to-first-trade for new HNW clients. Engage Nancy Paquet \(EVP Wealth) Tj
+-60 -156 Td
+60 143 Td
+(Management\).) Tj
+-60 -143 Td
+60 130 Td
+(4. Contact center / Agentic Omni Gateway grounding. The Agentic Omni Gateway opp \($150K\) points) Tj
+-60 -130 Td
+60 117 Td
+(to an omni-channel service redesign. AFPI provides the process-mined baseline \(call reasons,) Tj
+-60 -117 Td
+60 104 Td
+(hand-off patterns, first-contact-resolution gaps\) that Agentforce agents need as grounding ?) Tj
+-60 -104 Td
+60 91 Td
+(without it, agents automate the wrong thing. Pain: today's IVR + agent hand-offs create 20-30%) Tj
+-60 -91 Td
+60 78 Td
+(repeat contacts; regulator-driven complaint SLAs \(FCAC in Canada\) make this a compliance issue,) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 1380 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(not just a cost one. Moves FCR, repeat-contact rate, and complaint aging. Champion: Marie) Tj
+-60 -782 Td
+60 769 Td
+(Chantal Gingras \(SVP Customer Experience\) ? validate title.) Tj
+-60 -769 Td
+60 756 Td
+(5. Regulatory reporting & AML process compliance \(Compliance Center wedge\). As a Canadian D-SIB) Tj
+-60 -756 Td
+60 743 Td
+(regulated by OSFI plus FINTRAC AML obligations, NBC runs heavy periodic-review, transaction-) Tj
+-60 -743 Td
+60 730 Td
+(monitoring, and adverse-media investigation processes across SAP, FSC \(future\), and third-party) Tj
+-60 -730 Td
+60 717 Td
+(AML tools. AFPI Compliance Center mines these flows to prove control effectiveness, isolate) Tj
+-60 -717 Td
+60 704 Td
+(SLA-breach root causes, and produce audit-ready process evidence for OSFI E-13 and FINTRAC) Tj
+-60 -704 Td
+60 691 Td
+(reviews. Moves case-closure SLA, false-positive rework, and audit prep hours. Engage Bill) Tj
+-60 -691 Td
+60 678 Td
+(Bonney \(Chief Compliance Officer\) ? validate title.) Tj
+-60 -678 Td
+60 665 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -665 Td
+60 652 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -652 Td
+60 639 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: High) Tj
+-60 -639 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005309 00000 n 
+0000005454 00000 n 
+0000006886 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+7031
+%%EOF

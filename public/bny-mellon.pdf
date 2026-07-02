@@ -1,0 +1,279 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 5045 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(The Bank of New York Mellon Corporation ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(The Bank of New York Mellon Corporation) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Financial Services, Custody & Asset Servicing) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: $17.5B  | Employees: ~50,000  | HQ: New York, NY, US) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Sales Cloud \(Own + Platform licenses per active renewal\)) Tj
+-60 -707 Td
+60 694 Td
+(Current Non-Salesforce Systems: Not confirmed [field verify with BNY CIO office ]) Tj
+-60 -694 Td
+60 681 Td
+(Relevant Open Opps: BNY Mellon Renewal 1392 Own, 425 Platform \( $21k \)) Tj
+-60 -681 Td
+60 668 Td
+(AFPI AE: Charlie Stuard) Tj
+-60 -668 Td
+60 655 Td
+(Sales Motion: Co-Sell with Agentforce Operations) Tj
+-60 -655 Td
+60 642 Td
+(Propensity to Buy: 74/100 ? T2 Develop) Tj
+-60 -642 Td
+60 629 Td
+(Category) Tj
+-60 -629 Td
+60 616 Td
+(Score) Tj
+-60 -616 Td
+60 603 Td
+(Vertical fit \(regulated FinServ, custody, capital markets\)) Tj
+-60 -603 Td
+60 590 Td
+(18/20) Tj
+-60 -590 Td
+60 577 Td
+(Process complexity & volume \(T+1, corporate actions, KYC\)) Tj
+-60 -577 Td
+60 564 Td
+(14/15) Tj
+-60 -564 Td
+60 551 Td
+(Compliance regime \(SEC, OCC, FRB, DORA, MiFID II\)) Tj
+-60 -551 Td
+60 538 Td
+(13/15) Tj
+-60 -538 Td
+60 525 Td
+(Digital transformation posture \(AI-first strategy, Vela platform\)) Tj
+-60 -525 Td
+60 512 Td
+(12/15) Tj
+-60 -512 Td
+60 499 Td
+(Salesforce footprint depth & expansion signal) Tj
+-60 -499 Td
+60 486 Td
+(7/15) Tj
+-60 -486 Td
+/FB 13 Tf
+60 473 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -473 Td
+/FN 10 Tf
+60 455 Td
+(1. Client Onboarding & KYC Refresh for Institutional Custody. BNY onboards asset managers,) Tj
+-60 -455 Td
+60 442 Td
+(sovereign wealth funds, and corporate treasuries into custody, fund accounting, and collateral) Tj
+-60 -442 Td
+60 429 Td
+(services ? a multi-week workflow spanning legal, tax, AML, and account-provisioning teams. The) Tj
+-60 -429 Td
+60 416 Td
+(pain is a stubborn 30-90 day onboarding cycle that delays revenue recognition and drives) Tj
+-60 -416 Td
+60 403 Td
+(client-satisfaction complaints during periodic KYC refresh cycles. AFPI mines the actual case-) Tj
+-60 -403 Td
+60 390 Td
+(management event log \(Sales Cloud + core onboarding systems\) to expose hand-off delays, rework) Tj
+-60 -390 Td
+60 377 Td
+(loops, and exception paths, then Agentforce automates document chase and status updates. The) Tj
+-60 -377 Td
+60 364 Td
+(metric that moves is time-to-first-transaction and analyst throughput per FTE ? engage Akash) Tj
+-60 -364 Td
+60 351 Td
+(Shah , Chief Commercial Officer.) Tj
+-60 -351 Td
+60 338 Td
+(2. Corporate Actions Processing at Scale. BNY processes millions of corporate actions annually) Tj
+-60 -338 Td
+60 325 Td
+(across mergers, dividends, tenders, and rights offerings ? each with narrow deadlines and) Tj
+-60 -325 Td
+60 312 Td
+(enormous downstream P&L consequence if missed. The pain is that a single missed election or) Tj
+-60 -312 Td
+60 299 Td
+(misapplied entitlement can cost seven figures and trigger client escalations, and the process) Tj
+-60 -299 Td
+60 286 Td
+(today mixes SWIFT feeds, custody platforms, and manual reconciliation. AFPI mines the end-to-) Tj
+-60 -286 Td
+60 273 Td
+(end event log to surface stuck cases, exception clusters, and SLA breaches, then Agentforce) Tj
+-60 -273 Td
+60 260 Td
+(triages by risk while a Compliance-Center wedge audits every override. The metric moved is) Tj
+-60 -260 Td
+60 247 Td
+(exception rate and SLA adherence ? engage Bridget Engle , Chief Operations & Technology) Tj
+-60 -247 Td
+60 234 Td
+(Officer.) Tj
+-60 -234 Td
+60 221 Td
+(3. Collateral Management & Margin Call Workflow. As one of the world's largest tri-party) Tj
+-60 -221 Td
+60 208 Td
+(collateral agents, BNY moves trillions in collateral daily between dealers, clearing houses,) Tj
+-60 -208 Td
+60 195 Td
+(and buy-side clients, all under Basel III and UMR margin rules. The pain is that intraday) Tj
+-60 -195 Td
+60 182 Td
+(margin calls and disputes still require analyst intervention, and root-cause analysis of failed) Tj
+-60 -182 Td
+60 169 Td
+(pledges is slow. AFPI mines the margin-call and settlement event log to identify recurring) Tj
+-60 -169 Td
+60 156 Td
+(dispute patterns and slow counterparties, then Agentforce drafts responses and escalates by) Tj
+-60 -156 Td
+60 143 Td
+(exposure. The metric moved is dispute resolution time and capital efficiency ? engage Emily) Tj
+-60 -143 Td
+60 130 Td
+(Portney , Global Head of Asset Servicing.) Tj
+-60 -130 Td
+60 117 Td
+(4. Fund Accounting NAV Production & Exception Handling. BNY strikes daily NAVs for tens of) Tj
+-60 -117 Td
+60 104 Td
+(thousands of funds across Investment Services ? a tightly-scheduled pipeline where any pricing,) Tj
+-60 -104 Td
+60 91 Td
+(corporate-action, or reconciliation break can delay strike and breach client SLAs. The pain is) Tj
+-60 -91 Td
+60 78 Td
+(a growing exception queue driven by increasingly complex private-market funds, plus rising) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 1873 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(audit and DORA operational-resilience obligations. AFPI mines the NAV-production pipeline) Tj
+-60 -782 Td
+60 769 Td
+(\(Eagle, InForm, Nexen event logs\) to spotlight the recurring 20% of breaks causing 80% of) Tj
+-60 -769 Td
+60 756 Td
+(delays, then Agentforce auto-routes and pre-drafts break commentary. Metric moved is on-time) Tj
+-60 -756 Td
+60 743 Td
+(NAV percentage and cost per NAV ? engage Roman Regelman , Head of Securities Services &) Tj
+-60 -743 Td
+60 730 Td
+(Digital.) Tj
+-60 -730 Td
+60 717 Td
+(5. Regulatory Reporting & Control Attestation \(Compliance Center wedge\). BNY files hundreds of) Tj
+-60 -717 Td
+60 704 Td
+(regulatory reports across SEC, OCC, FRB, DORA, MiFID II, and jurisdictional peers ? each) Tj
+-60 -704 Td
+60 691 Td
+(requiring evidenced controls, sign-offs, and reconciliations to source. The pain is the) Tj
+-60 -691 Td
+60 678 Td
+(swelling cost of first-line control testing and the audit burden when regulators demand end-to-) Tj
+-60 -678 Td
+60 665 Td
+(end process evidence with no ambiguity. AFPI's Compliance Center overlays mined process reality) Tj
+-60 -665 Td
+60 652 Td
+(against declared controls, flagging deviations and auto-producing regulator-grade audit trails;) Tj
+-60 -652 Td
+60 639 Td
+(Agentforce accelerates SOX and DORA attestation cycles. Metric moved is control-testing cost) Tj
+-60 -639 Td
+60 626 Td
+(and audit-cycle time ? engage Jayee Koffey , Global Head of Enterprise Change & Regulatory) Tj
+-60 -626 Td
+60 613 Td
+(Affairs.) Tj
+-60 -613 Td
+60 600 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -600 Td
+60 587 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -587 Td
+60 574 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: Med) Tj
+-60 -574 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005423 00000 n 
+0000005568 00000 n 
+0000007493 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+7638
+%%EOF

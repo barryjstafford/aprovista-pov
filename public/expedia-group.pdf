@@ -1,0 +1,267 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [6 0 R 8 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 4976 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(Expedia Group, Inc. ? AFPI POV) Tj
+-60 -782 Td
+60 769 Td
+(My POV Library ?) Tj
+-60 -769 Td
+/FB 16 Tf
+60 756 Td
+(Expedia Group, Inc.) Tj
+-60 -756 Td
+/FN 10 Tf
+60 733 Td
+(Travel, Transportation & Hospitality, Online Travel Agency) Tj
+-60 -733 Td
+60 720 Td
+(Revenue: $12.84B \(FY2023\)  | Employees: ~17,100  | HQ: Seattle, WA, USA) Tj
+-60 -720 Td
+60 707 Td
+(Current Salesforce Products: Marketing Cloud \(ExactTarget\), B2B Commerce, Platform, Analytics) Tj
+-60 -707 Td
+60 694 Td
+(Cloud, Org Permissions) Tj
+-60 -694 Td
+60 681 Td
+(Current Non-Salesforce Systems: Not confirmed [field verify with Rathi Murthy \(CTO\)]) Tj
+-60 -681 Td
+60 668 Td
+(Relevant Open Opps: Expedia +MCA PLS Phase 2 \( $750k \)  |  Expedia +MCA PLS Phase 1 \( $249k \)) Tj
+-60 -668 Td
+60 655 Td
+(AFPI AE: Charlie Stuard) Tj
+-60 -655 Td
+60 642 Td
+(Sales Motion: Co-Sell with Agentforce Operations) Tj
+-60 -642 Td
+60 629 Td
+(Propensity to Buy: 72/100 ? T2 Develop) Tj
+-60 -629 Td
+60 616 Td
+(Category) Tj
+-60 -616 Td
+60 603 Td
+(Score) Tj
+-60 -603 Td
+60 590 Td
+(Process complexity \(bookings, refunds, partner ops, service\)) Tj
+-60 -590 Td
+60 577 Td
+(10/10) Tj
+-60 -577 Td
+60 564 Td
+(Size & scale \($12.8B revenue, 17K employees\)) Tj
+-60 -564 Td
+60 551 Td
+(10/10) Tj
+-60 -551 Td
+60 538 Td
+(Vertical fit \(OTA / high-volume transactional\)) Tj
+-60 -538 Td
+60 525 Td
+(9/10) Tj
+-60 -525 Td
+60 512 Td
+(Deal momentum \(2 active MCA/Agentforce-adjacent opps\)) Tj
+-60 -512 Td
+60 499 Td
+(8/10) Tj
+-60 -499 Td
+60 486 Td
+(Data readiness \(mature data org, known event-log culture\)) Tj
+-60 -486 Td
+60 473 Td
+(8/10) Tj
+-60 -473 Td
+/FB 13 Tf
+60 460 Td
+(Top 5 Process Intelligence Use Cases to be Mined) Tj
+-60 -460 Td
+/FN 10 Tf
+60 442 Td
+(1. Cancellation & Refund Cycle Time. Refund and cancellation flows span the traveler, Expedia,) Tj
+-60 -442 Td
+60 429 Td
+(and 100+ supplier partners \(airlines, hotels, car rentals\), with SLA-driven escalations that) Tj
+-60 -429 Td
+60 416 Td
+(spike CSAT complaints when partner response drifts. Mining the event log across Salesforce) Tj
+-60 -416 Td
+60 403 Td
+(Service Cloud, the supplier API layer, and payments will surface the true rework loops,) Tj
+-60 -403 Td
+60 390 Td
+(partner-side bottlenecks, and refund-aging buckets that consume agent time. AFPI ties directly) Tj
+-60 -390 Td
+60 377 Td
+(to the active MCA Phase 1/2 spend by giving Agentforce the ground-truth process map to route) Tj
+-60 -377 Td
+60 364 Td
+(and act on. Metric moved: refund cycle time and Tier-2 escalation rate. Champion: Jochen) Tj
+-60 -364 Td
+60 351 Td
+(Koedijk \(Chief Customer Officer\).) Tj
+-60 -351 Td
+60 338 Td
+(2. Partner & Supply Onboarding \(Property/Air\). Onboarding a new hotel, alternative-) Tj
+-60 -338 Td
+60 325 Td
+(accommodation host, or air partner runs through content ingestion, rate/inventory mapping,) Tj
+-60 -325 Td
+60 312 Td
+(contracting, and compliance checks ? typically weeks of back-and-forth email plus custom) Tj
+-60 -312 Td
+60 299 Td
+(internal tooling. Process mining exposes where properties stall in the funnel \(missing content,) Tj
+-60 -299 Td
+60 286 Td
+(tax setup, geo tagging\) and how long time-to-first-booking really takes vs. the internal SLA.) Tj
+-60 -286 Td
+60 273 Td
+(AFPI plus Agentforce can auto-nudge partners at the exact stall points and auto-approve low-) Tj
+-60 -273 Td
+60 260 Td
+(risk paths. Metric moved: partner time-to-live and inventory ramp velocity. Champion: Ariane) Tj
+-60 -260 Td
+60 247 Td
+(Gorin \(CEO, ex-Expedia for Business\).) Tj
+-60 -247 Td
+60 234 Td
+(3. Traveler Support Contact-Deflection Loop. Millions of calls and chats hit Service Cloud each) Tj
+-60 -234 Td
+60 221 Td
+(year with predictable patterns ? itinerary changes, refund status, price-drop disputes, loyalty) Tj
+-60 -221 Td
+60 208 Td
+(issues ? but true root causes hide inside the process, not the transcript. Mining the case) Tj
+-60 -208 Td
+60 195 Td
+(journey \(self-service ? virtual agent ? human\) shows which policies and system handoffs) Tj
+-60 -195 Td
+60 182 Td
+(actually cause repeat contacts. AFPI feeds Agentforce Service Agents the deflection blueprint) Tj
+-60 -182 Td
+60 169 Td
+(per case type; wedge is Agentforce Ops co-sell attached to the two live MCA opps. Metric moved:) Tj
+-60 -169 Td
+60 156 Td
+(contained rate and cost-to-serve per booking. Champion: Jochen Koedijk \(Chief Customer) Tj
+-60 -156 Td
+60 143 Td
+(Officer\).) Tj
+-60 -143 Td
+60 130 Td
+(4. Marketing Cloud Journey & Personalization Compliance. The MCA PLS engagements are already) Tj
+-60 -130 Td
+60 117 Td
+(building personalized landing solutions across Expedia, Hotels.com, and Vrbo brands ? but) Tj
+-60 -117 Td
+60 104 Td
+(journey execution across email, push, and paid inevitably drifts from consent/segmentation) Tj
+-60 -104 Td
+60 91 Td
+(rules, especially post-GDPR/CCPA. AFPI mines the actual send-to-conversion journey to catch) Tj
+-60 -91 Td
+60 78 Td
+(delivery leaks, consent-block silent failures, and slow segment build times. This is the) Tj
+-60 -78 Td
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 5 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+7 0 obj
+<< /Length 1487 >>
+stream
+BT
+/FN 10 Tf
+60 782 Td
+(cleanest ?Compliance Center wedge? and lands inside the current MCA project team. Metric moved:) Tj
+-60 -782 Td
+60 769 Td
+(campaign lead time and consent-audit exceptions. Champion: Jennifer Andre \(SVP, Global Business) Tj
+-60 -769 Td
+60 756 Td
+(Services / advertising & media\).) Tj
+-60 -756 Td
+60 743 Td
+(5. Order-to-Cash on the B2B \(Expedia TAAP / Expedia for Business\) Book. The B2B Commerce) Tj
+-60 -743 Td
+60 730 Td
+(footprint powers agent-partner and corporate-travel bookings where invoicing, chargebacks, and) Tj
+-60 -730 Td
+60 717 Td
+(settlement disputes create hidden aging. Mining the order-to-cash process across Salesforce and) Tj
+-60 -717 Td
+60 704 Td
+(the finance stack surfaces where disputes originate, which partner segments carry the aging,) Tj
+-60 -704 Td
+60 691 Td
+(and where auto-write-off thresholds should sit. AFPI gives finance ops the audit-grade process) Tj
+-60 -691 Td
+60 678 Td
+(view that supports Agentforce automation in dispute triage. Metric moved: DSO on partner book) Tj
+-60 -678 Td
+60 665 Td
+(and dispute cycle time. Champion: Scott Schenkel \(CFO\).) Tj
+-60 -665 Td
+60 652 Td
+(Generate PDF Generate Slack Canvas Generate Vercel Page Generate Customer Email \(Beta\) Generate) Tj
+-60 -652 Td
+60 639 Td
+(Proposal Template \(coming soon\) Deal Support Request Deeper Dive POV \(coming soon\)) Tj
+-60 -639 Td
+60 626 Td
+(Prepared by AproVista  |  Created by Barry Stafford |  2026-06-30  |  Confidence: Med) Tj
+-60 -626 Td
+ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /FN 3 0 R /FB 4 0 R >> >>
+>>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000005354 00000 n 
+0000005499 00000 n 
+0000007038 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+7183
+%%EOF

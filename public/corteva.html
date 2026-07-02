@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corteva, Inc. — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 260px; z-index: 100; }
+  .lib-menu.open { display: block; }
+  .lib-menu a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-menu a:last-child { border-bottom: none; }
+  .lib-menu a:hover { background: #f0f4ff; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
+  th { background: #f0f4ff; font-weight: 600; }
+  td:last-child { text-align: right; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 4px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+    background: #f0f4ff; color: #032d60; text-decoration: none;
+    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
+  .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
+  .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
+    cursor: not-allowed; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <img src="/banner-logo.png" alt="AproVista">
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <div class="lib-menu" id="libMenu"></div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Corteva, Inc.</h1>
+  <div class="snapshot">
+    <p><strong>Agriculture &amp; Mining, Agricultural Inputs (Seed &amp; Crop Protection)</strong></p>
+    <p><strong>Revenue:</strong> ~$17B (FY24) &nbsp;|&nbsp; <strong>Employees:</strong> ~22,000 &nbsp;|&nbsp; <strong>HQ:</strong> Indianapolis, IN, US</p>
+    <p><strong>Current Salesforce Products:</strong> Sales Cloud (SFA renewal in flight), Agentforce 1 Edition, B2B Commerce, Tableau (Pioneer Hi-Bred), Experience Cloud</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Corteva IT / Digital lead]</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Corteva Agriscience LLC Renewal 5 SFA (<a href="https://org62.my.salesforce.com/006ed00000NuXbyAAF">$4.98M</a>) | Agentforce Contact Center (<a href="https://org62.my.salesforce.com/006ed00000diYvZAAU">$450K</a>) | B2B Commerce (<a href="https://org62.my.salesforce.com/006ed00000cpbywAAA">$320K</a>) | R&amp;D Compliance Project (<a href="https://org62.my.salesforce.com/0063y000017F8EmAAK">$200K</a>) | Agronomist Agent MVP (<a href="https://org62.my.salesforce.com/006ed00000fPivtAAC">$200K</a>) | Grower 360 Transformation (<a href="https://org62.my.salesforce.com/0063y000019duzBAAQ">$175K</a>)</p>
+    <p><strong>AFPI AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details>
+    <summary>Propensity to Buy: 91/100 — T1 Pursue</summary>
+    <table>
+      <tr><th>Category</th><th>Score</th></tr>
+      <tr><td>Company Size &amp; Complexity</td><td>15/15</td></tr>
+      <tr><td>Salesforce Footprint</td><td>15/15</td></tr>
+      <tr><td>Active Buying Signals</td><td>13/15</td></tr>
+      <tr><td>Process Complexity (R&amp;D, Grower Ops, CC)</td><td>13/15</td></tr>
+      <tr><td>Vertical Fit (Ag / Regulated Manufacturing)</td><td>12/15</td></tr>
+    </table>
+  </details>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <p><strong>1. Grower Order-to-Cash &amp; Rebate Reconciliation.</strong> The Grower 360 Transformation opp signals Corteva is rebuilding how growers and retailers order seed, crop protection, and traits — a process notoriously fragmented across retailer channels, distributor rebates, and season-tied pricing. AFPI can mine the current O2C event log to expose rework loops (rebate disputes, credit-hold escalations, mis-priced orders) that erode margin at planting-season peak. The metric moved is DSO and rebate-leakage percentage, both directly tied to working capital. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Sam+Eathington+Corteva">Sam Eathington</a> (Chief Technology &amp; Digital Officer) and the Grower 360 program owner.</p>
+
+  <p><strong>2. Agronomist / Field Advisor Case Handling (Agentforce Contact Center wedge).</strong> With a live $450K Agentforce Contact Center opp and the Agronomist Agent MVP, Corteva is standing up AI-assisted case deflection for grower &amp; retailer inquiries — but no one has yet quantified handle-time variance or first-contact-resolution across the current process. AFPI mines the case-history log to prove exactly where AI agents win vs. where human agronomists must remain in the loop, giving the CC program a defensible ROI story before the AI licenses spin up at scale. Metric moved: AHT, FCR, deflection rate. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Corteva+Contact+Center+lead">the contact center program lead</a> paired with the Agentforce AE.</p>
+
+  <p><strong>3. R&amp;D Regulatory Submission &amp; Compliance Cycle.</strong> The Corteva R&amp;D Compliance Project opp aligns with a regulated-product lifecycle that runs across EPA, EU REACH, and dozens of national ag-chem authorities — each submission is a 3-7 year process with document handoffs across toxicology, field trials, and regulatory affairs. AFPI + Compliance Center wedge mines the submission event log to surface bottlenecks (usually toxicology sign-off and country-specific dossier variants) and gives regulatory ops a live control tower. Metric moved: submission cycle time, on-time-approval rate, cost per submission. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Corteva+Regulatory+Affairs+VP">the VP Regulatory Affairs</a>.</p>
+
+  <p><strong>4. Seed Production Planning &amp; Field-to-Bag Traceability.</strong> Pioneer Hi-Bred (Corteva's seed brand) runs a season-locked production process — parent seed to production fields to conditioning plants to bag/tag — where a two-week slip cascades into next-season shortages. AFPI mines the S/4HANA-and-MES process to expose deviation patterns (yield variance, conditioning-plant queue time, tag-and-treat rework) that today live in siloed dashboards. Metric moved: on-time-in-full to distributor, shrink, planning-cycle accuracy. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Pioneer+Supply+Chain+Corteva">the Pioneer Seed Supply Chain lead</a>.</p>
+
+  <p><strong>5. Sales Force Automation Adoption &amp; Territory Coverage (SFA Renewal wedge).</strong> The $4.98M SFA renewal is the anchor conversation — AFPI mines Sales Cloud activity data to show which territories, reps, and account tiers are actually driving pipeline vs. which are running on autopilot. This turns the renewal conversation from "same seats again" into a coverage-and-adoption optimization play, and directly justifies expanding to Agentforce for Sales. Metric moved: rep productivity per territory, opportunity aging, cross-sell rate into Pioneer accounts. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Corteva+VP+Commercial+Effectiveness">the VP Commercial Effectiveness</a> alongside the account owner.</p>
+
+  <div class="actions">
+    <a href="/corteva.pdf" target="_blank">Generate PDF</a>
+    <a href="https://salesforce.enterprise.slack.com/docs/T026QPGMQ/F0BEV780J81" target="_blank">Generate Slack Canvas</a>
+    <a href="https://aprovista-pov.vercel.app/corteva">Generate Vercel Page</a>
+    <a href="mailto:?subject=AFPI%20POV%20%E2%80%94%20Corteva%2C%20Inc.&body=https%3A%2F%2Faprovista-pov.vercel.app%2Fcorteva">Generate Customer Email (Beta)</a>
+    <span class="disabled">Generate Proposal Template (coming soon)</span>
+    <a href="https://salesforce.enterprise.slack.com/archives/apromore-gtm" target="_blank">Deal Support Request</a>
+    <span class="disabled">Deeper Dive POV (coming soon)</span>
+  </div>
+  <footer class="fine">
+    Prepared by AproVista &nbsp;|&nbsp; Created by
+    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
+    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: High
+  </footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>
