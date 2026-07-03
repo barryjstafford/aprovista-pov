@@ -6,6 +6,7 @@ const LIBRARY = [
   { name: "Black Hills Corporation", slug: "black-hills-corporation" },
   { name: "Corteva, Inc.", slug: "corteva" },
   { name: "DTCC (Depository Trust & Clearing)", slug: "dtcc" },
+  { name: "DNOW Inc.", slug: "dnow" },
   { name: "Expedia Group, Inc.", slug: "expedia-group" },
   { name: "Australian Unity Limited", slug: "australian-unity" },
   { name: "CenterPoint Energy, Inc.", slug: "centerpoint-energy" },
