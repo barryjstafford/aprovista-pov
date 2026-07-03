@@ -2,16 +2,16 @@ const LIBRARY = [
   { name: "Architectural Graphics, Inc.", slug: "agi-architectural-graphics" },
   { name: "Alfa Laval Corporate AB", slug: "alfa-laval" },
   { name: "Ares Management Corporation", slug: "ares-management" },
+  { name: "Australian Unity Limited", slug: "australian-unity" },
   { name: "Bank of New York Mellon Corporation", slug: "bny-mellon" },
   { name: "Black Hills Corporation", slug: "black-hills-corporation" },
-  { name: "Corteva, Inc.", slug: "corteva" },
-  { name: "DTCC (Depository Trust & Clearing)", slug: "dtcc" },
-  { name: "DNOW Inc.", slug: "dnow" },
-  { name: "Expedia Group, Inc.", slug: "expedia-group" },
-  { name: "Australian Unity Limited", slug: "australian-unity" },
   { name: "CenterPoint Energy, Inc.", slug: "centerpoint-energy" },
+  { name: "Corteva, Inc.", slug: "corteva" },
   { name: "Daimler Truck Holding AG", slug: "daimler-truck" },
   { name: "Dell Technologies Inc.", slug: "dell-technologies" },
+  { name: "DNOW Inc.", slug: "dnow" },
+  { name: "DTCC (Depository Trust & Clearing)", slug: "dtcc" },
+  { name: "Expedia Group, Inc.", slug: "expedia-group" },
   { name: "Genpact Limited", slug: "genpact" },
   { name: "Inspira Financial Trust, LLC", slug: "inspira-financial" },
   { name: "JPMorgan Chase & Co.", slug: "jp-morgan-chase" },
@@ -32,7 +32,28 @@ const LIBRARY = [
 
 function toggleLib() {
   const menu = document.getElementById('libMenu');
-  if (menu) menu.classList.toggle('open');
+  if (!menu) return;
+  const wasOpen = menu.classList.contains('open');
+  menu.classList.toggle('open');
+  if (!wasOpen) {
+    const search = document.getElementById('libSearch');
+    if (search) { search.value = ''; filterLib(''); setTimeout(function() { search.focus(); }, 0); }
+  }
+}
+
+function filterLib(q) {
+  const needle = (q || '').trim().toLowerCase();
+  const list = document.getElementById('libList');
+  if (!list) return;
+  const links = list.getElementsByTagName('a');
+  for (let i = 0; i < links.length; i++) {
+    const name = links[i].getAttribute('data-name') || links[i].textContent;
+    if (!needle || name.toLowerCase().indexOf(needle) !== -1) {
+      links[i].classList.remove('hidden');
+    } else {
+      links[i].classList.add('hidden');
+    }
+  }
 }
 
 window.addEventListener('click', function(e) {
@@ -43,12 +64,15 @@ window.addEventListener('click', function(e) {
 });
 
 window.addEventListener('DOMContentLoaded', function() {
-  const menu = document.getElementById('libMenu');
-  if (!menu) return;
-  LIBRARY.forEach(function(co) {
+  const list = document.getElementById('libList');
+  if (!list) return;
+  LIBRARY.slice().sort(function(a, b) {
+    return a.name.localeCompare(b.name);
+  }).forEach(function(co) {
     const a = document.createElement('a');
     a.href = 'https://aprovista-pov.vercel.app/' + co.slug;
     a.textContent = co.name;
-    menu.appendChild(a);
+    a.setAttribute('data-name', co.name);
+    list.appendChild(a);
   });
 });
