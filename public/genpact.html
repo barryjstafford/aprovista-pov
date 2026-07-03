@@ -7,25 +7,33 @@
 <style>
   body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
          color: #1a1a1a; line-height: 1.45; background: #fff; }
-  .banner { background: #fff; padding: 14px 0; border-bottom: 1px solid #eee; }
+  .banner { background: #fff; padding: 14px 0 4px; }
   .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
-                  display: flex; align-items: center; justify-content: space-between; }
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
   .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
   .lib-wrap { position: relative; }
   .lib-btn { background: #f0f4ff; color: #032d60;
              border: 1px solid #dde3f0; padding: 7px 13px;
              border-radius: 6px; cursor: pointer; font-size: .85em;
              font-family: inherit; white-space: nowrap; }
-  .lib-btn:hover { background: #e3ebff; }
+  .lib-btn:hover { background: #dde3f0; }
   .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
               background: #fff; border-radius: 8px;
-              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 260px; z-index: 100; }
-  .lib-menu.open { display: block; }
-  .lib-menu a { display: block; padding: 8px 15px; color: #032d60;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
                 text-decoration: none; font-size: .87em;
                 border-bottom: 1px solid #f0f4ff; }
-  .lib-menu a:last-child { border-bottom: none; }
-  .lib-menu a:hover { background: #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
   main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
   h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
        margin: 0 0 10px; font-size: 1.85em; }
@@ -36,12 +44,23 @@
   strong { color: #032d60; }
   a { color: #0070d2; }
   table { border-collapse: collapse; width: 100%; margin: 4px 0; }
-  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
   th { background: #f0f4ff; font-weight: 600; }
-  td:last-child { text-align: right; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
-            margin: 4px 0; background: #f9fbff; }
+            margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
   hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
   .fine { text-align: center; color: #aaa; font-size: .75em;
           margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
@@ -54,12 +73,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-    background: #f0f4ff; color: #032d60; text-decoration: none;
-    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
-  .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
-  .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
-    cursor: not-allowed; }
+  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
+                  cursor: not-allowed; white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -67,8 +83,14 @@
   <div class="banner-inner">
     <img src="/banner-logo.png" alt="AproVista">
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library &#9662;</button>
-      <div class="lib-menu" id="libMenu"></div>
+      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
     </div>
   </div>
 </header>
@@ -77,57 +99,100 @@
   <div class="snapshot">
     <p><strong>Professional Services, Business Process Management &amp; Digital Operations</strong></p>
     <p><strong>Revenue:</strong> $4.8B (FY2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~125,000 &nbsp;|&nbsp; <strong>HQ:</strong> New York, NY, USA (incorporated Bermuda)</p>
-    <p><strong>Current Salesforce Products:</strong> Sales Cloud (confirmed via active Agentic Marketing Platform opp in Org62)</p>
+    <p><strong>Current Salesforce Products:</strong> Sales Cloud (confirmed via active Agentic Marketing Platform opp)</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with account team]</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> QLFD - Genpact - Agentic Marketing Platform - Ultimate (<a href="https://org62.my.salesforce.com/006ed00000aD8eBAAS">$135k</a>)</p>
-    <p><strong>AFPI AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02EEJ7CD6X">Thomas Baker</a></p>
+    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
     <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details>
-    <summary>Propensity to Buy: 58/100 &mdash; T3 Nurture</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t3">58/100</span> — T3 Nurture</summary>
     <table>
-      <tr><th>Category</th><th>Score</th></tr>
-      <tr><td>Process complexity signals</td><td>14/15</td></tr>
-      <tr><td>Data readiness</td><td>10/15</td></tr>
-      <tr><td>Vertical fit</td><td>10/15</td></tr>
-      <tr><td>Salesforce install base &amp; open opp</td><td>9/15</td></tr>
-      <tr><td>Buying titles present</td><td>8/10</td></tr>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Process complexity signals</td><td>14/15</td><td class="cat-green">Global BPM firm running 125K+ FTEs across F&amp;A, procurement, supply chain — process complexity is the core of the business.</td></tr>
+        <tr><td>Buying titles present</td><td>8/10</td><td class="cat-green">CEO, CFO, and SVP Digital Transformation identifiable — process-explicit leadership already visible.</td></tr>
+        <tr><td>Data readiness</td><td>10/15</td><td class="cat-orange">Cora AI platform implies event-log capability, but no direct signal Genpact would expose internal logs to a third-party tool.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Vertical fit</td><td>10/15</td><td class="cat-orange">BPM services vertical — competitively aligned with Celonis partnership program, not a natural AFPI end-customer.</td></tr>
+        <tr><td>Salesforce install base &amp; open opp</td><td>9/15</td><td class="cat-orange">Only one active $135k Agentic Marketing Platform opp — narrow relative to a 125K-employee enterprise.</td></tr>
+      </tbody>
     </table>
   </details>
 
+  <p><strong>Topline POV:</strong> Apromore can help Genpact Limited by embedding process-discovery inside their Cora AI platform and Agentforce Operations client engagements — turning AFPI from an internal-tool sale into a co-sell wedge that finds where their end-customers' agents should act, without competing with Genpact's own Celonis services practice.</p>
+
   <div class="nurture-box">
-    <p><strong>Why Not Now:</strong> Genpact is a T3 Nurture, not a T1/T2 pursuit. As a global BPM/professional-services firm, Genpact is deeply embedded in the process-mining ecosystem &mdash; they are one of the largest Celonis global implementation partners and have built a substantial services practice around it. Selling AFPI to Genpact for their own internal use would compete directly with an active partner relationship they monetize with clients. In addition, Genpact's own Cora AI/automation platform overlaps conceptually with parts of the AFPI value proposition. Combined with the fact that they run client operations rather than transformative internal process change, this reduces urgency and creates a material competitive-posture red flag.</p>
+    <p><strong>Why Not Now:</strong> Genpact is a T3 Nurture, not a T1/T2 pursuit. As a global BPM/professional-services firm, Genpact is deeply embedded in the process-mining ecosystem — they are one of the largest Celonis global implementation partners and have built a substantial services practice around it. Selling AFPI to Genpact for their own internal use would compete directly with an active partner relationship they monetize with clients. In addition, Genpact's own Cora AI/automation platform overlaps conceptually with parts of the AFPI value proposition. Combined with the fact that they run client operations rather than transformative internal process change, this reduces urgency and creates a material competitive-posture red flag. The correct motion is co-sell/OEM-partner, not direct enterprise sale.</p>
   </div>
 
-  <h2>What Would Need to Change to Move to T2</h2>
-  <ul>
-    <li><strong>Cora + Agentforce co-innovation:</strong> A partnership conversation positioning AFPI as an <em>embedded intelligence layer</em> Genpact resells inside Cora to their end-customers &mdash; not a rip-and-replace of Celonis internally. This flips the motion from competitive to complementary and unlocks a much larger TCV.</li>
-    <li><strong>Salesforce Agentforce operational deployment:</strong> If Genpact expands the current Agentic Marketing Platform opp into a broader Agentforce Operations rollout (contact center, F&amp;A shared services, procurement), AFPI becomes the natural process-discovery layer that finds where agents should act. This is the most credible near-term wedge.</li>
-    <li><strong>Client-facing offering:</strong> A signed OEM/embed motion where AFPI ships inside Genpact's Digital Operations service catalog would move this to T1 quickly &mdash; but that is a corporate-development conversation, not an AE-led one.</li>
-  </ul>
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
-  <h2>Signals Worth Monitoring</h2>
-  <ul>
-    <li><strong>Agentforce expansion in the current $135k opp</strong> &mdash; watch for it to broaden beyond Marketing Cloud into Service or Sales Cloud agentic use cases; that is the trigger to layer AFPI in.</li>
-    <li><strong>Genpact quarterly earnings commentary</strong> on AI-led revenue mix &mdash; when <a href="https://www.linkedin.com/search/results/people/?keywords=BK+Kalra+Genpact">BK Kalra</a> (CEO) or <a href="https://www.linkedin.com/search/results/people/?keywords=Mike+Weiner+Genpact">Mike Weiner</a> (CFO) begin narrating a shift from headcount-based BPM to outcome-based agentic services, the technology-partner conversation reopens.</li>
-    <li><strong>Any RFP for internal Order-to-Cash or Procure-to-Pay transformation</strong> issued by Genpact's own corporate function (not a client engagement) &mdash; extremely rare, but if it lands, it is a valid AFPI wedge on business-analyst simplicity vs. their current tooling.</li>
-    <li><strong>Slack #apromore-gtm mentions</strong> &mdash; currently zero. Track weekly for any partner or opportunity chatter tied to Genpact.</li>
-  </ul>
+  <details>
+    <summary>1. Agentforce Operations Discovery Layer (embedded in current $135k opp)</summary>
+    <div class="use-case-body">
+      <p>The active Agentic Marketing Platform opportunity is the most credible near-term wedge. AFPI attaches as the process-discovery layer that finds where Genpact's marketing operations agents should act — campaign approval loops, brief-to-launch handoffs, MQL-to-SQL routing. Rather than replacing anything, AFPI feeds intelligence into the Agentforce build already scoped. Metric moved: agent deployment velocity and campaign cycle time.</p>
+      <p><strong>Key System(s):</strong> Sales Cloud, Agentforce, Marketing Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Balaji+Ganapathy+Genpact">Balaji Ganapathy</a> (SVP, Digital Transformation)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <h2>Recommended Cadence</h2>
-  <p>Quarterly touchpoint only. Do not push a standalone AFPI proposal. Coordinate with the Salesforce Agentforce AE currently working the $135k Marketing opp &mdash; if that opp progresses to closed-won and expands, that is the correct moment to introduce AFPI as an operational-discovery layer for the next phase. Suggested first conversation: <a href="https://www.linkedin.com/search/results/people/?keywords=Balaji+Ganapathy+Genpact">Balaji Ganapathy</a> (SVP, Digital Transformation) via warm intro from the Agentforce AE, framed as "process visibility for your Agentforce deployments," not "process mining."</p>
+  <details>
+    <summary>2. Cora + AFPI Co-Innovation (OEM/embed motion)</summary>
+    <div class="use-case-body">
+      <p>The strategic path to T2. A partnership conversation positioning AFPI as an embedded intelligence layer Genpact resells inside Cora to their end-customers — not a rip-and-replace of Celonis internally. This flips the motion from competitive to complementary and unlocks a much larger TCV via services multiplier. Metric moved: Cora ARR uplift and time-to-value on Genpact-delivered transformation engagements.</p>
+      <p><strong>Key System(s):</strong> Cora AI, Agentforce, Apromore platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=BK+Kalra+Genpact">BK Kalra</a> (CEO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Client-Facing F&amp;A Shared-Services Wedge</summary>
+    <div class="use-case-body">
+      <p>Genpact's F&amp;A shared-services engagements — Order-to-Cash, Procure-to-Pay, Record-to-Report — are the ideal AFPI attach for their clients (not for Genpact itself). Position AFPI as the tool Genpact consultants use to accelerate diagnostic phase from 8 weeks to 2 weeks on client transformation projects, driving faster billable-hour recognition and better outcome-based deal structures. Metric moved: consultant utilization and diagnostic cycle time.</p>
+      <p><strong>Key System(s):</strong> Cora AI, client ERP systems, Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Balaji+Ganapathy+Genpact">Balaji Ganapathy</a> (SVP, Digital Transformation)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Contact Center &amp; Service Operations Discovery</summary>
+    <div class="use-case-body">
+      <p>Genpact runs contact-center operations for many of the world's largest enterprises. If the current Agentforce opp expands into Service Cloud + Contact Center, AFPI mines the case-handling event log to find where AI agents should route, deflect, or escalate. This is where the no-code business-analyst simplicity vs. Celonis-SQL+PQL matters most — Genpact's own client-facing consultants can adopt it faster than developers can be trained. Metric moved: first-contact resolution and AHT.</p>
+      <p><strong>Key System(s):</strong> Service Cloud, Agentforce Service, contact-center telephony</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=BK+Kalra+Genpact">BK Kalra</a> (CEO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Internal Corporate Process Transformation (rare wedge)</summary>
+    <div class="use-case-body">
+      <p>The one narrow path to a direct internal sale: if Genpact's own corporate function (not a client engagement) issues an RFP for internal Order-to-Cash or Procure-to-Pay transformation, that is a valid AFPI wedge on business-analyst simplicity vs. their current tooling. Extremely rare given they eat their own dog food with Cora, but worth monitoring. Trigger: earnings commentary from <a href="https://www.linkedin.com/search/results/people/?keywords=Mike+Weiner+Genpact">Mike Weiner</a> narrating a shift from headcount-based BPM to outcome-based agentic services. Metric moved: internal process cycle time and outcome-linked revenue mix.</p>
+      <p><strong>Key System(s):</strong> Cora AI, internal ERP, Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mike+Weiner+Genpact">Mike Weiner</a> (CFO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
+  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
 
   <div class="actions">
-    <a href="/genpact.pdf" target="_blank">Generate PDF</a>
-    <a href="https://salesforce.enterprise.slack.com/docs/T026QPGMQ/F0BE5QZ1YKV" target="_blank">Generate Slack Canvas</a>
-    <a href="https://aprovista-pov.vercel.app/genpact">Generate Vercel Page</a>
-    <a href="mailto:?subject=AFPI%20POV%20%E2%80%94%20Genpact%20Limited&body=See%20POV%3A%20https%3A%2F%2Faprovista-pov.vercel.app%2Fgenpact">Generate Customer Email (Beta)</a>
-    <span class="disabled">Generate Proposal Template (coming soon)</span>
-    <a href="https://salesforce.enterprise.slack.com/archives/apromore-gtm" target="_blank">Deal Support Request</a>
-    <span class="disabled">Deeper Dive POV (coming soon)</span>
+    <span class="disabled">Generate PDF</span>
+    <span class="disabled">Generate Slack Canvas</span>
+    <span class="disabled">Generate Vercel Page</span>
+    <span class="disabled">Generate Customer Email (Beta)</span>
+    <span class="disabled">Generate Proposal Template</span>
+    <span class="disabled">Deal Support Request</span>
+    <span class="disabled">Deeper Dive POV</span>
   </div>
-
   <footer class="fine">
     Prepared by AproVista &nbsp;|&nbsp; Created by
     <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>

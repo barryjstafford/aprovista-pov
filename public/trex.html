@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trex Company, Inc. — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
+                  cursor: not-allowed; white-space: nowrap; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <img src="/banner-logo.png" alt="AproVista">
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Trex Company, Inc.</h1>
+  <div class="snapshot">
+    <p><strong>Manufacturing, Automotive &amp; Energy, Building Products &amp; Composite Decking</strong></p>
+    <p><strong>Revenue:</strong> ~$1.2B (FY24) &nbsp;|&nbsp; <strong>Employees:</strong> ~1,173 &nbsp;|&nbsp; <strong>HQ:</strong> Winchester, VA, USA</p>
+    <p><strong>Major Subsidiaries:</strong> Trex Protect, Trex Privacy, Trex Shade, Trex Commercial Products (SC Railing)</p>
+    <p><strong>Current Salesforce Products:</strong> Manufacturing Cloud UE, Sales Cloud, Service Cloud, Marketing Cloud (ExactTarget) &amp; Personalization, Data Cloud, Agentforce, Loyalty Management, Partner Community / PRM, MuleSoft</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> 3Pillar Deck Designer, Trex Cost Calculator</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Red Carpet Exp – MFG Cloud UE + Channel Rev Mgmt + RCA + CC Plus + Personalization (<a href="https://org62.my.salesforce.com/006ed00000UQIb8AAH">$972k</a>) &nbsp;|&nbsp; Loyalty Management (<a href="https://org62.my.salesforce.com/006ed00000f8wqPAAQ">$540k</a>) &nbsp;|&nbsp; Advisory Services – Whitespace CSG (<a href="https://org62.my.salesforce.com/006ed00000ZHfVdAAL">$400k</a>)</p>
+    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GLPJG6KB">Deanna (Nguyen) White</a></p>
+    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
+    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">82/100</span> — T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Salesforce Footprint</td><td>10/10</td><td class="cat-green">Deep multi-cloud stack — MFG Cloud, Sales, Service, MC, Data Cloud, Agentforce, MuleSoft, Loyalty, PRM.</td></tr>
+        <tr><td>Active Initiatives &amp; Urgency</td><td>14/15</td><td class="cat-green">Active Agentforce north-star build, Data 360 program, MuleSoft Guardian engagement, $3M+ open pipeline.</td></tr>
+        <tr><td>Systems Landscape</td><td>13/15</td><td class="cat-green">Consumer web + Cost Calculator + Deck Designer + CEC + PRM + dealer POS = event-log-rich terrain.</td></tr>
+        <tr><td>Process Complexity</td><td>13/15</td><td class="cat-green">Lead → CEC → TrexPro → dealer → install attribution spans consumer, contractor, retail channels.</td></tr>
+        <tr><td>Buyer Titles Present</td><td>9/10</td><td class="cat-green">VP Supply Chain, Sr Dir Supply Chain Excellence, Dir IT, Dir Strategic Sourcing — process-owner titles all present.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Compliance / Regulatory Wedge</td><td>4/10</td><td class="cat-red">Public-company SOX applies but no headline regulator — Compliance Center is not the entry wedge.</td></tr>
+        <tr><td>Vertical Fit</td><td>11/15</td><td class="cat-orange">Composite-decking manufacturing with strong channel play — solid but not the classic OTC/P2P mining vertical.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p><strong>Topline POV:</strong> Apromore can help Trex Company, Inc. by mining the end-to-end lead-to-install journey across the consumer web funnel, CEC case flow, TrexPro contractor referrals, and dealer-partner attribution — giving the active Agentforce and Data Cloud programs a documented as-is process to automate against, and turning the "consumer intelligence platform that manufactures decking" north-star from a story into a measured conversion, cycle-time, and channel-margin dial.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Lead-to-Install Attribution (Web → CEC → TrexPro → Dealer)</summary>
+    <div class="use-case-body">
+      <p>Trex's 4.6M-record lead database moves through the website, CEC, TrexPro referral network, and Lowe's/Home Depot POS before an install closes the loop. AFPI mines the actual event log — form submission, CEC touch, TrexPro accept/decline, dealer purchase — to prove which paths convert and where high-intent consumers stall. That gives Agentforce a documented as-is process to route against instead of guessing, and lets Trex quote a defensible conversion rate to its dealer partners for the first time. Metric moved: verified conversion rate per lead source, cost per confirmed install.</p>
+      <p><strong>Key System(s):</strong> Sales Cloud, Data Cloud, Marketing Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Tony+Ferrante+Trex">Tony Ferrante</a> (Chief Marketing Officer / VP Marketing)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. CEC Case Triage &amp; Agentforce Deflection</summary>
+    <div class="use-case-body">
+      <p>The Consumer Experience Center is overwhelmed seasonally and handles a heavy tail of "where is my dealer / warranty / cleaning" repeat inquiries that the Agentforce north-star targets for auto-response. AFPI mines the Service Cloud case log to expose which inquiry types actually dominate volume, which escalate to human agents, and where installation-defect cases loop back — sizing the deflection prize before the agent goes live. This is the Apromore edge: a single no-code analyst view of every case variant, replacing a two-specialist SQL+PQL model. Metric moved: CEC case volume deflected, average handle time, repeat-contact rate.</p>
+      <p><strong>Key System(s):</strong> Service Cloud, Agentforce, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Adam+Zambanini+Trex">Adam Zambanini</a> (EVP, Chief Operating Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. TrexPro Contractor Onboarding &amp; Lead-Acceptance Flow</summary>
+    <div class="use-case-body">
+      <p>The TrexPro program is the physical delivery layer of the digital funnel — contractors receive real-time high-intent lead notifications and must accept quickly for the model to work. AFPI mines the PRM/Partner Community event log to show where contractors stall in onboarding, which regions have low accept-rates, and how quickly accepted leads convert to booked installs. That directly feeds the Manufacturing Cloud UE + Channel Rev Management opp already in flight. Metric moved: TrexPro accept-rate SLA, lead-to-install cycle time.</p>
+      <p><strong>Key System(s):</strong> Partner Community / PRM, Manufacturing Cloud, Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Christopher+Gerhard+Trex">Christopher Gerhard</a> (Vice President, Sales)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Dealer &amp; Distribution Order-to-Cash</summary>
+    <div class="use-case-body">
+      <p>Trex ships composite decking through Lowe's, Home Depot, and regional lumber yards on a seasonal demand curve where stockout at the shelf directly hits consumer NPS. AFPI mines the OTC event log — dealer order → allocation → ship-from-plant (Winchester VA, Fernley NV, Little Rock AR) → invoice — to reveal fill-rate gaps, allocation overrides, and margin leakage on rush orders. This anchors the Red Carpet MFG Cloud + Channel Rev Management build in a measured baseline. Metric moved: dealer fill rate, perfect-order %, DSO.</p>
+      <p><strong>Key System(s):</strong> Manufacturing Cloud, Sales Cloud, MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Zachary+Lauer+Trex">Zachary Lauer</a> (Vice President Supply Chain)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Procure-to-Pay &amp; Recycled-Material Sourcing</summary>
+    <div class="use-case-body">
+      <p>Trex's core differentiation is a manufacturing process built on reclaimed polyethylene and waste wood fibers, giving strategic sourcing an unusually complex supplier landscape versus a typical PVF distributor. AFPI mines the P2P event log — PR → PO → GR → invoice — to expose duplicate suppliers, off-catalog spend on virgin resin, and manual approval loops that quietly erode input-cost advantage. Feeding a data-cleanup adjacency into any future MDM conversation without competing with it. Metric moved: PO cycle time, off-contract spend %, recycled-content sourcing throughput.</p>
+      <p><strong>Key System(s):</strong> Trex ERP (TBD), MuleSoft, Supplier Portal (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Suzanne+Pardue+Trex">Suzanne Pardue</a> (Director, Strategic Sourcing and Procurement)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
+  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
+
+  <div class="actions">
+    <span class="disabled">Generate PDF</span>
+    <span class="disabled">Generate Slack Canvas</span>
+    <span class="disabled">Generate Vercel Page</span>
+    <span class="disabled">Generate Customer Email (Beta)</span>
+    <span class="disabled">Generate Proposal Template</span>
+    <span class="disabled">Deal Support Request</span>
+    <span class="disabled">Deeper Dive POV</span>
+  </div>
+  <footer class="fine">
+    Prepared by AproVista &nbsp;|&nbsp; Created by
+    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
+    &nbsp;|&nbsp; 2026-07-03 &nbsp;|&nbsp; Confidence: High
+  </footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

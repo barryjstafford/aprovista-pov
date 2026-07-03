@@ -7,25 +7,33 @@
 <style>
   body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
          color: #1a1a1a; line-height: 1.45; background: #fff; }
-  .banner { background: #001558; padding: 18px 0; }
+  .banner { background: #fff; padding: 14px 0 4px; }
   .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
-                  display: flex; align-items: center; justify-content: space-between; }
-  .banner img { height: 72px; width: auto; flex-shrink: 0; display: block; }
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
   .lib-wrap { position: relative; }
-  .lib-btn { background: rgba(255,255,255,.15); color: #fff;
-             border: 1px solid rgba(255,255,255,.35); padding: 7px 13px;
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
              border-radius: 6px; cursor: pointer; font-size: .85em;
              font-family: inherit; white-space: nowrap; }
-  .lib-btn:hover { background: rgba(255,255,255,.25); }
+  .lib-btn:hover { background: #dde3f0; }
   .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
               background: #fff; border-radius: 8px;
-              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 260px; z-index: 100; }
-  .lib-menu.open { display: block; }
-  .lib-menu a { display: block; padding: 8px 15px; color: #032d60;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
                 text-decoration: none; font-size: .87em;
                 border-bottom: 1px solid #f0f4ff; }
-  .lib-menu a:last-child { border-bottom: none; }
-  .lib-menu a:hover { background: #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
   main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
   h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
        margin: 0 0 10px; font-size: 1.85em; }
@@ -36,12 +44,23 @@
   strong { color: #032d60; }
   a { color: #0070d2; }
   table { border-collapse: collapse; width: 100%; margin: 4px 0; }
-  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
   th { background: #f0f4ff; font-weight: 600; }
-  td:last-child { text-align: right; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
-            margin: 4px 0; background: #f9fbff; }
+            margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
   hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
   .fine { text-align: center; color: #aaa; font-size: .75em;
           margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
@@ -54,12 +73,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-    background: #f0f4ff; color: #032d60; text-decoration: none;
-    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
-  .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
-  .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
-    cursor: not-allowed; }
+  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
+                  cursor: not-allowed; white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -68,7 +84,13 @@
     <img src="/banner-logo.png" alt="AproVista">
     <div class="lib-wrap">
       <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
-      <div class="lib-menu" id="libMenu"></div>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
     </div>
   </div>
 </header>
@@ -80,44 +102,94 @@
     <p><strong>Current Salesforce Products:</strong> Marketing Cloud (ExactTarget, Datorama, Platform)</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=CIO+Australian+Unity">CIO / Head of Enterprise Architecture</a>]</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> MC ExactTarget/Platform/CRM Renewal 26105 (<a href="https://org62.my.salesforce.com/006ed00000UY7sEAAT">$699k</a>)</p>
-    <p><strong>AFPI AE:</strong> TBH (ANZ)</p>
+    <p><strong>Apromore AE:</strong> TBH (ANZ)</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/WJNE56DRD">George OConnor</a></p>
+    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
     <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details>
-    <summary>Propensity to Buy: 74/100 — T2 Develop</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">74/100</span> — T2 Develop</summary>
     <table>
-      <thead><tr><th>Category</th><th>Score</th></tr></thead>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Regulatory & Compliance Pressure (FS + Aged Care)</td><td>14/15</td></tr>
-        <tr><td>Process Complexity (multi-LOB mutual)</td><td>12/15</td></tr>
-        <tr><td>Compliance-Center Wedge Fit</td><td>9/10</td></tr>
-        <tr><td>Deal Momentum (renewal in-flight)</td><td>9/15</td></tr>
-        <tr><td>Salesforce Footprint (MC only, no core CRM)</td><td>8/15</td></tr>
+        <tr><td>Regulatory &amp; Compliance Pressure (FS + Aged Care)</td><td>14/15</td><td class="cat-green">APRA, ASIC, AUSTRAC plus Aged Care Act 2024 stack multiple regulator-defensible process requirements.</td></tr>
+        <tr><td>Compliance-Center Wedge Fit</td><td>9/10</td><td class="cat-green">Post-Royal-Commission wealth remediation and aged care attestation both demand process-attached controls.</td></tr>
+        <tr><td>Process Complexity (multi-LOB mutual)</td><td>12/15</td><td class="cat-orange">Health insurance, wealth, banking, aged care and retirement villages in one mutual — many process islands.</td></tr>
+        <tr><td>Deal Momentum (renewal in-flight)</td><td>9/15</td><td class="cat-orange">$699k Marketing Cloud renewal in flight gives a natural co-sell entry, but no core CRM anchor deal.</td></tr>
+        <tr><td>Salesforce Footprint (MC only, no core CRM)</td><td>8/15</td><td class="cat-orange">Marketing Cloud only — no Sales/Service Cloud or Data Cloud yet, so AFPI expands surface area rather than deepening it.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Deal Momentum (renewal in-flight)</td><td>9/15</td><td class="cat-orange">Renewal cycle is the co-sell wedge but no new-logo core-CRM deal exists to attach to.</td></tr>
+        <tr><td>Salesforce Footprint (MC only, no core CRM)</td><td>8/15</td><td class="cat-orange">Narrow SF footprint limits integrated Sales/Service Cloud + AFPI plays until core CRM lands.</td></tr>
       </tbody>
     </table>
   </details>
 
+  <p><strong>Topline POV:</strong> Apromore can help Australian Unity Limited by mining the multi-LOB event log across Aged Care onboarding, Private Health claims, and Wealth KYC to give the mutual a regulator-defensible process map — attaching Compliance Center controls to statutory clocks under the Aged Care Act 2024, APRA, and AUSTRAC while the Marketing Cloud renewal opens a natural co-sell wedge.</p>
+
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
-  <p><strong>1. Aged Care & Home Care Package Onboarding.</strong> The onboarding journey from initial enquiry through ACAT assessment, Home Care Package assignment, funding activation, and first service delivery involves dozens of hand-offs across intake teams, clinical assessors, and government portals — with statutory clocks under the Aged Care Act 2024. AFPI mines the actual event log across CRM, clinical, and Services Australia touchpoints to expose where the median 45–60 day journey is being blown out by rework and unassigned queues. The metric it moves is time-to-first-service and unallocated-package leakage, both directly tied to funded revenue and regulator attestation. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Operating+Officer+Home+Health+Australian+Unity">the Chief Operating Officer, Home Health</a> as the operational champion.</p>
+  <details>
+    <summary>1. Aged Care &amp; Home Care Package Onboarding</summary>
+    <div class="use-case-body">
+      <p>The onboarding journey from initial enquiry through ACAT assessment, Home Care Package assignment, funding activation, and first service delivery involves dozens of hand-offs across intake teams, clinical assessors, and government portals — with statutory clocks under the Aged Care Act 2024. AFPI mines the actual event log across CRM, clinical, and Services Australia touchpoints to expose where the median 45–60 day journey is being blown out by rework and unassigned queues. The metric it moves is time-to-first-service and unallocated-package leakage, both directly tied to funded revenue and regulator attestation.</p>
+      <p><strong>Key System(s):</strong> Clinical assessment platform (TBD), CRM (TBD), Services Australia portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Operating+Officer+Home+Health+Australian+Unity">COO, Home Health</a> (Chief Operating Officer, Home Health)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>2. Private Health Insurance Claims Adjudication.</strong> Health insurance claims flow through eligibility checks, provider validation, gap-cover rules, and manual clinical review — with APRA and Private Health Insurance Ombudsman scrutiny on turnaround times. Straight-through-processing rates in the mid-70s hide the real story: a long tail of claims cycling through rework loops that consume clinical assessor capacity. AFPI compares the "as-designed" claims process against the true event log to surface the two or three loop patterns that account for most of the manual effort, moving STP rate and claims-cost-per-policy. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Operating+Officer+Health+Insurance+Australian+Unity">the COO, Health Insurance</a>.</p>
+  <details>
+    <summary>2. Private Health Insurance Claims Adjudication</summary>
+    <div class="use-case-body">
+      <p>Health insurance claims flow through eligibility checks, provider validation, gap-cover rules, and manual clinical review — with APRA and Private Health Insurance Ombudsman scrutiny on turnaround times. Straight-through-processing rates in the mid-70s hide the real story: a long tail of claims cycling through rework loops that consume clinical assessor capacity. AFPI compares the "as-designed" claims process against the true event log to surface the two or three loop patterns that account for most of the manual effort, moving STP rate and claims-cost-per-policy.</p>
+      <p><strong>Key System(s):</strong> Claims adjudication platform (TBD), Provider network system (TBD), Marketing Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Operating+Officer+Health+Insurance+Australian+Unity">COO, Health Insurance</a> (Chief Operating Officer, Health Insurance)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>3. Wealth & Advice Client-Onboarding and KYC Refresh.</strong> Post Royal Commission, wealth onboarding at Australian Unity carries a heavy KYC / DDO / Best-Interest-Duty documentation burden across advice, platform, and trustee entities. Every remediation cycle from AUSTRAC or ASIC starts with "show us your process" — and the actual process only lives in operator memory. AFPI produces the regulator-defensible process map with variant analysis and compliance-center controls attached, cutting onboarding cycle time and audit prep hours. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Group+Executive+Wealth+Capital+Australian+Unity">the Group Executive, Wealth & Capital Markets</a>.</p>
+  <details>
+    <summary>3. Wealth &amp; Advice Client-Onboarding and KYC Refresh</summary>
+    <div class="use-case-body">
+      <p>Post Royal Commission, wealth onboarding at Australian Unity carries a heavy KYC / DDO / Best-Interest-Duty documentation burden across advice, platform, and trustee entities. Every remediation cycle from AUSTRAC or ASIC starts with "show us your process" — and the actual process only lives in operator memory. AFPI produces the regulator-defensible process map with variant analysis and compliance-center controls attached, cutting onboarding cycle time and audit prep hours.</p>
+      <p><strong>Key System(s):</strong> Advice platform (TBD), KYC/AML tooling (TBD), Trustee system (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Group+Executive+Wealth+Capital+Australian+Unity">Group Executive, Wealth &amp; Capital Markets</a> (Group Executive, Wealth &amp; Capital Markets)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>4. Marketing Cloud Journey Reconciliation Against Service Outcomes.</strong> With a A$699k Marketing Cloud renewal in flight (ExactTarget, Platform, plus prior Datorama), the natural co-sell wedge is proving that outbound journeys convert to actual serviced outcomes — enrolments, retained members, funded packages — not just click-throughs. AFPI ingests Marketing Cloud send events alongside downstream CRM and operational events to expose where campaign responders drop out of the servicing funnel. This moves conversion-to-serviced-outcome and gives the CMO renewal-cycle ammunition. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Marketing+Officer+Australian+Unity">the Chief Marketing Officer</a>.</p>
+  <details>
+    <summary>4. Marketing Cloud Journey Reconciliation Against Service Outcomes</summary>
+    <div class="use-case-body">
+      <p>With a A$699k Marketing Cloud renewal in flight (ExactTarget, Platform, plus prior Datorama), the natural co-sell wedge is proving that outbound journeys convert to actual serviced outcomes — enrolments, retained members, funded packages — not just click-throughs. AFPI ingests Marketing Cloud send events alongside downstream CRM and operational events to expose where campaign responders drop out of the servicing funnel. This moves conversion-to-serviced-outcome and gives the CMO renewal-cycle ammunition.</p>
+      <p><strong>Key System(s):</strong> Marketing Cloud (ExactTarget), Datorama, Servicing CRM (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Marketing+Officer+Australian+Unity">Chief Marketing Officer</a> (Chief Marketing Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>5. Retirement Village Resident Lifecycle & Contract Administration.</strong> Australian Unity's retirement villages (a distinct Group Services entity in Org62) run a long-tail contract process — from initial deposit through DMF calculation, exit refunds, and estate settlement — that is state-legislation-specific and litigation-prone. Contract handoffs between village managers, legal, finance, and family typically span 60–120 days per exit, with cash and reputational exposure at each step. AFPI maps the full contract lifecycle event log and surfaces which villages, contract vintages, or state jurisdictions drive the worst exit-cycle outliers, moving DMF release time and settlement disputes. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=General+Manager+Retirement+Communities+Australian+Unity">the GM, Retirement Communities</a>.</p>
+  <details>
+    <summary>5. Retirement Village Resident Lifecycle &amp; Contract Administration</summary>
+    <div class="use-case-body">
+      <p>Australian Unity's retirement villages (a distinct Group Services entity) run a long-tail contract process — from initial deposit through DMF calculation, exit refunds, and estate settlement — that is state-legislation-specific and litigation-prone. Contract handoffs between village managers, legal, finance, and family typically span 60–120 days per exit, with cash and reputational exposure at each step. AFPI maps the full contract lifecycle event log and surfaces which villages, contract vintages, or state jurisdictions drive the worst exit-cycle outliers, moving DMF release time and settlement disputes.</p>
+      <p><strong>Key System(s):</strong> Village management system (TBD), Finance/GL (TBD), Legal document management (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=General+Manager+Retirement+Communities+Australian+Unity">GM, Retirement Communities</a> (General Manager, Retirement Communities)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
+  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
 
   <div class="actions">
-    <a href="/australian-unity.pdf" target="_blank">Generate PDF</a>
-    <a href="https://salesforce.enterprise.slack.com/docs/T026QPGMQ/F0BEA2TTC5C" target="_blank">Generate Slack Canvas</a>
-    <a href="https://aprovista-pov.vercel.app/australian-unity">Generate Vercel Page</a>
-    <a href="mailto:?subject=AFPI%20POV%20%E2%80%94%20Australian%20Unity%20Limited&body=https%3A%2F%2Faprovista-pov.vercel.app%2Faustralian-unity">Generate Customer Email (Beta)</a>
-    <span class="disabled">Generate Proposal Template (coming soon)</span>
-    <a href="https://salesforce.enterprise.slack.com/archives/apromore-gtm" target="_blank">Deal Support Request</a>
-    <span class="disabled">Deeper Dive POV (coming soon)</span>
+    <span class="disabled">Generate PDF</span>
+    <span class="disabled">Generate Slack Canvas</span>
+    <span class="disabled">Generate Vercel Page</span>
+    <span class="disabled">Generate Customer Email (Beta)</span>
+    <span class="disabled">Generate Proposal Template</span>
+    <span class="disabled">Deal Support Request</span>
+    <span class="disabled">Deeper Dive POV</span>
   </div>
   <footer class="fine">
     Prepared by AproVista &nbsp;|&nbsp; Created by

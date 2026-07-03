@@ -19,13 +19,21 @@
   .lib-btn:hover { background: #dde3f0; }
   .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
               background: #fff; border-radius: 8px;
-              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 260px; z-index: 100; }
-  .lib-menu.open { display: block; }
-  .lib-menu a { display: block; padding: 8px 15px; color: #032d60;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
                 text-decoration: none; font-size: .87em;
                 border-bottom: 1px solid #f0f4ff; }
-  .lib-menu a:last-child { border-bottom: none; }
-  .lib-menu a:hover { background: #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
   main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
   h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
        margin: 0 0 10px; font-size: 1.85em; }
@@ -36,12 +44,23 @@
   strong { color: #032d60; }
   a { color: #0070d2; }
   table { border-collapse: collapse; width: 100%; margin: 4px 0; }
-  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
   th { background: #f0f4ff; font-weight: 600; }
-  td:last-child { text-align: right; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
-            margin: 4px 0; background: #f9fbff; }
+            margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
   hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
   .fine { text-align: center; color: #aaa; font-size: .75em;
           margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
@@ -54,12 +73,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-    background: #f0f4ff; color: #032d60; text-decoration: none;
-    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
-  .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
-  .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
-    cursor: not-allowed; }
+  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
+                  cursor: not-allowed; white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -67,8 +83,14 @@
   <div class="banner-inner">
     <img src="/banner-logo.png" alt="AproVista">
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library &#9662;</button>
-      <div class="lib-menu" id="libMenu"></div>
+      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
     </div>
   </div>
 </header>
@@ -76,48 +98,96 @@
   <h1>Stellantis Financial Services, Inc.</h1>
   <div class="snapshot">
     <p><strong>Financial Services, Captive Auto Finance</strong></p>
-    <p><strong>Revenue:</strong> $229M &nbsp;|&nbsp; <strong>Employees:</strong> 550 &nbsp;|&nbsp; <strong>HQ:</strong> Atlanta, GA</p>
-    <p><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Experience Cloud (Customer &amp; Partner Portals), MuleSoft, Tableau, CRM Analytics, Platform</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Informatica MDM, Regrello</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Stellantis Financial Services -Apromore (<a href="https://org62.my.salesforce.com/006ed00000ZrRqjAAF">$550k</a>) &nbsp;|&nbsp; Stellantis Financial Data Mining Apromore (<a href="https://org62.my.salesforce.com/006ed00000cVB69AAG">$200k</a>) &nbsp;|&nbsp; INFA MDM Data Fabric (<a href="https://org62.my.salesforce.com/006ed00000bDbHPAA0">$800k</a>) &nbsp;|&nbsp; SFA/Portal Renewal (<a href="https://org62.my.salesforce.com/006ed00000Tf7EYAAZ">$5.8M</a>) &nbsp;|&nbsp; MuleSoft Renewal (<a href="https://org62.my.salesforce.com/006ed000008KnWEAA0">$2.7M</a>) &nbsp;|&nbsp; SFS Loan Origination PH2 (<a href="https://org62.my.salesforce.com/006ed00000J32vBAAR">$1.0M</a>) &nbsp;|&nbsp; SFS Regrello (<a href="https://org62.my.salesforce.com/006ed00000U7zGnAAJ">$500k</a>) &nbsp;|&nbsp; Adaptive Agent for Sales (<a href="https://org62.my.salesforce.com/006ed00000YsaKgAAJ">$250k</a>)</p>
-    <p><strong>AFPI AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Revenue:</strong> $229M &nbsp;|&nbsp; <strong>Employees:</strong> 550 &nbsp;|&nbsp; <strong>HQ:</strong> Atlanta, GA, USA</p>
+    <p><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Experience Cloud (Customer &amp; Partner Portals), MuleSoft, Tableau, CRM Analytics, Platform, Informatica MDM</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Regrello</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Stellantis Financial Services - Apromore (<a href="https://org62.my.salesforce.com/006ed00000ZrRqjAAF">$550k</a>) &nbsp;|&nbsp; Stellantis Financial Data Mining Apromore (<a href="https://org62.my.salesforce.com/006ed00000cVB69AAG">$200k</a>) &nbsp;|&nbsp; SFS Loan Origination PH2 (<a href="https://org62.my.salesforce.com/006ed00000J32vBAAR">$1.0M</a>)</p>
+    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U05T2FB0RSS">Allie Miller</a></p>
+    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
     <p><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Service Cloud + MuleSoft + Informatica MDM)</p>
   </div>
 
   <details>
-    <summary>Propensity to Buy: 92/100 &mdash; T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">92/100</span> — T1 Pursue</summary>
     <table>
-      <thead><tr><th>Category</th><th>Score</th></tr></thead>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Active Opportunity Alignment (Apromore opps already live)</td><td>20/20</td></tr>
-        <tr><td>Process Complexity &amp; Pain (loan origination, servicing, collections)</td><td>18/20</td></tr>
-        <tr><td>Data Readiness (MuleSoft + Informatica MDM in flight)</td><td>14/15</td></tr>
-        <tr><td>Buyer Access (SFS is a known Salesforce anchor account)</td><td>13/15</td></tr>
-        <tr><td>Regulatory / Compliance Pressure (CFPB, state DMV, GLBA, FDCPA)</td><td>12/15</td></tr>
+        <tr><td>Active Opportunity Alignment (Apromore opps already live)</td><td>20/20</td><td class="cat-green">Two active Apromore opps in flight ($550k + $200k) — deal is already funded and named.</td></tr>
+        <tr><td>Process Complexity &amp; Pain (loan origination, servicing, collections)</td><td>18/20</td><td class="cat-green">Loan origination, dealer floor plan, collections, and servicing — all event-log-rich, all in scope.</td></tr>
+        <tr><td>Data Readiness (MuleSoft + Informatica MDM in flight)</td><td>14/15</td><td class="cat-green">MuleSoft renewal + INFA MDM Data Fabric ($800k) mean event data is already being unified.</td></tr>
+        <tr><td>Buyer Access (SFS is a known Salesforce anchor account)</td><td>13/15</td><td class="cat-green">$5.8M SFA/Portal renewal — SFS is a top-of-list captive finance anchor with warm buyer access.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Regulatory / Compliance Pressure (CFPB, state DMV, GLBA, FDCPA)</td><td>12/15</td><td class="cat-orange">Real regulatory weight (CFPB, GLBA, FDCPA) but not the wedge — value story leads with cycle time, not audit.</td></tr>
       </tbody>
     </table>
   </details>
 
+  <p><strong>Topline POV:</strong> Apromore can help Stellantis Financial Services, Inc. by mining the loan-origination, collections, and dealer-onboarding event streams flowing through Service Cloud, MuleSoft, and Informatica MDM — accelerating the two active Apromore opps into a documented cycle-time, cure-rate, and captive-penetration lift for the LOS PH2 and Adaptive Agent for Sales programs.</p>
+
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
-  <p><strong>1. Auto Loan Origination &mdash; Time-to-Decision &amp; Dealer Funding Cycle.</strong> SFS is standing up a new loan-origination platform (SFS Loan Origination Services PH2, <a href="https://org62.my.salesforce.com/006ed00000J32vBAAR">$1.0M</a>) and Adaptive Agent for Sales &mdash; both create fresh event logs across dealer submission, credit decision, contract booking, and funds disbursement. Dealers churn to competing captives when funding slips past 24 hours, and manual stipulations reviews add rework loops that never show up in KPI dashboards. AFPI mines the origination event stream from MuleSoft-integrated dealer, LOS, and Service Cloud data to expose decisioning bottlenecks, stipulation-driven rework, and dealer variance &mdash; targeting a 30-40% reduction in cycle time and higher captive penetration. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Operating+Officer+Stellantis+Financial+Services">the COO / Head of Originations at Stellantis Financial Services</a>.</p>
+  <details>
+    <summary>1. Auto Loan Origination — Time-to-Decision &amp; Dealer Funding Cycle</summary>
+    <div class="use-case-body">
+      <p>SFS is standing up a new loan-origination platform (SFS Loan Origination Services PH2, <a href="https://org62.my.salesforce.com/006ed00000J32vBAAR">$1.0M</a>) and Adaptive Agent for Sales — both create fresh event logs across dealer submission, credit decision, contract booking, and funds disbursement. Dealers churn to competing captives when funding slips past 24 hours, and manual stipulations reviews add rework loops that never show up in KPI dashboards. AFPI mines the origination event stream from MuleSoft-integrated dealer, LOS, and Service Cloud data to expose decisioning bottlenecks, stipulation-driven rework, and dealer variance — targeting a 30-40% reduction in cycle time and higher captive penetration.</p>
+      <p><strong>Key System(s):</strong> Sales Cloud, MuleSoft, Loan Origination Platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Operating+Officer+Stellantis+Financial+Services">Chief Operating Officer</a> (Head of Originations, Stellantis Financial Services)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>2. Collections &amp; Delinquency Workflow Optimization.</strong> In a rising-delinquency auto-finance market, collections cure rate is the single biggest lever on net charge-offs &mdash; every day earlier a delinquent account is worked converts directly to basis points saved. Current queues, dialer strategies, promise-to-pay follow-ups, and legal-handoff triggers are governed by static rules that no one has time to re-tune against actual behavior. AFPI mines Service Cloud case, dialer, and payment-event logs to reveal which agent paths, contact channels, and treatment sequences drive the fastest cure &mdash; feeding Agentforce to route the right contact to the right agent at the right hour. Metric: 3-5 bps improvement in net loss on portfolio scale. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Collections+Stellantis+Financial+Services">the Head of Collections at Stellantis Financial Services</a>.</p>
+  <details>
+    <summary>2. Collections &amp; Delinquency Workflow Optimization</summary>
+    <div class="use-case-body">
+      <p>In a rising-delinquency auto-finance market, collections cure rate is the single biggest lever on net charge-offs — every day earlier a delinquent account is worked converts directly to basis points saved. Current queues, dialer strategies, promise-to-pay follow-ups, and legal-handoff triggers are governed by static rules that no one has time to re-tune against actual behavior. AFPI mines Service Cloud case, dialer, and payment-event logs to reveal which agent paths, contact channels, and treatment sequences drive the fastest cure — feeding Agentforce to route the right contact to the right agent at the right hour. Metric: 3-5 bps improvement in net loss on portfolio scale.</p>
+      <p><strong>Key System(s):</strong> Service Cloud, MuleSoft, Dialer / Payment Systems</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Collections+Stellantis+Financial+Services">Head of Collections</a> (Stellantis Financial Services)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>3. Dealer Onboarding &amp; Floor Plan Servicing.</strong> Bringing a Chrysler/Dodge/Jeep/Ram/Fiat dealer live on SFS floor plan and retail programs is a multi-team dance across credit, compliance, legal, and IT provisioning &mdash; the Experience Cloud Partner Portal ($529K subscribers on the current SFA renewal, <a href="https://org62.my.salesforce.com/006ed00000Tf7EYAAZ">$5.8M</a>) is the front door but the back-office swivel-chair is invisible. Every week of onboarding delay is lost paper contracts and lost captive share to Ally, GM Financial, and Ford Credit. AFPI mines Partner Portal, MuleSoft, and Service Cloud event logs to expose which onboarding steps stall, why, and by whom &mdash; feeding an Agentforce Operations agent that auto-nudges the blocking party. Metric: 40% faster dealer time-to-first-contract. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Dealer+Services+Stellantis+Financial+Services">the Head of Dealer Services at Stellantis Financial Services</a>.</p>
+  <details>
+    <summary>3. Dealer Onboarding &amp; Floor Plan Servicing</summary>
+    <div class="use-case-body">
+      <p>Bringing a Chrysler/Dodge/Jeep/Ram/Fiat dealer live on SFS floor plan and retail programs is a multi-team dance across credit, compliance, legal, and IT provisioning — the Experience Cloud Partner Portal ($529K subscribers on the current SFA renewal, <a href="https://org62.my.salesforce.com/006ed00000Tf7EYAAZ">$5.8M</a>) is the front door but the back-office swivel-chair is invisible. Every week of onboarding delay is lost paper contracts and lost captive share to Ally, GM Financial, and Ford Credit. AFPI mines Partner Portal, MuleSoft, and Service Cloud event logs to expose which onboarding steps stall, why, and by whom — feeding an Agentforce Operations agent that auto-nudges the blocking party. Metric: 40% faster dealer time-to-first-contract.</p>
+      <p><strong>Key System(s):</strong> Experience Cloud (Partner Portal), MuleSoft, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Dealer+Services+Stellantis+Financial+Services">Head of Dealer Services</a> (Stellantis Financial Services)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>4. Customer Servicing &amp; Contact-Center Deflection.</strong> The Service Cloud footprint plus $918K Slack for US and $250K Adaptive Agent for Sales opp signals an active push toward AI-assisted servicing. Payoff quotes, extension requests, insurance and title issues, and end-of-lease inspections dominate call volume &mdash; and each is a repeatable process with clear event trails. AFPI mines IVR, case, and payment-event streams to find the top 10 high-volume/high-effort call intents that Agentforce can fully deflect, and quantifies the labor + AHT savings before build. Metric: 25% call deflection, 15% AHT reduction on retained calls. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Service+Stellantis+Financial+Services">the Head of Customer Service at Stellantis Financial Services</a>.</p>
+  <details>
+    <summary>4. Customer Servicing &amp; Contact-Center Deflection</summary>
+    <div class="use-case-body">
+      <p>The Service Cloud footprint plus the $250K Adaptive Agent for Sales opp signals an active push toward AI-assisted servicing. Payoff quotes, extension requests, insurance and title issues, and end-of-lease inspections dominate call volume — and each is a repeatable process with clear event trails. AFPI mines IVR, case, and payment-event streams to find the top 10 high-volume/high-effort call intents that Agentforce can fully deflect, and quantifies the labor + AHT savings before build. Metric: 25% call deflection, 15% AHT reduction on retained calls.</p>
+      <p><strong>Key System(s):</strong> Service Cloud, Experience Cloud (Customer Portal), MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Service+Stellantis+Financial+Services">Head of Customer Service</a> (Stellantis Financial Services)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>5. Regulatory &amp; Compliance Center &mdash; CFPB, GLBA, FDCPA Evidence.</strong> Auto captives are under active CFPB scrutiny on servicing, add-on products, repossession practices, and Servicemembers Civil Relief Act &mdash; and Stellantis Financial has publicly disclosed CFPB engagement on servicing practices. Compliance today is spreadsheets, sampling, and audit-response fire drills. AFPI's Compliance Center wedge sits on top of the mined loan-servicing and collections process and produces continuous, defensible evidence that policy-mandated steps were executed on every account &mdash; converting audits from weeks of manual pulls to on-demand dashboards. Metric: 50% reduction in audit-response labor, materially lower regulatory risk exposure. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Compliance+Officer+Stellantis+Financial+Services">the Chief Compliance Officer at Stellantis Financial Services</a>.</p>
+  <details>
+    <summary>5. Regulatory &amp; Compliance Center — CFPB, GLBA, FDCPA Evidence</summary>
+    <div class="use-case-body">
+      <p>Auto captives are under active CFPB scrutiny on servicing, add-on products, repossession practices, and Servicemembers Civil Relief Act — and Stellantis Financial has publicly disclosed CFPB engagement on servicing practices. Compliance today is spreadsheets, sampling, and audit-response fire drills. AFPI's Compliance Center wedge sits on top of the mined loan-servicing and collections process and produces continuous, defensible evidence that policy-mandated steps were executed on every account — converting audits from weeks of manual pulls to on-demand dashboards. Metric: 50% reduction in audit-response labor, materially lower regulatory risk exposure.</p>
+      <p><strong>Key System(s):</strong> Service Cloud, Informatica MDM, Tableau / CRM Analytics</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Compliance+Officer+Stellantis+Financial+Services">Chief Compliance Officer</a> (Stellantis Financial Services)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
+  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
 
   <div class="actions">
-    <a href="/stellantis-financial.pdf" target="_blank">Generate PDF</a>
-    <a href="https://salesforce.enterprise.slack.com/docs/T026QPGMQ/F0BER9DPKAS" target="_blank">Generate Slack Canvas</a>
-    <a href="https://aprovista-pov.vercel.app/stellantis-financial">Generate Vercel Page</a>
-    <a href="mailto:?subject=AFPI%20POV%20%E2%80%94%20Stellantis%20Financial%20Services%2C%20Inc.&body=https%3A%2F%2Faprovista-pov.vercel.app%2Fstellantis-financial">Generate Customer Email (Beta)</a>
-    <span class="disabled">Generate Proposal Template (coming soon)</span>
-    <a href="https://salesforce.enterprise.slack.com/archives/apromore-gtm" target="_blank">Deal Support Request</a>
-    <span class="disabled">Deeper Dive POV (coming soon)</span>
+    <span class="disabled">Generate PDF</span>
+    <span class="disabled">Generate Slack Canvas</span>
+    <span class="disabled">Generate Vercel Page</span>
+    <span class="disabled">Generate Customer Email (Beta)</span>
+    <span class="disabled">Generate Proposal Template</span>
+    <span class="disabled">Deal Support Request</span>
+    <span class="disabled">Deeper Dive POV</span>
   </div>
   <footer class="fine">
     Prepared by AproVista &nbsp;|&nbsp; Created by

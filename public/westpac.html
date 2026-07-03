@@ -7,25 +7,33 @@
 <style>
   body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
          color: #1a1a1a; line-height: 1.45; background: #fff; }
-  .banner { background: #001558; padding: 18px 0; }
+  .banner { background: #fff; padding: 14px 0 4px; }
   .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
-                  display: flex; align-items: center; justify-content: space-between; }
-  .banner img { height: 72px; width: auto; flex-shrink: 0; display: block; }
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
   .lib-wrap { position: relative; }
-  .lib-btn { background: rgba(255,255,255,.15); color: #fff;
-             border: 1px solid rgba(255,255,255,.35); padding: 7px 13px;
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
              border-radius: 6px; cursor: pointer; font-size: .85em;
              font-family: inherit; white-space: nowrap; }
-  .lib-btn:hover { background: rgba(255,255,255,.25); }
+  .lib-btn:hover { background: #dde3f0; }
   .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
               background: #fff; border-radius: 8px;
-              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 260px; z-index: 100; }
-  .lib-menu.open { display: block; }
-  .lib-menu a { display: block; padding: 8px 15px; color: #032d60;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
                 text-decoration: none; font-size: .87em;
                 border-bottom: 1px solid #f0f4ff; }
-  .lib-menu a:last-child { border-bottom: none; }
-  .lib-menu a:hover { background: #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
   main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
   h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
        margin: 0 0 10px; font-size: 1.85em; }
@@ -36,12 +44,23 @@
   strong { color: #032d60; }
   a { color: #0070d2; }
   table { border-collapse: collapse; width: 100%; margin: 4px 0; }
-  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
   th { background: #f0f4ff; font-weight: 600; }
-  td:last-child { text-align: right; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
-            margin: 4px 0; background: #f9fbff; }
+            margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
   hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
   .fine { text-align: center; color: #aaa; font-size: .75em;
           margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
@@ -54,12 +73,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-    background: #f0f4ff; color: #032d60; text-decoration: none;
-    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
-  .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
-  .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
-    cursor: not-allowed; }
+  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
+                  cursor: not-allowed; white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -67,8 +83,14 @@
   <div class="banner-inner">
     <img src="/banner-logo.png" alt="AproVista">
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library &#9662;</button>
-      <div class="lib-menu" id="libMenu"></div>
+      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
     </div>
   </div>
 </header>
@@ -77,45 +99,97 @@
   <div class="snapshot">
     <p><strong>Financial Services, Banking</strong></p>
     <p><strong>Revenue:</strong> A$33.8B &nbsp;|&nbsp; <strong>Employees:</strong> ~40,143 &nbsp;|&nbsp; <strong>HQ:</strong> Sydney, NSW, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> St.George Bank, BankSA, Bank of Melbourne, RAMS Home Loans, Westpac New Zealand</p>
     <p><strong>Current Salesforce Products:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Scott+Collary+Westpac">Scott Collary</a>, Group Executive Customer Services &amp; Technology]</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Scott+Collary+Westpac">Scott Collary</a>]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> </p>
-    <p><strong>AFPI AE:</strong> TBH (ANZ)</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> None currently qualified for AFPI</p>
+    <p><strong>Apromore AE:</strong> TBH (ANZ)</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U05F564N353">Sarah Eljerman</a></p>
+    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
     <p><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
   </div>
 
   <details>
-    <summary>Propensity to Buy: 81/100 &mdash; T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">81/100</span> — T1 Pursue</summary>
     <table>
-      <tr><th>Category</th><th>Score</th></tr>
-      <tr><td>Process complexity &amp; scale</td><td>14/15</td></tr>
-      <tr><td>Vertical fit (Banking)</td><td>14/15</td></tr>
-      <tr><td>Regulatory pressure (APRA CPS 230, AUSTRAC)</td><td>13/15</td></tr>
-      <tr><td>Signals (ANZ Apromore momentum, CORE program)</td><td>9/10</td></tr>
-      <tr><td>Timing / cost-out cycle</td><td>9/15</td></tr>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Process complexity &amp; scale</td><td>14/15</td><td class="cat-green">Big-4 Australian bank spanning consumer, business, WIB, and NZ — deeply event-log-rich estate.</td></tr>
+        <tr><td>Vertical fit (Banking)</td><td>14/15</td><td class="cat-green">Banking is AFPI's strongest vertical; mortgage, AML, and onboarding are canonical mining targets.</td></tr>
+        <tr><td>Regulatory pressure (APRA CPS 230, AUSTRAC)</td><td>13/15</td><td class="cat-green">CPS 230 (Jul 2025) + post-AUSTRAC financial-crime scrutiny = a direct Compliance Center wedge.</td></tr>
+        <tr><td>Signals (ANZ Apromore momentum, CORE program)</td><td>9/10</td><td class="cat-green">Board-sponsored CORE/UNITE simplification program creates a rare process-redesign window.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Timing / cost-out cycle</td><td>9/15</td><td class="cat-orange">Cost-out cycle underway but no confirmed AFPI-relevant open opp — timing wedge is soft.</td></tr>
+        <tr><td>Signals (ANZ Apromore momentum, CORE program)</td><td>9/10</td><td class="cat-green">Same signal above appears here as the second lowest of the top 5 categories.</td></tr>
+      </tbody>
     </table>
   </details>
 
+  <p><strong>Topline POV:</strong> Apromore can help Westpac Banking Corporation by mining its mortgage origination, AML alert triage, and complaints event logs to give the CORE/UNITE simplification program a defensible as-is baseline — turning APRA CPS 230 and post-AUSTRAC scrutiny into measurable cycle-time and cost-per-alert wins.</p>
+
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
-  <p><strong>1. Mortgage Origination Cycle Time.</strong> Home lending is Westpac's largest earning asset and the origination journey spans broker submission, credit decisioning, valuation, and settlement across legacy platforms. Post-remediation, turnaround-time consistency has been a repeated APRA and broker-channel pain point. AFPI mines the event log across the loan-origination stack to expose rework loops, verification bottlenecks, and broker abandonment triggers, moving the median time-to-unconditional-approval and reducing broker churn. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Damien+MacRae+Westpac">Damien MacRae</a>, Managing Director Mortgages.</p>
+  <details>
+    <summary>1. Mortgage Origination Cycle Time</summary>
+    <div class="use-case-body">
+      <p>Home lending is Westpac's largest earning asset and the origination journey spans broker submission, credit decisioning, valuation, and settlement across legacy platforms. Post-remediation, turnaround-time consistency has been a repeated APRA and broker-channel pain point. AFPI mines the event log across the loan-origination stack to expose rework loops, verification bottlenecks, and broker abandonment triggers, moving the median time-to-unconditional-approval and reducing broker churn.</p>
+      <p><strong>Key System(s):</strong> Loan Origination Platform (TBD), Broker Portal (TBD), Core Banking (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Damien+MacRae+Westpac">Damien MacRae</a> (Managing Director Mortgages)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>2. AML/KYC Transaction Monitoring Alert Triage.</strong> Post-AUSTRAC settlement, Westpac has invested heavily in financial-crime operations but analysts still face high false-positive rates and inconsistent case-handling paths. AFPI mines the alert-to-disposition process to surface the variants that drive re-work and SLA breaches, then targets automation and Agentforce-assist opportunities on the highest-volume paths. Metric moved: cost per alert closed and productive-alert ratio. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Les+Vance+Westpac">Les Vance</a>, Group Executive Financial Crime, Compliance &amp; Conduct.</p>
+  <details>
+    <summary>2. AML/KYC Transaction Monitoring Alert Triage</summary>
+    <div class="use-case-body">
+      <p>Post-AUSTRAC settlement, Westpac has invested heavily in financial-crime operations but analysts still face high false-positive rates and inconsistent case-handling paths. AFPI mines the alert-to-disposition process to surface the variants that drive re-work and SLA breaches, then targets automation and Agentforce-assist opportunities on the highest-volume paths. Metric moved: cost per alert closed and productive-alert ratio.</p>
+      <p><strong>Key System(s):</strong> Transaction Monitoring Platform (TBD), Case Management (TBD), KYC System (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Les+Vance+Westpac">Les Vance</a> (Group Executive Financial Crime, Compliance &amp; Conduct)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>3. Complaints Handling &amp; AFCA-Reportable Disputes.</strong> APRA CPS 230 (effective July 2025) requires demonstrable operational-resilience controls over customer-facing critical operations, and complaints handling is one of the most scrutinised. AFPI mines the complaint lifecycle from first contact through resolution and AFCA escalation, exposing which channels, products, and handoffs are driving rework and breach risk. The result is a Compliance Center wedge with process evidence auditors can consume directly, plus a measurable drop in AFCA-escalated volume. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Jason+Yetton+Westpac">Jason Yetton</a>, Chief Executive Consumer.</p>
+  <details>
+    <summary>3. Complaints Handling &amp; AFCA-Reportable Disputes</summary>
+    <div class="use-case-body">
+      <p>APRA CPS 230 (effective July 2025) requires demonstrable operational-resilience controls over customer-facing critical operations, and complaints handling is one of the most scrutinised. AFPI mines the complaint lifecycle from first contact through resolution and AFCA escalation, exposing which channels, products, and handoffs are driving rework and breach risk. The result is a Compliance Center wedge with process evidence auditors can consume directly, plus a measurable drop in AFCA-escalated volume.</p>
+      <p><strong>Key System(s):</strong> Complaints Management (TBD), Contact Center (TBD), Case Management (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jason+Yetton+Westpac">Jason Yetton</a> (Chief Executive Consumer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>4. Business &amp; Institutional Client Onboarding.</strong> Onboarding a business or institutional client at Westpac touches KYB, AML, credit, product setup, and multiple divisional handoffs across Business &amp; Wealth and WIB. Deal desks report weeks of cycle time and repeated document requests that erode NPS with corporate treasurers. AFPI mines the end-to-end onboarding process, quantifies the cost of rework loops, and pinpoints where Agentforce or straight-through-processing can compress cycle time. Metric moved: time-to-first-transaction and onboarding cost per client. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Anthony+Miller+Westpac">Anthony Miller</a>, Chief Executive Business &amp; Wealth.</p>
+  <details>
+    <summary>4. Business &amp; Institutional Client Onboarding</summary>
+    <div class="use-case-body">
+      <p>Onboarding a business or institutional client at Westpac touches KYB, AML, credit, product setup, and multiple divisional handoffs across Business &amp; Wealth and WIB. Deal desks report weeks of cycle time and repeated document requests that erode NPS with corporate treasurers. AFPI mines the end-to-end onboarding process, quantifies the cost of rework loops, and pinpoints where Agentforce or straight-through-processing can compress cycle time. Metric moved: time-to-first-transaction and onboarding cost per client.</p>
+      <p><strong>Key System(s):</strong> KYB/KYC Platform (TBD), Credit Decisioning (TBD), Product Setup System (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Anthony+Miller+Westpac">Anthony Miller</a> (Chief Executive Business &amp; Wealth)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>5. Technology Modernisation &amp; Simplification (CORE / UNITE).</strong> Westpac's multi-year CORE program is consolidating retail brands onto a single technology stack — a rare, board-sponsored process-redesign event. Without a process-mining ground truth, "to-be" designs are drawn from interviews and PowerPoint rather than actual event data, which drives rework once code hits production. AFPI provides the as-is object-centric process model that CORE work-streams can use to prioritise which processes to simplify first and prove benefit realisation post-migration. Metric moved: rework in transformation delivery and time-to-benefit. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Scott+Collary+Westpac">Scott Collary</a>, Group Executive Customer Services &amp; Technology.</p>
+  <details>
+    <summary>5. Technology Modernisation &amp; Simplification (CORE / UNITE)</summary>
+    <div class="use-case-body">
+      <p>Westpac's multi-year CORE program is consolidating retail brands onto a single technology stack — a rare, board-sponsored process-redesign event. Without a process-mining ground truth, "to-be" designs are drawn from interviews and PowerPoint rather than actual event data, which drives rework once code hits production. AFPI provides the as-is object-centric process model that CORE work-streams can use to prioritise which processes to simplify first and prove benefit realisation post-migration. Metric moved: rework in transformation delivery and time-to-benefit.</p>
+      <p><strong>Key System(s):</strong> Core Banking (TBD), CORE Program Tooling (TBD), Enterprise Architecture Repository (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Scott+Collary+Westpac">Scott Collary</a> (Group Executive Customer Services &amp; Technology)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
+  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
 
   <div class="actions">
-    <a href="/westpac.pdf" target="_blank">Generate PDF</a>
-    <a href="https://salesforce.enterprise.slack.com/docs/T026QPGMQ/F0BEC5F9SAW" target="_blank">Generate Slack Canvas</a>
-    <a href="https://aprovista-pov.vercel.app/westpac">Generate Vercel Page</a>
-    <a href="mailto:?subject=AFPI%20POV%20%E2%80%94%20Westpac%20Banking%20Corporation&body=https://aprovista-pov.vercel.app/westpac">Generate Customer Email (Beta)</a>
-    <span class="disabled">Generate Proposal Template (coming soon)</span>
-    <a href="https://salesforce.enterprise.slack.com/archives/apromore-gtm" target="_blank">Deal Support Request</a>
-    <span class="disabled">Deeper Dive POV (coming soon)</span>
+    <span class="disabled">Generate PDF</span>
+    <span class="disabled">Generate Slack Canvas</span>
+    <span class="disabled">Generate Vercel Page</span>
+    <span class="disabled">Generate Customer Email (Beta)</span>
+    <span class="disabled">Generate Proposal Template</span>
+    <span class="disabled">Deal Support Request</span>
+    <span class="disabled">Deeper Dive POV</span>
   </div>
   <footer class="fine">
     Prepared by AproVista &nbsp;|&nbsp; Created by

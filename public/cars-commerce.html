@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cars.com Inc. — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
+                  cursor: not-allowed; white-space: nowrap; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <img src="/banner-logo.png" alt="AproVista">
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Cars.com Inc.</h1>
+  <div class="snapshot">
+    <p><strong>Technology, Automotive Marketplace &amp; Dealer Services (NYSE: CARS)</strong></p>
+    <p><strong>Revenue:</strong> ~$689M (FY2023) &nbsp;|&nbsp; <strong>Employees:</strong> ~1,700 &nbsp;|&nbsp; <strong>HQ:</strong> Chicago, IL, USA</p>
+    <p><strong>Major Subsidiaries:</strong> Cars.com Marketplace, Dealer Inspire, AccuTrade, Cars Commerce Media, DealerCloud LLC (JV with Del Grande Dealer Group)</p>
+    <p><strong>Current Salesforce Products:</strong> Full CRM (Sales + Service Cloud, ~2,690 users), SteelBrick CPQ, Sandbox, Slack Enterprise (~2,000 users), MuleSoft, Tableau, Agentforce (Phase 0 in flight), Signature Success</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Oracle (order mgmt, billing, revrec, collections), Amazon Redshift, HubSpot, Jira, AWS Voice, Zapier/CozyRoc, custom Apex services</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Cars Commerce Renewal — CPQ + Full CRM + Sandbox (<a href="https://org62.my.salesforce.com/0063y000018kBStAAM">$4.99M</a>) &nbsp;|&nbsp; Cars: Agentforce for Supply Chain (<a href="https://org62.my.salesforce.com/006ed00000XpcUsAAJ">$500k</a>) &nbsp;|&nbsp; Agentforce Contact Center (<a href="https://org62.my.salesforce.com/006ed00000emWHtAAM">$135k</a>)</p>
+    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02C75PUETV">Liz Bilash</a></p>
+    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
+    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">88/100</span> — T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Systems Landscape</td><td>15/15</td><td class="cat-green">Oracle + Salesforce + Redshift + HubSpot + Jira + AWS Voice + MuleSoft + custom Apex — the exact heterogeneous stack process mining was built for.</td></tr>
+        <tr><td>Active Initiatives &amp; Urgency</td><td>15/15</td><td class="cat-green">$6M July renewal at risk; $1.5M ARI in-flight; CTO/CEO/CFO explicit "fix the foundation" ask; RFP threat if Salesforce can't demonstrate value.</td></tr>
+        <tr><td>Process Complexity</td><td>14/15</td><td class="cat-green">Just consolidated two Salesforce orgs (Cars.com + Blue/Dealer Inspire); DealerCloud JV launched Feb 2026; multi-brand rev-share flows across marketplace, media, and dealer SaaS.</td></tr>
+        <tr><td>Salesforce Footprint</td><td>10/10</td><td class="cat-green">Full CRM at ~2,690 users, CPQ, MuleSoft, Tableau, Slack Enterprise, Agentforce Phase 0, Signature Success — deep, wide, and mission-critical.</td></tr>
+        <tr><td>Deal Size Potential</td><td>9/10</td><td class="cat-green">$4.99M July renewal, $18M 3-year commit contingent on ARI, $500k Agentforce Supply Chain opp already in flight.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Compliance / Regulatory Wedge</td><td>5/10</td><td class="cat-orange">Consumer data (CCPA/state privacy) and state DMV/dealer rules apply, but no headline regulator — Compliance Center is not the primary wedge.</td></tr>
+        <tr><td>Buyer Titles Present</td><td>8/10</td><td class="cat-orange">CTO, CPO, VP OEM Operations, Director Rev Strategy &amp; Ops present via Dealer Inspire — but the Cars Commerce parent CTO / VP Enterprise Systems referenced in Slack are not yet in Org62.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p><strong>Topline POV:</strong> Apromore can help Cars.com Inc. by mining its post-consolidation Salesforce, Oracle, and Redshift event logs to expose exactly where the "foundation" is broken — turning the CTO/CEO/CFO's abstract frustration into a documented target-state process map that de-risks the $18M three-year renewal, accelerates Agentforce Phase 0 out of KPMG delay, and gives DealerCloud a measured baseline before the JV scales to more dealer groups.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Post-Consolidation Salesforce Org Cleanup (Cars.com + Blue Org)</summary>
+    <div class="use-case-body">
+      <p>Cars.com just decommissioned the legacy Cars.com Inc. org and migrated all contracts into the Cars Commerce Blue org. Two years of divergent CPQ, quoting, and account-hierarchy processes are now colliding in one place — the exact scenario where Apromore's event-log mining exposes duplicate variants, orphaned automations, and manual reconciliation loops that Celonis needs a two-specialist SQL+PQL team to model. Metric moved: quote-to-cash cycle time, quote error rate, discount policy adherence.</p>
+      <p><strong>Key System(s):</strong> Sales Cloud, SteelBrick CPQ, Oracle (billing/revrec), MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Dan+Schroeder+Cars+Commerce">Dan Schroeder</a> (Chief Product Officer, Dealer Inspire)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Integration &amp; Data Foundation Discovery (the "fix the foundation" ask)</summary>
+    <div class="use-case-body">
+      <p>CTO / CEO / CFO have explicitly told Salesforce the platform's foundation is broken across Oracle, Redshift, HubSpot, Jira, AWS Voice, MuleSoft, Zapier/CozyRoc, and custom Apex — with an $18M three-year renewal riding on the answer. Apromore mines the actual cross-system event sequences (rather than the architecture diagram people wish were true) to prove which integrations are one-off spreadsheets, which flows still have manual approvals, and where reconciliation loops live. This is the fastest way to convert the ARI investment into a defensible target-state roadmap. Metric moved: number of manual handoffs eliminated, integration re-work rate, foundation-remediation ROI.</p>
+      <p><strong>Key System(s):</strong> Salesforce (CRM + CPQ), Oracle, Redshift, MuleSoft, HubSpot, Jira</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Caitlin+Oliver+Cars+Commerce">Caitlin Oliver</a> (Chief Technical Officer, Launch Digital Marketing / Cars Commerce)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Agentforce Phase 0 Acceleration &amp; Value Measurement</summary>
+    <div class="use-case-body">
+      <p>Cars' Agentforce Phase 0 is one month behind schedule after KPMG shortfalls, and leadership needs to tie business value to the next $3.5M investment tranche. Apromore mines the exact "before" process a candidate agent will replace — internal employee agent, contact center, supply chain — so every deployed agent has a measured pre-state cycle time and a proven variant to automate. That turns "Agentforce is delayed" into "Agentforce cut this process 47%" in the same quarter. Metric moved: agent-eligible task automation rate, agent ROI per use case.</p>
+      <p><strong>Key System(s):</strong> Agentforce, Sales Cloud, Service Cloud, MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Katie+Helgesen+Cars+Commerce">Katie Helgesen</a> (Director, Revenue Strategy &amp; Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Dealer Onboarding &amp; Website Fulfillment (Dealer Inspire)</summary>
+    <div class="use-case-body">
+      <p>Dealer Inspire onboards new dealer websites at scale — endorsed by nearly every OEM — but the handoff from sale through website launch runs across Sales Cloud, Jira, custom Apex, and Dealer Inspire's own fulfillment tooling. Apromore mines the actual PR-to-launch event log to expose which dealer segments hit re-work loops, which OEM contracts trigger custom exceptions, and where the "Onboarding Process" that Salesforce demoed at Chicago World Tour breaks down in real life. Metric moved: dealer time-to-live, first-90-day dealer NPS, fulfillment SLA hit rate.</p>
+      <p><strong>Key System(s):</strong> Sales Cloud, Jira, Dealer Inspire Fulfillment, custom Apex</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=DeAnna+Kertson+Cars+Commerce">DeAnna Kertson</a> (Senior Director of Website Fulfillment, Dealer Inspire)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. DealerCloud JV Process Baseline (Agentforce Automotive)</summary>
+    <div class="use-case-body">
+      <p>DealerCloud LLC — the Cars Commerce + Del Grande + Salesforce JV built on Agentforce Automotive — launched at NADA in February 2026 as one of the first CRMs of its kind. Before it scales to additional dealer groups, Apromore mines Del Grande's actual sales, service, and F&amp;I event logs to establish a control-group baseline the JV can measure lift against. That protects the "agentic enterprise" narrative with hard numbers and gives the joint GTM team a repeatable pattern for the next dealer-group onboarding. Metric moved: dealer sales cycle time, F&amp;I attach rate, agent-assisted deal close rate.</p>
+      <p><strong>Key System(s):</strong> DealerCloud (Agentforce Automotive), Sales Cloud, Service Cloud, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Joe+Chura+Cars+Commerce">Joe Chura</a> (Chief Executive Officer, Dealer Inspire)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
+  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
+
+  <div class="actions">
+    <span class="disabled">Generate PDF</span>
+    <span class="disabled">Generate Slack Canvas</span>
+    <span class="disabled">Generate Vercel Page</span>
+    <span class="disabled">Generate Customer Email (Beta)</span>
+    <span class="disabled">Generate Proposal Template</span>
+    <span class="disabled">Deal Support Request</span>
+    <span class="disabled">Deeper Dive POV</span>
+  </div>
+  <footer class="fine">
+    Prepared by AproVista &nbsp;|&nbsp; Created by
+    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
+    &nbsp;|&nbsp; 2026-07-03 &nbsp;|&nbsp; Confidence: High
+  </footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

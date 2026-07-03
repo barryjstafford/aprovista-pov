@@ -7,25 +7,33 @@
 <style>
   body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
          color: #1a1a1a; line-height: 1.45; background: #fff; }
-  .banner { background: #001558; padding: 18px 0; }
+  .banner { background: #fff; padding: 14px 0 4px; }
   .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
-                  display: flex; align-items: center; justify-content: space-between; }
-  .banner img { height: 72px; width: auto; flex-shrink: 0; display: block; }
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
   .lib-wrap { position: relative; }
-  .lib-btn { background: rgba(255,255,255,.15); color: #fff;
-             border: 1px solid rgba(255,255,255,.35); padding: 7px 13px;
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
              border-radius: 6px; cursor: pointer; font-size: .85em;
              font-family: inherit; white-space: nowrap; }
-  .lib-btn:hover { background: rgba(255,255,255,.25); }
+  .lib-btn:hover { background: #dde3f0; }
   .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
               background: #fff; border-radius: 8px;
-              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 260px; z-index: 100; }
-  .lib-menu.open { display: block; }
-  .lib-menu a { display: block; padding: 8px 15px; color: #032d60;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
                 text-decoration: none; font-size: .87em;
                 border-bottom: 1px solid #f0f4ff; }
-  .lib-menu a:last-child { border-bottom: none; }
-  .lib-menu a:hover { background: #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
   main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
   h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
        margin: 0 0 10px; font-size: 1.85em; }
@@ -36,12 +44,23 @@
   strong { color: #032d60; }
   a { color: #0070d2; }
   table { border-collapse: collapse; width: 100%; margin: 4px 0; }
-  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
   th { background: #f0f4ff; font-weight: 600; }
-  td:last-child { text-align: right; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
-            margin: 4px 0; background: #f9fbff; }
+            margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
   hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
   .fine { text-align: center; color: #aaa; font-size: .75em;
           margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
@@ -54,12 +73,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-    background: #f0f4ff; color: #032d60; text-decoration: none;
-    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
-  .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
-  .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
-    cursor: not-allowed; }
+  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
+                  cursor: not-allowed; white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -68,7 +84,13 @@
     <img src="/banner-logo.png" alt="AproVista">
     <div class="lib-wrap">
       <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
-      <div class="lib-menu" id="libMenu"></div>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
     </div>
   </div>
 </header>
@@ -77,47 +99,98 @@
   <div class="snapshot">
     <p><strong>Manufacturing, Industrial Equipment (Heat Transfer, Separation, Fluid Handling)</strong></p>
     <p><strong>Revenue:</strong> ~$4.79B (SEK ~63B) &nbsp;|&nbsp; <strong>Employees:</strong> ~16,785 &nbsp;|&nbsp; <strong>HQ:</strong> Lund, Sweden</p>
-    <p><strong>Current Salesforce Products:</strong> Service Cloud, Sales Cloud, Slack, Data Cloud (in-flight) [Org62]</p>
+    <p><strong>Current Salesforce Products:</strong> Service Cloud, Sales Cloud, Slack, Data Cloud (in-flight)</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with IT PMO lead]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Alfa laval - Process mining - Apromore (<a href="https://org62.my.salesforce.com/006ed00000WvWyPAAV">$250k</a>) &nbsp;|&nbsp; Alfa Laval - Svc Rollout Phase I (<a href="https://org62.my.salesforce.com/006ed00000XT737AAD">$210k</a>) &nbsp;|&nbsp; Alfa Laval - Svc Pilot (<a href="https://org62.my.salesforce.com/006ed00000XT5anAAD">$126k</a>) &nbsp;|&nbsp; Alfa Laval AB - Data Cloud (<a href="https://org62.my.salesforce.com/006ed000005Kxp4AAC">TBD</a>)</p>
-    <p><strong>AFPI AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Alfa laval - Process mining - Apromore (<a href="https://org62.my.salesforce.com/006ed00000WvWyPAAV">$250k</a>) &nbsp;|&nbsp; Alfa Laval - Svc Rollout Phase I (<a href="https://org62.my.salesforce.com/006ed00000XT737AAD">$210k</a>) &nbsp;|&nbsp; Alfa Laval - Svc Pilot (<a href="https://org62.my.salesforce.com/006ed00000XT5anAAD">$126k</a>)</p>
+    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GYBW99CG">Lovisa Falkenberg</a></p>
+    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
     <p><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Service Cloud + Data Cloud)</p>
   </div>
 
   <details>
-    <summary>Propensity to Buy: 88/100 — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">88/100</span> — T1 Pursue</summary>
     <table>
-      <tr><th>Category</th><th>Score</th></tr>
-      <tr><td>Active AFPI Opportunity in Late Stage</td><td>20/20</td></tr>
-      <tr><td>Process Complexity &amp; Volume</td><td>14/15</td></tr>
-      <tr><td>Salesforce Footprint &amp; Co-Sell Fit</td><td>13/15</td></tr>
-      <tr><td>Buyer Titles &amp; Champion Access</td><td>11/15</td></tr>
-      <tr><td>Regulatory / Compliance Drivers</td><td>10/15</td></tr>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Active AFPI Opportunity in Late Stage</td><td>20/20</td><td class="cat-green">Live Apromore process-mining opp ($250k) already in the pipe — highest possible buying signal.</td></tr>
+        <tr><td>Process Complexity &amp; Volume</td><td>14/15</td><td class="cat-green">Multi-ERP OTC across pumps, heat exchangers, decanters and global aftermarket — dense event logs.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Co-Sell Fit</td><td>13/15</td><td class="cat-green">Service Cloud rollout ($210k + $126k) plus Data Cloud in-flight — natural integrated co-sell.</td></tr>
+        <tr><td>Buyer Titles &amp; Champion Access</td><td>11/15</td><td class="cat-orange">Division Presidents and CFO identified, but no confirmed process-owner or CoE lead yet.</td></tr>
+        <tr><td>Regulatory / Compliance Drivers</td><td>10/15</td><td class="cat-orange">IMO 2030/2050, EU CSRD, CBAM and CE/ATEX apply — real, but not a single-regulator wedge.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Buyer Titles &amp; Champion Access</td><td>11/15</td><td class="cat-orange">Division Presidents and CFO identified, but no confirmed process-owner or CoE lead yet.</td></tr>
+        <tr><td>Regulatory / Compliance Drivers</td><td>10/15</td><td class="cat-orange">IMO 2030/2050, EU CSRD, CBAM and CE/ATEX apply — real, but not a single-regulator wedge.</td></tr>
+      </tbody>
     </table>
   </details>
 
+  <p><strong>Topline POV:</strong> Apromore can help Alfa Laval Corporate AB by mining its multi-ERP Order-to-Cash and Service Cloud aftermarket event logs to give the in-flight Service rollout and Data Cloud program a documented target-state process — cutting DSO, lifting first-time-fix on high-margin aftermarket, and locking in the active process-mining opp already in pipeline.</p>
+
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
-  <p><strong>1. Order-to-Cash across ERP + Service Cloud.</strong> Alfa Laval books orders across pumps, heat exchangers, decanters, and aftermarket parts through a multi-ERP landscape feeding a Service Cloud rollout now in Stage 02. Manual order-clearing, credit blocks, and delivery-date renegotiation stretch quote-to-cash cycle times and hurt on-time delivery in a capex-sensitive industrial buyer market. AFPI mines the full O2C event log without a PQL specialist, exposes rework loops, and lets the business analyst re-simulate policy changes in weeks, not quarters — targeting DSO reduction of 4-6 days and OTIF improvement of 3-5 pts. Champion: <a href="https://www.linkedin.com/search/results/people/?keywords=Anders+Wilhjelm+Alfa+Laval">Anders Wilhjelm</a> (President, Marine Division) or the Service Cloud program lead named on the rollout opp.</p>
+  <details>
+    <summary>1. Order-to-Cash across ERP + Service Cloud</summary>
+    <div class="use-case-body">
+      <p>Alfa Laval books orders across pumps, heat exchangers, decanters, and aftermarket parts through a multi-ERP landscape feeding a Service Cloud rollout now in Stage 02. Manual order-clearing, credit blocks, and delivery-date renegotiation stretch quote-to-cash cycle times and hurt on-time delivery in a capex-sensitive industrial buyer market. AFPI mines the full O2C event log without a PQL specialist, exposes rework loops, and lets the business analyst re-simulate policy changes in weeks, not quarters — targeting DSO reduction of 4-6 days and OTIF improvement of 3-5 pts.</p>
+      <p><strong>Key System(s):</strong> ERP (TBD), Sales Cloud, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Anders+Wilhjelm+Alfa+Laval">Anders Wilhjelm</a> (President, Marine Division)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>2. Field Service &amp; Aftermarket Case-to-Resolution.</strong> The two open Service opps ($126k pilot + $210k Phase I rollout) signal a live investment in service transformation across ~100 service centers globally. Aftermarket is Alfa Laval's highest-margin business; every hour a decanter or heat exchanger is down costs a customer real revenue, so first-time-fix and MTTR are board-level metrics. AFPI process-mines every case path, spare-parts dispatch, and technician handoff, then feeds Agentforce Service to auto-route and auto-diagnose — a 10-15% MTTR reduction and 5-8 pt FCR lift compound directly into service margin. Champion: <a href="https://www.linkedin.com/search/results/people/?keywords=Sameer+Kalra+Alfa+Laval">Sameer Kalra</a> (President, Business Unit Service).</p>
+  <details>
+    <summary>2. Field Service &amp; Aftermarket Case-to-Resolution</summary>
+    <div class="use-case-body">
+      <p>The two open Service opps ($126k pilot + $210k Phase I rollout) signal a live investment in service transformation across ~100 service centers globally. Aftermarket is Alfa Laval's highest-margin business; every hour a decanter or heat exchanger is down costs a customer real revenue, so first-time-fix and MTTR are board-level metrics. AFPI process-mines every case path, spare-parts dispatch, and technician handoff, then feeds Agentforce Service to auto-route and auto-diagnose — a 10-15% MTTR reduction and 5-8 pt FCR lift compound directly into service margin.</p>
+      <p><strong>Key System(s):</strong> Service Cloud, Data Cloud, Field Dispatch (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Sameer+Kalra+Alfa+Laval">Sameer Kalra</a> (President, Business Unit Service)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>3. Procure-to-Pay &amp; Supplier On-Boarding.</strong> Alfa Laval sources specialty alloys, castings, and titanium plates from a global supplier base under tightening EU CSRD, CBAM, and dual-use export controls. Manual PO exceptions, three-way match failures, and supplier onboarding backlogs today burn CFO-office FTE and slow new product introductions. AFPI mines the P2P event log, quantifies rework hotspots, and lets Finance re-simulate policy changes with no SQL — reclaiming 8-12% of P2P touchless-rate uplift and cutting supplier onboarding from weeks to days. Champion: <a href="https://www.linkedin.com/search/results/people/?keywords=Fredrik+Ekstrom+Alfa+Laval">Fredrik Ekström</a> (CFO).</p>
+  <details>
+    <summary>3. Procure-to-Pay &amp; Supplier On-Boarding</summary>
+    <div class="use-case-body">
+      <p>Alfa Laval sources specialty alloys, castings, and titanium plates from a global supplier base under tightening EU CSRD, CBAM, and dual-use export controls. Manual PO exceptions, three-way match failures, and supplier onboarding backlogs today burn CFO-office FTE and slow new product introductions. AFPI mines the P2P event log, quantifies rework hotspots, and lets Finance re-simulate policy changes with no SQL — reclaiming 8-12% of P2P touchless-rate uplift and cutting supplier onboarding from weeks to days.</p>
+      <p><strong>Key System(s):</strong> ERP AP (TBD), Supplier Portal (TBD), Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Fredrik+Ekstrom+Alfa+Laval">Fredrik Ekström</a> (CFO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>4. New Product Introduction (NPI) &amp; Engineering Change Order.</strong> Alfa Laval ships thousands of engineered-to-order configurations across the Marine, Energy, and Food &amp; Water divisions; ECO cycle time is the hidden tax on innovation speed. AFPI mines the PLM-to-ERP change-request flow, exposes bottlenecks between engineering, sourcing, and manufacturing, and pairs Compliance Center with the AFPI wedge to keep CE/ATEX/marine-class documentation always audit-ready. Target: 20-30% reduction in engineering-change lead time and zero missed classification reviews. Champion: <a href="https://www.linkedin.com/search/results/people/?keywords=Susanne+Pahlen+Alfa+Laval">Susanne Pahlén Åklundh</a> (President, Business Unit Energy).</p>
+  <details>
+    <summary>4. New Product Introduction (NPI) &amp; Engineering Change Order</summary>
+    <div class="use-case-body">
+      <p>Alfa Laval ships thousands of engineered-to-order configurations across the Marine, Energy, and Food &amp; Water divisions; ECO cycle time is the hidden tax on innovation speed. AFPI mines the PLM-to-ERP change-request flow, exposes bottlenecks between engineering, sourcing, and manufacturing, and pairs Compliance Center with the AFPI wedge to keep CE/ATEX/marine-class documentation always audit-ready. Target: 20-30% reduction in engineering-change lead time and zero missed classification reviews.</p>
+      <p><strong>Key System(s):</strong> PLM (TBD), ERP (TBD), Compliance Center</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Susanne+Pahlen+Alfa+Laval">Susanne Pahlén Åklundh</a> (President, Business Unit Energy)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>5. Marine Decarbonization &amp; Compliance Reporting.</strong> Alfa Laval's PureBallast, PureSOx, and boiler business sit at the center of the IMO 2030/2050 decarbonization mandate and EU ETS-Maritime rollout — the customer's reporting obligation IS Alfa Laval's revenue engine. AFPI process-mines the certification-to-installation-to-service flow for marine retrofits and layers Compliance Center to auto-evidence each installation against MARPOL and EU-ETS schedules. This turns a compliance line item into a durable renewal moat and shortens retrofit cycle time by 15-25%. Champion: <a href="https://www.linkedin.com/search/results/people/?keywords=Anders+Wilhjelm+Alfa+Laval">Anders Wilhjelm</a> (President, Marine Division).</p>
+  <details>
+    <summary>5. Marine Decarbonization &amp; Compliance Reporting</summary>
+    <div class="use-case-body">
+      <p>Alfa Laval's PureBallast, PureSOx, and boiler business sit at the center of the IMO 2030/2050 decarbonization mandate and EU ETS-Maritime rollout — the customer's reporting obligation IS Alfa Laval's revenue engine. AFPI process-mines the certification-to-installation-to-service flow for marine retrofits and layers Compliance Center to auto-evidence each installation against MARPOL and EU-ETS schedules. This turns a compliance line item into a durable renewal moat and shortens retrofit cycle time by 15-25%.</p>
+      <p><strong>Key System(s):</strong> Service Cloud, Compliance Center, ERP (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Anders+Wilhjelm+Alfa+Laval">Anders Wilhjelm</a> (President, Marine Division)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
+  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
 
   <div class="actions">
-    <a href="/alfa-laval.pdf" target="_blank">Generate PDF</a>
-    <a href="https://salesforce.enterprise.slack.com/docs/T026QPGMQ/F0BE5QH8BD1" target="_blank">Generate Slack Canvas</a>
-    <a href="https://aprovista-pov.vercel.app/alfa-laval">Generate Vercel Page</a>
-    <a href="mailto:?subject=AFPI%20POV%20%E2%80%94%20Alfa%20Laval%20Corporate%20AB&body=Point%20of%20view%20on%20AFPI%20at%20Alfa%20Laval%3A%20https%3A%2F%2Faprovista-pov.vercel.app%2Falfa-laval">Generate Customer Email (Beta)</a>
-    <span class="disabled">Generate Proposal Template (coming soon)</span>
-    <a href="https://salesforce.enterprise.slack.com/archives/apromore-gtm" target="_blank">Deal Support Request</a>
-    <span class="disabled">Deeper Dive POV (coming soon)</span>
+    <span class="disabled">Generate PDF</span>
+    <span class="disabled">Generate Slack Canvas</span>
+    <span class="disabled">Generate Vercel Page</span>
+    <span class="disabled">Generate Customer Email (Beta)</span>
+    <span class="disabled">Generate Proposal Template</span>
+    <span class="disabled">Deal Support Request</span>
+    <span class="disabled">Deeper Dive POV</span>
   </div>
-
   <footer class="fine">
     Prepared by AproVista &nbsp;|&nbsp; Created by
     <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>

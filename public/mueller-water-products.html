@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mueller Water Products, Inc. — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
+                  cursor: not-allowed; white-space: nowrap; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <img src="/banner-logo.png" alt="AproVista">
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Mueller Water Products, Inc.</h1>
+  <div class="snapshot">
+    <p><strong>Manufacturing, Automotive &amp; Energy, Water Infrastructure</strong></p>
+    <p><strong>Revenue:</strong> ~$1.3B &nbsp;|&nbsp; <strong>Employees:</strong> ~2,600 &nbsp;|&nbsp; <strong>HQ:</strong> Atlanta, GA, USA</p>
+    <p><strong>Major Subsidiaries:</strong> Mueller Co., Echologics, Henry Pratt Company, Mueller Systems, James Jones Company</p>
+    <p><strong>Current Salesforce Products:</strong> Sales Cloud, Pardot / Marketing Cloud Account Engagement, MuleSoft (IPD + RPA — confirmed via Slack deal review)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Microsoft 365 &amp; Copilot (approved enterprise-wide), AWS (Senior AWS Data Engineer in Org62)</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> INFA - Mueller Water Products, Inc. MDM (<a href="https://org62.my.salesforce.com/006ed00000aVAuQAAW">$510k</a>)</p>
+    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GLPS6HAM">Eric Capilouto</a></p>
+    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
+    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">76/100</span> — T2 Develop</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Buyer Titles Present</td><td>10/10</td><td class="cat-green">CIO Andy Davies, CTO Dave Stewart, SVP CTO/CIO Robert Keefe, SVP Technology Solutions Kenji Takeuchi, Director Enterprise Data Engineering viswa avireddi, Chief Audit Executive Gregory Kirkland — process/technology/audit buyers already engaged in Salesforce ecosystem.</td></tr>
+        <tr><td>Active Initiatives &amp; Urgency</td><td>13/15</td><td class="cat-green">Live Salesforce case study (Adam Dahlheim, Oct 2025): quoting time cut 10→6 days, duplicate-entry elimination, project margin visibility. Active $510k INFA MDM opp. Early-stage MAF deal, considering AgentForce vs Microsoft Copilot.</td></tr>
+        <tr><td>Process Complexity</td><td>12/15</td><td class="cat-green">Discrete manufacturing across 5 major brands (hydrants, valves, meters, leak-detection tech) with distributor channel, spec-heavy quoting, and Mueller Systems' AMI / meter-data operations. Manufacturing Cloud spreadsheets confirmed as gap.</td></tr>
+        <tr><td>Vertical Fit</td><td>12/15</td><td class="cat-green">Discrete industrial manufacturing with distributor + municipal / utility buyer base — OTC, quote-to-order, and warranty processes are naturally event-log-rich.</td></tr>
+        <tr><td>Deal Size Potential</td><td>7/10</td><td class="cat-green">~$1.3B revenue, ~2,600 employees, $510k INFA MDM already in flight, MAF sized at $75–200k — solid mid-market AFPI wedge with expansion room across subsidiaries.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Compliance / Regulatory Wedge</td><td>5/10</td><td class="cat-orange">SOX applies (public company, Chief Audit Executive + Senior IT Audit Manager present) but no headline regulator — Compliance Center is not the primary wedge.</td></tr>
+        <tr><td>Salesforce Footprint</td><td>7/10</td><td class="cat-orange">Sales Cloud + Pardot + MuleSoft confirmed, but Microsoft-Copilot-first posture means AgentForce is contested — need to win the Agent Fabric evaluation before broader footprint expands.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p><strong>Topline POV:</strong> Apromore can help Mueller Water Products, Inc. by mining the exact quote-to-order and project-execution processes Adam Dahlheim's Salesforce case study already spotlights (10→6 day quoting) — turning that early-win story into a documented target-state process the CIO's team can defend against Microsoft Copilot, wrap around the active $510k Informatica MDM program, and scale across Mueller Co., Mueller Systems, and Henry Pratt without a two-specialist Celonis-style rollout.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Configure-Price-Quote &amp; Spec-Sheet Cycle Time (Extend the Dahlheim Win)</summary>
+    <div class="use-case-body">
+      <p>Mueller has a public Salesforce case study that quoting time was cut from 10 to 6 days by eliminating duplicate entry across systems. AFPI mines the underlying Sales Cloud + configurator + ERP events to expose the remaining variants — pricing overrides, spec exceptions, distributor rework — and gives the team a defensible target-state process instead of a one-time re-platforming win. Metric moved: quote cycle time (from 6 days toward 3), rep hours per quote.</p>
+      <p><strong>Key System(s):</strong> Sales Cloud, Configurator (TBD), ERP (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Adam+Dahlheim+Mueller+Water+Products">Adam Dahlheim</a> (Salesforce case-study lead, Mueller)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Procure-to-Pay &amp; Supplier Master Data Adjacency (MDM Wedge)</summary>
+    <div class="use-case-body">
+      <p>The active $510k Informatica MDM opportunity confirms master-data pain across suppliers and product hierarchy. AFPI mines the actual P2P event log — PR → PO → GR → invoice — to prove where duplicate suppliers, off-catalog buys, and manual approvals leak margin, feeding the MDM program with process-level evidence rather than competing with it. Metric moved: PO cycle time, off-catalog spend %.</p>
+      <p><strong>Key System(s):</strong> Informatica MDM (in-flight), ERP AP (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=viswa+avireddi+Mueller+Water+Products">viswa avireddi</a> (Director, Enterprise Data Engineering)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Manufacturing Run-Rate Visibility (Replace the Spreadsheets)</summary>
+    <div class="use-case-body">
+      <p>The March 2026 field note from Mrunal Doddanavar (Director, Sales &amp; Customer Experience Systems) confirms Mueller tracks its run-rate business in spreadsheets and is evaluating Manufacturing Cloud + Advanced Analytics + Data Foundations. AFPI mines shop-floor + Sales Cloud events to show where run-rate demand actually flows through the plants versus how it is being reported — the natural analytics wedge that makes Manufacturing Cloud land faster. Metric moved: forecast-to-actual variance, cycle time by product family.</p>
+      <p><strong>Key System(s):</strong> Sales Cloud, MES / Shop-Floor (TBD), planned Manufacturing Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mrunal+Doddanavar+Mueller+Water+Products">Mrunal Doddanavar</a> (Director, Sales &amp; Customer Experience Systems)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. AgentForce vs Copilot Bake-Off: Agent Fabric Governance Backed by Process Mining</summary>
+    <div class="use-case-body">
+      <p>Mueller is a Microsoft-Copilot-approved shop actively evaluating AgentForce, with a $75–200k MAF (Managed Agent Fabric) deal in early stage. AFPI is the natural companion — it gives the CIO the event-log evidence for which processes agents should touch first, which are too variant-heavy to safely automate, and where human handoffs must remain. Positioning AFPI + Agent Fabric together makes the Salesforce agent story materially stronger than a Copilot-only path. Metric moved: agent-ready process coverage, safe automation rate.</p>
+      <p><strong>Key System(s):</strong> Agent Fabric (evaluating), AgentForce, Microsoft Copilot (incumbent)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Andy+Davies+Mueller+Water+Products">Andy Davies</a> (Chief Information Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. SOX &amp; Internal Audit — Process-Level Control Evidence</summary>
+    <div class="use-case-body">
+      <p>Mueller is a public company with a full audit function: Chief Audit Executive Gregory Kirkland and Senior IT Audit Manager Gus Orologas. AFPI turns SOX narratives into evidenced process maps — segregation-of-duties variants, journal-entry approval loops, IT change-control paths — giving Internal Audit a live view instead of quarterly walkthroughs. Metric moved: audit prep hours, control-testing coverage.</p>
+      <p><strong>Key System(s):</strong> ERP (TBD), Sales Cloud, IT change-mgmt (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Gregory+Kirkland+Mueller+Water+Products">Gregory Kirkland</a> (VP, Internal Audit &amp; Chief Audit Executive)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
+  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, or UiPath at this account. Primary competitive dynamic is Microsoft Copilot (approved incumbent) vs AgentForce for the agent-orchestration layer.</p>
+
+  <div class="actions">
+    <span class="disabled">Generate PDF</span>
+    <span class="disabled">Generate Slack Canvas</span>
+    <span class="disabled">Generate Vercel Page</span>
+    <span class="disabled">Generate Customer Email (Beta)</span>
+    <span class="disabled">Generate Proposal Template</span>
+    <span class="disabled">Deal Support Request</span>
+    <span class="disabled">Deeper Dive POV</span>
+  </div>
+  <footer class="fine">
+    Prepared by AproVista &nbsp;|&nbsp; Created by
+    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
+    &nbsp;|&nbsp; 2026-07-03 &nbsp;|&nbsp; Confidence: Med
+  </footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

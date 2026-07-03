@@ -7,25 +7,33 @@
 <style>
   body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
          color: #1a1a1a; line-height: 1.45; background: #fff; }
-  .banner { background: #001558; padding: 18px 0; }
+  .banner { background: #fff; padding: 14px 0 4px; }
   .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
-                  display: flex; align-items: center; justify-content: space-between; }
-  .banner img { height: 72px; width: auto; flex-shrink: 0; display: block; }
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
   .lib-wrap { position: relative; }
-  .lib-btn { background: rgba(255,255,255,.15); color: #fff;
-             border: 1px solid rgba(255,255,255,.35); padding: 7px 13px;
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
              border-radius: 6px; cursor: pointer; font-size: .85em;
              font-family: inherit; white-space: nowrap; }
-  .lib-btn:hover { background: rgba(255,255,255,.25); }
+  .lib-btn:hover { background: #dde3f0; }
   .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
               background: #fff; border-radius: 8px;
-              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 260px; z-index: 100; }
-  .lib-menu.open { display: block; }
-  .lib-menu a { display: block; padding: 8px 15px; color: #032d60;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
                 text-decoration: none; font-size: .87em;
                 border-bottom: 1px solid #f0f4ff; }
-  .lib-menu a:last-child { border-bottom: none; }
-  .lib-menu a:hover { background: #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
   main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
   h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
        margin: 0 0 10px; font-size: 1.85em; }
@@ -36,12 +44,23 @@
   strong { color: #032d60; }
   a { color: #0070d2; }
   table { border-collapse: collapse; width: 100%; margin: 4px 0; }
-  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
   th { background: #f0f4ff; font-weight: 600; }
-  td:last-child { text-align: right; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
-            margin: 4px 0; background: #f9fbff; }
+            margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
   hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
   .fine { text-align: center; color: #aaa; font-size: .75em;
           margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
@@ -54,12 +73,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-    background: #f0f4ff; color: #032d60; text-decoration: none;
-    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
-  .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
-  .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
-    cursor: not-allowed; }
+  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
+                  cursor: not-allowed; white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -67,8 +83,14 @@
   <div class="banner-inner">
     <img src="/banner-logo.png" alt="AproVista">
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library &#9662;</button>
-      <div class="lib-menu" id="libMenu"></div>
+      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
     </div>
   </div>
 </header>
@@ -77,45 +99,97 @@
   <div class="snapshot">
     <p><strong>Financial Services, Diversified Banking &amp; Asset Management</strong></p>
     <p><strong>Revenue:</strong> A$17.2B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~20,600 &nbsp;|&nbsp; <strong>HQ:</strong> Sydney, Australia</p>
-    <p><strong>Current Salesforce Products:</strong> Financial Services Cloud, Sales Cloud (Full CRM), Org Permission licensing [Org62]</p>
+    <p><strong>Current Salesforce Products:</strong> Financial Services Cloud, Sales Cloud (Full CRM), Org Permission licensing</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Nicole+Sorbara+Macquarie">Nicole Sorbara</a> (COO)]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> </p>
-    <p><strong>AFPI AE:</strong> TBH</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> None currently qualified</p>
+    <p><strong>Apromore AE:</strong> TBH</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U08AZBRA93L">Fredrik Mark Taiño</a></p>
+    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
     <p><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Financial Services Cloud)</p>
   </div>
 
   <details>
-    <summary>Propensity to Buy: 84/100 &mdash; T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">84/100</span> — T1 Pursue</summary>
     <table>
-      <tr><th>Category</th><th>Score</th></tr>
-      <tr><td>Process Complexity &amp; Scale</td><td>14/15</td></tr>
-      <tr><td>Regulatory / Compliance Pressure</td><td>14/15</td></tr>
-      <tr><td>Digital Transformation Momentum</td><td>12/15</td></tr>
-      <tr><td>Salesforce Footprint &amp; Wedge Fit</td><td>11/15</td></tr>
-      <tr><td>Buyer Access &amp; Titles Present</td><td>11/15</td></tr>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Process Complexity &amp; Scale</td><td>14/15</td><td class="cat-green">Diversified bank + A$920B AUM asset manager + global CGM trading = enterprise-grade process sprawl.</td></tr>
+        <tr><td>Regulatory / Compliance Pressure</td><td>14/15</td><td class="cat-green">APRA, ASIC, AUSTRAC AML/CTF, RG 271 complaints, plus CSDR/EMIR/Dodd-Frank/T+1 on the CGM side.</td></tr>
+        <tr><td>Digital Transformation Momentum</td><td>12/15</td><td class="cat-green">Fastest-growing mortgage lender in AU (13.1% share) with active FSC + Sales Cloud rollout.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Wedge Fit</td><td>11/15</td><td class="cat-orange">FSC + Sales Cloud in production — solid wedge, but not yet a broad multi-cloud footprint.</td></tr>
+        <tr><td>Buyer Access &amp; Titles Present</td><td>11/15</td><td class="cat-orange">Named COO, CRO, and division heads reachable — no confirmed process-mining champion yet.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Salesforce Footprint &amp; Wedge Fit</td><td>11/15</td><td class="cat-orange">FSC + Sales Cloud in production — solid wedge, but not yet a broad multi-cloud footprint.</td></tr>
+        <tr><td>Buyer Access &amp; Titles Present</td><td>11/15</td><td class="cat-orange">Named COO, CRO, and division heads reachable — no confirmed process-mining champion yet.</td></tr>
+      </tbody>
     </table>
   </details>
 
+  <p><strong>Topline POV:</strong> Apromore can help Macquarie Group Limited by mining the mortgage-origination and KYC/onboarding event logs on top of Financial Services Cloud to defend its ~1-day unconditional-approval lead, cut retail onboarding TAT from 10-15 days toward &lt;48 hours, and produce the audit-ready process view APRA and ASIC increasingly demand under RG 271.</p>
+
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
-  <p><strong>1. Retail Client Onboarding &amp; KYC Refresh (Macquarie Bank / BFS).</strong> Onboarding a new retail or private-wealth client at Macquarie touches origination, identity verification, AUSTRAC AML/CTF checks, sanctions screening, and periodic KYC refresh &mdash; a process routinely audited by APRA and ASIC. AFPI mines the FSC + core banking event log to expose rework loops, aged cases waiting on document upload, and screening false-positive queues; the pain is 10-15 day median TAT vs. a fintech benchmark of &lt;48 hours. The metric moved is straight-through-processing rate on new accounts and days-to-first-transaction. Champion: <a href="https://www.linkedin.com/search/results/people/?keywords=Greg+Ward+Macquarie">Greg Ward</a> (Head of Banking &amp; Financial Services Group).</p>
+  <details>
+    <summary>1. Retail Client Onboarding &amp; KYC Refresh (Macquarie Bank / BFS)</summary>
+    <div class="use-case-body">
+      <p>Onboarding a new retail or private-wealth client at Macquarie touches origination, identity verification, AUSTRAC AML/CTF checks, sanctions screening, and periodic KYC refresh — a process routinely audited by APRA and ASIC. AFPI mines the FSC + core banking event log to expose rework loops, aged cases waiting on document upload, and screening false-positive queues; the pain is 10-15 day median TAT vs. a fintech benchmark of &lt;48 hours. The metric moved is straight-through-processing rate on new accounts and days-to-first-transaction.</p>
+      <p><strong>Key System(s):</strong> Financial Services Cloud, Core Banking Platform (TBD), AML/KYC Screening Tool (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Greg+Ward+Macquarie">Greg Ward</a> (Head of Banking &amp; Financial Services Group)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>2. Mortgage Origination &amp; Broker Workflow (Macquarie Home Loans).</strong> Macquarie is the fastest-growing mortgage lender in Australia (13.1% market share, FY25) and 100% broker-distributed, which makes origination cycle time a direct competitive weapon. AFPI mines the loan-origination event log across broker submission &rarr; credit assessment &rarr; valuation &rarr; formal approval &rarr; settlement, exposing the exact hand-offs and rework causing lost deals; today Macquarie touts ~1 business day unconditional approval and needs to defend that. The metric moved is time-to-formal-approval and application withdrawal rate. Champion: <a href="https://www.linkedin.com/search/results/people/?keywords=Ben+Perham+Macquarie">Ben Perham</a> (Head of Personal Banking).</p>
+  <details>
+    <summary>2. Mortgage Origination &amp; Broker Workflow (Macquarie Home Loans)</summary>
+    <div class="use-case-body">
+      <p>Macquarie is the fastest-growing mortgage lender in Australia (13.1% market share, FY25) and 100% broker-distributed, which makes origination cycle time a direct competitive weapon. AFPI mines the loan-origination event log across broker submission → credit assessment → valuation → formal approval → settlement, exposing the exact hand-offs and rework causing lost deals; today Macquarie touts ~1 business day unconditional approval and needs to defend that. The metric moved is time-to-formal-approval and application withdrawal rate.</p>
+      <p><strong>Key System(s):</strong> Loan Origination System (TBD), Financial Services Cloud, Broker Portal (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ben+Perham+Macquarie">Ben Perham</a> (Head of Personal Banking)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>3. Trade Lifecycle &amp; Exceptions in Commodities &amp; Global Markets (CGM).</strong> CGM runs a globally-distributed commodities and financial-markets trading business (energy, metals, fixed income, FX) where trade capture, confirmation, settlement, and margin management involve dozens of systems and CSDR / EMIR / Dodd-Frank / T+1 reporting obligations. AFPI mines the trade event stream to surface break patterns, aging confirmations, and manual-touch settlements before they become P&amp;L or regulatory hits &mdash; the classic Celonis flagship use case, delivered in weeks instead of quarters. The metric moved is same-day-affirmation rate and operational risk loss events. Champion: <a href="https://www.linkedin.com/search/results/people/?keywords=Simon+Wright+Macquarie">Simon Wright</a> (Head of CGM COO / Operations).</p>
+  <details>
+    <summary>3. Trade Lifecycle &amp; Exceptions in Commodities &amp; Global Markets (CGM)</summary>
+    <div class="use-case-body">
+      <p>CGM runs a globally-distributed commodities and financial-markets trading business (energy, metals, fixed income, FX) where trade capture, confirmation, settlement, and margin management involve dozens of systems and CSDR / EMIR / Dodd-Frank / T+1 reporting obligations. AFPI mines the trade event stream to surface break patterns, aging confirmations, and manual-touch settlements before they become P&amp;L or regulatory hits — the classic Celonis flagship use case, delivered in weeks instead of quarters. The metric moved is same-day-affirmation rate and operational risk loss events.</p>
+      <p><strong>Key System(s):</strong> Trade Capture / OMS (TBD), Settlement Platform (TBD), Regulatory Reporting Engine (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Simon+Wright+Macquarie">Simon Wright</a> (Head of CGM COO / Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>4. Asset Management Client Servicing &amp; Fund Ops (MAM).</strong> Macquarie Asset Management runs A$920B AUM across public and private markets, with client onboarding, subscription/redemption processing, statement generation, and manager-of-manager oversight spread across custodians, TAs, and internal platforms. AFPI mines the client-servicing event log to expose rework in NAV escalations, late statements, and institutional client requests; the pain is retention risk on the private markets book and audit exposure. The metric moved is on-time NAV publication and institutional client NPS. Champion: <a href="https://www.linkedin.com/search/results/people/?keywords=Ben+Way+Macquarie">Ben Way</a> (Head of Macquarie Asset Management).</p>
+  <details>
+    <summary>4. Asset Management Client Servicing &amp; Fund Ops (MAM)</summary>
+    <div class="use-case-body">
+      <p>Macquarie Asset Management runs A$920B AUM across public and private markets, with client onboarding, subscription/redemption processing, statement generation, and manager-of-manager oversight spread across custodians, TAs, and internal platforms. AFPI mines the client-servicing event log to expose rework in NAV escalations, late statements, and institutional client requests; the pain is retention risk on the private markets book and audit exposure. The metric moved is on-time NAV publication and institutional client NPS.</p>
+      <p><strong>Key System(s):</strong> Fund Accounting / TA Platform (TBD), Financial Services Cloud, Custodian Interfaces (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ben+Way+Macquarie">Ben Way</a> (Head of Macquarie Asset Management)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>5. Complaints, Dispute Handling &amp; Remediation (Group-wide, Compliance Center wedge).</strong> Post-Royal-Commission Australian financial-services players operate under continuous scrutiny; ASIC's RG 271 mandates strict complaints handling SLAs and Macquarie has publicly-disclosed remediation programs in-flight. AFPI + Compliance Center mines the complaint event log across intake channels, triage, root-cause, and remediation payout &mdash; producing the audit-ready process view APRA and ASIC ask for. The metric moved is % complaints resolved within RG 271 timeframe and remediation cycle time. Champion: <a href="https://www.linkedin.com/search/results/people/?keywords=Fiona+Herbert+Macquarie">Fiona Herbert</a> (Chief Risk Officer, Macquarie Bank).</p>
+  <details>
+    <summary>5. Complaints, Dispute Handling &amp; Remediation (Group-wide, Compliance Center wedge)</summary>
+    <div class="use-case-body">
+      <p>Post-Royal-Commission Australian financial-services players operate under continuous scrutiny; ASIC's RG 271 mandates strict complaints handling SLAs and Macquarie has publicly-disclosed remediation programs in-flight. AFPI + Compliance Center mines the complaint event log across intake channels, triage, root-cause, and remediation payout — producing the audit-ready process view APRA and ASIC ask for. The metric moved is % complaints resolved within RG 271 timeframe and remediation cycle time.</p>
+      <p><strong>Key System(s):</strong> Financial Services Cloud, Complaints Case Management (TBD), Compliance Center</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Fiona+Herbert+Macquarie">Fiona Herbert</a> (Chief Risk Officer, Macquarie Bank)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
+  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
 
   <div class="actions">
-    <a href="/macquarie-group.pdf" target="_blank">Generate PDF</a>
-    <a href="https://salesforce.enterprise.slack.com/docs/T026QPGMQ/F0BEA2V9D4N" target="_blank">Generate Slack Canvas</a>
-    <a href="https://aprovista-pov.vercel.app/macquarie-group">Generate Vercel Page</a>
-    <a href="mailto:?subject=AFPI%20POV%20%E2%80%94%20Macquarie%20Group%20Limited&body=See%20POV%3A%20https%3A%2F%2Faprovista-pov.vercel.app%2Fmacquarie-group">Generate Customer Email (Beta)</a>
-    <span class="disabled">Generate Proposal Template (coming soon)</span>
-    <a href="https://salesforce.enterprise.slack.com/archives/apromore-gtm" target="_blank">Deal Support Request</a>
-    <span class="disabled">Deeper Dive POV (coming soon)</span>
+    <span class="disabled">Generate PDF</span>
+    <span class="disabled">Generate Slack Canvas</span>
+    <span class="disabled">Generate Vercel Page</span>
+    <span class="disabled">Generate Customer Email (Beta)</span>
+    <span class="disabled">Generate Proposal Template</span>
+    <span class="disabled">Deal Support Request</span>
+    <span class="disabled">Deeper Dive POV</span>
   </div>
   <footer class="fine">
     Prepared by AproVista &nbsp;|&nbsp; Created by

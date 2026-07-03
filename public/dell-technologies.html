@@ -7,25 +7,33 @@
 <style>
   body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
          color: #1a1a1a; line-height: 1.45; background: #fff; }
-  .banner { background: #001558; padding: 18px 0; }
+  .banner { background: #fff; padding: 14px 0 4px; }
   .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
-                  display: flex; align-items: center; justify-content: space-between; }
-  .banner img { height: 72px; width: auto; flex-shrink: 0; display: block; }
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
   .lib-wrap { position: relative; }
-  .lib-btn { background: rgba(255,255,255,.15); color: #fff;
-             border: 1px solid rgba(255,255,255,.35); padding: 7px 13px;
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
              border-radius: 6px; cursor: pointer; font-size: .85em;
              font-family: inherit; white-space: nowrap; }
-  .lib-btn:hover { background: rgba(255,255,255,.25); }
+  .lib-btn:hover { background: #dde3f0; }
   .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
               background: #fff; border-radius: 8px;
-              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 260px; z-index: 100; }
-  .lib-menu.open { display: block; }
-  .lib-menu a { display: block; padding: 8px 15px; color: #032d60;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
                 text-decoration: none; font-size: .87em;
                 border-bottom: 1px solid #f0f4ff; }
-  .lib-menu a:last-child { border-bottom: none; }
-  .lib-menu a:hover { background: #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
   main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
   h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
        margin: 0 0 10px; font-size: 1.85em; }
@@ -36,12 +44,23 @@
   strong { color: #032d60; }
   a { color: #0070d2; }
   table { border-collapse: collapse; width: 100%; margin: 4px 0; }
-  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
   th { background: #f0f4ff; font-weight: 600; }
-  td:last-child { text-align: right; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
-            margin: 4px 0; background: #f9fbff; }
+            margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
   hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
   .fine { text-align: center; color: #aaa; font-size: .75em;
           margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
@@ -54,12 +73,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-    background: #f0f4ff; color: #032d60; text-decoration: none;
-    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
-  .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
-  .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
-    cursor: not-allowed; }
+  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
+                  cursor: not-allowed; white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -68,56 +84,112 @@
     <img src="/banner-logo.png" alt="AproVista">
     <div class="lib-wrap">
       <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
-      <div class="lib-menu" id="libMenu"></div>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
     </div>
   </div>
 </header>
 <main>
   <h1>Dell Technologies Inc.</h1>
   <div class="snapshot">
-    <p><strong>Technology, Enterprise Hardware & Infrastructure</strong></p>
+    <p><strong>Technology, Enterprise Hardware &amp; Infrastructure</strong></p>
     <p><strong>Revenue:</strong> $95.6B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~108,000 &nbsp;|&nbsp; <strong>HQ:</strong> Round Rock, TX, USA</p>
-    <p><strong>Current Salesforce Products:</strong> Sales Cloud (Unlimited Salesforce Enterprise Subscription), Service Cloud (Field Service, ClickSoftware), CPQ Plus, CPQ for Partner Community, Marketing Cloud (Enterprise + Account Engagement Ultimate), Data Cloud, Einstein for Sales, CRM Analytics Growth, Salesforce Shield, Salesforce Connect, Heroku, Quip for Customer 360, ISVForce Platform, Signature Success Plan</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Regrello (confirmed via active Regrello-to-AFO migration opp), MuleSoft-adjacent legacy integration (confirmed via active MuleSoft Migration opp)</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Dell USA Renewal 1 SFA (<a href="https://org62.my.salesforce.com/006ed00000I3bLeAAJ">$68.3M</a>) | Dell - Agentforce Operations - Expansion (<a href="https://org62.my.salesforce.com/006ed00000ehyBZAAY">$3.84M</a>) | Dell - Agentic Transformation Program (AES Pod) - CSG (<a href="https://org62.my.salesforce.com/006ed00000XnlM9AAJ">$3.7M</a>) | Dell - PEM Transformation Phase 1 - CSG (<a href="https://org62.my.salesforce.com/006ed00000dkbanAAA">$3.0M</a>) | Dell - Regrello to AFO Migration - CSGS (<a href="https://org62.my.salesforce.com/006ed00000djy3BAAQ">$2.5M</a>) | MS - Dell - MuleSoft Migration - CSG (<a href="https://org62.my.salesforce.com/006ed00000djXJ8AAM">$1.99M</a>) | Dell - Agentforce Operations (<a href="https://org62.my.salesforce.com/006ed00000XEwNhAAL">$1.8M</a>) | Dell | Data Cloud for Marketing Cloud (<a href="https://org62.my.salesforce.com/006ed00000Oyf5hAAB">$1.4M</a>)</p>
-    <p><strong>AFPI AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Current Salesforce Products:</strong> Sales Cloud (Unlimited Salesforce Enterprise Subscription), Service Cloud (Field Service, ClickSoftware), CPQ Plus, CPQ for Partner Community, Marketing Cloud (Enterprise + Account Engagement Ultimate), Data Cloud, Einstein for Sales, CRM Analytics Growth, Salesforce Shield, Salesforce Connect, Heroku, Quip for Customer 360, ISVForce Platform, Signature Success Plan, MuleSoft, Informatica</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Regrello (confirmed via active Regrello-to-AFO migration opp)</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Dell USA Renewal 1 SFA (<a href="https://org62.my.salesforce.com/006ed00000I3bLeAAJ">$68.3M</a>) &nbsp;|&nbsp; Dell - Agentforce Operations - Expansion (<a href="https://org62.my.salesforce.com/006ed00000ehyBZAAY">$3.84M</a>) &nbsp;|&nbsp; Dell - Regrello to AFO Migration - CSGS (<a href="https://org62.my.salesforce.com/006ed00000djy3BAAQ">$2.5M</a>)</p>
+    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Salesforce AE:</strong> TBD [field verify]</p>
+    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
     <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details>
-    <summary>Propensity to Buy: 92/100 — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">92/100</span> — T1 Pursue</summary>
     <table>
-      <thead><tr><th>Category</th><th>Score</th></tr></thead>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Active Agentforce Operations Motion</td><td>18/20</td></tr>
-        <tr><td>Process Complexity & Scale</td><td>15/15</td></tr>
-        <tr><td>SF Install Base Strength</td><td>14/15</td></tr>
-        <tr><td>Named Buyer Access (Renewal in Flight)</td><td>13/15</td></tr>
-        <tr><td>Data Readiness (Data Cloud opp active)</td><td>10/10</td></tr>
+        <tr><td>Data Readiness (Data Cloud opp active)</td><td>10/10</td><td class="cat-green">$1.4M Data Cloud for Marketing Cloud opp confirms event-log unification is already funded.</td></tr>
+        <tr><td>Process Complexity &amp; Scale</td><td>15/15</td><td class="cat-green">$95.6B revenue, 108k employees, 70k partner CPQ seats, 12k+ Field Service techs — enormous event surface.</td></tr>
+        <tr><td>Active Agentforce Operations Motion</td><td>18/20</td><td class="cat-green">$3.84M AFO Expansion + $1.8M AFO + Regrello-to-AFO migration in flight — AFPI is the natural pre-agent instrumentation layer.</td></tr>
+        <tr><td>SF Install Base Strength</td><td>14/15</td><td class="cat-green">Sales Cloud, Service Cloud, CPQ Plus, Marketing Cloud, Data Cloud, MuleSoft, Informatica — top-decile SF footprint.</td></tr>
+        <tr><td>Named Buyer Access (Renewal in Flight)</td><td>13/15</td><td class="cat-green">$68.3M SFA renewal in stage 01 forces the exec conversation — Deal Desk and Renewals are open doors.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Named Buyer Access (Renewal in Flight)</td><td>13/15</td><td class="cat-orange">Buyer access exists but named process-mining champion not yet identified inside CSG/ISG.</td></tr>
+        <tr><td>SF Install Base Strength</td><td>14/15</td><td class="cat-green">Only losing 1 pt — footprint is a strength, not a weakness. No true low-scoring category in the top 5.</td></tr>
       </tbody>
     </table>
   </details>
 
+  <p><strong>Topline POV:</strong> Apromore can help Dell Technologies Inc. by mining the Salesforce CPQ, Field Service, and MuleSoft event logs behind its active $3.84M Agentforce Operations expansion — exposing which quote-to-cash and ProSupport dispatch variants actually leak margin so every AFO agent is deployed against a proven, measured process bottleneck rather than a whiteboard hypothesis.</p>
+
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
-  <p><strong>1. Quote-to-Cash cycle time in CSG configure-price-quote.</strong> Dell CSG runs one of the largest CPQ deployments on the platform (70,000 partner-community CPQ seats, 3,750 CPQ Plus internal), and quote velocity directly caps commercial-PC and server bookings. AFPI mines the Salesforce CPQ event log to expose approval bounce-backs, discount-tier re-work, and configuration-rule dead-ends that Regrello workflows have been papering over. The play stacks natively on the in-flight <a href="https://org62.my.salesforce.com/006ed00000djy3BAAQ">Regrello-to-AFO Migration</a> — every rework loop AFPI surfaces becomes a targetable AFO agent — and moves quote-to-order cycle time and discount leakage. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=John+Byrne+Dell+Technologies">John Byrne</a> (President, CSG) as the executive sponsor.</p>
+  <details>
+    <summary>1. Quote-to-Cash cycle time in CSG configure-price-quote</summary>
+    <div class="use-case-body">
+      <p>Dell CSG runs one of the largest CPQ deployments on the platform (70,000 partner-community CPQ seats, 3,750 CPQ Plus internal), and quote velocity directly caps commercial-PC and server bookings. AFPI mines the Salesforce CPQ event log to expose approval bounce-backs, discount-tier re-work, and configuration-rule dead-ends that Regrello workflows have been papering over. The play stacks natively on the in-flight <a href="https://org62.my.salesforce.com/006ed00000djy3BAAQ">Regrello-to-AFO Migration</a> — every rework loop AFPI surfaces becomes a targetable AFO agent — and moves quote-to-order cycle time and discount leakage.</p>
+      <p><strong>Key System(s):</strong> Salesforce CPQ Plus, CPQ for Partner Community, Regrello</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=John+Byrne+Dell+Technologies">John Byrne</a> (President, CSG)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>2. Field Service dispatch and technician utilization (ProSupport).</strong> With 12,000+ Field Service Unlimited seats and legacy ClickSoftware forecasting still on the account, Dell's ProSupport dispatch process is a prime AFPI target: mine the Service Cloud + Field Service event stream to find travel waste, appointment rescheduling loops, and parts-mismatch truck-rolls that AFO's autonomous scheduling can eliminate. Metric moved: first-time-fix rate and technician revenue-hours per week — a 3-point lift on 12k techs is real EBITDA. This is the highest-ROI wedge tied to the <a href="https://org62.my.salesforce.com/006ed00000XEwNhAAL">$1.8M Agentforce Operations</a> deal in stage 5. Champion: <a href="https://www.linkedin.com/search/results/people/?keywords=Doug+Schmitt+Dell+Technologies">Doug Schmitt</a> (President, Services & Digital).</p>
+  <details>
+    <summary>2. Field Service dispatch and technician utilization (ProSupport)</summary>
+    <div class="use-case-body">
+      <p>With 12,000+ Field Service Unlimited seats and legacy ClickSoftware forecasting still on the account, Dell's ProSupport dispatch process is a prime AFPI target: mine the Service Cloud + Field Service event stream to find travel waste, appointment rescheduling loops, and parts-mismatch truck-rolls that AFO's autonomous scheduling can eliminate. Metric moved: first-time-fix rate and technician revenue-hours per week — a 3-point lift on 12k techs is real EBITDA. This is the highest-ROI wedge tied to the <a href="https://org62.my.salesforce.com/006ed00000XEwNhAAL">$1.8M Agentforce Operations</a> deal in stage 5.</p>
+      <p><strong>Key System(s):</strong> Service Cloud, Field Service, ClickSoftware</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Doug+Schmitt+Dell+Technologies">Doug Schmitt</a> (President, Services &amp; Digital)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>3. Renewal & entitlement process for the $68.3M SFA re-up.</strong> Dell's own $68M SFA renewal running in stage 01 is the internal analog of exactly what AFPI mines for its customers — Dell's Deal Desk and Renewals org runs on Salesforce, and internal renewal-cycle friction (approvals, entitlement checks, product-family remaps) is the tell-tale signal that a process-intelligence layer is missing. Position AFPI as the instrumentation for Dell's own SF-on-SF renewal motion, then productize the same mining logic against Dell customer renewals. Metric: forecast-to-close variance and renewal cycle time. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Bill+Scannell+Dell+Technologies">Bill Scannell</a> (President, Global Sales & Customer Ops).</p>
+  <details>
+    <summary>3. Renewal &amp; entitlement process for the $68.3M SFA re-up</summary>
+    <div class="use-case-body">
+      <p>Dell's own $68M SFA renewal running in stage 01 is the internal analog of exactly what AFPI mines for its customers — Dell's Deal Desk and Renewals org runs on Salesforce, and internal renewal-cycle friction (approvals, entitlement checks, product-family remaps) is the tell-tale signal that a process-intelligence layer is missing. Position AFPI as the instrumentation for Dell's own SF-on-SF renewal motion, then productize the same mining logic against Dell customer renewals. Metric: forecast-to-close variance and renewal cycle time.</p>
+      <p><strong>Key System(s):</strong> Sales Cloud, CRM Analytics Growth, Einstein for Sales</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Bill+Scannell+Dell+Technologies">Bill Scannell</a> (President, Global Sales &amp; Customer Ops)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>4. Order orchestration and MuleSoft-migration process transparency.</strong> The active <a href="https://org62.my.salesforce.com/006ed00000djXJ8AAM">$1.99M MuleSoft Migration</a> project rewires Dell's order and fulfillment integration fabric; AFPI reads the MuleSoft + Salesforce event log to surface where orders actually stall (credit-hold, config-hold, backorder, entitlement-lookup) instead of relying on tribal knowledge. Pain today is that Dell's Order Management team can tell you a truck rolled but not why a $200k server config sat 9 days between "Booked" and "Manufactured." AFPI moves order-to-manufacture cycle time and on-time shipment. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Chuck+Whitten+Dell+Technologies">the Global Operations lead</a>.</p>
+  <details>
+    <summary>4. Order orchestration and MuleSoft-migration process transparency</summary>
+    <div class="use-case-body">
+      <p>The active <a href="https://org62.my.salesforce.com/006ed00000djXJ8AAM">$1.99M MuleSoft Migration</a> project rewires Dell's order and fulfillment integration fabric; AFPI reads the MuleSoft + Salesforce event log to surface where orders actually stall (credit-hold, config-hold, backorder, entitlement-lookup) instead of relying on tribal knowledge. Pain today is that Dell's Order Management team can tell you a truck rolled but not why a $200k server config sat 9 days between "Booked" and "Manufactured." AFPI moves order-to-manufacture cycle time and on-time shipment.</p>
+      <p><strong>Key System(s):</strong> MuleSoft, Sales Cloud, Salesforce Connect</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chuck+Whitten+Dell+Technologies">Chuck Whitten</a> (Global Operations lead)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>5. Marketing Cloud + Data Cloud lead-to-opportunity conversion (ISG demand-gen).</strong> The <a href="https://org62.my.salesforce.com/006ed00000Oyf5hAAB">$1.4M Data Cloud for Marketing Cloud</a> opp signals Dell is unifying customer data across ExactTarget Enterprise, Account Engagement Ultimate, and Sales Cloud. AFPI mines the lead-to-opp handoff to expose where MQLs die (SDR-to-AE handoff SLAs, dedupe re-work, campaign-attribution loops) — the exact process gap Marketing Ops teams struggle to see with dashboards alone. Metric moved: MQL-to-SQL conversion and lead-response time. Champion: <a href="https://www.linkedin.com/search/results/people/?keywords=Allison+Dew+Dell+Technologies">the CMO / ISG marketing ops lead</a>.</p>
+  <details>
+    <summary>5. Marketing Cloud + Data Cloud lead-to-opportunity conversion (ISG demand-gen)</summary>
+    <div class="use-case-body">
+      <p>The <a href="https://org62.my.salesforce.com/006ed00000Oyf5hAAB">$1.4M Data Cloud for Marketing Cloud</a> opp signals Dell is unifying customer data across ExactTarget Enterprise, Account Engagement Ultimate, and Sales Cloud. AFPI mines the lead-to-opp handoff to expose where MQLs die (SDR-to-AE handoff SLAs, dedupe re-work, campaign-attribution loops) — the exact process gap Marketing Ops teams struggle to see with dashboards alone. Metric moved: MQL-to-SQL conversion and lead-response time.</p>
+      <p><strong>Key System(s):</strong> Marketing Cloud, Data Cloud, Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Allison+Dew+Dell+Technologies">Allison Dew</a> (CMO / ISG marketing ops lead)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
+  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
 
   <div class="actions">
-    <a href="/dell-technologies.pdf" target="_blank">Generate PDF</a>
-    <a href="https://salesforce.enterprise.slack.com/docs/T026QPGMQ/F0BF6DJ6CQ0" target="_blank">Generate Slack Canvas</a>
-    <a href="https://aprovista-pov.vercel.app/dell-technologies">Generate Vercel Page</a>
-    <a href="mailto:?subject=AFPI%20POV%20%E2%80%94%20Dell%20Technologies%20Inc.&body=https://aprovista-pov.vercel.app/dell-technologies">Generate Customer Email (Beta)</a>
-    <span class="disabled">Generate Proposal Template (coming soon)</span>
-    <a href="https://salesforce.enterprise.slack.com/archives/apromore-gtm" target="_blank">Deal Support Request</a>
-    <span class="disabled">Deeper Dive POV (coming soon)</span>
+    <span class="disabled">Generate PDF</span>
+    <span class="disabled">Generate Slack Canvas</span>
+    <span class="disabled">Generate Vercel Page</span>
+    <span class="disabled">Generate Customer Email (Beta)</span>
+    <span class="disabled">Generate Proposal Template</span>
+    <span class="disabled">Deal Support Request</span>
+    <span class="disabled">Deeper Dive POV</span>
   </div>
   <footer class="fine">
     Prepared by AproVista &nbsp;|&nbsp; Created by

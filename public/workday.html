@@ -19,13 +19,21 @@
   .lib-btn:hover { background: #dde3f0; }
   .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
               background: #fff; border-radius: 8px;
-              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 260px; z-index: 100; }
-  .lib-menu.open { display: block; }
-  .lib-menu a { display: block; padding: 8px 15px; color: #032d60;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
                 text-decoration: none; font-size: .87em;
                 border-bottom: 1px solid #f0f4ff; }
-  .lib-menu a:last-child { border-bottom: none; }
-  .lib-menu a:hover { background: #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
   main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
   h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
        margin: 0 0 10px; font-size: 1.85em; }
@@ -36,12 +44,23 @@
   strong { color: #032d60; }
   a { color: #0070d2; }
   table { border-collapse: collapse; width: 100%; margin: 4px 0; }
-  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
   th { background: #f0f4ff; font-weight: 600; }
-  td:last-child { text-align: right; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
-            margin: 4px 0; background: #f9fbff; }
+            margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
   hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
   .fine { text-align: center; color: #aaa; font-size: .75em;
           margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
@@ -54,12 +73,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-    background: #f0f4ff; color: #032d60; text-decoration: none;
-    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
-  .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
-  .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
-    cursor: not-allowed; }
+  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
+                  cursor: not-allowed; white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -67,8 +83,14 @@
   <div class="banner-inner">
     <img src="/banner-logo.png" alt="AproVista">
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library &#9662;</button>
-      <div class="lib-menu" id="libMenu"></div>
+      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
     </div>
   </div>
 </header>
@@ -77,54 +99,103 @@
   <div class="snapshot">
     <p><strong>Technology, Enterprise Application Software (HCM &amp; Financials)</strong></p>
     <p><strong>Revenue:</strong> $7.26B (FY2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~19,900 &nbsp;|&nbsp; <strong>HQ:</strong> Pleasanton, CA, USA</p>
+    <p><strong>Major Subsidiaries:</strong> Evisort, Sana Labs, HiredScore</p>
     <p><strong>Current Salesforce Products:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Rani+Johnson+Workday">Rani Johnson</a> (CIO)]</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Workday HCM, Workday Financial Management, Workday Illuminate, Sana AI (acquired 2025)</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> </p>
-    <p><strong>AFPI AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> None qualifying — no AFPI-adjacent motion in pipeline.</p>
+    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G8P78D8B">Michael Filice</a></p>
+    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
     <p><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
   </div>
 
   <details>
-    <summary>Propensity to Buy: 16/100 &mdash; T4 Deprioritize</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t3">16/100</span> — T4 Deprioritize</summary>
     <table>
-      <thead><tr><th>Category</th><th>Score</th></tr></thead>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Regulated / compliance driver</td><td>5/10</td></tr>
-        <tr><td>Vertical / process complexity fit</td><td>4/15</td></tr>
-        <tr><td>Digital transformation signal</td><td>4/10</td></tr>
-        <tr><td>Buyer titles present</td><td>3/10</td></tr>
-        <tr><td>Deal economics / propensity</td><td>3/15</td></tr>
+        <tr><td>Regulated / compliance driver</td><td>5/10</td><td class="cat-orange">SOX and privacy regimes apply, but no external audit driver forcing third-party process telemetry.</td></tr>
+        <tr><td>Digital transformation signal</td><td>4/10</td><td class="cat-orange">Illuminate + Sana AI acquisition show clear AI ambition — but all in-house, not vendor-led.</td></tr>
+        <tr><td>Vertical / process complexity fit</td><td>4/15</td><td class="cat-red">Enterprise SaaS runs its own product; process mining an HCM/FIN vendor with its own analytics is a poor fit.</td></tr>
+        <tr><td>Buyer titles present</td><td>3/10</td><td class="cat-red">CIO known, but no process-explicit COE, transformation, or operations excellence titles surfaced in Org62.</td></tr>
+        <tr><td>Deal economics / propensity</td><td>3/15</td><td class="cat-red">Direct competitor posture and in-house Illuminate stack collapse any near-term commercial path.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Deal economics / propensity</td><td>3/15</td><td class="cat-red">Direct competitor posture and in-house Illuminate stack collapse any near-term commercial path.</td></tr>
+        <tr><td>Buyer titles present</td><td>3/10</td><td class="cat-red">CIO known, but no process-explicit COE, transformation, or operations excellence titles surfaced in Org62.</td></tr>
       </tbody>
     </table>
-    <p style="font-size:.85em;color:#666;margin-top:6px;">Red-flag deduction applied: <strong>-10</strong> (direct competitor &mdash; Workday is Salesforce&rsquo;s #1 HCM/Financials rival and ships its own agentic AI + process-analytics stack via Illuminate and the Sana AI acquisition).</p>
+    <p style="font-size:.85em;color:#666;margin-top:6px;">Red-flag deduction applied: <strong>-10</strong> (direct competitor — Workday is Salesforce's #1 HCM/Financials rival and ships its own agentic AI + process-analytics stack via Illuminate and the Sana AI acquisition).</p>
   </details>
 
+  <p><strong>Topline POV:</strong> Apromore can help Workday, Inc. by monitoring — not selling — the account until a structural shift (Illuminate deprecation, external audit mandate, or joint-customer telemetry request) opens a lawful path, given the direct competitive posture and Workday's in-house process-intelligence stack.</p>
+
   <div class="nurture-box">
-    <p><strong>Why not now:</strong> Workday is a direct Salesforce competitor and one of the largest builders of enterprise process-intelligence and agentic-AI technology in the world. Selling AFPI here is neither a viable transaction nor a strategic fit &mdash; and any discovery would expose Salesforce process telemetry to a rival with an active CRM ambition.</p>
+    <p><strong>Why not now:</strong> Workday is a direct Salesforce competitor and one of the largest builders of enterprise process-intelligence and agentic-AI technology in the world. Selling AFPI here is neither a viable transaction nor a strategic fit — and any discovery would expose Salesforce process telemetry to a rival with an active CRM ambition.</p>
   </div>
 
   <h2>Nurture / Disqualify Analysis</h2>
 
-  <p><strong>1. Competitive posture.</strong> Workday competes head-to-head with Salesforce across Financial Services Cloud, HR Service Delivery (Employee Service via Slack + Data Cloud), and increasingly Sales/Service Cloud through its 2025 <a href="https://www.workday.com/en-us/company/newsroom/press-releases/detail.html?id=workday-agrees-to-acquire-sana-to-accelerate-vision-for-agentic-ai.html">$1.1B Sana AI acquisition</a>. Their agentic-AI roadmap (Workday Illuminate + Sana) is explicitly a bid to encroach on CRM turf. AFPI would be a foreign implant inside a hostile stack.</p>
+  <details>
+    <summary>1. Competitive posture</summary>
+    <div class="use-case-body">
+      <p>Workday competes head-to-head with Salesforce across Financial Services Cloud, HR Service Delivery (Employee Service via Slack + Data Cloud), and increasingly Sales/Service Cloud through its 2025 <a href="https://www.workday.com/en-us/company/newsroom/press-releases/detail.html?id=workday-agrees-to-acquire-sana-to-accelerate-vision-for-agentic-ai.html">$1.1B Sana AI acquisition</a>. Their agentic-AI roadmap (Workday Illuminate + Sana) is explicitly a bid to encroach on CRM turf. AFPI would be a foreign implant inside a hostile stack.</p>
+      <p><strong>Key System(s):</strong> Workday Illuminate, Sana AI, Workday HCM</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rani+Johnson+Workday">Rani Johnson</a> (CIO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>2. In-house process mining already shipping.</strong> Workday Illuminate is trained on 800B+ business transactions and mines the same Workday process substrate AFPI would target. Extending Workday with an external process-mining vendor &mdash; particularly one owned by Salesforce &mdash; is culturally and commercially implausible.</p>
+  <details>
+    <summary>2. In-house process mining already shipping</summary>
+    <div class="use-case-body">
+      <p>Workday Illuminate is trained on 800B+ business transactions and mines the same Workday process substrate AFPI would target. Extending Workday with an external process-mining vendor — particularly one owned by Salesforce — is culturally and commercially implausible. The build-vs-buy verdict is already settled and shipping.</p>
+      <p><strong>Key System(s):</strong> Workday Illuminate, Workday HCM, Workday Financial Management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rani+Johnson+Workday">Rani Johnson</a> (CIO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>3. Data-access asymmetry.</strong> Any AFPI engagement would require Workday to hand event logs of its Procure-to-Pay, Hire-to-Retire, and Record-to-Report processes to Salesforce infrastructure. The reverse-hostage risk (competitor telemetry inside Salesforce Data Cloud) makes a lawful, mutually agreeable data-share unrealistic without an M&amp;A-grade agreement.</p>
+  <details>
+    <summary>3. Data-access asymmetry</summary>
+    <div class="use-case-body">
+      <p>Any AFPI engagement would require Workday to hand event logs of its Procure-to-Pay, Hire-to-Retire, and Record-to-Report processes to Salesforce infrastructure. The reverse-hostage risk — competitor telemetry inside Salesforce Data Cloud — makes a lawful, mutually agreeable data-share unrealistic without an M&amp;A-grade agreement.</p>
+      <p><strong>Key System(s):</strong> Workday Financial Management, Workday HCM, Salesforce Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rani+Johnson+Workday">Rani Johnson</a> (CIO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>4. No qualifying open pipeline.</strong> Org62 shows one open opportunity (PBO placeholder, $0) with no product attach and no AFPI-adjacent motion. There is no funded initiative, no exec sponsor, and no compliance trigger inside Salesforce&rsquo;s reach.</p>
+  <details>
+    <summary>4. No qualifying open pipeline</summary>
+    <div class="use-case-body">
+      <p>Org62 shows one open opportunity (PBO placeholder, $0) with no product attach and no AFPI-adjacent motion. There is no funded initiative, no exec sponsor, and no compliance trigger inside Salesforce's reach. Nothing to attach a process-mining wedge to.</p>
+      <p><strong>Key System(s):</strong> TBD</p>
+      <p><strong>Key Contact:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G8P78D8B">Michael Filice</a> (Named Account Executive)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>5. What would need to change (long-term signal to monitor).</strong> A meaningful shift would require (a) Workday publicly deprecating a homegrown analytics capability, (b) a regulatory event forcing a third-party audit trail on Workday-owned processes, or (c) a partnership overture from Workday IT on shared customer telemetry &mdash; e.g. joint customers standardizing on Salesforce as system-of-engagement over Workday HCM. Route any such signal to <a href="https://www.linkedin.com/search/results/people/?keywords=Charlie+Stuard+Salesforce">Charlie Stuard</a> and re-score.</p>
+  <details>
+    <summary>5. What would need to change (long-term signal to monitor)</summary>
+    <div class="use-case-body">
+      <p>A meaningful shift would require (a) Workday publicly deprecating a homegrown analytics capability, (b) a regulatory event forcing a third-party audit trail on Workday-owned processes, or (c) a partnership overture from Workday IT on shared customer telemetry — e.g. joint customers standardizing on Salesforce as system-of-engagement over Workday HCM. Route any such signal to the Apromore AE and re-score.</p>
+      <p><strong>Key System(s):</strong> Workday HCM, Workday Financial Management, Salesforce Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a> (Apromore AE, North America)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>Recommendation:</strong> Do not pursue. Monitor for partnership or joint-customer signals only. Any inbound must be filtered through Salesforce Competitive Intelligence before engaging.</p>
+  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
+  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
 
   <div class="actions">
-    <a href="/workday.pdf" target="_blank">Generate PDF</a>
-    <a href="https://salesforce.enterprise.slack.com/docs/T026QPGMQ/F0BEX1B243W" target="_blank">Generate Slack Canvas</a>
-    <a href="https://aprovista-pov.vercel.app/workday">Generate Vercel Page</a>
-    <a href="mailto:?subject=AFPI%20POV%20%E2%80%94%20Workday%2C%20Inc.&body=See%20the%20full%20POV%3A%20https%3A%2F%2Faprovista-pov.vercel.app%2Fworkday">Generate Customer Email (Beta)</a>
-    <span class="disabled">Generate Proposal Template (coming soon)</span>
-    <a href="https://salesforce.enterprise.slack.com/archives/apromore-gtm" target="_blank">Deal Support Request</a>
-    <span class="disabled">Deeper Dive POV (coming soon)</span>
+    <span class="disabled">Generate PDF</span>
+    <span class="disabled">Generate Slack Canvas</span>
+    <span class="disabled">Generate Vercel Page</span>
+    <span class="disabled">Generate Customer Email (Beta)</span>
+    <span class="disabled">Generate Proposal Template</span>
+    <span class="disabled">Deal Support Request</span>
+    <span class="disabled">Deeper Dive POV</span>
   </div>
   <footer class="fine">
     Prepared by AproVista &nbsp;|&nbsp; Created by
@@ -133,8 +204,5 @@
   </footer>
 </main>
 <script src="/library.js"></script>
-<script>
-function toggleLib(){document.getElementById('libMenu').classList.toggle('open');}
-</script>
 </body>
 </html>

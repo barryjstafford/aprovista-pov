@@ -7,25 +7,33 @@
 <style>
   body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
          color: #1a1a1a; line-height: 1.45; background: #fff; }
-  .banner { background: #001558; padding: 18px 0; }
+  .banner { background: #fff; padding: 14px 0 4px; }
   .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
-                  display: flex; align-items: center; justify-content: space-between; }
-  .banner img { height: 72px; width: auto; flex-shrink: 0; display: block; }
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
   .lib-wrap { position: relative; }
-  .lib-btn { background: rgba(255,255,255,.15); color: #fff;
-             border: 1px solid rgba(255,255,255,.35); padding: 7px 13px;
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
              border-radius: 6px; cursor: pointer; font-size: .85em;
              font-family: inherit; white-space: nowrap; }
-  .lib-btn:hover { background: rgba(255,255,255,.25); }
+  .lib-btn:hover { background: #dde3f0; }
   .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
               background: #fff; border-radius: 8px;
-              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 260px; z-index: 100; }
-  .lib-menu.open { display: block; }
-  .lib-menu a { display: block; padding: 8px 15px; color: #032d60;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
                 text-decoration: none; font-size: .87em;
                 border-bottom: 1px solid #f0f4ff; }
-  .lib-menu a:last-child { border-bottom: none; }
-  .lib-menu a:hover { background: #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
   main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
   h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
        margin: 0 0 10px; font-size: 1.85em; }
@@ -36,12 +44,23 @@
   strong { color: #032d60; }
   a { color: #0070d2; }
   table { border-collapse: collapse; width: 100%; margin: 4px 0; }
-  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
   th { background: #f0f4ff; font-weight: 600; }
-  td:last-child { text-align: right; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
-            margin: 4px 0; background: #f9fbff; }
+            margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
   hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
   .fine { text-align: center; color: #aaa; font-size: .75em;
           margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
@@ -54,12 +73,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-    background: #f0f4ff; color: #032d60; text-decoration: none;
-    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
-  .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
-  .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
-    cursor: not-allowed; }
+  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
+                  cursor: not-allowed; white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -67,8 +83,14 @@
   <div class="banner-inner">
     <img src="/banner-logo.png" alt="AproVista">
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library &#9662;</button>
-      <div class="lib-menu" id="libMenu"></div>
+      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
     </div>
   </div>
 </header>
@@ -76,48 +98,99 @@
   <h1>Manulife Financial Corporation</h1>
   <div class="snapshot">
     <p><strong>Financial Services, Insurance &amp; Wealth Management</strong></p>
-    <p><strong>Revenue:</strong> ~CAD $60B &nbsp;|&nbsp; <strong>Employees:</strong> 38,000+ globally (18,000 in this Org62 record) &nbsp;|&nbsp; <strong>HQ:</strong> Toronto, Canada</p>
+    <p><strong>Revenue:</strong> ~CAD $60B &nbsp;|&nbsp; <strong>Employees:</strong> 38,000+ globally &nbsp;|&nbsp; <strong>HQ:</strong> Toronto, Canada</p>
+    <p><strong>Major Subsidiaries:</strong> John Hancock Financial, Manulife Investment Management, Manulife Bank of Canada, Manulife-Sinochem Life Insurance</p>
     <p><strong>Current Salesforce Products:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Information+Officer+Manulife">the CIO's office</a>]</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Information+Officer+Manulife">the CIO's office</a>]</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> </p>
-    <p><strong>AFPI AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Salesforce AE:</strong> TBD [field verify]</p>
+    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
     <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details>
-    <summary>Propensity to Buy: 78/100 &mdash; T2 Develop</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">78/100</span> — T2 Develop</summary>
     <table>
-      <thead><tr><th>Category</th><th>Score</th></tr></thead>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Vertical Fit (Insurance)</td><td>18/20</td></tr>
-        <tr><td>Compliance Regime (OSFI, IFRS 17, state)</td><td>10/10</td></tr>
-        <tr><td>Size &amp; Complexity</td><td>12/15</td></tr>
-        <tr><td>Process Pain Signals</td><td>11/15</td></tr>
-        <tr><td>Buyer Titles Present</td><td>8/10</td></tr>
+        <tr><td>Compliance Regime (OSFI, IFRS 17, state)</td><td>10/10</td><td class="cat-green">OSFI, IFRS 17, and US state DOI regimes create a natural Compliance Center wedge across claims and policy audit trails.</td></tr>
+        <tr><td>Vertical Fit (Insurance)</td><td>18/20</td><td class="cat-green">Life, health, group benefits, and wealth — event-log-rich insurance ops across Canada, US (John Hancock), and Asia.</td></tr>
+        <tr><td>Size &amp; Complexity</td><td>12/15</td><td class="cat-orange">CAD $60B revenue and 38K employees across multi-region admin stacks — complexity is real but Org62 signal is thin.</td></tr>
+        <tr><td>Process Pain Signals</td><td>11/15</td><td class="cat-orange">Public commitments to accelerated underwriting and STP indicate known cycle-time and rework pain in the core ops.</td></tr>
+        <tr><td>Buyer Titles Present</td><td>8/10</td><td class="cat-orange">Chief Claims Officer, Chief Underwriter, and VP Operations personas identified but not yet mapped in Org62.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Process Pain Signals</td><td>11/15</td><td class="cat-orange">Public commitments to accelerated underwriting and STP indicate known cycle-time and rework pain in the core ops.</td></tr>
+        <tr><td>Buyer Titles Present</td><td>8/10</td><td class="cat-orange">Chief Claims Officer, Chief Underwriter, and VP Operations personas identified but not yet mapped in Org62.</td></tr>
       </tbody>
     </table>
   </details>
 
+  <p><strong>Topline POV:</strong> Apromore can help Manulife Financial Corporation by mining its life and group claims and new-business underwriting event logs to expose the cycle-time and rework variants that drive OSFI complaints and STP miss rates — collapsing weeks of adjudicator and underwriter tail into a documented target flow that Agentforce Operations can automate.</p>
+
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
-  <p><strong>1. Claims intake to settlement cycle time.</strong> Life, disability and group benefits claims traverse intake, adjudication, medical review, and payout across Guidewire-style cores and a patchwork of legacy admin systems. Cycle-time variance is the #1 driver of NPS deterioration and regulator complaints in Canadian and US insurance. AFPI mines the full claim event log to expose loop-backs, hand-offs, and adjudicator variance, then routes automation to the two or three variants that consume 60%+ of the queue. Metric moved: average days-to-settle and rework rate. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Claims+Officer+Manulife">the Chief Claims Officer</a> and <a href="https://www.linkedin.com/search/results/people/?keywords=VP+Operations+Manulife+Canada">the VP Operations, Manulife Canada</a>.</p>
+  <details>
+    <summary>1. Claims Intake to Settlement Cycle Time</summary>
+    <div class="use-case-body">
+      <p>Life, disability and group benefits claims traverse intake, adjudication, medical review, and payout across Guidewire-style cores and a patchwork of legacy admin systems. Cycle-time variance is the #1 driver of NPS deterioration and regulator complaints in Canadian and US insurance. AFPI mines the full claim event log to expose loop-backs, hand-offs, and adjudicator variance, then routes automation to the two or three variants that consume 60%+ of the queue. Metric moved: average days-to-settle and rework rate.</p>
+      <p><strong>Key System(s):</strong> Claims Admin Platform (TBD), Medical Review System (TBD), Payment/AP System (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Claims+Officer+Manulife">Chief Claims Officer</a> (Chief Claims Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>2. New business underwriting and policy issuance.</strong> Manulife has publicly committed to accelerated underwriting for John Hancock and Canadian life segments, but rules engines and third-party data pulls (MIB, Rx, labs) still produce weeks-long tails on non-straight-through cases. AFPI reconstructs the underwriter's actual workflow versus the target STP path and pinpoints where evidence gathering stalls. Metric moved: STP rate and application-to-issue days. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Underwriter+Manulife">the Chief Underwriter</a>.</p>
+  <details>
+    <summary>2. New Business Underwriting and Policy Issuance</summary>
+    <div class="use-case-body">
+      <p>Manulife has publicly committed to accelerated underwriting for John Hancock and Canadian life segments, but rules engines and third-party data pulls (MIB, Rx, labs) still produce weeks-long tails on non-straight-through cases. AFPI reconstructs the underwriter's actual workflow versus the target STP path and pinpoints where evidence gathering stalls. Metric moved: STP rate and application-to-issue days.</p>
+      <p><strong>Key System(s):</strong> Underwriting Rules Engine (TBD), MIB / Rx / Lab feeds, Policy Admin System (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Underwriter+Manulife">Chief Underwriter</a> (Chief Underwriter)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>3. Contact center servicing and complaint handling.</strong> Policyholder servicing across Canada, US (John Hancock), and Asia sees repeat contacts on beneficiary changes, address updates, and premium disputes. Each repeat call is a broken process, and each complaint carries a regulatory clock (OSFI, state DOIs, HKMA). AFPI plus Agentforce Operations mines call and case event data to identify the top five servicing journeys generating rework, then puts an agent on the two highest-ROI ones. Metric moved: first-contact resolution and repeat-contact rate. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Operations+Manulife">the Head of Customer Operations</a>.</p>
+  <details>
+    <summary>3. Contact Center Servicing and Complaint Handling</summary>
+    <div class="use-case-body">
+      <p>Policyholder servicing across Canada, US (John Hancock), and Asia sees repeat contacts on beneficiary changes, address updates, and premium disputes. Each repeat call is a broken process, and each complaint carries a regulatory clock (OSFI, state DOIs, HKMA). AFPI plus Agentforce Operations mines call and case event data to identify the top five servicing journeys generating rework, then puts an agent on the two highest-ROI ones. Metric moved: first-contact resolution and repeat-contact rate.</p>
+      <p><strong>Key System(s):</strong> Contact Center CTI (TBD), Case Management (TBD), Policy Admin System (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Operations+Manulife">Head of Customer Operations</a> (Head of Customer Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>4. Group benefits enrollment and plan changes.</strong> Group insurance is Manulife's fastest-growing Canadian segment, and open-enrollment periods stress the mid-office with high-touch employer changes, eligibility updates, and premium reconciliations. Errors here flow directly to broker escalations and lost mandates. AFPI mines the enrollment-to-invoice process to find the exception paths that eat the margin, and Compliance Center anchors the change-audit trail plan sponsors expect. Metric moved: enrollment error rate and broker-escalation volume. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Group+Benefits+Manulife">the Head of Group Benefits, Canada</a>.</p>
+  <details>
+    <summary>4. Group Benefits Enrollment and Plan Changes</summary>
+    <div class="use-case-body">
+      <p>Group insurance is Manulife's fastest-growing Canadian segment, and open-enrollment periods stress the mid-office with high-touch employer changes, eligibility updates, and premium reconciliations. Errors here flow directly to broker escalations and lost mandates. AFPI mines the enrollment-to-invoice process to find the exception paths that eat the margin, and Compliance Center anchors the change-audit trail plan sponsors expect. Metric moved: enrollment error rate and broker-escalation volume.</p>
+      <p><strong>Key System(s):</strong> Group Benefits Admin System (TBD), Billing / Reconciliation (TBD), Broker Portal (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Group+Benefits+Manulife">Head of Group Benefits, Canada</a> (Head of Group Benefits, Canada)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>5. Advisor onboarding and licensing operations.</strong> Manulife's advisor and MGA channel requires KYC, licensing verification, contract execution, and product training before any advisor can transact — a process that today takes weeks and is a documented drag on distribution productivity. AFPI mines the onboarding conformance path against target SLAs and shows exactly where compliance holds, contract redlines, or license checks stall the pipeline. Metric moved: advisor time-to-first-sale and channel activation rate. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Advisor+Services+Manulife">the Head of Advisor Services</a>.</p>
+  <details>
+    <summary>5. Advisor Onboarding and Licensing Operations</summary>
+    <div class="use-case-body">
+      <p>Manulife's advisor and MGA channel requires KYC, licensing verification, contract execution, and product training before any advisor can transact — a process that today takes weeks and is a documented drag on distribution productivity. AFPI mines the onboarding conformance path against target SLAs and shows exactly where compliance holds, contract redlines, or license checks stall the pipeline. Metric moved: advisor time-to-first-sale and channel activation rate.</p>
+      <p><strong>Key System(s):</strong> KYC / Compliance Platform (TBD), Licensing Registry Feed (TBD), Advisor Contract System (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Advisor+Services+Manulife">Head of Advisor Services</a> (Head of Advisor Services)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
+  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
 
   <div class="actions">
-    <a href="/manulife.pdf" target="_blank">Generate PDF</a>
-    <a href="https://salesforce.enterprise.slack.com/docs/T026QPGMQ/F0BEA2HH0Q6" target="_blank">Generate Slack Canvas</a>
-    <a href="https://aprovista-pov.vercel.app/manulife">Generate Vercel Page</a>
-    <a href="mailto:?subject=AFPI%20POV%20%E2%80%94%20Manulife%20Financial%20Corporation&body=See%20the%20POV%3A%20https%3A%2F%2Faprovista-pov.vercel.app%2Fmanulife">Generate Customer Email (Beta)</a>
-    <span class="disabled">Generate Proposal Template (coming soon)</span>
-    <a href="https://salesforce.enterprise.slack.com/archives/C06LR8BPBJZ" target="_blank">Deal Support Request</a>
-    <span class="disabled">Deeper Dive POV (coming soon)</span>
+    <span class="disabled">Generate PDF</span>
+    <span class="disabled">Generate Slack Canvas</span>
+    <span class="disabled">Generate Vercel Page</span>
+    <span class="disabled">Generate Customer Email (Beta)</span>
+    <span class="disabled">Generate Proposal Template</span>
+    <span class="disabled">Deal Support Request</span>
+    <span class="disabled">Deeper Dive POV</span>
   </div>
   <footer class="fine">
     Prepared by AproVista &nbsp;|&nbsp; Created by

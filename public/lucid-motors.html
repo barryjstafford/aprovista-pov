@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucid Group, Inc. — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
+                  cursor: not-allowed; white-space: nowrap; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <img src="/banner-logo.png" alt="AproVista">
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Lucid Group, Inc.</h1>
+  <div class="snapshot">
+    <p><strong>Manufacturing, Automotive &amp; Energy, Electric Vehicles</strong></p>
+    <p><strong>Revenue:</strong> ~$808M (2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~6,800 (pre-June 2026 layoff; ~5,600 post 18% cut) &nbsp;|&nbsp; <strong>HQ:</strong> Newark, CA, USA</p>
+    <p><strong>Major Subsidiaries:</strong> Lucid Motors (US OEM), Lucid Motors EMEA (Rotterdam, NL), Lucid Motors Middle East (Riyadh, KSA)</p>
+    <p><strong>Current Salesforce Products:</strong> Automotive Cloud (in-flight AI/agent motion), Sales Cloud, Service Cloud, plus active Agentforce opportunity in EMEA</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Sanjay+Chandra+Lucid+Motors">Sanjay Chandra</a>, VP Information Technology]</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Lucid Motors – Agentforce (EMEA) (<a href="https://org62.my.salesforce.com/006ed00000flFSEAA2">$71.5k</a>)</p>
+    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U08SL9MBQUE">Sara Douglass</a></p>
+    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
+    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">88/100</span> — T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Buyer Titles Present</td><td>10/10</td><td class="cat-green">Head of Operations &amp; Digital, Director S&amp;OP, Director Global Quality, Head of Engineering &amp; Technical Operations, SVP Operations — process-explicit titles already in Org62.</td></tr>
+        <tr><td>Process Complexity</td><td>15/15</td><td class="cat-green">EV OEM with dual manufacturing (Casa Grande AZ + KAEC KSA), ADAS/AV operations, warranty, dealer service, and global supply chain — high-variance flows.</td></tr>
+        <tr><td>Active Initiatives &amp; Urgency</td><td>14/15</td><td class="cat-green">New CEO Silvio Napoli (April 2026), 18% headcount cut in June 2026 to "simplify the company," active AI/Agentforce motion documented in #ZC:Lucid Motors channel.</td></tr>
+        <tr><td>Vertical Fit</td><td>14/15</td><td class="cat-green">EV manufacturing is event-log-rich — quality, warranty, and supply-chain are canonical process-mining beachheads.</td></tr>
+        <tr><td>Deal Size Potential</td><td>8/10</td><td class="cat-green">$12B+ funded (PIF majority owner), $808M revenue with growth trajectory; active Automotive Cloud + Agentforce plays raise the ceiling.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Compliance / Regulatory Wedge</td><td>7/10</td><td class="cat-orange">FMVSS, NHTSA recall workflows, EV battery regs and EU DPPR apply, but no single headline regulator drives Compliance Center as the primary wedge.</td></tr>
+        <tr><td>Salesforce Footprint</td><td>8/10</td><td class="cat-orange">Automotive Cloud + Agentforce motion is real but early — EMEA Agentforce opp is only $71.5k today, headroom to expand.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p><strong>Topline POV:</strong> Apromore can help Lucid Group, Inc. by mining warranty, service-scheduling, and supply-chain event logs to give the new-CEO "simplify the company" mandate a documented, defensible target-state — accelerating the in-flight Automotive Cloud + Agentforce program with hard cycle-time and cash-recovery evidence rather than more consulting slideware, and delivering a 2–4 week first result while the cost restructure is still in motion.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Warranty Management &amp; Expiring-Warranty Revenue Recovery</summary>
+    <div class="use-case-body">
+      <p>Sara Douglass and the Auto team are already positioning an AI agent for outbound reach on expiring warranties as a revenue-generation play. AFPI mines the warranty claims and renewal event log to prove exactly where claims stall, which repair paths drive the highest customer LTV, and which expiring-warranty cohorts convert — turning a "let's build an agent" pitch into a quantified target-state before Dreamforce. Metric moved: warranty-renewal conversion rate, claim cycle time.</p>
+      <p><strong>Key System(s):</strong> Automotive Cloud, Service Cloud, Dealer Management System (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Andrew+Smith+Lucid+Motors">Andrew Smith</a> (Head of Engineering &amp; Technical Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Service Scheduling &amp; Test-Drive Logistics Standardization</summary>
+    <div class="use-case-body">
+      <p>Salesforce internal notes call out "significant technical debt and complexity around customized scheduling" — the classic case for process mining before an Automotive Cloud out-of-the-box rollout. AFPI reveals the actual scheduling variants across service appointments and test drives so Agentforce agents automate the winning path instead of encoding the mess. Metric moved: appointment-to-completion cycle time, no-show %, test-drive-to-order conversion.</p>
+      <p><strong>Key System(s):</strong> Automotive Cloud (Scheduler), Service Cloud, custom scheduling middleware (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Masoud+Qazen+Lucid+Motors">Masoud Qazen</a> (Head of Operations &amp; Digital)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Sales &amp; Operations Planning (S&amp;OP) Across US + KSA Plants</summary>
+    <div class="use-case-body">
+      <p>Lucid runs a dual-manufacturing footprint (Casa Grande AZ and KAEC Saudi Arabia) with a Director-level S&amp;OP owner in Ian Johnson. AFPI mines the demand-to-supply-to-build event log across both plants to expose planning bullwhip, unplanned rework, and where the Middle East ramp is starving US allocation — feeding the new CEO's simplification narrative with numbers instead of consulting decks. Metric moved: forecast accuracy, plant fill-rate, inventory days.</p>
+      <p><strong>Key System(s):</strong> ERP (TBD — SAP/Oracle candidate), MES (TBD), Automotive Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ian+Johnson+Lucid+Motors">Ian Johnson</a> (Director — Sales &amp; Operations Planning)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Global Quality &amp; NHTSA Recall Workflow</summary>
+    <div class="use-case-body">
+      <p>A young EV OEM with active ADAS/AV programs and a Director Global Quality (Sunghae Moon) plus a Product Safety Officer (Rick Clementz) has a structural need to defend quality escapes and recall triggers. AFPI mines the field-issue → engineering-analysis → recall-decision event log to compress time-to-containment and produce an auditable trail for NHTSA and EU homologation. Metric moved: time-to-containment on quality escapes, recall cycle time.</p>
+      <p><strong>Key System(s):</strong> Quality Management System (TBD), Service Cloud, Engineering PLM (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Sunghae+Moon+Lucid+Motors">Sunghae Moon</a> (Director Global Quality)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Roadside &amp; Dispatch Operations for the Growing Fleet</summary>
+    <div class="use-case-body">
+      <p>Roadside assistance dispatch is called out internally as a "light and straightforward" wedge for AI agents. AFPI mines the dispatch event log — incident intake, technician routing, resolution, callback — to prove where SLA slippage happens and whether an Agentforce agent should intercept at intake, routing, or escalation. Gives Sara Douglass a numbers-backed champion case ahead of Dreamforce. Metric moved: mean time-to-resolution, first-call resolution %.</p>
+      <p><strong>Key System(s):</strong> Service Cloud (Dispatch), Automotive Cloud, roadside vendor system (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Emily+Moravits+Lucid+Motors">Emily Moravits</a> (Head of Operations ADAS / AV)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
+  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
+
+  <div class="actions">
+    <span class="disabled">Generate PDF</span>
+    <span class="disabled">Generate Slack Canvas</span>
+    <span class="disabled">Generate Vercel Page</span>
+    <span class="disabled">Generate Customer Email (Beta)</span>
+    <span class="disabled">Generate Proposal Template</span>
+    <span class="disabled">Deal Support Request</span>
+    <span class="disabled">Deeper Dive POV</span>
+  </div>
+  <footer class="fine">
+    Prepared by AproVista &nbsp;|&nbsp; Created by
+    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
+    &nbsp;|&nbsp; 2026-07-03 &nbsp;|&nbsp; Confidence: High
+  </footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

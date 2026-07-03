@@ -19,13 +19,21 @@
   .lib-btn:hover { background: #dde3f0; }
   .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
               background: #fff; border-radius: 8px;
-              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 260px; z-index: 100; }
-  .lib-menu.open { display: block; }
-  .lib-menu a { display: block; padding: 8px 15px; color: #032d60;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
                 text-decoration: none; font-size: .87em;
                 border-bottom: 1px solid #f0f4ff; }
-  .lib-menu a:last-child { border-bottom: none; }
-  .lib-menu a:hover { background: #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
   main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
   h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
        margin: 0 0 10px; font-size: 1.85em; }
@@ -36,12 +44,23 @@
   strong { color: #032d60; }
   a { color: #0070d2; }
   table { border-collapse: collapse; width: 100%; margin: 4px 0; }
-  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
   th { background: #f0f4ff; font-weight: 600; }
-  td:last-child { text-align: right; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
-            margin: 4px 0; background: #f9fbff; }
+            margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
   hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
   .fine { text-align: center; color: #aaa; font-size: .75em;
           margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
@@ -54,12 +73,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-    background: #f0f4ff; color: #032d60; text-decoration: none;
-    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
-  .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
-  .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
-    cursor: not-allowed; }
+  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
+                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
+                  cursor: not-allowed; white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -68,7 +84,13 @@
     <img src="/banner-logo.png" alt="AproVista">
     <div class="lib-wrap">
       <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
-      <div class="lib-menu" id="libMenu"></div>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
     </div>
   </div>
 </header>
@@ -77,45 +99,97 @@
   <div class="snapshot">
     <p><strong>Financial Services, Payments Network &amp; Data Services</strong></p>
     <p><strong>Revenue:</strong> ~$32.8B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~39,800 &nbsp;|&nbsp; <strong>HQ:</strong> Purchase, NY, USA</p>
-    <p><strong>Current Salesforce Products:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Teena+Angale+Mastercard">Teena Angale</a>] — Data Cloud pilot record and Tableau POC in flight per Org62; no active Sales/Service Cloud footprint verified.</p>
+    <p><strong>Current Salesforce Products:</strong> Data Cloud (pilot), Tableau (POC) — no active Sales/Service Cloud footprint verified.</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Teena+Angale+Mastercard">Teena Angale</a>]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> ISV - Mastercard - FSC Data Cloud (<a href="https://org62.my.salesforce.com/0063y00001AzdT6AAJ">ISV Prospect</a>) | ISV - Mastercard - Ethoca OEM Native (<a href="https://org62.my.salesforce.com/006ed00000AAb0XAAT">ISV Assess</a>) | Mastercard Technologies Tableau POC (<a href="https://org62.my.salesforce.com/006ed00000WUJ61AAH">Identifying</a>)</p>
-    <p><strong>AFPI AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> ISV - Mastercard - Ethoca OEM Native (<a href="https://org62.my.salesforce.com/006ed00000AAb0XAAT">ISV Assess</a>) &nbsp;|&nbsp; ISV - Mastercard - FSC Data Cloud (<a href="https://org62.my.salesforce.com/0063y00001AzdT6AAJ">ISV Prospect</a>) &nbsp;|&nbsp; Mastercard Technologies Tableau POC (<a href="https://org62.my.salesforce.com/006ed00000WUJ61AAH">Identifying</a>)</p>
+    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0430NU5DF1">James Cross</a></p>
+    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
     <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details>
-    <summary>Propensity to Buy: 73/100 — T2 Develop</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">73/100</span> — T2 Develop</summary>
     <table>
-      <tr><th>Category</th><th>Score</th></tr>
-      <tr><td>Regulatory pressure (PCI DSS, DORA, GDPR, network rules, state MTL)</td><td>12/12</td></tr>
-      <tr><td>Process-pain surface (disputes, chargebacks, KYC, merchant onboarding at network scale)</td><td>11/12</td></tr>
-      <tr><td>Vertical fit — payments network + Data &amp; Services growth engine</td><td>10/12</td></tr>
-      <tr><td>Agentic AI mandate (Decision Intelligence, Small Business AI Agent, GenAI in fraud)</td><td>10/12</td></tr>
-      <tr><td>Active SF pipeline (Ethoca ISV OEM + FSC Data Cloud + Tableau POC — no large AELA yet)</td><td>6/12</td></tr>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Regulatory pressure (PCI DSS, DORA, GDPR, network rules, state MTL)</td><td>12/12</td><td class="cat-green">Mastercard is both regulated payments network and the PCI DSS scheme owner — Compliance Center is an immediate wedge.</td></tr>
+        <tr><td>Process-pain surface (disputes, chargebacks, KYC, merchant onboarding at network scale)</td><td>11/12</td><td class="cat-green">Dispute/chargeback and merchant-onboarding flows are famously variant-heavy at Mastercard scale — natural AFPI terrain.</td></tr>
+        <tr><td>Vertical fit — payments network + Data &amp; Services growth engine</td><td>10/12</td><td class="cat-green">D&amp;S is the strategic growth bet and every use case there is process-lineage over event streams.</td></tr>
+        <tr><td>Agentic AI mandate (Decision Intelligence, Small Business AI Agent, GenAI in fraud)</td><td>10/12</td><td class="cat-green">Public AI-democratization posture aligns with AFPI's collapse of SQL+PQL into one Ops analyst.</td></tr>
+        <tr><td>Active SF pipeline (Ethoca ISV OEM + FSC Data Cloud + Tableau POC — no large AELA yet)</td><td>6/12</td><td class="cat-orange">Three early-stage ISV/POC opps — real motion, but no anchor AELA yet to attach standalone AFPI to.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Agentic AI mandate (Decision Intelligence, Small Business AI Agent, GenAI in fraud)</td><td>10/12</td><td class="cat-green">Strong AI narrative, but agentic-Ops budget owner not yet named — needs field verify.</td></tr>
+        <tr><td>Active SF pipeline (Ethoca ISV OEM + FSC Data Cloud + Tableau POC — no large AELA yet)</td><td>6/12</td><td class="cat-orange">Pipeline exists but is ISV/POC scale — AFPI attaches best once Ethoca OEM or FSC Data Cloud lands.</td></tr>
+      </tbody>
     </table>
   </details>
 
+  <p><strong>Topline POV:</strong> Apromore can help Mastercard Incorporated by mining the Ethoca dispute-lifecycle event log to prove measurable cycle-time and write-off reduction before the OEM contract closes — turning the ISV story from "another data feed" into a two-to-four-week AFPI + Agentforce Operations win that pulls the FSC Data Cloud pilot along with it.</p>
+
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
-  <p><strong>1. Ethoca Chargeback &amp; Dispute Resolution — Prove the ISV OEM Value Before the OEM Contract Closes.</strong> The <a href="https://org62.my.salesforce.com/006ed00000AAb0XAAT">Ethoca OEM Native ISV opp</a> is in Assess, which means the SF/Mastercard team is still building the "why now" narrative for embedding Ethoca into Financial Services Cloud. AFPI mines the actual dispute lifecycle event log — issuer intake, Ethoca alert, merchant refund path, network representment — to expose which variants leak days and dollars, then hands the top three broken paths to Agentforce Operations to automate. This turns the OEM story from "another data feed" into "measurable cycle-time and write-off reduction," and does it in the two-week timeframe an ISV team can absorb. Metric: dispute-to-resolution days, first-cycle refund rate, chargeback write-off $. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Toby+Osofsky+Baer+Mastercard">Toby Osofsky Baer</a> (VP, Product Management — Acquisition / Spend Optimization / Data &amp; Services).</p>
+  <details>
+    <summary>1. Ethoca Chargeback &amp; Dispute Resolution — Prove the ISV OEM Value Before the OEM Contract Closes</summary>
+    <div class="use-case-body">
+      <p>The <a href="https://org62.my.salesforce.com/006ed00000AAb0XAAT">Ethoca OEM Native ISV opp</a> is in Assess, which means the SF/Mastercard team is still building the "why now" narrative for embedding Ethoca into Financial Services Cloud. AFPI mines the actual dispute lifecycle event log — issuer intake, Ethoca alert, merchant refund path, network representment — to expose which variants leak days and dollars, then hands the top three broken paths to Agentforce Operations to automate. This turns the OEM story from "another data feed" into "measurable cycle-time and write-off reduction," and does it in the two-week timeframe an ISV team can absorb. Metric: dispute-to-resolution days, first-cycle refund rate, chargeback write-off $.</p>
+      <p><strong>Key System(s):</strong> Ethoca, Financial Services Cloud, Agentforce Operations</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Toby+Osofsky+Baer+Mastercard">Toby Osofsky Baer</a> (VP, Product Management — Acquisition / Spend Optimization / Data &amp; Services)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>2. FSC Data Cloud Pilot — Add a Process-Lineage Layer for Issuer Analytics.</strong> The <a href="https://org62.my.salesforce.com/0063y00001AzdT6AAJ">Mastercard FSC Data Cloud ISV opp</a> is at the earliest stage; the fastest way to accelerate it is to give the pilot a use case that only Data Cloud + AFPI can solve. AFPI overlays process lineage on the issuer-servicing event stream (auth → decline → chargeback → retention save) so Mastercard's issuer customers can see not just the data, but the actual sequence of steps that produced the outcome — a dimension Celonis-style tools miss because they treat network telemetry as SQL, not process. This differentiates AFPI as the collapse of the SQL+PQL two-specialist model into one Ops analyst, matching Mastercard's own AI-democratization posture. Metric: auth-approval rate improvement per issuer, false-decline rate, retention-save conversion. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Teena+Angale+Mastercard">Teena Angale</a> (VP, Data &amp; Services — Financial Institutions Segment).</p>
+  <details>
+    <summary>2. FSC Data Cloud Pilot — Add a Process-Lineage Layer for Issuer Analytics</summary>
+    <div class="use-case-body">
+      <p>The <a href="https://org62.my.salesforce.com/0063y00001AzdT6AAJ">Mastercard FSC Data Cloud ISV opp</a> is at the earliest stage; the fastest way to accelerate it is to give the pilot a use case that only Data Cloud + AFPI can solve. AFPI overlays process lineage on the issuer-servicing event stream (auth → decline → chargeback → retention save) so Mastercard's issuer customers can see not just the data, but the actual sequence of steps that produced the outcome — a dimension Celonis-style tools miss because they treat network telemetry as SQL, not process. This differentiates AFPI as the collapse of the SQL+PQL two-specialist model into one Ops analyst, matching Mastercard's own AI-democratization posture. Metric: auth-approval rate improvement per issuer, false-decline rate, retention-save conversion.</p>
+      <p><strong>Key System(s):</strong> Data Cloud, Financial Services Cloud, Tableau</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Teena+Angale+Mastercard">Teena Angale</a> (VP, Data &amp; Services — Financial Institutions Segment)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>3. Merchant &amp; Acceptance Onboarding — Network-Scale Rework Reduction.</strong> Mastercard's Commercial Acceptance Solutions team owns a very high-volume merchant/acquirer onboarding book with global compliance overlay (PCI DSS, sanctions, market-specific KYC). AFPI mines the acceptance-onboarding event log to distinguish repeatable underwriting-return loops from true one-offs, then routes the repeatable variants to Agentforce Operations. Framed against TPL, the process-mining tier surfaces the top three onboarding-drop paths within a quarter — comfortably under the cost of a single lost strategic acquirer. Metric: application-to-boarded cycle time and % applications requiring re-work. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Srini+Chandrasekharan+Mastercard">Srini Chandrasekharan</a> (VP, Commercial Acceptance Solutions).</p>
+  <details>
+    <summary>3. Merchant &amp; Acceptance Onboarding — Network-Scale Rework Reduction</summary>
+    <div class="use-case-body">
+      <p>Mastercard's Commercial Acceptance Solutions team owns a very high-volume merchant/acquirer onboarding book with global compliance overlay (PCI DSS, sanctions, market-specific KYC). AFPI mines the acceptance-onboarding event log to distinguish repeatable underwriting-return loops from true one-offs, then routes the repeatable variants to Agentforce Operations. Framed against TPL, the process-mining tier surfaces the top three onboarding-drop paths within a quarter — comfortably under the cost of a single lost strategic acquirer. Metric: application-to-boarded cycle time and % applications requiring re-work.</p>
+      <p><strong>Key System(s):</strong> Merchant Onboarding Platform (TBD), Agentforce Operations, KYC/Sanctions Screening (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Srini+Chandrasekharan+Mastercard">Srini Chandrasekharan</a> (VP, Commercial Acceptance Solutions)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>4. Regulatory Reporting &amp; Compliance-Center Wedge — DORA + PCI + Network Rules.</strong> Mastercard operates under DORA in the EU (ICT resilience testing, third-party register, incident classification), PCI DSS as scheme owner, plus internal network-rule enforcement across issuers and acquirers. Every one of these requires defensible "prove the process" evidence over reporting workflows. AFPI's Compliance Center gives Global Compliance and Regulatory Affairs a mined view over resilience-testing and incident-response workflows that is audit-defensible without a PQL specialist writing queries. This lands as the natural companion to the FSC Data Cloud pilot — same data, one more use case that pays back inside the quarter. Metric: reporting-cycle days, incident-classification accuracy, examiner-finding count. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Randi+Adelstein+Mastercard">Randi Adelstein</a> (EVP &amp; General Counsel — Regulatory Affairs).</p>
+  <details>
+    <summary>4. Regulatory Reporting &amp; Compliance-Center Wedge — DORA + PCI + Network Rules</summary>
+    <div class="use-case-body">
+      <p>Mastercard operates under DORA in the EU (ICT resilience testing, third-party register, incident classification), PCI DSS as scheme owner, plus internal network-rule enforcement across issuers and acquirers. Every one of these requires defensible "prove the process" evidence over reporting workflows. AFPI's Compliance Center gives Global Compliance and Regulatory Affairs a mined view over resilience-testing and incident-response workflows that is audit-defensible without a PQL specialist writing queries. This lands as the natural companion to the FSC Data Cloud pilot — same data, one more use case that pays back inside the quarter. Metric: reporting-cycle days, incident-classification accuracy, examiner-finding count.</p>
+      <p><strong>Key System(s):</strong> Compliance Center, GRC Platform (TBD), Incident Response Tooling (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Randi+Adelstein+Mastercard">Randi Adelstein</a> (EVP &amp; General Counsel — Regulatory Affairs)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
 
-  <p><strong>5. Healthcare Payments Line-of-Business — New Data-&amp;-Services Growth Wedge.</strong> Mastercard's Healthcare Business is a strategic growth bet within the Data &amp; Services franchise, and healthcare-payments processes (eligibility → adjudication → patient responsibility → provider settlement) are famously variant-heavy and rework-heavy. AFPI mines the healthcare-payment lifecycle event log to expose adjudication-rework loops and hand the top variants to Agentforce Operations, giving Mastercard a repeatable "AFPI + Ethoca + Data Cloud" bundle to sell into US health systems and payers — the same collapse-two-specialists-into-one motion that makes AFPI a two-to-four-week time-to-value story. Metric: claim-to-settlement cycle time, denial-rework rate, patient-responsibility collection lift. Engage <a href="https://www.linkedin.com/search/results/people/?keywords=Shankar+Ram+Mastercard">Shankar Ram</a> (EVP &amp; Global Head, Strategy &amp; Partnerships — Healthcare Business).</p>
+  <details>
+    <summary>5. Healthcare Payments Line-of-Business — New Data-&amp;-Services Growth Wedge</summary>
+    <div class="use-case-body">
+      <p>Mastercard's Healthcare Business is a strategic growth bet within the Data &amp; Services franchise, and healthcare-payments processes (eligibility → adjudication → patient responsibility → provider settlement) are famously variant-heavy and rework-heavy. AFPI mines the healthcare-payment lifecycle event log to expose adjudication-rework loops and hand the top variants to Agentforce Operations, giving Mastercard a repeatable "AFPI + Ethoca + Data Cloud" bundle to sell into US health systems and payers — the same collapse-two-specialists-into-one motion that makes AFPI a two-to-four-week time-to-value story. Metric: claim-to-settlement cycle time, denial-rework rate, patient-responsibility collection lift.</p>
+      <p><strong>Key System(s):</strong> Ethoca, Data Cloud, Agentforce Operations</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Shankar+Ram+Mastercard">Shankar Ram</a> (EVP &amp; Global Head, Strategy &amp; Partnerships — Healthcare Business)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
+  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
 
   <div class="actions">
-    <a href="/mastercard.pdf" target="_blank">Generate PDF</a>
-    <a href="https://salesforce.enterprise.slack.com/docs/T026QPGMQ/F0BE5QQD56F" target="_blank">Generate Slack Canvas</a>
-    <a href="https://aprovista-pov.vercel.app/mastercard">Generate Vercel Page</a>
-    <a href="mailto:?subject=AFPI%20POV%20%E2%80%94%20Mastercard%20Incorporated&body=https%3A%2F%2Faprovista-pov.vercel.app%2Fmastercard">Generate Customer Email (Beta)</a>
-    <span class="disabled">Generate Proposal Template (coming soon)</span>
-    <a href="https://salesforce-internal.slack.com/archives/C09LK6XLXAL" target="_blank">Deal Support Request</a>
-    <span class="disabled">Deeper Dive POV (coming soon)</span>
+    <span class="disabled">Generate PDF</span>
+    <span class="disabled">Generate Slack Canvas</span>
+    <span class="disabled">Generate Vercel Page</span>
+    <span class="disabled">Generate Customer Email (Beta)</span>
+    <span class="disabled">Generate Proposal Template</span>
+    <span class="disabled">Deal Support Request</span>
+    <span class="disabled">Deeper Dive POV</span>
   </div>
   <footer class="fine">
     Prepared by AproVista &nbsp;|&nbsp; Created by
