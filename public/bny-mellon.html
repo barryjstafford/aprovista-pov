@@ -73,17 +73,27 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
-                  cursor: not-allowed; white-space: nowrap; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
           <input type="text" id="libSearch" placeholder="Search library…"
@@ -100,16 +110,15 @@
     <p><strong>Financial Services, Custody &amp; Asset Servicing</strong></p>
     <p><strong>Revenue:</strong> $17.5B &nbsp;|&nbsp; <strong>Employees:</strong> ~50,000 &nbsp;|&nbsp; <strong>HQ:</strong> New York, NY, USA</p>
     <p><strong>Major Subsidiaries:</strong> Insight Investment Management, Pershing, BNY Mellon Investment Management, Mellon Financial</p>
-    <p><strong>Current Salesforce Products:</strong> Sales Cloud (Own + Platform licenses per active renewal)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Own + Platform licenses per active renewal)</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=CIO+Bank+of+New+York+Mellon">BNY CIO office</a>]</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> BNY Mellon Renewal 1392 Own, 425 Platform (<a href="https://org62.my.salesforce.com/006ed00000edUvGAAU">$21k</a>)</p>
-    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U08AZ8GDT6E">Jessica Tanzer</a></p>
-    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
-  <details>
+  <details class="pov-aproscore">
     <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">74/100</span> — T2 Develop</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
@@ -125,7 +134,7 @@
     </table>
   </details>
 
-  <p><strong>Topline POV:</strong> Apromore can help Bank of New York Mellon Corporation by mining its client-onboarding, corporate-actions, and NAV-production event logs to cut multi-week onboarding cycles, reduce exception-driven SLA breaches, and produce regulator-grade process evidence for SEC, DORA, and MiFID II reporting.</p>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Bank of New York Mellon Corporation by mining its client-onboarding, corporate-actions, and NAV-production event logs to cut multi-week onboarding cycles, reduce exception-driven SLA breaches, and produce regulator-grade process evidence for SEC, DORA, and MiFID II reporting.</p>
 
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
@@ -133,7 +142,7 @@
     <summary>1. Client Onboarding &amp; KYC Refresh for Institutional Custody</summary>
     <div class="use-case-body">
       <p>BNY onboards asset managers, sovereign wealth funds, and corporate treasuries into custody, fund accounting, and collateral services — a multi-week workflow spanning legal, tax, AML, and account-provisioning teams. The pain is a stubborn 30-90 day onboarding cycle that delays revenue recognition and drives client-satisfaction complaints during periodic KYC refresh cycles. AFPI mines the actual case-management event log (Sales Cloud + core onboarding systems) to expose hand-off delays, rework loops, and exception paths, then Agentforce automates document chase and status updates. The metric that moves is time-to-first-transaction and analyst throughput per FTE.</p>
-      <p><strong>Key System(s):</strong> Sales Cloud, KYC/AML platform (TBD), Onboarding case-management (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, KYC/AML platform (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Akash+Shah+Bank+of+New+York+Mellon">Akash Shah</a> (Chief Commercial Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -143,7 +152,7 @@
     <summary>2. Corporate Actions Processing at Scale</summary>
     <div class="use-case-body">
       <p>BNY processes millions of corporate actions annually across mergers, dividends, tenders, and rights offerings — each with narrow deadlines and enormous downstream P&amp;L consequence if missed. The pain is that a single missed election or misapplied entitlement can cost seven figures and trigger client escalations, and the process today mixes SWIFT feeds, custody platforms, and manual reconciliation. AFPI mines the end-to-end event log to surface stuck cases, exception clusters, and SLA breaches, then Agentforce triages by risk while a Compliance-Center wedge audits every override. The metric moved is exception rate and SLA adherence.</p>
-      <p><strong>Key System(s):</strong> SWIFT feeds, Custody platform (TBD), Reconciliation engine (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SWIFT feeds, Custody platform (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Bridget+Engle+Bank+of+New+York+Mellon">Bridget Engle</a> (Chief Operations &amp; Technology Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -153,7 +162,7 @@
     <summary>3. Collateral Management &amp; Margin Call Workflow</summary>
     <div class="use-case-body">
       <p>As one of the world's largest tri-party collateral agents, BNY moves trillions in collateral daily between dealers, clearing houses, and buy-side clients, all under Basel III and UMR margin rules. The pain is that intraday margin calls and disputes still require analyst intervention, and root-cause analysis of failed pledges is slow. AFPI mines the margin-call and settlement event log to identify recurring dispute patterns and slow counterparties, then Agentforce drafts responses and escalates by exposure. The metric moved is dispute resolution time and capital efficiency.</p>
-      <p><strong>Key System(s):</strong> Tri-party collateral platform (TBD), Settlement engine (TBD), Sales Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Tri-party collateral platform (TBD), Settlement engine (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Emily+Portney+Bank+of+New+York+Mellon">Emily Portney</a> (Global Head of Asset Servicing)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -163,7 +172,7 @@
     <summary>4. Fund Accounting NAV Production &amp; Exception Handling</summary>
     <div class="use-case-body">
       <p>BNY strikes daily NAVs for tens of thousands of funds across Investment Services — a tightly-scheduled pipeline where any pricing, corporate-action, or reconciliation break can delay strike and breach client SLAs. The pain is a growing exception queue driven by increasingly complex private-market funds, plus rising audit and DORA operational-resilience obligations. AFPI mines the NAV-production pipeline (Eagle, InForm, Nexen event logs) to spotlight the recurring 20% of breaks causing 80% of delays, then Agentforce auto-routes and pre-drafts break commentary. Metric moved is on-time NAV percentage and cost per NAV.</p>
-      <p><strong>Key System(s):</strong> Eagle, InForm, Nexen</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Eagle, InForm</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Roman+Regelman+Bank+of+New+York+Mellon">Roman Regelman</a> (Head of Securities Services &amp; Digital)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -173,16 +182,13 @@
     <summary>5. Regulatory Reporting &amp; Control Attestation (Compliance Center wedge)</summary>
     <div class="use-case-body">
       <p>BNY files hundreds of regulatory reports across SEC, OCC, FRB, DORA, MiFID II, and jurisdictional peers — each requiring evidenced controls, sign-offs, and reconciliations to source. The pain is the swelling cost of first-line control testing and the audit burden when regulators demand end-to-end process evidence with no ambiguity. AFPI's Compliance Center overlays mined process reality against declared controls, flagging deviations and auto-producing regulator-grade audit trails; Agentforce accelerates SOX and DORA attestation cycles. Metric moved is control-testing cost and audit-cycle time.</p>
-      <p><strong>Key System(s):</strong> Regulatory reporting platform (TBD), GRC / control-testing tool (TBD), Sales Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Regulatory reporting platform (TBD), GRC / control-testing tool (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jayee+Koffey+Bank+of+New+York+Mellon">Jayee Koffey</a> (Global Head of Enterprise Change &amp; Regulatory Affairs)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
-  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
-
-  <div class="actions">
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
     <span class="disabled">Generate PDF</span>
     <span class="disabled">Generate Slack Canvas</span>
     <span class="disabled">Generate Vercel Page</span>
@@ -191,11 +197,7 @@
     <span class="disabled">Deal Support Request</span>
     <span class="disabled">Deeper Dive POV</span>
   </div>
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: Med
-  </footer>
+  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

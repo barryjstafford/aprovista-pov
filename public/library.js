@@ -2,7 +2,7 @@ const LIBRARY = [
   { name: "Architectural Graphics, Inc.", slug: "agi-architectural-graphics", region: "AMER" },
   { name: "Alfa Laval Corporate AB", slug: "alfa-laval", region: "EMEA" },
   { name: "Ares Management Corporation", slug: "ares-management", region: "AMER" },
-  { name: "Australian Unity Limited", slug: "australian-unity", region: "APAC" },
+  { name: "Australian Unity Limited", slug: "australian-unity", region: "ANZ" },
   { name: "Bank of New York Mellon Corporation", slug: "bny-mellon", region: "AMER" },
   { name: "Black Hills Corporation", slug: "black-hills-corporation", region: "AMER" },
   { name: "Cars.com Inc.", slug: "cars-commerce", region: "AMER" },
@@ -20,7 +20,7 @@ const LIBRARY = [
   { name: "JPMorgan Chase & Co.", slug: "jp-morgan-chase", region: "AMER" },
   { name: "Kito Crosby Limited", slug: "kito-crosby", region: "AMER" },
   { name: "Lucid Group, Inc.", slug: "lucid-motors", region: "AMER" },
-  { name: "Macquarie Group Limited", slug: "macquarie-group", region: "APAC" },
+  { name: "Macquarie Group Limited", slug: "macquarie-group", region: "ANZ" },
   { name: "Manulife Financial Corporation", slug: "manulife", region: "AMER" },
   { name: "Mastercard Incorporated", slug: "mastercard", region: "AMER" },
   { name: "MetLife, Inc.", slug: "metlife", region: "AMER" },
@@ -32,7 +32,7 @@ const LIBRARY = [
   { name: "The Hartford Financial Services Group, Inc.", slug: "the-hartford", region: "AMER" },
   { name: "Trex Company, Inc.", slug: "trex", region: "AMER" },
   { name: "U.S. Bancorp", slug: "us-bank", region: "AMER" },
-  { name: "Westpac Banking Corporation", slug: "westpac", region: "APAC" },
+  { name: "Westpac Banking Corporation", slug: "westpac", region: "ANZ" },
   { name: "Workday, Inc.", slug: "workday", region: "AMER" },
   { name: "WSFS Financial Corporation", slug: "wsfs-financial", region: "AMER" }
 ];
@@ -40,7 +40,7 @@ const LIBRARY = [
 const REGIONS = [
   { key: "AMER", label: "AMER — Americas" },
   { key: "EMEA", label: "EMEA — Europe, Middle East, Africa" },
-  { key: "APAC", label: "APAC — Asia-Pacific" }
+  { key: "ANZ",  label: "ANZ — Australia, New Zealand" }
 ];
 
 function toggleLib() {
@@ -113,7 +113,7 @@ window.addEventListener('DOMContentLoaded', function() {
     '.lib-region-items a { padding-left: 28px !important; }';
   document.head.appendChild(style);
 
-  const grouped = { AMER: [], EMEA: [], APAC: [] };
+  const grouped = { AMER: [], EMEA: [], ANZ: [] };
   LIBRARY.forEach(function(co) {
     const key = grouped[co.region] ? co.region : 'AMER';
     grouped[key].push(co);
@@ -260,54 +260,34 @@ window.addEventListener('DOMContentLoaded', function() {
 
   const style = document.createElement('style');
   style.textContent =
-    '.lang-wrap { display: flex; flex-direction: column; align-items: flex-end;' +
-    ' margin-right: 10px; gap: 1px; }' +
-    '.lang-buttons { display: flex; align-items: center; gap: 4px; }' +
+    '.lang-wrap { display: flex; align-items: center; gap: 4px; margin-right: 10px; }' +
     '.lang-btn { background: transparent; border: 1px solid transparent; border-radius: 6px;' +
     ' padding: 3px 6px; font-size: 1.1em; line-height: 1; cursor: pointer; font-family: inherit;' +
-    ' opacity: .55; transition: opacity .12s, background .12s, border-color .12s; }' +
-    '.lang-btn:hover { opacity: 1; background: #f0f4ff; }' +
-    '.lang-btn.active { opacity: 1; border-color: #0070d2; background: #f0f4ff; }' +
-    '.lang-btn.disabled { opacity: .28; cursor: not-allowed; filter: grayscale(.4); }' +
-    '.lang-btn.disabled:hover { opacity: .28; background: transparent; }' +
-    '.lang-coming-soon { font-size: .65em; color: #999; letter-spacing: .02em;' +
-    ' margin-top: -2px; padding-right: 4px; }' +
-    '.banner .lang-coming-soon { color: rgba(255,255,255,.55); }' +
+    ' transition: background .12s, border-color .12s; }' +
+    '.lang-btn:hover { background: #f0f4ff; }' +
+    '.lang-btn.active { border-color: #0070d2; background: #f0f4ff; }' +
     '#langStatus { font-size: .75em; color: #667; margin-left: 6px; min-height: 1em; }' +
     '@media (max-width: 640px) { .lang-btn { padding: 3px 4px; font-size: 1em; } }';
   document.head.appendChild(style);
 
   const wrap = document.createElement('div');
   wrap.className = 'lang-wrap';
-  const buttonsRow = document.createElement('div');
-  buttonsRow.className = 'lang-buttons';
   LANGS.forEach(function(l) {
     const b = document.createElement('button');
     b.type = 'button';
-    let cls = 'lang-btn';
-    if (l.code === 'en') cls += ' active';
-    if (!l.enabled) cls += ' disabled';
-    b.className = cls;
+    b.className = 'lang-btn' + (l.code === 'en' ? ' active' : '');
     b.dataset.lang = l.code;
     b.title = l.title;
     b.setAttribute('aria-label', l.title);
     b.textContent = l.flag;
     if (l.enabled) {
       b.addEventListener('click', function() { switchLang(l.code); });
-    } else {
-      b.disabled = true;
     }
-    buttonsRow.appendChild(b);
+    wrap.appendChild(b);
   });
   const status = document.createElement('span');
   status.id = 'langStatus';
-  buttonsRow.appendChild(status);
-  wrap.appendChild(buttonsRow);
-
-  const comingSoon = document.createElement('div');
-  comingSoon.className = 'lang-coming-soon';
-  comingSoon.textContent = 'Coming Soon';
-  wrap.appendChild(comingSoon);
+  wrap.appendChild(status);
 
   if (libWrap) bannerInner.insertBefore(wrap, libWrap);
   else bannerInner.appendChild(wrap);

@@ -73,17 +73,27 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
-                  cursor: not-allowed; white-space: nowrap; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
           <input type="text" id="libSearch" placeholder="Search library…"
@@ -100,16 +110,15 @@
     <p><strong>Manufacturing, Automotive &amp; Energy, Water Infrastructure</strong></p>
     <p><strong>Revenue:</strong> ~$1.3B &nbsp;|&nbsp; <strong>Employees:</strong> ~2,600 &nbsp;|&nbsp; <strong>HQ:</strong> Atlanta, GA, USA</p>
     <p><strong>Major Subsidiaries:</strong> Mueller Co., Echologics, Henry Pratt Company, Mueller Systems, James Jones Company</p>
-    <p><strong>Current Salesforce Products:</strong> Sales Cloud, Pardot / Marketing Cloud Account Engagement, MuleSoft (IPD + RPA — confirmed via Slack deal review)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Pardot / Marketing Cloud Account Engagement, MuleSoft (IPD + RPA — confirmed via Slack deal review)</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Microsoft 365 &amp; Copilot (approved enterprise-wide), AWS (Senior AWS Data Engineer in Org62)</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> INFA - Mueller Water Products, Inc. MDM (<a href="https://org62.my.salesforce.com/006ed00000aVAuQAAW">$510k</a>)</p>
-    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GLPS6HAM">Eric Capilouto</a></p>
-    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
-  <details>
+  <details class="pov-aproscore">
     <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">76/100</span> — T2 Develop</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
@@ -126,7 +135,7 @@
     </table>
   </details>
 
-  <p><strong>Topline POV:</strong> Apromore can help Mueller Water Products, Inc. by mining the exact quote-to-order and project-execution processes Adam Dahlheim's Salesforce case study already spotlights (10→6 day quoting) — turning that early-win story into a documented target-state process the CIO's team can defend against Microsoft Copilot, wrap around the active $510k Informatica MDM program, and scale across Mueller Co., Mueller Systems, and Henry Pratt without a two-specialist Celonis-style rollout.</p>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Mueller Water Products, Inc. by mining the exact quote-to-order and project-execution processes Adam Dahlheim's Salesforce case study already spotlights (10→6 day quoting) — turning that early-win story into a documented target-state process the CIO's team can defend against Microsoft Copilot, wrap around the active $510k Informatica MDM program, and scale across Mueller Co., Mueller Systems, and Henry Pratt without a two-specialist Celonis-style rollout.</p>
 
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
@@ -134,7 +143,7 @@
     <summary>1. Configure-Price-Quote &amp; Spec-Sheet Cycle Time (Extend the Dahlheim Win)</summary>
     <div class="use-case-body">
       <p>Mueller has a public Salesforce case study that quoting time was cut from 10 to 6 days by eliminating duplicate entry across systems. AFPI mines the underlying Sales Cloud + configurator + ERP events to expose the remaining variants — pricing overrides, spec exceptions, distributor rework — and gives the team a defensible target-state process instead of a one-time re-platforming win. Metric moved: quote cycle time (from 6 days toward 3), rep hours per quote.</p>
-      <p><strong>Key System(s):</strong> Sales Cloud, Configurator (TBD), ERP (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Configurator (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Adam+Dahlheim+Mueller+Water+Products">Adam Dahlheim</a> (Salesforce case-study lead, Mueller)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -144,7 +153,7 @@
     <summary>2. Procure-to-Pay &amp; Supplier Master Data Adjacency (MDM Wedge)</summary>
     <div class="use-case-body">
       <p>The active $510k Informatica MDM opportunity confirms master-data pain across suppliers and product hierarchy. AFPI mines the actual P2P event log — PR → PO → GR → invoice — to prove where duplicate suppliers, off-catalog buys, and manual approvals leak margin, feeding the MDM program with process-level evidence rather than competing with it. Metric moved: PO cycle time, off-catalog spend %.</p>
-      <p><strong>Key System(s):</strong> Informatica MDM (in-flight), ERP AP (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Informatica MDM (in-flight), ERP AP (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=viswa+avireddi+Mueller+Water+Products">viswa avireddi</a> (Director, Enterprise Data Engineering)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -154,7 +163,7 @@
     <summary>3. Manufacturing Run-Rate Visibility (Replace the Spreadsheets)</summary>
     <div class="use-case-body">
       <p>The March 2026 field note from Mrunal Doddanavar (Director, Sales &amp; Customer Experience Systems) confirms Mueller tracks its run-rate business in spreadsheets and is evaluating Manufacturing Cloud + Advanced Analytics + Data Foundations. AFPI mines shop-floor + Sales Cloud events to show where run-rate demand actually flows through the plants versus how it is being reported — the natural analytics wedge that makes Manufacturing Cloud land faster. Metric moved: forecast-to-actual variance, cycle time by product family.</p>
-      <p><strong>Key System(s):</strong> Sales Cloud, MES / Shop-Floor (TBD), planned Manufacturing Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, MES / Shop-Floor (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mrunal+Doddanavar+Mueller+Water+Products">Mrunal Doddanavar</a> (Director, Sales &amp; Customer Experience Systems)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -164,7 +173,7 @@
     <summary>4. AgentForce vs Copilot Bake-Off: Agent Fabric Governance Backed by Process Mining</summary>
     <div class="use-case-body">
       <p>Mueller is a Microsoft-Copilot-approved shop actively evaluating AgentForce, with a $75–200k MAF (Managed Agent Fabric) deal in early stage. AFPI is the natural companion — it gives the CIO the event-log evidence for which processes agents should touch first, which are too variant-heavy to safely automate, and where human handoffs must remain. Positioning AFPI + Agent Fabric together makes the Salesforce agent story materially stronger than a Copilot-only path. Metric moved: agent-ready process coverage, safe automation rate.</p>
-      <p><strong>Key System(s):</strong> Agent Fabric (evaluating), AgentForce, Microsoft Copilot (incumbent)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agent Fabric (evaluating), AgentForce</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Andy+Davies+Mueller+Water+Products">Andy Davies</a> (Chief Information Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -174,16 +183,13 @@
     <summary>5. SOX &amp; Internal Audit — Process-Level Control Evidence</summary>
     <div class="use-case-body">
       <p>Mueller is a public company with a full audit function: Chief Audit Executive Gregory Kirkland and Senior IT Audit Manager Gus Orologas. AFPI turns SOX narratives into evidenced process maps — segregation-of-duties variants, journal-entry approval loops, IT change-control paths — giving Internal Audit a live view instead of quarterly walkthroughs. Metric moved: audit prep hours, control-testing coverage.</p>
-      <p><strong>Key System(s):</strong> ERP (TBD), Sales Cloud, IT change-mgmt (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ERP (TBD), Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Gregory+Kirkland+Mueller+Water+Products">Gregory Kirkland</a> (VP, Internal Audit &amp; Chief Audit Executive)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
-  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, or UiPath at this account. Primary competitive dynamic is Microsoft Copilot (approved incumbent) vs AgentForce for the agent-orchestration layer.</p>
-
-  <div class="actions">
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, or UiPath at this account. Primary competitive dynamic is Microsoft Copilot (approved incumbent) vs AgentForce for the agent-orchestration layer.</span></h2><div class="actions">
     <span class="disabled">Generate PDF</span>
     <span class="disabled">Generate Slack Canvas</span>
     <span class="disabled">Generate Vercel Page</span>
@@ -192,11 +198,7 @@
     <span class="disabled">Deal Support Request</span>
     <span class="disabled">Deeper Dive POV</span>
   </div>
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-07-03 &nbsp;|&nbsp; Confidence: Med
-  </footer>
+  <footer class="fine">Prepared on 2026-07-03. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

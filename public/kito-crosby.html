@@ -73,17 +73,27 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
-                  cursor: not-allowed; white-space: nowrap; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
           <input type="text" id="libSearch" placeholder="Search library…"
@@ -100,16 +110,15 @@
     <p><strong>Manufacturing, Industrial Machinery &amp; Lifting Solutions</strong></p>
     <p><strong>Revenue:</strong> ~$1B+ (private, pre-CMCO acquisition) &nbsp;|&nbsp; <strong>Employees:</strong> ~4,000+ globally &nbsp;|&nbsp; <strong>HQ:</strong> Richardson, TX, USA</p>
     <p><strong>Major Subsidiaries:</strong> Crosby, Kito, Harrington, Gunnebo Industries, Peerless</p>
-    <p><strong>Current Salesforce Products:</strong> Not confirmed [field verify with Johnson K Lai, CIO]</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Not confirmed [field verify with Johnson K Lai, CIO]</p>
     <p><strong>Current Non-Salesforce Systems:</strong> SAP ECC, SAP S/4HANA, JD Edwards, Microsoft Dynamics (24-40+ ERP instances confirmed via Slack)</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> No standalone open opps on Kito Crosby account (deal motion runs through parent Columbus McKinnon post-Feb 2026 acquisition)</p>
-    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GY0JK46L">David Tropp</a></p>
-    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
-  <details>
+  <details class="pov-aproscore">
     <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">88/100</span> — T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
@@ -126,7 +135,7 @@
     </table>
   </details>
 
-  <p><strong>Topline POV:</strong> Apromore can help Kito Crosby Limited by mining the 24-40 legacy ERP event logs across Crosby, Kito, Harrington, Gunnebo, and Peerless — giving Columbus McKinnon's post-acquisition integration team a fact-based, target-state Order-to-Cash and Procure-to-Pay model before the ERP consolidation locks in. This is precisely the moment when process mining eliminates the guesswork that drives 60-75% of ERP consolidation programs to fail on bad data and undocumented process variance.</p>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Kito Crosby Limited by mining the 24-40 legacy ERP event logs across Crosby, Kito, Harrington, Gunnebo, and Peerless — giving Columbus McKinnon's post-acquisition integration team a fact-based, target-state Order-to-Cash and Procure-to-Pay model before the ERP consolidation locks in. This is precisely the moment when process mining eliminates the guesswork that drives 60-75% of ERP consolidation programs to fail on bad data and undocumented process variance.</p>
 
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
@@ -134,7 +143,7 @@
     <summary>1. Post-Acquisition ERP Consolidation Blueprint (24-40 legacy ERPs)</summary>
     <div class="use-case-body">
       <p>Kito Crosby brings SAP ECC, S/4HANA, JD Edwards, and Microsoft Dynamics into the CMCO estate — a documented 24-40+ ERP footprint being scoped for consolidation. AFPI mines each legacy event log to expose the actual OTC and P2P variants running today, giving the SteerCo a fact-based target-state before implementation SIs are engaged. This is the single highest-leverage moment for process mining across the entire combined entity. Metric moved: ERP consolidation project risk, business-case defensibility.</p>
-      <p><strong>Key System(s):</strong> SAP ECC, SAP S/4HANA, JD Edwards, Microsoft Dynamics</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP ECC, SAP S/4HANA</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Johnson+Lai+Kito+Crosby">Johnson K Lai</a> (Chief Information Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -144,7 +153,7 @@
     <summary>2. Order-to-Cash Harmonization Across Five Global Brand Lines</summary>
     <div class="use-case-body">
       <p>Crosby, Kito, Harrington, Gunnebo, and Peerless each run distinct quote-to-order-to-invoice paths built for different regions and channels (industrial distributors, OEMs, marine, offshore). AFPI mines the actual OTC event log per brand to expose which variants win on cycle time and margin, then guides a single harmonized flow ahead of CRM+ERP consolidation. Metric moved: quote-to-cash cycle time, DSO, order accuracy.</p>
-      <p><strong>Key System(s):</strong> SAP ECC, JD Edwards, Microsoft Dynamics, Salesforce (post-migration)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP ECC, JD Edwards</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Landon+Mcjilton+Kito+Crosby">Landon Mcjilton</a> (Senior Director - Commercial Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -154,7 +163,7 @@
     <summary>3. SIOP &amp; Global Distribution / Logistics Flow</summary>
     <div class="use-case-body">
       <p>A Senior Director of SIOP and a Senior Director of Distribution &amp; Logistics both sit in Org62 — meaning demand-planning and distribution processes are already owned, measured, and event-log-generating today. AFPI mines the plan-to-produce-to-ship flow to expose where forecast accuracy breaks, where inter-plant transfers stall, and where perfect-order rate degrades across brands. Metric moved: forecast accuracy, on-time-in-full, inter-plant transfer cycle time.</p>
-      <p><strong>Key System(s):</strong> SAP ECC, JD Edwards, WMS (TBD), SIOP toolset (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP ECC, JD Edwards</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ric+Dysart+Kito+Crosby">Ric Dysart</a> (Sr Director SIOP)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -164,7 +173,7 @@
     <summary>4. Procure-to-Pay &amp; Supplier Rationalization for MDM</summary>
     <div class="use-case-body">
       <p>Slack signal confirms Informatica MDM is actively being positioned to CMCO for the combined entity's data cleanup — 60-75% of ERP programs fail on bad data. AFPI mines the P2P event log (PR → PO → GR → invoice) across Kito Crosby's four ERPs to prove where duplicate suppliers, off-catalog buys, and manual approvals leak margin, feeding directly into the MDM program rather than competing with it. Metric moved: PO cycle time, off-catalog spend %, supplier duplication.</p>
-      <p><strong>Key System(s):</strong> SAP ECC AP, JD Edwards Procurement, Informatica MDM (planned)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP ECC AP, JD Edwards Procurement</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Anand+Chhajed+Kito+Crosby">Anand Chhajed</a> (Vice President - Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -174,16 +183,13 @@
     <summary>5. SOX Compliance &amp; Financial Close Acceleration</summary>
     <div class="use-case-body">
       <p>CMCO's March fiscal year-end plus the acquisition close creates hard SOX pressure on Kito Crosby's financial controls across four ERPs. AFPI mines the record-to-report and access-provisioning flows to prove control effectiveness with real evidence — replacing manual walk-throughs with event-log-based audits. This is where Compliance Center becomes a natural wedge for the CFO and Chief Accounting Officer. Metric moved: close cycle days, SOX control exceptions, audit hours.</p>
-      <p><strong>Key System(s):</strong> SAP ECC FI, JD Edwards Finance, Microsoft Dynamics GL</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP ECC FI, JD Edwards Finance</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Brock+Hancock+Kito+Crosby">Brock Hancock</a> (Chief Financial Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
-  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
-
-  <div class="actions">
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
     <span class="disabled">Generate PDF</span>
     <span class="disabled">Generate Slack Canvas</span>
     <span class="disabled">Generate Vercel Page</span>
@@ -192,11 +198,7 @@
     <span class="disabled">Deal Support Request</span>
     <span class="disabled">Deeper Dive POV</span>
   </div>
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-07-03 &nbsp;|&nbsp; Confidence: High
-  </footer>
+  <footer class="fine">Prepared on 2026-07-03. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

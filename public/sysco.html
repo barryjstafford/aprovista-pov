@@ -73,17 +73,27 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
-                  cursor: not-allowed; white-space: nowrap; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
           <input type="text" id="libSearch" placeholder="Search library…"
@@ -100,16 +110,15 @@
     <p><strong>Consumer Goods, Foodservice Distribution</strong></p>
     <p><strong>Revenue:</strong> $79B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~76,000 &nbsp;|&nbsp; <strong>HQ:</strong> Houston, TX, USA</p>
     <p><strong>Major Subsidiaries:</strong> FreshPoint, Buckhead Meat, European Imports, Guest Worldwide, Brakes Group</p>
-    <p><strong>Current Salesforce Products:</strong> Marketing Cloud (ExactTarget, Journey Builder), Sales Cloud, Service Cloud, Salesforce Platform, Analytics Cloud, Informatica (Product 360 in active opp)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Marketing Cloud (ExactTarget, Journey Builder), Sales Cloud, Service Cloud, Salesforce Platform, Analytics Cloud, Informatica (Product 360 in active opp)</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Microsoft Teams (migration to Slack in flight), SAP</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> Upside Agentic Acceleration Services - CSG (<a href="https://org62.my.salesforce.com/006ed00000aHw1FAAS">$1.6M</a>) &nbsp;|&nbsp; AI Service AF4Service + CC (<a href="https://org62.my.salesforce.com/006ed00000NjZMAAA3">$1.25M</a>) &nbsp;|&nbsp; Agentforce for MFG 8500 (<a href="https://org62.my.salesforce.com/006ed00000VpdByAAJ">$1.07M</a>)</p>
-    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G91BHQ2F">Russ Dixon</a></p>
-    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
-  <details>
+  <details class="pov-aproscore">
     <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">88/100</span> — T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
@@ -126,7 +135,7 @@
     </table>
   </details>
 
-  <p><strong>Topline POV:</strong> Apromore can help Sysco Corporation by mining its Order-to-Cash and Source-to-Pay event logs across 330+ distribution centers and 500K+ SKUs — cutting short-ship rate and supplier-onboarding cycle time while giving the in-flight Agentforce for MFG and AF4Service rollouts a documented target-state process before they lock in.</p>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Sysco Corporation by mining its Order-to-Cash and Source-to-Pay event logs across 330+ distribution centers and 500K+ SKUs — cutting short-ship rate and supplier-onboarding cycle time while giving the in-flight Agentforce for MFG and AF4Service rollouts a documented target-state process before they lock in.</p>
 
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
@@ -134,7 +143,7 @@
     <summary>1. Order-to-Cash for the 90-truck / day distribution centers</summary>
     <div class="use-case-body">
       <p>Sysco processes tens of millions of case-lines per week across 330+ distribution facilities; cut-off misses, short-ships, and credit rework are the single biggest drag on service level and DSO. AFPI mines the SAP + Salesforce Rev Cloud + WMS event log to expose where orders stall between capture, allocation, pick, and invoice — and where reps override credit holds. It moves order-to-cash cycle time and short-ship rate (each 1% of short-ship is roughly $600M of at-risk GMV).</p>
-      <p><strong>Key System(s):</strong> SAP, Salesforce Rev Cloud, WMS</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP, Salesforce Rev Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ronald+Phillips+Sysco">Ron Phillips</a> (EVP &amp; Chief Supply Chain Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -144,7 +153,7 @@
     <summary>2. Contact center deflection tied to the AI Service + Voice build</summary>
     <div class="use-case-body">
       <p>Two active opps ($1.25M AF4Service/CC + $418K Voice) target 916 agents handling delivery, credit, and product-substitution calls. AFPI mines case + IVR + delivery-exception event logs to find the top rework loops, so Agentforce agents are pointed at the calls that actually deflect — not the ones with the highest volume but lowest containment. Metric: cost-per-contact and first-contact resolution on the top 20 intent clusters.</p>
-      <p><strong>Key System(s):</strong> Service Cloud, Salesforce Voice, IVR/Telephony</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Salesforce Voice</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Marie+Robinson+Sysco">Marie Robinson</a> (EVP &amp; Chief Supply Chain Officer / customer care sponsor)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -154,7 +163,7 @@
     <summary>3. Source-to-Pay and supplier onboarding — the Informatica Product 360 wedge</summary>
     <div class="use-case-body">
       <p>The active INFA Product 360 opp ($750K) signals a live MDM gap on 500K+ SKUs from 5,000+ suppliers. AFPI mines the P2P event log (PO to invoice to payment) plus supplier-master maintenance events to expose duplicate SKUs, price-file exceptions, and the manual PIM handoffs that break the Product 360 ROI case. It moves supplier-onboarding cycle time (weeks → days) and invoice-match rate.</p>
-      <p><strong>Key System(s):</strong> Informatica Product 360, SAP AP, Supplier Portal</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Informatica Product 360, SAP AP</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Victoria+Gutierrez+Sysco">Victoria Gutierrez</a> (EVP &amp; Chief Merchandising Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -164,7 +173,7 @@
     <summary>4. Quote-to-cash for the Rev Cloud + CLM expansion</summary>
     <div class="use-case-body">
       <p>Two Rev Cloud opps ($1M upgrade + $450K CLM expansion) sit at early stage; Sysco's national-account and local-market pricing has hundreds of contract templates and side-letter carve-outs. AFPI mines the CPQ + CLM event log to show cycle time from quote request to signed contract by segment, and where deal-desk approvals loop. It moves quote cycle time and margin leakage on non-standard pricing.</p>
-      <p><strong>Key System(s):</strong> Salesforce Rev Cloud, Salesforce CLM, Sales Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Rev Cloud, Salesforce CLM</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Greg+Bertrand+Sysco">Greg Bertrand</a> (EVP US Foodservice Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -174,16 +183,13 @@
     <summary>5. Manufacturing / plant-ops execution — the Agentforce for MFG 8500 opp</summary>
     <div class="use-case-body">
       <p>The $1.07M Agentforce for Manufacturing opp is at Stage 07 Pending — a real budget, real user count, and a soft business case. AFPI mines MES + maintenance + quality event logs across Sysco's own-brand plants (Buckhead Meats, FreshPoint, European Imports) to prove throughput uplift, unplanned-downtime reduction, and OTIF gain before Agentforce agents go live. Metric: OEE and unplanned-downtime hours per line.</p>
-      <p><strong>Key System(s):</strong> MES, Maintenance/CMMS, Quality Management</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> MES, Maintenance/CMMS</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Tom+Peck+Sysco">Tom Peck</a> (EVP &amp; Chief Information &amp; Digital Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
-  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
-
-  <div class="actions">
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
     <span class="disabled">Generate PDF</span>
     <span class="disabled">Generate Slack Canvas</span>
     <span class="disabled">Generate Vercel Page</span>
@@ -192,11 +198,7 @@
     <span class="disabled">Deal Support Request</span>
     <span class="disabled">Deeper Dive POV</span>
   </div>
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: High
-  </footer>
+  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

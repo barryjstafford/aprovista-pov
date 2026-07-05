@@ -73,17 +73,27 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
-                  cursor: not-allowed; white-space: nowrap; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
           <input type="text" id="libSearch" placeholder="Search library…"
@@ -99,16 +109,15 @@
   <div class="snapshot">
     <p><strong>Financial Services, Alternative Asset Management</strong></p>
     <p><strong>Revenue:</strong> $5.6B &nbsp;|&nbsp; <strong>Employees:</strong> ~4,250 &nbsp;|&nbsp; <strong>HQ:</strong> Los Angeles, CA, USA</p>
-    <p><strong>Current Salesforce Products:</strong> Not confirmed [field verify with Charlie Stuard]</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Not confirmed [field verify with Charlie Stuard]</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Charlie Stuard]</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> </p>
-    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
   </div>
 
-  <details>
+  <details class="pov-aproscore">
     <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">82/100</span> — T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
@@ -125,7 +134,7 @@
     </table>
   </details>
 
-  <p><strong>Topline POV:</strong> Apromore can help Ares Management Corporation by mining its deal-origination-through-funding event logs across the Ares Credit Group to cut middle-market close cycle time 20–30%, free up origination-officer capacity, and give the Compliance team auditable process evidence for SEC and FCA exams.</p>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Ares Management Corporation by mining its deal-origination-through-funding event logs across the Ares Credit Group to cut middle-market close cycle time 20–30%, free up origination-officer capacity, and give the Compliance team auditable process evidence for SEC and FCA exams.</p>
 
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
@@ -133,7 +142,7 @@
     <summary>1. Middle-Market Direct Lending — Deal Origination to Funding Cycle Time</summary>
     <div class="use-case-body">
       <p>Ares Capital Corporation and the Ares Credit Group underwrite thousands of middle-market loans annually across BDC, private credit, and SDL vehicles — the loop from term sheet through credit committee, legal docs, KYC/AML, closing, and initial fund draw touches Salesforce, credit-risk models, doc-management, and treasury systems. Mining the full origination-to-funding process exposes rework in credit memos, stalled legal reviews, and covenant-tracking handoffs that stretch closing timelines beyond peer benchmarks. AFPI overlays event logs directly onto the Ares deal pipeline in Salesforce to show where a $30M unitranche stalls versus a $200M syndicated deal, cutting avg. days-to-close by 20-30% and freeing origination officer capacity.</p>
-      <p><strong>Key System(s):</strong> Salesforce (deal pipeline), Credit-risk models (TBD), Doc-management / Treasury systems (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce (deal pipeline), Credit-risk models (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kipp+deVeer+Ares+Management">Kipp deVeer</a> (Head of Ares Credit Group)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -143,7 +152,7 @@
     <summary>2. LP Onboarding, Subscription Docs &amp; Investor KYC</summary>
     <div class="use-case-body">
       <p>With ~$484B AUM across hundreds of institutional and HNW investors, LP onboarding is a compliance-heavy, multi-week choreography of subscription documents, accredited-investor certifications, FATCA/CRS, sanctions screening, and fund allocations — historically a top complaint in institutional investor NPS surveys across alt asset managers. AFPI mines the actual variant paths through Ares Wealth Management Solutions and the institutional IR teams, isolating where docs bounce back for correction and where sanctions/enhanced-due-diligence hits create silent queues. The metric moved is time-to-fund (goal: cut from 4-6 weeks to under 2) and IR analyst capacity.</p>
-      <p><strong>Key System(s):</strong> LP portal (TBD), Sanctions/KYC screening tools (TBD), Salesforce (IR CRM)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> LP portal (TBD), Sanctions/KYC screening tools (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Raj+Dhanda+Ares+Management">Raj Dhanda</a> (Partner, Global Head of Wealth Management Solutions)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -153,7 +162,7 @@
     <summary>3. Fund Accounting, NAV Close &amp; Investor Reporting</summary>
     <div class="use-case-body">
       <p>Ares runs a hybrid outsourced/in-house fund-admin model across dozens of credit, PE, real estate, and secondaries vehicles — the monthly/quarterly NAV close and LP reporting cycle involves data reconciliation between admins (SS&amp;C, State Street), internal general ledgers, and the LP portal. AFPI reveals where reconciliation exceptions repeatedly loop back to the same fund families or asset classes, which admin handoffs cause the biggest lag, and where manual overrides mask systematic data quality issues. Targeting a 3-5 day compression of quarterly close plus fewer restatements — a direct auditor and CFO win.</p>
-      <p><strong>Key System(s):</strong> SS&amp;C, State Street, Internal GL (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SS&amp;C, State Street</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jarrod+Phillips+Ares+Management">Jarrod Phillips</a> (Chief Financial Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -163,7 +172,7 @@
     <summary>4. Portfolio Company Monitoring &amp; Covenant Compliance</summary>
     <div class="use-case-body">
       <p>With 500+ portfolio borrowers across the credit book, covenant testing, financial statement collection, and watchlist escalation is a distributed process split between portfolio managers, ops analysts, and third-party servicers — late or missing financials directly drive credit loss and regulatory ire. AFPI mines the flow from financial-package request through covenant test through watchlist entry, exposing which sectors, deal teams, or servicers systematically miss SLAs and where "watchlist" status quietly ages without escalation. The move-the-needle metric is reduction of non-accrual surprises and faster restructuring triggers.</p>
-      <p><strong>Key System(s):</strong> Portfolio monitoring platform (TBD), Third-party loan servicers (TBD), Salesforce</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Portfolio monitoring platform (TBD), Third-party loan servicers (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mitchell+Goldstein+Ares+Management">Mitchell Goldstein</a> (Co-Head of Ares Credit Group)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -173,16 +182,13 @@
     <summary>5. Compliance Center — Regulatory Reporting, Marked-Communications &amp; SEC Exam Readiness</summary>
     <div class="use-case-body">
       <p>As an SEC-registered adviser and FCA-authorized manager with a public BDC, Ares navigates Form ADV, Form PF, AIFMD Annex IV, marketing rule reviews, and 15c3 workflows — a growing surface as SEC scrutiny of private credit intensifies. AFPI's Compliance Center wedge maps how marketing materials, RFPs, and DDQs actually flow through legal/compliance review, quantifies review-cycle bottlenecks, and produces auditable process evidence for SEC exams and internal control attestations. The metric is reduction of MRAs/deficiency letters and audit prep hours.</p>
-      <p><strong>Key System(s):</strong> Legal review / DMS (TBD), Compliance workflow tool (TBD), Salesforce</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Legal review / DMS (TBD), Compliance workflow tool (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Naseem+Sagati+Aghili+Ares+Management">Naseem Sagati Aghili</a> (General Counsel)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
-  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
-
-  <div class="actions">
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
     <span class="disabled">Generate PDF</span>
     <span class="disabled">Generate Slack Canvas</span>
     <span class="disabled">Generate Vercel Page</span>
@@ -191,11 +197,7 @@
     <span class="disabled">Deal Support Request</span>
     <span class="disabled">Deeper Dive POV</span>
   </div>
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: Med
-  </footer>
+  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

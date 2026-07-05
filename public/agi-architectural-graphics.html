@@ -73,17 +73,27 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
-                  cursor: not-allowed; white-space: nowrap; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
           <input type="text" id="libSearch" placeholder="Search library…"
@@ -99,16 +109,15 @@
   <div class="snapshot">
     <p><strong>Manufacturing, Signage &amp; Wayfinding (Architectural Branding)</strong></p>
     <p><strong>Revenue:</strong> ~$126M &nbsp;|&nbsp; <strong>Employees:</strong> ~785 &nbsp;|&nbsp; <strong>HQ:</strong> Virginia Beach, VA, USA</p>
-    <p><strong>Current Salesforce Products:</strong> Sales Cloud (80 SFA), Service Cloud (43 Call Center), Field Service (150 Dispatcher + 175 Contractor logins in-flight), Platform (200 licenses), MuleSoft Anypoint, Slack (expansion pending), Marketing Cloud (advanced pending)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (80 SFA), Service Cloud (43 Call Center), Field Service (150 Dispatcher + 175 Contractor logins in-flight), Platform (200 licenses), MuleSoft Anypoint, Slack (expansion pending), Marketing Cloud (advanced pending)</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://salesforce.enterprise.slack.com/team/U01FU2LDLMV">Olivia Stanziale</a> (SF AE)]</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> Field Service Swap +325 licenses (<a href="https://org62.my.salesforce.com/006ed00000blAt3AAE">$240K</a>) &nbsp;|&nbsp; SFA + Call Center + Platform Renewal (<a href="https://org62.my.salesforce.com/006ed000008RlW5AAK">$219K</a>) &nbsp;|&nbsp; Agentforce (<a href="https://org62.my.salesforce.com/006ed00000b4KPRAA2">$120K</a>)</p>
-    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01FU2LDLMV">Olivia Stanziale</a></p>
-    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
-  <details>
+  <details class="pov-aproscore">
     <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t3">50/100</span> — T3 Nurture</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
@@ -123,7 +132,7 @@
     </table>
   </details>
 
-  <p><strong>Topline POV:</strong> Apromore can help Architectural Graphics, Inc. by mining its incoming Field Service dispatch and case event logs to prove Agentforce ROI before that opp closes — turning the $240K FS swap and $120K Agentforce deals into a documented process-improvement story rather than two isolated license transactions.</p>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Architectural Graphics, Inc. by mining its incoming Field Service dispatch and case event logs to prove Agentforce ROI before that opp closes — turning the $240K FS swap and $120K Agentforce deals into a documented process-improvement story rather than two isolated license transactions.</p>
 
   <div class="nurture-box">
     <strong>Why Not Now</strong>
@@ -136,7 +145,7 @@
     <summary>1. Field Service Dispatch &amp; Scheduling Optimization</summary>
     <div class="use-case-body">
       <p>The $240K FS swap adds 150 dispatchers and 175 contractor logins — day one, AGI has a rich Service Appointment event stream covering scheduling, travel, first-time-fix, and re-work loops. AFPI mines that log to expose which dispatch flows over-schedule, which contractors miss SLA, and where re-visits cluster, then feeds the fixes into Agentforce Operations for automated resolution. Metric moved: first-time-fix rate and technician utilization.</p>
-      <p><strong>Key System(s):</strong> Salesforce Field Service, Service Cloud, MuleSoft Anypoint</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, Service Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Olivia+Stanziale+Salesforce">Olivia Stanziale</a> (SF Named Account Executive — primary channel)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -146,7 +155,7 @@
     <summary>2. Agentforce Readiness Discovery for Case-to-Resolution</summary>
     <div class="use-case-body">
       <p>The $120K Agentforce opp sits at Stage 02 — Determining Problem/Impact/Ideal. AFPI's fastest wedge is a two-week diagnostic that mines the Service Cloud Call Center case flow to show exactly which case paths, escalations, and manual touches Agentforce should own first — de-risking the Agentforce close and giving the CIO a documented before/after story. Metric moved: case handle time and automation-eligible-volume percentage.</p>
-      <p><strong>Key System(s):</strong> Service Cloud (Call Center), Salesforce Platform, Agentforce</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud (Call Center), Salesforce Platform</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Olivia+Stanziale+Salesforce">Olivia Stanziale</a> (SF Named Account Executive — Agentforce deal owner)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -156,7 +165,7 @@
     <summary>3. Order-to-Cash for Signage Manufacturing &amp; Install</summary>
     <div class="use-case-body">
       <p>Architectural signage is a configure-to-order business where each quote spawns a custom manufacturing run plus a field install visit. AFPI mines the Sales Cloud opportunity-to-invoice event log alongside Field Service install events to expose where quotes stall in engineering review, where install slippage delays revenue recognition, and where manual pricing overrides erode margin. Metric moved: quote-to-cash cycle time and margin leakage on custom orders.</p>
-      <p><strong>Key System(s):</strong> Sales Cloud, Field Service, Salesforce Platform</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Field Service</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Olivia+Stanziale+Salesforce">Olivia Stanziale</a> (SF Named Account Executive)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -166,7 +175,7 @@
     <summary>4. Cross-Cloud Integration Flows via MuleSoft Anypoint</summary>
     <div class="use-case-body">
       <p>MuleSoft Anypoint is already live with a $70K add-on in flight, meaning integration events between Sales, Service, Field Service, and the ERP are traceable end-to-end. AFPI mines those Anypoint API and flow logs to find where cross-system handoffs stall — customer creates in Sales but never reaches Service, dispatch missing a work-order attribute — and hands the exceptions to Agentforce for auto-remediation. Metric moved: cross-cloud handoff SLA and integration exception rate.</p>
-      <p><strong>Key System(s):</strong> MuleSoft Anypoint, Sales Cloud, Service Cloud, Field Service</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft Anypoint, Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Olivia+Stanziale+Salesforce">Olivia Stanziale</a> (SF Named Account Executive)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -176,16 +185,13 @@
     <summary>5. Renewal &amp; Contract Operations Ahead of FY28 SFA Renewal</summary>
     <div class="use-case-body">
       <p>The $219K SFA + Call Center + Platform renewal (close FY28-01-31) is the natural moment to attach AFPI as a Signature Success or SES deliverable. AFPI mines the renewal-quoting and contract-execution event flow to show how AGI can consolidate seven-cloud renewal cycles into a single motion — the CIO conversation becomes operational transformation, not license negotiation. Metric moved: renewal cycle time and multi-product bundle attach rate.</p>
-      <p><strong>Key System(s):</strong> Sales Cloud, Salesforce Platform, Slack</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Salesforce Platform</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Olivia+Stanziale+Salesforce">Olivia Stanziale</a> (SF Named Account Executive)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
-  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
-
-  <div class="actions">
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
     <span class="disabled">Generate PDF</span>
     <span class="disabled">Generate Slack Canvas</span>
     <span class="disabled">Generate Vercel Page</span>
@@ -194,11 +200,7 @@
     <span class="disabled">Deal Support Request</span>
     <span class="disabled">Deeper Dive POV</span>
   </div>
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-07-01 &nbsp;|&nbsp; Confidence: Med
-  </footer>
+  <footer class="fine">Prepared on 2026-07-01. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

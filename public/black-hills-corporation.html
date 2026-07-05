@@ -73,17 +73,27 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
-                  cursor: not-allowed; white-space: nowrap; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
           <input type="text" id="libSearch" placeholder="Search library…"
@@ -99,16 +109,15 @@
   <div class="snapshot">
     <p><strong>Utilities, Electric &amp; Natural Gas Distribution (8-state regulated)</strong></p>
     <p><strong>Revenue:</strong> ~$2.9B &nbsp;|&nbsp; <strong>Employees:</strong> ~2,867 &nbsp;|&nbsp; <strong>HQ:</strong> Rapid City, SD, USA</p>
-    <p><strong>Current Salesforce Products:</strong> Salesforce Industries / Energy &amp; Utilities Cloud (1,510 licenses), Sales Cloud, Marketing Cloud (ExactTarget, Pardot, Datorama), MuleSoft (471 licenses), Agentforce for Field Service (1,500-license deal in Stage 02), ESRI GIS Pilot on E&amp;U Cloud, Signature Success (Stage 04)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Salesforce Industries / Energy &amp; Utilities Cloud (1,510 licenses), Sales Cloud, Marketing Cloud (ExactTarget, Pardot, Datorama), MuleSoft (471 licenses), Agentforce for Field Service (1,500-license deal in Stage 02), ESRI GIS Pilot on E&amp;U Cloud, Signature Success (Stage 04)</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Legacy CIS (Work Order to Bill target), ESRI GIS, AMI meter platform [field verify with the CIO's office]</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> E&amp;U Cloud + Industry Renewal (<a href="https://org62.my.salesforce.com/0063y0000198vKIAAY">$1.79M</a>) &nbsp;|&nbsp; Agentforce for Field Service 1,500 licenses (<a href="https://org62.my.salesforce.com/006ed00000VcNo9AAF">$1.28M</a>) &nbsp;|&nbsp; MuleSoft Integration #BarryBigBet (<a href="https://org62.my.salesforce.com/006ed00000VWKL7AAP">$850K</a>)</p>
-    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U08PGB28VME">Tom Thai</a></p>
-    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
-  <details>
+  <details class="pov-aproscore">
     <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
@@ -125,7 +134,7 @@
     </table>
   </details>
 
-  <p><strong>Topline POV:</strong> Apromore can help Black Hills Corporation by mining the Work-Order-to-Bill event log across legacy CIS, AMI, and E&amp;U Cloud to prove the existing "Work Order to Bill Target" opp while de-risking the $1.28M Agentforce for Field Service rollout with an evidence-based target-state process.</p>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Black Hills Corporation by mining the Work-Order-to-Bill event log across legacy CIS, AMI, and E&amp;U Cloud to prove the existing "Work Order to Bill Target" opp while de-risking the $1.28M Agentforce for Field Service rollout with an evidence-based target-state process.</p>
 
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
@@ -133,7 +142,7 @@
     <summary>1. Meter-to-Cash "Work Order to Bill" — Prove the Existing Opp Before It Closes</summary>
     <div class="use-case-body">
       <p>There is a live <a href="https://org62.my.salesforce.com/0063y000019U17qAAC">"Work Order to Bill Target" opp</a> already on the account — this is literally the AFPI wedge for utilities named in Black Hills' own Salesforce pipeline. Mine the actual event log across legacy CIS + AMI + WMS + E&amp;U Cloud to distinguish repeatable billing-exception patterns (estimated bills, move-in/out cycles, high-usage disputes) from true one-offs, then route the top three variants to Agentforce Operations. Metric moved: DSO, billing rework hours, cost-to-serve per meter.</p>
-      <p><strong>Key System(s):</strong> Legacy CIS, AMI meter platform, Energy &amp; Utilities Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Legacy CIS, AMI meter platform</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Marne+Jones+Black+Hills+Corporation">Marne Jones</a> (SVP, Customer Solutions &amp; External Affairs)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -143,7 +152,7 @@
     <summary>2. Field Service Dispatch — De-Risk the $1.28M Agentforce for Field Service Deal</summary>
     <div class="use-case-body">
       <p>The <a href="https://org62.my.salesforce.com/006ed00000VcNo9AAF">1,500-license AF4FS opp</a> is in Stage 02 (Determining Problem/Impact/Ideal). AFPI's fastest wedge is to mine the actual Field Service event log — dispatch to close, technician utilization, first-time-fix, mutual-aid mobilization — <em>before</em> Agentforce rollout. That turns the AF4FS conversation from feature-buying to outcome-buying and pulls the deal forward one stage. Metric moved: bay utilization, first-time-fix, parts-fill-rate.</p>
-      <p><strong>Key System(s):</strong> Agentforce for Field Service, ESRI GIS, MuleSoft</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce for Field Service, ESRI GIS</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Todd+Jacobs+Black+Hills+Corporation">Todd Jacobs</a> (COO, Utilities)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -153,7 +162,7 @@
     <summary>3. Storm Response &amp; Multi-State Restoration Orchestration</summary>
     <div class="use-case-body">
       <p>Black Hills serves 1.3M+ customers across South Dakota, Wyoming, Montana, Colorado, Kansas, Nebraska, Iowa, and Arkansas — every state exposes different weather patterns (wildfires in CO, blizzards in SD/WY, tornadoes in KS/NE). AFPI mines the outage-restoration event log across OMS, GIS/ESRI, WFM, and CIS to quantify what a 10% faster average restoration is worth in avoided customer-hours-lost, plus expose which mutual-aid onboarding paths keep stalling. Same pattern that CenterPoint Energy is running post-Beryl. Metric moved: SAIDI/SAIFI, mutual-aid ramp-up time.</p>
-      <p><strong>Key System(s):</strong> OMS, ESRI GIS, Legacy CIS</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> OMS, ESRI GIS</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Todd+Jacobs+Black+Hills+Corporation">Todd Jacobs</a> (COO, Utilities)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -163,7 +172,7 @@
     <summary>4. Regulatory Rate-Case &amp; Prudency-Filing Evidence Automation</summary>
     <div class="use-case-body">
       <p>With eight state PUCs (SD, WY, MT, CO, KS, NE, IA, AR) plus FERC, PHMSA, and NERC CIP filings running in near-perpetual cycles, Black Hills' regulatory team spends thousands of hours pulling logs and building narratives. AFPI's Compliance Center wedge produces continuously-updated, audit-grade process evidence for every regulated workflow (outage response, capital deployment, safety inspections, cyber-incident handling). Pairs directly with the <a href="https://org62.my.salesforce.com/006ed00000CJGa3AAH">$217K Signature Success Core</a> already in Stage 04. Metric moved: rate-case prep cycle time, prudency approval rate.</p>
-      <p><strong>Key System(s):</strong> Energy &amp; Utilities Cloud, Signature Success, Legacy CIS</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Energy &amp; Utilities Cloud, Signature Success</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Brian+Iverson+Black+Hills+Corporation">Brian Iverson</a> (SVP &amp; Chief Regulatory Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -173,16 +182,13 @@
     <summary>5. Clean-Energy Capital-Project Stage-Gating (RFP &amp; Ready Path)</summary>
     <div class="use-case-body">
       <p>The active <a href="https://org62.my.salesforce.com/006ed000002bsujAAA">$45K CleanEnergy Project RFP</a> and the ESRI Pilot on E&amp;U Cloud both signal a major clean-energy transition — solar/wind interconnection, gas-decarbonization, hydrogen pilots. Capital-project intake spans dozens of hand-offs (engineering, environmental permitting, IRP filing, PUC approval, procurement, construction, commissioning). AFPI mines the intake-to-commissioning process to expose which stage-gates stall projects and where re-permitting rework happens. Metric moved: project-approval cycle time and re-work-rate on regulatory filings.</p>
-      <p><strong>Key System(s):</strong> ESRI GIS, Energy &amp; Utilities Cloud, MuleSoft</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ESRI GIS, Energy &amp; Utilities Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kimberly+Nooney+Black+Hills+Corporation">Kimberly Nooney</a> (SVP &amp; CFO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
-  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
-
-  <div class="actions">
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
     <span class="disabled">Generate PDF</span>
     <span class="disabled">Generate Slack Canvas</span>
     <span class="disabled">Generate Vercel Page</span>
@@ -191,11 +197,7 @@
     <span class="disabled">Deal Support Request</span>
     <span class="disabled">Deeper Dive POV</span>
   </div>
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-07-01 &nbsp;|&nbsp; Confidence: High
-  </footer>
+  <footer class="fine">Prepared on 2026-07-01. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

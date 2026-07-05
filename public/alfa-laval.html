@@ -73,17 +73,27 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
-                  cursor: not-allowed; white-space: nowrap; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
           <input type="text" id="libSearch" placeholder="Search library…"
@@ -99,16 +109,15 @@
   <div class="snapshot">
     <p><strong>Manufacturing, Industrial Equipment (Heat Transfer, Separation, Fluid Handling)</strong></p>
     <p><strong>Revenue:</strong> ~$4.79B (SEK ~63B) &nbsp;|&nbsp; <strong>Employees:</strong> ~16,785 &nbsp;|&nbsp; <strong>HQ:</strong> Lund, Sweden</p>
-    <p><strong>Current Salesforce Products:</strong> Service Cloud, Sales Cloud, Slack, Data Cloud (in-flight)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Service Cloud, Sales Cloud, Slack, Data Cloud (in-flight)</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with IT PMO lead]</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> Alfa laval - Process mining - Apromore (<a href="https://org62.my.salesforce.com/006ed00000WvWyPAAV">$250k</a>) &nbsp;|&nbsp; Alfa Laval - Svc Rollout Phase I (<a href="https://org62.my.salesforce.com/006ed00000XT737AAD">$210k</a>) &nbsp;|&nbsp; Alfa Laval - Svc Pilot (<a href="https://org62.my.salesforce.com/006ed00000XT5anAAD">$126k</a>)</p>
-    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GYBW99CG">Lovisa Falkenberg</a></p>
-    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Service Cloud + Data Cloud)</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Service Cloud + Data Cloud)</p>
   </div>
 
-  <details>
+  <details class="pov-aproscore">
     <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">88/100</span> — T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
@@ -125,7 +134,7 @@
     </table>
   </details>
 
-  <p><strong>Topline POV:</strong> Apromore can help Alfa Laval Corporate AB by mining its multi-ERP Order-to-Cash and Service Cloud aftermarket event logs to give the in-flight Service rollout and Data Cloud program a documented target-state process — cutting DSO, lifting first-time-fix on high-margin aftermarket, and locking in the active process-mining opp already in pipeline.</p>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Alfa Laval Corporate AB by mining its multi-ERP Order-to-Cash and Service Cloud aftermarket event logs to give the in-flight Service rollout and Data Cloud program a documented target-state process — cutting DSO, lifting first-time-fix on high-margin aftermarket, and locking in the active process-mining opp already in pipeline.</p>
 
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
@@ -133,7 +142,7 @@
     <summary>1. Order-to-Cash across ERP + Service Cloud</summary>
     <div class="use-case-body">
       <p>Alfa Laval books orders across pumps, heat exchangers, decanters, and aftermarket parts through a multi-ERP landscape feeding a Service Cloud rollout now in Stage 02. Manual order-clearing, credit blocks, and delivery-date renegotiation stretch quote-to-cash cycle times and hurt on-time delivery in a capex-sensitive industrial buyer market. AFPI mines the full O2C event log without a PQL specialist, exposes rework loops, and lets the business analyst re-simulate policy changes in weeks, not quarters — targeting DSO reduction of 4-6 days and OTIF improvement of 3-5 pts.</p>
-      <p><strong>Key System(s):</strong> ERP (TBD), Sales Cloud, Service Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ERP (TBD), Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Anders+Wilhjelm+Alfa+Laval">Anders Wilhjelm</a> (President, Marine Division)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -143,7 +152,7 @@
     <summary>2. Field Service &amp; Aftermarket Case-to-Resolution</summary>
     <div class="use-case-body">
       <p>The two open Service opps ($126k pilot + $210k Phase I rollout) signal a live investment in service transformation across ~100 service centers globally. Aftermarket is Alfa Laval's highest-margin business; every hour a decanter or heat exchanger is down costs a customer real revenue, so first-time-fix and MTTR are board-level metrics. AFPI process-mines every case path, spare-parts dispatch, and technician handoff, then feeds Agentforce Service to auto-route and auto-diagnose — a 10-15% MTTR reduction and 5-8 pt FCR lift compound directly into service margin.</p>
-      <p><strong>Key System(s):</strong> Service Cloud, Data Cloud, Field Dispatch (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Data Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Sameer+Kalra+Alfa+Laval">Sameer Kalra</a> (President, Business Unit Service)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -153,7 +162,7 @@
     <summary>3. Procure-to-Pay &amp; Supplier On-Boarding</summary>
     <div class="use-case-body">
       <p>Alfa Laval sources specialty alloys, castings, and titanium plates from a global supplier base under tightening EU CSRD, CBAM, and dual-use export controls. Manual PO exceptions, three-way match failures, and supplier onboarding backlogs today burn CFO-office FTE and slow new product introductions. AFPI mines the P2P event log, quantifies rework hotspots, and lets Finance re-simulate policy changes with no SQL — reclaiming 8-12% of P2P touchless-rate uplift and cutting supplier onboarding from weeks to days.</p>
-      <p><strong>Key System(s):</strong> ERP AP (TBD), Supplier Portal (TBD), Data Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ERP AP (TBD), Supplier Portal (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Fredrik+Ekstrom+Alfa+Laval">Fredrik Ekström</a> (CFO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -163,7 +172,7 @@
     <summary>4. New Product Introduction (NPI) &amp; Engineering Change Order</summary>
     <div class="use-case-body">
       <p>Alfa Laval ships thousands of engineered-to-order configurations across the Marine, Energy, and Food &amp; Water divisions; ECO cycle time is the hidden tax on innovation speed. AFPI mines the PLM-to-ERP change-request flow, exposes bottlenecks between engineering, sourcing, and manufacturing, and pairs Compliance Center with the AFPI wedge to keep CE/ATEX/marine-class documentation always audit-ready. Target: 20-30% reduction in engineering-change lead time and zero missed classification reviews.</p>
-      <p><strong>Key System(s):</strong> PLM (TBD), ERP (TBD), Compliance Center</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> PLM (TBD), ERP (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Susanne+Pahlen+Alfa+Laval">Susanne Pahlén Åklundh</a> (President, Business Unit Energy)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -173,16 +182,13 @@
     <summary>5. Marine Decarbonization &amp; Compliance Reporting</summary>
     <div class="use-case-body">
       <p>Alfa Laval's PureBallast, PureSOx, and boiler business sit at the center of the IMO 2030/2050 decarbonization mandate and EU ETS-Maritime rollout — the customer's reporting obligation IS Alfa Laval's revenue engine. AFPI process-mines the certification-to-installation-to-service flow for marine retrofits and layers Compliance Center to auto-evidence each installation against MARPOL and EU-ETS schedules. This turns a compliance line item into a durable renewal moat and shortens retrofit cycle time by 15-25%.</p>
-      <p><strong>Key System(s):</strong> Service Cloud, Compliance Center, ERP (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Compliance Center</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Anders+Wilhjelm+Alfa+Laval">Anders Wilhjelm</a> (President, Marine Division)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
-  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
-
-  <div class="actions">
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
     <span class="disabled">Generate PDF</span>
     <span class="disabled">Generate Slack Canvas</span>
     <span class="disabled">Generate Vercel Page</span>
@@ -191,11 +197,7 @@
     <span class="disabled">Deal Support Request</span>
     <span class="disabled">Deeper Dive POV</span>
   </div>
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: High
-  </footer>
+  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

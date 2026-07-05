@@ -73,17 +73,27 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
-                  cursor: not-allowed; white-space: nowrap; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
           <input type="text" id="libSearch" placeholder="Search library…"
@@ -99,16 +109,15 @@
   <div class="snapshot">
     <p><strong>Financial Services, Banking (Regional / Community)</strong></p>
     <p><strong>Revenue:</strong> ~$1.4B &nbsp;|&nbsp; <strong>Employees:</strong> ~2,100 &nbsp;|&nbsp; <strong>HQ:</strong> Wilmington, DE, USA</p>
-    <p><strong>Current Salesforce Products:</strong> Sales Cloud (SFA), Analytics Cloud, MuleSoft, Platform, Marketing Cloud Engagement, Service Cloud (in-flight), Informatica IDMC / MDM</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (SFA), Analytics Cloud, MuleSoft, Platform, Marketing Cloud Engagement, Service Cloud (in-flight), Informatica IDMC / MDM</p>
     <p><strong>Current Non-Salesforce Systems:</strong> TBD [field verify with Molly Buckley]</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> Sales Cloud + Analytics Renewal (<a href="https://org62.my.salesforce.com/0063y000018QqtiAAC">$2.37M</a>) &nbsp;|&nbsp; AEH Org Renewal — MuleSoft + Platform + CRM (<a href="https://org62.my.salesforce.com/006ed00000TfUPdAAN">$1.33M</a>) &nbsp;|&nbsp; Agentforce Operations (<a href="https://org62.my.salesforce.com/006ed00000cHZDBAA4">$600K</a>)</p>
-    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GYCCTDLY">Molly Buckley</a></p>
-    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
-  <details>
+  <details class="pov-aproscore">
     <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
@@ -123,7 +132,7 @@
     </table>
   </details>
 
-  <p><strong>Topline POV:</strong> Apromore can help WSFS Financial Corporation by mining its end-to-end customer onboarding, KYC/AML, and case-handling event logs so the in-flight $600K Agentforce Operations agent is pointed at the flows with the biggest cycle-time and compliance payoff — turning the Bryn Mawr integration and Informatica MDM cleanup into a measurable single-customer-view story.</p>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help WSFS Financial Corporation by mining its end-to-end customer onboarding, KYC/AML, and case-handling event logs so the in-flight $600K Agentforce Operations agent is pointed at the flows with the biggest cycle-time and compliance payoff — turning the Bryn Mawr integration and Informatica MDM cleanup into a measurable single-customer-view story.</p>
 
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
@@ -131,7 +140,7 @@
     <summary>1. Customer / Account Onboarding &amp; KYC</summary>
     <div class="use-case-body">
       <p>WSFS onboards retail, small-business, and wealth clients through overlapping teller, digital, and Cash Connect channels — with KYC/AML checks, CIP verification, and beneficial-owner reviews stitched across the core, Salesforce, and Informatica MDM. AFPI can mine the end-to-end onboarding event log to expose rework loops, manual document chase, and cycle-time variance between branches and the digital channel, then hand clean, evidenced processes to the Agentforce Operations agent already in-flight ($600K). Metric moved: time-to-fund and abandonment rate on new accounts.</p>
-      <p><strong>Key System(s):</strong> Salesforce Sales Cloud, Informatica IDMC / MDM, Core banking (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, Informatica IDMC / MDM</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rodger+Levenson+WSFS">Rodger Levenson</a> (CEO — executive sponsor)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -141,7 +150,7 @@
     <summary>2. Loan Origination &amp; Underwriting (Commercial + Small Business)</summary>
     <div class="use-case-body">
       <p>Commercial and SBA loan files traverse relationship managers, underwriting, credit, doc prep, and closing — a classic hand-off-heavy process where variance and re-work erode NIM in a rising-rate environment. AFPI mines the origination log across the LOS and Salesforce SFA (part of the $2.37M renewal) to quantify stage-level cycle times, exception paths, and covenant-review rework. That evidence turns the Agentforce Operations pilot into a targeted underwriter-assist agent rather than a generic chatbot. Metric moved: application-to-close cycle time and pull-through rate.</p>
-      <p><strong>Key System(s):</strong> Salesforce Sales Cloud, LOS (TBD), Analytics Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, LOS (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=commercial+banking+lead+WSFS">Commercial Banking Lead</a> (Commercial Banking COO / Head of Credit Ops)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -151,7 +160,7 @@
     <summary>3. Contact Center &amp; Employee Service (Service + Agentforce)</summary>
     <div class="use-case-body">
       <p>WSFS has an active Employee Service + Agentforce opportunity ($239K) and an Agentforce Pilot ($150K). AFPI mines the case-handling event log — Service Cloud statuses, agent actions, escalations, transfers — to isolate the top intents by AHT and re-open rate, so the deployed Agentforce agents are pointed at the flows with the biggest handle-time payoff, not the loudest. AFPI Compliance Center adds an audit trail for regulator questions on complaint handling and Reg E disputes. Metric moved: AHT, first-contact resolution, complaint SLA.</p>
-      <p><strong>Key System(s):</strong> Service Cloud (in-flight), Agentforce, Marketing Cloud Engagement</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud (in-flight), Agentforce</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=customer+experience+lead+WSFS">Customer Experience Lead</a> (Head of Customer Service / Associate Experience)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -161,7 +170,7 @@
     <summary>4. Post-Merger Integration &amp; Data Quality (Bryn Mawr Trust + Cash Connect + Wealth)</summary>
     <div class="use-case-body">
       <p>WSFS has absorbed Bryn Mawr Trust and runs Cash Connect and a wealth arm — meaning duplicated customer, party, and account records flow through the active Informatica IDMC / MDM initiative ($303K). AFPI mines the master-data reconciliation and manual-merge processes to show where MDM rules are firing false positives, where stewards are rubber-stamping, and where the same customer is being serviced twice. Combined with the MuleSoft integration renewal, this becomes the evidence that turns MDM from a cost center into a measurable revenue-per-customer story. Metric moved: single-customer-view coverage, steward hours per 1,000 records.</p>
-      <p><strong>Key System(s):</strong> Informatica IDMC / MDM, MuleSoft, Salesforce Platform</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Informatica IDMC / MDM, MuleSoft</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=chief+information+officer+WSFS">CIO</a> (Head of Enterprise Data / CIO organization)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -171,16 +180,13 @@
     <summary>5. BSA / AML Alert Investigation &amp; SAR Filing</summary>
     <div class="use-case-body">
       <p>As a $20B+ asset bank operating in Delaware, WSFS is subject to intensive BSA/AML supervision, and alert queues from transaction monitoring generate huge investigator caseloads. AFPI mines the alert-to-disposition process — enrichment, escalations, L1/L2 hand-offs, SAR narrative drafting — to expose bottlenecks and disparate reviewer paths, then hand a proven, auditable process to an Agentforce financial-crimes assistant. Compliance Center provides regulators the evidenced control story. Metric moved: alerts per investigator per day, SAR filing timeliness, false-positive rate.</p>
-      <p><strong>Key System(s):</strong> Transaction Monitoring (TBD), Salesforce Platform, Agentforce</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Transaction Monitoring (TBD), Salesforce Platform</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=BSA+officer+WSFS">BSA Officer</a> (Head of Financial Crimes; economic buyer = Chief Risk Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
-  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
-
-  <div class="actions">
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
     <span class="disabled">Generate PDF</span>
     <span class="disabled">Generate Slack Canvas</span>
     <span class="disabled">Generate Vercel Page</span>
@@ -189,11 +195,7 @@
     <span class="disabled">Deal Support Request</span>
     <span class="disabled">Deeper Dive POV</span>
   </div>
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: High
-  </footer>
+  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

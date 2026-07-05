@@ -73,17 +73,27 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
-                  cursor: not-allowed; white-space: nowrap; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
           <input type="text" id="libSearch" placeholder="Search library…"
@@ -100,16 +110,15 @@
     <p><strong>Manufacturing, Automotive &amp; Energy, Intelligent Motion Solutions</strong></p>
     <p><strong>Revenue:</strong> ~$906M (FY25 standalone); pro-forma ~$2.1B+ post-Kito Crosby combination &nbsp;|&nbsp; <strong>Employees:</strong> ~3,300 (standalone); ~8,000+ combined &nbsp;|&nbsp; <strong>HQ:</strong> Charlotte, NC, USA</p>
     <p><strong>Major Subsidiaries:</strong> Yale, Magnetek, Dorner Conveyors, Duff-Norton, Kito Crosby (Feb 2026)</p>
-    <p><strong>Current Salesforce Products:</strong> Sales Cloud (741 Full CRM, 200 SFA), Pardot (8), Service Cloud, MuleSoft Anypoint</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (741 Full CRM, 200 SFA), Pardot (8), Service Cloud, MuleSoft Anypoint</p>
     <p><strong>Current Non-Salesforce Systems:</strong> SAP (via Mule SAP Connectors opp), TIBCO (legacy integration, being replaced by MuleSoft)</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> Corporation Renewal 741 Full CRM + 8 Pardot + 200 SFA (<a href="https://org62.my.salesforce.com/006ed00000NsJI9AAN">$867k</a>) &nbsp;|&nbsp; 1,004 Sales &amp; Service EE Add-On (<a href="https://org62.my.salesforce.com/006ed00000RY9MIAA1">$71k</a>) &nbsp;|&nbsp; MS Anypoint Advanced + SAP Connectors (<a href="https://org62.my.salesforce.com/006ed00000cHAoIAAW">$30k</a>)</p>
-    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0278QJF6DU">Joey Madrazo</a></p>
-    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
-  <details>
+  <details class="pov-aproscore">
     <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
@@ -126,7 +135,7 @@
     </table>
   </details>
 
-  <p><strong>Topline POV:</strong> Apromore can help Columbus McKinnon Corporation by mining its post-Kito-Crosby Order-to-Cash, Procure-to-Pay and warranty event logs to converge two multi-brand process stacks into one target-state flow — cutting quote-to-cash cycle time, exposing off-catalog spend across 15+ legacy ERPs, and giving Mark Paradowski's active MuleSoft + INFA integration program a documented process map before it hard-codes the wrong "as-is."</p>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Columbus McKinnon Corporation by mining its post-Kito-Crosby Order-to-Cash, Procure-to-Pay and warranty event logs to converge two multi-brand process stacks into one target-state flow — cutting quote-to-cash cycle time, exposing off-catalog spend across 15+ legacy ERPs, and giving Mark Paradowski's active MuleSoft + INFA integration program a documented process map before it hard-codes the wrong "as-is."</p>
 
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
@@ -134,7 +143,7 @@
     <summary>1. Post-Merger Order-to-Cash Harmonization (CMCO + Kito Crosby)</summary>
     <div class="use-case-body">
       <p>The Feb 2026 Kito Crosby acquisition bolts a $1B+ rigging/hardware business onto CMCO's hoist and motion portfolio, creating two parallel OTC stacks with duplicative branch, pricing, and billing steps across 15+ brands. AFPI mines both legacy event logs to expose which variants win on cycle time and margin, then guides a single target flow — the 2–4 week time-to-value case for merger integration, feeding directly into the active $867k Sales Cloud renewal. Metric moved: quote-to-cash cycle time and DSO.</p>
-      <p><strong>Key System(s):</strong> CMCO ERP (TBD), Kito Crosby ERP (TBD), Sales Cloud, MuleSoft</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> CMCO ERP (TBD), Kito Crosby ERP (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mark+Paradowski+Columbus+McKinnon">Mark Paradowski</a> (SVP CIO / Chief Digital Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -144,7 +153,7 @@
     <summary>2. Procure-to-Pay Across Fragmented Supplier Base</summary>
     <div class="use-case-body">
       <p>15+ legacy brand ERPs plus a global supplier network mean duplicate suppliers, off-catalog buys, and manual approvals leak margin. AFPI mines the actual P2P event log — PR → PO → GR → invoice — to prove where the waste sits and hands the CPO a hard-numbered before/after, complementing the active INFA MDM data-strategy program rather than competing with it. Metric moved: PO cycle time, off-catalog spend %, maverick-buy rate.</p>
-      <p><strong>Key System(s):</strong> SAP (via MuleSoft), Legacy brand ERPs, Supplier Portal (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP (via MuleSoft), Legacy brand ERPs</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Steven+Babcock+Columbus+McKinnon">Steven Babcock</a> (Chief Procurement Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -154,7 +163,7 @@
     <summary>3. Global Manufacturing &amp; Warehouse-to-Ship Fulfillment</summary>
     <div class="use-case-body">
       <p>Hoists, cranes, chain, rigging and conveyor products flow through dozens of plants and DCs across NA, EMEA, APAC and LATAM. AFPI mines MES + WMS + ERP events to expose plants with hidden re-work loops, stockout patterns, and inconsistent lead-time promises across brands — then routes the improvement work into Agentforce Operations. Metric moved: perfect-order rate, plant fill rate, on-time-in-full.</p>
-      <p><strong>Key System(s):</strong> Plant MES (TBD), WMS (TBD), SAP, Sales Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Plant MES (TBD), WMS (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Joseph+Owen+Columbus+McKinnon">Joseph Owen</a> (VP, Supply Chain Management)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -164,7 +173,7 @@
     <summary>4. Integration Rationalization: TIBCO → MuleSoft + INFA MDM</summary>
     <div class="use-case-body">
       <p>The open Mule Anypoint + SAP Connectors opp is a live TIBCO takeout, running in parallel with an active INFA data-strategy POV. Without a process map, both programs risk automating the "as-is" of a company that just doubled in size. AFPI mines the current integration flows to identify which processes actually cross system boundaries most often — collapsing the Celonis SQL+PQL model into a single no-code business-analyst view Paradowski's team can operate. Metric moved: integration project ROI, process straight-through rate.</p>
-      <p><strong>Key System(s):</strong> MuleSoft Anypoint, SAP, Informatica MDM, TIBCO (legacy)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft Anypoint, SAP</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mark+Paradowski+Columbus+McKinnon">Mark Paradowski</a> (SVP CIO / Chief Digital Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -174,16 +183,13 @@
     <summary>5. Warranty, Field Service &amp; Aftermarket Parts Cycle</summary>
     <div class="use-case-body">
       <p>Lifting and rigging equipment carries strict warranty, inspection, and safety-recall obligations across every CMCO brand. AFPI mines Service Cloud + field-service + parts-order events to expose where warranty claims stall, which failure modes recur across brands, and where aftermarket parts revenue leaks — directly quantifying the case for expanding Service Cloud beyond today's narrow footprint. Metric moved: warranty claim cycle time, aftermarket parts attach rate.</p>
-      <p><strong>Key System(s):</strong> Service Cloud, Field Service Tool (TBD), Warranty System (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Field Service Tool (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Nathan+Roberts+Columbus+McKinnon">Nathan Roberts</a> (VP of Operations — Americas / APAC)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
-  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, Appian, UiPath, or Power Automate at this account. ServiceNow is not confirmed. Legacy TIBCO integration is being actively displaced by MuleSoft.</p>
-
-  <div class="actions">
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, Appian, UiPath, or Power Automate at this account. ServiceNow is not confirmed. Legacy TIBCO integration is being actively displaced by MuleSoft.</span></h2><div class="actions">
     <span class="disabled">Generate PDF</span>
     <span class="disabled">Generate Slack Canvas</span>
     <span class="disabled">Generate Vercel Page</span>
@@ -192,11 +198,7 @@
     <span class="disabled">Deal Support Request</span>
     <span class="disabled">Deeper Dive POV</span>
   </div>
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-07-03 &nbsp;|&nbsp; Confidence: High
-  </footer>
+  <footer class="fine">Prepared on 2026-07-03. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

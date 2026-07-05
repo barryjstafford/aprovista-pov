@@ -73,17 +73,27 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
-                  cursor: not-allowed; white-space: nowrap; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
           <input type="text" id="libSearch" placeholder="Search library…"
@@ -100,16 +110,15 @@
     <p><strong>Manufacturing, Automotive &amp; Energy, Energy &amp; Industrial Distribution</strong></p>
     <p><strong>Revenue:</strong> ~$2.6B (2024 standalone); pro-forma ~$5–6B post-MRC Global combination &nbsp;|&nbsp; <strong>Employees:</strong> ~5,175 (standalone); ~10,000+ combined &nbsp;|&nbsp; <strong>HQ:</strong> Houston, TX, USA</p>
     <p><strong>Major Subsidiaries:</strong> Odessa Pumps, Power Service, Whitco Supply, MacLean International, TS&amp;M Supply</p>
-    <p><strong>Current Salesforce Products:</strong> Sales Cloud (SFA), Service Cloud (Call Center), Informatica MDM (Product 360, Supplier, Customer — active expansion)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (SFA), Service Cloud (Call Center), Informatica MDM (Product 360, Supplier, Customer — active expansion)</p>
     <p><strong>Current Non-Salesforce Systems:</strong> DigitalNOW eCommerce platform</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> MRC Global – MULA + Signature Success (<a href="https://org62.my.salesforce.com/006ed00000bab2AAAQ">$750k</a>) &nbsp;|&nbsp; INFA MDM Product 360 (<a href="https://org62.my.salesforce.com/006ed00000fjL0fAAE">$300k</a>) &nbsp;|&nbsp; INFA MDM Supplier / Customer Expansion (<a href="https://org62.my.salesforce.com/006ed00000fiSllAAE">$100k</a>)</p>
-    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U036XCPN1PG">Gwendolyn Ortiz</a></p>
-    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
-  <details>
+  <details class="pov-aproscore">
     <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
@@ -126,7 +135,7 @@
     </table>
   </details>
 
-  <p><strong>Topline POV:</strong> Apromore can help DNOW Inc. by mining its post-merger Order-to-Cash and Procure-to-Pay event logs to converge the DNOW and MRC Global process stacks — cutting quote-to-cash cycle time, exposing off-catalog spend, and giving the Sales Cloud / MULA rollout a documented target-state process before it locks in.</p>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help DNOW Inc. by mining its post-merger Order-to-Cash and Procure-to-Pay event logs to converge the DNOW and MRC Global process stacks — cutting quote-to-cash cycle time, exposing off-catalog spend, and giving the Sales Cloud / MULA rollout a documented target-state process before it locks in.</p>
 
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
@@ -134,7 +143,7 @@
     <summary>1. Post-Merger Order-to-Cash Harmonization (DNOW + MRC Global)</summary>
     <div class="use-case-body">
       <p>DNOW's combination with MRC Global creates two parallel OTC stacks with duplicative branch, credit, and billing steps. AFPI mines both legacy event logs to expose which variants win on cycle time and margin, then guides a single target flow — the classic 2–4 week time-to-value case for merger integration. Metric moved: quote-to-cash cycle time and DSO.</p>
-      <p><strong>Key System(s):</strong> DNOW ERP (TBD), MRC Global ERP (TBD), Sales Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> DNOW ERP (TBD), MRC Global ERP (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ramy+Matta+DNOW">Ramy Matta</a> (Process Optimization Manager, Projects Team)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -144,7 +153,7 @@
     <summary>2. Procure-to-Pay &amp; Supplier Onboarding (MDM adjacency)</summary>
     <div class="use-case-body">
       <p>The active Informatica MDM Product 360 + Supplier expansion opps confirm master-data pain across a fragmented supplier base. AFPI mines the actual P2P event log — PR → PO → GR → invoice — to prove where duplicate suppliers, off-catalog buys, and manual approvals leak margin, feeding directly into the MDM cleanup program rather than competing with it. Metric moved: PO cycle time, off-catalog spend %.</p>
-      <p><strong>Key System(s):</strong> Informatica MDM (Supplier), DNOW ERP AP (TBD), Supplier Portal (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Informatica MDM (Supplier), DNOW ERP AP (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jessie+Wang+DNOW">Jessie Wang</a> (Director, Data and Business Technology)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -154,7 +163,7 @@
     <summary>3. Warehouse-to-Ship Fulfillment for PVF, Pumps &amp; Artificial Lift</summary>
     <div class="use-case-body">
       <p>Distribution of PVF, pumps, and artificial-lift equipment across dozens of branches is a same-day-turn business where pick/pack/ship deviations hit customer NPS immediately. AFPI mines WMS + ERP events to show branches with hidden re-work loops and stockout patterns, then routes the improvement work into Agentforce Operations. Metric moved: perfect-order rate, branch fill rate.</p>
-      <p><strong>Key System(s):</strong> DNOW WMS (TBD), DNOW ERP (TBD), Sales Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> DNOW WMS (TBD), DNOW ERP (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Timm+Bohnert+DNOW">Timm Bohnert</a> (VP Supply Chain)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -164,7 +173,7 @@
     <summary>4. Quote-to-Order via eSpec &amp; DigitalNOW eCommerce</summary>
     <div class="use-case-body">
       <p>DigitalNOW and the eSpec configurator are the digital front door, but the handoff from configured quote to fulfilled order runs through Sales Cloud and the underlying ERP. AFPI reveals where digital orders drop into manual rework — pricing overrides, credit holds, spec exceptions — collapsing the SQL+PQL Celonis model into a single no-code business-analyst view. Metric moved: digital order straight-through rate.</p>
-      <p><strong>Key System(s):</strong> DigitalNOW eCommerce, eSpec Configurator, Sales Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> DigitalNOW eCommerce, eSpec Configurator</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chris+Daniels+DNOW">Chris Daniels</a> (Director of Integrated Solutions)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -174,16 +183,13 @@
     <summary>5. Credit Approval &amp; Collections Operations</summary>
     <div class="use-case-body">
       <p>The DNOW Credit Department runs its own Service Cloud Call Center org (open renewal in flight). Credit-app turnaround and collections dunning are event-log-rich processes where AFPI directly quantifies where credit reviews stall and which delinquent-account paths recover cash fastest. Metric moved: credit-app SLA, cash conversion cycle.</p>
-      <p><strong>Key System(s):</strong> Service Cloud (Call Center), DNOW ERP AR (TBD), Collections Tool (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud (Call Center), DNOW ERP AR (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Terrie+Williams+DNOW">Terrie Williams</a> (Director of CSM Business Process)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
-  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
-
-  <div class="actions">
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
     <span class="disabled">Generate PDF</span>
     <span class="disabled">Generate Slack Canvas</span>
     <span class="disabled">Generate Vercel Page</span>
@@ -192,11 +198,7 @@
     <span class="disabled">Deal Support Request</span>
     <span class="disabled">Deeper Dive POV</span>
   </div>
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-07-03 &nbsp;|&nbsp; Confidence: Med
-  </footer>
+  <footer class="fine">Prepared on 2026-07-03. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

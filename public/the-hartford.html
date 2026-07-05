@@ -73,17 +73,27 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
-                  cursor: not-allowed; white-space: nowrap; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
           <input type="text" id="libSearch" placeholder="Search library…"
@@ -99,16 +109,15 @@
   <div class="snapshot">
     <p><strong>Financial Services, Property &amp; Casualty Insurance (Commercial Lines, Personal Lines, Group Benefits, Mutual Funds)</strong></p>
     <p><strong>Revenue:</strong> ~$26.5B &nbsp;|&nbsp; <strong>Employees:</strong> ~19,100 &nbsp;|&nbsp; <strong>HQ:</strong> Hartford, CT, USA</p>
-    <p><strong>Current Salesforce Products:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=CIO+The+Hartford">the CIO / Head of Enterprise Architecture</a>]</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=CIO+The+Hartford">the CIO / Head of Enterprise Architecture</a>]</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=CIO+The+Hartford">the CIO / Head of Enterprise Architecture</a>]</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> </p>
-    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/W016W13H9C7">Nathan Romanek</a></p>
-    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
   </div>
 
-  <details>
+  <details class="pov-aproscore">
     <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">72/100</span> — T2 Develop</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
@@ -124,7 +133,7 @@
     </table>
   </details>
 
-  <p><strong>Topline POV:</strong> Apromore can help The Hartford Financial Services Group, Inc. by mining its FNOL-to-payout, quote-to-bind, and group-benefits case-management event logs to expose the loop patterns that quietly drive cycle time, LAE, and DOI complaint volume — while turning the annual SOX and NAIC Model Audit Rule attestation into a live, evidence-backed artifact.</p>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help The Hartford Financial Services Group, Inc. by mining its FNOL-to-payout, quote-to-bind, and group-benefits case-management event logs to expose the loop patterns that quietly drive cycle time, LAE, and DOI complaint volume — while turning the annual SOX and NAIC Model Audit Rule attestation into a live, evidence-backed artifact.</p>
 
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
@@ -132,7 +141,7 @@
     <summary>1. First Notice of Loss to Claim Closure — Personal &amp; Small Commercial Auto</summary>
     <div class="use-case-body">
       <p>The FNOL-to-closure journey moves across the digital intake channel, adjuster triage, coverage verification, damage estimation, vendor dispatch, subrogation, and payout — with state-DOI unfair claims practice clocks running the entire time. Straight-through-processing rates in P&amp;C claims typically hide a long tail of files that cycle through reassignment and information-request loops that quietly consume the majority of adjuster capacity. AFPI mines the actual event log across the claims platform, the AI triage layer, and the payment system to expose the two or three loop patterns that drive rework, moving cycle time, LAE (loss adjustment expense) ratio, and DOI complaint volume.</p>
-      <p><strong>Key System(s):</strong> Claims Platform (TBD), AI Triage Layer (TBD), Payment System (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Claims Platform (TBD), AI Triage Layer (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Claims+The+Hartford">the Head of Claims Operations</a> (Head of Claims Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -142,7 +151,7 @@
     <summary>2. Small Commercial Underwriting &amp; Quote-to-Bind</summary>
     <div class="use-case-body">
       <p>The Hartford's small commercial franchise runs on speed — the winning quote is often the first one back to the independent agent — and quote-to-bind cycle time is the single biggest lever on hit-ratio. Behind the scenes the actual workflow ricochets between the agent portal, ordered third-party data (ISO, MVR, prior-carrier), the rating engine, and referrals to underwriters when a rule fires. AFPI produces the true process graph and exposes which referral rules, data-vendor latencies, or agency segments are structurally slowing the quote — the metric moved is bind rate at the target service-level, and premium per underwriter FTE.</p>
-      <p><strong>Key System(s):</strong> Agent Portal (TBD), Rating Engine (TBD), Third-Party Data (ISO / MVR)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agent Portal (TBD), Rating Engine (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Small+Commercial+Underwriting+The+Hartford">the Head of Small Commercial Underwriting</a> (Head of Small Commercial Underwriting)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -152,7 +161,7 @@
     <summary>3. Group Benefits Absence &amp; Disability Case Management</summary>
     <div class="use-case-body">
       <p>The Hartford is a top-three US carrier in group disability, absence management, and paid family leave — a business where the "process" is a case that lives for weeks or months across intake, medical review, employer coordination, and periodic re-adjudication. State PFML mandates keep multiplying and each one has its own eligibility clock and appeal SLA. AFPI ingests the case-management event log and surfaces where cases stall against statutory clocks and which case segments generate disproportionate rework, moving benefit-decision cycle time, appeals-overturn rate, and PFML compliance exceptions.</p>
-      <p><strong>Key System(s):</strong> Case Management Platform (TBD), Medical Review System (TBD), Employer Portal (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Case Management Platform (TBD), Medical Review System (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Group+Benefits+Operations+The+Hartford">the Head of Group Benefits Operations</a> (Head of Group Benefits Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -162,7 +171,7 @@
     <summary>4. Policy Servicing &amp; Endorsement Processing (Commercial Middle Market)</summary>
     <div class="use-case-body">
       <p>Once a commercial policy binds, the real cost sits in mid-term endorsements — added vehicles, changed limits, new locations, certificate requests — that flow across the agent portal, service centers, and underwriting for anything material. Endorsement backlogs and re-work drive agent NPS almost as much as claims do, and are invisible in the policy admin system's canned dashboards. AFPI maps the full endorsement lifecycle event log, isolates the endorsement types and agency segments that consistently generate the worst cycle-time outliers, and quantifies the servicing-cost-to-premium ratio by segment.</p>
-      <p><strong>Key System(s):</strong> Policy Admin System (TBD), Agent Portal (TBD), Service Center Platform (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Policy Admin System (TBD), Agent Portal (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Middle+Market+Operations+The+Hartford">the Head of Middle Market Operations</a> (Head of Middle Market Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -172,16 +181,13 @@
     <summary>5. SOX &amp; Model Risk Compliance — Reserving and Actuarial Process Attestation</summary>
     <div class="use-case-body">
       <p>As an SEC-registered insurer, The Hartford operates under SOX Section 404 for financial reporting and NAIC Model Audit Rule / Model Risk Management for actuarial models — and every year the internal-audit and external-auditor teams reconstruct the actual process by which reserves, DAC, and reinsurance recoverables are calculated and reviewed. Today that reconstruction is largely interview-driven. AFPI turns the process-attestation exercise into a live artifact: the true event log across the actuarial workbench, reserving system, and financial close, with control points and segregation-of-duty breaks surfaced automatically. The metric moved is audit-cycle hours and Sarbanes control-deficiency findings.</p>
-      <p><strong>Key System(s):</strong> Actuarial Workbench (TBD), Reserving System (TBD), Financial Close Platform (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Actuarial Workbench (TBD), Reserving System (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Auditor+The+Hartford">the Chief Auditor</a> (Chief Auditor and Chief Actuary)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
-  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
-
-  <div class="actions">
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
     <span class="disabled">Generate PDF</span>
     <span class="disabled">Generate Slack Canvas</span>
     <span class="disabled">Generate Vercel Page</span>
@@ -190,11 +196,7 @@
     <span class="disabled">Deal Support Request</span>
     <span class="disabled">Deeper Dive POV</span>
   </div>
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: Med
-  </footer>
+  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

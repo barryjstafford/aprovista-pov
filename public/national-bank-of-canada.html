@@ -73,17 +73,27 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
-                  cursor: not-allowed; white-space: nowrap; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
           <input type="text" id="libSearch" placeholder="Search library…"
@@ -99,16 +109,15 @@
   <div class="snapshot">
     <p><strong>Financial Services, Banking</strong></p>
     <p><strong>Revenue:</strong> C$11.6B (FY2025) &nbsp;|&nbsp; <strong>Employees:</strong> ~30,000 &nbsp;|&nbsp; <strong>HQ:</strong> Montreal, QC, Canada</p>
-    <p><strong>Current Salesforce Products:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Julie+Levesque+National+Bank+of+Canada">Julie Levesque</a>]</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Julie+Levesque+National+Bank+of+Canada">Julie Levesque</a>]</p>
     <p><strong>Current Non-Salesforce Systems:</strong> SAP Core Banking</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> BNC - CSG - SAP Core Banking to FSC Digital Lending Phase 3 (<a href="https://org62.my.salesforce.com/006ed00000EzgdNAAR">$10.0M</a>) &nbsp;|&nbsp; BNC - CSG - SAP Core Banking to FSC Phase 1 (<a href="https://org62.my.salesforce.com/006ed00000EzfKjAAJ">$5.0M</a>) &nbsp;|&nbsp; BNC - CSG - AES Commercial (<a href="https://org62.my.salesforce.com/006ed00000YsVWJAA3">$3.7M</a>)</p>
-    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01FTQK0Y15">Mathieu Allard</a></p>
-    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Financial Services Cloud)</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Financial Services Cloud)</p>
   </div>
 
-  <details>
+  <details class="pov-aproscore">
     <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">87/100</span> — T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
@@ -125,7 +134,7 @@
     </table>
   </details>
 
-  <p><strong>Topline POV:</strong> Apromore can help National Bank of Canada by mining the current SAP Core Banking order-to-cash and loan-origination flows before FSC cutover — de-risking the $15M re-platform, exposing undocumented branch variants, and producing OSFI/FINTRAC-ready audit evidence in the same motion.</p>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help National Bank of Canada by mining the current SAP Core Banking order-to-cash and loan-origination flows before FSC cutover — de-risking the $15M re-platform, exposing undocumented branch variants, and producing OSFI/FINTRAC-ready audit evidence in the same motion.</p>
 
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
@@ -133,7 +142,7 @@
     <summary>1. Core Banking to Financial Services Cloud migration readiness</summary>
     <div class="use-case-body">
       <p>The $15M SAP Core Banking → FSC program (Phases 1 &amp; 3) is exactly the kind of multi-year re-platforming where AFPI de-risks the transition by mining the current SAP order-to-cash and loan-origination flows before cutover. Every core-banking migration overruns on unknown process variants — undocumented branch workarounds, dual-entry rework — and AFPI plays the "as-is" discovery layer that feeds the FSC to-be design. Metric moved: cutover slippage weeks and post-go-live rework hours.</p>
-      <p><strong>Key System(s):</strong> SAP Core Banking, Financial Services Cloud, Salesforce Platform</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP Core Banking, Financial Services Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Julie+Levesque+National+Bank+of+Canada">Julie Levesque</a> (EVP Technology &amp; Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -143,7 +152,7 @@
     <summary>2. Digital lending origination cycle time</summary>
     <div class="use-case-body">
       <p>Phase 3 of the SAP→FSC build is specifically Digital Lending — a domain where funnel drop-off, credit-decision rework, and manual document chase are the top three time sinks. AFPI mines the loan-app event log to expose where applications stall (income verification, KYC re-work, adjudicator queue) and quantifies the automation ROI before Agentforce or FSC Lending workflows are configured. Moves origination cycle time from days to hours and lifts pull-through rate.</p>
-      <p><strong>Key System(s):</strong> Financial Services Cloud, SAP Core Banking, KYC / Adjudication Tool (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, SAP Core Banking</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Lucie+Blanchet+National+Bank+of+Canada">Lucie Blanchet</a> (EVP Personal &amp; Commercial Banking)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -153,7 +162,7 @@
     <summary>3. Wealth Advisor onboarding &amp; servicing automation</summary>
     <div class="use-case-body">
       <p>The open Wealth Advisor Portal Automation opp is a natural AFPI wedge: mine the advisor task-completion event log (client onboarding, KYC refresh, portfolio rebalancing hand-offs) to isolate the 5–8 repetitive multi-system steps that account for 60%+ of advisor admin time. AFPI + Agentforce turns that into an agent-executed workflow with human-in-the-loop review. Metric: advisor productive hours per week, and time-to-first-trade for new HNW clients.</p>
-      <p><strong>Key System(s):</strong> Financial Services Cloud, Agentforce, Wealth Advisor Portal (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, Agentforce</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Nancy+Paquet+National+Bank+of+Canada">Nancy Paquet</a> (EVP Wealth Management)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -163,7 +172,7 @@
     <summary>4. Contact center / Agentic Omni Gateway grounding</summary>
     <div class="use-case-body">
       <p>The Agentic Omni Gateway opp points to an omni-channel service redesign. AFPI provides the process-mined baseline (call reasons, hand-off patterns, first-contact-resolution gaps) that Agentforce agents need as grounding — without it, agents automate the wrong thing. Today's IVR + agent hand-offs create 20–30% repeat contacts; regulator-driven complaint SLAs (FCAC in Canada) make this a compliance issue, not just a cost one. Moves FCR, repeat-contact rate, and complaint aging.</p>
-      <p><strong>Key System(s):</strong> Agentforce, Service Cloud, IVR / CTI (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce, Service Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Marie+Chantal+Gingras+National+Bank+of+Canada">Marie Chantal Gingras</a> (SVP Customer Experience)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -173,16 +182,13 @@
     <summary>5. Regulatory reporting &amp; AML process compliance (Compliance Center wedge)</summary>
     <div class="use-case-body">
       <p>As a Canadian D-SIB regulated by OSFI plus FINTRAC AML obligations, NBC runs heavy periodic-review, transaction-monitoring, and adverse-media investigation processes across SAP, FSC (future), and third-party AML tools. AFPI Compliance Center mines these flows to prove control effectiveness, isolate SLA-breach root causes, and produce audit-ready process evidence for OSFI E-13 and FINTRAC reviews. Moves case-closure SLA, false-positive rework, and audit prep hours.</p>
-      <p><strong>Key System(s):</strong> SAP Core Banking, AML Transaction Monitoring (TBD), Financial Services Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP Core Banking, AML Transaction Monitoring (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Bill+Bonney+National+Bank+of+Canada">Bill Bonney</a> (Chief Compliance Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
-  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
-
-  <div class="actions">
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
     <span class="disabled">Generate PDF</span>
     <span class="disabled">Generate Slack Canvas</span>
     <span class="disabled">Generate Vercel Page</span>
@@ -191,11 +197,7 @@
     <span class="disabled">Deal Support Request</span>
     <span class="disabled">Deeper Dive POV</span>
   </div>
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: High
-  </footer>
+  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

@@ -73,17 +73,27 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
-                  cursor: not-allowed; white-space: nowrap; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
           <input type="text" id="libSearch" placeholder="Search library…"
@@ -99,16 +109,15 @@
   <div class="snapshot">
     <p><strong>Utilities, Electric &amp; Natural Gas Distribution</strong></p>
     <p><strong>Revenue:</strong> $12.3B &nbsp;|&nbsp; <strong>Employees:</strong> 14,000 &nbsp;|&nbsp; <strong>HQ:</strong> Houston, TX, USA</p>
-    <p><strong>Current Salesforce Products:</strong> Not confirmed [field verify with <a href="https://salesforce.enterprise.slack.com/team/U01G8FKQFJN">Jordan Whitehead</a>]</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Not confirmed [field verify with <a href="https://salesforce.enterprise.slack.com/team/U01G8FKQFJN">Jordan Whitehead</a>]</p>
     <p><strong>Current Non-Salesforce Systems:</strong> SAP S/4HANA (WAM), Regrello</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> CenterPoint Energy - SAP S4 WAM Program &amp; Systemwide Resiliency Plan POV (<a href="https://org62.my.salesforce.com/006ed00000AZhPJAA1">$3.0M</a>) &nbsp;|&nbsp; CenterPoint Energy - Regrello (<a href="https://org62.my.salesforce.com/006ed00000RbCttAAF">$1.5M</a>) &nbsp;|&nbsp; Resiliency Planning RFP (<a href="https://org62.my.salesforce.com/006ed000009tfOjAAI">$975k</a>)</p>
-    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G8FKQFJN">Jordan Whitehead</a></p>
-    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
-  <details>
+  <details class="pov-aproscore">
     <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">92/100</span> — T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
@@ -125,7 +134,7 @@
     </table>
   </details>
 
-  <p><strong>Topline POV:</strong> Apromore can help CenterPoint Energy, Inc. by mining the SAP S/4 WAM + legacy CIS event logs before go-live and the end-to-end storm-restoration process across OMS, GIS, WFM and CIS — shortening WAM hypercare, defending SAIDI/SAIFI against the Texas PUC, and giving Regrello a validated target-state to automate.</p>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help CenterPoint Energy, Inc. by mining the SAP S/4 WAM + legacy CIS event logs before go-live and the end-to-end storm-restoration process across OMS, GIS, WFM and CIS — shortening WAM hypercare, defending SAIDI/SAIFI against the Texas PUC, and giving Regrello a validated target-state to automate.</p>
 
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
@@ -133,7 +142,7 @@
     <summary>1. SAP S/4HANA Work &amp; Asset Management (WAM) Cutover Assurance</summary>
     <div class="use-case-body">
       <p>The $3M WAM program is the highest-stakes ERP transformation CenterPoint has run in a decade — work order creation, dispatch, meter-to-cash, and asset lifecycle all move. Without event-log-based process discovery, cutover teams rely on interview-based TO-BE maps that miss 30-40% of real variants (emergency work orders, mutual-aid crews, storm exceptions). AFPI mines the actual SAP + legacy CIS event logs to expose every variant before go-live, cutting stabilization cost by 15-25% and moving hypercare from 12 to 6 weeks.</p>
-      <p><strong>Key System(s):</strong> SAP S/4HANA (WAM), Legacy CIS, WFM</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP S/4HANA (WAM), Legacy CIS</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jason+Ryan+CenterPoint+Energy">Jason Ryan</a> (CIO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -143,7 +152,7 @@
     <summary>2. Systemwide Resiliency &amp; Storm Response Orchestration</summary>
     <div class="use-case-body">
       <p>After Hurricane Beryl, Texas PUC and the Governor's office put CenterPoint's outage-restoration process under a microscope — average restoration time, crew dispatch, damage-assessment cycle, and stakeholder comms all became reportable metrics. AFPI mines the end-to-end restoration process across OMS, GIS, WFM, and CIS to expose bottlenecks (crew staging delays, damage-assessment rework, mutual-aid onboarding friction) and quantify what a 10% faster restoration is worth in avoided customer-hours-lost. Metric moved: SAIDI/SAIFI, mutual-aid mobilization time.</p>
-      <p><strong>Key System(s):</strong> OMS, GIS, WFM</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> OMS, GIS</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Darin+Carroll+CenterPoint+Energy">Darin Carroll</a> (SVP, Electric Business)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -153,7 +162,7 @@
     <summary>3. Regrello Workflow — Process Baseline Before You Automate</summary>
     <div class="use-case-body">
       <p>Two active Regrello opps ($1.5M + $700k) signal CenterPoint is standardizing cross-functional workflows — but automating a broken process just makes it break faster. AFPI runs discovery FIRST on the target workflows (permitting, vendor onboarding, capital-project intake) to map the actual paths, exception loops, and handoff friction. Regrello then automates the validated happy path, and AFPI continuously monitors conformance. Metric moved: cycle time, first-pass yield, rework rate.</p>
-      <p><strong>Key System(s):</strong> Regrello, SAP S/4HANA, Legacy CIS</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Regrello, SAP S/4HANA</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Amy+Sedgwick+CenterPoint+Energy">Amy Sedgwick</a> (VP, Business Transformation)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -163,7 +172,7 @@
     <summary>4. Regulatory Rate-Case &amp; Compliance Evidence Automation</summary>
     <div class="use-case-body">
       <p>CenterPoint files continuously with PUC Texas, MPUC (Minnesota), and Indiana URC — every rate case, storm-cost recovery filing, and prudency review demands defensible evidence of operational efficiency. Compliance teams spend thousands of hours pulling logs and building narratives. AFPI's Compliance Center wedge produces continuously-updated, audit-grade process evidence for every regulated workflow (outage response, capital deployment, safety inspections), collapsing rate-case prep from months to weeks. Metric moved: rate-case cycle time, prudency approval rate.</p>
-      <p><strong>Key System(s):</strong> SAP S/4HANA, OMS, GIS</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP S/4HANA, OMS</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Monica+Karuturi+CenterPoint+Energy">Monica Karuturi</a> (EVP &amp; General Counsel)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -173,16 +182,13 @@
     <summary>5. Meter-to-Cash &amp; Customer Move-In/Out Cycle</summary>
     <div class="use-case-body">
       <p>With 7M+ metered customers across gas and electric, move-in/move-out, billing exceptions, and payment plan workflows are high-volume, high-friction, and touch Salesforce/CIS/AMI. AFPI mines the meter-to-cash event log to quantify billing rework, days-sales-outstanding, and self-service leakage. Directly feeds the Agentic Analytics Big Bet ($576k opp) — AFPI supplies the process ground truth, Agentforce automates the top variants. Metric moved: DSO, cost-to-serve per customer, self-service containment.</p>
-      <p><strong>Key System(s):</strong> Legacy CIS, AMI, Sales/Service Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Legacy CIS, AMI</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kenneth+Coleman+CenterPoint+Energy">Kenneth Coleman</a> (SVP, Customer Transformation)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
-  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
-
-  <div class="actions">
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
     <span class="disabled">Generate PDF</span>
     <span class="disabled">Generate Slack Canvas</span>
     <span class="disabled">Generate Vercel Page</span>
@@ -191,11 +197,7 @@
     <span class="disabled">Deal Support Request</span>
     <span class="disabled">Deeper Dive POV</span>
   </div>
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: High
-  </footer>
+  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

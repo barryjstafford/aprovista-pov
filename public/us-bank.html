@@ -73,17 +73,27 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
-                  cursor: not-allowed; white-space: nowrap; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
           <input type="text" id="libSearch" placeholder="Search library…"
@@ -100,16 +110,15 @@
     <p><strong>Financial Services, Banking (Super-Regional Universal Bank)</strong></p>
     <p><strong>Revenue:</strong> ~$27B (FY24 net revenue) &nbsp;|&nbsp; <strong>Employees:</strong> ~70,000 &nbsp;|&nbsp; <strong>HQ:</strong> Minneapolis, MN, USA</p>
     <p><strong>Major Subsidiaries:</strong> U.S. Bank National Association, Elavon, Elan Financial Services, U.S. Bancorp Investments, U.S. Bancorp Asset Management</p>
-    <p><strong>Current Salesforce Products:</strong> Sales Cloud (Own SFA, 33-instance renewal in negotiate), Service Cloud, Tableau, Data Cloud (Enterprise sizing in flight), Agentforce (live in contact center — Slalom-delivered production use case), CSG / Expert Services, Informatica MDM (co-sell IULA in Validating Benefits)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Own SFA, 33-instance renewal in negotiate), Service Cloud, Tableau, Data Cloud (Enterprise sizing in flight), Agentforce (live in contact center — Slalom-delivered production use case), CSG / Expert Services, Informatica MDM (co-sell IULA in Validating Benefits)</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Pega, ServiceNow (both being actively displaced per open Call-Center Takeout opp)</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> SFA Renewal 33 (<a href="https://org62.my.salesforce.com/0063y000017RvdGAAS">$20.0M</a>) &nbsp;|&nbsp; Enterprise DC Upside AELA (<a href="https://org62.my.salesforce.com/006ed00000XwqfxAAB">$4.95M</a>) &nbsp;|&nbsp; Agentic Transformation Services (<a href="https://org62.my.salesforce.com/006ed00000Xb09JAAR">$3.7M</a>)</p>
-    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
-  <details>
+  <details class="pov-aproscore">
     <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">92/100</span> — T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
@@ -126,7 +135,7 @@
     </table>
   </details>
 
-  <p><strong>Topline POV:</strong> Apromore can help U.S. Bancorp by mining the live Pega and ServiceNow contact-center event logs behind the open $2.07M takeout opp — proving the as-is call flow before Agentforce absorbs it, and giving audit, wealth, and payments the same one-analyst process-mining seat across the enterprise.</p>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help U.S. Bancorp by mining the live Pega and ServiceNow contact-center event logs behind the open $2.07M takeout opp — proving the as-is call flow before Agentforce absorbs it, and giving audit, wealth, and payments the same one-analyst process-mining seat across the enterprise.</p>
 
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
@@ -134,7 +143,7 @@
     <summary>1. Contact-Center Pega/ServiceNow Displacement — Prove the "As-Is"</summary>
     <div class="use-case-body">
       <p>USB has an active <a href="https://org62.my.salesforce.com/006ed0000010ywTAAQ">$2.07M Pega/Snow takeout opp</a> that pairs Agentforce with Data Cloud, and Slalom already has an Agentforce contact-center use case running in production. AFPI closes the loop by mining the actual Pega/ServiceNow event logs — how calls really move, where holds and transfers eat AHT, which paths the Agentforce agent needs to own first. This is the "prove the takeout ROI before the check clears" wedge; no PQL specialist, one Ops analyst pilots it inside two weeks. Metric moved: AHT, transfer rate, first-contact resolution.</p>
-      <p><strong>Key System(s):</strong> Pega, ServiceNow, Agentforce (Service Cloud)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Pega, ServiceNow</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=CCB+CIO+US+Bank">CCB CIO / VP Contact Center</a> (TBD — engage via Slalom delivery lead on-site)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -144,7 +153,7 @@
     <summary>2. Wealth &amp; Investment (WCIB) Advisor Onboarding + Client Servicing</summary>
     <div class="use-case-body">
       <p>Scott Ford (EVP, President Wealth Management) sat at the September 2025 Salesforce AI/Data CRO dinner in NYC, and there is a live <a href="https://org62.my.salesforce.com/006ed00000ELke6AAD">$1.6M WCIB Agentforce upside</a>. Wealth onboarding is a compliance-heavy multi-desk process (KYC → suitability → account funding → advisor handoff) where every stalled case delays revenue and risks a FINRA finding. AFPI mines the actual advisor workbench event log to expose rework, then hands the top three broken variants to Agentforce Operations. Metric moved: advisor onboarding cycle time and % accounts funded within 5 business days.</p>
-      <p><strong>Key System(s):</strong> Advisor Workbench (TBD), Sales Cloud, Agentforce</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Advisor Workbench (TBD), Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Scott+Ford+US+Bank+Wealth">Scott Ford</a> (EVP, President Wealth Management)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -154,7 +163,7 @@
     <summary>3. Enterprise Data + MDM Lineage Wedge with Informatica</summary>
     <div class="use-case-body">
       <p>Two large Informatica MDM co-sell opps are in "Validating Benefits &amp; Value" — <a href="https://org62.my.salesforce.com/006ed00000QOsA4AAL">$3.55M</a> and <a href="https://org62.my.salesforce.com/006ed00000ZPsvVAAT">$1.52M</a> — plus a <a href="https://org62.my.salesforce.com/006ed00000NCmEvAAL">$1.5M Data360 SELA</a>. AFPI overlays a process-lineage view on the MDM ingestion and stewardship workflow so USB can prove "the customer record survived the pipeline correctly" to internal risk and OCC examiners. This differentiates against Celonis, which treats MDM as an outside-in analytics problem, not a process problem. Metric moved: data-quality-driven rework hours and audit-finding count.</p>
-      <p><strong>Key System(s):</strong> Informatica MDM, Data Cloud, Tableau</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Informatica MDM, Data Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Data+Officer+US+Bank">Chief Data Officer / EDM Lead</a> (TBD — field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -164,7 +173,7 @@
     <summary>4. Wholesale Payments &amp; Elan Financial Merchant Onboarding</summary>
     <div class="use-case-body">
       <p>USB owns Elan Financial Services (merchant / prepaid) and processes a very large merchant-onboarding + dispute-management book. AFPI mines the merchant-onboarding event log to distinguish repeatable underwriting-return loops from true one-offs, then routes the repeatable ones to Agentforce Operations. Value framing against TPL: process-mining tier reveals top three onboarding-drop paths within a quarter, meaningfully under the cost of a single lost mid-market merchant. Metric moved: application-to-boarded cycle time and % applications requiring re-work.</p>
-      <p><strong>Key System(s):</strong> Elan Merchant Onboarding Platform (TBD), Service Cloud, Agentforce</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Elan Merchant Onboarding Platform (TBD), Service Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Shailesh+Kotwal+US+Bank+Payments">Shailesh Kotwal</a> (Vice Chair, Payment Services)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -174,16 +183,13 @@
     <summary>5. Regulatory Reporting &amp; Compliance Center — Category-II Bank Wedge</summary>
     <div class="use-case-body">
       <p>USB is Category II under Basel III, so CCAR, LCR, LCR-daily, and OCC exam artifacts all consume upstream operational data whose process lineage matters. AFPI's Compliance Center gives audit and internal risk a defensible "prove the process" view over reporting workflows. This lands as the natural companion to the <a href="https://org62.my.salesforce.com/006ed00000XwqfxAAB">$4.95M DC Upside AELA</a> — same data, one more use case that pays back inside the quarter. Metric moved: reporting-cycle days and manual-reconciliation FTE.</p>
-      <p><strong>Key System(s):</strong> Data Cloud, Tableau, Regulatory Reporting Suite (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Data Cloud, Tableau</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Controller+Corporate+Audit+US+Bank">Controller / Corporate Audit Lead</a> (TBD — field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
-  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
-
-  <div class="actions">
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
     <span class="disabled">Generate PDF</span>
     <span class="disabled">Generate Slack Canvas</span>
     <span class="disabled">Generate Vercel Page</span>
@@ -192,11 +198,7 @@
     <span class="disabled">Deal Support Request</span>
     <span class="disabled">Deeper Dive POV</span>
   </div>
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: High
-  </footer>
+  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

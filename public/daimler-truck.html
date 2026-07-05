@@ -73,17 +73,27 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
-                  cursor: not-allowed; white-space: nowrap; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
           <input type="text" id="libSearch" placeholder="Search library…"
@@ -100,16 +110,15 @@
     <p><strong>Manufacturing, Automotive &amp; Energy</strong></p>
     <p><strong>Revenue:</strong> ~€55.9B (FY2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~103,000 &nbsp;|&nbsp; <strong>HQ:</strong> Leinfelden-Echterdingen, Germany</p>
     <p><strong>Major Subsidiaries:</strong> Mercedes-Benz Trucks, Freightliner, Western Star, FUSO, BharatBenz</p>
-    <p><strong>Current Salesforce Products:</strong> Tableau (renewal in flight); Sales Cloud &amp; Service Cloud footprint indicated by active CRM/Contact Center opps</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Tableau (renewal in flight); Sales Cloud &amp; Service Cloud footprint indicated by active CRM/Contact Center opps</p>
     <p><strong>Current Non-Salesforce Systems:</strong> ServiceNow, SAP (assumed but not confirmed) [field verify with CIO]</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> Regrello (Upside) Shadow Oppty (<a href="https://org62.my.salesforce.com/006ed00000d0u2AAAQ">$250k</a>) &nbsp;|&nbsp; Plattform &amp; AI NB (<a href="https://org62.my.salesforce.com/006ed00000dsaCwAAI">$200k</a>) &nbsp;|&nbsp; Agentic Pilot (<a href="https://org62.my.salesforce.com/006ed00000LaDPFAA3">$200k</a>)</p>
-    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
-  <details>
+  <details class="pov-aproscore">
     <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">84/100</span> — T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
@@ -126,7 +135,7 @@
     </table>
   </details>
 
-  <p><strong>Topline POV:</strong> Apromore can help Daimler Truck Holding AG by mining the SAP order, warranty, and P2P event logs across Mercedes-Benz Trucks, Freightliner, Western Star, FUSO and BharatBenz to expose where build-to-order variants stall, warranty claims leak, and supplier exceptions bleed working capital — feeding the active Agentic Pilot, ServiceNow Integration, and Data Cloud opps with a documented target-state process before those programs lock in.</p>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Daimler Truck Holding AG by mining the SAP order, warranty, and P2P event logs across Mercedes-Benz Trucks, Freightliner, Western Star, FUSO and BharatBenz to expose where build-to-order variants stall, warranty claims leak, and supplier exceptions bleed working capital — feeding the active Agentic Pilot, ServiceNow Integration, and Data Cloud opps with a documented target-state process before those programs lock in.</p>
 
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
@@ -134,7 +143,7 @@
     <summary>1. Order-to-Delivery for Custom Trucks</summary>
     <div class="use-case-body">
       <p>Daimler Truck's build-to-order model spans thousands of chassis, powertrain, and body-builder configurations across Mercedes-Benz Trucks, Freightliner, Western Star, FUSO, and BharatBenz. Long lead times, missed customer promise dates, and finished-goods write-downs are chronic pain — and CFO scrutiny is intense post-IPO. AFPI mines the SAP order and MES event logs to expose where variants stall, which options trigger rework, and which plants consistently beat vs. miss cycle time; the wedge is a 3-4 week diagnostic that pairs with the <a href="https://org62.my.salesforce.com/006ed00000bz9HDAAY">Customer 360 Data Cloud</a> opp to unify order status across SAP, dealer DMS, and CRM. Metric moved: on-time delivery to promise date +8-12pp, working-capital tied up in WIP -5%.</p>
-      <p><strong>Key System(s):</strong> SAP (Order/MES), Dealer DMS, Sales Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP (Order/MES), Dealer DMS</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Karin+Radstrom+Daimler+Truck">Karin Rådström</a> (CEO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -144,7 +153,7 @@
     <summary>2. Aftersales &amp; Warranty Claims Handling</summary>
     <div class="use-case-body">
       <p>Warranty is the single largest controllable cost lever in commercial vehicles — every day a claim sits in dealer queues drags NPS and cash. Today the process spans dealer portals, ServiceNow tickets, and SAP warranty modules with heavy manual triage. AFPI process-mines the claim event log to find rework loops, dealer outliers, and codes that consistently escalate to engineering, then feeds an Agentforce Service Agent (see the <a href="https://org62.my.salesforce.com/006ed00000LaDPFAA3">Agentic Pilot</a> and <a href="https://org62.my.salesforce.com/0063y000019Ju6zAAC">ServiceNow Integration</a> opps) to auto-triage and route. Metric moved: warranty cycle time -30-40%, warranty leakage -3-5%.</p>
-      <p><strong>Key System(s):</strong> SAP (Warranty), ServiceNow, Service Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP (Warranty), ServiceNow</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Achim+Puchert+Daimler+Truck">Achim Puchert</a> (CEO, Mercedes-Benz Trucks)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -154,7 +163,7 @@
     <summary>3. Dealer &amp; Own-Retail Service Operations</summary>
     <div class="use-case-body">
       <p>The <a href="https://org62.my.salesforce.com/006ed00000KqX1DAAV">Daimler Truck Own Retail Service</a> opp is a direct AFPI wedge — as Daimler Truck expands company-owned retail (RoadStar in Europe, Rush/Daimler Truck North America JVs), it needs a single view of service-bay throughput, technician utilization, and parts-availability across hundreds of locations. AFPI mines the service-order event log, exposes idle-bay time, parts-wait bottlenecks, and appointment-to-close cycle time, and hands the fix to Agentforce for Service. Metric moved: service-bay utilization +10pp, parts-fill-rate on first visit +15pp.</p>
-      <p><strong>Key System(s):</strong> Service Cloud, SAP (Parts/Inventory), Dealer DMS</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, SAP (Parts/Inventory)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Karl+Deppen+Daimler+Truck">Karl Deppen</a> (CEO Trucks Asia)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -164,7 +173,7 @@
     <summary>4. Procure-to-Pay &amp; Supplier Onboarding</summary>
     <div class="use-case-body">
       <p>With 20,000+ direct suppliers across four brands and a full BEV/H2 supplier stand-up underway, PO exception rates, invoice mismatches, and supplier-onboarding lead time bleed working capital and delay new programs. AFPI mines the SAP P2P event log to pinpoint the 15-20% of vendors driving 80% of exceptions and the maverick-buying paths bypassing framework agreements — a classic Regrello-adjacent wedge that expands the <a href="https://org62.my.salesforce.com/006ed00000d0u2AAAQ">Regrello (Upside) Shadow Oppty</a>. Metric moved: touchless invoice rate 60% → 80%+, supplier onboarding cycle -40%.</p>
-      <p><strong>Key System(s):</strong> SAP (P2P), Regrello, Supplier Portal</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP (P2P), Regrello</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Eva+Scherer+Daimler+Truck">Eva Scherer</a> (CFO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -174,16 +183,13 @@
     <summary>5. B2B Fleet Sales &amp; Contact-Center Deflection</summary>
     <div class="use-case-body">
       <p>The B2B CRM and <a href="https://org62.my.salesforce.com/006ed00000cGseTAAS">Contact Center</a> opps line up perfectly: fleet buyers move slowly through configure-price-quote across dozens of hand-offs (sales, financing via Daimler Truck Financial Services, upfit body-builders, regulatory). AFPI mines the CPQ + case event log to expose stalled quotes, escalation paths, and repeat-caller drivers, then feeds an Agentforce Service Agent to deflect Tier-1 fleet inquiries. Metric moved: quote-to-order cycle -25%, contact-center deflection to agent 40%+.</p>
-      <p><strong>Key System(s):</strong> Sales Cloud (CPQ), Service Cloud (Contact Center), SAP</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud (CPQ), Service Cloud (Contact Center)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=John+O'Leary+Daimler+Truck+North+America">John O'Leary</a> (CEO, Daimler Truck North America)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
-  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
-
-  <div class="actions">
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
     <span class="disabled">Generate PDF</span>
     <span class="disabled">Generate Slack Canvas</span>
     <span class="disabled">Generate Vercel Page</span>
@@ -192,11 +198,7 @@
     <span class="disabled">Deal Support Request</span>
     <span class="disabled">Deeper Dive POV</span>
   </div>
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: High
-  </footer>
+  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

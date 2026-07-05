@@ -73,17 +73,27 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
-                  cursor: not-allowed; white-space: nowrap; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
           <input type="text" id="libSearch" placeholder="Search library…"
@@ -100,16 +110,15 @@
     <p><strong>Automotive, Diversified Automotive Distribution &amp; Financial Services</strong></p>
     <p><strong>Revenue:</strong> ~$24.7B (2025) &nbsp;|&nbsp; <strong>Employees:</strong> ~5,500 &nbsp;|&nbsp; <strong>HQ:</strong> Deerfield Beach, FL, USA</p>
     <p><strong>Major Subsidiaries:</strong> Southeast Toyota Distributors (SET), Southeast Toyota Finance / World Omni, JM&amp;A Group, Home Franchise Concepts, Futura Title &amp; Escrow</p>
-    <p><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud (Call Center), Marketing Cloud (ExactTarget), Data Cloud / Datorama, Platform, Industry Cloud, MuleSoft ($1.2M ACV), Customer Portal</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud (Call Center), Marketing Cloud (ExactTarget), Data Cloud / Datorama, Platform, Industry Cloud, MuleSoft ($1.2M ACV), Customer Portal</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Microsoft Azure Integration Services, HubSpot (JM&amp;A — replacement in flight)</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> JM Family Automotive Renewal – Industry+Portal+Platform (<a href="https://org62.my.salesforce.com/0063y000019WLQGAA4">$4.98M</a>) &nbsp;|&nbsp; JM&amp;A – One Platform Transformation Phase 2 (<a href="https://org62.my.salesforce.com/006ed00000cW2wrAAC">$1.00M</a>) &nbsp;|&nbsp; MuleSoft Renewal 12377 #BarryBigBet (<a href="https://org62.my.salesforce.com/006ed00000NiAxiAAF">$668k</a>)</p>
-    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G5C2R9GD">Gordon Williams</a></p>
-    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
-  <details>
+  <details class="pov-aproscore">
     <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">84/100</span> — T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
@@ -126,7 +135,7 @@
     </table>
   </details>
 
-  <p><strong>Topline POV:</strong> Apromore can help JM Family Enterprises, Inc. by mining the actual event logs behind its four operating companies — SET vehicle distribution, SETF/World Omni finance, JM&amp;A F&amp;I product servicing, and the JM&amp;A HubSpot-to-Salesforce transformation — so CTO John Damalas walks into the October 2026 renewal and the "MuleSoft + Microsoft" modernization exercise with a documented target-state process instead of another platform bake-off, collapsing the traditional two-specialist SQL+PQL Celonis model into one no-code business-analyst view for 2-4 week time-to-value.</p>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help JM Family Enterprises, Inc. by mining the actual event logs behind its four operating companies — SET vehicle distribution, SETF/World Omni finance, JM&amp;A F&amp;I product servicing, and the JM&amp;A HubSpot-to-Salesforce transformation — so CTO John Damalas walks into the October 2026 renewal and the "MuleSoft + Microsoft" modernization exercise with a documented target-state process instead of another platform bake-off, collapsing the traditional two-specialist SQL+PQL Celonis model into one no-code business-analyst view for 2-4 week time-to-value.</p>
 
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
@@ -134,7 +143,7 @@
     <summary>1. JM&amp;A One Platform Transformation — HubSpot to Salesforce Migration</summary>
     <div class="use-case-body">
       <p>JM&amp;A is actively replacing HubSpot with Salesforce ($1.2M open opp) and moving into One Platform Transformation Phase 2 ($1M). AFPI mines the as-is dealer-outreach, F&amp;I quote, and product-attach flows before the cutover — exposing which handoffs cause deal drop-off — so Phase 2 lands on a documented target flow instead of a lift-and-shift. Metric moved: F&amp;I product attach rate, dealer response time.</p>
-      <p><strong>Key System(s):</strong> HubSpot, Sales Cloud, Service Cloud, Data Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> HubSpot, Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Josh+Bass+JM+Family">Josh Bass</a> (VP Technology &amp; Data Transformation, JM&amp;A Group)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -144,7 +153,7 @@
     <summary>2. SETF / World Omni Auto Finance — Loan Origination &amp; Servicing</summary>
     <div class="use-case-body">
       <p>Southeast Toyota Finance (World Omni) is a consumer auto-lender with a Service Cloud Call Center org and a $1.4M open renewal. AFPI mines the loan-origination pipeline — app submitted → decisioned → funded → titled → serviced — surfacing where credit exceptions, dealer document errors, and title backlogs create dark work. Metric moved: application-to-funding cycle time, exception-rework rate.</p>
-      <p><strong>Key System(s):</strong> Service Cloud (Call Center), Loan Origination (TBD), Marketing Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud (Call Center), Loan Origination (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Larry+Williams+JM+Family">Larry Williams</a> (AVP Business Process &amp; Strategy Optimization)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -154,7 +163,7 @@
     <summary>3. SET Vehicle Distribution — Port-to-Dealer Allocation &amp; Accessorization</summary>
     <div class="use-case-body">
       <p>Southeast Toyota Distributors handles port processing, accessorization, dealer allocation, and TCUV certified-used flow for the five-state Southeast region. This is a physical, event-log-rich process where days-at-port and accessory rework directly hit dealer stock and consumer delivery. AFPI mines port and dealer-allocation events to surface which vessels, ports, and accessory SKUs bottleneck delivery. Metric moved: days-at-port, dealer allocation accuracy.</p>
-      <p><strong>Key System(s):</strong> Vehicle Distribution TMS (TBD), Sales Cloud, MuleSoft</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Vehicle Distribution TMS (TBD), Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chris+Costello+JM+Family">Chris Costello</a> (Vice President — Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -164,7 +173,7 @@
     <summary>4. Enterprise Integration Rationalization — MuleSoft vs Microsoft Governance</summary>
     <div class="use-case-body">
       <p>CTO John Damalas has publicly stated MuleSoft is "not being used correctly" and JM Family runs Microsoft Azure Integration Services in parallel. The October 2026 renewal is heading toward a broader integration bake-off. AFPI does not compete with either platform — it mines the actual integration usage and process outcomes so the platform decision is anchored to which flows deliver value, not to license price. Metric moved: integration reuse rate, integration-attributable process latency.</p>
-      <p><strong>Key System(s):</strong> MuleSoft, Microsoft Azure Integration Services, Data Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft, Microsoft Azure Integration Services</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Gregg+Moore+JM+Family">Gregg Moore</a> (Chief Architect)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -174,16 +183,13 @@
     <summary>5. Data &amp; Automation Solutions — Agentforce Readiness</summary>
     <div class="use-case-body">
       <p>JM Family has an active $461K Agentforce Upgrade + Partner Ecosystem Management opp on JM&amp;A and a dedicated AVP for Data &amp; Automation Solutions. Agentforce ROI depends on knowing which processes have the highest deviation rate and manual-touch cost. AFPI feeds that scoring directly into the Agentforce roadmap — putting agents where deviations concentrate, not where guesswork points. Metric moved: agent-eligible touch coverage, cost-per-touch reduction.</p>
-      <p><strong>Key System(s):</strong> Agentforce, Sales Cloud, Service Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce, Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Dustin+Camplin+JM+Family">Dustin Camplin</a> (AVP, Data &amp; Automation Solutions)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
-  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account. Microsoft Azure Integration Services is the dominant non-Salesforce platform in play, but as an iPaaS competitor to MuleSoft — not process mining.</p>
-
-  <div class="actions">
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account. Microsoft Azure Integration Services is the dominant non-Salesforce platform in play, but as an iPaaS competitor to MuleSoft — not process mining.</span></h2><div class="actions">
     <span class="disabled">Generate PDF</span>
     <span class="disabled">Generate Slack Canvas</span>
     <span class="disabled">Generate Vercel Page</span>
@@ -192,11 +198,7 @@
     <span class="disabled">Deal Support Request</span>
     <span class="disabled">Deeper Dive POV</span>
   </div>
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-07-03 &nbsp;|&nbsp; Confidence: High
-  </footer>
+  <footer class="fine">Prepared on 2026-07-03. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

@@ -56,20 +56,30 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions a, .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-    background: #f0f4ff; color: #032d60; text-decoration: none;
-    border: 1px solid #dde3f0; white-space: nowrap; transition: all .12s; }
+  .actions a, .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
   .actions a:hover { background: #0070d2; color: #fff; border-color: #0070d2; }
   .actions .disabled { color: #999; background: #f5f5f5; border-color: #e5e5e5;
     cursor: not-allowed; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu"></div>
     </div>
   </div>
@@ -80,11 +90,11 @@
   <div class="snapshot">
     <p><strong>Public Sector, Federal Defense &amp; National Security</strong></p>
     <p><strong>Budget:</strong> ~$886B (FY2025) &nbsp;|&nbsp; <strong>Employees:</strong> 2,870,000 &nbsp;|&nbsp; <strong>HQ:</strong> Washington, DC, US</p>
-    <p><strong>Current Salesforce Products:</strong> Sales Cloud (Government Edition), Gov Cloud Premier Success, Service Cloud Portal, Force.com Unlimited</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Government Edition), Gov Cloud Premier Success, Service Cloud Portal, Force.com Unlimited</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with CIO office]</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> <a href="https://org62.my.salesforce.com/006ed00000QOHLjAAP">CDAO ADVANA data modernization ($280K)</a></p>
     <p><strong>AFPI AE:</strong> No AFPI AE assigned — Public Sector channel required</p>
-    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations (via Missionforce National Security team)</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations (via Missionforce National Security team)</p>
   </div>
 
   <hr>
@@ -135,11 +145,7 @@
     <span class="disabled">Deeper Dive POV (coming soon)</span>
   </div>
 
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: Med
-  </footer>
+  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

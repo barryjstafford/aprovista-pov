@@ -73,17 +73,27 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
-                  cursor: not-allowed; white-space: nowrap; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
           <input type="text" id="libSearch" placeholder="Search library…"
@@ -100,16 +110,15 @@
     <p><strong>Technology, Enterprise Application Software (HCM &amp; Financials)</strong></p>
     <p><strong>Revenue:</strong> $7.26B (FY2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~19,900 &nbsp;|&nbsp; <strong>HQ:</strong> Pleasanton, CA, USA</p>
     <p><strong>Major Subsidiaries:</strong> Evisort, Sana Labs, HiredScore</p>
-    <p><strong>Current Salesforce Products:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Rani+Johnson+Workday">Rani Johnson</a> (CIO)]</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Rani+Johnson+Workday">Rani Johnson</a> (CIO)]</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Workday HCM, Workday Financial Management, Workday Illuminate, Sana AI (acquired 2025)</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> None qualifying — no AFPI-adjacent motion in pipeline.</p>
-    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G8P78D8B">Michael Filice</a></p>
-    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
   </div>
 
-  <details>
+  <details class="pov-aproscore">
     <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t3">16/100</span> — T4 Deprioritize</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
@@ -127,7 +136,7 @@
     <p style="font-size:.85em;color:#666;margin-top:6px;">Red-flag deduction applied: <strong>-10</strong> (direct competitor — Workday is Salesforce's #1 HCM/Financials rival and ships its own agentic AI + process-analytics stack via Illuminate and the Sana AI acquisition).</p>
   </details>
 
-  <p><strong>Topline POV:</strong> Apromore can help Workday, Inc. by monitoring — not selling — the account until a structural shift (Illuminate deprecation, external audit mandate, or joint-customer telemetry request) opens a lawful path, given the direct competitive posture and Workday's in-house process-intelligence stack.</p>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Workday, Inc. by monitoring — not selling — the account until a structural shift (Illuminate deprecation, external audit mandate, or joint-customer telemetry request) opens a lawful path, given the direct competitive posture and Workday's in-house process-intelligence stack.</p>
 
   <div class="nurture-box">
     <p><strong>Why not now:</strong> Workday is a direct Salesforce competitor and one of the largest builders of enterprise process-intelligence and agentic-AI technology in the world. Selling AFPI here is neither a viable transaction nor a strategic fit — and any discovery would expose Salesforce process telemetry to a rival with an active CRM ambition.</p>
@@ -139,7 +148,7 @@
     <summary>1. Competitive posture</summary>
     <div class="use-case-body">
       <p>Workday competes head-to-head with Salesforce across Financial Services Cloud, HR Service Delivery (Employee Service via Slack + Data Cloud), and increasingly Sales/Service Cloud through its 2025 <a href="https://www.workday.com/en-us/company/newsroom/press-releases/detail.html?id=workday-agrees-to-acquire-sana-to-accelerate-vision-for-agentic-ai.html">$1.1B Sana AI acquisition</a>. Their agentic-AI roadmap (Workday Illuminate + Sana) is explicitly a bid to encroach on CRM turf. AFPI would be a foreign implant inside a hostile stack.</p>
-      <p><strong>Key System(s):</strong> Workday Illuminate, Sana AI, Workday HCM</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Workday Illuminate, Sana AI</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rani+Johnson+Workday">Rani Johnson</a> (CIO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -149,7 +158,7 @@
     <summary>2. In-house process mining already shipping</summary>
     <div class="use-case-body">
       <p>Workday Illuminate is trained on 800B+ business transactions and mines the same Workday process substrate AFPI would target. Extending Workday with an external process-mining vendor — particularly one owned by Salesforce — is culturally and commercially implausible. The build-vs-buy verdict is already settled and shipping.</p>
-      <p><strong>Key System(s):</strong> Workday Illuminate, Workday HCM, Workday Financial Management</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Workday Illuminate, Workday HCM</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rani+Johnson+Workday">Rani Johnson</a> (CIO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -159,7 +168,7 @@
     <summary>3. Data-access asymmetry</summary>
     <div class="use-case-body">
       <p>Any AFPI engagement would require Workday to hand event logs of its Procure-to-Pay, Hire-to-Retire, and Record-to-Report processes to Salesforce infrastructure. The reverse-hostage risk — competitor telemetry inside Salesforce Data Cloud — makes a lawful, mutually agreeable data-share unrealistic without an M&amp;A-grade agreement.</p>
-      <p><strong>Key System(s):</strong> Workday Financial Management, Workday HCM, Salesforce Data Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Workday Financial Management, Workday HCM</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rani+Johnson+Workday">Rani Johnson</a> (CIO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -169,7 +178,7 @@
     <summary>4. No qualifying open pipeline</summary>
     <div class="use-case-body">
       <p>Org62 shows one open opportunity (PBO placeholder, $0) with no product attach and no AFPI-adjacent motion. There is no funded initiative, no exec sponsor, and no compliance trigger inside Salesforce's reach. Nothing to attach a process-mining wedge to.</p>
-      <p><strong>Key System(s):</strong> TBD</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> TBD</p>
       <p><strong>Key Contact:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G8P78D8B">Michael Filice</a> (Named Account Executive)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -179,16 +188,13 @@
     <summary>5. What would need to change (long-term signal to monitor)</summary>
     <div class="use-case-body">
       <p>A meaningful shift would require (a) Workday publicly deprecating a homegrown analytics capability, (b) a regulatory event forcing a third-party audit trail on Workday-owned processes, or (c) a partnership overture from Workday IT on shared customer telemetry — e.g. joint customers standardizing on Salesforce as system-of-engagement over Workday HCM. Route any such signal to the Apromore AE and re-score.</p>
-      <p><strong>Key System(s):</strong> Workday HCM, Workday Financial Management, Salesforce Data Cloud</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Workday HCM, Workday Financial Management</p>
       <p><strong>Key Contact:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a> (Apromore AE, North America)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
-  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
-
-  <div class="actions">
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
     <span class="disabled">Generate PDF</span>
     <span class="disabled">Generate Slack Canvas</span>
     <span class="disabled">Generate Vercel Page</span>
@@ -197,11 +203,7 @@
     <span class="disabled">Deal Support Request</span>
     <span class="disabled">Deeper Dive POV</span>
   </div>
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: Med
-  </footer>
+  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

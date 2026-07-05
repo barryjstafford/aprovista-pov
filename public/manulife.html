@@ -73,17 +73,27 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
-                  cursor: not-allowed; white-space: nowrap; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
           <input type="text" id="libSearch" placeholder="Search library…"
@@ -100,16 +110,15 @@
     <p><strong>Financial Services, Insurance &amp; Wealth Management</strong></p>
     <p><strong>Revenue:</strong> ~CAD $60B &nbsp;|&nbsp; <strong>Employees:</strong> 38,000+ globally &nbsp;|&nbsp; <strong>HQ:</strong> Toronto, Canada</p>
     <p><strong>Major Subsidiaries:</strong> John Hancock Financial, Manulife Investment Management, Manulife Bank of Canada, Manulife-Sinochem Life Insurance</p>
-    <p><strong>Current Salesforce Products:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Information+Officer+Manulife">the CIO's office</a>]</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Information+Officer+Manulife">the CIO's office</a>]</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Information+Officer+Manulife">the CIO's office</a>]</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> </p>
-    <p><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
-  <details>
+  <details class="pov-aproscore">
     <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">78/100</span> — T2 Develop</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
@@ -126,7 +135,7 @@
     </table>
   </details>
 
-  <p><strong>Topline POV:</strong> Apromore can help Manulife Financial Corporation by mining its life and group claims and new-business underwriting event logs to expose the cycle-time and rework variants that drive OSFI complaints and STP miss rates — collapsing weeks of adjudicator and underwriter tail into a documented target flow that Agentforce Operations can automate.</p>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Manulife Financial Corporation by mining its life and group claims and new-business underwriting event logs to expose the cycle-time and rework variants that drive OSFI complaints and STP miss rates — collapsing weeks of adjudicator and underwriter tail into a documented target flow that Agentforce Operations can automate.</p>
 
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
@@ -134,7 +143,7 @@
     <summary>1. Claims Intake to Settlement Cycle Time</summary>
     <div class="use-case-body">
       <p>Life, disability and group benefits claims traverse intake, adjudication, medical review, and payout across Guidewire-style cores and a patchwork of legacy admin systems. Cycle-time variance is the #1 driver of NPS deterioration and regulator complaints in Canadian and US insurance. AFPI mines the full claim event log to expose loop-backs, hand-offs, and adjudicator variance, then routes automation to the two or three variants that consume 60%+ of the queue. Metric moved: average days-to-settle and rework rate.</p>
-      <p><strong>Key System(s):</strong> Claims Admin Platform (TBD), Medical Review System (TBD), Payment/AP System (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Claims Admin Platform (TBD), Medical Review System (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Claims+Officer+Manulife">Chief Claims Officer</a> (Chief Claims Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -144,7 +153,7 @@
     <summary>2. New Business Underwriting and Policy Issuance</summary>
     <div class="use-case-body">
       <p>Manulife has publicly committed to accelerated underwriting for John Hancock and Canadian life segments, but rules engines and third-party data pulls (MIB, Rx, labs) still produce weeks-long tails on non-straight-through cases. AFPI reconstructs the underwriter's actual workflow versus the target STP path and pinpoints where evidence gathering stalls. Metric moved: STP rate and application-to-issue days.</p>
-      <p><strong>Key System(s):</strong> Underwriting Rules Engine (TBD), MIB / Rx / Lab feeds, Policy Admin System (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Underwriting Rules Engine (TBD), MIB / Rx / Lab feeds</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Underwriter+Manulife">Chief Underwriter</a> (Chief Underwriter)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -154,7 +163,7 @@
     <summary>3. Contact Center Servicing and Complaint Handling</summary>
     <div class="use-case-body">
       <p>Policyholder servicing across Canada, US (John Hancock), and Asia sees repeat contacts on beneficiary changes, address updates, and premium disputes. Each repeat call is a broken process, and each complaint carries a regulatory clock (OSFI, state DOIs, HKMA). AFPI plus Agentforce Operations mines call and case event data to identify the top five servicing journeys generating rework, then puts an agent on the two highest-ROI ones. Metric moved: first-contact resolution and repeat-contact rate.</p>
-      <p><strong>Key System(s):</strong> Contact Center CTI (TBD), Case Management (TBD), Policy Admin System (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Contact Center CTI (TBD), Case Management (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Operations+Manulife">Head of Customer Operations</a> (Head of Customer Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -164,7 +173,7 @@
     <summary>4. Group Benefits Enrollment and Plan Changes</summary>
     <div class="use-case-body">
       <p>Group insurance is Manulife's fastest-growing Canadian segment, and open-enrollment periods stress the mid-office with high-touch employer changes, eligibility updates, and premium reconciliations. Errors here flow directly to broker escalations and lost mandates. AFPI mines the enrollment-to-invoice process to find the exception paths that eat the margin, and Compliance Center anchors the change-audit trail plan sponsors expect. Metric moved: enrollment error rate and broker-escalation volume.</p>
-      <p><strong>Key System(s):</strong> Group Benefits Admin System (TBD), Billing / Reconciliation (TBD), Broker Portal (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Group Benefits Admin System (TBD), Billing / Reconciliation (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Group+Benefits+Manulife">Head of Group Benefits, Canada</a> (Head of Group Benefits, Canada)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -174,16 +183,13 @@
     <summary>5. Advisor Onboarding and Licensing Operations</summary>
     <div class="use-case-body">
       <p>Manulife's advisor and MGA channel requires KYC, licensing verification, contract execution, and product training before any advisor can transact — a process that today takes weeks and is a documented drag on distribution productivity. AFPI mines the onboarding conformance path against target SLAs and shows exactly where compliance holds, contract redlines, or license checks stall the pipeline. Metric moved: advisor time-to-first-sale and channel activation rate.</p>
-      <p><strong>Key System(s):</strong> KYC / Compliance Platform (TBD), Licensing Registry Feed (TBD), Advisor Contract System (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> KYC / Compliance Platform (TBD), Licensing Registry Feed (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Advisor+Services+Manulife">Head of Advisor Services</a> (Head of Advisor Services)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
-  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
-
-  <div class="actions">
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
     <span class="disabled">Generate PDF</span>
     <span class="disabled">Generate Slack Canvas</span>
     <span class="disabled">Generate Vercel Page</span>
@@ -192,11 +198,7 @@
     <span class="disabled">Deal Support Request</span>
     <span class="disabled">Deeper Dive POV</span>
   </div>
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: Med
-  </footer>
+  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

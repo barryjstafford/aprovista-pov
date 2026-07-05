@@ -73,17 +73,27 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 5px 12px; border-radius: 14px;
-                  background: #f5f5f5; color: #999; border: 1px solid #e5e5e5;
-                  cursor: not-allowed; white-space: nowrap; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
 </style>
 </head>
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <img src="/banner-logo.png" alt="AproVista">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
           <input type="text" id="libSearch" placeholder="Search library…"
@@ -99,16 +109,15 @@
   <div class="snapshot">
     <p><strong>Financial Services, Diversified Banking &amp; Asset Management</strong></p>
     <p><strong>Revenue:</strong> A$17.2B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~20,600 &nbsp;|&nbsp; <strong>HQ:</strong> Sydney, Australia</p>
-    <p><strong>Current Salesforce Products:</strong> Financial Services Cloud, Sales Cloud (Full CRM), Org Permission licensing</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Financial Services Cloud, Sales Cloud (Full CRM), Org Permission licensing</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Nicole+Sorbara+Macquarie">Nicole Sorbara</a> (COO)]</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> None currently qualified</p>
-    <p><strong>Apromore AE:</strong> TBH</p>
+    <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U08AZBRA93L">Fredrik Mark Taiño</a></p>
-    <p><strong>Agentforce AE:</strong> TBD [field verify]</p>
-    <p><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Financial Services Cloud)</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Financial Services Cloud)</p>
   </div>
 
-  <details>
+  <details class="pov-aproscore">
     <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">84/100</span> — T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
@@ -125,7 +134,7 @@
     </table>
   </details>
 
-  <p><strong>Topline POV:</strong> Apromore can help Macquarie Group Limited by mining the mortgage-origination and KYC/onboarding event logs on top of Financial Services Cloud to defend its ~1-day unconditional-approval lead, cut retail onboarding TAT from 10-15 days toward &lt;48 hours, and produce the audit-ready process view APRA and ASIC increasingly demand under RG 271.</p>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Macquarie Group Limited by mining the mortgage-origination and KYC/onboarding event logs on top of Financial Services Cloud to defend its ~1-day unconditional-approval lead, cut retail onboarding TAT from 10-15 days toward &lt;48 hours, and produce the audit-ready process view APRA and ASIC increasingly demand under RG 271.</p>
 
   <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
 
@@ -133,7 +142,7 @@
     <summary>1. Retail Client Onboarding &amp; KYC Refresh (Macquarie Bank / BFS)</summary>
     <div class="use-case-body">
       <p>Onboarding a new retail or private-wealth client at Macquarie touches origination, identity verification, AUSTRAC AML/CTF checks, sanctions screening, and periodic KYC refresh — a process routinely audited by APRA and ASIC. AFPI mines the FSC + core banking event log to expose rework loops, aged cases waiting on document upload, and screening false-positive queues; the pain is 10-15 day median TAT vs. a fintech benchmark of &lt;48 hours. The metric moved is straight-through-processing rate on new accounts and days-to-first-transaction.</p>
-      <p><strong>Key System(s):</strong> Financial Services Cloud, Core Banking Platform (TBD), AML/KYC Screening Tool (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, Core Banking Platform (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Greg+Ward+Macquarie">Greg Ward</a> (Head of Banking &amp; Financial Services Group)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -143,7 +152,7 @@
     <summary>2. Mortgage Origination &amp; Broker Workflow (Macquarie Home Loans)</summary>
     <div class="use-case-body">
       <p>Macquarie is the fastest-growing mortgage lender in Australia (13.1% market share, FY25) and 100% broker-distributed, which makes origination cycle time a direct competitive weapon. AFPI mines the loan-origination event log across broker submission → credit assessment → valuation → formal approval → settlement, exposing the exact hand-offs and rework causing lost deals; today Macquarie touts ~1 business day unconditional approval and needs to defend that. The metric moved is time-to-formal-approval and application withdrawal rate.</p>
-      <p><strong>Key System(s):</strong> Loan Origination System (TBD), Financial Services Cloud, Broker Portal (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Loan Origination System (TBD), Financial Services Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ben+Perham+Macquarie">Ben Perham</a> (Head of Personal Banking)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -153,7 +162,7 @@
     <summary>3. Trade Lifecycle &amp; Exceptions in Commodities &amp; Global Markets (CGM)</summary>
     <div class="use-case-body">
       <p>CGM runs a globally-distributed commodities and financial-markets trading business (energy, metals, fixed income, FX) where trade capture, confirmation, settlement, and margin management involve dozens of systems and CSDR / EMIR / Dodd-Frank / T+1 reporting obligations. AFPI mines the trade event stream to surface break patterns, aging confirmations, and manual-touch settlements before they become P&amp;L or regulatory hits — the classic Celonis flagship use case, delivered in weeks instead of quarters. The metric moved is same-day-affirmation rate and operational risk loss events.</p>
-      <p><strong>Key System(s):</strong> Trade Capture / OMS (TBD), Settlement Platform (TBD), Regulatory Reporting Engine (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Trade Capture / OMS (TBD), Settlement Platform (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Simon+Wright+Macquarie">Simon Wright</a> (Head of CGM COO / Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -163,7 +172,7 @@
     <summary>4. Asset Management Client Servicing &amp; Fund Ops (MAM)</summary>
     <div class="use-case-body">
       <p>Macquarie Asset Management runs A$920B AUM across public and private markets, with client onboarding, subscription/redemption processing, statement generation, and manager-of-manager oversight spread across custodians, TAs, and internal platforms. AFPI mines the client-servicing event log to expose rework in NAV escalations, late statements, and institutional client requests; the pain is retention risk on the private markets book and audit exposure. The metric moved is on-time NAV publication and institutional client NPS.</p>
-      <p><strong>Key System(s):</strong> Fund Accounting / TA Platform (TBD), Financial Services Cloud, Custodian Interfaces (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Fund Accounting / TA Platform (TBD), Financial Services Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ben+Way+Macquarie">Ben Way</a> (Head of Macquarie Asset Management)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -173,16 +182,13 @@
     <summary>5. Complaints, Dispute Handling &amp; Remediation (Group-wide, Compliance Center wedge)</summary>
     <div class="use-case-body">
       <p>Post-Royal-Commission Australian financial-services players operate under continuous scrutiny; ASIC's RG 271 mandates strict complaints handling SLAs and Macquarie has publicly-disclosed remediation programs in-flight. AFPI + Compliance Center mines the complaint event log across intake channels, triage, root-cause, and remediation payout — producing the audit-ready process view APRA and ASIC ask for. The metric moved is % complaints resolved within RG 271 timeframe and remediation cycle time.</p>
-      <p><strong>Key System(s):</strong> Financial Services Cloud, Complaints Case Management (TBD), Compliance Center</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, Complaints Case Management (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Fiona+Herbert+Macquarie">Fiona Herbert</a> (Chief Risk Officer, Macquarie Bank)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;">Competitive Mentions</h2>
-  <p>No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</p>
-
-  <div class="actions">
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
     <span class="disabled">Generate PDF</span>
     <span class="disabled">Generate Slack Canvas</span>
     <span class="disabled">Generate Vercel Page</span>
@@ -191,11 +197,7 @@
     <span class="disabled">Deal Support Request</span>
     <span class="disabled">Deeper Dive POV</span>
   </div>
-  <footer class="fine">
-    Prepared by AproVista &nbsp;|&nbsp; Created by
-    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
-    &nbsp;|&nbsp; 2026-06-30 &nbsp;|&nbsp; Confidence: Med
-  </footer>
+  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>
