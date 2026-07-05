@@ -185,12 +185,16 @@ function setStatus(text) {
   if (s) s.textContent = text || '';
 }
 
+function translationTarget() {
+  return document.querySelector('[data-translate]') || document.querySelector('main');
+}
+
 async function switchLang(lang) {
-  const main = document.querySelector('main');
-  if (!main || CURRENT_LANG === lang) return;
+  const target = translationTarget();
+  if (!target || CURRENT_LANG === lang) return;
 
   if (lang === 'en') {
-    if (ORIGINAL_MAIN_HTML !== null) main.innerHTML = ORIGINAL_MAIN_HTML;
+    if (ORIGINAL_MAIN_HTML !== null) target.innerHTML = ORIGINAL_MAIN_HTML;
     if (ORIGINAL_TITLE !== null) document.title = ORIGINAL_TITLE;
     CURRENT_LANG = 'en';
     setLangButtonState('en');
@@ -205,7 +209,7 @@ async function switchLang(lang) {
   })();
 
   if (cached) {
-    main.innerHTML = cached;
+    target.innerHTML = cached;
     CURRENT_LANG = lang;
     setLangButtonState(lang);
     document.documentElement.lang = lang;
@@ -223,32 +227,35 @@ async function switchLang(lang) {
       body: JSON.stringify({ html: ORIGINAL_MAIN_HTML, lang: lang })
     });
     if (!resp.ok) {
-      const err = await resp.json().catch(function() { return {}; });
-      throw new Error(err.error || ('HTTP ' + resp.status));
+      const errBody = await resp.json().catch(function() { return {}; });
+      const msg = errBody.error || ('HTTP ' + resp.status);
+      const detail = errBody.detail ? (' — ' + errBody.detail) : '';
+      throw new Error(msg + detail);
     }
     const data = await resp.json();
     if (!data.html) throw new Error('empty response');
 
     try { localStorage.setItem(cacheKey(slug, lang), data.html); } catch (e) { /* quota — ignore */ }
 
-    main.innerHTML = data.html;
+    target.innerHTML = data.html;
     CURRENT_LANG = lang;
     document.documentElement.lang = lang;
     setStatus('');
   } catch (err) {
-    setStatus('Translation failed');
+    console.error('[AproVista translate]', err);
+    setStatus('Translation failed — see console');
     setLangButtonState(CURRENT_LANG);
-    setTimeout(function() { setStatus(''); }, 4000);
+    setTimeout(function() { setStatus(''); }, 6000);
   }
 }
 
 window.addEventListener('DOMContentLoaded', function() {
   const bannerInner = document.querySelector('.banner-inner');
   const libWrap = document.querySelector('.lib-wrap');
-  const main = document.querySelector('main');
-  if (!bannerInner || !main) return;
+  const target = translationTarget();
+  if (!bannerInner || !target) return;
 
-  ORIGINAL_MAIN_HTML = main.innerHTML;
+  ORIGINAL_MAIN_HTML = target.innerHTML;
   ORIGINAL_TITLE = document.title;
 
   const style = document.createElement('style');

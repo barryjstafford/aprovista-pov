@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AproScore — AFPI Propensity-to-Buy Rubric</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.5; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px 40px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 8px; font-size: 1.85em; }
+  .subtitle { color: #667; font-size: 1.02em; margin: 0 0 20px; }
+  h2 { color: #032d60; margin: 1.4em 0 .4em; font-size: 1.25em; }
+  p { margin: .5em 0; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0 20px; }
+  th, td { padding: 8px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; color: #032d60; }
+  td.pts { font-weight: 600; color: #0070d2; text-align: right; white-space: nowrap;
+           width: 60px; }
+  td.deduct { font-weight: 600; color: #b00020; text-align: right; white-space: nowrap;
+              width: 60px; }
+  .intro-card { background: #f9fbff; border: 1px solid #dde3f0; border-radius: 8px;
+                padding: 14px 20px; margin: 10px 0 24px; }
+  .intro-card p { margin: .35em 0; color: #333; }
+  .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+           gap: 12px; margin: 12px 0; }
+  .tier { border-radius: 8px; padding: 12px 16px; border: 1px solid; }
+  .tier-t1 { background: #eaf7ef; border-color: #b6dcc5; color: #0f7d3e; }
+  .tier-t2 { background: #fff3e0; border-color: #f0d3a4; color: #b45c00; }
+  .tier-t3 { background: #fff8e6; border-color: #efe1a4; color: #8a6d00; }
+  .tier-t4 { background: #fdecec; border-color: #f0bcbc; color: #b00020; }
+  .tier .name { font-weight: 700; font-size: 1.05em; }
+  .tier .range { font-size: .88em; margin: 4px 0; opacity: .85; }
+  .tier .desc { font-size: .82em; color: #333; }
+  .fine { text-align: center; color: #aaa; font-size: .78em; margin-top: 30px;
+          padding-top: 10px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .back-link { display: inline-block; margin-bottom: 4px; color: #0070d2;
+               text-decoration: none; font-size: .9em; }
+  .back-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <img src="/banner-logo.png" alt="AproVista">
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">My POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<style>
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+             padding: 7px 13px; border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,.2);
+              min-width: 280px; max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px; font-size: .85em;
+                      font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60; text-decoration: none;
+                font-size: .87em; border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+</style>
+<main>
+  <a href="/" class="back-link">← Back to AproVista</a>
+  <div data-translate>
+    <h1>AproScore</h1>
+    <p class="subtitle">AFPI Propensity-to-Buy Rubric — 100 points, 8 categories</p>
+
+    <div class="intro-card">
+      <p>
+        Every AproVista Point-of-View brief includes an <strong>AproScore</strong>:
+        a 0-100 grade of an account's propensity to buy Agentforce Process
+        Intelligence (AFPI). The score is composed of eight positive categories
+        summing to 100 points, minus any triggered red-flag deductions.
+      </p>
+      <p>
+        Each category is scored from evidence gathered across Org62, Slack,
+        the web, and the AproVista knowledge library — roughly 93 discrete
+        signals in total. Every point is anchored to a source tag
+        (<code>[Slack]</code>, <code>[Web]</code>, <code>[Docs]</code>; Org62
+        is the default authoritative source and is not tagged on the rendered POV).
+      </p>
+    </div>
+
+    <h2>Positive categories (100 points)</h2>
+    <table>
+      <thead>
+        <tr><th>Category</th><th>What it measures</th><th class="pts">Max</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Buyer &amp; Champion Fit</strong></td>
+          <td>Are target buyer titles present (COO, CFO, VP Ops, Transformation lead, Chief Data / AI Officer, etc.), and is a sponsor reachable and engaged?</td>
+          <td class="pts">20</td>
+        </tr>
+        <tr>
+          <td><strong>Industry / Vertical Priority</strong></td>
+          <td>Fit against Apromore's priority verticals — Financial Services, Insurance, Utilities, Manufacturing, Life Sciences, Public Sector, Retail / CPG. Priority verticals score full; adjacent verticals score partial.</td>
+          <td class="pts">15</td>
+        </tr>
+        <tr>
+          <td><strong>Process-Pain Intensity</strong></td>
+          <td>Explicit signals of bottlenecks, rework, cycle-time misses, backlogs, exception handling, or ERP-migration friction — in filings, Slack, news, or job posts.</td>
+          <td class="pts">15</td>
+        </tr>
+        <tr>
+          <td><strong>Systems &amp; Event-Log Readiness</strong></td>
+          <td>Presence of mineable systems (SAP, Oracle, ServiceNow, Salesforce) with structured event logs available or achievable.</td>
+          <td class="pts">12</td>
+        </tr>
+        <tr>
+          <td><strong>Salesforce Footprint &amp; Relationship</strong></td>
+          <td>Existing Salesforce install base, active Org62 opportunities, and strength of the account team relationship.</td>
+          <td class="pts">12</td>
+        </tr>
+        <tr>
+          <td><strong>Transformation &amp; Agentic-AI Momentum</strong></td>
+          <td>Active ERP migration, recent M&amp;A, Agentforce initiatives, or a formal Automation / AI Center of Excellence.</td>
+          <td class="pts">12</td>
+        </tr>
+        <tr>
+          <td><strong>Compliance &amp; Risk Pressure</strong></td>
+          <td>Regulatory pressure that drives process visibility spend — SOX, KYC / AML, NERC CIP, HIPAA, GDPR, DORA, etc.</td>
+          <td class="pts">8</td>
+        </tr>
+        <tr>
+          <td><strong>Commercial Timing &amp; Deal Viability</strong></td>
+          <td>Budget ownership confirmed, deal size ≥ $200k ACV, and the timing window is open (not frozen or deferred).</td>
+          <td class="pts">6</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Red-flag deductions</h2>
+    <p>Applied after the positive categories are summed. Floor is 0.</p>
+    <table>
+      <thead>
+        <tr><th>Red flag</th><th class="deduct">Deduction</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Celonis deployed enterprise-wide</td><td class="deduct">−15</td></tr>
+        <tr><td>No mineable event-log systems</td><td class="deduct">−10</td></tr>
+        <tr><td>IT-only stakeholders, no business sponsor</td><td class="deduct">−10</td></tr>
+        <tr><td>Competing process-mining POC already underway</td><td class="deduct">−8</td></tr>
+        <tr><td>No Salesforce footprint at all</td><td class="deduct">−8</td></tr>
+        <tr><td>Layoffs or hiring freeze in force</td><td class="deduct">−5</td></tr>
+        <tr><td>Out-of-priority region with no exception rationale</td><td class="deduct">−5</td></tr>
+        <tr><td>Public-sector procurement freeze</td><td class="deduct">−5</td></tr>
+        <tr><td>Deal projected under $200k ACV</td><td class="deduct">−4</td></tr>
+        <tr><td>Recent failed analytics or automation rollout</td><td class="deduct">−4</td></tr>
+        <tr><td>No identifiable process owner</td><td class="deduct">−3</td></tr>
+        <tr><td>Heavily outsourced / BPO-run operations</td><td class="deduct">−3</td></tr>
+        <tr><td>Data access blocked by policy or architecture</td><td class="deduct">−3</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Tiers (after deductions)</h2>
+    <div class="tiers">
+      <div class="tier tier-t1">
+        <div class="name">T1 — Pursue</div>
+        <div class="range">80 – 100</div>
+        <div class="desc">Exec-led motion now; assign senior AE + SE, orchestrate with Core Salesforce.</div>
+      </div>
+      <div class="tier tier-t2">
+        <div class="name">T2 — Develop</div>
+        <div class="range">60 – 79</div>
+        <div class="desc">Nurture and qualify the sponsor; run a focused discovery on the top process.</div>
+      </div>
+      <div class="tier tier-t3">
+        <div class="name">T3 — Nurture</div>
+        <div class="range">40 – 59</div>
+        <div class="desc">Light-touch cadence; watch for a trigger event (leadership change, M&amp;A, regulatory shift).</div>
+      </div>
+      <div class="tier tier-t4">
+        <div class="name">T4 — Deprioritize</div>
+        <div class="range">below 40</div>
+        <div class="desc">Recycle on a new signal; no active pursuit today.</div>
+      </div>
+    </div>
+
+    <h2>How AproVista uses the AproScore</h2>
+    <p>
+      T1 and T2 accounts get a full "Pursue" POV — top process-intelligence use cases,
+      champion / economic-buyer mapping, and the recommended sales motion
+      (standalone / co-sell with Agentforce Operations / integrated with Salesforce).
+      T3 and T4 accounts get a nurture / disqualify analysis explaining
+      <em>why not now</em>, what would need to change, and any long-term signal
+      worth monitoring.
+    </p>
+  </div>
+  <footer class="fine">
+    Prepared by AproVista &nbsp;|&nbsp; Created by
+    <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>
+  </footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>
