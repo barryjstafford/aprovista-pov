@@ -148,3 +148,139 @@ window.addEventListener('DOMContentLoaded', function() {
     list.appendChild(section);
   });
 });
+
+// -------------------------------------------------------------
+// Language bar — translates <main> on demand via /api/translate.
+// -------------------------------------------------------------
+const LANGS = [
+  { code: 'en', flag: '🇬🇧', title: 'English (original)' },
+  { code: 'it', flag: '🇮🇹', title: 'Italiano' },
+  { code: 'fr', flag: '🇫🇷', title: 'Français' },
+  { code: 'de', flag: '🇩🇪', title: 'Deutsch' },
+  { code: 'es', flag: '🇪🇸', title: 'Español' }
+];
+
+let ORIGINAL_MAIN_HTML = null;
+let ORIGINAL_TITLE = null;
+let CURRENT_LANG = 'en';
+
+function cacheKey(slug, lang) {
+  return 'aprovista:xlate:' + slug + ':' + lang;
+}
+
+function pageSlug() {
+  const p = (location.pathname || '/').replace(/^\/+|\/+$/g, '').replace(/\.html$/, '');
+  return p || 'index';
+}
+
+function setLangButtonState(active) {
+  document.querySelectorAll('.lang-btn').forEach(function(b) {
+    if (b.dataset.lang === active) b.classList.add('active');
+    else b.classList.remove('active');
+  });
+}
+
+function setStatus(text) {
+  const s = document.getElementById('langStatus');
+  if (s) s.textContent = text || '';
+}
+
+async function switchLang(lang) {
+  const main = document.querySelector('main');
+  if (!main || CURRENT_LANG === lang) return;
+
+  if (lang === 'en') {
+    if (ORIGINAL_MAIN_HTML !== null) main.innerHTML = ORIGINAL_MAIN_HTML;
+    if (ORIGINAL_TITLE !== null) document.title = ORIGINAL_TITLE;
+    CURRENT_LANG = 'en';
+    setLangButtonState('en');
+    setStatus('');
+    document.documentElement.lang = 'en';
+    return;
+  }
+
+  const slug = pageSlug();
+  const cached = (function() {
+    try { return localStorage.getItem(cacheKey(slug, lang)); } catch (e) { return null; }
+  })();
+
+  if (cached) {
+    main.innerHTML = cached;
+    CURRENT_LANG = lang;
+    setLangButtonState(lang);
+    document.documentElement.lang = lang;
+    setStatus('');
+    return;
+  }
+
+  setStatus('Translating…');
+  setLangButtonState(lang);
+
+  try {
+    const resp = await fetch('/api/translate', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ html: ORIGINAL_MAIN_HTML, lang: lang })
+    });
+    if (!resp.ok) {
+      const err = await resp.json().catch(function() { return {}; });
+      throw new Error(err.error || ('HTTP ' + resp.status));
+    }
+    const data = await resp.json();
+    if (!data.html) throw new Error('empty response');
+
+    try { localStorage.setItem(cacheKey(slug, lang), data.html); } catch (e) { /* quota — ignore */ }
+
+    main.innerHTML = data.html;
+    CURRENT_LANG = lang;
+    document.documentElement.lang = lang;
+    setStatus('');
+  } catch (err) {
+    setStatus('Translation failed');
+    setLangButtonState(CURRENT_LANG);
+    setTimeout(function() { setStatus(''); }, 4000);
+  }
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+  const bannerInner = document.querySelector('.banner-inner');
+  const libWrap = document.querySelector('.lib-wrap');
+  const main = document.querySelector('main');
+  if (!bannerInner || !main) return;
+
+  ORIGINAL_MAIN_HTML = main.innerHTML;
+  ORIGINAL_TITLE = document.title;
+
+  const style = document.createElement('style');
+  style.textContent =
+    '.lang-wrap { display: flex; align-items: center; gap: 4px; margin-right: 10px; }' +
+    '.lang-btn { background: transparent; border: 1px solid transparent; border-radius: 6px;' +
+    ' padding: 3px 6px; font-size: 1.1em; line-height: 1; cursor: pointer; font-family: inherit;' +
+    ' opacity: .55; transition: opacity .12s, background .12s, border-color .12s; }' +
+    '.lang-btn:hover { opacity: 1; background: #f0f4ff; }' +
+    '.lang-btn.active { opacity: 1; border-color: #0070d2; background: #f0f4ff; }' +
+    '#langStatus { font-size: .75em; color: #667; margin-left: 6px; min-height: 1em; }' +
+    '@media (max-width: 640px) { .lang-btn { padding: 3px 4px; font-size: 1em; } }';
+  document.head.appendChild(style);
+
+  const wrap = document.createElement('div');
+  wrap.className = 'lang-wrap';
+  LANGS.forEach(function(l) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'lang-btn' + (l.code === 'en' ? ' active' : '');
+    b.dataset.lang = l.code;
+    b.title = l.title;
+    b.setAttribute('aria-label', l.title);
+    b.textContent = l.flag;
+    b.addEventListener('click', function() { switchLang(l.code); });
+    wrap.appendChild(b);
+  });
+  const status = document.createElement('span');
+  status.id = 'langStatus';
+  wrap.appendChild(status);
+
+  if (libWrap) bannerInner.insertBefore(wrap, libWrap);
+  else bannerInner.appendChild(wrap);
+});
+
