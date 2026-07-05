@@ -153,11 +153,11 @@ window.addEventListener('DOMContentLoaded', function() {
 // Language bar — translates <main> on demand via /api/translate.
 // -------------------------------------------------------------
 const LANGS = [
-  { code: 'en', flag: '🇬🇧', title: 'English (original)' },
-  { code: 'it', flag: '🇮🇹', title: 'Italiano' },
-  { code: 'fr', flag: '🇫🇷', title: 'Français' },
-  { code: 'de', flag: '🇩🇪', title: 'Deutsch' },
-  { code: 'es', flag: '🇪🇸', title: 'Español' }
+  { code: 'en', flag: '🇬🇧', title: 'English',    enabled: true  },
+  { code: 'it', flag: '🇮🇹', title: 'Italiano — coming soon',  enabled: false },
+  { code: 'fr', flag: '🇫🇷', title: 'Français — coming soon',  enabled: false },
+  { code: 'de', flag: '🇩🇪', title: 'Deutsch — coming soon',   enabled: false },
+  { code: 'es', flag: '🇪🇸', title: 'Español — coming soon',   enabled: false }
 ];
 
 let ORIGINAL_MAIN_HTML = null;
@@ -260,32 +260,54 @@ window.addEventListener('DOMContentLoaded', function() {
 
   const style = document.createElement('style');
   style.textContent =
-    '.lang-wrap { display: flex; align-items: center; gap: 4px; margin-right: 10px; }' +
+    '.lang-wrap { display: flex; flex-direction: column; align-items: flex-end;' +
+    ' margin-right: 10px; gap: 1px; }' +
+    '.lang-buttons { display: flex; align-items: center; gap: 4px; }' +
     '.lang-btn { background: transparent; border: 1px solid transparent; border-radius: 6px;' +
     ' padding: 3px 6px; font-size: 1.1em; line-height: 1; cursor: pointer; font-family: inherit;' +
     ' opacity: .55; transition: opacity .12s, background .12s, border-color .12s; }' +
     '.lang-btn:hover { opacity: 1; background: #f0f4ff; }' +
     '.lang-btn.active { opacity: 1; border-color: #0070d2; background: #f0f4ff; }' +
+    '.lang-btn.disabled { opacity: .28; cursor: not-allowed; filter: grayscale(.4); }' +
+    '.lang-btn.disabled:hover { opacity: .28; background: transparent; }' +
+    '.lang-coming-soon { font-size: .65em; color: #999; letter-spacing: .02em;' +
+    ' margin-top: -2px; padding-right: 4px; }' +
+    '.banner .lang-coming-soon { color: rgba(255,255,255,.55); }' +
     '#langStatus { font-size: .75em; color: #667; margin-left: 6px; min-height: 1em; }' +
     '@media (max-width: 640px) { .lang-btn { padding: 3px 4px; font-size: 1em; } }';
   document.head.appendChild(style);
 
   const wrap = document.createElement('div');
   wrap.className = 'lang-wrap';
+  const buttonsRow = document.createElement('div');
+  buttonsRow.className = 'lang-buttons';
   LANGS.forEach(function(l) {
     const b = document.createElement('button');
     b.type = 'button';
-    b.className = 'lang-btn' + (l.code === 'en' ? ' active' : '');
+    let cls = 'lang-btn';
+    if (l.code === 'en') cls += ' active';
+    if (!l.enabled) cls += ' disabled';
+    b.className = cls;
     b.dataset.lang = l.code;
     b.title = l.title;
     b.setAttribute('aria-label', l.title);
     b.textContent = l.flag;
-    b.addEventListener('click', function() { switchLang(l.code); });
-    wrap.appendChild(b);
+    if (l.enabled) {
+      b.addEventListener('click', function() { switchLang(l.code); });
+    } else {
+      b.disabled = true;
+    }
+    buttonsRow.appendChild(b);
   });
   const status = document.createElement('span');
   status.id = 'langStatus';
-  wrap.appendChild(status);
+  buttonsRow.appendChild(status);
+  wrap.appendChild(buttonsRow);
+
+  const comingSoon = document.createElement('div');
+  comingSoon.className = 'lang-coming-soon';
+  comingSoon.textContent = 'Coming Soon';
+  wrap.appendChild(comingSoon);
 
   if (libWrap) bannerInner.insertBefore(wrap, libWrap);
   else bannerInner.appendChild(wrap);
