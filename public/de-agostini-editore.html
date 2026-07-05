@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>De Agostini Editore S.p.A. — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>De Agostini Editore S.p.A.</h1>
+  <div class="snapshot">
+    <p><strong>Communications &amp; Media, Publishing (collectible partworks &amp; digital learning)</strong></p>
+    <p><strong>Revenue:</strong> ~€800M (Editore division, De Agostini Group ~€4.7B consolidated) &nbsp;|&nbsp; <strong>Employees:</strong> ~10,000 group-wide (Editore ~400 direct) &nbsp;|&nbsp; <strong>HQ:</strong> Novara, Italy</p>
+    <p><strong>Major Subsidiaries:</strong> De Agostini Publishing, De Agostini UK, DeA Planeta Libros, DeA Scuola, Grupo Planeta-De Agostini (JV)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud (implied via IT CRM, Sale &amp; Distribution Manager role and active Org62 relationship)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Davide+Ardizio+De+Agostini">Davide Ardizio, CIO</a>]</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> MC - De Agostini Editore - BDR #netcomm26 (<a href="https://org62.my.salesforce.com/006ed00000b8lvjAAA">$110k</a>) | De Agostini - Apromore - BDR (<a href="https://org62.my.salesforce.com/006ed00000YK11BAAT">$70k</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01FTD44K5M">Fulvio Negri</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">78/100</span> — T2 Develop</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">CIO, Group CIO, Group CTO, CEO, IT Supply Chain Manager, and Procurement Director all mapped in Org62.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Partworks publishing is a textbook rework/returns/print-forecast pain profile ripe for AFPI mining.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>10/12</td><td class="cat-green">Active AE Fulvio Negri, two open Apromore opps ($110k + $70k) closing Q4 2026, EBC Milan SIC-137461 in-flight.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>9/12</td><td class="cat-orange">Milan RT/SIC session in progress and new De Agostini attendees added June 2026 — real motion, but no public AI mandate yet.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-orange">Salesforce Sales/Service confirmed via IT CRM &amp; Distribution Manager title; core ERP and print/distribution stack TBD.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>4/8</td><td class="cat-red">GDPR and Italian consumer/subscription law apply, but no heavy sector regime (no SOX, no HIPAA, no Basel) — Compliance Center wedge is modest.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>10/15</td><td class="cat-orange">Communications &amp; Media / Publishing sits outside top-priority verticals but is process-rich enough to earn a targeted play.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help De Agostini Editore S.p.A. by mining the partworks issue-planning, subscription-fulfilment, and returns event logs across Sales Cloud and their distribution stack — exposing the print-forecast and returns variants that quietly erode margin on every collectible series — and by giving the CIO&#39;s office a defensible conformance view before the Milan RT engagement converts into a broader Salesforce-Apromore expansion.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Partworks Issue Planning &amp; Print Forecast Accuracy</summary>
+    <div class="use-case-body">
+      <p>De Agostini&#39;s core collectibles business ships weekly issues of long-tail series (models, cookbooks, kids&#39; encyclopedias, etc.) into edicola and direct-subscription channels across Italy, France, UK, and Iberia. Print run over-forecasts inflate pulp write-offs on the tail; under-forecasts kill sell-through on the head. AFPI mines the plan-to-print-to-distribute event log to expose where forecasting overrides, contributor delays, and edicola allocation rules diverge from the target flow, and quantifies the actual variance-to-plan by series and market. Metric moved: pulp-write-off percentage and sell-through rate per issue.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Editorial Planning &amp; Print Management (TBD), Salesforce Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Stefano+Bordignoni+De+Agostini">Stefano Bordignoni</a> (Direttore Commerciale)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Subscription Order-to-Fulfilment &amp; Churn Recovery</summary>
+    <div class="use-case-body">
+      <p>Direct home-delivery subscriptions are the highest-margin channel but carry a heavy operational tail: missed deliveries, address changes mid-series, payment failures, and skipped-issue disputes each trigger service events that today flow through Service Cloud plus a fulfilment 3PL. AFPI reconstructs the true subscriber journey against the target renewal path, isolates the exception branches driving involuntary churn, and hands two or three variants to Agentforce for automated recovery. Metric moved: subscription completion rate and involuntary churn on active series.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Fulfilment / 3PL WMS (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Tiziana+Scafetta+De+Agostini">Tiziana Scafetta</a> (IT CRM, Sale &amp; Distribution Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Edicola Returns &amp; Reverse-Logistics Reconciliation</summary>
+    <div class="use-case-body">
+      <p>Unsold newsstand copies flow back through a distributor-managed reverse-logistics chain and must be counted, credited, and destroyed under Italian consumer law. Reconciliation lags and credit disputes with distributors are a chronic drag on cash and on the finance close. AFPI mines the returns event log (dispatch, receipt, count, credit note, destruction) to expose distributor-specific bottlenecks and multi-hand-off loops, and gives finance and commercial a shared conformance view. Metric moved: returns-cycle days and credit-note dispute rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Distributor Returns Portal (TBD), Finance / Credit-Note ledger (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rudi+Ghirelli+De+Agostini">Rudi Ghirelli</a> (IT Demand Manager / IT Supply Chain Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Procure-to-Pay for Print, Paper &amp; Collectible Componentry</summary>
+    <div class="use-case-body">
+      <p>Every partworks series carries a bill of materials — paper, ink, plastic collectible parts (models, figurines, minerals), and print capacity — sourced against tight editorial calendars. Late supplier confirmations and expedited spot buys are a recurring margin leak that shows up in the Direttore Acquisti&#39;s books but rarely in the CFO&#39;s dashboards. AFPI mines P2P from requisition to invoice-clear, exposes the maverick-buy variants, and quantifies avoidable rush costs by supplier and series. Metric moved: expedited-freight spend and on-time supplier confirmation rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ERP P2P (TBD), Supplier Portal (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Silvia+Riccardi+De+Agostini">Silvia Riccardi</a> (Direttore Acquisti)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Digital &amp; DeA Scuola Content Publishing Pipeline</summary>
+    <div class="use-case-body">
+      <p>The digital-learning arm (DeA Scuola, DeA app catalogue) runs a parallel content pipeline from author brief through editorial QA, digital packaging, and platform release — a very different tempo from partworks but the same conformance question: where does the target release calendar diverge from reality? AFPI mines editorial-workflow event data to expose stalls at rights clearance, QA, and localisation hand-offs, and quantifies the drag each variant puts on release-date slippage. Metric moved: content release on-time rate and rework loops per title.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Editorial Workflow / DAM (TBD), Digital Publishing Platform (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Lorenzo+Manfredi+De+Agostini">Lorenzo Manfredi</a> (Group Chief Technology Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banca Monte dei Paschi di Siena S.p.A. — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Banca Monte dei Paschi di Siena S.p.A.</h1>
+  <div class="snapshot">
+    <p><strong>Financial Services, Banking</strong></p>
+    <p><strong>Revenue:</strong> €3.57B &nbsp;|&nbsp; <strong>Employees:</strong> ~21,200 &nbsp;|&nbsp; <strong>HQ:</strong> Siena, Italy</p>
+    <p><strong>Major Subsidiaries:</strong> Mediobanca (86.35%), MPS Capital Services, Monte Paschi Banque, MPS Leasing &amp; Factoring, MPS Fiduciaria</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Informatica (multiple active subscriptions, 2026 renewals in flight)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> IBM Watson AI, BMC ITSM (active swap opp), core banking (TBD), IBM Omni Gateway — [Web/Org62]</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> MPS - Merge Support - CSG (<a href="https://org62.my.salesforce.com/006ed00000XaOooAAF">$1.5M</a>) | MPS Front End CRM (<a href="https://org62.my.salesforce.com/006ed00000WdUzuAAF">$920k</a>) | MPS - Apromore - BDR (<a href="https://org62.my.salesforce.com/006ed00000WkOcnAAF">$100k</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G52W64VB">Franco Galante</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">95/100</span> — T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Vertical / Industry Priority (Banking)</td><td>15/15</td><td class="cat-green">Priority vertical; loan origination, AML, disputes and onboarding are canonical AFPI mining targets.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">Mediobanca merger (Feb 2026 delisting approved) drives massive process-harmonization pain.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">Named Head of Process Innovation, Change Management head, CRM &amp; Operations Director all in Org62.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Active Agentforce BDR opp + New Digital Branch RFP + ITSM swap = live redesign window.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$1.5M Merge Support CSG opp, $920k Front End CRM, Informatica renewals in flight.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-orange">Salesforce + Informatica confirmed; core banking + IBM Watson estate not yet mapped for event logs.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">DORA, EBA MRT, KYC/AML, and ECB post-merger scrutiny converging on the same processes AFPI mines.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Banca Monte dei Paschi di Siena S.p.A. by mining the post-Mediobanca integration processes — loan origination, AML alert triage, customer onboarding, complaints handling, and new-digital-branch service journeys — to give the merger integration office an evidence-based as-is baseline that compresses harmonization cycle time, satisfies DORA and ECB regulators, and turns the live Agentforce and Front End CRM investments into measurable straight-through-processing wins.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Post-Mediobanca Merger Process Harmonization</summary>
+    <div class="use-case-body">
+      <p>With the February 2026 board approval to delist Mediobanca and fully merge it into MPS, the group is entering the largest process-integration event in Italian banking in a decade. Two distinct operating models — a retail-heavy universal bank and a corporate/investment bank — must be reconciled across credit, wealth, and back-office. AFPI mines the current-state event logs on both sides to expose which variants to keep, which to retire, and where handoffs will break under a unified target operating model. Metric moved: post-merger integration cycle time and rework in the harmonization program.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Core Banking (TBD), Salesforce CRM</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Massimiliano+Ugolini+MPS">Massimiliano Ugolini</a> (Head of Process Innovation)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Loan &amp; Mortgage Origination Cycle Time</summary>
+    <div class="use-case-body">
+      <p>Retail lending remains MPS's largest earning asset and its origination journey spans branch submission, credit decisioning, valuation, and disbursement across legacy Italian core-banking platforms. Post-bail-out, ECB and Bank of Italy have kept a close eye on lending-decision timeliness and audit trail integrity. AFPI mines the origination process end-to-end to expose rework loops, verification bottlenecks, and cases where broker or branch abandonment triggers volume loss. Metric moved: median time-to-disbursement and pull-through on approved applications.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Loan Origination Platform (TBD), Salesforce CRM</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Massimo+Di+Carluccio+MPS">Massimo Di Carluccio</a> (Sales Director - Retail Division)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. AML / KYC Alert Triage &amp; Case Handling</summary>
+    <div class="use-case-body">
+      <p>Italian banks operate under EBA MRT, ECB SREP, and Banca d'Italia AML supervisory intensity that has only sharpened after the Generali stake and Mediobanca takeover put MPS at the centre of Italian financial regulation. Alert-to-disposition analysts still see high false-positive rates and inconsistent case paths, and the group must now unify two financial-crime operating models. AFPI mines the alert lifecycle to surface variants driving SLA breaches and to target the highest-volume paths for Agentforce assist and straight-through automation. Metric moved: cost per alert closed and productive-alert ratio.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Transaction Monitoring (TBD), Case Management (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Antonio+Lombrano+MPS">Antonio Lombrano</a> (Resp. Group Security Strategy, Fraud &amp; BCM)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Customer Onboarding &amp; Front-End CRM Journey</summary>
+    <div class="use-case-body">
+      <p>The $920k Front End CRM opportunity and the New Digital Branch RFP (at Confirming Value With Power stage) tell the same story: MPS is rebuilding the customer-facing service journey while retaining a heavy branch footprint across Tuscany and Italy. Without a process-mined as-is baseline, the target Salesforce-based journey is designed from PowerPoint rather than event data, which drives rework once the branch and contact-center rollout begins. AFPI mines the current onboarding and servicing paths across the branch, contact center, and digital channels to prioritize which variants to lift onto the new stack first. Metric moved: time-to-first-transaction for new customers and NPS on retained customers.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce CRM, Contact Center (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Stefano+Marra+MPS">Stefano Marra</a> (Head of CRM &amp; Operations Service, Director)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. IT Service Management &amp; DORA Operational-Resilience Evidence</summary>
+    <div class="use-case-body">
+      <p>The open MPS-New-ITSM opportunity to swap BMC coincides with the EU Digital Operational Resilience Act (DORA), which requires Italian banks to demonstrate evidence-based control of ICT change, incident, and third-party processes. Combined with the Mediobanca integration, IT change velocity is about to spike exactly when auditors are watching most closely. AFPI mines the incident-to-resolution and change-management processes to give the operational-resilience team a Compliance Center wedge with process evidence regulators can consume directly, and highlights where the new ITSM tool will need to be configured against real variants rather than idealized workflows. Metric moved: mean-time-to-restore and DORA audit finding closure time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> BMC/New ITSM, Change Management (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Paolo+Abbo+MPS">Paolo Abbo</a> (Head of ICT Compliance)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

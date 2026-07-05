@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Safilo Group S.p.A. — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Safilo Group S.p.A.</h1>
+  <div class="snapshot">
+    <p><strong>Retail &amp; Consumer Goods, Eyewear (Design, Manufacturing &amp; Distribution)</strong></p>
+    <p><strong>Revenue:</strong> ~€1.05B &nbsp;|&nbsp; <strong>Employees:</strong> ~3,500 &nbsp;|&nbsp; <strong>HQ:</strong> Padua, Italy</p>
+    <p><strong>Major Subsidiaries:</strong> Carrera, Polaroid Eyewear, Smith Optics, Blenders Eyewear, Privé Revaux (SPY+ and Serengeti acquired July 2026)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud (Call Center), Marketing Cloud (ExactTarget), B2B Commerce, Customer Portal, Tableau, Analytics Cloud, MuleSoft, Platform</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Eleonora Dallari]</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Safilo SpA | APROMORE (<a href="https://org62.my.salesforce.com/006ed00000VVWBRAA5">$95k</a>) &nbsp;|&nbsp; MC_IT_AO_SAFILO_Loyalty You&amp;Safilo (<a href="https://org62.my.salesforce.com/006ed00000eUMiQAAW">$100k</a>) &nbsp;|&nbsp; Safilo_HR &amp; ITSM (<a href="https://org62.my.salesforce.com/006ed00000VV5SzAAL">$100k</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GEA1TPCL">Eleonora Dallari</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Data Cloud + Service Cloud + MuleSoft)</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">80/100</span> — T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Full multi-cloud stack (Sales, Service, MC, B2B, Tableau, MuleSoft) plus Data Foundation #BIGBET in flight.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Live "Safilo SpA | APROMORE" opp already at Stage 02 ($95k) with named Italian NAE working the deal.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">Just closed SPY+ &amp; Serengeti acquisition (Jul 2026); multi-year plant restructuring across Italy and Slovenia.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">MuleSoft ($241k renewal) already the integration spine — event logs across ERP, Commerce, Service are minable today.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-green">Active AF One upgrade, HR &amp; ITSM, Loyalty (You&amp;Safilo), and Signature Success Swap all in pipe.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-orange">EU CSRD, GDPR and product-liability CE marking apply, but no single-regulator wedge to force urgency.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>13/20</td><td class="cat-orange">CEO Angelo Trocchia and CFO layer identified, but no confirmed process-owner or CoE lead in the account yet.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Safilo Group S.p.A. by mining the multi-brand Order-to-Cash, licensed-brand royalty, and post-merger integration event logs across its MuleSoft-connected stack — accelerating the SPY+/Serengeti onboarding, tightening working capital across 40+ country subsidiaries, and turning the live $95k Apromore opp into a documented, business-analyst-owned process intelligence program.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Post-Merger Integration: SPY+ and Serengeti Onboarding</summary>
+    <div class="use-case-body">
+      <p>Safilo just completed the acquisition of SPY+ and Serengeti on July 1, 2026 — two brand systems that must be harmonized into the Padua ERP, MuleSoft integration layer, and B2B Commerce storefronts within 12 months. Every past Safilo integration (Solstice divestiture, Kering license unwind, plant closures in Martignacco / Ormož / Longarone) has surfaced hidden rework loops in item master, licensing royalty, and D2C order flow. AFPI mines the current-state OTC and item-onboarding processes in both target companies against the Safilo reference model, exposes conformance gaps without a PQL specialist, and lets Finance simulate policy alignment before the go-live — target 30-40% faster brand cutover and zero royalty leakage.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> B2B Commerce, MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Angelo+Trocchia+Safilo">Angelo Trocchia</a> (CEO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Wholesale &amp; D2C Order-to-Cash across 32 Licensed Brands</summary>
+    <div class="use-case-body">
+      <p>Safilo runs 32 licensed brands (Boss, Tommy Hilfiger, Jimmy Choo, Levi's, Victoria Beckham, and more) plus 5+ house brands through wholly-owned subsidiaries in 40 countries and 50 distribution partners in 70. Each license carries distinct royalty triggers, minimum guarantees, and channel-exclusivity rules that today create manual credit blocks, delivery-date renegotiations, and revenue-recognition rework at every close. AFPI mines the full O2C event log across ERP, Commerce, and Service Cloud, quantifies rework hotspots by brand and geography, and hands the CFO office a business-analyst-controlled cockpit — targeting DSO reduction of 3-5 days and OTIF lift of 4-6 points.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> B2B Commerce, Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Gerd+Graehsler+Safilo">Gerd Graehsler</a> (CFO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. You&amp;Safilo Loyalty and Consumer Journey Optimization</summary>
+    <div class="use-case-body">
+      <p>The MC_IT_AO_SAFILO_Loyalty (You&amp;Safilo) opportunity signals a live investment in tying Marketing Cloud, D2C storefronts, and post-purchase service into a single consumer identity — but today the customer journey fragments across dealer, e-commerce, and service touchpoints with no visibility into where drop-off actually happens. AFPI mines the end-to-end consumer event log from campaign engagement through purchase, warranty registration and repeat-order, feeds the gaps into Agentforce Marketing agents, and unlocks the Data Cloud investment already in flight. Target: 8-12% lift in loyalty-driven repeat rate and 2x faster campaign-to-conversion analysis.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Angela+Bianchi+Safilo">Angela Bianchi</a> (Chief Marketing Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Supplier &amp; Manufacturing Rationalization Across Italy / Slovenia / Far East</summary>
+    <div class="use-case-body">
+      <p>Safilo has been rationalizing its manufacturing footprint for five years — closing Martignacco (2020), selling Ormož (2021), and Longarone (2023) — while shifting volume to Longarone HQ, the Chinese joint venture, and 3PL partners. Every plant transition today produces PO exceptions, three-way match failures, and long supplier onboarding cycles that quietly consume Finance and Supply Chain FTE. AFPI mines the Procure-to-Pay and inbound-quality event logs, quantifies where each plant transition still leaks cycle-time and cost, and pairs Compliance Center with the wedge to keep CE, REACH, and eyewear product-liability documentation always audit-ready — reclaiming 8-12% touchless-P2P uplift.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ERP AP (TBD), MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Massimiliano+Tabacchi+Safilo">Massimiliano Tabacchi</a> (Chief Industrial Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. B2B Wholesale Order Portal &amp; Optical-Retailer Onboarding</summary>
+    <div class="use-case-body">
+      <p>The Salesforce B2B Commerce footprint (60,000+ Customer Portal licenses) drives wholesale orders from independent opticians, chain retailers, and department stores across 70+ markets. Retailer onboarding today involves credit checks, brand-authorization approvals, price-list assignment, and localized VAT handling — a multi-step process where drop-off directly costs new-account revenue. AFPI mines the onboarding-to-first-order event log, surfaces exactly where retailers stall, and lets Sales Ops re-simulate approval flows in weeks — target 25-35% reduction in retailer time-to-first-order and 5-8 point lift in dormant-account reactivation.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> B2B Commerce, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Maurizio+Marchiori+Safilo">Maurizio Marchiori</a> (Chief Commercial Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

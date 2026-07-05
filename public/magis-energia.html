@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magis Energia S.p.A. — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Magis Energia S.p.A.</h1>
+  <div class="snapshot">
+    <p><strong>Utilities, Multi-Utility (Electricity, Gas, District Heating)</strong></p>
+    <p><strong>Revenue:</strong> ~€2.05B (parent Gruppo Magis / MAGIS S.p.A. FY2024 consolidated) &nbsp;|&nbsp; <strong>Employees:</strong> ~2,347 group &nbsp;|&nbsp; <strong>HQ:</strong> Verona, Italy</p>
+    <p><strong>Major Subsidiaries:</strong> Magis Power, Magis Calore, Magis Smart, Magis Ambiente, V-Reti (parent Gruppo Magis operating companies)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Full CRM &amp; Partner Community), Field Service, Marketing Cloud (ExactTarget), Heroku, Platform Encryption</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Stefano+Cominato+AGSM+AIM">Stefano Cominato</a>, CIO]</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> AGSM - Apromore - Process Mining (<a href="https://org62.my.salesforce.com/006ed00000Zdu4dAAB">$100k</a>) | AGSM - Process Mining - BDR (<a href="https://org62.my.salesforce.com/006ed00000dtLrlAAE">$100k</a>) | MS - AGSM (Gruppo Magis) - L1 Integration (<a href="https://org62.my.salesforce.com/006ed00000bb3knAAA">$90k</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U086X181JA3">Lorenzo Pratesi</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep install base (CRM, Field Service, MC, Heroku) plus a live Apromore Process Mining opp at Stage 02.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">MAGIS SpA merger effective Dec 2025; €1B 2025-2030 industrial plan; €120M EIB grid modernisation.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Post-merger AGSM+AIM harmonisation across two CRMs, billing stacks, and field-service estates.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>17/20</td><td class="cat-green">CIO, Innovation lead, Transformation Office head, and CEO all named and reachable in Org62.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-green">Two open Process Mining opps ($100k each) — budget owned and clock already ticking to CY26 close.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Vertical / Industry Priority</td><td>12/15</td><td class="cat-orange">Multi-utility is a solid AFPI vertical but a step below banking / insurance / life-sciences priority.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-orange">ARERA, GDPR, NIS2, CSRD apply but no single high-stakes enforcement wedge like SOX or CPS 230.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Magis Energia S.p.A. by mining its post-merger meter-to-cash, field-service dispatch, and customer-onboarding event logs across the newly-consolidated AGSM+AIM stack — turning the €1B MAGIS 2025-2030 industrial plan and live process-mining opp into measurable billing-cycle, first-time-fix, and switch-in cycle-time wins.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Post-Merger Meter-to-Cash Harmonisation (AGSM + AIM)</summary>
+    <div class="use-case-body">
+      <p>Following the December 2025 birth of MAGIS S.p.A., two legacy meter-to-cash stacks — one from AGSM Verona, one from AIM Vicenza — still coexist across 890,000 electricity and gas customers. Bill exceptions, credit-note rework and dunning variants inflate DSO and drive contact-centre volume every cycle. AFPI mines the end-to-end read-to-bill-to-cash event log to expose which legacy variants can be retired first and which customer segments to migrate to the target platform, providing a defensible as-is baseline for the harmonisation programme. Metric moved: billing-exception rate, DSO, and cost-to-bill per customer.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP IS-U / billing stack (TBD), Sales Cloud CRM</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Davide+Casarin+AGSM+AIM">Davide Casarin</a> (Responsabile Reporting e Transformation Office)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Field-Service Dispatch &amp; First-Time-Fix (V-Reti + Magis Calore)</summary>
+    <div class="use-case-body">
+      <p>V-Reti (electricity/gas distribution) and Magis Calore (district heating, 8 cogeneration plants) run a shared field force across Verona, Vicenza and the wider Veneto — with EIB funding accelerating grid modernisation work orders. AFPI mines the dispatch-to-close event log in Salesforce Field Service alongside V-Reti's SCADA/OMS interfaces to expose repeat-visit patterns, parts-truck-roll misalignment, and SLA-breach clusters by asset class. The result is measurable first-time-fix improvement and lower cost-to-serve on both regulated distribution and district-heating jobs. Metric moved: first-time-fix rate, mean-time-to-restore, cost per work order.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, SCADA/OMS (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Michele+Bendinelli+Gruppo+Magis">Michele Bendinelli</a> (Responsabile Innovazione, Gruppo Magis)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Customer Switch-In / Contract Activation on the Free Market</summary>
+    <div class="use-case-body">
+      <p>Italy's electricity free-market transition (fine tutela) has made customer acquisition and switch-in cycle time a direct competitive lever — Magis Energia sells power, gas and heat on the mercato libero to households, condominiums, businesses and PA. Today the switch-in journey traverses web/agent channels, credit checks, ARERA-mandated data exchanges with Acquirente Unico, and back-office activation with variants that lengthen time-to-first-bill and inflate abandonment. AFPI mines the quote-to-activation event log across Sales Cloud, Marketing Cloud journeys and back-office queues to compress cycle time and lift agent-network conversion. Metric moved: time-to-activation, switch-in abandonment rate, cost per acquisition.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Marketing Cloud (ExactTarget)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Donata+Dallavo+AGSM+AIM">Donata Dallavo</a> (Direzione Vendite e Processi Commerciali)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Credit &amp; Collections on the Regulated + Free Market Book</summary>
+    <div class="use-case-body">
+      <p>Italian multi-utility bad-debt exposure has stayed elevated post-2022 energy-price spike and the mix of regulated (maggior tutela residual) and free-market receivables complicates dunning strategy. AFPI mines the invoice-to-cash and dunning event log to reveal which customer segments respond to which reminder sequence, where manual credit-note rework compounds, and where legally-required steps (e.g. constituzione in mora) are delayed. The output is a data-grounded segmentation for Agentforce-assisted collections and a defensible reduction in provisions. Metric moved: DSO, bad-debt provision as % of revenue, contact-centre volume on billing disputes.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, SAP FI/Billing (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Stefania+Demenego+AGSM+AIM">Stefania Demenego</a> (Gestione del credito)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Renewables Project &amp; Grid-Connection Onboarding (Magis Power + V-Reti)</summary>
+    <div class="use-case-body">
+      <p>Gruppo Magis is investing €137M/year in the energy transition — 22 recently-acquired PV plants (~85 MWp), the largest group PV park in Trissino, and continued hydro/wind/geothermal capacity. Each project journey — permitting, EPC handoff, grid-connection request via V-Reti, GSE incentive filing, commissioning — spans multiple companies and regulators, and today lives in email plus point tools. AFPI mines the project-and-connection lifecycle event log to expose which permitting gates and internal handoffs slip most, so the programme office can pull them onto the critical path first. Metric moved: time from permit filing to first kWh, and internal handoff delays per MW commissioned.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Project/PMO system (TBD), V-Reti connection-request platform (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Marco+Serafini+AGSM+AIM">Marco Serafini</a> (Head of Strategic Plan, Control &amp; Business Development)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account. [Slack] Note: Celonis remains the German-speaking / Northern-Italian process-mining incumbent generally — worth pre-emptively positioning against.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

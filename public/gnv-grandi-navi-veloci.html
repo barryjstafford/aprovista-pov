@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grandi Navi Veloci S.p.A. — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Grandi Navi Veloci S.p.A.</h1>
+  <div class="snapshot">
+    <p><strong>Travel, Transportation &amp; Hospitality, Ferry &amp; Cruise Shipping</strong></p>
+    <p><strong>Revenue:</strong> ~$500M &nbsp;|&nbsp; <strong>Employees:</strong> ~1,708 &nbsp;|&nbsp; <strong>HQ:</strong> Genoa, Italy</p>
+    <p><strong>Major Subsidiaries:</strong> GNV España SL, SNAV (sister MSC Group ferry brand)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales &amp; Service Cloud Unlimited, Data Cloud, Marketing Cloud Engagement, Loyalty Management, ExactTarget, Shield, Tableau (in-flight)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Medallia (in replacement), Jakala (SI partner) [Slack]</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> GNV - Apromore (<a href="https://org62.my.salesforce.com/006ed00000MFcczAAD">$68k</a>) &nbsp;|&nbsp; GNV - Personalization rinnovo (<a href="https://org62.my.salesforce.com/006ed00000UQ7PaAAL">$166k</a>) &nbsp;|&nbsp; GNV - Agentic BI Tableau - BDR (<a href="https://org62.my.salesforce.com/006ed00000adz8XAAQ">TBD</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GYLDPEFJ">Stefania Blandini</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Data Cloud + Service Cloud)</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Active AFPI Opportunity in Cycle</td><td>18/20</td><td class="cat-green">Live "GNV - Apromore" opp ($68k) in Stage 03 "Validating Benefits &amp; Value" closing Oct 2026.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Co-Sell Fit</td><td>13/15</td><td class="cat-green">Multi-cloud Wave 1 signed Apr 2025: Sales/Service Unlimited, Data Cloud, MC, Loyalty — deep runway.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Big Transformation Project Wave 1 signed; Wave 2 MuleSoft + Agent Fabric aligned to AI journey.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>16/20</td><td class="cat-orange">CIO Barbara Poli engaged with SF at Dreamforce; CEO, CFO, CCO, Chief Port Ops all mapped in Org62.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>11/15</td><td class="cat-orange">Fleet expansion (Polaris '24, Orion '25, 3 more in '26) plus Medallia replacement flag scale strain.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>7/12</td><td class="cat-orange">SF event logs plentiful, but port ops / fleet management / booking ERPs not yet confirmed as mineable.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>3/6</td><td class="cat-orange">Active opp is a $68k pilot — below $200k rubric bar; needs expansion path to Wave 2 to hit T1 economics.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Grandi Navi Veloci S.p.A. by mining the booking-to-boarding, port turnaround, and customer-service event logs already flowing through the newly-live Data Cloud + Sales/Service platform — de-risking Wave 2 (MuleSoft + Agent Fabric) with a documented target-state process, and expanding the in-cycle $68k pilot into a compounding revenue-management, port-ops, and customer-experience play as the fleet scales to eight vessels by 2027.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Booking-to-Boarding Journey &amp; Revenue Management</summary>
+    <div class="use-case-body">
+      <p>GNV sells passenger and freight tickets through gnv.it, call center, travel agencies, and B2B corporate channels, then hands the passenger off to check-in, port boarding, and onboard revenue capture. Manual price overrides, cross-channel double bookings, and abandoned-cart drop-offs today cost measurable revenue per sailing and blur the yield picture that Revenue Management Manager Maurizio Ammendolia is expected to defend. AFPI mines the full booking-to-boarding event log across MC Engagement, Loyalty, and Service Cloud, exposes conversion leaks by channel, and lets the yield team re-simulate policy changes without a SQL specialist — targeting 2-4 pt conversion uplift and 3-6% ancillary revenue lift. This is the natural expansion path for the in-cycle Apromore opp ($68k) into a durable Wave 2 anchor.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, MC Engagement</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Maurizio+Ammendolia+GNV">Maurizio Ammendolia</a> (Revenue Management &amp; Pricing Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Port Turnaround &amp; Vessel Operations</summary>
+    <div class="use-case-body">
+      <p>Every minute a cruiseferry is berthed at Genoa, Palermo, Barcelona, or Tangier is a minute not selling cabins and not moving freight — turnaround performance is the single biggest lever on fleet utilization as GNV scales from 13 to 16+ vessels through 2027. Today, port coordination across the Chief Port Operations Officer, Italian Agency Port Coordinator, and local port agents runs on tribal knowledge and disconnected checklists. AFPI mines the entire disembark-clean-provision-embark event flow, quantifies the delay causes, and gives Andrea Balabani a fact-based ranking of where the next hour of turnaround savings sits — 5-10% turnaround improvement compounds directly into revenue capacity.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Port Ops System (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Andrea+Balabani+GNV">Andrea Balabani</a> (Chief Port Operations Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Contact Center &amp; Customer Service Case Resolution</summary>
+    <div class="use-case-body">
+      <p>Customer Service Manager Virginia Rivano runs a high-volume, seasonally-spiky contact center handling booking changes, refunds, disruption re-accommodation, and freight escalations in Italian, English, Spanish, and French. Slack signals confirm strong interest in AI-generated knowledge articles from historical case data ([Slack] Olga Eberini, May 2026) — a classic downstream Agentforce Service play, but only useful if the underlying case-resolution process is measured. AFPI mines every case path, identifies rework loops (transfers, re-opens, escalation to CCO), and feeds an Agentforce Service rollout that is grounded in the real process, not the documented one. Target: 15-25% deflection lift and 20% AHT reduction on repeat intents.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, MC Engagement</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Virginia+Rivano+GNV">Virginia Rivano</a> (Contact Center &amp; Customer Service Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Freight Sales &amp; B2B Order-to-Cash</summary>
+    <div class="use-case-body">
+      <p>Freight is GNV's stickier, higher-margin revenue leg — hauliers, logistics operators, and MSC Group intercompany bookings across Sicily, Sardinia, Spain, Morocco, Albania, and Tunisia routes. Sales Freight Manager Alessandro Feniello and Cost &amp; Contract Manager Lorenzo Cammarata today wrestle with contract exceptions, credit blocks, and manual pricing tiers that slow quote-to-loaded-vehicle cycle time and inflate DSO. AFPI mines the freight quote-to-cash event log inside the newly-live Sales &amp; Service platform, exposes the exception paths that eat margin, and lets Finance re-simulate credit and pricing rules without IT — 3-5 days DSO reduction plus visible margin recovery on non-standard tariffs.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alessandro+Feniello+GNV">Alessandro Feniello</a> (Sales Freight Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Wave 2 Integration Readiness (MuleSoft + Agent Fabric)</summary>
+    <div class="use-case-body">
+      <p>The Dreamforce 2025 SIC brief explicitly names Wave 2 as MC expansion + Contact Center + MuleSoft, aligned to GNV's AI transformation journey — with the acknowledgement that MuleSoft was not adopted in Wave 1. Every one of those hop points needs a defensible target-state process before an integration architect draws the first API contract, otherwise Wave 2 slips or scope-creeps. AFPI process-mines the current cross-system flows (booking → CRM → billing → CDP → MC) and hands CIO Barbara Poli a documented, quantified integration roadmap, protecting the AI investment with an evidence-based Center of Excellence. This is the wedge that turns the $68k Apromore pilot into a Wave 2 anchor tenant.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Data Cloud, MC Engagement</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Barbara+Poli+GNV">Barbara Poli</a> (Chief Information &amp; Technology Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account. Note: Microsoft competed hard on the Wave 1 CRM/MC deal and lost to Salesforce (April 2025 [Slack]) — Power Automate remains a latent threat if Wave 2 is not locked down.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

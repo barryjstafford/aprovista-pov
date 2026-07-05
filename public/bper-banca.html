@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPER Banca S.p.A. — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
+
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>BPER Banca S.p.A.</h1>
+  <div class="snapshot">
+    <p><strong>Financial Services, Banking (Universal / Retail &amp; Corporate)</strong></p>
+    <p><strong>Revenue:</strong> ~€5.3B &nbsp;|&nbsp; <strong>Employees:</strong> ~18,120 &nbsp;|&nbsp; <strong>HQ:</strong> Modena, Italy</p>
+    <p><strong>Major Subsidiaries:</strong> Banco di Sardegna, Banca Cesare Ponti, BPER Credit Management, Arca Vita, Banca Carige (absorbed)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (SFA), Financial Services Cloud, Marketing Cloud Engagement (ExactTarget), Analytics Cloud, Data Cloud, Loyalty Management, Feedback Management, Data 360, Informatica IDMC / MDM / EDC</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> MongoDB Atlas, Google BigQuery [Slack: INFA opps reference both as data stores]</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> BPER | Apromore Pilot (<a href="https://org62.my.salesforce.com/006ed00000WdfvKAAR">$50K</a>) &nbsp;|&nbsp; Apromore — engagement process improvement (<a href="https://org62.my.salesforce.com/006ed00000Wl5TGAAZ">$50K</a>) &nbsp;|&nbsp; +xx FSC UE for Monte Paschi Integration (<a href="https://org62.my.salesforce.com/006ed00000fitnZAAQ">$101K</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0208A8H9RS">Martino Bettiga</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Financial Services Cloud + Data Cloud)</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">89/100</span> — T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Active Apromore pilot in-flight</td><td>19/20</td><td class="cat-green">$50K Apromore Pilot opp already open + separate $50K engagement-process-improvement opp — champion is bought in.</td></tr>
+        <tr><td>Regulated vertical (Italian bank, ECB/Bank of Italy, DORA, AML)</td><td>14/15</td><td class="cat-green">3rd/4th largest Italian bank under ECB direct supervision — DORA + AML + Reg-EU audit drives Compliance Center value.</td></tr>
+        <tr><td>Salesforce install base breadth (FSC, MC, Data Cloud, MuleSoft, Informatica)</td><td>14/15</td><td class="cat-green">$6.3M SFA/Analytics renewal + $1.4M MC ExactTarget renewal + FSC, Data 360, Loyalty, Feedback, MDM — massive canvas.</td></tr>
+        <tr><td>Recent M&amp;A / integration complexity (Carige absorbed; Monte Paschi in-flight)</td><td>13/15</td><td class="cat-green">Just absorbed Banca Carige and now integrating Monte Paschi retail flows — post-merger process variance is textbook AFPI.</td></tr>
+        <tr><td>Named process/organization function on the buyer side</td><td>9/10</td><td class="cat-green">Dedicated "Direzione Organizzazione di Gruppo" + Process Analyst + COO Office contacts already mapped in Org62.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Data &amp; MDM readiness (active Informatica IDMC / MDM / EDC / masking work)</td><td>10/15</td><td class="cat-orange">Multiple active Informatica renewals + masking + BigQuery scanner — event-log staging will need MDM-clean data first.</td></tr>
+        <tr><td>Competitive process-mining landscape in Italy (Celonis strong in EMEA banking)</td><td>6/10</td><td class="cat-orange">Celonis has EMEA banking mindshare; win depends on positioning Apromore's no-code analyst model vs. SQL/PQL two-specialist stack.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help BPER Banca S.p.A. by mining the personal/corporate customer-engagement, onboarding, and post-Carige/Monte-Paschi integration processes across FSC, Marketing Cloud, and Informatica MDM — converting the already-approved pilot into an evidenced roadmap that shortens time-to-fund, cuts complaint SLA breaches, and gives ECB/DORA auditors a defensible control trail.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Personal &amp; Corporate Customer Engagement Redesign (Pilot Use Case)</summary>
+    <div class="use-case-body">
+      <p>The pilot Elena Voli and Emanuele Baruffa have already scoped is redesigning how BPER engages personal and corporate customers across multichannel CRM, branch, and digital — a classic case where the "designed" journey and the actual event log diverge sharply. AFPI mines the lead-to-serve process across FSC, Marketing Cloud Engagement, and the multichannel CRM Elena runs to expose where campaigns leak, where advisor hand-offs stall, and which segments never receive next-best-action follow-up. This is the exact scope of the two $50K opps already in Org62, so AFPI is not sold cold — it just needs execution to convert. Metric moved: campaign-to-appointment conversion and advisor next-best-action adherence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, Marketing Cloud Engagement</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Elena+Voli+BPER">Elena Voli</a> (Responsible of Multichannel CRM)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Post-Merger Integration: Carige &amp; Monte Paschi Retail Harmonization</summary>
+    <div class="use-case-body">
+      <p>BPER absorbed Banca Carige and is now integrating Monte Paschi retail flows — the "+xx FSC UE for Monte Paschi Integration" opp is live in Org62. Two-plus core banking stacks means duplicated onboarding, KYC, and account-servicing paths that vary by legacy brand. AFPI mines the merged event logs to quantify where variance costs cycle time and where legacy Carige branches still deviate from the target BPER process, giving Gianluca Formenton's COO organization a data-backed integration scorecard. Metric moved: process-variance rate across legacy vs. target brand, integration-milestone slippage.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, Core Banking (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Gianluca+Formenton+BPER">Gianluca Formenton</a> (Chief Operating Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. AML Alert Investigation &amp; Suspicious-Activity Reporting</summary>
+    <div class="use-case-body">
+      <p>As an ECB-supervised universal bank, BPER files a large volume of Segnalazioni Antiriciclaggio (Italy's SAR equivalent) and is directly exposed to DORA operational-resilience requirements landing in 2026-2027. AFPI mines the alert-to-disposition process across transaction monitoring, L1/L2 investigation, and Auditing to expose reviewer variance, escalation rework, and SLA breaches. Compliance Center then produces the evidenced control trail Vincenzo Boldrini's audit function and Bank of Italy inspectors expect. Metric moved: alerts per investigator per day, SAR filing timeliness, false-positive rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Transaction Monitoring (TBD), Salesforce Platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Vincenzo+Boldrini+BPER">Vincenzo Boldrini</a> (Responsabile Auditing)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Credit Origination &amp; Underwriting (Retail + Commercial + Large Corporate)</summary>
+    <div class="use-case-body">
+      <p>BPER's Divisione Retail, Corporate, and Large Corporate teams each run distinct origination flows, and Livio Tempesta's Credit Risk Management function has to prove consistent risk decisions across all three. AFPI mines the application-to-decision-to-fund process across FSC and the LOS to quantify stage-level cycle times, exception paths, and covenant-review rework — the same evidence base that unlocks a targeted Agentforce underwriter assistant later. In a rising-NPL environment for Italian banks, this directly protects the cost-of-risk line. Metric moved: application-to-close cycle time, decision-consistency across divisions, exception rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, LOS (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Livio+Tempesta+BPER">Livio Tempesta</a> (Responsabile Credit Risk Management Commercial Business)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Master-Data &amp; Customer-Governance Cleanup (Informatica MDM + Data Cloud)</summary>
+    <div class="use-case-body">
+      <p>Multiple active Informatica renewals (IDMC, MDM, EDC scanner for BigQuery, MongoDB masking) plus a live Data 360 personalization compliance opp signal that BPER is still fighting master-data fragmentation across brands and product lines. Emanuele Baruffa's Customer Governance service is on the hook for the single-customer view. AFPI mines the steward and merge/split workflows in MDM to expose where rules are firing false positives, where stewards are rubber-stamping, and where the same customer is being serviced twice across Carige/BPER/Banco di Sardegna. Metric moved: single-customer-view coverage, steward hours per 1,000 records, downstream campaign-suppression accuracy.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Informatica IDMC / MDM, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Emanuele+Baruffa+BPER">Emanuele Baruffa</a> (Head of Customer Governance Service)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline"><a href="https://salesforce.enterprise.slack.com/archives/C09LK6XLXAL/p1773926249469549"><strong>Celonis</strong></a> — general EMEA banking mindshare risk; positioning language ("Apromore is like Celonis, only better") already circulating internally as the standard EMEA counter. No account-specific Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate footprint confirmed at BPER today.</span></h2><div class="actions">
+    <span class="disabled">Generate PDF</span>
+    <span class="disabled">Generate Slack Canvas</span>
+    <span class="disabled">Generate Vercel Page</span>
+    <span class="disabled">Generate Customer Email (Beta)</span>
+    <span class="disabled">Generate Proposal Template</span>
+    <span class="disabled">Deal Support Request</span>
+    <span class="disabled">Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>
