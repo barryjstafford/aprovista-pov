@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Procore Technologies, Inc. — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Procore Technologies, Inc.</h1>
+  <div class="snapshot">
+    <p><strong>Technology, Construction SaaS Platform</strong></p>
+    <p><strong>Revenue:</strong> ~$1.3B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~4,000 &nbsp;|&nbsp; <strong>HQ:</strong> Carpinteria, California, USA</p>
+    <p><strong>Major Subsidiaries:</strong> Honest Buildings, Esticom, Avata Intelligence, INDUS.AI</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, CPQ (managed package), Experience Cloud (Partner Portal), Slack, Tableau, Marketing Cloud, Data Cloud, Qualified</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Snowflake, Databricks, Workato, Gemini LLM [Slack]</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Procore Technologies - Salesforce CTO - Extension - FY26 CSG (<a href="https://org62.my.salesforce.com/006ed00000JLc49AAD">$1.87M</a>) &nbsp;|&nbsp; Procore (+A1E upgrade) 2750A1E (<a href="https://org62.my.salesforce.com/006ed00000edwZmAAI">$850K</a>) &nbsp;|&nbsp; Procore - D360, AF, Headless #TopUseCase (<a href="https://org62.my.salesforce.com/006ed00000fb1juAAA">$500K</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GLP49N1X">Chris Frome</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">82/100</span> — T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$8M+ open opps across CTO, A1E, Agentforce, CPQ, Slack, Tableau, MC.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">VP RevOps must grow $1.3B→$1.5B with no headcount; explicit "admin tax" pain.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>16/20</td><td class="cat-green">VP RevOps Pradeep Konduru sponsoring; EA + GTM PM engaged actively.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Building "Scout" sales agent on Gemini+Snowflake+Workato; Agentforce co-exist decision live.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-green">Salesforce+CPQ+Slack+Snowflake+Databricks — dense mineable event logs.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>4/8</td><td class="cat-orange">SOX as a public company, but no heavy regulatory regime driving urgency.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>11/15</td><td class="cat-orange">Tech/SaaS is secondary vertical for AFPI; construction end-customers are the primary target.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Procore Technologies, Inc. by mining its own Quote-to-Cash, Renewal, and Partner-Onboarding flows across Sales Cloud + CPQ + Slack + Snowflake so VP RevOps Pradeep Konduru can prove where "admin tax" is really burned, quantify the friction his Scout agent must remove, and defend the $1.3B→$1.5B growth-without-headcount mandate with process evidence — not opinions.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Quote-to-Cash Cycle Compression (Direct + Partner CPQ)</summary>
+    <div class="use-case-body">
+      <p>Procore runs the SF CPQ managed package for direct sales and is now extending Configure-Price-Quote to a partner ecosystem via Experience Cloud [Slack]. Mining the current QTC flow across Opportunity → Quote → Order → Invoice will expose where quote-approval loops, discount escalations, and CPQ rule mis-fires eat rep hours — exactly the "admin tax" Pradeep Konduru wants Scout to kill. AFPI would surface rework loops and approval bottlenecks in weeks, giving the RevOps team baseline metrics before the partner rollout goes live. Target metric: reduce quote-to-order cycle by 30% and cut discount-approval hops by half.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce CPQ, Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Pradeep+Konduru+Procore">Pradeep Konduru</a> (VP, RevOps &amp; Marketing)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Renewal Motion Optimization ($3M+ Renewal Book)</summary>
+    <div class="use-case-body">
+      <p>Procore has multiple large renewals in play — Call Center + SteelBrick CPQ ($1.99M), Slack ($1.05M), Tableau ($481K) — with clear risk signals from the 85% Elevate seat drop flagged in Project Watchtower [Slack]. Mining the renewal-motion process (health scoring → CSM outreach → co-term / true-up → renewal quote → close) will reveal where renewals stall, which touches actually move the needle, and where the health-score-to-action loop breaks. AFPI can compare the "on-time renewed" trace against the "descoped / churned" trace and pinpoint the divergence. Target metric: lift on-time renewal rate by 8 points and cut CSM manual research time by 40%.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Salesforce CPQ</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Howard+Fu+Procore">Howard Fu</a> (CFO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Marketing-to-Pipeline Conversion (MC Migration off Marketo)</summary>
+    <div class="use-case-body">
+      <p>Procore is migrating from Marketo to Salesforce Marketing Cloud (MCA "Marketo rip", $464K opp) [Slack] and running a Qualified expansion for inbound conversion. Mining the lead-to-pipeline funnel across MC / Qualified / Sales Cloud will expose lead-routing latency, SDR-to-AE handoff drop-off, and where inbound intent decays waiting for follow-up. This is the exact process VP Marketing Pradeep Konduru is trying to accelerate to hit $1.5B without adding sellers. AFPI gives him a defensible baseline against which to score every Scout / Qualified / Agentforce SDR intervention. Target metric: shrink lead-to-first-touch time by 60% and lift MQL→SQL conversion by 5 points.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud, Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Pradeep+Konduru+Procore">Pradeep Konduru</a> (VP, RevOps &amp; Marketing)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Partner Onboarding &amp; PRM Rollout Readiness</summary>
+    <div class="use-case-body">
+      <p>Procore is doing a full PRM transformation, extending CPQ to a few hundred partners via Salesforce Partner Portal [Slack] — early-maturity ecosystem, high risk of process drag. Mining the current partner-onboarding + deal-registration + partner-quote path will show which partner segments actually complete registration, where portal drop-off happens, and where partner-generated quotes stall vs direct. AFPI gives the CSG the "before" picture so ROI on the rollout is measurable, not narrated. Target metric: 2x partner-sourced quote volume and 25% shorter partner activation time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Experience Cloud, Salesforce CPQ</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Steve+Davis+Procore">Steve Davis</a> (President, Product and Technology)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Service Case &amp; Messaging Session Resolution</summary>
+    <div class="use-case-body">
+      <p>Procore's Service Cloud implementation has documented friction — Messaging Session "Reply to" field greying out mid-conversation forcing agents offline and reroutes [Slack], plus a Sev-1 red-account case in APAC review. Mining Case → Messaging Session → Omni-Channel routing → agent state transitions will surface the reroute pattern, where sessions truly abandon vs recover, and how much handle-time is lost to workarounds. This directly supports the Agentforce Service co-sell — you cannot deploy an agent on a broken process. Target metric: cut agent-reroute rate by 50% and shave 90 seconds off average messaging session handle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Slack</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Steve+Zahm+Procore">Steve Zahm</a> (Chief Experience Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent competitive mentions found tying Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate directly to Procore Technologies — the field is open. Procore is instead building an in-house Scout agent on Gemini + Snowflake + Databricks + Workato, which is the real "compete" here: build-vs-mine.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>
