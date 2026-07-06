@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coles Group Limited — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Coles Group Limited</h1>
+  <div class="snapshot">
+    <p><strong>Retail &amp; Consumer Goods, Grocery &amp; Supermarkets</strong></p>
+    <p><strong>Revenue:</strong> A$44.5B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~120,000 &nbsp;|&nbsp; <strong>HQ:</strong> Hawthorn East, Victoria, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> Coles Supermarkets, Coles Liquor (Liquorland, First Choice, Vintage Cellars), Coles Express (Viva Energy alliance), Coles Online, flybuys (50% JV with Wesfarmers)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Marketing Cloud, Marketing Cloud Personalization, MuleSoft, Signature Success</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> SAP S/4HANA (finance &amp; merchandising), Manhattan WMS (DC operations), Responsys (Marketing Cloud is actively replacing) [Slack][Org62]</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Coles - Apromore (<a href="https://org62.my.salesforce.com/006ed00000bOQnFAAW">$500k</a>) | Coles - MC-Responsys Replace (<a href="https://org62.my.salesforce.com/006ed00000cs1m1AAA">$750k</a>) | MS - Integration Consolidation Mule-led (<a href="https://org62.my.salesforce.com/006ed00000cjG2jAAE">$180k</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0B25P8RH6U">Rod Andrewartha</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Live "Coles - Apromore" $500K opp already at Stage 02 — deal is real and current.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Multi-cloud SF customer: $1M+ platform renewal, MC, Service Cloud, MuleSoft, Signature Success.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">Retail &amp; CG — top-priority AFPI vertical with proven process-mining ROI stories.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Simply Coles cost-out program, DC ramp (Ocado/Witron), online fulfilment cycle-time pressure.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-green">SAP S/4HANA + Manhattan WMS + Salesforce = rich, minable event logs across O2C and fulfilment.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">ASX/food-safety/Fair-Work exposure is material but not SOX-grade — moderate compliance urgency.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>16/20</td><td class="cat-orange">AE sponsor identified but named business-side champion (COO/Supply Chain) still to be confirmed.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Coles Group Limited by mining SAP S/4HANA, Manhattan WMS, and Salesforce event logs across supply-chain replenishment, online fulfilment, and store operations to quantify the Simply Coles cost-out program in dollars, cut e-com pick-to-doorstep cycle time, and de-risk the Ocado/Witron automated-DC ramp — turning gut-feel process pain into a defensible board-level ROI narrative.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Supply-Chain Replenishment &amp; DC Throughput (Ocado/Witron Ramp)</summary>
+    <div class="use-case-box use-case-body">
+      <p>Coles is spending A$1B+ on two automated customer fulfilment centres (Ocado) plus Witron ambient DCs. Ramp-up is the highest-risk period — bottlenecks between forecast, replenishment order, DC pick, and store receipt destroy availability. Apromore mines SAP replenishment events and Manhattan WMS pick/pack events to expose where the automated flow diverges from the designed process and why fill-rate stalls. Metric moved: on-shelf availability (OSA), DC labour cost per case.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP S/4HANA, Manhattan WMS</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Matthew+Swindells+Coles">Matthew Swindells</a> (Chief Operations &amp; Sustainability Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Online Order-to-Doorstep Cycle Time (Coles Online + Click&amp;Collect)</summary>
+    <div class="use-case-box use-case-body">
+      <p>Coles Online is the fastest-growing channel and its unit economics live or die on cycle time — order capture, pick, dispatch, last-mile, delivered. Apromore mines the end-to-end event log across the e-com platform, WMS, and delivery/last-mile carrier events to find the true rework loops (re-picks, substitutions, missed windows, redeliveries). Directly ties to Simply Coles digital cost-per-order targets. Metric moved: cost-to-serve per online order, NPS-linked missed-window rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Manhattan WMS, Salesforce Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Amanda+McVay+Coles">Amanda McVay</a> (Chief Digital &amp; Technology Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Customer Service Case Handling (Service Cloud Efficiency)</summary>
+    <div class="use-case-box use-case-body">
+      <p>Coles runs Service Cloud plus the Coles Liquor contact-centre expansion ([+80 SC+SV+A4S] $213K opp). Case-handling is a hidden cost centre — refunds, substitutions disputes, delivery escalations. Apromore mines Service Cloud case-lifecycle events to spot re-open loops, rework between queues, and where Agentforce would deflect vs. a live agent. Direct feed to the Agentforce business case Rod is building. Metric moved: average handle time, one-touch resolution rate, cost-per-case.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Zena+Srzich+Coles">Zena Srzich</a> (Chief Customer Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Marketing Cloud Migration &amp; Journey Effectiveness (Responsys Replace)</summary>
+    <div class="use-case-box use-case-body">
+      <p>Coles is actively replacing Responsys with Marketing Cloud ($750K opp). Migrating journeys blind is how migrations blow out — Apromore mines Responsys event logs and the new Marketing Cloud send/engagement logs to compare the as-is versus to-be customer journeys, expose orphaned or under-performing paths, and de-risk cutover. Metric moved: journey completion rate, email-to-basket conversion, migration risk reduction.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Marketing Cloud, Responsys</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Amanda+McVay+Coles">Amanda McVay</a> (Chief Digital &amp; Technology Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Procure-to-Pay &amp; Supplier Onboarding (SAP S/4HANA)</summary>
+    <div class="use-case-box use-case-body">
+      <p>Coles moved to SAP S/4HANA — a live event log gold-mine for P2P. Payment-block loops, off-catalogue spend, duplicate invoices, and slow supplier onboarding hit working capital and supplier trust. Apromore mines SAP purchase-order, GR, and invoice events to quantify DPO drag and target Agentforce Ops-style automations. Metric moved: touchless-invoice rate, working capital, supplier NPS.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP S/4HANA</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Charlie+Elias+Coles">Charlie Elias</a> (Chief Financial Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No named competitor mentions found tied to Coles Group in Slack, but assume <strong>Celonis</strong> is the incumbent to displace across ANZ retail — Marcello La Rosa has been open that Apromore is "like Celonis, only better" thanks to no-code (no PQL) and 2–4 week time-to-value.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insurance Australia Group Limited — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Insurance Australia Group Limited</h1>
+  <div class="snapshot">
+    <p><strong>Financial Services, General Insurance (P&amp;C)</strong></p>
+    <p><strong>Revenue:</strong> ~A$17.6B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~13,000 &nbsp;|&nbsp; <strong>HQ:</strong> Sydney, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> NRMA Insurance, CGU Insurance, NZI, AMI Insurance, WFI Insurance</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> MuleSoft Anypoint Platform (AEH, API Groups, Flex Gateway), Sales Cloud, Service Cloud</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Verint Kana (contact centre, 3,000+ users, end-of-life), GitHub Actions (CI/CD), Apigee <span style="font-size:.78em;color:#666;">[Slack]</span></p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Insurance Australia Group - CGU/ WFI Transformation (<a href="https://org62.my.salesforce.com/006ed00000LgdnGAAR">$100k</a>) &nbsp;·&nbsp; Verint Kana Replacement — Retail Insurance AU pilot &amp; AELA (~$5M ACV in play) <span style="font-size:.78em;color:#666;">[Slack]</span></p>
+    <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02FWKAHAMA">James Toulson</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">87/100</span> — T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">P&amp;C insurance is a top AFPI vertical — claims, underwriting, contact-centre process pain.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Verint Kana EOL, 3,000+ contact-centre users, 100+ APIs, portal &amp; underwriting friction.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">MuleSoft AEH is a native event-log source — API, service, and case flows are minable today.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>11/12</td><td class="cat-green">Deep MuleSoft engagement, live Sales/Service Cloud, ~$5M ACV Verint displacement in flight.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Positioned move from telephony-centric CC to customer-centric agentic model with Agentforce.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-orange">RFI/RFP being circumvented via PS-led pilot — timing depends on approval outcome.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">APRA prudential regime + AFCA complaints scrutiny drive silent-deviation transparency.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Insurance Australia Group Limited by mining its MuleSoft AEH API flows, Verint contact-centre transcripts, and CGU/WFI claims and underwriting event streams to expose silent deviations and compliance leakage across NRMA, CGU, and NZI — accelerating the Verint→Agentforce transformation, shortening quote and claim cycle times by 20–35%, and freeing underwriter and consultant capacity for high-complexity risks.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Contact-Centre First-Contact Resolution &amp; Verint→Agentforce Transition</summary>
+    <div class="use-case-body">
+      <p>IAG's Retail Insurance AU division is scoping a ~$5M ACV displacement of Verint Kana across 3,000+ users, with a Professional Services-led pilot positioning the shift from a telephony-centric CC to a customer-centric agentic model. Apromore mines call routing, hold/transfer/repeat-contact patterns, and case handling in Service Cloud to expose exactly which journeys are candidates for autonomous agents vs. augmented humans — grounding the Agentforce business case in evidence, not hunch. It moves first-contact resolution, average handle time, and repeat-contact rate — the same KPIs the RFI will be judged on.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Verint Kana, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Hamish+Miles+IAG">Hamish Miles</a> (Retail Insurance AU sponsor, referenced on the Verint pilot)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Commercial Underwriting Digital Twin (CGU / WFI)</summary>
+    <div class="use-case-body">
+      <p>The open CGU/WFI Transformation opp is the exact wedge for the "Digital Twin of Underwriting" narrative Marcello La Rosa is running with Suncorp and the P&amp;C industry team. Apromore visualises actual commercial-lines submission-to-bind flows to surface silent deviations, referral loops, and time-to-quote drag — feeding the Agentic Workbench so autonomous agents triage submissions and flag invisible bottlenecks in real time. It moves time-to-quote, quote-to-bind conversion, and underwriter capacity for high-complexity risks.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> CGU/WFI underwriting stack, Salesforce</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Martin+Vodden+IAG">Martin Vodden</a> (CGU/WFI account lead)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Motor &amp; Home Claims Cycle-Time (NRMA)</summary>
+    <div class="use-case-body">
+      <p>NRMA processes some of the largest motor and home claims volumes in Australia, and post-CAT event surge periods routinely blow through SLA targets. Apromore mines FNOL-to-settlement event logs across policy admin, assessing, repairer network scheduling, and payment systems to isolate the true rework loops (duplicate assessments, information-request ping-pong, panel escalations). Pairs directly with Agentforce Operations for autonomous triage of straight-through claims. Moves cycle time, straight-through processing rate, and customer NPS during CAT events.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Claims platform, MuleSoft AEH</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Halde+Bagdadi+IAG">Halde Bagdadi</a> (referenced on IAG Salesforce account team)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. API &amp; Partner Onboarding via MuleSoft AEH</summary>
+    <div class="use-case-body">
+      <p>IAG is onboarding external banks and credit unions to consume 100+ APIs through Anypoint Experience Hub, with API Groups (e.g. "quote &amp; buy") as the navigation mechanism. Apromore mines Anypoint access logs, portal telemetry, and Flex Gateway traffic to show which API groups get adopted, which fail on first contract, and where partners bail out — turning the AEH uplift into a measurable governance story and feeding an "agent-ready" API catalog. Moves partner activation time, API adoption rate, and support-ticket volume from external consumers.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft Anypoint (AEH), Flex Gateway</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=James+Smart+IAG">James Smart</a> (MuleSoft account team, IAG)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Regulatory &amp; AFCA Complaints Handling</summary>
+    <div class="use-case-body">
+      <p>Australian general insurers face heightened APRA prudential scrutiny and AFCA (Australian Financial Complaints Authority) timeliness reporting, with complaint mishandling driving both fines and remediation programs. Apromore mines the complaint lifecycle end-to-end — intake channel, triage, internal dispute resolution, AFCA escalation, remediation payment — surfacing which categories of complaint routinely miss the 30/45-day thresholds and where the delays actually sit. The output feeds automated case orchestration in Service Cloud and provides an auditable process-map artefact regulators accept. Moves complaint-resolution SLA compliance, remediation cost, and AFCA determination win-rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, complaints/case system</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=James+Toulson+IAG+Salesforce">James Toulson</a> (Salesforce AE, IAG)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent competitor mentions (Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, Power Automate) tied directly to IAG surfaced in Slack or public sources — clean field for Apromore-first positioning ahead of the Retail Insurance AU pilot.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

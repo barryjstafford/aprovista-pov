@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Origin Energy Limited — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Origin Energy Limited</h1>
+  <div class="snapshot">
+    <p><strong>Energy &amp; Utilities, Integrated Gas &amp; Electricity Retailer</strong></p>
+    <p><strong>Revenue:</strong> A$16.1B (FY24) &nbsp;|&nbsp; <strong>Employees:</strong> ~5,400 &nbsp;|&nbsp; <strong>HQ:</strong> Barangaroo, Sydney, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> Origin Energy Retail, Origin Energy Electricity, Australia Pacific LNG (27.5% JV), Origin Zero, Octopus Energy (stake)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Marketing Cloud, Data Cloud, MuleSoft, Informatica, Tableau, Data 360</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> SAP (billing/finance), ServiceNow (ITSM/ops), field service &amp; work-order platform (network operations)</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> <a href="https://org62.my.salesforce.com/0063y00001B7Xk3AAF">Origin Zero — Assurance &amp; Program Review</a> (stage 01, needs re-qualification)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U039KBRTJN4">Arash Khorasani</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">87/100</span> — T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Energy &amp; utilities — tier-1 priority vertical; already an Apromore ANZ reference story.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Publicly deploying AI for Automated Quality Mgmt + "digital co-worker" in network ops [Web].</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">SAP, ServiceNow, MuleSoft, Data Cloud — abundant minable event logs across O2C and service.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>11/12</td><td class="cat-green">Deep SF stack: Marketing Cloud, Data Cloud, MuleSoft, Informatica, Tableau, Data 360 [Slack].</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>17/20</td><td class="cat-green">Named AE Arash Khorasani, active Data Cloud VPP POC, COO/Ops leaders reachable via SF team.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>3/6</td><td class="cat-orange">Only open opp is a stale $0 Origin Zero review — needs a new sponsor and refreshed budget line.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">AER retail regs + AEMO market compliance present but not a burning-platform driver today.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Origin Energy Limited by mining its meter-to-cash, connection/disconnection, and field service work-order processes across SAP, MuleSoft, and Data Cloud to expose the friction that today's "digital co-worker" Agentforce agents will actually need to eliminate — turning stated AI ambition into quantified ROI in weeks, not quarters.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Meter-to-Cash (M2C) Cycle-Time &amp; Exception Mining</summary>
+    <div class="use-case-body">
+      <p>Origin's retail M2C spans meter reads, billing, dispute handling, and collections across SAP and Marketing Cloud journeys. Public AER data shows Australian retailers absorb material bill-correction and complaint volume that erodes margin and NPS. Apromore mines the true process from SAP billing logs + Data Cloud events to expose rebill loops, exception-handling bottlenecks, and journey drop-offs — then hands the highest-value automations directly to Agentforce Operations. Metric moved: days-to-bill, first-time-right billing %, cost-to-serve per account.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP, Marketing Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Customer+Officer+Origin+Energy">Chief Customer Officer</a> (Retail)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Connection / Disconnection &amp; Move-In/Move-Out Orchestration</summary>
+    <div class="use-case-body">
+      <p>New-connection and move-in orders traverse Origin's CRM, SAP, MyConnect, and network-partner systems — the exact pattern where Apromore-mined variants have produced 30–40% cycle-time reduction at peer utilities. Mining reveals which order paths hit hand-off dead-time between Origin and distribution networks (Powercor, Ausgrid, Endeavour). This is a natural wedge to expand the existing Data Cloud VPP consolidation POC [Slack] into MyConnect and Origin Zero. Metric moved: order-to-live-supply days, first-time-right connection %, avoided truck-rolls.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce (CRM), SAP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Retail+Operations+Origin+Energy">Head of Retail Operations</a></p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Field Service &amp; Work-Order Mining (Network Operations)</summary>
+    <div class="use-case-body">
+      <p>Origin publicly described automating manual network-ops tasks with AI-driven Automated Quality Management and framing AI as a "digital co-worker" [Web, Downstream26]. That story needs an underlying event-log foundation: Apromore mines the work-order lifecycle from dispatch through completion, quality inspection, and rework — surfacing where the AI agents will actually deliver P&amp;L impact vs. cosmetic wins. Marlon Dumas confirmed 3-month event log is the recommended minimum for field-service mining [Slack]. Metric moved: mean time to complete, rework rate, safety/quality NCR rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ServiceNow, SAP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Network+Operations+Origin+Energy">Head of Network Operations</a></p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Complaints &amp; Hardship Handling — AER Conformance</summary>
+    <div class="use-case-body">
+      <p>Australian energy retailers operate under strict AER Retail Law obligations for hardship, disconnection-of-last-resort, and complaint SLAs. Apromore's conformance-checking engine compares Origin's designed process to the actual event trail from Service Cloud + case data — instantly showing where hardship cases skip mandatory checkpoints or breach timing rules. This is Compliance-Center wedge territory: it protects Origin against AER enforcement action while feeding Agentforce Service agents cleaner playbooks. Metric moved: AER breach exposure, hardship-case cycle time, complaint recurrence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Care+Origin+Energy">Head of Customer Care &amp; Compliance</a></p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Procure-to-Pay &amp; Contractor Onboarding for Energy Transition Programs</summary>
+    <div class="use-case-body">
+      <p>Origin's Origin Zero transition portfolio (solar, VPP, batteries, EV) has driven a wave of new contractors, PO variants, and payment-cycle exceptions running through SAP. Apromore mines the P2P event log to expose maverick spend, invoice-block rework, and contractor-onboarding delays that slow the very transition programs Origin is publicly betting on. This aligns with the Origin Zero Assurance opp currently in stage 01 and gives that opp a tangible scope. Metric moved: invoice-cycle-time, on-time payment %, PO-to-payment exception rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP, MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=CFO+Origin+Energy">CFO / Head of Origin Zero Assurance</a></p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Celonis, Signavio, ARIS, ABBYY, ServiceNow-ProcessMining, Appian, UiPath, or Power Automate mentions found tied to Origin Energy in Slack or public sources — the field is uncontested and Origin is already positioned internally as an Apromore reference story alongside ANZ Bank and Westpac [<a href="https://salesforce.enterprise.slack.com/archives/C030RV8F761/p1776988785197149">Slack, Apromore ANZ Enablement, 23 Apr 2026</a>].</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

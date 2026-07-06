@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crown Melbourne Limited — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Crown Melbourne Limited</h1>
+  <div class="snapshot">
+    <p><strong>Travel, Transportation &amp; Hospitality, Casino &amp; Integrated Resort</strong></p>
+    <p><strong>Revenue:</strong> ~A$2.6B &nbsp;|&nbsp; <strong>Employees:</strong> ~11,700 &nbsp;|&nbsp; <strong>HQ:</strong> Southbank, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> Crown Towers Melbourne, Crown Metropol, Crown Promenade, Crown Casino, Crown Aspinalls (UK)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Marketing Cloud (Core), Marketing Cloud Personalization (MCP — under termination review), Signature Success (in-flight)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Bally's / IGT casino management system, Opera PMS (hotel), Oracle Micros F&amp;B POS, SYCO / Bright Path AML surveillance — <em>field verify with Angie Kalas</em></p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> SO - Crown Melbourne - Signature Success MC/Core (<a href="https://org62.my.salesforce.com/006ed00000Kq2gYAAR">$215k</a>) &nbsp;|&nbsp; Crown - DC4CRM (<a href="https://org62.my.salesforce.com/006ed000007hVm6AAE">Data Cloud discovery</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GLNP78RX">Angie Kalas</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">72/100</span> — T2 Develop</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">Post-Royal-Commission Special Manager oversight + A$450M AUSTRAC penalty — regulator-mandated remediation.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Blackstone-led operational reset since 2022, active Data Cloud (DC4CRM) discovery, Signature Success in-flight.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>12/15</td><td class="cat-green">AML/KYC rework, VIP host workflows, hotel-to-gaming guest handoffs, EGM cash-cage reconciliation all under scrutiny.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>10/15</td><td class="cat-orange">Hospitality is a secondary AFPI vertical, but ANZ launch OU + Melbourne-local Apromore team make it strategic.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>13/20</td><td class="cat-orange">Chief Transformation Officer, Chief Risk / Compliance Officer, CIO reachable via Angie Kalas — sponsor not yet named.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>7/12</td><td class="cat-orange">Marketing Cloud is anchor; MCP under termination review; no Sales/Service Cloud footprint yet.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>6/12</td><td class="cat-orange">Casino management system + Opera PMS emit logs but access is highly controlled; AUSTRAC data segregated.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Crown Melbourne Limited by mining the AML/KYC surveillance workflow, VIP host lifecycle, and integrated hotel-casino guest journey to prove remediation effectiveness to the Special Manager and AUSTRAC, cut compliance review cycle time, and quantify the operational lift from the Data Cloud rollout — turning regulator-mandated spend into measurable margin.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. AML/KYC Surveillance &amp; Suspicious Matter Reporting</summary>
+    <div class="use-case-body">
+      <p>Crown Melbourne operates under Special Manager oversight and a 2023 A$450M AUSTRAC undertaking that requires continuous evidence of AML/KYC uplift. The current flow — alert generation, EDD triage, SMR filing, Board Risk Committee reporting — spans multiple surveillance tools and manual case queues with high rework. Mining the alert-to-SMR lifecycle exposes where alerts stall, where false positives dominate, and where analyst discretion diverges from policy. AFPI plus Agentforce Operations orchestrate the deterministic branches and hand exceptions to human analysts with the full evidence pack. Target metric: alert-to-SMR cycle time and Board-reportable variance to policy.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SYCO/Bright Path AML surveillance, Salesforce Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Risk+Officer+Crown+Melbourne">Chief Risk &amp; Compliance Officer</a> (Chief Risk &amp; Compliance Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. VIP Host &amp; Premium Guest Lifecycle</summary>
+    <div class="use-case-body">
+      <p>Since the exit of junket operators post-Royal-Commission, Crown's premium-play model has shifted to direct VIP host management with tightened source-of-funds checks. The lifecycle — identification, KYC clearance, credit setup, complimentary services, gaming activity, review — is fragmented across CMS, PMS, and Marketing Cloud. Mining the process shows where high-value guests wait for approvals, where hosts free-lance around policy, and where recognition breaks between properties. AFPI plus Marketing Cloud can prove that responsible-gambling controls are working without degrading guest experience. Target metric: VIP onboarding cycle time and per-guest RG-touchpoint compliance.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Bally's/IGT casino management system, Salesforce Marketing Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Customer+Officer+Crown+Resorts">Chief Customer Officer</a> (Chief Customer Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Integrated Hotel-to-Casino Guest Journey (Crown Towers, Metropol, Promenade)</summary>
+    <div class="use-case-body">
+      <p>Crown Melbourne is an integrated resort — three hotels, 40+ restaurants and bars, retail, and the casino floor share the same guest. Today the guest journey is stitched together by loyalty (Crown Rewards) but the operational handoffs — check-in, restaurant reservation, gaming session, cage transaction, check-out — live in different systems. Mining the multi-touchpoint journey shows which sequences drive repeat premium spend and which cause friction (queueing at the cage, dining conflicts, room upgrades that never arrive). Apromore quantifies the guest-experience payoff of a Data Cloud unified profile. Target metric: multi-touchpoint conversion and top-decile guest retention.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Opera PMS, Salesforce Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Operating+Officer+Crown+Melbourne">Chief Operating Officer</a> (Chief Operating Officer, Crown Melbourne)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Cash-Cage &amp; Gaming Machine Reconciliation</summary>
+    <div class="use-case-body">
+      <p>Crown operates ~2,600 electronic gaming machines and hundreds of table games — cash and TITO tickets flow between machines, cage, count room, and treasury under strict VGCCC and AUSTRAC controls. Reconciliation exceptions are investigated manually by cage operations and internal audit. Mining the cash-lifecycle event log identifies where variances repeat, which machines drive the most exceptions, and where controls can be automated versus require human review. AFPI plus Agentforce Operations turn each variance into an evidenced case. Target metric: reconciliation cycle time and audit-reportable exception rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Bally's/IGT casino management system, TITO ticket system</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Financial+Officer+Crown+Resorts">Chief Financial Officer</a> (Chief Financial Officer, Crown Resorts)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Employee Vetting, Licensing &amp; Ongoing Suitability</summary>
+    <div class="use-case-body">
+      <p>Every Crown Melbourne employee touching the gaming floor requires a Special Employee Licence from the VGCCC, plus ongoing suitability monitoring — a workload multiplied by ~11,700 staff and continuous churn. The vetting process spans HR, People &amp; Culture, Legal, and the regulator, with document rework and re-submission a common drag. Mining the license lifecycle shows where submissions get bounced, which document types cause the most rework, and where compliant staff sit idle awaiting clearance. AFPI plus Agentforce Operations pre-flight submissions and coordinate handoffs. Target metric: time-to-badge and license-review pass-rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> HR / Workday, Salesforce Platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+People+Officer+Crown+Resorts">Chief People &amp; Culture Officer</a> (Chief People &amp; Culture Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate mentions tied to Crown Melbourne surfaced in Slack or the ANZ SE community threads. Field verify with Angie Kalas whether any process-mining tooling was scoped as part of the Special-Manager remediation program.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

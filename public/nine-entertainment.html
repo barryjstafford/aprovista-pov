@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nine Entertainment Co. Holdings Limited — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Nine Entertainment Co. Holdings Limited</h1>
+  <div class="snapshot">
+    <p><strong>Communications &amp; Media, Broadcasting &amp; Digital Publishing</strong></p>
+    <p><strong>Revenue:</strong> A$2.62B (FY24) &nbsp;|&nbsp; <strong>Employees:</strong> ~4,700 &nbsp;|&nbsp; <strong>HQ:</strong> North Sydney, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> Nine Network (Channel 9, 9Now), Stan, The Sydney Morning Herald, The Age, Australian Financial Review</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Media Cloud, Data Cloud, Service Cloud, Experience Cloud, Sales Cloud, Salesforce Industries (CMT), Agentforce (Adsales pilot)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> AWS (in-flight migration), Google Ad Manager, Freewheel / Operative (broadcast ad ops); ERP not confirmed [field verify with Angie Kalas]</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Nine Entertainment - Apromore POC (<a href="https://org62.my.salesforce.com/006ed00000dNsKbAAK">$25k</a>) &nbsp;|&nbsp; Nine - Agentforce for Adsales (<a href="https://org62.my.salesforce.com/006ed00000KufzRAAR">$1.13M</a>) &nbsp;|&nbsp; Nine Entertainment - QMS Acquisition, 150 Media Cloud users (<a href="https://org62.my.salesforce.com/006ed00000UiplVAAR">$600k</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GLNP78RX">Angie Kalas</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">81/100</span> &mdash; T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Media/Data/Service/Sales Cloud + Industries CMT; multi-year strategic account.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Active Apromore POC ($25k) in Stage 02 with clear expansion path.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">$1.13M Agentforce for Adsales in-flight; QMS integration + AWS migration underway.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">$850M QMS acquisition + Radio/NBN/Domain divestments = major integration &amp; carve-out load.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>15/20</td><td class="cat-orange">POC sponsor engaged via Angie Kalas; economic buyer above COO/CFO not yet named.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">ASX-listed with editorial/broadcast oversight, but no SOX/KYC/HIPAA-grade driver.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>10/15</td><td class="cat-orange">Media &amp; Broadcasting is a growing but not top-tier AFPI vertical (vs. FSI/Mfg).</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Nine Entertainment Co. Holdings Limited by mining the post-QMS integration, order-to-cash for advertising, and Agentforce-for-Adsales agent handoffs to compress ad-sales cycle time, reduce manual reconciliation across TV/digital/OOH inventory, and de-risk a portfolio in active reshaping (QMS in, Radio/Domain/NBN out).</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Post-QMS Merger Order-to-Cash Harmonization (Broadcast + OOH)</summary>
+    <div class="use-case-body">
+      <p>Nine acquired QMS (outdoor advertising) for A$850M in early 2026, bringing a physical OOH inventory book alongside broadcast, publishing, and digital. Order-to-cash today runs across Nine's ad-ops stack (Operative/Freewheel) plus QMS's own OOH scheduling and billing systems &mdash; a classic post-M&A control gap. Mining the combined O2C flow surfaces revenue leakage, duplicate holds, and days-to-invoice drift that Finance cannot see from either standalone system. Metrics moved: DSO, invoice-accuracy rate, revenue-leakage %.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Operative, Salesforce Media Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Matt+Stanton+Nine+Entertainment">Matt Stanton</a> (CEO, ex-CFO &mdash; owns integration synergy)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Agentforce-for-Adsales Agent Handoff Optimization</summary>
+    <div class="use-case-body">
+      <p>Nine has a $1.13M Agentforce for Adsales opportunity in Stage 03 (Validating Benefits &amp; Value) &mdash; an obvious co-sell wedge for AFPI. Once agents are handling triage, media-plan generation, and quote turnaround, the business needs conformance checks: which conversations hand off to human sellers, where deals stall, and whether the agent shortens the RFP-to-order cycle vs. control. Mining the Agentforce event log against CRM stage transitions gives Nine (and the Salesforce account team) hard proof of agent ROI. Metrics moved: agent deflection rate, RFP-to-order cycle time, seller productivity.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce, Salesforce Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Michael+Stephenson+Nine+Entertainment">Michael Stephenson</a> (Chief Sales Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Cross-Platform Ad Inventory-to-Delivery Reconciliation</summary>
+    <div class="use-case-body">
+      <p>A single advertiser campaign at Nine spans linear TV, 9Now streaming, publishing (SMH/Age/AFR), and now QMS OOH &mdash; each with its own sell-side stack and delivery logs. Ad-ops teams manually reconcile "sold vs. delivered vs. billed" impressions and spots, and make-goods are stitched together in spreadsheets. Mining the delivery flow across ad servers, CDN logs, and billing surfaces the exact points where impressions are lost or under-delivered before the client escalates. Metrics moved: make-good %, revenue recognition speed, campaign under-delivery rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Google Ad Manager, Freewheel</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ben+Campbell+Nine+Entertainment">Ben Campbell</a> (Chief Digital Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Divestiture Carve-Out &amp; TSA Exit (Radio, NBN TV, Domain)</summary>
+    <div class="use-case-body">
+      <p>In 2026 Nine is exiting Radio (to the Laundy family), NBN Television (to WIN), and its 60% Domain stake (to CoStar) &mdash; three simultaneous carve-outs, each with Transition Services Agreements (TSAs) covering finance, HR, and IT processes. Every day a TSA runs longer than plan is a direct P&amp;L hit. Process mining the shared services flows (payroll, AP, IT ticketing, license entitlements) tells the CFO exactly which entity is still consuming shared capacity and where the carve-out cutovers can safely land. Metrics moved: TSA exit-days, shared-service unit cost, stranded-cost %.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ServiceNow, Workday (finance/HR)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Matt+Stanton+Nine+Entertainment">Matt Stanton</a> (CEO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Subscriber Lifecycle Mining Across Stan, 9Now &amp; Publishing Paywalls</summary>
+    <div class="use-case-body">
+      <p>Nine runs three distinct subscription/registration flows &mdash; Stan (SVOD), 9Now (AVOD with registration), and publishing paywalls (SMH/Age/AFR) &mdash; all landing consented data into Data Cloud. Business questions like "where do churn-risk subscribers actually drop off?" and "which retention offer path shortens win-back?" require mining the real customer-journey event log, not just aggregate funnels. Apromore on top of Data Cloud gives the growth team variant analysis and conformance in one no-code view. Metrics moved: churn rate, LTV, win-back conversion.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Data Cloud, Salesforce Media Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Martin+Kugeler+Nine+Entertainment">Martin Kugeler</a> (MD, Stan)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Celonis, Signavio, ARIS, ABBYY, ServiceNow, Appian, UiPath, or Power Automate mentions tied to Nine Entertainment surfaced in Slack or web signals as of July 2026 &mdash; the active Apromore POC ($25k, Stage 02) is the only process-mining engagement on record.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>
