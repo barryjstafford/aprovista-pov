@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Westernport Region Water Corporation — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Westernport Region Water Corporation</h1>
+  <div class="snapshot">
+    <p><strong>Utilities, Water &amp; Wastewater</strong></p>
+    <p><strong>Revenue:</strong> ~AUD $11M &nbsp;|&nbsp; <strong>Employees:</strong> ~62 &nbsp;|&nbsp; <strong>HQ:</strong> Newhaven, VIC, Australia</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (established Org62 account since 2014; active Apromore opps in Stage 2)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Dona Tantirimudalige, Managing Director] &mdash; typical VIC water-corp stack includes SCADA, GIS (Esri), a customer billing system, and asset/works management (Maximo or equivalent), but none are Org62/Slack confirmed.</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Westernport Water - Apromore (<a href="https://org62.my.salesforce.com/006ed00000ZoJL4AAN">$45k</a>) &nbsp;|&nbsp; Westernport Water - NZC Growth - Upgrade (<a href="https://org62.my.salesforce.com/006ed00000a1TjBAAU">$45k</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U039KBRTJN4">Arash Khorasani</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t3">52/100</span> &mdash; T3 Nurture</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Water utility = priority Utilities vertical (meter-to-cash, field service, connections).</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>10/12</td><td class="cat-green">Long-standing Org62 account with named AE; two active Apromore opps in Stage 2.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-green">ESC price submission, EPA, Safe Drinking Water Act &mdash; heavy regulated reporting burden.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>7/12</td><td class="cat-orange">Corporate Plan 2025-30 signals digital &amp; Net-Zero uplift, but no CoE or AI mandate visible.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>8/15</td><td class="cat-orange">Small staff amplifies swivel-chair effort across billing, works &amp; capital delivery.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>1/6</td><td class="cat-red">Revenue base ~$11M caps discretionary spend; open opps are ~$45k, well below $200k ACV threshold.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>3/12</td><td class="cat-red">No SAP/Oracle/ServiceNow confirmed; event-log minability unproven at this scale.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Westernport Region Water Corporation by mining meter-to-cash, field work-order execution, and regulator reporting cycles so a lean 62-person team can shrink billing exceptions, cut truck-rolls per fault, and evidence Safe-Drinking-Water &amp; ESC compliance without adding headcount.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Meter-to-Cash &amp; Revenue Leakage</summary>
+    <div class="use-case-body">
+      <p>Reads, estimates, billing exceptions, and dunning span the billing system, the meter data platform, and manual customer-service touches. For a small retailer any un-billed volume or write-off is material to the bottom line. AFPI would mine the full read-to-invoice-to-payment path to size revenue leakage and rework, then automate the top 3 exception patterns with Agentforce Operations. Metric moved: revenue recovered per 1,000 accounts and days-sales-outstanding.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Customer Billing System, Meter Data Management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Gareth+Kennedy+Westernport+Water">Gareth Kennedy</a> (General Manager, Corporate and Customer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Field Work-Order &amp; Fault Response</summary>
+    <div class="use-case-body">
+      <p>Mains bursts, sewer chokes, water-quality callouts and planned maintenance flow across the works management system, GIS, and mobile crews. Repeat truck-rolls and unclosed jobs inflate opex on a stretched crew that covers Phillip Island plus the mainland district. Mining the dispatch-to-close path exposes rework loops and idle time by asset class. Metric moved: first-time-fix rate and average job cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Works/Asset Management, GIS</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=David+Girdwood+Westernport+Water">David Girdwood</a> (General Manager, Assets and Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Capital Program &amp; Renewals Delivery</summary>
+    <div class="use-case-body">
+      <p>The 2025-30 corporate plan includes water-meter replacement, sewer pump-station upgrades, water-quality improvement, and renewable energy generation &mdash; a heavy capital slate for a small utility. Mining the plan-award-deliver-commission path across finance, procurement, and asset systems shows where schedule slip and change-orders originate. Metric moved: capex delivered on plan, and change-order rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial/ERP, Procurement</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kathy+Hawke+Westernport+Water">Kathy Hawke</a> (Executive Manager Finance / CFO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Regulator &amp; Safe-Drinking-Water Compliance Evidence</summary>
+    <div class="use-case-body">
+      <p>ESC price-submission monitoring, EPA reporting, and Safe Drinking Water Act audit responses require assembling event evidence from lab, SCADA, works, and customer systems. Today this is a manual, per-request scramble. Compliance-Center is the wedge: a re-usable mined process view of every regulated workflow, ready for on-demand audit. Metric moved: audit response time and open non-conformance count.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> LIMS, SCADA</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Dona+Tantirimudalige+Westernport+Water">Dona Tantirimudalige</a> (Managing Director)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. New Connections &amp; Developer Servicing</summary>
+    <div class="use-case-body">
+      <p>Phillip Island growth and district development drive applications for new connections, servicing agreements, and account setup. The handoffs between customer, engineering, and billing are prone to stall &mdash; particularly around approval SLAs. Mining exposes where applications age and which handoffs cause resubmits. Metric moved: application-to-connection cycle time and % straight-through applications.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Customer Billing System, Works/Asset Management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Gareth+Kennedy+Westernport+Water">Gareth Kennedy</a> (General Manager, Corporate and Customer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent mentions of Celonis, ARIS, Signavio, ABBYY, ServiceNow (process mining), Appian, UiPath, or Power Automate tied to Westernport Water in Slack, web news, or public tenders. The 2023 Field Service opp went dead &mdash; no evidence a rival process/automation vendor won the ground.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

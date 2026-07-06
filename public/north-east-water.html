@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>North East Region Water Corporation — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>North East Region Water Corporation</h1>
+  <div class="snapshot">
+    <p><strong>Public Sector, Water Utility</strong></p>
+    <p><strong>Revenue:</strong> A$47M &nbsp;|&nbsp; <strong>Employees:</strong> ~200 &nbsp;|&nbsp; <strong>HQ:</strong> Wodonga, Victoria, Australia</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Service Cloud (Call Center), Platform, Data Cloud, Marketing Cloud (ExactTarget), Privacy Center, Security Center</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Craig Lindley, ICT Program Director] — expected: SCADA, GIS, Gentrack/Fathom billing, ERP</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> North East Water - Apromore (<a href="https://org62.my.salesforce.com/006ed00000da8JyAAI">$80k</a>) &nbsp;·&nbsp; NEW Platform + Service Cloud Renewal (<a href="https://org62.my.salesforce.com/006ed00000FtaqGAAR">$508k</a>) &nbsp;·&nbsp; NEW Security Center (<a href="https://org62.my.salesforce.com/006ed00000QpTozAAF">$10k</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U039KBRTJN4">Arash Khorasani</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Service Cloud + Data Cloud)</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">74/100</span> — T2 Develop</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Salesforce Footprint & Relationship</td><td>11/12</td><td class="cat-green">Multi-cloud tenant with $508k Platform renewal + Data Cloud already live.</td></tr>
+        <tr><td>Transformation & Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Attended Melbourne PI Campfire Jun 2026; $80k Apromore opp already in Stage 2.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>12/15</td><td class="cat-green">Victorian water utility — priority E&amp;U vertical with ESC regulation cycle.</td></tr>
+        <tr><td>Buyer & Champion Fit</td><td>15/20</td><td class="cat-orange">ICT Program Director, GM Corporate, and Business Transformation Lead engaged.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>11/15</td><td class="cat-orange">Price-submission workload, capital works throughput, customer-service backlogs.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Commercial Timing & Deal Viability</td><td>4/6</td><td class="cat-red">Active Apromore opp at $80k — below $200k ACV threshold; -4 red-flag deduction.</td></tr>
+        <tr><td>Systems & Event-Log Readiness</td><td>8/12</td><td class="cat-orange">SFDC event data solid; SCADA/GIS/billing minability not yet verified.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help North East Region Water Corporation by mining Service Cloud, billing and capital-works event data to quantify friction across customer-to-cash, price-submission and asset-maintenance workflows — accelerating the active $80k Apromore engagement into an ESC-cycle-aligned enterprise program that also de-risks the $508k Salesforce renewal.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Customer-to-Cash Cycle Time (Move-in → First Bill → Payment)</summary>
+    <div class="use-case-body">
+      <p>NEW serves ~120k customers across 39 north-east Victorian localities on a Service Cloud + billing stack that generates thousands of daily events. Rework loops between call-centre agents, meter reads and billing exceptions inflate first-bill lag and drive avoidable inbound contacts. AFPI mines Service Cloud case events plus billing to reveal the exact steps where customers stall or churn calls. Target: 20-30% reduction in cost-to-serve per active connection and measurable NPS lift.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Billing System (Gentrack/Fathom TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Marni+Jones+North+East+Water">Marni Jones</a> (General Manager Customers, Community and Culture)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. ESC Price-Submission &amp; Regulatory Reporting Workflow</summary>
+    <div class="use-case-body">
+      <p>Victorian water corporations submit five-yearly price determinations to the Essential Services Commission — a heavyweight, cross-functional cycle covering forecasting, PREMO customer outcomes, capex justification and evidence packs. Mining the end-to-end submission workflow surfaces where iterations stall between finance, engineering and executive review. AFPI shortens the next Water Plan cycle and creates an auditable trail for ESC scrutiny. Target: 15-25% reduction in cycle time to submission-ready.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Platform, SharePoint / M365</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Anthony+Hernan+North+East+Water">Anthony Hernan</a> (GM Corporate)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Capital Works &amp; Asset Renewal Delivery</summary>
+    <div class="use-case-body">
+      <p>Water and sewer infrastructure renewal across 39 localities is a multi-year capital program with hand-offs between planning, procurement, contractors and asset registers. Deadlines slip when approvals loop and RFI's queue. AFPI mines project-management and works-order events to expose bottleneck stages and contractor variance. Target: 10-15% shorter time-to-commissioning and improved capex forecast accuracy.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Works Management System, ERP/Finance (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kevin+Freeman+North+East+Water">Kevin Freeman</a> (Executive Manager - Planning &amp; Infrastructure)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Field-Service Dispatch &amp; SCADA Exception Response</summary>
+    <div class="use-case-body">
+      <p>Water-main breaks, sewer overflows and treatment-plant alarms generate SCADA events that must translate into field crew dispatch within SLA. Response variance across the Murray and Central operations zones drives customer complaints and regulatory attention. AFPI mines SCADA alerts joined with dispatch and completion events to reveal where minutes are lost. Target: 20% reduction in mean-time-to-restore and fewer SLA breaches on Priority-1 events.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SCADA (TBD), Field-Service Dispatch</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=John+Day+North+East+Water">John Day</a> (General Manager Environment, Systems, and Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Customer Hardship &amp; Bill-Assistance Case Handling</summary>
+    <div class="use-case-body">
+      <p>Regional Victorian water customers face material affordability pressure; ESC customer-outcome commitments make hardship handling a regulated process. Mining the hardship workflow across Service Cloud cases, payment-plan status and community engagement touchpoints surfaces where vulnerable customers fall through gaps. AFPI improves both compliance and customer trust — a direct PREMO metric input. Target: 25% faster hardship-plan activation and lower disconnection-warning rates.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Marketing Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Debbie+Mackinlay+North+East+Water">Debbie Mackinlay</a> (Manager Customer Engagement)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Celonis, Signavio, ServiceNow, UiPath or ABBYY mentions tied to North East Water in Slack or web signals — the Apromore Melbourne PI Campfire (Jun 2026) landed uncontested with NEW alongside Powercor, South East Water, Momentum and Vicwater.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

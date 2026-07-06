@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TripADeal Pty Ltd — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>TripADeal Pty Ltd</h1>
+  <div class="snapshot">
+    <p><strong>Travel, Transportation &amp; Hospitality, Online Travel Retail</strong></p>
+    <p><strong>Revenue:</strong> ~A$90M &nbsp;|&nbsp; <strong>Employees:</strong> ~150 &nbsp;|&nbsp; <strong>HQ:</strong> Byron Bay, NSW, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> PhoneAFlight</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Full CRM Platform), Service Cloud (Customer Portal), Marketing Cloud (ExactTarget), Marketing Cloud Personalization, Data Cloud (CDP), Security Center</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Adam+Bennett+TripADeal">Adam Bennett</a>, CIO]</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Trip A Deal – Apromore (<a href="https://org62.my.salesforce.com/006ed00000ebqocAAA">$95k</a>) &nbsp;|&nbsp; Trip A Deal – Agentforce + Data 360 (<a href="https://org62.my.salesforce.com/006ed00000WsmhxAAB">$100k</a>) &nbsp;|&nbsp; MC – Personalisation Consumption Uplift (<a href="https://org62.my.salesforce.com/006ed00000VXkAHAA1">$112k</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U09MEGGAJGL">Jodi Smith</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Agentforce + Data 360)</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud SFDC estate (Sales, Service, MC, Data Cloud) with $990k renewal in flight.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Active Agentforce + Data 360 opp; live Apromore opp already qualified.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Apromore opp at Stage 02 with $95k; Agentforce opp confirms budget appetite.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>17/20</td><td class="cat-green">CEO, CFO, CTO/CIO, Head of Sales and Head of Product all reachable in Org62.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>12/15</td><td class="cat-green">Post-Qantas integration + high-volume booking-to-fulfillment ops drive rework and cycle-time pain.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>3/8</td><td class="cat-orange">Consumer travel (ACL, PCI) but no heavy regulatory regime like KYC/SOX to force urgency.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>7/12</td><td class="cat-orange">Rich SFDC event logs, but back-office booking/GDS systems not confirmed — data-readiness gap.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help TripADeal Pty Ltd by mining its booking-to-fulfillment, service-case, and marketing-to-cash journeys across Sales, Service, and Marketing Cloud to compress cycle time, cut rework in post-Qantas-integration processes, and prove ROI on the in-flight Agentforce + Data 360 investment through measurable process lift.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Booking-to-Fulfillment Cycle Time</summary>
+    <div class="use-case-body">
+      <p>TripADeal's core product is packaged travel deals combining flights, tours, and accommodation — every booking touches multiple suppliers, GDS lookups, and finance confirmations. Mining the end-to-end lead-to-booked-trip flow will expose where manual supplier confirmations and payment holds add days to fulfillment. AFPI can quantify variants that quietly hit escalation queues and cost margin. Target metric: reduce median booking-to-confirmation cycle by 30%.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Maite+De+Hedervary+TripADeal">Maite De Hedervary</a> (Head of Product)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Post-Qantas Integration Order-to-Cash Harmonization</summary>
+    <div class="use-case-body">
+      <p>Since Qantas' 2022 majority acquisition, TripADeal has been aligning finance, loyalty, and reporting with the parent — a classic post-M&amp;A process fragmentation pattern. Mining O2C across both entities' systems will surface duplicate steps, reconciliation loops, and hand-off delays between TripADeal Byron Bay operations and Qantas Group finance. This is the wedge that unlocks a broader Qantas-Group Apromore footprint. Target metric: cut month-end close variance by 40%.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Finance ERP (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chris+Cowan+TripADeal">Chris Cowan</a> (CFO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Service Case &amp; Customer Portal Deflection</summary>
+    <div class="use-case-body">
+      <p>The active $270k Marketing Cloud renewal and Customer Portal footprint mean case volume drives cost. Mining case-to-resolution paths in Service Cloud will identify reopen loops, low-value repetitive intents, and where the new Agentforce agent can be deployed with confidence. This directly reinforces the $100k Agentforce + Data 360 opp on the table. Target metric: 25% agent-assisted deflection on repetitive booking-change cases.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Shannon+Knapp+TripADeal">Shannon Knapp</a> (Customer Operations &amp; Logistics Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Marketing Cloud Campaign-to-Conversion Journey</summary>
+    <div class="use-case-body">
+      <p>TripADeal is an inbound-marketing-heavy business — Marketing Cloud, Personalization and CDP are all live or in-flight. Mining actual campaign-to-booking journeys (not the designed ones) will surface where email/SMS cohorts stall, which offers fatigue, and which segments convert efficiently. Pairs directly with the $112k Personalisation Consumption Uplift opp already in Stage 04. Target metric: lift conversion rate on repeat-buyer journeys by 15%.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Lucy+Walgers+TripADeal">Lucy Walgers</a> (Marketing Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Supplier Contracting &amp; Partnership Onboarding</summary>
+    <div class="use-case-body">
+      <p>Every packaged deal depends on airline, hotel, and tour-operator contracts negotiated by the Contracting &amp; Partnerships team. Mining the contract-request-to-live-inventory process will expose approval bottlenecks and rework in ratesheet ingestion — a hidden brake on time-to-market for new destinations. AFPI can benchmark and standardize the workflow. Target metric: 40% reduction in supplier-onboarding cycle.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Contracting workflow (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rebecca+Carroll+TripADeal">Rebecca Carroll</a> (Contracting &amp; Partnerships Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent competitor mentions found in Slack or web signals tied specifically to TripADeal; Celonis remains the market incumbent to displace across ANZ travel &amp; hospitality but has no confirmed footprint here.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

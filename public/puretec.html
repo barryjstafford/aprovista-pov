@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puretec Group Pty Ltd — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Puretec Group Pty Ltd</h1>
+  <div class="snapshot">
+    <p><strong>Manufacturing, Water Filtration &amp; Treatment Equipment</strong></p>
+    <p><strong>Revenue:</strong> ~AUD $10M (est.) &nbsp;|&nbsp; <strong>Employees:</strong> ~117 &nbsp;|&nbsp; <strong>HQ:</strong> Lonsdale, South Australia, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> Puretec Pty Ltd (AU), Puretec New Zealand</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Consumer Goods Cloud, Marketing Cloud Advanced, Data Cloud, MuleSoft, Slack, Pardot / Account Engagement</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> NetSuite ERP, Google Workspace (migrating to Microsoft 365), WhatsApp / Google Chat (order comms) <em>[Slack]</em></p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Puretec Group - Apromore (<a href="https://org62.my.salesforce.com/006ed00000eF5RlAAK">$100k</a>) | Sales + Service Automations + Efficiencies (<a href="https://org62.my.salesforce.com/006ed00000W3djzAAB">$108k</a>) | MC ExactTarget + Platform + Pardot Renewal (<a href="https://org62.my.salesforce.com/0063y00001AiSldAAF">$134k</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U06MAS1NWLQ">Maddison Schmid</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (MuleSoft + Data Cloud)</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">67/100</span> — T2 Develop</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Wall-to-wall SF: Sales, Service, CG Cloud, MC Advanced, Data Cloud, MuleSoft, Slack — active $100k Apromore opp.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">NetSuite-SF integration 9 mo late; 90+ customizations vs peer norm of 9-10; data-trust issues force hybrid manual workflows.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-green">Just 10x'd martech spend (MC Adv + Data Cloud); AI conversations post-Dreamforce; migrating Google→Microsoft.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-green">NetSuite + Salesforce + MuleSoft = clean event-log surface for O2C and service mining; 4,000+ SKUs across systems.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">CEO Russell Hornsey and MD Michael Hornsey engaged; IT lead Wakas (10 mo tenure); no dedicated CoE yet.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>3/6</td><td class="cat-orange">$100k Apromore opp is below the $200k ACV bar; family-owned SMB — budget discipline high, martech just absorbed 10x lift.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>2/8</td><td class="cat-red">Consumer-goods water filtration — no SOX/HIPAA/NERC driver; compliance is a weak wedge here.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Puretec Group Pty Ltd by mining the NetSuite ↔ Salesforce order-to-cash chain and Consumer Goods Cloud plumber-network service flow to surface the exact rework loops behind their data-trust issues, unlocking the 3.5-days-lost-to-admin the sales team is bleeding and de-risking the martech + Data Cloud investment they just made.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. NetSuite ↔ Salesforce Order-to-Cash Reconciliation</summary>
+    <div class="use-case-body">
+      <p>Puretec's 9-month NetSuite-Salesforce integration is still forcing hybrid manual workflows — staff can't trust SF order data, so they double-check in NetSuite [Slack]. Apromore mines the actual O2C event log across both systems to expose sync failures, duplicate keys, and manual reconciliation loops that MuleSoft alone can't see. Metric moved: eliminate manual reconciliation touches per order and cut order-to-invoice cycle time by 30-40%.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> NetSuite, Salesforce Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Brad+Maslen+Puretec">Brad Maslen</a> (Chief Financial Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Consumer Goods Cloud Field Sales Effectiveness</summary>
+    <div class="use-case-body">
+      <p>Puretec's sales reps get 3.5 days of selling time per week — the rest is admin, meetings, and manual info-gathering from customer care before plumber visits [Slack]. Apromore mines the CG Cloud + Service Cloud event log to map the true pre-visit intelligence flow: what reps do vs. what the mobile app was designed for. Metric moved: recover 1-1.5 selling days per rep per week and lift visit-to-order conversion.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Consumer Goods Cloud, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=William+Archer+Puretec">William Archer</a> (National Sales Manager | Australia)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Plumber &amp; Distributor Loyalty Engagement Path</summary>
+    <div class="use-case-body">
+      <p>Just closed a Marketing Cloud Advanced + Data Cloud deal powering loyalty across the plumber network [Slack] — Puretec now needs to prove ROI on a 10x martech lift. Apromore mines the Data Cloud engagement events tied to plumber orders and cartridge-replacement cycles to show which journeys actually drive repurchase vs. which are noise. Metric moved: increase cartridge-replacement attach rate at the 12-month mark and lift plumber lifetime value.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Scott+Marshall+Puretec">Scott Marshall</a> (Senior Manager - Marketing &amp; Brand)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Customer Care Case-Resolution &amp; Warranty Rework</summary>
+    <div class="use-case-body">
+      <p>Data-trust issues mean customer care agents can't rely on Salesforce for last-order/delivery context, so they field manual inbound and rework cases [Slack]. Apromore mines Service Cloud case flows against install-base and delivery events to expose which case categories loop back for rework and which SKUs generate disproportionate warranty volume across the 4,000+ SKU catalog. Metric moved: reduce average handle time and warranty-driven service cost per case.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, NetSuite</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Megan+Russell+Puretec">Megan Russell</a> (Customer Service Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. MuleSoft Integration Health &amp; Data-Quality Feedback Loop</summary>
+    <div class="use-case-body">
+      <p>Puretec was "forced into MuleSoft without validation options" and integration issues have run 9+ months [Slack] — a classic case where the integration layer works but the process it enables doesn't. Apromore reads the MuleSoft API-invocation and event bus logs to show which integrations are actually being used, where retries and dead-letter events pile up, and which broken flows drive the hybrid-system workarounds. Metric moved: cut integration-related manual workarounds and shorten future integration validation cycles.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft, Salesforce Platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Wakas+Puretec">Wakas</a> (IT Lead)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent mentions of Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate tied to Puretec across Slack or web sources — clean competitive field for AFPI.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>
