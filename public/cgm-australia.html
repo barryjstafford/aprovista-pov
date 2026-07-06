@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CompuGroup Medical Australia — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Health Communication Network Pty Limited (CGM Australia)</h1>
+  <div class="snapshot">
+    <p><strong>Healthcare &amp; Life Sciences, Health IT Software</strong></p>
+    <p><strong>Revenue:</strong> ~A$120M (ANZ segment est.) &nbsp;|&nbsp; <strong>Employees:</strong> ~400 (ANZ) &nbsp;|&nbsp; <strong>HQ:</strong> St Leonards, Sydney, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> MedicalDirector, Health Communication Network, PracSoft, Bluechip (operating brands within CGM AU)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (small Org Extension in flight — footprint currently limited)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Giovanni Arcuri] — parent CGM SE runs SAP globally; AU stack likely includes SAP S/4, Microsoft 365, ServiceNow ITSM, and AWS for the MedicalDirector Helix cloud platform.</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> MedicalDirector - Org Extension (<a href="https://org62.my.salesforce.com/006ed00000FJbUfAAL">$100k</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G52YGDA9">Giovanni Arcuri</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">63/100</span> — T2 Develop</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Industry / Vertical Priority</td><td>12/15</td><td class="cat-green">Healthcare &amp; Life Sciences is a priority AFPI vertical; Health IT ISV variant is a strong sub-fit.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>11/15</td><td class="cat-orange">Post-Telstra-Health carve-out + Helix cloud migration create backlog, support and onboarding pain.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>8/12</td><td class="cat-orange">CVC PE stake (2025), CGM SE delisting, and ANZ reintegration drive fresh operating-model scrutiny.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>8/12</td><td class="cat-orange">SFDC, SAP at parent, plus SaaS product telemetry from Helix — event logs exist and are minable.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-orange">RACGP, ADHA, My Health Record and Australian Privacy Principles apply — audit surface is real.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>7/12</td><td class="cat-orange">Only a small $100k Org Extension in flight — footprint is early-stage, not enterprise-wide.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>3/6</td><td class="cat-red">Current opp is $100k, under the $200k ACV threshold — attach AFPI to a larger transformation.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Health Communication Network Pty Limited (CGM Australia) by mining the GP-practice onboarding, Helix cloud-migration and customer-support ticket-resolution processes to accelerate the post-Telstra-Health carve-out, unlock a repeatable path to a sub-A$1B ISV consolidation play, and give Giovanni Arcuri a data-backed wedge to expand beyond the current $100k Org Extension.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. GP Practice Onboarding &amp; Migration to Helix Cloud</summary>
+    <div class="use-case-body">
+      <p>CGM AU is actively migrating thousands of general practices off on-premise MedicalDirector Clinical/PracSoft to the cloud-native Helix platform. Every migration is a multi-week choreography of data extraction, patient-record reconciliation, PBS/Medicare re-registration, and clinician training — heavy on manual hand-offs. Apromore can mine the onboarding funnel end-to-end to expose which steps stall practices, which sales-region cohorts convert fastest, and where support engineers become the bottleneck. Metric: median days-to-live per practice and % of practices that abandon mid-migration.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Helix onboarding platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Operating+Officer+MedicalDirector+CGM">Chief Operating Officer, CGM Australia</a> (COO, CGM Australia)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Customer Support Ticket Resolution &amp; Reopen Rate</summary>
+    <div class="use-case-body">
+      <p>MedicalDirector supports ~23,000+ GP users and thousands of specialists — the volume of tier-1/2/3 tickets around scripting, PBS updates, and clinical workflow bugs is high. Slack signal shows CGM AU is standing up a new Service Cloud "Org Extension" opp precisely for this reason. Apromore can mine the ticket lifecycle to expose which categories reopen most, which agents drive fastest closure, and where triage adds days without value. Metric: first-contact resolution rate and % tickets reopened within 30 days.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, ServiceNow ITSM</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Support+MedicalDirector+CGM">Head of Customer Support, CGM AU</a> (Head of Customer Support)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Post-Carve-Out Order-to-Cash Harmonization</summary>
+    <div class="use-case-body">
+      <p>CGM acquired MedicalDirector from Telstra Health in 2022 and inherited a partially-integrated quote-to-cash stack: legacy billing, disparate CRM instances, and manual reconciliation with the CGM SE global ledger in SAP. Apromore can mine the full O2C process — quote → order → provision → invoice → cash — to expose which billing paths carry the most rework and where days-sales-outstanding hides. This is a natural pair to any MuleSoft or SAP-integration opportunity. Metric: DSO, invoice-error rate, and % of orders touching the manual reconciliation queue.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP S/4, Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=CFO+CGM+Australia+MedicalDirector">CFO, CGM Australia</a> (CFO, CGM AU)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Product Release &amp; Regulatory Compliance Cycle</summary>
+    <div class="use-case-body">
+      <p>Each MedicalDirector / PracSoft release must pass RACGP conformance, ADHA My Health Record certification, and PBS/Medicare rules changes on a fixed calendar. Slippage or defects have direct clinical-safety implications and audit exposure. Apromore can mine the release train — spec → build → test → certify → ship — to expose where certification steps queue and which release cohorts carry the most post-release hotfixes. Metric: cycle time from ADHA submission to certification and post-release defect rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Jira / Azure DevOps, Confluence</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Product+Officer+MedicalDirector+CGM">Chief Product Officer, CGM Australia</a> (CPO, CGM AU)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Renewal &amp; Expansion (Land-and-Expand for Helix)</summary>
+    <div class="use-case-body">
+      <p>The commercial motion for Helix is subscription with per-provider seats; renewals and specialist-module cross-sells are the primary growth vector. Today the renewal handoff between Success, Support and Sales is uneven, and expansion signals from product telemetry rarely reach the AE in time. Apromore can mine the renewal funnel plus product-usage events to expose which cohorts churn silently and which expansion signals convert. Metric: gross retention %, NRR, and win-rate on module-attach opportunities.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Helix product telemetry</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=VP+Sales+MedicalDirector+CGM+Australia">VP Sales, CGM Australia</a> (VP Sales, CGM AU)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Celonis, Signavio, ARIS, ABBYY, ServiceNow (as PM), Appian, UiPath, or Power Automate mentions tied to CGM Australia surfaced in Slack or public news — landscape is open. Parent CGM SE (Germany) is a known Signavio/SAP-adjacent conversation in EMEA; watch that any global tooling directive does not preempt the ANZ Apromore play.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

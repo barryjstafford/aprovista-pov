@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Think Tank Group Pty Ltd — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Think Tank Group Pty Ltd</h1>
+  <div class="snapshot">
+    <p><strong>Financial Services, Non-Bank Specialist Lending</strong></p>
+    <p><strong>Revenue:</strong> ~A$86.5M &nbsp;|&nbsp; <strong>Employees:</strong> ~162 &nbsp;|&nbsp; <strong>HQ:</strong> North Sydney, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> Thinktank Property Finance, Thinktank Commercial Finance, Thinktank Residential, Thinktank SMSF</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (71 Full CRM), Service Cloud, Analytics Cloud (293 licences), Partner Community (700), MuleSoft (8), Agentforce for Service (in-flight), Agentforce Voice (in-flight)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with James Henshaw, CIO]</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> APRO - Thinktank - Apromore (<a href="https://org62.my.salesforce.com/006ed00000e9fo5AAA">$150k</a>) &nbsp;|&nbsp; Thinktank - Document Processing + Credit Memo Agent (<a href="https://org62.my.salesforce.com/006ed00000XXkU5AAL">$35k</a>) &nbsp;|&nbsp; Think Tank - Agentforce for Credit Processing (<a href="https://org62.my.salesforce.com/006ed00000dUK7hAAG">$84k</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02SPFNB5PT">Matt Hamilton</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Agentforce)</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">87/100</span> — T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Salesforce Footprint & Relationship</td><td>12/12</td><td class="cat-green">Deep SF stack: 71 CRM + 293 Analytics + 700 Partner + MuleSoft + $936k renewal in play.</td></tr>
+        <tr><td>Transformation & Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Three active Agentforce opps: Credit Processing, Voice, Service — CoE forming under CIO.</td></tr>
+        <tr><td>Buyer & Champion Fit</td><td>18/20</td><td class="cat-green">CFO, CIO, COO, Head of Credit, Head of Risk & Head of Data all named in Org62.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Non-bank lending is a top AFPI vertical: high volume, credit workflows, APRA-adjacent.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Manual credit memo drafting + document processing already scoped as an Agentforce opp.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Systems & Event-Log Readiness</td><td>7/12</td><td class="cat-orange">Core loan-origination platform not disclosed; event-log extractors need scoping [field verify].</td></tr>
+        <tr><td>Commercial Timing & Deal Viability</td><td>4/6</td><td class="cat-orange">Existing $150k Apromore opp is Stage 3 of 5 — value validated but not yet in negotiation.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Think Tank Group Pty Ltd by mining loan origination, credit decisioning, and settlement workflows across Sales Cloud, Service Cloud, and its core LOS to expose rework, cycle-time drift, and hand-off gaps — directly accelerating the in-flight Agentforce for Credit Processing and Document Processing + Credit Memo Agent programs and protecting the $936k renewal.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Loan Origination Cycle-Time Mining (Commercial & Residential)</summary>
+    <div class="use-case-body">
+      <p>Think Tank's differentiator is speed-to-decision on non-vanilla borrowers (self-employed, SMSF, commercial). Mining the end-to-end origination path — application receipt through credit assessment to settlement — will pinpoint the exact stages where deals stall (valuations, verifications, credit committee handoffs). This directly feeds the Agentforce for Credit Processing business case with quantified bottlenecks, and moves broker NPS and funded-loan cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, Core Loan Origination System</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=David+Nolan+Thinktank">David Nolan</a> (National Head of Credit)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Credit Memo & Document Processing Automation Baseline</summary>
+    <div class="use-case-body">
+      <p>An active $35k Document Processing + Credit Memo Agent opp is at Stage 4. Apromore should run first to establish the current-state process map for credit memo drafting — who touches it, how many rework loops, cycle time by loan type. That baseline is what proves the Agentforce ROI six months post-deployment, and identifies which memo variants are safe to automate first vs. which require human-in-the-loop.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Document Management System</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jake+Vassallo+Thinktank">Jake Vassallo</a> (Head of Credit)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Broker & Partner Onboarding-to-First-Deal</summary>
+    <div class="use-case-body">
+      <p>Think Tank distributes almost entirely through the 700-seat Partner Community. The onboarding-to-first-funded-deal process is where broker productivity is won or lost. Mining this flow reveals accreditation delays, portal drop-off, and where activated brokers actually generate revenue — informing partner enablement investment and identifying where Agentforce for Partners can auto-answer accreditation queries. Metric moved: broker time-to-first-loan and 90-day active-broker rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Partner Community, Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Joel+Harrison+Thinktank">Joel Harrison</a> (Head of Partnerships & Distribution)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Servicing & Arrears Management with Compliance Center</summary>
+    <div class="use-case-body">
+      <p>Non-bank lenders are held to ASIC responsible-lending, NCCP, and hardship-notice obligations — with escalating scrutiny post-Royal Commission. Mining the arrears / hardship / collections process surfaces where SLA breaches or missed notice-timelines create regulatory exposure, and Compliance Center then generates the audit-ready evidence pack automatically. Metric moved: reduction in hardship-notice breaches and days-in-arrears.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Loan Servicing Platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ben+Cook+Thinktank">Ben Cook</a> (Head of Risk & Compliance)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Contact Centre & Voice Agent Deflection Analysis</summary>
+    <div class="use-case-body">
+      <p>Think Tank has a $100k in-flight opp for Contact Centre + Agentforce Voice at Stage 2. Apromore should mine the current voice-and-case handling flow to quantify which call reasons are deflectable, average handle time by intent, and where borrower calls trigger downstream servicing work. That evidence turns "we think voice AI helps" into "these 12 intents cover 60% of volume and are ready to deflect on day one" — collapsing time-to-value on the Agentforce Voice deployment.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Contact Centre Platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=John+Rubinchtein+Thinktank">John Rubinchtein</a> (Head of Operational Services)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Slack or web mentions found tying Celonis, Signavio, ARIS, UiPath, Power Automate, ServiceNow, ABBYY, or Appian to Think Tank Group — the field looks green for Apromore alongside the Agentforce co-sell.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

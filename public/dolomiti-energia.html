@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dolomiti Energia S.p.A. — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Dolomiti Energia S.p.A.</h1>
+  <div class="snapshot">
+    <p><strong>Utilities, Multi-Utility (Electricity, Gas, Water, District Heating)</strong></p>
+    <p><strong>Revenue:</strong> EUR 935M &nbsp;|&nbsp; <strong>Employees:</strong> ~1,300 &nbsp;|&nbsp; <strong>HQ:</strong> Trento, Italy</p>
+    <p><strong>Major Subsidiaries:</strong> Dolomiti Energia Holding, Hydro Dolomiti Energia, Dolomiti Energia Trading, Dolomiti Reti, Novareti</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (406-user Full CRM), Service Cloud, Marketing Cloud (ExactTarget), Agentforce for Service, Data Cloud, Slack Sales Elevate, Signature Success, Backup, Data Mask, Security Center</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Edoardo Fistolera] — likely SAP ISU / IS-U for utilities billing given multi-utility scale, plus in-house Digital Factory stack</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Apromore - Dolomiti Energia - Process Mining (<a href="https://org62.my.salesforce.com/006ed00000TwcAfAAJ">$60k</a>) &nbsp;·&nbsp; Customer Service AI (<a href="https://org62.my.salesforce.com/006ed000002nrd8AAA">$90k</a>) &nbsp;·&nbsp; Agentforce for Service Upgrade + Flex (<a href="https://org62.my.salesforce.com/006ed00000Ol7t3AAB">$79k</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U086X181JA3">Lorenzo Pratesi</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Salesforce Footprint & Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud footprint; active Apromore opp already in Stage 02 with SF AE.</td></tr>
+        <tr><td>Buyer & Champion Fit</td><td>18/20</td><td class="cat-green">CIDO Fistolera on stage at SF Service Summit 2025; Ops Director + IT Ops Head named [Slack].</td></tr>
+        <tr><td>Transformation & Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">"Digital Factory" org, Agentforce for Service in flight, Data Cloud expansion Phase 2.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Utilities is a priority AFPI vertical — meter-to-cash, outage/field service, regulatory.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>12/15</td><td class="cat-green">Antitrust sanction on billing practices (2023) [Slack]; customer-care rework signals.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Systems & Event-Log Readiness</td><td>7/12</td><td class="cat-orange">Non-SF stack unconfirmed; SAP IS-U likely but not verified — data-readiness gap flagged.</td></tr>
+        <tr><td>Commercial Timing & Deal Viability</td><td>4/6</td><td class="cat-orange">Apromore opp sits at $60k — below the $200k viability threshold; needs expansion narrative.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Dolomiti Energia S.p.A. by mining meter-to-cash, customer-care, and field-service processes to shrink billing rework, cut outage-response cycle time, and pre-empt regulatory scrutiny — directly amplifying the Agentforce for Service investment already in flight.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Meter-to-Cash Billing Accuracy & Regulatory Defense</summary>
+    <div class="use-case-body">
+      <p>Multi-utility billing across electricity, gas, water and district heating is the highest-risk process at Dolomiti — AGCM fined the company in 2023 for improper commercial practices in billing [Slack]. AFPI mines the meter-read → bill → dispute → adjustment path to expose where holds, manual re-issues and complaints originate, giving the CIDO an auditable evidence base and a lever to compress dispute resolution. Metric moved: bill-rework rate and dispute cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP IS-U, Salesforce Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Edoardo+Fistolera+Dolomiti+Energia">Edoardo Fistolera</a> (Chief Information and Digital Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Customer-Care Case-to-Resolution (Agentforce Amplifier)</summary>
+    <div class="use-case-body">
+      <p>Dolomiti has an active Agentforce for Service upgrade and a Customer Service AI opp — but agent success depends on knowing which case types actually loop, escalate or re-open. AFPI mines the full case lifecycle in Service Cloud to quantify handoff waste, identify the top automation candidates for Agentforce, and produce the before/after ROI story that unlocks Phase 2 spend. Metric moved: first-contact resolution and average handle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, SAP IS-U</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Luca+Landoni+Dolomiti+Energia">Luca Landoni</a> (Service Manager, Customer Care)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Field-Service Dispatch & Outage Response</summary>
+    <div class="use-case-body">
+      <p>Hydro Dolomiti Energia operates hydro assets across the Alpine grid where outage-to-restore and planned-maintenance cycle time drive both SAIDI/SAIFI and margin. AFPI mines dispatch → technician-en-route → repair → close-out to surface schedule breakage, travel waste and rework visits — building the operating case for extending Agentforce into field service. Metric moved: mean-time-to-repair and truck-roll efficiency.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, SAP PM</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alberto+Pinter+Hydro+Dolomiti+Energia">Alberto Pinter</a> (Head of Technical & Admin Development, Hydro Dolomiti)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Customer Onboarding & Switch-In / Switch-Out</summary>
+    <div class="use-case-body">
+      <p>Italian free-market energy switching is heavily choreographed and time-boxed by ARERA rules — a single stalled step turns into a regulatory breach. AFPI mines the switch-in / switch-out variant tree to expose which supplier interactions, KYC steps, and internal handoffs cause missed SLAs, and to prove where Marketing Cloud journeys and Agentforce can safely automate. Metric moved: on-time-switch % and onboarding cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales/Service Cloud, SAP IS-U</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Arianna+Pontalti+Dolomiti+Energia">Arianna Pontalti</a> (Operations Director)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. ESG & Sustainability Reporting Assurance</summary>
+    <div class="use-case-body">
+      <p>Dolomiti is a signature "green" utility (majority hydro) with a dedicated Group ESG lead — CSRD-era reporting demands auditable, source-of-record evidence of how emissions, water and grid data actually flow from operational systems into disclosure. AFPI's Compliance Center wedge mines the reporting close cycle to surface manual bridges, late data, and re-open loops that put assurance at risk. Metric moved: reporting cycle time and audit finding count.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP S/4HANA, Salesforce Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alessia+Andreatta+Dolomiti+Energia">Alessia Andreatta</a> (Group Head of ESG)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent competitor mentions (Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, Power Automate) tied to Dolomiti Energia in Slack or Org62 — greenfield process-mining opportunity, no incumbent to displace.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Momentum Energy Pty Ltd — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Momentum Energy Pty Ltd</h1>
+  <div class="snapshot">
+    <p><strong>Energy &amp; Utilities, Electricity &amp; Gas Retail</strong></p>
+    <p><strong>Revenue:</strong> ~A$2.2B &nbsp;|&nbsp; <strong>Employees:</strong> ~1,218 &nbsp;|&nbsp; <strong>HQ:</strong> Melbourne, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> Hydro Tasmania (parent), Momentum Energy Retail, Entura (sibling consulting arm of Hydro Tasmania)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> MuleSoft (Signature Success, Oct 2025 go-live), Tableau, Agentforce use cases (18+ months of internal deployments) [Slack]</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Ruchin Gupta or Bharath Kadiam — energy retailers in AU commonly run SAP IS-U or Gentrack for billing]</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> No open opportunities in Org62 at time of scoring — active exec engagement on Agentic Contact Center expected to generate pipeline</p>
+    <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
+    <p><strong>Salesforce AE:</strong> Karim Djelassi (TBD [field verify])</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">82/100</span> — T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Energy &amp; Utilities is a priority vertical; attended June 2026 E&amp;U Process Intelligence Campfire in Melbourne [Slack]</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">18 months of live agentic use cases; committing to Agentic Contact Center + 8-10 new agent use cases [Slack]</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>11/12</td><td class="cat-green">MuleSoft Signature Success, Tableau, active exec engagement in Hobart, Karim Djelassi owning account</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-green">MuleSoft integration layer live (Oct 2025 go-live) — API telemetry is a natural mining source</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">Exec-level SF sponsorship in place; process-mining-specific champion not yet named</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-green">Budget appetite proven via Agentic Contact Center commitment; process-mining ACV needs qualification</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">AER retail-energy rules and CDR obligations apply, but not at SOX / HIPAA intensity</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Momentum Energy Pty Ltd by mining the customer-onboarding, billing-to-cash, and contact-centre resolution processes that already flow through MuleSoft and the emerging Agentforce estate — turning the 8-10 planned agent-led use cases into measured cycle-time and first-contact-resolution wins instead of hopeful projections.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Contact-Centre Case Resolution &amp; Agent Handoff</summary>
+    <div class="use-case-body">
+      <p>Retail energy contact centres carry unpredictable variance in first-contact resolution and repeat-caller loops driven by billing disputes, connections/disconnections and hardship enquiries. Momentum has publicly committed to a Salesforce Agentic Contact Center rollout with 8-10 agent-led use cases plus voice — mining Service Cloud + voice event logs establishes the today-state cycle time and rework rate so agent deployments can be A/B evaluated against baseline. Metric moved: average handle time, first-contact resolution, agent deflection rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ruchin+Gupta+Momentum+Energy">Ruchin Gupta</a> (Salesforce Account Executive on Momentum) — for onward introduction to Momentum contact-centre leadership</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Meter-to-Cash / Billing Exception Handling</summary>
+    <div class="use-case-body">
+      <p>Australian energy retailers routinely see 10-20% of monthly bills flow through an exception-handling process (estimate reads, NMI disputes, market-message failures). This process spans the billing engine, market gateway, and back-office adjustments — a classic multi-system mining target where hidden rework is the single biggest lever on cost-to-serve. AFPI can quantify the exception funnel and pinpoint the two or three market-message failure types that drive most of the manual work. Metric moved: exception rate, days-to-bill, back-office FTE per 100k customers.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Billing platform (SAP IS-U or Gentrack — TBD), MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Bharath+Kadiam+Salesforce+Momentum">Bharath Kadiam</a> (Salesforce Solution Engineering — Momentum)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Customer Onboarding &amp; Move-In / Move-Out</summary>
+    <div class="use-case-body">
+      <p>Momentum serves 200,000+ homes and businesses across VIC, NSW, SA and QLD, meaning move-in / move-out and switch-in flows are a high-volume, high-churn-risk journey involving market messages (NEM12/NEM13), identity checks, CDR consent, and welcome comms. Mining this end-to-end from the customer web portal through MuleSoft into billing exposes drop-off points, duplicate-record creation and hand-off delays. Metric moved: switch completion rate, days-to-active, cost per acquisition.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> MyAccount portal / MuleSoft, Salesforce Sales &amp; Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alicia+Gunn+Salesforce+Momentum">Alicia Gunn</a> (Salesforce — Momentum account team)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Solar / Battery / VPP Connection Workflow</summary>
+    <div class="use-case-body">
+      <p>Momentum markets solar, battery, EV and Virtual Power Plant / Virtual Solar Sharing products — each requiring a distributor pre-approval, metering reconfiguration, and post-install commissioning that regularly stall for weeks. Mining these connect-and-activate flows reveals which distributor jurisdictions and installer partners cause the longest lead times, and quantifies revenue-at-risk from stalled activations. Metric moved: days-from-signup-to-first-export, activation completion rate, distributor-hold rework loops.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service / Sales Cloud, Distributor market-message gateway</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Sean+Adrichem+Salesforce+Momentum">Sean Adrichem</a> (Salesforce — Momentum engagement)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Hardship, Payment Plans &amp; Complaints (AER / EWOV compliance)</summary>
+    <div class="use-case-body">
+      <p>Under AER retail-energy rules and state ombudsman scrutiny, hardship enrolment, payment-plan management and complaint handling must follow prescribed sequences within regulated timeframes. Mining these regulated processes proves compliance (or exposes the specific step where SLAs slip), and does so with the same event data already flowing through Service Cloud — making it a natural anchor use case that pairs the Compliance Center wedge with contact-centre modernisation. Metric moved: EWOV/AER complaint count, days-to-resolution, hardship enrolment SLA breaches.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Billing platform (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Paul+Freiman+Salesforce+Momentum">Paul Freiman</a> (Salesforce Industry — Energy &amp; Utilities)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Slack or web mentions tie Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath or Power Automate to Momentum Energy specifically — the field is open, and the incumbent MuleSoft + Agentforce estate positions Apromore as the natural process-intelligence layer over the same event data.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

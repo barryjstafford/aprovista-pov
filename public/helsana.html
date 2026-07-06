@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Helsana Versicherungen AG — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Helsana Versicherungen AG</h1>
+  <div class="snapshot">
+    <p><strong>Insurance, Health Insurance</strong></p>
+    <p><strong>Revenue:</strong> CHF ~7.2B premiums &nbsp;|&nbsp; <strong>Employees:</strong> ~3,400 &nbsp;|&nbsp; <strong>HQ:</strong> Zurich, Switzerland</p>
+    <p><strong>Major Subsidiaries:</strong> Helsana Versicherungen AG, Helsana Zusatzversicherungen AG, Helsana Services AG, Progrès Versicherungen AG, sana24 AG</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Marketing Cloud Engagement (new-logo Jan 2026 via Helsana Services AG)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Adcubum Syrius (core insurance platform), Microsoft Dynamics 365 CRM (two separate MSD tenants — flagged as legacy by account team [Slack])</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Helsana - Apromore PoC - Deloitte - [BDR] (<a href="https://org62.my.salesforce.com/006ed00000d7ytpAAA">$147K</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GYKUKZDW">Peter Heiniger</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">73/100</span> — T2 Develop</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Switzerland's largest health insurer — priority HLS/FINS vertical for AFPI in EMEA.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">AE flags "substantial mess" in CRM ops across two separate MSD tenants [Slack].</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-green">Adcubum Syrius core + MSD CRM + claims workflows — event-log-rich estate.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>9/12</td><td class="cat-orange">Live Apromore PoC with Deloitte in Stage 3 [Org62]; CRM modernization implied.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">Swiss KVG/VVG regulation, FINMA-adjacent, nFADP data-privacy — audit-trail demand.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>8/12</td><td class="cat-orange">Only a €20K MCE new-logo (Jan 2026); still no deep IT/business access per AE [Slack].</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-orange">Active $147K PoC — sub-$200K today but clear expansion path if PoC proves value.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Helsana Versicherungen AG by mining claims-adjudication, member-onboarding, and premium-billing flows across Adcubum Syrius and its dual MSD CRM estate, cutting cycle-time and rework the AE describes as a "substantial mess" — and turning the live Deloitte-led PoC into a durable AFPI standalone footprint.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Claims Adjudication &amp; Leakage Reduction</summary>
+    <div class="use-case-body">
+      <p>Health-insurance claims flow through Adcubum Syrius with routing, medical review, and payout sub-processes riddled with rework loops and manual exception handling. In Swiss KVG basic + VVG supplementary lines, even 2-3% leakage on CHF 7B premiums is material. Apromore mines auto-adjudication rates, exception paths, and adjudicator variance to focus RPA/Agentforce automation where it actually pays back. Metric moved: auto-adjudication rate, cost-per-claim, DSO on provider payouts.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Adcubum Syrius, MSD CRM</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Claims+Helsana">Head of Claims Operations</a> (TBD — field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Member Onboarding &amp; Policy Issuance Cycle-Time</summary>
+    <div class="use-case-body">
+      <p>Onboarding a new insured requires KYC, underwriting checks, tariff configuration, and confirmation across the MSD CRM and Adcubum core — today split across two MSD tenants, per the account team [Slack]. Cycle-time bleeds during open-enrollment windows and drags NPS. Apromore reveals rework hotspots between the two CRM entities and the underwriting hand-off, so Helsana can consolidate on a single member-facing motion. Metric moved: onboarding cycle-time, first-time-right rate, agent handling time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> MSD CRM, Adcubum Syrius</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Operations+Helsana">Head of Member Operations</a> (TBD — field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Premium Billing, Collections &amp; Dunning Optimization</summary>
+    <div class="use-case-body">
+      <p>Monthly premium billing across ~2M insured lives produces millions of billing events, chase letters, payment plans, and cantonal-authority hand-offs for unpaid premiums under KVG Art. 64a. Rework and manual dunning cadences erode margin. Apromore mines the actual dunning path variants, isolates the segments where a payment plan works vs. cantonal referral, and lets an Agentforce agent take conformant action. Metric moved: DSO, bad-debt write-offs, cost-per-dun.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Adcubum Syrius, SAP (Finance)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Finance+Helsana">Head of Billing &amp; Collections</a> (TBD — field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Dual-MSD CRM Consolidation &amp; Service-Case Harmonization</summary>
+    <div class="use-case-body">
+      <p>Peter Heiniger has flagged Helsana runs "2 different entities of MSD" with outdated CRM operations [Slack]. Before any lift-and-shift to a modern CRM, Helsana needs a fact base of how service cases actually flow, which paths differ between the tenants, and where duplicated work lives. Apromore mines both MSD instances into a single conformance view — the strongest wedge to a Sales/Service Cloud replatform conversation. Metric moved: case handle time, duplicate-work index, migration risk reduction.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> MSD CRM (tenant A), MSD CRM (tenant B)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=CIO+Helsana">CIO / Head of IT</a> (TBD — field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Provider Network &amp; Invoice Verification (Tarifsuisse / TARMED)</summary>
+    <div class="use-case-body">
+      <p>Provider invoices under TARMED/TARDOC tariffs flow through verification, medical-necessity review, and payout — a compliance-heavy process where mis-billing and non-conformant tariff use drive material leakage. Apromore's Compliance Center wedge documents the as-is invoice-verification path, flags non-conformant cases, and supports FINMA/BAG audit reporting. Metric moved: invoice-verification cycle-time, recovered over-billing, audit readiness.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Adcubum Syrius, Provider Portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Provider+Management+Helsana">Head of Provider Management</a> (TBD — field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Celonis / Signavio / ARIS / ServiceNow process-mining mentions found tied to Helsana in Slack or public web. Deloitte is engaged as SI partner on the live Apromore PoC, which is the current head-to-head lane to defend.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

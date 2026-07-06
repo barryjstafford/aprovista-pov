@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuscal Limited — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Cuscal Limited</h1>
+  <div class="snapshot">
+    <p><strong>Financial Services, Payments Infrastructure</strong></p>
+    <p><strong>Revenue:</strong> A$325M &nbsp;|&nbsp; <strong>Employees:</strong> ~700 &nbsp;|&nbsp; <strong>HQ:</strong> Sydney, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> Strategic Payments Services Pty Ltd, Basiq, Payment Adjunct Services</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> MuleSoft Anypoint, Informatica CDGC</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Lachlan Mott]</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Cuscal Ltd - Apromore (<a href="https://org62.my.salesforce.com/006ed00000fHSptAAG">$300k</a>) | Cuscal - Apromore PoC (<a href="https://org62.my.salesforce.com/006ed00000fLSxlAAG">$50k</a>) | MS - Cuscal - Anypoint Integration (<a href="https://org62.my.salesforce.com/006ed00000OiujqAAB">$190k</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02ADFTDCG2">Lachlan Mott</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Commercial Timing & Deal Viability</td><td>6/6</td><td class="cat-green">Active $300k Apromore opp + $50k PoC already scoped for Jul 2026 close.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Payments/FinServ — top priority vertical with dense process regulation.</td></tr>
+        <tr><td>Compliance & Risk Pressure</td><td>8/8</td><td class="cat-green">AML/CTF, APRA CPS 230, card-scheme rules, NPP compliance — high scrutiny.</td></tr>
+        <tr><td>Salesforce Footprint & Relationship</td><td>11/12</td><td class="cat-green">Active MuleSoft + Informatica CDGC opps; SF AE Lachlan Mott engaged.</td></tr>
+        <tr><td>Transformation & Agentic-AI Momentum</td><td>10/12</td><td class="cat-green">Recent IPO (2023) + Basiq acquisition driving integration/automation push.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Systems & Event-Log Readiness</td><td>8/12</td><td class="cat-orange">Payments switch generates logs, but core systems not yet confirmed for mining.</td></tr>
+        <tr><td>Buyer & Champion Fit</td><td>14/20</td><td class="cat-orange">SF AE engaged; named business champion at Cuscal still to be confirmed.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Cuscal Limited by mining its payments-processing, dispute-resolution, KYC/onboarding, and post-Basiq-integration workflows to cut cycle times, evidence CPS 230 operational-resilience controls, and unlock the automation gains a newly-listed ASX payments provider needs to defend margin.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Payments Exception & Dispute Resolution</summary>
+    <div class="use-case-body">
+      <p>Cuscal processes card, NPP, direct-entry and BPAY volume for 100+ ADIs and fintechs. Every failed authorization, chargeback, or NPP mis-direct becomes a dispute case that gets manually triaged. Apromore can mine the end-to-end exception flow to expose rework loops, SLA breaches with scheme networks, and the specific fallout categories driving the biggest FTE cost. Metric moved: dispute cycle time and cost-per-case.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Payments Switch, ServiceNow ITSM</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Payments+Operations+Cuscal">Head of Payments Operations</a> (TBD)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Client Onboarding & KYC/AML</summary>
+    <div class="use-case-body">
+      <p>Onboarding a new ADI, fintech, or corporate biller into the Cuscal switch is a multi-week workflow across compliance, technical integration, and scheme certification. Apromore can process-mine every case to expose where files stall in KYC/AML review, how often re-work is triggered by incomplete evidence, and which segments (e.g. crypto exchanges post AUSTRAC pressure) drive the longest tails. AFPI Compliance Center wraps AUSTRAC/AML control evidence around it. Metric moved: time-to-first-transaction.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce, KYC platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Risk+Officer+Cuscal">Chief Risk Officer</a> (TBD)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Basiq Post-Acquisition Integration & Data Access</summary>
+    <div class="use-case-body">
+      <p>Cuscal acquired Basiq (open-banking data / CDR aggregator) and is integrating its accreditation, consent, and data-delivery pipelines into the group. Apromore can mine consent-lifecycle and API-integration flows to prove operational alignment, expose where CDR consent-refresh drops off, and quantify the harmonization gap. Metric moved: consent-refresh completion rate and integration time-to-value.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Basiq platform, MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Open+Banking+Cuscal">Head of Open Banking</a> (TBD)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. CPS 230 Operational Resilience Evidence</summary>
+    <div class="use-case-body">
+      <p>APRA CPS 230 (effective July 2025) requires Cuscal to identify critical operations, map end-to-end processes, and evidence tolerance-for-disruption controls — an inherently process-mining exercise. Apromore auto-generates the live process map, replaces static Visio diagrams, and provides board-ready evidence for the annual attestation. AFPI Compliance Center packages control coverage. Metric moved: audit-prep effort, resilience-attestation cycle.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ServiceNow, GRC platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Operational+Risk+Cuscal">Head of Operational Risk</a> (TBD)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Card & Scheme Fee Reconciliation</summary>
+    <div class="use-case-body">
+      <p>Interchange, scheme fees, and client billing reconciliation across Visa/MasterCard/eftpos/NPP is a monthly grind — mismatches trigger investigations that eat analyst time and, when unresolved, become revenue leakage. Apromore mines the reconciliation flow to locate the specific mismatch categories that drive the most rework and quantify recoverable revenue. Metric moved: unreconciled-item aging, analyst FTE hours.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Payments Switch, ERP GL</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Financial+Officer+Cuscal">Chief Financial Officer</a> (TBD)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent competitor mentions tied to Cuscal in Slack or public news. Celonis and Signavio have general Australian FSI presence but no observed Cuscal-specific engagement.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>
