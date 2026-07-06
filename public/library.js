@@ -1,112 +1,119 @@
 const LIBRARY = [
-  { name: "A2A S.p.A.", slug: "a2a", region: "EMEA" },
-  { name: "Alfa Laval Corporate AB", slug: "alfa-laval", region: "EMEA" },
-  { name: "Architectural Graphics, Inc.", slug: "agi-architectural-graphics", region: "AMER" },
-  { name: "Ares Management Corporation", slug: "ares-management", region: "AMER" },
-  { name: "AusNet Services Ltd", slug: "ausnet", region: "ANZ" },
-  { name: "Australian Unity Limited", slug: "australian-unity", region: "ANZ" },
-  { name: "Axpo Italia S.p.A.", slug: "axpo-italia", region: "EMEA" },
-  { name: "Banca Mediolanum S.p.A.", slug: "banca-mediolanum", region: "EMEA" },
-  { name: "Banca Monte dei Paschi di Siena S.p.A.", slug: "banca-monte-dei-paschi-di-siena", region: "EMEA" },
-  { name: "Bank of New York Mellon Corporation", slug: "bny-mellon", region: "AMER" },
-  { name: "Bendigo and Adelaide Bank Limited", slug: "bendigo-adelaide-bank", region: "ANZ" },
-  { name: "Black Hills Corporation", slug: "black-hills-corporation", region: "AMER" },
-  { name: "Bludigit S.p.A.", slug: "bludigit", region: "EMEA" },
-  { name: "BPER Banca S.p.A.", slug: "bper-banca", region: "EMEA" },
-  { name: "Bupa HI Pty Ltd", slug: "bupa", region: "ANZ" },
-  { name: "Cars.com Inc.", slug: "cars-commerce", region: "AMER" },
-  { name: "Cassa di Risparmio di Asti S.p.A.", slug: "cassa-di-risparmio-di-asti", region: "EMEA" },
-  { name: "CenterPoint Energy, Inc.", slug: "centerpoint-energy", region: "AMER" },
-  { name: "Chiesi Farmaceutici S.p.A.", slug: "chiesi-group-italia", region: "EMEA" },
-  { name: "Codan Limited", slug: "codan", region: "ANZ" },
-  { name: "Coles Group Limited", slug: "coles", region: "ANZ" },
-  { name: "Columbus McKinnon Corporation", slug: "columbus-mckinnon", region: "AMER" },
-  { name: "Commonwealth Bank of Australia", slug: "cba", region: "ANZ" },
-  { name: "Corteva, Inc.", slug: "corteva", region: "AMER" },
-  { name: "Costa Crociere S.p.A.", slug: "costa-crociere", region: "EMEA" },
-  { name: "Credit Corp Group Limited", slug: "credit-corp", region: "ANZ" },
-  { name: "Crown Melbourne Limited", slug: "crown-melbourne", region: "ANZ" },
-  { name: "Cuscal Limited", slug: "cuscal", region: "ANZ" },
-  { name: "CyberCX Pty Ltd", slug: "cybercx", region: "ANZ" },
-  { name: "Daimler Truck Holding AG", slug: "daimler-truck", region: "EMEA" },
-  { name: "De Agostini Editore S.p.A.", slug: "de-agostini-editore", region: "EMEA" },
-  { name: "Dell Technologies Inc.", slug: "dell-technologies", region: "AMER" },
-  { name: "DNOW Inc.", slug: "dnow", region: "AMER" },
-  { name: "Dolomiti Energia S.p.A.", slug: "dolomiti-energia", region: "EMEA" },
-  { name: "DTCC (Depository Trust & Clearing)", slug: "dtcc", region: "AMER" },
-  { name: "Duferco Energia S.p.A.", slug: "duferco-energia", region: "EMEA" },
-  { name: "Enel Global Services S.r.l.", slug: "enel-global-services", region: "EMEA" },
-  { name: "Expedia Group, Inc.", slug: "expedia-group", region: "AMER" },
-  { name: "Fabbrica D'Armi Pietro Beretta S.p.A.", slug: "beretta", region: "EMEA" },
-  { name: "FinecoBank S.p.A.", slug: "finecobank", region: "EMEA" },
-  { name: "Genpact Limited", slug: "genpact", region: "AMER" },
-  { name: "Grandi Navi Veloci S.p.A.", slug: "gnv-grandi-navi-veloci", region: "EMEA" },
-  { name: "HBF Health Limited", slug: "hbf-health", region: "ANZ" },
-  { name: "Health Communication Network Pty Limited (CGM Australia)", slug: "cgm-australia", region: "ANZ" },
-  { name: "Helsana Versicherungen AG", slug: "helsana", region: "EMEA" },
-  { name: "Hera S.p.A.", slug: "hera", region: "EMEA" },
-  { name: "ING Bank (Australia) Limited", slug: "ing-bank-australia", region: "ANZ" },
-  { name: "Inspira Financial Trust, LLC", slug: "inspira-financial", region: "AMER" },
-  { name: "Insurance Australia Group Limited (IAG)", slug: "iag", region: "ANZ" },
-  { name: "Jetstar Airways Pty Ltd", slug: "jetstar", region: "ANZ" },
-  { name: "JM Family Enterprises, Inc.", slug: "jm-family", region: "AMER" },
-  { name: "JPMorgan Chase & Co.", slug: "jp-morgan-chase", region: "AMER" },
-  { name: "Judo Bank Pty Limited", slug: "judo-bank", region: "ANZ" },
-  { name: "Kia Australia Pty Ltd", slug: "kia-australia", region: "ANZ" },
-  { name: "Kito Crosby Limited", slug: "kito-crosby", region: "AMER" },
-  { name: "Lucid Group, Inc.", slug: "lucid-motors", region: "AMER" },
-  { name: "Macquarie Group Limited", slug: "macquarie-group", region: "ANZ" },
-  { name: "Magis Energia S.p.A.", slug: "magis-energia", region: "EMEA" },
-  { name: "Manulife Financial Corporation", slug: "manulife", region: "AMER" },
-  { name: "Marelli Aftermarket Italy S.p.A.", slug: "marelli-aftermarket-italy", region: "EMEA" },
-  { name: "Mastercard Incorporated", slug: "mastercard", region: "AMER" },
-  { name: "Medibank Private Limited", slug: "medibank", region: "ANZ" },
-  { name: "MetLife, Inc.", slug: "metlife", region: "AMER" },
-  { name: "Microchip Technology Incorporated", slug: "microchip-technology", region: "AMER" },
-  { name: "Momentum Energy Pty Ltd", slug: "momentum-energy", region: "ANZ" },
-  { name: "Mueller Water Products, Inc.", slug: "mueller-water-products", region: "AMER" },
-  { name: "My Plan Manager Group Pty Ltd", slug: "my-plan-manager", region: "ANZ" },
-  { name: "MYOB Group Pty Ltd", slug: "myob", region: "ANZ" },
-  { name: "National Bank of Canada", slug: "national-bank-of-canada", region: "AMER" },
-  { name: "NBN Co Limited", slug: "nbn-co", region: "ANZ" },
-  { name: "Nine Entertainment Co. Holdings Limited", slug: "nine-entertainment", region: "ANZ" },
-  { name: "North East Region Water Corporation", slug: "north-east-water", region: "ANZ" },
-  { name: "Oniverse Holding S.p.A. (Calzedonia Group)", slug: "calzedonia", region: "EMEA" },
-  { name: "Optum Financial, Inc.", slug: "optum-financial", region: "AMER" },
-  { name: "Origin Energy Limited", slug: "origin-energy", region: "ANZ" },
-  { name: "Powercor Australia Ltd", slug: "powercor", region: "ANZ" },
-  { name: "Procore Technologies, Inc.", slug: "procore", region: "AMER" },
-  { name: "Puretec Group Pty Ltd", slug: "puretec", region: "ANZ" },
-  { name: "Qantas Airways Limited", slug: "qantas", region: "ANZ" },
-  { name: "QBE Insurance Group Limited", slug: "qbe", region: "ANZ" },
-  { name: "Royal Automobile Club of Victoria (RACV) Ltd", slug: "racv", region: "ANZ" },
-  { name: "Safilo Group S.p.A.", slug: "safilo", region: "EMEA" },
-  { name: "South East Water Corporation", slug: "south-east-water", region: "ANZ" },
-  { name: "Stellantis Financial Services, Inc.", slug: "stellantis-financial", region: "AMER" },
-  { name: "Stowe Australia Pty Ltd", slug: "stowe-australia", region: "ANZ" },
-  { name: "Suncorp Group Limited", slug: "suncorp", region: "ANZ" },
-  { name: "Sycomp, A Technology Company, Inc.", slug: "sycomp", region: "AMER" },
-  { name: "Sysco Corporation", slug: "sysco", region: "AMER" },
-  { name: "TD SYNNEX Corporation", slug: "td-synnex", region: "AMER" },
-  { name: "Teachers Mutual Bank Limited", slug: "teachers-mutual-bank", region: "ANZ" },
-  { name: "The Hartford Financial Services Group, Inc.", slug: "the-hartford", region: "AMER" },
-  { name: "Think Tank Group Pty Ltd", slug: "thinktank", region: "ANZ" },
-  { name: "Trex Company, Inc.", slug: "trex", region: "AMER" },
-  { name: "TripADeal Pty Ltd", slug: "tripadeal", region: "ANZ" },
-  { name: "U.S. Bancorp", slug: "us-bank", region: "AMER" },
-  { name: "Water Corporation", slug: "water-corporation-wa", region: "ANZ" },
-  { name: "Westernport Region Water Corporation", slug: "westernport-water", region: "ANZ" },
-  { name: "Westpac Banking Corporation", slug: "westpac", region: "ANZ" },
-  { name: "Workday, Inc.", slug: "workday", region: "AMER" },
-  { name: "WSFS Financial Corporation", slug: "wsfs-financial", region: "AMER" },
-  { name: "Zip Water (Aust) Pty Ltd", slug: "zip-water", region: "ANZ" }
+  { name: "A2A S.p.A.", slug: "a2a", region: "EMEA", score: 88 },
+  { name: "Alfa Laval Corporate AB", slug: "alfa-laval", region: "EMEA", score: 88 },
+  { name: "Architectural Graphics, Inc.", slug: "agi-architectural-graphics", region: "AMER", score: 50 },
+  { name: "Ares Management Corporation", slug: "ares-management", region: "AMER", score: 82 },
+  { name: "AusNet Services Ltd", slug: "ausnet", region: "ANZ", score: 84 },
+  { name: "Australian Unity Limited", slug: "australian-unity", region: "ANZ", score: 74 },
+  { name: "Axpo Italia S.p.A.", slug: "axpo-italia", region: "EMEA", score: 91 },
+  { name: "Banca Mediolanum S.p.A.", slug: "banca-mediolanum", region: "EMEA", score: 85 },
+  { name: "Banca Monte dei Paschi di Siena S.p.A.", slug: "banca-monte-dei-paschi-di-siena", region: "EMEA", score: 95 },
+  { name: "Bank of New York Mellon Corporation", slug: "bny-mellon", region: "AMER", score: 74 },
+  { name: "Bendigo and Adelaide Bank Limited", slug: "bendigo-adelaide-bank", region: "ANZ", score: 90 },
+  { name: "Black Hills Corporation", slug: "black-hills-corporation", region: "AMER", score: 86 },
+  { name: "Bludigit S.p.A.", slug: "bludigit", region: "EMEA", score: 86 },
+  { name: "BPER Banca S.p.A.", slug: "bper-banca", region: "EMEA", score: 89 },
+  { name: "Bupa HI Pty Ltd", slug: "bupa", region: "ANZ", score: 89 },
+  { name: "Cars.com Inc.", slug: "cars-commerce", region: "AMER", score: 88 },
+  { name: "Cassa di Risparmio di Asti S.p.A.", slug: "cassa-di-risparmio-di-asti", region: "EMEA", score: 87 },
+  { name: "CenterPoint Energy, Inc.", slug: "centerpoint-energy", region: "AMER", score: 92 },
+  { name: "Chiesi Farmaceutici S.p.A.", slug: "chiesi-group-italia", region: "EMEA", score: 85 },
+  { name: "Codan Limited", slug: "codan", region: "ANZ", score: 83 },
+  { name: "Coles Group Limited", slug: "coles", region: "ANZ", score: 86 },
+  { name: "Columbus McKinnon Corporation", slug: "columbus-mckinnon", region: "AMER", score: 86 },
+  { name: "Commonwealth Bank of Australia", slug: "cba", region: "ANZ", score: 86 },
+  { name: "Corteva, Inc.", slug: "corteva", region: "AMER", score: 91 },
+  { name: "Costa Crociere S.p.A.", slug: "costa-crociere", region: "EMEA", score: 86 },
+  { name: "Credit Corp Group Limited", slug: "credit-corp", region: "ANZ", score: 88 },
+  { name: "Crown Melbourne Limited", slug: "crown-melbourne", region: "ANZ", score: 72 },
+  { name: "Cuscal Limited", slug: "cuscal", region: "ANZ", score: 86 },
+  { name: "CyberCX Pty Ltd", slug: "cybercx", region: "ANZ", score: 68 },
+  { name: "Daimler Truck Holding AG", slug: "daimler-truck", region: "EMEA", score: 84 },
+  { name: "De Agostini Editore S.p.A.", slug: "de-agostini-editore", region: "EMEA", score: 78 },
+  { name: "Dell Technologies Inc.", slug: "dell-technologies", region: "AMER", score: 92 },
+  { name: "DNOW Inc.", slug: "dnow", region: "AMER", score: 86 },
+  { name: "Dolomiti Energia S.p.A.", slug: "dolomiti-energia", region: "EMEA", score: 86 },
+  { name: "DTCC (Depository Trust & Clearing)", slug: "dtcc", region: "AMER", score: 78 },
+  { name: "Duferco Energia S.p.A.", slug: "duferco-energia", region: "EMEA", score: 89 },
+  { name: "Enel Global Services S.r.l.", slug: "enel-global-services", region: "EMEA", score: 85 },
+  { name: "Expedia Group, Inc.", slug: "expedia-group", region: "AMER", score: 72 },
+  { name: "Fabbrica D'Armi Pietro Beretta S.p.A.", slug: "beretta", region: "EMEA", score: 85 },
+  { name: "FinecoBank S.p.A.", slug: "finecobank", region: "EMEA", score: 94 },
+  { name: "Genpact Limited", slug: "genpact", region: "AMER", score: 58 },
+  { name: "Grandi Navi Veloci S.p.A.", slug: "gnv-grandi-navi-veloci", region: "EMEA", score: 86 },
+  { name: "HBF Health Limited", slug: "hbf-health", region: "ANZ", score: 74 },
+  { name: "Health Communication Network Pty Limited (CGM Australia)", slug: "cgm-australia", region: "ANZ", score: 63 },
+  { name: "Helsana Versicherungen AG", slug: "helsana", region: "EMEA", score: 73 },
+  { name: "Hera S.p.A.", slug: "hera", region: "EMEA", score: 76 },
+  { name: "ING Bank (Australia) Limited", slug: "ing-bank-australia", region: "ANZ", score: 95 },
+  { name: "Inspira Financial Trust, LLC", slug: "inspira-financial", region: "AMER", score: 90 },
+  { name: "Insurance Australia Group Limited (IAG)", slug: "iag", region: "ANZ", score: 87 },
+  { name: "Jetstar Airways Pty Ltd", slug: "jetstar", region: "ANZ", score: 87 },
+  { name: "JM Family Enterprises, Inc.", slug: "jm-family", region: "AMER", score: 84 },
+  { name: "JPMorgan Chase & Co.", slug: "jp-morgan-chase", region: "AMER", score: 88 },
+  { name: "Judo Bank Pty Limited", slug: "judo-bank", region: "ANZ", score: 89 },
+  { name: "Kia Australia Pty Ltd", slug: "kia-australia", region: "ANZ", score: 85 },
+  { name: "Kito Crosby Limited", slug: "kito-crosby", region: "AMER", score: 88 },
+  { name: "Lucid Group, Inc.", slug: "lucid-motors", region: "AMER", score: 88 },
+  { name: "Macquarie Group Limited", slug: "macquarie-group", region: "ANZ", score: 84 },
+  { name: "Magis Energia S.p.A.", slug: "magis-energia", region: "EMEA", score: 86 },
+  { name: "Manulife Financial Corporation", slug: "manulife", region: "AMER", score: 78 },
+  { name: "Marelli Aftermarket Italy S.p.A.", slug: "marelli-aftermarket-italy", region: "EMEA", score: 92 },
+  { name: "Mastercard Incorporated", slug: "mastercard", region: "AMER", score: 73 },
+  { name: "Medibank Private Limited", slug: "medibank", region: "ANZ", score: 74 },
+  { name: "MetLife, Inc.", slug: "metlife", region: "AMER", score: 89 },
+  { name: "Microchip Technology Incorporated", slug: "microchip-technology", region: "AMER", score: 88 },
+  { name: "Momentum Energy Pty Ltd", slug: "momentum-energy", region: "ANZ", score: 82 },
+  { name: "Mueller Water Products, Inc.", slug: "mueller-water-products", region: "AMER", score: 76 },
+  { name: "My Plan Manager Group Pty Ltd", slug: "my-plan-manager", region: "ANZ", score: 91 },
+  { name: "MYOB Group Pty Ltd", slug: "myob", region: "ANZ", score: 74 },
+  { name: "National Bank of Canada", slug: "national-bank-of-canada", region: "AMER", score: 87 },
+  { name: "NBN Co Limited", slug: "nbn-co", region: "ANZ", score: 85 },
+  { name: "Nine Entertainment Co. Holdings Limited", slug: "nine-entertainment", region: "ANZ", score: 81 },
+  { name: "North East Region Water Corporation", slug: "north-east-water", region: "ANZ", score: 74 },
+  { name: "Oniverse Holding S.p.A. (Calzedonia Group)", slug: "calzedonia", region: "EMEA", score: 81 },
+  { name: "Optum Financial, Inc.", slug: "optum-financial", region: "AMER", score: 74 },
+  { name: "Origin Energy Limited", slug: "origin-energy", region: "ANZ", score: 87 },
+  { name: "Powercor Australia Ltd", slug: "powercor", region: "ANZ", score: 86 },
+  { name: "Procore Technologies, Inc.", slug: "procore", region: "AMER", score: 82 },
+  { name: "Puretec Group Pty Ltd", slug: "puretec", region: "ANZ", score: 67 },
+  { name: "Qantas Airways Limited", slug: "qantas", region: "ANZ", score: 88 },
+  { name: "QBE Insurance Group Limited", slug: "qbe", region: "ANZ", score: 90 },
+  { name: "Royal Automobile Club of Victoria (RACV) Ltd", slug: "racv", region: "ANZ", score: 89 },
+  { name: "Safilo Group S.p.A.", slug: "safilo", region: "EMEA", score: 80 },
+  { name: "South East Water Corporation", slug: "south-east-water", region: "ANZ", score: 90 },
+  { name: "Stellantis Financial Services, Inc.", slug: "stellantis-financial", region: "AMER", score: 92 },
+  { name: "Stowe Australia Pty Ltd", slug: "stowe-australia", region: "ANZ", score: 82 },
+  { name: "Suncorp Group Limited", slug: "suncorp", region: "ANZ", score: 86 },
+  { name: "Sycomp, A Technology Company, Inc.", slug: "sycomp", region: "AMER", score: 82 },
+  { name: "Sysco Corporation", slug: "sysco", region: "AMER", score: 88 },
+  { name: "TD SYNNEX Corporation", slug: "td-synnex", region: "AMER", score: 88 },
+  { name: "Teachers Mutual Bank Limited", slug: "teachers-mutual-bank", region: "ANZ", score: 87 },
+  { name: "The Hartford Financial Services Group, Inc.", slug: "the-hartford", region: "AMER", score: 72 },
+  { name: "Think Tank Group Pty Ltd", slug: "thinktank", region: "ANZ", score: 87 },
+  { name: "Trex Company, Inc.", slug: "trex", region: "AMER", score: 82 },
+  { name: "TripADeal Pty Ltd", slug: "tripadeal", region: "ANZ", score: 86 },
+  { name: "U.S. Bancorp", slug: "us-bank", region: "AMER", score: 92 },
+  { name: "Water Corporation", slug: "water-corporation-wa", region: "ANZ", score: 82 },
+  { name: "Westernport Region Water Corporation", slug: "westernport-water", region: "ANZ", score: 52 },
+  { name: "Westpac Banking Corporation", slug: "westpac", region: "ANZ", score: 81 },
+  { name: "Workday, Inc.", slug: "workday", region: "AMER", score: 16 },
+  { name: "WSFS Financial Corporation", slug: "wsfs-financial", region: "AMER", score: 86 },
+  { name: "Zip Water (Aust) Pty Ltd", slug: "zip-water", region: "ANZ", score: 86 }
 ];
 
 const REGIONS = [
-  { key: "AMER", label: "AMER — Americas" },
-  { key: "EMEA", label: "EMEA — Europe, Middle East, Africa" },
-  { key: "ANZ",  label: "ANZ — Australia, New Zealand" }
+  { key: "AMER", label: "AMER —" },
+  { key: "EMEA", label: "EMEA —" },
+  { key: "ANZ",  label: "ANZ —" }
 ];
+
+function scoreColorClass(score) {
+  if (typeof score !== 'number') return '';
+  if (score >= 80) return 'sc-green';
+  if (score >= 60) return 'sc-orange';
+  return 'sc-red';
+}
 
 function toggleLib() {
   const menu = document.getElementById('libMenu');
@@ -175,7 +182,11 @@ window.addEventListener('DOMContentLoaded', function() {
     '.lib-region-items { display: none; }' +
     '.lib-region.open .lib-region-items { display: block; }' +
     '.lib-region.empty { display: none; }' +
-    '.lib-region-items a { padding-left: 28px !important; }';
+    '.lib-region-items a { padding-left: 28px !important; }' +
+    '.lib-list .sc { margin-left: 6px; font-weight: 600; font-variant-numeric: tabular-nums; }' +
+    '.lib-list .sc-green  { color: #0f7d3e; }' +
+    '.lib-list .sc-orange { color: #b45c00; }' +
+    '.lib-list .sc-red    { color: #b00020; }';
   document.head.appendChild(style);
 
   const grouped = { AMER: [], EMEA: [], ANZ: [] };
@@ -205,8 +216,16 @@ window.addEventListener('DOMContentLoaded', function() {
     items.forEach(function(co) {
       const a = document.createElement('a');
       a.href = 'https://aprovista-pov.vercel.app/' + co.slug;
-      a.textContent = co.name;
       a.setAttribute('data-name', co.name);
+      const label = document.createElement('span');
+      label.textContent = co.name;
+      a.appendChild(label);
+      if (typeof co.score === 'number') {
+        const s = document.createElement('span');
+        s.className = 'sc ' + scoreColorClass(co.score);
+        s.textContent = '(' + co.score + ')';
+        a.appendChild(s);
+      }
       itemsDiv.appendChild(a);
     });
     section.appendChild(itemsDiv);
