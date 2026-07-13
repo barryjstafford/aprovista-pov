@@ -334,9 +334,10 @@ async function switchLang(lang) {
     setStatus('');
   } catch (err) {
     console.error('[AproVista translate]', err);
-    setStatus('Translation failed — see console');
+    const msg = (err && err.message) ? String(err.message) : 'translation error';
+    setStatus('Translation failed: ' + msg);
     setLangButtonState(CURRENT_LANG);
-    setTimeout(function() { setStatus(''); }, 6000);
+    setTimeout(function() { setStatus(''); }, 15000);
   }
 }
 
@@ -357,7 +358,8 @@ window.addEventListener('DOMContentLoaded', function() {
     ' transition: background .12s, border-color .12s; }' +
     '.lang-btn:hover { background: #f0f4ff; }' +
     '.lang-btn.active { border-color: #0070d2; background: #f0f4ff; }' +
-    '#langStatus { font-size: .75em; color: #667; margin-left: 6px; min-height: 1em; }' +
+    '#langStatus { font-size: .78em; color: #b00020; margin-left: 8px;' +
+    ' min-height: 1em; max-width: 480px; white-space: normal; line-height: 1.3; }' +
     '@media (max-width: 640px) { .lang-btn { padding: 3px 4px; font-size: 1em; } }' +
     '.fine { font-size: .88em !important; color: #888 !important; }' +
     '.fine a { color: #888 !important; }';
