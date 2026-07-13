@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -108,97 +113,141 @@
   <h1>Manulife Financial Corporation</h1>
   <div class="snapshot">
     <p><strong>Financial Services, Insurance &amp; Wealth Management</strong></p>
-    <p><strong>Revenue:</strong> ~CAD $60B &nbsp;|&nbsp; <strong>Employees:</strong> 38,000+ globally &nbsp;|&nbsp; <strong>HQ:</strong> Toronto, Canada</p>
-    <p><strong>Major Subsidiaries:</strong> John Hancock Financial, Manulife Investment Management, Manulife Bank of Canada, Manulife-Sinochem Life Insurance</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Information+Officer+Manulife">the CIO's office</a>]</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Information+Officer+Manulife">the CIO's office</a>]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> </p>
+    <p><strong>Revenue:</strong> ~CA$47B (2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~38,000 + ~119,000 agents &nbsp;|&nbsp; <strong>HQ:</strong> Toronto, Canada</p>
+    <p><strong>Major Subsidiaries:</strong> John Hancock Financial, Manulife Investment Management, Manulife Bank of Canada, Manulife-Sinochem Life Insurance, Mahindra Manulife Investment Management</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Enterprise/Unlimited), Service Cloud (Unlimited + Knowledge), Force.com Unlimited, Marketing Cloud Engagement, Marketing Cloud Account Engagement, Salesforce Shield, Heroku, Experience Cloud</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://salesforce.enterprise.slack.com/team/U01G8A4GMA7">Afftab Pervaiz</a>] &mdash; likely legacy life &amp; annuities policy admin, Guidewire or similar claims platform, and mainframe general ledger; verify.</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> SG Manulife Apromore &mdash; Operational Process Improvement (<a href="https://org62.my.salesforce.com/006ed00000fpm4bAAA">$125k</a>) &nbsp;|&nbsp; Manulife GWAM Dealer Relations FSC 150+ (<a href="https://org62.my.salesforce.com/006ed00000HS94zAAD">$300k</a>) &nbsp;|&nbsp; Manulife GWAM US Transfer Agency Service Cloud 200+ (<a href="https://org62.my.salesforce.com/006ed00000IuxCjAAJ">$275k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
-    <p><strong>Salesforce AE:</strong> TBD [field verify]</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G8A4GMA7">Afftab Pervaiz</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
-  <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">78/100</span> — T2 Develop</summary>
+  <details class="pov-aproscore" open>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">87/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Compliance Regime (OSFI, IFRS 17, state)</td><td>10/10</td><td class="cat-green">OSFI, IFRS 17, and US state DOI regimes create a natural Compliance Center wedge across claims and policy audit trails.</td></tr>
-        <tr><td>Vertical Fit (Insurance)</td><td>18/20</td><td class="cat-green">Life, health, group benefits, and wealth — event-log-rich insurance ops across Canada, US (John Hancock), and Asia.</td></tr>
-        <tr><td>Size &amp; Complexity</td><td>12/15</td><td class="cat-orange">CAD $60B revenue and 38K employees across multi-region admin stacks — complexity is real but Org62 signal is thin.</td></tr>
-        <tr><td>Process Pain Signals</td><td>11/15</td><td class="cat-orange">Public commitments to accelerated underwriting and STP indicate known cycle-time and rework pain in the core ops.</td></tr>
-        <tr><td>Buyer Titles Present</td><td>8/10</td><td class="cat-orange">Chief Claims Officer, Chief Underwriter, and VP Operations personas identified but not yet mapped in Org62.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Insurance + wealth &mdash; priority AFPI vertical; complex regulated ops in every geo.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud install: Sales, Service, MC Engagement, Pardot, Shield, Heroku, Force.com.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">OSFI, FINTRAC, IFRS 17, NAIC, MAS, HK-IA, AML/KYC &mdash; strong Compliance Center wedge.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Active Agentforce, Data Cloud, MuleSoft opps + in-flight Apromore POT on PS paper.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Transfer agency 200+ agents, GWAM dealer ops, JH claims &mdash; cycle-time + rework pain acknowledged.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Process Pain Signals</td><td>11/15</td><td class="cat-orange">Public commitments to accelerated underwriting and STP indicate known cycle-time and rework pain in the core ops.</td></tr>
-        <tr><td>Buyer Titles Present</td><td>8/10</td><td class="cat-orange">Chief Claims Officer, Chief Underwriter, and VP Operations personas identified but not yet mapped in Org62.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>4/6</td><td class="cat-orange">Current SOW is $0 POT on PS paper &mdash; must convert to paid ACV; expansion path not yet sized.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">Salesforce sponsor engaged (Neil Chies / Afftab Pervaiz) but no customer-side champion confirmed on LinkedIn.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Manulife Financial Corporation by mining its life and group claims and new-business underwriting event logs to expose the cycle-time and rework variants that drive OSFI complaints and STP miss rates — collapsing weeks of adjudicator and underwriter tail into a documented target flow that Agentforce Operations can automate.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Claims Intake to Settlement Cycle Time</summary>
+    <summary>1. GWAM US Transfer Agency Case Cycle-Time</summary>
     <div class="use-case-body">
-      <p>Life, disability and group benefits claims traverse intake, adjudication, medical review, and payout across Guidewire-style cores and a patchwork of legacy admin systems. Cycle-time variance is the #1 driver of NPS deterioration and regulator complaints in Canadian and US insurance. AFPI mines the full claim event log to expose loop-backs, hand-offs, and adjudicator variance, then routes automation to the two or three variants that consume 60%+ of the queue. Metric moved: average days-to-settle and rework rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Claims Admin Platform (TBD), Medical Review System (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Claims+Officer+Manulife">Chief Claims Officer</a> (Chief Claims Officer)</p>
+      <p>Manulife GWAM's US Transfer Agency runs a 200+ agent Service Cloud rollout with an open $275k SCV + Experience Cloud opp. Transfer requests today hop between the record-keeping platform, Service Cloud cases, and back-office ops &mdash; classic swivel-chair with rework loops. Mining the case + policy-admin event stream exposes where cycle time actually leaks (rework, reassignments, waiting on the client). Metric: median cycle time and first-touch resolution on transfers.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, GWAM transfer-agency record-keeping platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=GWAM+Transfer+Agency+Manulife">Head of US Transfer Agency Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. New Business Underwriting and Policy Issuance</summary>
+    <summary>2. John Hancock Life &amp; LTC Claims Adjudication</summary>
     <div class="use-case-body">
-      <p>Manulife has publicly committed to accelerated underwriting for John Hancock and Canadian life segments, but rules engines and third-party data pulls (MIB, Rx, labs) still produce weeks-long tails on non-straight-through cases. AFPI reconstructs the underwriter's actual workflow versus the target STP path and pinpoints where evidence gathering stalls. Metric moved: STP rate and application-to-issue days.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Underwriting Rules Engine (TBD), MIB / Rx / Lab feeds</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Underwriter+Manulife">Chief Underwriter</a> (Chief Underwriter)</p>
+      <p>John Hancock's US life and long-term care blocks generate high-volume, high-scrutiny claims. Adjudication mixes policy admin, medical review, and a lot of email/attachment handoffs &mdash; ripe for cycle-time and rework mining. AFPI overlays claim events on the policy-admin log to isolate the specific steps where SLAs slip. Metric: claim decision cycle time and rework rate on paid vs. denied.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Claims platform (Guidewire or legacy), policy admin</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Claims+Operations+John+Hancock">VP, Claims Operations, John Hancock</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Contact Center Servicing and Complaint Handling</summary>
+    <summary>3. Group Retirement Dealer Onboarding &amp; Servicing (Canada)</summary>
     <div class="use-case-body">
-      <p>Policyholder servicing across Canada, US (John Hancock), and Asia sees repeat contacts on beneficiary changes, address updates, and premium disputes. Each repeat call is a broken process, and each complaint carries a regulatory clock (OSFI, state DOIs, HKMA). AFPI plus Agentforce Operations mines call and case event data to identify the top five servicing journeys generating rework, then puts an agent on the two highest-ROI ones. Metric moved: first-contact resolution and repeat-contact rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Contact Center CTI (TBD), Case Management (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Operations+Manulife">Head of Customer Operations</a> (Head of Customer Operations)</p>
+      <p>The $300k GWAM Dealer Relations FSC opp indicates dealer-facing workflows are being rebuilt on Financial Services Cloud. Onboarding a new dealer and then servicing 150+ dealer relationships spans CRM, custody, and back-office systems &mdash; hard to see end-to-end without process mining. Mining the FSC + custody logs shows onboarding TAT and where servicing tickets stall. Metric: dealer time-to-productive and servicing SLA hit-rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, custody / dealer-platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=GWAM+Dealer+Relations+Manulife">Head of GWAM Dealer Relations</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. John Hancock Underwriter Desktop Swivel-Chair</summary>
+    <div class="use-case-body">
+      <p>US life underwriters flip between policy admin, MIB, illustration tools, e-signature, and email to complete a single case. Task mining the underwriter desktop reveals how much time is lost to app-switching, copy/paste, and repeated lookups that Agentforce could automate. Feeds an Agentforce Operations business case directly. Metric: underwriter cases per FTE per day and touch-time per case.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Underwriting workbench, MIB portal, email/Outlook</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Underwriting+Operations+John+Hancock">Head of US Life Underwriting Ops</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Group Benefits Enrollment and Plan Changes</summary>
+    <summary>2. GWAM Contact Center Agent Handle-Time</summary>
     <div class="use-case-body">
-      <p>Group insurance is Manulife's fastest-growing Canadian segment, and open-enrollment periods stress the mid-office with high-touch employer changes, eligibility updates, and premium reconciliations. Errors here flow directly to broker escalations and lost mandates. AFPI mines the enrollment-to-invoice process to find the exception paths that eat the margin, and Compliance Center anchors the change-audit trail plan sponsors expect. Metric moved: enrollment error rate and broker-escalation volume.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Group Benefits Admin System (TBD), Billing / Reconciliation (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Group+Benefits+Manulife">Head of Group Benefits, Canada</a> (Head of Group Benefits, Canada)</p>
+      <p>200+ GWAM Transfer Agency agents on Service Cloud have measurable AHT and wrap variability. Task mining captures each agent's on-screen actions to isolate the after-call-work steps and the tabs that eat wrap time. Pairs directly with the open Agentforce for Service opps in Manulife Philippines and Canada. Metric: AHT and after-call-work minutes per contact type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, record-keeping platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Contact+Center+Operations+Manulife">VP, GWAM Contact Center Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Advisor Onboarding and Licensing Operations</summary>
+    <summary>3. Manulife Bank Advisor Onboarding / KYC Desktop</summary>
     <div class="use-case-body">
-      <p>Manulife's advisor and MGA channel requires KYC, licensing verification, contract execution, and product training before any advisor can transact — a process that today takes weeks and is a documented drag on distribution productivity. AFPI mines the onboarding conformance path against target SLAs and shows exactly where compliance holds, contract redlines, or license checks stall the pipeline. Metric moved: advisor time-to-first-sale and channel activation rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> KYC / Compliance Platform (TBD), Licensing Registry Feed (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Advisor+Services+Manulife">Head of Advisor Services</a> (Head of Advisor Services)</p>
+      <p>Manulife Bank advisor and client onboarding pulls together KYC forms, ID verification, credit checks, and product setup across multiple screens. Task mining exposes re-keying between the onboarding portal and core banking &mdash; then names the exact steps Agentforce can replace with straight-through processing. Metric: onboarding cycle time and manual-touch count per new client.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Manulife Bank onboarding portal, core banking</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Manulife+Bank+Operations">Head of Manulife Bank Onboarding</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. OSFI Guideline E-23 Model Risk &amp; AI Lifecycle</summary>
+    <div class="use-case-body">
+      <p>OSFI Guideline E-23 (Model Risk Management) puts every AI/ML model Manulife runs &mdash; claims triage, underwriting, marketing propensity &mdash; under formal lifecycle controls. Compliance Center codifies the promote/monitor/retire process and produces continuous evidence for OSFI examiners. Especially important as Agentforce lands in claims and service. Metric: audit-ready models covered and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Model registry, MLOps pipeline, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Risk+Officer+Manulife">Chief Model Risk Officer</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. IFRS 17 Actuarial Close &amp; Reinsurance Settlement Controls</summary>
+    <div class="use-case-body">
+      <p>IFRS 17 has moved insurance actuarial close from spreadsheet-plus-attestation into a fully controlled, auditable process across every reporting unit. Compliance Center runs the close as a controlled workflow with segregation-of-duties, sign-offs, and evidence &mdash; the same shape needed for reinsurance treaty settlement. Metric: close cycle time and audit findings per reporting unit.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Actuarial engine, GL / consolidation platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Actuary+Manulife">Chief Actuary / Head of IFRS 17 Program</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. AML / KYC Alert Adjudication (Manulife Bank + Wealth)</summary>
+    <div class="use-case-body">
+      <p>FINTRAC and cross-border AML reporting require adjudicated evidence on every alert. Manulife Bank and GWAM sit on different platforms &mdash; Compliance Center gives a single controlled workflow for alert triage, escalation, and SAR filing with codified SLAs. Metric: alert-clearing SLA hit-rate and time-to-SAR.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> AML monitoring platform, case management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=AML+Compliance+Manulife">Head of AML Compliance, Manulife Canada</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Manulife Financial Corporation by mining transfer-agency, John Hancock claims, and GWAM dealer-onboarding workflows across its Salesforce and legacy policy-admin estate, task-mining underwriter and contact-center desktops to expose the swivel-chair work that Agentforce Operations can eliminate, and running OSFI E-23 model-risk, IFRS 17, and AML controls through Compliance Center to shrink cycle times, cut AHT, and produce always-on audit evidence for OSFI and FINTRAC.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

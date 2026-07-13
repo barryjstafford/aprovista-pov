@@ -62,7 +62,7 @@ const LIBRARY = [
   { name: "Lucid Group, Inc.", slug: "lucid-motors", region: "AMER", score: 88 },
   { name: "Macquarie Group Limited", slug: "macquarie-group", region: "ANZ", score: 84 },
   { name: "Magis Energia S.p.A.", slug: "magis-energia", region: "EMEA", score: 86 },
-  { name: "Manulife Financial Corporation", slug: "manulife", region: "AMER", score: 78 },
+  { name: "Manulife Financial Corporation", slug: "manulife", region: "AMER", score: 87 },
   { name: "Marelli Aftermarket Italy S.p.A.", slug: "marelli-aftermarket-italy", region: "EMEA", score: 92 },
   { name: "Mastercard Incorporated", slug: "mastercard", region: "AMER", score: 73 },
   { name: "Medibank Private Limited", slug: "medibank", region: "ANZ", score: 74 },
