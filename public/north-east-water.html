@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -113,49 +114,47 @@
   <div class="snapshot">
     <p><strong>Public Sector, Water Utility</strong></p>
     <p><strong>Revenue:</strong> A$47M &nbsp;|&nbsp; <strong>Employees:</strong> ~200 &nbsp;|&nbsp; <strong>HQ:</strong> Wodonga, Victoria, Australia</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Service Cloud (Call Center), Platform, Data Cloud, Marketing Cloud (ExactTarget), Privacy Center, Security Center</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Craig Lindley, ICT Program Director] — expected: SCADA, GIS, Gentrack/Fathom billing, ERP</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> North East Water - Apromore (<a href="https://org62.my.salesforce.com/006ed00000da8JyAAI">$80k</a>) &nbsp;·&nbsp; NEW Platform + Service Cloud Renewal (<a href="https://org62.my.salesforce.com/006ed00000FtaqGAAR">$508k</a>) &nbsp;·&nbsp; NEW Security Center (<a href="https://org62.my.salesforce.com/006ed00000QpTozAAF">$10k</a>)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Service Cloud (Unlimited Edition), Customer Community (Unlimited), Salesforce Platform, Marketing Cloud (Account Engagement), Salesforce Shield, Data Mask, Privacy Center, Sandbox (Full Copy)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> North East Water &mdash; Apromore (<a href="https://org62.my.salesforce.com/006ed00000da8JyAAI">$80k</a>) &nbsp;|&nbsp; NEW Platform + Call Center Renewal (<a href="https://org62.my.salesforce.com/006ed00000FtaqGAAR">$508k</a>) &nbsp;|&nbsp; NEW Security Center (<a href="https://org62.my.salesforce.com/006ed00000QpTozAAF">$10k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U039KBRTJN4">Arash Khorasani</a></p>
-    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Service Cloud + Data Cloud)</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Service Cloud)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">74/100</span> — T2 Develop</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t2">74/100</span> &mdash; T2 Develop</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint & Relationship</td><td>11/12</td><td class="cat-green">Multi-cloud tenant with $508k Platform renewal + Data Cloud already live.</td></tr>
-        <tr><td>Transformation & Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Attended Melbourne PI Campfire Jun 2026; $80k Apromore opp already in Stage 2.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>12/15</td><td class="cat-green">Victorian water utility — priority E&amp;U vertical with ESC regulation cycle.</td></tr>
-        <tr><td>Buyer & Champion Fit</td><td>15/20</td><td class="cat-orange">ICT Program Director, GM Corporate, and Business Transformation Lead engaged.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>11/15</td><td class="cat-orange">Price-submission workload, capital works throughput, customer-service backlogs.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>11/12</td><td class="cat-green">Multi-cloud tenant with $508k Platform + Call Center renewal in flight and Shield/Privacy Center live.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Active $80k Apromore opp already in Stage 2 &mdash; program is qualified and moving.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>12/15</td><td class="cat-green">Victorian water corporation &mdash; priority E&amp;U vertical under the ESC regulation cycle.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>11/15</td><td class="cat-orange">Price-submission workload, capital works throughput and customer-service backlogs are named pain.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>15/20</td><td class="cat-orange">GM Corporate, GM Customers and Exec Manager Planning engaged, but no confirmed process-owner sponsor.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Commercial Timing & Deal Viability</td><td>4/6</td><td class="cat-red">Active Apromore opp at $80k — below $200k ACV threshold; -4 red-flag deduction.</td></tr>
-        <tr><td>Systems & Event-Log Readiness</td><td>8/12</td><td class="cat-orange">SFDC event data solid; SCADA/GIS/billing minability not yet verified.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>4/6</td><td class="cat-red">Active Apromore opp at $80k sits below the $200k ACV threshold &mdash; incurs the -4 red-flag deduction.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>8/12</td><td class="cat-orange">Service Cloud event data is solid; SCADA, billing and works-management minability not yet verified.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help North East Region Water Corporation by mining Service Cloud, billing and capital-works event data to quantify friction across customer-to-cash, price-submission and asset-maintenance workflows — accelerating the active $80k Apromore engagement into an ESC-cycle-aligned enterprise program that also de-risks the $508k Salesforce renewal.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Customer-to-Cash Cycle Time (Move-in → First Bill → Payment)</summary>
+    <summary>1. Meter-to-Cash Cycle Time (Move-in &rarr; First Bill &rarr; Payment)</summary>
     <div class="use-case-body">
-      <p>NEW serves ~120k customers across 39 north-east Victorian localities on a Service Cloud + billing stack that generates thousands of daily events. Rework loops between call-centre agents, meter reads and billing exceptions inflate first-bill lag and drive avoidable inbound contacts. AFPI mines Service Cloud case events plus billing to reveal the exact steps where customers stall or churn calls. Target: 20-30% reduction in cost-to-serve per active connection and measurable NPS lift.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Billing System (Gentrack/Fathom TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Marni+Jones+North+East+Water">Marni Jones</a> (General Manager Customers, Community and Culture)</p>
+      <p>NEW serves ~120k customers across 39 north-east Victorian localities on a Service Cloud + billing stack that generates thousands of daily events. Rework loops between call-centre agents, meter reads and billing exceptions inflate first-bill lag and drive avoidable inbound contacts. Process mining Service Cloud case events joined to billing reveals exactly where customers stall or repeat-call. Target: 20-30% reduction in cost-to-serve per active connection and measurable NPS lift.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Billing System (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Marni+Jones+North+East+Water">Marni Jones</a> (GM Customers, Community and Culture)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. ESC Price-Submission &amp; Regulatory Reporting Workflow</summary>
+    <summary>2. ESC Price-Submission (Water Plan) Workflow</summary>
     <div class="use-case-body">
-      <p>Victorian water corporations submit five-yearly price determinations to the Essential Services Commission — a heavyweight, cross-functional cycle covering forecasting, PREMO customer outcomes, capex justification and evidence packs. Mining the end-to-end submission workflow surfaces where iterations stall between finance, engineering and executive review. AFPI shortens the next Water Plan cycle and creates an auditable trail for ESC scrutiny. Target: 15-25% reduction in cycle time to submission-ready.</p>
+      <p>Victorian water corporations submit five-yearly price determinations to the Essential Services Commission &mdash; a heavyweight cycle covering forecasting, PREMO customer outcomes, capex justification and evidence packs. Mining the end-to-end submission workflow surfaces where iterations stall between finance, engineering and executive review. AFPI shortens the next Water Plan cycle and creates an auditable trail for ESC scrutiny. Target: 15-25% reduction in cycle time to submission-ready.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Platform, SharePoint / M365</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Anthony+Hernan+North+East+Water">Anthony Hernan</a> (GM Corporate)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -165,34 +164,78 @@
   <details>
     <summary>3. Capital Works &amp; Asset Renewal Delivery</summary>
     <div class="use-case-body">
-      <p>Water and sewer infrastructure renewal across 39 localities is a multi-year capital program with hand-offs between planning, procurement, contractors and asset registers. Deadlines slip when approvals loop and RFI's queue. AFPI mines project-management and works-order events to expose bottleneck stages and contractor variance. Target: 10-15% shorter time-to-commissioning and improved capex forecast accuracy.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Works Management System, ERP/Finance (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kevin+Freeman+North+East+Water">Kevin Freeman</a> (Executive Manager - Planning &amp; Infrastructure)</p>
+      <p>Water and sewer infrastructure renewal across 39 localities is a multi-year capital program with hand-offs between planning, procurement, contractors and asset registers. Deadlines slip when approvals loop and RFIs queue. Process mining works-order and project events exposes bottleneck stages and contractor variance. Target: 10-15% shorter time-to-commissioning and improved capex forecast accuracy.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Works Management System, ERP / Finance (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kevin+Freeman+North+East+Water">Kevin Freeman</a> (Executive Manager &mdash; Planning &amp; Infrastructure)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <details>
-    <summary>4. Field-Service Dispatch &amp; SCADA Exception Response</summary>
-    <div class="use-case-body">
-      <p>Water-main breaks, sewer overflows and treatment-plant alarms generate SCADA events that must translate into field crew dispatch within SLA. Response variance across the Murray and Central operations zones drives customer complaints and regulatory attention. AFPI mines SCADA alerts joined with dispatch and completion events to reveal where minutes are lost. Target: 20% reduction in mean-time-to-restore and fewer SLA breaches on Priority-1 events.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> SCADA (TBD), Field-Service Dispatch</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=John+Day+North+East+Water">John Day</a> (General Manager Environment, Systems, and Operations)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
+  <h2>Top 3 Task Mining Use Cases</h2>
 
   <details>
-    <summary>5. Customer Hardship &amp; Bill-Assistance Case Handling</summary>
+    <summary>1. Call-Centre Agent Handle-Time &amp; After-Call Wrap</summary>
     <div class="use-case-body">
-      <p>Regional Victorian water customers face material affordability pressure; ESC customer-outcome commitments make hardship handling a regulated process. Mining the hardship workflow across Service Cloud cases, payment-plan status and community engagement touchpoints surfaces where vulnerable customers fall through gaps. AFPI improves both compliance and customer trust — a direct PREMO metric input. Target: 25% faster hardship-plan activation and lower disconnection-warning rates.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Marketing Cloud</p>
+      <p>NEW's Service Cloud call centre handles billing enquiries, faults and hardship intake across a small team &mdash; AHT and wrap variability drive both cost and NPS. Task mining captures each agent's on-screen actions to isolate app-switching, copy/paste and the tabs that eat wrap time. Feeds directly into an Agentforce for Service business case that lifts self-service deflection. Metric: AHT and after-call-work minutes per contact type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, Billing lookup screens</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Debbie+Mackinlay+North+East+Water">Debbie Mackinlay</a> (Manager Customer Engagement)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Celonis, Signavio, ServiceNow, UiPath or ABBYY mentions tied to North East Water in Slack or web signals — the Apromore Melbourne PI Campfire (Jun 2026) landed uncontested with NEW alongside Powercor, South East Water, Momentum and Vicwater.</span></h2>
+  <details>
+    <summary>2. Billing-Exception &amp; Meter-Read Rework</summary>
+    <div class="use-case-body">
+      <p>Estimated reads, transposed digits and account-mismatch exceptions push work back into billing analysts who re-key between the meter-data platform and the customer master. Task mining the analyst desktop quantifies re-keying time, exposes which exception codes eat the most human touch, and names the exact automations Agentforce or Flow can replace them with. Metric: exceptions resolved per analyst hour and rework rate on billing runs.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Billing System desktop, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Anthony+Hernan+North+East+Water">Anthony Hernan</a> (GM Corporate)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Field-Service Dispatch &amp; SCADA Exception Response</summary>
+    <div class="use-case-body">
+      <p>Water-main breaks, sewer overflows and treatment-plant alarms generate SCADA events that dispatchers translate into field-crew jobs against SLA. Task mining the dispatcher desktop reveals where seconds are lost bouncing between the SCADA console, mapping and the works-order form. Combined with process mining of the end-to-end response, it names the highest-value Agentforce Operations play in Ops. Metric: mean-time-to-dispatch and SLA breach rate on Priority-1 events.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SCADA console (TBD), Field-Service Dispatch</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=John+Day+North+East+Water">John Day</a> (GM Environment, Systems and Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. ESC PREMO Customer-Outcome Evidence</summary>
+    <div class="use-case-body">
+      <p>The ESC's PREMO framework demands ongoing evidence that customer commitments (price, reliability, environment, market, outcomes) are being met &mdash; not just at submission time. Compliance Center runs each PREMO commitment as a controlled workflow with owners, KPIs, sign-offs and always-on evidence. Ends the pre-submission scramble that consumes finance and customer teams. Metric: audit-ready commitments covered and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Salesforce Platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Anthony+Hernan+North+East+Water">Anthony Hernan</a> (GM Corporate)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Safe Drinking Water Act &amp; EPA Notifiable-Incident Controls</summary>
+    <div class="use-case-body">
+      <p>NEW is bound by the Safe Drinking Water Act 2003 (Vic) and EPA Victoria reporting duties &mdash; every notifiable water-quality or environmental incident has statutory reporting timeframes. Compliance Center codifies incident-to-notification as a controlled workflow with segregation-of-duties and produces continuous evidence for Department of Health and EPA audits. Metric: notification SLA hit-rate and audit findings per reporting cycle.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SCADA / Lab LIMS (TBD), Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=John+Day+North+East+Water">John Day</a> (GM Environment, Systems and Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Customer Hardship &amp; Family-Violence Policy Compliance</summary>
+    <div class="use-case-body">
+      <p>ESC's customer-service code and family-violence obligations put strict controls around hardship assessment, payment-plan setup and disconnection warnings. Compliance Center runs hardship-to-resolution as a controlled workflow with codified SLAs, mandatory referrals and evidence &mdash; a direct PREMO input and a family-violence audit shield. Metric: hardship-plan activation cycle time and policy-compliant disconnection rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Marketing Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Debbie+Mackinlay+North+East+Water">Debbie Mackinlay</a> (Manager Customer Engagement)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help North East Region Water Corporation by mining meter-to-cash, ESC price-submission and capital-works flows on its Service Cloud and billing stack, task-mining call-centre wrap, billing-exception rework and SCADA dispatch desktops to quantify the swivel-chair work that Agentforce Operations can eliminate, and running PREMO customer-outcome evidence, Safe Drinking Water Act incident reporting and hardship-policy controls through Compliance Center &mdash; converting the active $80k Apromore opp into an ESC-cycle-aligned enterprise program that also de-risks the $508k Salesforce renewal.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -203,7 +246,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

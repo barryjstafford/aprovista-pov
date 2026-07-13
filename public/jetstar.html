@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -112,42 +113,40 @@
   <h1>Jetstar Airways Pty Ltd</h1>
   <div class="snapshot">
     <p><strong>Travel, Transportation &amp; Hospitality, Low-Cost Airline</strong></p>
-    <p><strong>Revenue:</strong> A$13.4B (Qantas Group Domestic + Jetstar segment) &nbsp;|&nbsp; <strong>Employees:</strong> ~10,000 &nbsp;|&nbsp; <strong>HQ:</strong> Melbourne, Australia</p>
-    <p><strong>Major Subsidiaries:</strong> Jetstar Asia Airways (Singapore), Jetstar Japan Co. Ltd., Jetstar Pacific Airlines (Vietnam), Jetstar Asia Holdings Pty Ltd</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud / Full CRM (873 seats), Platform (900+3556 seats), Marketing Cloud ExactTarget (612), CPQ (SteelBrick), Analytics Cloud, Tableau, Data Cloud, Informatica CDGC (in-flight)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Navitaire (passenger service system, industry standard for LCCs), Amadeus Altéa (departure control), Sabre (crew/ops), Capgemini SI partner presence [Slack]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Jetstar Airways - Apromore (<a href="https://org62.my.salesforce.com/006ed00000ecGxZAAU">$95k</a>) | INFA CDGC Land (<a href="https://org62.my.salesforce.com/006ed00000e3ZWtAAM">$229k</a>) | Jetstar - Field Service (<a href="https://org62.my.salesforce.com/006ed00000cExn7AAC">$200k</a>)</p>
+    <p><strong>Revenue:</strong> ~A$5.7B (FY24/25) &nbsp;|&nbsp; <strong>Employees:</strong> ~10,000 &nbsp;|&nbsp; <strong>HQ:</strong> Melbourne, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> Jetstar Japan Co. Ltd. (33% Qantas Group)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales &amp; Service Cloud (Unlimited), CRM Analytics Growth, Marketing Cloud Engagement (ExactTarget), Social Studio, Loyalty Management (Unlimited), Salesforce Shield (Event Monitoring, Field Audit Trail, Platform Encryption), Digital Engagement, Customer 360 Privacy Center, Data Cloud, Subscription Management, Einstein for Service, Live Agent / LiveMessage</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Jetstar Airways - Apromore (<a href="https://org62.my.salesforce.com/006ed00000ecGxZAAU">$95k</a>) &nbsp;|&nbsp; INFA CDGC Land (<a href="https://org62.my.salesforce.com/006ed00000e3ZWtAAM">$229k</a>) &nbsp;|&nbsp; Jetstar - Field Service (<a href="https://org62.my.salesforce.com/006ed00000cExn7AAC">$200k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U09MEGGAJGL">Jodi Smith</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
-  <details class="pov-aproscore" open>
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">87/100</span> — T1 Pursue</summary>
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">83/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Active Apromore Signal</td><td>15/15</td><td class="cat-green">Live Org62 opp "Jetstar Airways - Apromore" $95k at stage 02 — Deal in flight.</td></tr>
-        <tr><td>Process Complexity &amp; Volume</td><td>14/15</td><td class="cat-green">LCC ops: turnarounds, crew rostering, MRO, disruption recovery across 4 country subs.</td></tr>
-        <tr><td>Buyer Title Coverage</td><td>13/15</td><td class="cat-green">COO, CTO, Head of Ops Delivery, Head of Ops Strategy/Cost, EM Transformation all in Org62.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Co-Sell Fit</td><td>13/15</td><td class="cat-green">Multi-cloud install: Sales, Service, MC, Tableau, Data Cloud, Informatica CDGC, Field Service opp.</td></tr>
-        <tr><td>Regional/ANZ Enablement Momentum</td><td>10/10</td><td class="cat-green">ANZ Bank, Westpac, Origin already live proof points; Ron van Rooij running region [Slack].</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Multi-cloud install: Sales, Service, MC Engagement, CRM Analytics, Loyalty, Shield, Data Cloud, Rev Cloud, Digital Engagement.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">LCC economics on 25-min turnarounds, IROP recovery, ACL refund cycle, MRO AOG — all high-frequency, high-margin pain.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Active $95k Apromore opp, $229k INFA CDGC, $200k Field Service, Data Cloud, Rev Cloud replacement — clean co-sell shape.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Airlines / transportation is a priority AFPI vertical &mdash; complex regulated ops, event-rich systems.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-green">Apromore opp already in stage 02 with defined economic buyer; $200k+ ACV expansion path visible.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Compliance-Center Wedge</td><td>4/10</td><td class="cat-orange">CASA/aviation-safety regs exist but no obvious SOX/GDPR-style enforcement urgency.</td></tr>
-        <tr><td>Data Readiness (Event Logs)</td><td>6/10</td><td class="cat-orange">Core ops run on Navitaire/Sabre — event-log extraction needs MuleSoft SFTP recipe [Slack].</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">CASA / aviation-safety regs and ACCC / ACL refund exposure exist but no SOX / IFRS-17-grade enforcement urgency.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>8/12</td><td class="cat-orange">Salesforce estate is event-rich; airline ops platforms (Navitaire / Sabre / Altéa) need a MuleSoft SFTP recipe to mine.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Jetstar Airways Pty Ltd by mining aircraft turnaround, crew disruption-recovery, and customer-refund processes to cut ground-delay minutes, reduce EU261/consumer-law compensation exposure, and lift Qantas Group's on-time-performance — turning the in-flight $95k Apromore opp into a multi-process expansion under the Agentforce Operations co-sell.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Aircraft Turnaround &amp; On-Time Performance</summary>
     <div class="use-case-body">
-      <p>Mine the end-to-end turnaround sequence (block-on → cabin clean → catering → fuel → boarding → block-off) across A320/787 fleets and 4 country subs. Jetstar's LCC economics depend on 25-minute turns; every extra minute of ground time compounds into missed slots and misconnected pax. AFPI reveals which handling stations, activities, and vendor combinations consistently blow the SLA and quantifies the OTP lift from removing them. Metric moved: turnaround minutes, OTP15 %.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Amadeus Altéa (departure control), Navitaire</p>
+      <p>Mine the end-to-end turnaround sequence &mdash; block-on, cabin clean, catering, fuel, boarding, block-off &mdash; across A320 / 787 fleets and the remaining Group ports. Jetstar's LCC economics depend on 25-minute turns, so every extra minute compounds into missed slots and misconnected pax. AFPI exposes which handling stations, activities, and vendor combinations consistently blow the SLA and quantifies the OTP lift from fixing them. Metric: turnaround minutes and OTP15 %.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Amadeus Altéa (departure control), Navitaire PSS</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=David+Lau+Jetstar">David Lau</a> (Head of Group Operations &amp; Engineering)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -156,8 +155,8 @@
   <details>
     <summary>2. Irregular-Operations (IROP) Disruption Recovery</summary>
     <div class="use-case-body">
-      <p>Mine crew re-assignment, aircraft swap, passenger rebooking, and hotel/meal voucher issuance during weather, tech, or industrial disruption. Jetstar has been repeatedly in Australian media over cancellations and ACL/consumer-law remedies — AFPI shows the actual variant paths from first delay to pax re-accommodation and where a Service Cloud + Data Cloud agent could collapse hours off the recovery window. Metric moved: mean recovery time, refund-cycle days, ACCC complaint volume.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Sabre (crew), Service Cloud</p>
+      <p>Mine crew re-assignment, aircraft swap, passenger rebooking, and hotel / meal voucher issuance during weather, tech, or industrial disruption. Jetstar has been repeatedly in Australian media for cancellations and ACL remedies &mdash; AFPI shows the actual variant paths from first delay to pax re-accommodation and where a Service Cloud + Data Cloud agent could collapse hours off the recovery window. Directly reduces ACCC complaint volume and refund exposure. Metric: mean recovery time and refund-cycle days.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sabre (crew / ops), Service Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ben+Sacilotto+Jetstar">Ben Sacilotto</a> (Head of Operations Delivery)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -166,7 +165,51 @@
   <details>
     <summary>3. Customer Refund &amp; Compensation Cycle</summary>
     <div class="use-case-body">
-      <p>Mine the full case-to-cash refund process — Service Cloud case creation, eligibility check, finance approval, payment release — for cancelled/delayed-flight compensation. Jetstar operates under Australian Consumer Law plus EU261 exposure on Singapore/Japan routes; each stalled refund is direct margin bleed and a Twitter reputation hit. Pairs with the active Field Service and Service Cloud Voice opps as the Agentforce Operations co-sell wedge. Metric moved: refund cycle time, cost-to-serve per case, NPS.</p>
+      <p>Mine the full case-to-cash refund process &mdash; Service Cloud case creation, eligibility check, finance approval, payment release &mdash; for cancelled and delayed-flight compensation. Jetstar operates under Australian Consumer Law plus EU261 exposure on international routes; each stalled refund is direct margin bleed and a reputational hit. Pairs with the active Field Service and Service Cloud Voice opps as the Agentforce Operations co-sell wedge. Metric: refund cycle time, cost-to-serve per case, NPS.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, SAP Finance</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mary-Lou+Cann+Jetstar">Mary-Lou Cann</a> (Head of Customer Service)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Contact-Centre Refund &amp; Rebook Agent Desktop</summary>
+    <div class="use-case-body">
+      <p>Refund and rebook agents flip between Service Cloud, Navitaire, payment gateway, and email/attachment tooling to close a single disrupted-pax case. Task mining captures on-screen actions to isolate the wrap steps and the tabs that eat AHT, then names exactly where an Agentforce for Service agent can automate the swivel-chair. Feeds the Digital Engagement + Einstein for Service install directly. Metric: AHT, after-call-work minutes, and case-touch count per contact.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, Navitaire PSS</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mary-Lou+Cann+Jetstar">Mary-Lou Cann</a> (Head of Customer Service)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Line-Maintenance Technician &amp; MRO Work-Card Desktop</summary>
+    <div class="use-case-body">
+      <p>Line technicians on the tarmac shuttle between the MRO system, parts-fetch app, defect log, and paper sign-off, driving avoidable AOG (aircraft-on-ground) minutes. Task mining the mechanic desktop across the A320 and 787 fleets exposes where the fix isn't the fix &mdash; it's the paperwork and parts-staging. Ties into the active $200k Salesforce Field Service opp as the on-the-ground workbench. Metric: mechanic touch-time per work-card, AOG minutes avoided.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, TRAX / AMOS</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Matt+Franzi+Jetstar">Matt Franzi</a> (Chief Operating Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Ancillary-Revenue Digital Booking &amp; Payment Desktop</summary>
+    <div class="use-case-body">
+      <p>Mine the passenger digital journey &mdash; search, seat select, bag / meal / insurance upsell, payment &mdash; on Marketing Cloud and Navitaire storefront pages to find drop-off variants that suppress ancillary attach rate. Jetstar's model is ancillary-dependent (bags, seats, Club Jetstar), and task mining shows exactly where the funnel breaks so Agentforce recovery flows and Rev Cloud subscription management can plug it. Metric: ancillary revenue per pax, funnel completion %.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud Engagement, Navitaire storefront</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Nigel+Fanning+Jetstar">Nigel Fanning</a> (Head of Product &amp; Ancillary Revenue, Jetstar Group)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. ACCC / Australian Consumer Law Refund &amp; Cancellation Controls</summary>
+    <div class="use-case-body">
+      <p>ACCC has been openly targeting Australian airlines over misleading conduct on cancellations and refund timeliness. Compliance Center codifies the case-to-refund workflow with segregation-of-duties, SLA-clock evidence, and auditable exception handling &mdash; producing continuous proof that Jetstar honoured ACL remedies. Metric: audit-ready refund cases and mean-time-to-evidence per complaint.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, SAP Finance</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mary-Lou+Cann+Jetstar">Mary-Lou Cann</a> (Head of Customer Service)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -174,26 +217,26 @@
   </details>
 
   <details>
-    <summary>4. MRO &amp; Line-Maintenance Work-Order Flow</summary>
+    <summary>2. CASA Safety-Management &amp; Maintenance-Release Controls</summary>
     <div class="use-case-body">
-      <p>Mine defect-report → work-card → parts-fetch → sign-off cycles for line and heavy maintenance across the domestic and Asian fleets. Airlines routinely lose flying hours to AOG (aircraft-on-ground) events driven by parts staging and inspector hand-offs, not the fix itself. AFPI overlays event logs onto the ideal MRO variant and quantifies AOG hours avoided — a natural extension of the in-flight Salesforce Field Service opportunity. Metric moved: AOG hours, mechanic touch-time, parts-fetch latency.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, TRAX/AMOS</p>
+      <p>CASA CASR Part 42 puts continuing-airworthiness and maintenance-release under formal controlled processes; every defect deferral and Certificate of Release to Service must be evidenced. Compliance Center runs the defect-adjudication-to-release workflow as a controlled process with sign-offs, feeding the CASA audit trail continuously rather than as an annual scramble. Metric: audit findings per fleet and time-to-evidence per CRS.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, TRAX / AMOS</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Matt+Franzi+Jetstar">Matt Franzi</a> (Chief Operating Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Ancillary-Revenue &amp; Digital-Booking Funnel</summary>
+    <summary>3. Loyalty &amp; PCI-DSS Payments Data-Handling Controls</summary>
     <div class="use-case-body">
-      <p>Mine the passenger digital journey — search → seat select → bag/meal/insurance upsell → payment — to find drop-off variants that suppress ancillary attach rate. Jetstar's model is ancillary-dependent (bags, seats, Club Jetstar) and Marketing Cloud + Data Cloud already sit in the stack, so process mining directly informs Agentforce recovery flows. Ties into the Rev Cloud subscription-management replacement opp. Metric moved: ancillary revenue per pax, funnel completion %.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud, Navitaire</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Nigel+Fanning+Jetstar">Nigel Fanning</a> (Head of Product &amp; Ancillary Revenue, Jetstar Group)</p>
+      <p>Jetstar runs Loyalty Management Growth, Marketing Cloud, and Rev Cloud subscription management &mdash; all touching passenger PII, points balances, and card-present / card-not-present flows. Compliance Center pairs with Salesforce Shield (already installed &mdash; Event Monitoring, Field Audit Trail, Platform Encryption) to codify data-handling, consent, and PCI-DSS scope-boundary controls into a single audited workflow. Metric: control-coverage % and audit-findings per program.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Loyalty Management, Marketing Cloud Engagement</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ryan+Campbell+Jetstar">Ryan Campbell</a> (Head of Technology, Customer &amp; Corporate)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent competitor mentions tied specifically to Jetstar in Slack or public sources — Celonis is the Apromore competitor generally cited in ANZ deals but is not attached to this account.</span></h2>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Jetstar Airways Pty Ltd by mining aircraft turnaround, IROP recovery, and refund-cycle processes across Navitaire, Sabre, and Service Cloud to lift OTP15 and cut refund cycle days, task-mining contact-centre and line-maintenance desktops to strip swivel-chair minutes that Agentforce Operations can automate, and running ACCC consumer-law, CASA airworthiness, and PCI-DSS / loyalty data controls through Compliance Center to produce always-on audit evidence &mdash; turning the in-flight $95k Apromore opp into a multi-process expansion under the Agentforce Operations co-sell.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

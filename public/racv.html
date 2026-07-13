@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Royal Automobile Club of Victoria (RACV) Ltd — AFPI POV</title>
+<title>Royal Automobile Club of Victoria (RACV) Limited — AFPI POV</title>
 <style>
   body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
          color: #1a1a1a; line-height: 1.45; background: #fff; }
@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -109,46 +110,44 @@
   </div>
 </header>
 <main>
-  <h1>Royal Automobile Club of Victoria (RACV) Ltd</h1>
+  <h1>Royal Automobile Club of Victoria (RACV) Limited</h1>
   <div class="snapshot">
-    <p><strong>Consumer Services, Mutual / Automotive Club</strong></p>
-    <p><strong>Revenue:</strong> A$2.93B &nbsp;|&nbsp; <strong>Employees:</strong> 3,001+ &nbsp;|&nbsp; <strong>HQ:</strong> Noble Park North, Victoria, Australia</p>
-    <p><strong>Major Subsidiaries:</strong> RACV Finance, RACV Solar (Gippsland Solar), Insurance Manufacturers of Australia (IMA JV with IAG), RACV Cape Schanck Resort, RACV Community Foundation</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Full CRM), Service Cloud, Field Service, Marketing Cloud / ExactTarget, MuleSoft, Tableau, Customer Portal, Data360, Sandbox &amp; Platform</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Nicola Wiggins]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> RACV - Apromore (<a href="https://org62.my.salesforce.com/006ed00000cKN0zAAG">$153k</a>) | RACV - Field Service #DF2U (<a href="https://org62.my.salesforce.com/006ed00000NayObAAJ">$748k</a>) | RACV - AELA (<a href="https://org62.my.salesforce.com/006ed00000T95e5AAB">$500k</a>)</p>
+    <p><strong>Consumer Services, Motoring Club &amp; Mutual (with Insurance/Finance JVs)</strong></p>
+    <p><strong>Revenue:</strong> A$2.93B &nbsp;|&nbsp; <strong>Employees:</strong> 3,001+ &nbsp;|&nbsp; <strong>HQ:</strong> Melbourne, Victoria, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> R.A.C.V. Finance, Intelematics Australia, Gippsland Solar (RACV Solar), Nationwide Group, Insurance Manufacturers of Australia (IMA JV with IAG)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales &amp; Service Cloud (Unlimited Edition), Marketing Cloud Engagement (Enterprise), ExactTarget Enterprise, Marketing Cloud Customer Data Platform, Social Studio, SMS/MMS Mobile Messages, Force.com Platform Embedded, Customer Community Plus, Salesforce Platform (Signature Success)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> RACV &mdash; Data360 (<a href="https://org62.my.salesforce.com/006ed00000D8uNJAAZ">$252k</a>) &nbsp;|&nbsp; RACV Renewal &mdash; Full CRM + Sandbox + Org Perms (<a href="https://org62.my.salesforce.com/006ed00000NcOLpAAN">$196k</a>) &nbsp;|&nbsp; RACV Renewal &mdash; (ARY) Touchless Renewal Automation (<a href="https://org62.my.salesforce.com/006ed00000Ne3F3AAJ">$12k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G8Q7LAN6">Nicola Wiggins</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">89/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">87/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Full CRM, MuleSoft, MC, Tableau, Field Service, Data360; $5.3M renewal in flight.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Active RACV-Apromore opp ($153k, Stage 02) closing Nov-2026 — deal already qualified.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">Apromore opp confirms champion; SF CTO ProServ engagement ($650k) opens exec sponsor.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Roadside dispatch, claims handling, membership renewals — all high-volume, event-rich.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Field Service #DF2U + AELA + Data360 signal an active operations transformation.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Full CRM Unlimited, MC Engagement, ExactTarget, MC CDP, Social Studio, Force.com, Signature Success.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">Live SFDC estate + Data360 opp signals event-log foundation Apromore can mine day one.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Roadside dispatch, claims, membership renewals, solar installs &mdash; all high-volume, event-rich.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-green">Data360 in Stage 04 + Touchless Renewal Automation opp signal live operations transformation.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-green">$252k Data360 Confirming Value + full-CRM renewal in flight &mdash; multiple entry vectors.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-orange">APRA regulation applies via IMA insurance JV, but mutual structure lowers direct pressure.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>12/15</td><td class="cat-orange">Automotive club/mutual is adjacent — FS via IMA and Finance JVs lifts the score.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-orange">APRA applies via IMA insurance JV, but mutual structure lowers direct compliance urgency.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>12/15</td><td class="cat-orange">Motoring club/mutual is adjacent to priority verticals; Insurance + Finance JVs lift the score.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Royal Automobile Club of Victoria (RACV) Ltd by mining the roadside-assistance dispatch, insurance claims, and membership renewal journeys across their live Salesforce, MuleSoft, and Field Service stack — collapsing discovery from weeks to days, exposing the exact bottlenecks driving cycle-time and NPS erosion, and building the event-log foundation that will let Agentforce Operations act on those processes without a costly Celonis-style two-specialist model.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Roadside Assistance Dispatch-to-Resolution</summary>
     <div class="use-case-body">
-      <p>RACV's flagship service — over 2 million call-outs per year — runs through Field Service dispatch, contractor networks, and member callback loops. Variability in triage, tow vs on-site repair decisions, and contractor SLAs drives cycle-time and satisfaction swings that today are only visible in aggregate dashboards. Apromore surfaces the exact deviations (retriage, callback, missed-ETA) as process variants and quantifies their cost in minutes and $ per member. That directly informs the RACV Field Service #DF2U project already in flight.</p>
+      <p>RACV's flagship service &mdash; more than 2 million roadside call-outs per year &mdash; runs across Field Service dispatch, a contractor network, and member-callback loops. Variability in triage, tow-vs-onsite decisions, and contractor SLAs drives cycle-time and NPS swings that today are only visible in aggregate dashboards. Apromore mines the dispatch event log to surface exactly which variants (retriage, callback, missed-ETA) blow out response time and quantify their cost per member. Metric: median dispatch-to-resolution time and % of jobs within SLA.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, MuleSoft (contractor integrations)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=General+Manager+Motoring+RACV">General Manager, Motoring &amp; Mobility</a> (RACV)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=General+Manager+Motoring+Mobility+RACV">General Manager, Motoring &amp; Mobility</a> (RACV)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -156,9 +155,9 @@
   <details>
     <summary>2. Insurance Claims Lifecycle (IMA JV)</summary>
     <div class="use-case-body">
-      <p>Through Insurance Manufacturers of Australia (JV with IAG), RACV handles home and motor claims for Victorian members. Claims processes are notorious for rework loops (assessor callbacks, disputed excesses, repair-network handoffs) that inflate cycle time and drive complaint volume. Apromore's variant analysis on the claims event log will pinpoint which handoffs cause the top 20% of duration outliers — the classic input for STP (straight-through processing) uplift. Every 10% cycle-time reduction on ~$1B claims volume is material.</p>
+      <p>Through Insurance Manufacturers of Australia (30% JV with IAG), RACV underwrites home and motor claims for Victorian members. Claims processes are notorious for rework loops &mdash; assessor callbacks, disputed excesses, repair-network handoffs &mdash; that inflate cycle time and drive complaint volume. Apromore's variant analysis on the claims event log will pinpoint which handoffs cause the top 20% of duration outliers, the classic input for straight-through-processing uplift. Metric: median claim cycle time and rework rate per claim type.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, IAG core claims platform</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Claims+RACV+Insurance">Head of Claims Operations</a> (RACV Insurance)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Claims+Operations+RACV+Insurance">Head of Claims Operations</a> (RACV Insurance / IMA)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -166,34 +165,78 @@
   <details>
     <summary>3. Membership Onboarding, Renewal &amp; Churn Prevention</summary>
     <div class="use-case-body">
-      <p>RACV's mutual model depends on member retention across ~2.1M memberships — motoring, home, insurance cross-hold. The renewal journey (touchless renewal automation is already an in-flight SF opp) blends Sales Cloud, Marketing Cloud/ExactTarget, and Customer Portal, with hand-offs to call centre for exceptions. Apromore will map the actual renewal path per cohort and expose where members drop out or downgrade — feeding both the ARY Touchless Renewal opp and the Marketing Cloud journey design.</p>
+      <p>RACV's mutual model rests on member retention across 2.29M memberships spanning motoring, home, and insurance cross-hold. The renewal journey &mdash; the subject of the live ARY Touchless Renewal Automation opp &mdash; blends Sales Cloud, Marketing Cloud/ExactTarget, and the customer portal, with hand-offs to the call centre for exceptions. Apromore will map the actual renewal path per cohort and expose where members drop out or downgrade, directly feeding the touchless-renewal design. Metric: renewal completion rate and touchless-renewal conversion per cohort.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, Marketing Cloud / ExactTarget</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Membership+RACV">Head of Membership &amp; Retention</a> (RACV)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Membership+Retention+RACV">Head of Membership &amp; Retention</a> (RACV)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Contact Centre Agent Handle-Time (Emergency Roadside)</summary>
+    <div class="use-case-body">
+      <p>RACV's Emergency Roadside contact centre agents juggle the Field Service console, member CRM, contractor dispatch, and internal knowledge tools on every call. Task mining captures each agent's on-screen actions to isolate the after-call-work steps and application-switches that eat wrap time. This feeds an Agentforce Operations business case for automated case creation and dispatch. Metric: average handle time and after-call-work minutes per call type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud console, Field Service dispatch console</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Emergency+Roadside+Contact+Centre+RACV">Head of Emergency Roadside Contact Centre</a> (RACV)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. RACV Solar Order-to-Install</summary>
+    <summary>2. Claims Assessor Desktop Swivel-Chair (IMA)</summary>
     <div class="use-case-body">
-      <p>RACV Solar (formerly Gippsland Solar) runs a quote → survey → install → activation process that touches sales, subcontracted electricians, DNSP grid-connect approvals, and finance. Long tail delays in DNSP approvals and installer scheduling erode margin and NPS. Apromore can benchmark median vs 90th-percentile install cycle time, identify the specific approval and rework loops that stretch the tail, and give ops a live dashboard rather than a monthly rear-view. Direct input to any RACV energy expansion.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, RACV Solar quoting/CRM</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=General+Manager+RACV+Solar">General Manager</a> (RACV Solar)</p>
+      <p>Claims assessors move between the core claims platform, Salesforce Service Cloud, repair-network portals, imaging/photo review, and email/attachment handling for each assessment. Task mining exposes how much of a case is copy-paste, re-keying, and repeated lookups that Agentforce could automate. It names the exact steps to target for straight-through processing. Metric: assessor cases per FTE per day and touch-time per claim.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Claims platform desktop, Salesforce Service Cloud console</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Claims+Assessment+RACV+IMA">Head of Claims Assessment</a> (IMA / RACV Insurance)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Resort &amp; Leisure Guest Journey (Cape Schanck, Torquay, Healesville)</summary>
+    <summary>3. RACV Finance Loan Origination Desktop</summary>
     <div class="use-case-body">
-      <p>The RACV Leisure - Digital Twin - Resorts opp is already open in Org62. Guest journeys (booking → arrival → in-stay service → checkout → feedback) span PMS, Service Cloud, Marketing Cloud, and F&amp;B systems. Apromore turns booking + PMS event logs into a process twin, exposing where service requests slip SLA, where upsell moments are missed, and how the Club-member vs pay-guest paths actually diverge. Perfect scope-shaping input for the digital twin engagement.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Resort PMS, Salesforce Service Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=General+Manager+RACV+Resorts">General Manager, RACV Leisure &amp; Resorts</a> (RACV)</p>
+      <p>R.A.C.V. Finance officers pull together applicant data, credit-bureau pulls, ID verification, and loan-management system entries across multiple screens to originate a personal or car loan. Task mining exposes re-keying between the origination portal and the servicing platform, then names the exact steps Agentforce can replace with straight-through processing. Metric: origination cycle time and manual-touch count per approved loan.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> RACV Finance origination portal, loan management system</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Operations+RACV+Finance">Head of Operations, RACV Finance</a> (RACV)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No competitor process-mining deployment surfaced in Slack or web signals tied specifically to RACV. Slack ANZ SE guidance from Apr-2026 [<a href="https://salesforce.enterprise.slack.com/archives/C04PFS7UYNA/p1777440081610229">Slack</a>] flags <strong>Celonis</strong> as the incumbent to displace regionally, with ANZ Bank and Westpac as live Apromore proof points on RACV's doorstep. &nbsp;·&nbsp; <strong>ServiceNow</strong> may appear in the RACV IT operations stack — worth field-verifying to avoid an overlap narrative.</span></h2>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. APRA / Prudential Controls on the IMA Insurance JV</summary>
+    <div class="use-case-body">
+      <p>The IMA insurance joint venture is regulated by APRA, which requires evidenced controls over underwriting, claims decisions, and complaint handling. Compliance Center runs these as controlled workflows with segregation-of-duties, sign-offs, and continuous evidence for APRA examiners. Especially important as Agentforce lands in claims and service. Metric: audit-ready control coverage and mean-time-to-evidence per examination.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Underwriting/claims platform, GRC / audit register</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Risk+Officer+RACV+Insurance">Chief Risk Officer</a> (RACV Insurance / IMA)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Australian Consumer Law &amp; Financial Services Complaint Handling (AFCA)</summary>
+    <div class="use-case-body">
+      <p>ASIC RG 271 and the AFCA scheme mandate 30-day resolution windows and full traceability on member complaints across insurance, finance, and roadside. Compliance Center codifies the intake-triage-resolve-escalate workflow with automatic SLA controls and evidence &mdash; today handled through a patchwork of Service Cloud cases and spreadsheets. Metric: RG 271 SLA hit-rate and % of complaints closed with full evidence chain.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, complaints case-management system</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Advocacy+Complaints+RACV">Head of Customer Advocacy &amp; Complaints</a> (RACV)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Privacy Act, CDR &amp; Marketing Consent Controls</summary>
+    <div class="use-case-body">
+      <p>RACV's Data360 build-out plus its Marketing Cloud CDP and consent-driven journeys land squarely under the Privacy Act 1988 reforms and Australia's Consumer Data Right regime. Compliance Center gives a controlled workflow for consent capture, data-subject requests, and cross-brand data-sharing evidence spanning motoring, insurance, and finance. Metric: DSR SLA hit-rate and % of consent state changes with audit evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud CDP, Data360 / consent store</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Privacy+Officer+RACV">Chief Privacy Officer / Head of Data Governance</a> (RACV)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Royal Automobile Club of Victoria (RACV) Limited by mining roadside-dispatch, IMA claims, and membership-renewal event logs across its Salesforce Field Service, Service Cloud, MuleSoft, and Data360 estate, task-mining contact-centre and assessor desktops to expose the swivel-chair work Agentforce Operations can eliminate, and running APRA/AFCA/RG 271 and Privacy Act/CDR controls through Compliance Center to shrink cycle times, cut wrap and rework, and produce always-on audit evidence for regulators.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

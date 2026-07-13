@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -108,96 +113,141 @@
   <h1>Westpac Banking Corporation</h1>
   <div class="snapshot">
     <p><strong>Financial Services, Banking</strong></p>
-    <p><strong>Revenue:</strong> A$33.8B &nbsp;|&nbsp; <strong>Employees:</strong> ~40,143 &nbsp;|&nbsp; <strong>HQ:</strong> Sydney, NSW, Australia</p>
+    <p><strong>Revenue:</strong> A$33.8B &nbsp;|&nbsp; <strong>Employees:</strong> ~40,143 &nbsp;|&nbsp; <strong>HQ:</strong> Sydney, Australia</p>
     <p><strong>Major Subsidiaries:</strong> St.George Bank, BankSA, Bank of Melbourne, RAMS Home Loans, Westpac New Zealand</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Scott+Collary+Westpac">Scott Collary</a>, Group Executive Customer Services &amp; Technology]</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Scott+Collary+Westpac">Scott Collary</a>]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> None currently qualified for AFPI</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Enterprise), Heroku (Private Space + Dynos + Add-on Credits), Slack Enterprise Grid, Salesforce Shield, Experience Cloud (Customer Community), Tableau, Salesforce Platform (Signature Success)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Westpac Agentforce: Project Unite Agentic (<a href="https://org62.my.salesforce.com/006ed00000LguWLAAZ">$900k</a>) &nbsp;|&nbsp; Westpac Core Service &mdash; Loan Applications (<a href="https://org62.my.salesforce.com/006ed000008B8QgAAK">$400k</a>) &nbsp;|&nbsp; Westpac Operational Resilience CPS 230 (<a href="https://org62.my.salesforce.com/006ed000009n9g5AAA">$200k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U05F564N353">Sarah Eljerman</a></p>
-    <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">81/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">87/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Process complexity &amp; scale</td><td>14/15</td><td class="cat-green">Big-4 Australian bank spanning consumer, business, WIB, and NZ — deeply event-log-rich estate.</td></tr>
-        <tr><td>Vertical fit (Banking)</td><td>14/15</td><td class="cat-green">Banking is AFPI's strongest vertical; mortgage, AML, and onboarding are canonical mining targets.</td></tr>
-        <tr><td>Regulatory pressure (APRA CPS 230, AUSTRAC)</td><td>13/15</td><td class="cat-green">CPS 230 (Jul 2025) + post-AUSTRAC financial-crime scrutiny = a direct Compliance Center wedge.</td></tr>
-        <tr><td>Signals (ANZ Apromore momentum, CORE program)</td><td>9/10</td><td class="cat-green">Board-sponsored CORE/UNITE simplification program creates a rare process-redesign window.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Big-4 Australian bank &mdash; banking is AFPI's top vertical; mortgage, AML, onboarding all canonical mining targets.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">APRA CPS 230 (Jul 2025), AUSTRAC scrutiny, ASIC, AML/KYC &mdash; textbook Compliance Center wedge.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">$900k Project Unite Agentic + Data Cloud + CORE/UNITE simplification &mdash; live Agentforce program.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">$1.5M+ AFPI-adjacent open pipeline (Unite Agentic + Loan Apps + CPS 230) &mdash; budgets already sized.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">Post-AUSTRAC financial-crime cost base + mortgage TAT variability + complaints/AFCA volume.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Timing / cost-out cycle</td><td>9/15</td><td class="cat-orange">Cost-out cycle underway but no confirmed AFPI-relevant open opp — timing wedge is soft.</td></tr>
-        <tr><td>Signals (ANZ Apromore momentum, CORE program)</td><td>9/10</td><td class="cat-green">Same signal above appears here as the second lowest of the top 5 categories.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">Salesforce AE (Sarah Eljerman) engaged and CORE execs visible, but no customer-side process-owner champion confirmed.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-green">Heroku, Sales Cloud, Slack, Shield all mineable; core-banking event logs assumed but not yet inventoried.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Westpac Banking Corporation by mining its mortgage origination, AML alert triage, and complaints event logs to give the CORE/UNITE simplification program a defensible as-is baseline — turning APRA CPS 230 and post-AUSTRAC scrutiny into measurable cycle-time and cost-per-alert wins.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Mortgage Origination Cycle Time</summary>
+    <summary>1. Mortgage Origination Cycle-Time (Core Service &mdash; Loan Applications)</summary>
     <div class="use-case-body">
-      <p>Home lending is Westpac's largest earning asset and the origination journey spans broker submission, credit decisioning, valuation, and settlement across legacy platforms. Post-remediation, turnaround-time consistency has been a repeated APRA and broker-channel pain point. AFPI mines the event log across the loan-origination stack to expose rework loops, verification bottlenecks, and broker abandonment triggers, moving the median time-to-unconditional-approval and reducing broker churn.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Loan Origination Platform (TBD), Broker Portal (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Damien+MacRae+Westpac">Damien MacRae</a> (Managing Director Mortgages)</p>
+      <p>Home lending is Westpac's largest earning asset and the $400k Core Service &mdash; Loan Applications opp is already scoped around origination cycle-time. The end-to-end journey hops from broker submission through credit decisioning, valuation, and settlement across legacy platforms &mdash; broker channel churn tracks directly to TAT variance. AFPI mines the loan-origination event log to expose rework loops, verification bottlenecks, and where broker cases abandon, then feeds those hotspots into the Agentforce automation backlog. Metric moved: median time-to-unconditional-approval and broker channel NPS.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Loan origination platform, broker portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Damien+MacRae+Westpac">Damien MacRae</a> (Managing Director, Mortgages)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. AML/KYC Transaction Monitoring Alert Triage</summary>
+    <summary>2. Consumer KYC / AML Onboarding Simplification</summary>
     <div class="use-case-body">
-      <p>Post-AUSTRAC settlement, Westpac has invested heavily in financial-crime operations but analysts still face high false-positive rates and inconsistent case-handling paths. AFPI mines the alert-to-disposition process to surface the variants that drive re-work and SLA breaches, then targets automation and Agentforce-assist opportunities on the highest-volume paths. Metric moved: cost per alert closed and productive-alert ratio.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Transaction Monitoring Platform (TBD), Case Management (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Les+Vance+Westpac">Les Vance</a> (Group Executive Financial Crime, Compliance &amp; Conduct)</p>
+      <p>The open $125k Consumer KYC/AML Onboarding Simplification opp already frames the problem: onboarding today spans identity, screening, product setup, and case-handling across multiple systems with high manual touch. AFPI mines the customer-onboarding event log to isolate the variants that generate rework, drop-off, and financial-crime handoffs, then targets the Agentforce and STP investments at the highest-volume paths. Especially valuable given post-AUSTRAC scrutiny on onboarding controls. Metric moved: onboarding cycle time and cost per new customer.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Onboarding orchestration, KYC/AML platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jason+Yetton+Westpac">Jason Yetton</a> (Chief Executive, Consumer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Complaints Handling &amp; AFCA-Reportable Disputes</summary>
+    <summary>3. Project Unite / CORE Simplification As-Is Baseline</summary>
     <div class="use-case-body">
-      <p>APRA CPS 230 (effective July 2025) requires demonstrable operational-resilience controls over customer-facing critical operations, and complaints handling is one of the most scrutinised. AFPI mines the complaint lifecycle from first contact through resolution and AFCA escalation, exposing which channels, products, and handoffs are driving rework and breach risk. The result is a Compliance Center wedge with process evidence auditors can consume directly, plus a measurable drop in AFCA-escalated volume.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Complaints Management (TBD), Contact Center (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jason+Yetton+Westpac">Jason Yetton</a> (Chief Executive Consumer)</p>
+      <p>Westpac's $900k Project Unite Agentic opp is the enterprise Agentforce wedge on the multi-year CORE simplification program that is consolidating retail brands (St.George, BankSA, Bank of Melbourne) onto a single stack. Without a process-mining ground truth, "to-be" designs are drawn from interview and PowerPoint rather than event data, which drives rework once code hits production. AFPI provides the as-is object-centric process model that CORE work-streams prioritise against and then measures benefit realisation post-migration. Metric moved: transformation rework and time-to-benefit.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Core banking, CORE program tooling</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Scott+Collary+Westpac">Scott Collary</a> (Group Executive, Customer Services &amp; Technology)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Financial-Crime Analyst Desktop (AUSTRAC Cost Base)</summary>
+    <div class="use-case-body">
+      <p>Post-AUSTRAC settlement, Westpac has scaled financial-crime operations dramatically but analyst desktops still bounce between the transaction-monitoring platform, case management, screening tools, and email/attachments to close a single alert. Task mining captures each analyst's on-screen behaviour to isolate the alert-handling steps that eat wrap time and false-positive review loops. Directly pairs with Agentforce for Service to automate the highest-volume paths. Metric moved: cost per alert closed and productive-alert ratio.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Transaction-monitoring platform, case management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Les+Vance+Westpac">Les Vance</a> (Group Executive, Financial Crime, Compliance &amp; Conduct)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Business &amp; Institutional Client Onboarding</summary>
+    <summary>2. Consumer Contact-Centre Agent Handle-Time</summary>
     <div class="use-case-body">
-      <p>Onboarding a business or institutional client at Westpac touches KYB, AML, credit, product setup, and multiple divisional handoffs across Business &amp; Wealth and WIB. Deal desks report weeks of cycle time and repeated document requests that erode NPS with corporate treasurers. AFPI mines the end-to-end onboarding process, quantifies the cost of rework loops, and pinpoints where Agentforce or straight-through-processing can compress cycle time. Metric moved: time-to-first-transaction and onboarding cost per client.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> KYB/KYC Platform (TBD), Credit Decisioning (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Anthony+Miller+Westpac">Anthony Miller</a> (Chief Executive Business &amp; Wealth)</p>
+      <p>The 201 FTE lead-automation opp and the Case &amp; Knowledge Management opp both point at consumer contact-centre productivity. Task mining the agent console captures the exact screens, copy/paste, and after-call-work steps that drive AHT and wrap variability across brands (Westpac, St.George, BankSA, Bank of Melbourne). Feeds an Agentforce assist / knowledge-surface business case directly. Metric moved: AHT and after-call-work minutes per contact type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, core banking / servicing UI</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jason+Yetton+Westpac">Jason Yetton</a> (Chief Executive, Consumer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Technology Modernisation &amp; Simplification (CORE / UNITE)</summary>
+    <summary>3. Business &amp; Institutional Client Onboarding Swivel-Chair</summary>
     <div class="use-case-body">
-      <p>Westpac's multi-year CORE program is consolidating retail brands onto a single technology stack — a rare, board-sponsored process-redesign event. Without a process-mining ground truth, "to-be" designs are drawn from interviews and PowerPoint rather than actual event data, which drives rework once code hits production. AFPI provides the as-is object-centric process model that CORE work-streams can use to prioritise which processes to simplify first and prove benefit realisation post-migration. Metric moved: rework in transformation delivery and time-to-benefit.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Core Banking (TBD), CORE Program Tooling (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Scott+Collary+Westpac">Scott Collary</a> (Group Executive Customer Services &amp; Technology)</p>
+      <p>Onboarding a business or institutional client at Westpac touches KYB, AML, credit, product setup, and multi-divisional handoffs across Business &amp; Wealth and WIB. Deal-desk feedback cites weeks of cycle time and repeated document requests that erode NPS with corporate treasurers. Task mining the relationship-manager and credit-analyst desktops names the exact steps Agentforce or STP can replace, and pinpoints how much of the delay is bank-internal versus client-side. Metric moved: time-to-first-transaction and onboarding cost per client.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> KYB/KYC portal, credit decisioning</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Anthony+Miller+Westpac">Anthony Miller</a> (Chief Executive, Business &amp; Wealth)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. APRA CPS 230 Operational Resilience (Live Opp)</summary>
+    <div class="use-case-body">
+      <p>The open $200k Operational Resilience CPS 230 opp is the direct wedge: CPS 230 (effective July 2025) requires demonstrable controls over customer-facing critical operations with mapped dependencies, tested tolerances, and evidence auditors can consume. Compliance Center codifies the critical-operation process, runs the resilience-tolerance checks as a controlled workflow, and produces always-on evidence. Beats attestation-plus-spreadsheet approaches on time-to-audit. Metric moved: audit-ready critical operations covered and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Critical-operations mapping tool, GRC platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Scott+Collary+Westpac">Scott Collary</a> (Group Executive, Customer Services &amp; Technology)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. AUSTRAC Financial-Crime Program Evidence</summary>
+    <div class="use-case-body">
+      <p>The 2020 AUSTRAC A$1.3B settlement left an enduring cost-of-controls tail that every board and regulator continues to scrutinise. Compliance Center runs AML alert triage, escalation, and SMR filing as a single controlled workflow with codified SLAs and continuous evidence &mdash; the exact shape AUSTRAC and internal audit want to inspect. Especially valuable as Agentforce lands in financial-crime ops and needs auditable guardrails. Metric moved: alert-clearing SLA hit-rate and time-to-SMR.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> AML monitoring platform, case management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Les+Vance+Westpac">Les Vance</a> (Group Executive, Financial Crime, Compliance &amp; Conduct)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Complaints &amp; AFCA-Reportable Disputes Controls</summary>
+    <div class="use-case-body">
+      <p>Complaints handling is one of the most scrutinised customer-facing critical operations under CPS 230 and the AFCA dispute pipeline is a leading indicator of remediation risk. Compliance Center mines the complaint lifecycle from first contact through resolution and AFCA escalation, exposing which channels, products, and handoffs drive rework and breach risk. Delivers process evidence that ASIC, AFCA, and internal audit can consume directly. Metric moved: AFCA-escalated complaint volume and cycle time to resolution.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Complaints management, contact centre</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jason+Yetton+Westpac">Jason Yetton</a> (Chief Executive, Consumer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Westpac Banking Corporation by mining mortgage origination, consumer KYC/AML onboarding, and CORE/Project Unite simplification event logs to give the $900k Unite Agentic program a defensible as-is baseline, task-mining financial-crime and contact-centre desktops to convert AUSTRAC-era cost bases into Agentforce automation, and running APRA CPS 230, AUSTRAC AML, and AFCA complaints controls through Compliance Center to shrink cycle times, cut cost-per-alert, and produce always-on audit evidence.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

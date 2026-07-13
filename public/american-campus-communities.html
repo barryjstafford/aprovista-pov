@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -113,40 +114,38 @@
   <div class="snapshot">
     <p><strong>Real Estate, Student Housing REIT</strong></p>
     <p><strong>Revenue:</strong> $943M &nbsp;|&nbsp; <strong>Employees:</strong> ~3,183 &nbsp;|&nbsp; <strong>HQ:</strong> Austin, Texas, USA</p>
-    <p><strong>Major Subsidiaries:</strong> American Campus Communities LLC, American Campus Communities Operating Partnership (owned by Blackstone / BREIT since 2022 take-private)</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Platform), Service Cloud (Support, Call Center), Marketing Cloud (ExactTarget, SMS), Tableau, plus in-flight Data Cloud (per MC-ACC-AO-DC Phase 2 opp)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Jorge+De+Cardenas+American+Campus+Communities">Jorge De Cardenas</a>, EVP &amp; CTO] — property-management stack (Yardi expected) and finance backbone need confirmation before mining scope</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> ACC apromore (<a href="https://org62.my.salesforce.com/006ed00000amHLCAA2">$175k</a>) | MC - ACC - AO - DC Phase 2 (<a href="https://org62.my.salesforce.com/006ed00000MTeYUAA1">$200k</a>) | MS-American Campus Communities-Integration (<a href="https://org62.my.salesforce.com/006ed00000XRuazAAD">$120k</a>)</p>
+    <p><strong>Major Subsidiaries:</strong> American Campus Communities LLC, American Campus Communities Operating Partnership</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Marketing Cloud Engagement (ExactTarget), Marketing Cloud SMS, Tableau, Data Cloud (in-flight, Phase 2)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> ACC apromore (<a href="https://org62.my.salesforce.com/006ed00000amHLCAA2">$175k</a>) &nbsp;|&nbsp; MC - ACC - AO - DC Phase 2 (<a href="https://org62.my.salesforce.com/006ed00000MTeYUAA1">$200k</a>) &nbsp;|&nbsp; MS-American Campus Communities-Integration (<a href="https://org62.my.salesforce.com/006ed00000XRuazAAD">$120k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U098MJ5Q9SM">Eric Bloomberg</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">75/100</span> — T2 Develop</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t2">75/100</span> &mdash; T2 Develop</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">ACC apromore opp already open at $175k, Stage 01, close 2026-09-30, owner Eric Bloomberg.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>11/12</td><td class="cat-green">Multi-cloud: Sales, Service, Marketing (ExactTarget + SMS), Tableau, plus live Data Cloud opp.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">COO Beese, EVP Business Ops Greenberg, EVP CTO De Cardenas, SVP Facilities Barry all reachable.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>12/15</td><td class="cat-orange">167k-bed annual turn, work-order backlog, and touchless-renewal automation flag repeatable process pain.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-orange">Rich SF event logs; Yardi + finance stack assumed but not yet field-confirmed for log access.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">ACC apromore opp open at $175k, Stage 01, Sep-2026 close, owner Eric Bloomberg.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>11/12</td><td class="cat-green">Multi-cloud: Sales, Service, MC Engagement + SMS, Tableau, in-flight Data Cloud Phase 2.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">167k-bed annual turn, work-order backlog, and touchless-renewal push signal repeatable pain.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-orange">Data Cloud Phase 2 + ARY Touchless Renewal Automation opps show active agentic-ops motion.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-orange">Rich SF event logs available; Yardi + finance stack assumed but not yet field-confirmed.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>4/8</td><td class="cat-red">Post-take-private (no SOX); Fair Housing / Title IX / Clery obligations exist but light regulatory push.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>10/15</td><td class="cat-orange">Student housing REIT is not top-priority vertical, but Blackstone-portfolio ops rationalization helps.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>3/8</td><td class="cat-red">Post take-private (no SOX); Fair Housing / Title IX / Clery apply but drive lighter regulatory push.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>8/15</td><td class="cat-red">Student housing REIT is not a top-priority AFPI vertical, but Blackstone portfolio ops helps.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help American Campus Communities Services, Inc. by mining its annual turn, resident renewal, and maintenance work-order lifecycles across Salesforce and Yardi to strip cycle-time and rework out of the 167k-bed operating machine, giving Blackstone-era leadership hard evidence for the touchless-renewal automation and Agentforce Data Cloud investments already in-flight.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Annual Turn: Move-Out to Move-In Across 200+ Properties</summary>
     <div class="use-case-body">
-      <p>ACC's student-housing model concentrates ~90% of lease commencements into a two-week August window across 200+ properties and 167k beds — the "turn." Inspections, cleanings, damage assessments, punch lists, and move-in scheduling collide with billing, deposits, and customer-service load. Apromore can mine the turn-lifecycle across Yardi and Service Cloud to expose the properties, roles, and steps that miss commencement SLA — the single biggest operating risk of the year. Metric: percentage of units ready at day-zero and turn-labor cost per bed.</p>
+      <p>ACC concentrates ~90% of lease commencements into a two-week August window across 200+ properties and 167k beds &mdash; the "turn." Inspections, cleanings, damage assessments, punch lists, and move-in scheduling collide with billing, deposits, and customer-service load. Apromore mines the full turn lifecycle across Yardi and Service Cloud to expose the properties, roles, and steps that miss commencement SLA &mdash; the single biggest operating risk of the year. Metric: percentage of units ready at day-zero and turn labor cost per bed.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Yardi Voyager, Salesforce Service Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Dan+Barry+American+Campus+Communities">Dan Barry</a> (SVP Facilities Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -156,7 +155,7 @@
   <details>
     <summary>2. Touchless Resident Renewal Automation</summary>
     <div class="use-case-body">
-      <p>Two open Org62 opps ("ARY Touchless Renewal Automation Only") signal an active automation push on lease renewals — the highest-margin retention lever in student housing. Renewal decisions blend Marketing Cloud journeys, Sales Cloud follow-up, and Yardi lease creation, with parent/guarantor co-signer flows layered on top. Apromore can mine the current renewal path to find handoff drops and pricing-approval loops before Agentforce agents get bolted on. Metric: renewal conversion rate and days-to-lease-signature.</p>
+      <p>Two open Org62 opps ("ARY Touchless Renewal Automation Only") signal an active automation push on lease renewals &mdash; the highest-margin retention lever in student housing. Renewal decisions blend Marketing Cloud journeys, Sales Cloud follow-up, and Yardi lease creation, with parent/guarantor co-signer flows layered on top. Apromore mines the current renewal path to find handoff drops and pricing-approval loops before Agentforce agents get bolted on. Metric: renewal conversion rate and days-to-lease-signature.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Marketing Cloud, Yardi Voyager</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kimberly+Kelley+American+Campus+Communities">Kimberly Kelley</a> (EVP &amp; Chief Marketing Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -166,34 +165,78 @@
   <details>
     <summary>3. Maintenance Work-Order Lifecycle (167k-Bed Portfolio)</summary>
     <div class="use-case-body">
-      <p>Maintenance ticket volume at 167k beds is enormous and highly variable seasonally; first-time-fix, technician routing, parts availability, and resident SLA drive resident-satisfaction and retention. Work orders originate in Service Cloud and complete in Yardi's facilities module, with a persistent gap in visibility across the two. Apromore mines the full ticket-to-resolution path, spotlighting re-visit drivers, aging categories, and property-level variants. Metric: mean-time-to-resolve and first-time-fix rate.</p>
+      <p>Maintenance ticket volume at 167k beds is enormous and highly seasonal; first-time-fix, technician routing, parts availability, and resident SLA drive resident satisfaction and retention. Work orders originate in Service Cloud and complete in Yardi's facilities module, with a persistent gap in visibility across the two. Apromore mines the full ticket-to-resolution path, spotlighting re-visit drivers, aging categories, and property-level variants. Metric: mean-time-to-resolve and first-time-fix rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Yardi Voyager</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Thomas+Hickey+American+Campus+Communities">Thomas Hickey</a> (SVP Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>4. Lead-to-Lease Marketing Funnel</summary>
+    <summary>1. On-Site Leasing Office Desktop Activity</summary>
     <div class="use-case-body">
-      <p>ACC runs Marketing Cloud (ExactTarget) plus SMS across university-partnered campaigns to drive tours, applications, and lease signatures. The $331k MC ExactTarget renewal plus a live SMS opp show the channel is core, but the conversion funnel spans MC, Sales Cloud, and Yardi with fractured attribution. Apromore mines the full journey to expose where prospects stall, which sources convert, and how much marketing spend is being wasted on properties already at target occupancy. Metric: cost-per-signed-lease and top-of-funnel-to-lease conversion.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Marketing Cloud, Salesforce Sales Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jerell+Binkley+American+Campus+Communities">Jerell Binkley</a> (VP Marketing Operations, Creative &amp; Production Services)</p>
+      <p>Leasing consultants at each of the 200+ properties toggle constantly between Yardi Voyager, Salesforce Service Cloud, Marketing Cloud dashboards, and offline spreadsheets while walking prospects through tours, applications, deposits, and roommate matching. Task mining captures the click-level flow to expose duplicate data entry, screen-hopping, and shadow-Excel steps that Agentforce agents could absorb. This directly feeds the touchless-renewal and touchless-application investments already funded. Metric: minutes-per-application processed and share of leasing time spent in swivel-chair.</p>
+      <p><strong>Key System(s) to be Task Mined:</strong> Yardi Voyager desktop, Salesforce Service Cloud console</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Thomas+Hickey+American+Campus+Communities">Thomas Hickey</a> (SVP Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Property Onboarding &amp; Portfolio Integration Under Blackstone</summary>
+    <summary>2. Marketing Ops Campaign Assembly &amp; QA</summary>
     <div class="use-case-body">
-      <p>Since the 2022 Blackstone take-private, ACC has continued to acquire and integrate properties into a shared operating model. Each property must be onboarded to Yardi, Salesforce, Marketing Cloud, and facilities systems on a compressed timeline — often before the next turn cycle. Apromore can map the "as-is" onboarding workflow, exposing where new-property integration lags and which handoffs (dev → operations → marketing → facilities) drop the ball. Metric: time from acquisition close to full-system operational readiness.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Yardi Voyager, Salesforce Sales Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Heather+Laney+American+Campus+Communities">Heather Laney</a> (SVP Development &amp; Property Integration)</p>
+      <p>ACC's marketing ops team assembles hundreds of university-specific ExactTarget campaigns, SMS blasts, and Sales Cloud follow-up cadences each leasing season. Task mining captures the manual QA loops between Marketing Cloud Engagement, MC SMS, Sales Cloud, and third-party creative tools that eat cycle time before every campaign send. It identifies which templated steps are ready for automation ahead of Data Cloud Phase 2. Metric: hours per campaign launch and campaign-error rework rate.</p>
+      <p><strong>Key System(s) to be Task Mined:</strong> Salesforce Marketing Cloud Engagement, Salesforce Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jerell+Binkley+American+Campus+Communities">Jerell Binkley</a> (VP Marketing Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent competitor mentions (Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, Power Automate) tied to American Campus Communities found in Slack or public sources — greenfield for Apromore ahead of the Stage 01 push to close.</span></h2>
+  <details>
+    <summary>3. Facilities Dispatch &amp; Field Coordination</summary>
+    <div class="use-case-body">
+      <p>Facilities coordinators triage inbound work orders, assign technicians, chase parts, and update residents while jumping between the Service Cloud dispatch console, Yardi's facilities module, and mobile field-tech apps. Task mining exposes the exact desktop steps consuming dispatcher time, the copy-paste patterns between systems, and the recurring re-dispatch loops that erode first-time-fix. This is the highest-leverage task-mining target for Agentforce triage agents. Metric: dispatcher minutes per work order and re-dispatch rate.</p>
+      <p><strong>Key System(s) to be Task Mined:</strong> Salesforce Service Cloud, Yardi Voyager Facilities</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Dan+Barry+American+Campus+Communities">Dan Barry</a> (SVP Facilities Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. Fair Housing Act &amp; Application Screening Consistency</summary>
+    <div class="use-case-body">
+      <p>ACC processes tens of thousands of student applications annually and must apply screening, roommate-matching, and pricing rules consistently to avoid Fair Housing Act exposure. Compliance Center continuously audits Yardi lease workflows and Sales Cloud application records to detect deviations, missing steps, and property-level variants that could constitute disparate treatment. This is proactive control monitoring rather than sample-based audit. Metric: exception rate against defined screening playbook and time-to-detect a variant.</p>
+      <p><strong>Key System(s) to be Audited:</strong> Yardi Voyager, Salesforce Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kim+Voss+American+Campus+Communities">Kim Voss</a> (EVP Human Resources, Chief Compliance Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Security Deposit Return &amp; State Statute Compliance</summary>
+    <div class="use-case-body">
+      <p>Every state ACC operates in imposes strict deadlines (14-30 days typical) and itemization rules on security-deposit returns after move-out. Missed deadlines trigger statutory penalties and reputational risk with parent guarantors. Compliance Center audits the Yardi + Service Cloud move-out-to-refund flow against per-state deadline rules and flags at-risk records in real time. Metric: percent of deposit returns processed within statutory window, by state.</p>
+      <p><strong>Key System(s) to be Audited:</strong> Yardi Voyager, Salesforce Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kimberly+Kelley+American+Campus+Communities">Kimberly Kelley</a> (EVP &amp; Chief Marketing Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Title IX / Clery Incident Handling on Managed Properties</summary>
+    <div class="use-case-body">
+      <p>Because ACC operates on-campus and public-private partnership housing tied to universities, incident reports (Title IX referrals, Clery-reportable events, protective-order enforcement) must be routed and documented against strict university and federal requirements. Compliance Center audits the Service Cloud incident-handling flow to prove that every reportable event was escalated, timestamped, and acknowledged per policy. This protects both ACC and its university partners. Metric: percent of incidents with complete Clery/Title IX handling trail.</p>
+      <p><strong>Key System(s) to be Audited:</strong> Salesforce Service Cloud, Yardi Voyager</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kim+Voss+American+Campus+Communities">Kim Voss</a> (EVP HR &amp; Chief Compliance Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help American Campus Communities Services, Inc. by process-mining the annual turn, resident renewal, and work-order lifecycles across Salesforce and Yardi, task-mining leasing, marketing, and facilities-dispatch desktops to feed touchless-renewal and Agentforce Data Cloud investments, and running Compliance Center controls over Fair Housing screening, state deposit-return deadlines, and Title IX / Clery incident handling &mdash; giving Blackstone-era leadership hard evidence of cycle-time, cost, and risk reduction across the 167k-bed operating machine.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

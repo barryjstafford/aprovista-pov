@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -112,43 +113,41 @@
   <h1>Enel Global Services S.r.l.</h1>
   <div class="snapshot">
     <p><strong>Utilities, Integrated Electric &amp; Gas</strong></p>
-    <p><strong>Revenue:</strong> €95.2B (Enel Group FY) &nbsp;|&nbsp; <strong>Employees:</strong> ~3,174 (GS entity; ~60,000 group-wide) &nbsp;|&nbsp; <strong>HQ:</strong> Rome, Italy</p>
+    <p><strong>Revenue:</strong> &euro;95.2B (Enel Group FY) &nbsp;|&nbsp; <strong>Employees:</strong> ~3,174 (GS entity; ~60,000 group-wide) &nbsp;|&nbsp; <strong>HQ:</strong> Rome, Italy</p>
     <p><strong>Major Subsidiaries:</strong> Endesa, Enel Green Power, Enel X, e-distribuzione, Enel Global Trading</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (SFA), MuleSoft, Marketing Cloud, Revenue Cloud, Service Cloud</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Rossella+Vissicchio+Enel">Rossella Vissicchio</a>]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Renewal 8 SFA (<a href="https://org62.my.salesforce.com/006ed00000RwImcAAF">$37.1M</a>) | Renewal 15208 MuleSoft (<a href="https://org62.my.salesforce.com/006ed00000RugcvAAB">$6.3M</a>) | MAF Generative-AI (<a href="https://org62.my.salesforce.com/006ed00000X8JwvAAF">$250K</a>)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, MuleSoft, Marketing Cloud, Revenue Cloud, Field Service</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Enel Global Services Renewal 9 SFA (<a href="https://org62.my.salesforce.com/006ed00000RwImcAAF">$37.1M</a>) &nbsp;|&nbsp; Renewal 15208 MuleSoft (<a href="https://org62.my.salesforce.com/006ed00000RugcvAAB">$6.3M</a>) &nbsp;|&nbsp; Enel Distribuzione Field Service &mdash; Geocall Replacement (<a href="https://org62.my.salesforce.com/006ed00000WTnu9AAD">$495k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0ABRNYC57E">Silvia Di Gregorio</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (MuleSoft + Sales Cloud)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">85/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">85/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Energy &amp; Utilities is a top-priority AFPI vertical — meter-to-cash and field ops.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$37M SFA renewal + $6.3M MuleSoft renewal + Marketing/Revenue Cloud active.</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">ARERA regulation, EU energy directives, GDPR — audit-grade process evidence needed.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Energy &amp; Utilities is a top-priority AFPI vertical &mdash; meter-to-cash and field ops.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$37M SFA renewal + $6.3M MuleSoft renewal + active Field Service, Revenue Cloud opps.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">ARERA regulation, EU energy directives, GDPR &mdash; audit-grade process evidence needed.</td></tr>
         <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-orange">Salesforce + MuleSoft rich event logs; SAP footprint likely but unconfirmed.</td></tr>
         <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-orange">Active MAF Generative-AI opp, Digital Factory org, Data Competence Center in place.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Process-Pain Intensity</td><td>11/15</td><td class="cat-orange">Group complexity implies pain, but no customer-quoted bottleneck yet — field-verify.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>11/15</td><td class="cat-orange">Group complexity implies pain, but no customer-quoted bottleneck yet &mdash; field-verify.</td></tr>
         <tr><td>Buyer &amp; Champion Fit</td><td>15/20</td><td class="cat-orange">Strong Digital Factory / CIO titles, but named Process Owner / COO sponsor TBD.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Enel Global Services S.r.l. by mining the shared-services procure-to-pay, hire-to-retire, and meter-to-cash processes that fan out across Endesa, Enel Green Power, and e-distribuzione — surfacing harmonization gaps, cutting invoice-processing cycle time, and giving the Digital Factory audit-grade evidence to steer Agentforce automation investments.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Group-wide Procure-to-Pay Harmonization</summary>
     <div class="use-case-body">
       <p>Enel Global Procurement runs P2P for the entire Enel Group across dozens of operating companies and countries. Local variants, exception approvals, and rework loops inflate cycle time and hide maverick spend. Mining SAP + Ariba event logs exposes the true "as-is" per country, quantifies rework, and targets the top 3 automation wedges for Agentforce Operations. Metric moved: invoice cycle time (typical 20-35% reduction) and touchless-invoice rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> SAP ERP, Ariba</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Fabio+Sarcinelli+Enel">Fabio Sarcinelli</a> (Head of Services, Security, Health, Safety, Environment &amp; Quality Digital Factory)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Fabio+Sarcinelli+Enel">Fabio Sarcinelli</a> (Head of Services, SHSEQ Digital Factory)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -156,7 +155,7 @@
   <details>
     <summary>2. Meter-to-Cash for e-distribuzione &amp; Enel Italia</summary>
     <div class="use-case-body">
-      <p>Meter-to-cash is Enel's most valuable — and most complex — customer process, spanning smart-meter data ingestion, billing, dispute handling, and collections. Regulatory windows (ARERA) and free-market switching add exception paths that eat margin. Apromore mines the end-to-end path across SAP IS-U and Salesforce Service Cloud to expose where disputes and re-bills originate, and where Agentforce can auto-resolve. Metric moved: days-sales-outstanding and first-bill-right rate.</p>
+      <p>Meter-to-cash is Enel's most valuable &mdash; and most complex &mdash; customer process, spanning smart-meter data ingestion, billing, dispute handling, and collections. Regulatory windows (ARERA) and free-market switching add exception paths that eat margin. Apromore mines the end-to-end path across SAP IS-U and Salesforce Service Cloud to expose where disputes and re-bills originate, and where Agentforce can auto-resolve. Metric moved: days-sales-outstanding and first-bill-right rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> SAP IS-U, Salesforce Service Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Marco+Codispoti+Enel">Marco Codispoti</a> (Head of Market Digital Factory Italy)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -166,34 +165,78 @@
   <details>
     <summary>3. Field Service &amp; Connection Request Cycle Time</summary>
     <div class="use-case-body">
-      <p>Enel is the reference benchmark for utility field-technician operations (a peer CIO cited Enel by name as the gold standard). Behind that reputation lives a complex connection-request and outage-response process spanning scheduling, dispatch, and permit-to-work. Mining Salesforce Field Service + workforce-management logs quantifies technician idle time and permit-loop rework, feeding Agentforce Operations for dispatch optimization. Metric moved: connection cycle time and first-time-fix rate.</p>
+      <p>Enel is a reference benchmark for utility field-technician operations, and the $495k Geocall Replacement opp signals a live Field Service transformation on Salesforce. The connection-request and outage-response workflow spans scheduling, dispatch, permit-to-work, and technician debrief across regions. Mining Field Service + workforce-management logs quantifies technician idle time and permit-loop rework, feeding Agentforce Operations for dispatch optimization. Metric moved: connection cycle time and first-time-fix rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, SAP</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Vincenzo+Cioffi+Enel">Vincenzo Cioffi</a> (Head of e-Mobility Digital Factory)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <details>
-    <summary>4. Renewables Project Onboarding &amp; Grid-Connection Flow (Enel Green Power)</summary>
-    <div class="use-case-body">
-      <p>Enel Green Power's growth depends on getting new solar/wind projects from land-lease to grid-connected revenue as fast as regulation allows. The permitting, EPC hand-off, and interconnection workflow spans internal systems + regulator portals with long, opaque wait states. Apromore reconstructs the actual timeline per project, isolates the top 3 regulatory-loop hotspots, and quantifies revenue-lost-to-delay. Metric moved: time-to-connection and MW-online per quarter.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> SAP PS, Salesforce</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Raffaele+Cirullo+Enel">Raffaele Cirullo</a> (Head of Digital Enabler, CIO Enel Green Power)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
+  <h2>Top 3 Task Mining Use Cases</h2>
 
   <details>
-    <summary>5. Customer-Contact-Center Deflection &amp; Case Routing</summary>
+    <summary>1. Customer Contact Center Agent Desktop</summary>
     <div class="use-case-body">
-      <p>The Global Customer Digital Hub runs contact-center platforms for Italy, Iberia, and LatAm. High-volume inbound (billing, outage, e-Mobility) drives large partner-agent spend and case-handoff loops. Mining Service Cloud case logs + Contact Center Platform events isolates the top 5 case-reason paths that cause reopens, and prioritizes them for Agentforce Service deflection. Metric moved: cost-per-contact and case reopen rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Contact Center Platform</p>
+      <p>The Global Customer Digital Hub runs contact-center platforms for Italy, Iberia, and LatAm handling billing, outage, and e-Mobility calls at partner-agent scale. Task mining the agent desktop captures the tab-switching between Service Cloud, meter/billing lookups, and knowledge tools that inflates AHT and after-call work. It names the exact click-paths Agentforce for Service can automate to lift deflection. Metric moved: average handle time and cost-per-contact.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, Contact Center Platform</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Marcello+Landolfo+Enel">Marcello Landolfo</a> (Head of Customer Digital Hub)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Celonis, Signavio, ARIS, ABBYY, ServiceNow, Appian, UiPath, or Power Automate mentions tied to Enel found in Slack or public sources — clean field, positioning window is open.</span></h2>
+  <details>
+    <summary>2. Back-Office Billing Dispute Handling</summary>
+    <div class="use-case-body">
+      <p>Behind every meter-to-cash dispute sits a back-office analyst pivoting between SAP IS-U screens, spreadsheets, and email attachments to reconstruct the customer story. Task mining reveals the re-keying, screen-scraping, and copy-paste that no process log ever sees, then names the top three activity clusters Agentforce can straight-through. Directly de-risks the meter-to-cash mining engagement above. Metric moved: dispute resolution time and manual-touch count per case.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP IS-U desktop, Outlook/email</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Marco+Codispoti+Enel">Marco Codispoti</a> (Head of Market Digital Factory Italy)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Renewables Project Engineer Workbench (Enel Green Power)</summary>
+    <div class="use-case-body">
+      <p>Enel Green Power's growth depends on moving new solar/wind projects from land-lease to grid-connected revenue as fast as regulators allow. Engineers today shuttle between SAP PS, permit portals, and shared drives to assemble each interconnection packet &mdash; opaque time-sinks that Apromore's task mining can measure at the click level. Feeds a business case for Agentforce-driven document assembly and regulator-portal automation. Metric moved: time-to-connection and hours-per-project on documentation.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP PS, regulator/permit portals</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Raffaele+Cirullo+Enel">Raffaele Cirullo</a> (Head of Digital Enabler, CIO Enel Green Power)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. ARERA Regulatory Reporting &amp; Bill-Quality Controls</summary>
+    <div class="use-case-body">
+      <p>Italy's ARERA regulator imposes strict standards on bill-quality, switching windows, and customer-communication timing for e-distribuzione and Enel Italia. Compliance Center codifies these controls as continuous, evidence-producing workflows tied directly to the meter-to-cash event stream. Every deviation triggers a documented remediation path, not a spreadsheet forensic. Metric moved: ARERA finding count and mean-time-to-remediation.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP IS-U, Salesforce Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Marco+Codispoti+Enel">Marco Codispoti</a> (Head of Market Digital Factory Italy)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. GDPR Data Subject Request &amp; Consent Handling</summary>
+    <div class="use-case-body">
+      <p>Enel operates B2C brands across Italy, Iberia, and Latin America with GDPR-equivalent regimes, driving high-volume DSAR, erasure, and consent-management requests across Salesforce, Marketing Cloud, and SAP. Compliance Center runs the DSAR lifecycle as a controlled workflow with segregation-of-duties, SLA timers, and immutable evidence for the Garante and other supervisors. Metric moved: DSAR SLA hit-rate and audit-evidence completeness.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce (Sales/Service/Marketing Cloud), SAP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Marcello+Landolfo+Enel">Marcello Landolfo</a> (Head of Customer Digital Hub)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. SOX / IFRS Financial Close &amp; Intercompany Controls</summary>
+    <div class="use-case-body">
+      <p>As a NYSE-listed parent, Enel S.p.A. runs a large multi-entity IFRS close across dozens of subsidiaries with heavy intercompany traffic through Enel Global Services shared services. Compliance Center converts the close from a spreadsheet-plus-attestation exercise into a controlled workflow with sign-offs, evidence, and exception dashboards fed by process mining. Metric moved: close cycle time and audit findings per reporting unit.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP FI/CO, consolidation platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Fabio+Sarcinelli+Enel">Fabio Sarcinelli</a> (Head of Services, SHSEQ Digital Factory)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Enel Global Services S.r.l. by mining group-wide procure-to-pay, meter-to-cash, and Field Service connection processes across SAP and Salesforce, task-mining contact-center and back-office desktops to expose the swivel-chair work Agentforce Operations can eliminate, and running ARERA, GDPR, and SOX/IFRS controls through Compliance Center to cut invoice and connection cycle times, lift touchless rates, and produce audit-grade evidence for the Digital Factory.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

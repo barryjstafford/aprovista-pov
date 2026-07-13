@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -108,42 +113,41 @@
   <h1>Dell Technologies Inc.</h1>
   <div class="snapshot">
     <p><strong>Technology, Enterprise Hardware &amp; Infrastructure</strong></p>
-    <p><strong>Revenue:</strong> $95.6B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~108,000 &nbsp;|&nbsp; <strong>HQ:</strong> Round Rock, TX, USA</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Unlimited Salesforce Enterprise Subscription), Service Cloud (Field Service, ClickSoftware), CPQ Plus, CPQ for Partner Community, Marketing Cloud (Enterprise + Account Engagement Ultimate), Data Cloud, Einstein for Sales, CRM Analytics Growth, Salesforce Shield, Salesforce Connect, Heroku, Quip for Customer 360, ISVForce Platform, Signature Success Plan, MuleSoft, Informatica</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Regrello (confirmed via active Regrello-to-AFO migration opp)</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Dell USA Renewal 1 SFA (<a href="https://org62.my.salesforce.com/006ed00000I3bLeAAJ">$68.3M</a>) &nbsp;|&nbsp; Dell - Agentforce Operations - Expansion (<a href="https://org62.my.salesforce.com/006ed00000ehyBZAAY">$3.84M</a>) &nbsp;|&nbsp; Dell - Regrello to AFO Migration - CSGS (<a href="https://org62.my.salesforce.com/006ed00000djy3BAAQ">$2.5M</a>)</p>
+    <p><strong>Revenue:</strong> ~$95.6B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~108,000 &nbsp;|&nbsp; <strong>HQ:</strong> Round Rock, TX, USA</p>
+    <p><strong>Major Subsidiaries:</strong> Dell USA L.P., Dell Financial Services, Secureworks, Boomi (divested but historical), VMware Cloud Foundation partnership, Dell Services</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Unlimited SESO), Service Cloud, Field Service, CPQ Plus, CPQ for Partner Community, Marketing Cloud Engagement, Account Engagement Ultimate, Data Cloud, Einstein for Sales, CRM Analytics Growth, Salesforce Shield, Salesforce Connect, Heroku, Quip for Customer 360, MuleSoft, Informatica, Signature Success Plan</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Regrello, ClickSoftware</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Dell USA Renewal 1 SFA (<a href="https://org62.my.salesforce.com/006ed00000I3bLeAAJ">$68.3M</a>) &nbsp;|&nbsp; Dell &mdash; Agentforce Operations Expansion (<a href="https://org62.my.salesforce.com/006ed00000ehyBZAAY">$3.84M</a>) &nbsp;|&nbsp; Dell &mdash; Regrello to AFO Migration CSGS (<a href="https://org62.my.salesforce.com/006ed00000djy3BAAQ">$2.5M</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
-    <p><strong>Salesforce AE:</strong> TBD [field verify]</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0986GGC8DB">Kari Zimmerman</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">92/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">91/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Data Readiness (Data Cloud opp active)</td><td>10/10</td><td class="cat-green">$1.4M Data Cloud for Marketing Cloud opp confirms event-log unification is already funded.</td></tr>
-        <tr><td>Process Complexity &amp; Scale</td><td>15/15</td><td class="cat-green">$95.6B revenue, 108k employees, 70k partner CPQ seats, 12k+ Field Service techs — enormous event surface.</td></tr>
-        <tr><td>Active Agentforce Operations Motion</td><td>18/20</td><td class="cat-green">$3.84M AFO Expansion + $1.8M AFO + Regrello-to-AFO migration in flight — AFPI is the natural pre-agent instrumentation layer.</td></tr>
-        <tr><td>SF Install Base Strength</td><td>14/15</td><td class="cat-green">Sales Cloud, Service Cloud, CPQ Plus, Marketing Cloud, Data Cloud, MuleSoft, Informatica — top-decile SF footprint.</td></tr>
-        <tr><td>Named Buyer Access (Renewal in Flight)</td><td>13/15</td><td class="cat-green">$68.3M SFA renewal in stage 01 forces the exec conversation — Deal Desk and Renewals are open doors.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>15/15</td><td class="cat-green">108k employees, 70k partner CPQ seats, 12k+ Field Service techs &mdash; enormous cycle-time surface.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>12/12</td><td class="cat-green">Sales/Service/Field Service, MuleSoft, Data Cloud, Informatica &mdash; every log AFPI needs is on the platform.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Top-decile install: Sales, Service, CPQ Plus, Field Service, MC, Data Cloud, MuleSoft, Informatica, Shield.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">$3.84M AFO Expansion + $1.8M AFO + Regrello-to-AFO migration + Agentic Transformation Program in flight.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">$68.3M SFA renewal in stage 01 forces exec conversation; multiple 7-figure AFO deals qualified.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Named Buyer Access (Renewal in Flight)</td><td>13/15</td><td class="cat-orange">Buyer access exists but named process-mining champion not yet identified inside CSG/ISG.</td></tr>
-        <tr><td>SF Install Base Strength</td><td>14/15</td><td class="cat-green">Only losing 1 pt — footprint is a strength, not a weakness. No true low-scoring category in the top 5.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">SOX applies as US public co but no HIPAA/AML/NERC-CIP driver &mdash; Compliance Center wedge is narrower here.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>12/15</td><td class="cat-orange">Enterprise tech is strong but not a top-3 AFPI priority vertical (FS, insurance, healthcare, manufacturing).</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Dell Technologies Inc. by mining the Salesforce CPQ, Field Service, and MuleSoft event logs behind its active $3.84M Agentforce Operations expansion — exposing which quote-to-cash and ProSupport dispatch variants actually leak margin so every AFO agent is deployed against a proven, measured process bottleneck rather than a whiteboard hypothesis.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Quote-to-Cash cycle time in CSG configure-price-quote</summary>
     <div class="use-case-body">
-      <p>Dell CSG runs one of the largest CPQ deployments on the platform (70,000 partner-community CPQ seats, 3,750 CPQ Plus internal), and quote velocity directly caps commercial-PC and server bookings. AFPI mines the Salesforce CPQ event log to expose approval bounce-backs, discount-tier re-work, and configuration-rule dead-ends that Regrello workflows have been papering over. The play stacks natively on the in-flight <a href="https://org62.my.salesforce.com/006ed00000djy3BAAQ">Regrello-to-AFO Migration</a> — every rework loop AFPI surfaces becomes a targetable AFO agent — and moves quote-to-order cycle time and discount leakage.</p>
+      <p>Dell CSG runs one of the largest CPQ deployments on the platform (70k partner-community CPQ seats + CPQ Plus internal), and quote velocity directly caps commercial-PC and server bookings. AFPI mines the Salesforce CPQ event log to expose approval bounce-backs, discount-tier rework, and configuration-rule dead-ends that Regrello workflows have been papering over. The play stacks natively on the in-flight <a href="https://org62.my.salesforce.com/006ed00000djy3BAAQ">Regrello-to-AFO Migration ($2.5M)</a> &mdash; every rework loop AFPI surfaces becomes a targetable AFO agent. Metric moved: quote-to-order cycle time and discount leakage.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce CPQ Plus, CPQ for Partner Community</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=John+Byrne+Dell+Technologies">John Byrne</a> (President, CSG)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Bill+Scannell+Dell+Technologies">Bill Scannell</a> (President, Global Sales &amp; Customer Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -151,53 +155,99 @@
   <details>
     <summary>2. Field Service dispatch and technician utilization (ProSupport)</summary>
     <div class="use-case-body">
-      <p>With 12,000+ Field Service Unlimited seats and legacy ClickSoftware forecasting still on the account, Dell's ProSupport dispatch process is a prime AFPI target: mine the Service Cloud + Field Service event stream to find travel waste, appointment rescheduling loops, and parts-mismatch truck-rolls that AFO's autonomous scheduling can eliminate. Metric moved: first-time-fix rate and technician revenue-hours per week — a 3-point lift on 12k techs is real EBITDA. This is the highest-ROI wedge tied to the <a href="https://org62.my.salesforce.com/006ed00000XEwNhAAL">$1.8M Agentforce Operations</a> deal in stage 5.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Field Service</p>
+      <p>With 12k+ Field Service seats and legacy ClickSoftware forecasting still on the account, Dell's ProSupport dispatch process is a prime AFPI target: mine the Service Cloud + Field Service event stream to surface travel waste, appointment rescheduling loops, and parts-mismatch truck-rolls that AFO's autonomous scheduling can eliminate. This is the highest-ROI wedge tied to the <a href="https://org62.my.salesforce.com/006ed00000XEwNhAAL">$1.8M Agentforce Operations</a> deal in stage 5. Metric moved: first-time-fix rate and technician revenue-hours per week &mdash; a 3-point lift on 12k techs is real EBITDA.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Field Service, ClickSoftware</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Doug+Schmitt+Dell+Technologies">Doug Schmitt</a> (President, Services &amp; Digital)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Renewal &amp; entitlement process for the $68.3M SFA re-up</summary>
+    <summary>3. Order orchestration and MuleSoft-migration process transparency</summary>
     <div class="use-case-body">
-      <p>Dell's own $68M SFA renewal running in stage 01 is the internal analog of exactly what AFPI mines for its customers — Dell's Deal Desk and Renewals org runs on Salesforce, and internal renewal-cycle friction (approvals, entitlement checks, product-family remaps) is the tell-tale signal that a process-intelligence layer is missing. Position AFPI as the instrumentation for Dell's own SF-on-SF renewal motion, then productize the same mining logic against Dell customer renewals. Metric: forecast-to-close variance and renewal cycle time.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, CRM Analytics Growth</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Bill+Scannell+Dell+Technologies">Bill Scannell</a> (President, Global Sales &amp; Customer Ops)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Order orchestration and MuleSoft-migration process transparency</summary>
-    <div class="use-case-body">
-      <p>The active <a href="https://org62.my.salesforce.com/006ed00000djXJ8AAM">$1.99M MuleSoft Migration</a> project rewires Dell's order and fulfillment integration fabric; AFPI reads the MuleSoft + Salesforce event log to surface where orders actually stall (credit-hold, config-hold, backorder, entitlement-lookup) instead of relying on tribal knowledge. Pain today is that Dell's Order Management team can tell you a truck rolled but not why a $200k server config sat 9 days between "Booked" and "Manufactured." AFPI moves order-to-manufacture cycle time and on-time shipment.</p>
+      <p>The active <a href="https://org62.my.salesforce.com/006ed00000djXJ8AAM">$1.99M MuleSoft Migration ($1.99M)</a> project rewires Dell's order and fulfillment integration fabric; AFPI reads the MuleSoft + Salesforce event log to surface where orders actually stall (credit-hold, config-hold, backorder, entitlement-lookup) instead of relying on tribal knowledge. Pain today is that Dell's Order Management team can tell you a truck rolled but not why a $200k server config sat 9 days between "Booked" and "Manufactured." AFPI moves order-to-manufacture cycle time and on-time shipment.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft, Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chuck+Whitten+Dell+Technologies">Chuck Whitten</a> (Global Operations lead)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>5. Marketing Cloud + Data Cloud lead-to-opportunity conversion (ISG demand-gen)</summary>
+    <summary>1. Deal Desk analyst desktop &mdash; SFA renewal &amp; entitlement rework</summary>
     <div class="use-case-body">
-      <p>The <a href="https://org62.my.salesforce.com/006ed00000Oyf5hAAB">$1.4M Data Cloud for Marketing Cloud</a> opp signals Dell is unifying customer data across ExactTarget Enterprise, Account Engagement Ultimate, and Sales Cloud. AFPI mines the lead-to-opp handoff to expose where MQLs die (SDR-to-AE handoff SLAs, dedupe re-work, campaign-attribution loops) — the exact process gap Marketing Ops teams struggle to see with dashboards alone. Metric moved: MQL-to-SQL conversion and lead-response time.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud, Data Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Allison+Dew+Dell+Technologies">Allison Dew</a> (CMO / ISG marketing ops lead)</p>
+      <p>Dell's own $68.3M SFA renewal running in stage 01 exposes the internal Deal Desk swivel-chair: analysts flip between Sales Cloud, entitlement lookups, CPQ approvals, and finance spreadsheets to shape each quote. Task mining captures those on-screen actions to isolate re-key steps, tab-hopping, and repeat lookups &mdash; then names the exact tasks Agentforce can automate. Metric moved: quote-shaping touch-time per analyst and renewal-approval cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud console, CPQ Plus</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Deal+Desk+Dell+Technologies">Head of Deal Desk, Dell Global Sales Ops</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <details>
+    <summary>2. ProSupport contact-center agent AHT &amp; wrap-time</summary>
+    <div class="use-case-body">
+      <p>Dell Services runs a large Service Cloud contact-center estate with a $2.1M Agentforce Voice opp already in play. Task mining captures the on-screen actions of ProSupport reps to isolate after-call-work steps, tab-hopping, and knowledge-base lookups that inflate AHT. Feeds an Agentforce Voice + AFO business case with hard numbers instead of a survey. Metric moved: AHT, after-call-work minutes, and first-contact resolution.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, ProSupport knowledge base</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Doug+Schmitt+Dell+Technologies">Doug Schmitt</a> (President, Services &amp; Digital)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Marketing Ops MQL-to-SQL handoff desktop</summary>
+    <div class="use-case-body">
+      <p>The <a href="https://org62.my.salesforce.com/006ed00000Oyf5hAAB">$1.4M Data Cloud for Marketing Cloud</a> opp signals Dell is unifying customer data across MC Engagement, Account Engagement Ultimate, and Sales Cloud. Task mining the SDR/Marketing Ops desktop exposes where MQL-to-SQL handoffs stall: dedupe rework, campaign-attribution flip-flops, and manual list scrubs. Names the exact clicks Agentforce can replace. Metric moved: lead-response time and MQL-to-SQL conversion rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud Engagement, Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Allison+Dew+Dell+Technologies">Allison Dew</a> (Former CMO / Marketing Ops leadership)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. Agentforce Operations governance &amp; audit trail</summary>
+    <div class="use-case-body">
+      <p>With $3.84M AFO Expansion, $1.8M AFO, $3.7M Agentic Transformation, and Regrello-to-AFO migration all landing in the same fiscal year, Dell's Risk &amp; Internal Audit teams need a controlled way to certify what each agent does, what it touched, and who approved the change. Compliance Center codifies agent-lifecycle controls (promote / monitor / retire) and produces continuous evidence on top of AFO's own logs. Metric moved: audit-ready agents in production and mean-time-to-evidence for internal audit.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce Operations, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Risk+Officer+Dell+Technologies">Head of Enterprise Risk &amp; Internal Audit, Dell</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. SOX ITGC controls over quote-to-cash &amp; revenue recognition</summary>
+    <div class="use-case-body">
+      <p>Dell is a US public company &mdash; SOX ITGC over the Sales Cloud + CPQ + Fulfillment stack has to be evidenced on every close. Compliance Center runs the ITGC test cycle (SoD, change-management, access reviews) as a controlled workflow with auto-collected evidence, replacing spreadsheet-plus-attestation. Metric moved: control-testing cycle time and audit findings per fiscal quarter.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, CPQ Plus</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Compliance+Officer+Dell+Technologies">Head of SOX / Internal Controls, Dell CFO Org</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Trade compliance &amp; export-control on ISG server shipments</summary>
+    <div class="use-case-body">
+      <p>Dell's server, storage, and AI-factory business (ISG) ships GPU-loaded systems into a fast-shifting export-control regime (US BIS, EU dual-use, China restrictions). Compliance Center wraps the order-approval workflow with segregation-of-duties, denied-party screening, and evidence capture &mdash; every restricted-part shipment produces an auditable trail. Metric moved: export-hold cycle time and audit findings on restricted shipments.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Order Management, MuleSoft trade-compliance integrations</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Trade+Compliance+Dell+Technologies">Head of Global Trade Compliance, Dell</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Dell Technologies Inc. by mining the Salesforce CPQ, Field Service, and MuleSoft event logs behind its $68M SFA renewal and $3.84M Agentforce Operations expansion, task-mining Deal Desk, ProSupport, and Marketing Ops desktops to name the exact clicks AFO can replace, and running AFO governance, SOX ITGC, and export-control workflows through Compliance Center &mdash; collapsing quote-to-order cycle time, first-time-fix rates, and audit-evidence burden into a single measurable process fabric.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -112,41 +113,39 @@
   <h1>Medibank Private Limited</h1>
   <div class="snapshot">
     <p><strong>Healthcare &amp; Life Sciences, Health Insurance</strong></p>
-    <p><strong>Revenue:</strong> AUD $7.9B &nbsp;|&nbsp; <strong>Employees:</strong> ~4,155 &nbsp;|&nbsp; <strong>HQ:</strong> Docklands, Melbourne, Australia</p>
+    <p><strong>Revenue:</strong> ~AUD $7.9B (FY24) &nbsp;|&nbsp; <strong>Employees:</strong> ~4,155 &nbsp;|&nbsp; <strong>HQ:</strong> Melbourne, Australia</p>
     <p><strong>Major Subsidiaries:</strong> Medibank Health Solutions, ahm Health Insurance, Amplar Health, Medibank Ventures, Health Services Australia</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Marketing Cloud (ExactTarget), Datorama, Salesforce Platform, Service Cloud (Call Center), Sales Cloud</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> AWS (Amplar CRM hosting) — deeper stack Not confirmed [field verify with Emaad Ahmed]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Medibank Renewal — MC/Datorama/Platform (<a href="https://org62.my.salesforce.com/006ed00000dE0T8AAK">$286k</a>) | Renewal — Call Center/Platform (<a href="https://org62.my.salesforce.com/006ed00000dE26lAAC">$229k</a>) | AWS Amplar CRM Renewal (<a href="https://org62.my.salesforce.com/006ed00000dUPddAAG">$190k</a>)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Service Cloud (Unlimited), Sales &amp; Service Cloud (Enterprise), Experience Cloud (Customer Community Plus Unlimited), Salesforce Shield, Event Monitoring, Field Audit Trail, Data Mask, Distributed Marketing</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> AWS</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Health Benefits &mdash; Data Storage 10 TB Addon (<a href="https://org62.my.salesforce.com/006ed00000ZPPALAA5">$26k</a>) &nbsp;|&nbsp; Health Benefits &mdash; Shield Addon (<a href="https://org62.my.salesforce.com/006ed00000ZIMM5AAP">$22k</a>) &nbsp;|&nbsp; Renewal &mdash; Call Center + Customer Portal + Org Permission (<a href="https://org62.my.salesforce.com/006ed00000dDifuAAC">$18k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01HUPYBXC6">Emaad Ahmed</a></p>
-    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Service Cloud + Marketing Cloud)</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Service Cloud)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">74/100</span> — T2 Develop</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t2">74/100</span> &mdash; T2 Develop</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Health insurance / payer — priority vertical for AFPI claims-cycle mining.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>11/12</td><td class="cat-green">Multi-cloud install: MC, Datorama, Service, Platform; three active renewals.</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">Post-2022 breach: APRA CPS 234, Privacy Act reforms, ongoing OAIC scrutiny.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">COO / Chief Customer Officer reachable via Emaad; CIO layer needs discovery.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>11/15</td><td class="cat-orange">Claims cycle time, provider onboarding, member churn — clear rework signals.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">Post-2022 breach: APRA CPS 234, Privacy Act reform, OAIC scrutiny, ongoing class action.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">Australia's largest private health insurer &mdash; priority AFPI vertical for claims mining.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>11/12</td><td class="cat-green">Deep Service Cloud (Unlimited) + Experience Cloud + Shield + Event Monitoring + Field Audit Trail.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>12/15</td><td class="cat-orange">Claims cycle, provider onboarding, member retention &mdash; visible rework and SLA drift signals.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">COO / CCO reachable via Emaad Ahmed; process-owner and CIO layer still need discovery.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>6/12</td><td class="cat-orange">Core policy/claims stack unconfirmed; AWS Amplar CRM suggests fragmented logs.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>4/6</td><td class="cat-orange">No AFPI opp yet; renewals give a hook but budget must be carved from CY26.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>7/12</td><td class="cat-red">Core claims / policy-admin platform unconfirmed; Amplar CRM on AWS suggests fragmented event logs.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>4/6</td><td class="cat-orange">Only three small open opps (each &lt;$30k); no AFPI opp yet &mdash; ACV must be carved from CY26 renewals.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Medibank Private Limited by mining its claims-to-payment, provider onboarding, and member service processes to cut cycle time, expose the residual control gaps flagged after the 2022 cyber incident, and lift the ROI of its existing Service Cloud and Marketing Cloud footprint — all without adding a second specialist analyst layer.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Claims Adjudication &amp; Payment Cycle Time</summary>
     <div class="use-case-body">
-      <p>Medibank processes millions of hospital and ancillary claims annually across Medibank- and ahm-branded members. Manual exceptions, provider-side data quality, and downstream reconciliation drive rework loops that stretch payment cycle time and depress member NPS. AFPI would mine the claim-to-payment event log end-to-end, isolate the top 3 rework variants, and route them to Agentforce for auto-triage. Target metric: reduce median claims cycle time by 20–30% and lift straight-through-processing rate.</p>
+      <p>Medibank processes millions of hospital and ancillary claims annually across Medibank- and ahm-branded members. Manual exceptions, provider-side data-quality defects, and downstream reconciliation drive rework loops that stretch payment cycle time and depress member NPS. AFPI would mine the claim-to-payment event log end-to-end, isolate the top three rework variants, and route them to Agentforce for auto-triage. Metric moved: median claims cycle time (target 20-30% reduction) and straight-through-processing rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Core claims platform, Service Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Andrew+Matthews+Medibank">Andrew Matthews</a> (COO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -156,7 +155,7 @@
   <details>
     <summary>2. Provider Contracting &amp; Onboarding</summary>
     <div class="use-case-body">
-      <p>New hospital and allied-health provider onboarding is a multi-stakeholder process (contract, credentialing, fee schedule, systems handshake) that today lives across email, contract-management, and provider portals. Bottlenecks delay time-to-first-claim and create data-quality debt that shows up later in adjudication. Mining the process reveals which handoffs stall, which provider segments fail credentialing checks, and where SLA breaches concentrate. AFPI + Agentforce can compress onboarding from weeks to days and pre-empt downstream claims defects.</p>
+      <p>New hospital and allied-health provider onboarding is a multi-stakeholder process &mdash; contract, credentialing, fee schedule, systems handshake &mdash; today spread across email, contract management, and provider portals. Bottlenecks delay time-to-first-claim and create data-quality debt that resurfaces in adjudication. Mining the process exposes which handoffs stall, which provider segments fail credentialing checks, and where SLA breaches concentrate. AFPI plus Agentforce can compress onboarding from weeks to days and pre-empt downstream claims defects.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, contract lifecycle system</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Milosh+Milisavljevic+Medibank">Milosh Milisavljevic</a> (Chief Provider Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -164,36 +163,80 @@
   </details>
 
   <details>
-    <summary>3. Member Retention &amp; Churn-Save Journey</summary>
+    <summary>3. Amplar Health Referral-to-Discharge Care Flow</summary>
     <div class="use-case-body">
-      <p>Australian private health insurers face persistent lapse and downgrade risk, especially at annual premium changes. Medibank's Marketing Cloud + Datorama stack already orchestrates the outbound journey, but the actual inbound retention conversation lives in Service Cloud call-center flows and self-service. Mining the full save-attempt event log — from at-risk trigger through save offer through outcome — surfaces which agent scripts, offers, and handoffs actually retain vs. accelerate churn. Metric moved: retention lift at renewal and lower cost-per-save.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud, Service Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Milosh+Milisavljevic+Medibank">Milosh Milisavljevic</a> (Chief Customer Officer)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Post-Breach Access &amp; Privacy Controls Assurance</summary>
-    <div class="use-case-body">
-      <p>Since the 2022 data breach, Medibank has been under APRA CPS 234, OAIC, and class-action-driven scrutiny of its identity, access, and privacy controls. Compliance evidence today is largely control-attestation, not process-behaviour. AFPI can mine the actual access-request-to-fulfilment and privacy-request event flows against the documented control model, exposing where variants diverge from policy and where controls execute but aren't logged. This turns a Board-level narrative into audit-grade evidence and shortens the next APRA review.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> IAM, ServiceNow (if deployed)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kylie+Bishop+Medibank">Kylie Bishop</a> (Chief People &amp; Sustainability Officer)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>5. Amplar Health — Care-Delivery Case &amp; Referral Flow</summary>
-    <div class="use-case-body">
-      <p>Amplar Health (Medibank's in-house care arm) runs hospital-in-the-home, telehealth, and virtual care, with the AWS-hosted Amplar CRM already flagged in the active renewal. Referral-to-care-plan-to-discharge is a multi-clinician, multi-system journey where duplicate work and delayed discharges directly hit unit economics. Mining the care-episode event log surfaces where clinicians re-key, where handoffs stall, and which care pathways drive readmission risk. Metric moved: episodes per clinician per week and readmission rate.</p>
+      <p>Amplar Health (Medibank's in-house care arm) runs hospital-in-the-home, telehealth, and virtual care on an AWS-hosted CRM. Referral-to-care-plan-to-discharge is a multi-clinician, multi-system journey where duplicate work and delayed discharges directly hit unit economics and readmission risk. Mining the care-episode event log surfaces where clinicians re-key, where handoffs stall, and which pathways drive readmissions. Metric moved: episodes per clinician per week and 30-day readmission rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Amplar CRM (AWS), clinical EMR</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Andrew+Wilson+Amplar+Medibank">Andrew Wilson</a> (Amplar Health lead)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent competitor mentions found tying Celonis, Signavio, ARIS, ABBYY, ServiceNow, Appian, UiPath, or Power Automate directly to Medibank in Slack or public deal threads — treat the process-mining category as greenfield for this account and lead with the Salesforce-native AFPI narrative.</span></h2>
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Call-Center Agent Desktop &amp; After-Call Work</summary>
+    <div class="use-case-body">
+      <p>Medibank's Service Cloud Call Center handles claims queries, product changes, and retention calls, with measurable AHT and wrap variability. Task mining captures each agent's on-screen actions to isolate after-call-work steps and the tabs that eat wrap time &mdash; e.g., swivelling into the core policy system to update a benefit. Pairs directly with Agentforce for Service on the existing Service Cloud footprint. Metric moved: AHT and after-call-work minutes per contact type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, core policy-admin</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Operations+Medibank">Head of Customer Operations</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Claims Assessor Exception-Handling Desktop</summary>
+    <div class="use-case-body">
+      <p>Complex or exception claims land with human assessors who flip between the claims platform, provider portals, member records, and email to complete a case. Task mining the assessor desktop reveals how much time is lost to app-switching, copy/paste, and repeated lookups that Agentforce could automate. Feeds a concrete Agentforce Operations business case with per-FTE savings. Metric moved: assessor cases per FTE per day and touch-time per exception claim.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Claims workbench, member portal / Experience Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Claims+Operations+Medibank">Head of Claims Operations</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Retention / Save-Team Agent Desktop</summary>
+    <div class="use-case-body">
+      <p>At renewal, save-team agents pivot between Marketing-Cloud-driven offer context, Service Cloud case data, and the core policy system to negotiate a save. Task mining the save-attempt desktop pinpoints which script paths and offer lookups actually convert vs. which stall the call. Guides both Agentforce assist and the retention playbook itself. Metric moved: save rate at renewal and cost-per-retained-member.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Marketing Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Retention+Medibank">Head of Retention / Member Growth</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. APRA CPS 234 &mdash; Access &amp; Privacy Controls Assurance</summary>
+    <div class="use-case-body">
+      <p>Since the 2022 data breach, Medibank has been under APRA CPS 234, OAIC, and class-action-driven scrutiny of its identity, access, and privacy controls. Today's evidence is largely control-attestation, not process-behaviour. Compliance Center mines the actual access-request-to-fulfilment and privacy-request event flows against the documented control model, exposing where variants diverge from policy and where controls execute but aren't logged. Metric moved: audit-ready controls covered and mean-time-to-evidence for regulator asks.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> IAM / SSO, Event Monitoring on Salesforce</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Information+Security+Officer+Medibank">Chief Information Security Officer</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Privacy Act Reform &mdash; DSAR &amp; Data-Handling Workflow</summary>
+    <div class="use-case-body">
+      <p>Australian Privacy Act reform tightens data-subject rights (access, correction, deletion) and shortens response windows. Medibank's DSAR handling today spans Service Cloud, core policy, and Amplar systems &mdash; hard to prove a fully compliant flow. Compliance Center runs DSAR intake through fulfilment as a controlled workflow with SoD, sign-offs, and immutable evidence. Metric moved: DSAR response SLA hit-rate and audit-defensible completeness of each request.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud (Privacy queue), Field Audit Trail</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Privacy+Officer+Medibank">Chief Privacy Officer / DPO</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Regulator Reporting &amp; Board Attestation Evidence</summary>
+    <div class="use-case-body">
+      <p>APRA, the Private Health Insurance Ombudsman, and the Board itself expect timely, evidenced attestation on control effectiveness &mdash; especially for the post-breach remediation programme. Compliance Center codifies each attestation as a controlled process with source-of-truth evidence pulled from the mined event logs, so the same run produces both regulator-grade and Board-grade reports. Metric moved: attestation cycle time and open control-gap count between quarterly reviews.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> GRC platform, Salesforce Shield / Event Monitoring</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Risk+Officer+Medibank">Chief Risk Officer</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Medibank Private Limited by process-mining claims adjudication, provider onboarding, and Amplar care flows to cut cycle time and lift straight-through processing, task-mining call-center, claims-assessor, and save-team desktops to size a hard Agentforce Operations business case on the existing Service Cloud estate, and running Compliance Center over APRA CPS 234 access, Privacy Act DSAR, and Board attestation processes to convert post-breach control narratives into audit-grade evidence for OAIC and APRA.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

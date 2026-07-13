@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -108,97 +113,141 @@
   <h1>Sysco Corporation</h1>
   <div class="snapshot">
     <p><strong>Consumer Goods, Foodservice Distribution</strong></p>
-    <p><strong>Revenue:</strong> $79B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~76,000 &nbsp;|&nbsp; <strong>HQ:</strong> Houston, TX, USA</p>
-    <p><strong>Major Subsidiaries:</strong> FreshPoint, Buckhead Meat, European Imports, Guest Worldwide, Brakes Group</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Marketing Cloud (ExactTarget, Journey Builder), Sales Cloud, Service Cloud, Salesforce Platform, Analytics Cloud, Informatica (Product 360 in active opp)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Microsoft Teams (migration to Slack in flight), SAP</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Upside Agentic Acceleration Services - CSG (<a href="https://org62.my.salesforce.com/006ed00000aHw1FAAS">$1.6M</a>) &nbsp;|&nbsp; AI Service AF4Service + CC (<a href="https://org62.my.salesforce.com/006ed00000NjZMAAA3">$1.25M</a>) &nbsp;|&nbsp; Agentforce for MFG 8500 (<a href="https://org62.my.salesforce.com/006ed00000VpdByAAJ">$1.07M</a>)</p>
+    <p><strong>Revenue:</strong> ~US$81.4B (FY2025) &nbsp;|&nbsp; <strong>Employees:</strong> ~75,000 &nbsp;|&nbsp; <strong>HQ:</strong> Houston, Texas, USA</p>
+    <p><strong>Major Subsidiaries:</strong> Brakes Group, Sygma, FreshPoint, Greco and Sons, Edward Don &amp; Company</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Marketing Cloud (ExactTarget, Journey Builder), Salesforce Platform (Force.com), Analytics Cloud, Informatica MDM, Informatica Data Integration, Informatica Data Governance &amp; Privacy</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> SAP, Microsoft Teams</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Upside Agentic Acceleration Services &mdash; CSG (<a href="https://org62.my.salesforce.com/006ed00000aHw1FAAS">$1.6M</a>) &nbsp;|&nbsp; AI Service AF4Service + CC (<a href="https://org62.my.salesforce.com/006ed00000NjZMAAA3">$1.25M</a>) &nbsp;|&nbsp; Agentforce for MFG 8500 (<a href="https://org62.my.salesforce.com/006ed00000VpdByAAJ">$1.07M</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
-    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G91BHQ2F">Russ Dixon</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G91BHQ2F">Russell Dixon</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">88/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">85/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce footprint &amp; active pipeline</td><td>19/20</td><td class="cat-green">Marketing Cloud, Sales Cloud, Service Cloud, Platform, Analytics — plus 8+ live opps totaling ~$7M in flight.</td></tr>
-        <tr><td>Process complexity (supply chain, O2C, S2P)</td><td>14/15</td><td class="cat-green">330+ distribution facilities, tens of millions of case-lines/week, 500K+ SKUs, 5,000+ suppliers — event-log-rich.</td></tr>
-        <tr><td>Data &amp; platform readiness (Data Cloud, INFA)</td><td>13/15</td><td class="cat-green">Active Informatica Product 360 opp signals MDM investment; foundation for event-log extraction.</td></tr>
-        <tr><td>Agentforce / AI motion in flight</td><td>18/20</td><td class="cat-green">$1.25M AF4Service+CC and $1.07M Agentforce for MFG both mid-cycle — pure co-sell wedge.</td></tr>
-        <tr><td>Vertical + regulatory pressure</td><td>12/15</td><td class="cat-orange">Foodservice FSMA/food-safety traceability applies but not the primary wedge; SOX standard.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud install (Sales, Service, MC, Platform, Analytics) plus Informatica MDM/DI/DG active on Org62.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">$1.25M AF4Service+CC, $1.07M Agentforce for MFG, $1.6M Upside Agentic Acceleration &mdash; all mid-cycle.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">~$4M+ in relevant open pipeline; multiple opps past Stage 06 with signed statement work in flight.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">330+ distribution centers, 500K+ SKUs, 5,000+ suppliers, tens of millions of case-lines/week &mdash; event-log-rich.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">SAP ECC + Salesforce + Informatica MDM &mdash; textbook mineable estate for O2C, P2P, and case flows.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Vertical + regulatory pressure</td><td>12/15</td><td class="cat-orange">Foodservice FSMA/food-safety traceability applies but not the primary wedge; SOX standard.</td></tr>
-        <tr><td>Data &amp; platform readiness (Data Cloud, INFA)</td><td>13/15</td><td class="cat-green">Data Cloud posture not confirmed; INFA Product 360 still in-opp, not yet deployed at scale.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">FSMA 204 traceability and SOX apply, but no OSFI/HIPAA-grade regime; Compliance Center is a secondary wedge.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">SF sponsors engaged (Russ Dixon) and named execs identified, but no customer-side Apromore champion confirmed yet.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Sysco Corporation by mining its Order-to-Cash and Source-to-Pay event logs across 330+ distribution centers and 500K+ SKUs — cutting short-ship rate and supplier-onboarding cycle time while giving the in-flight Agentforce for MFG and AF4Service rollouts a documented target-state process before they lock in.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Order-to-Cash for the 90-truck / day distribution centers</summary>
+    <summary>1. Order-to-Cash Across 330+ Distribution Centers</summary>
     <div class="use-case-body">
-      <p>Sysco processes tens of millions of case-lines per week across 330+ distribution facilities; cut-off misses, short-ships, and credit rework are the single biggest drag on service level and DSO. AFPI mines the SAP + Salesforce Rev Cloud + WMS event log to expose where orders stall between capture, allocation, pick, and invoice — and where reps override credit holds. It moves order-to-cash cycle time and short-ship rate (each 1% of short-ship is roughly $600M of at-risk GMV).</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> SAP, Salesforce Rev Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ronald+Phillips+Sysco">Ron Phillips</a> (EVP &amp; Chief Supply Chain Officer)</p>
+      <p>Sysco pushes tens of millions of case-lines per week through 330+ distribution facilities on SAP + Salesforce, and cut-off misses, short-ships, and credit rework are the biggest drag on service level and DSO. AFPI mines the SAP OTC and Sales/Service Cloud event log to expose where orders stall between capture, credit hold, allocation, pick, and invoice &mdash; and where reps override policy. Metric: order-to-cash cycle time and short-ship rate (each 1% of short-ship on ~$81B of GMV is roughly $800M at risk).</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP, Salesforce Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Marie+Robinson+Sysco">Marie Robinson</a> (EVP &amp; Chief Supply Chain Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Contact center deflection tied to the AI Service + Voice build</summary>
+    <summary>2. Source-to-Pay and Supplier Onboarding &mdash; the Informatica MDM Wedge</summary>
     <div class="use-case-body">
-      <p>Two active opps ($1.25M AF4Service/CC + $418K Voice) target 916 agents handling delivery, credit, and product-substitution calls. AFPI mines case + IVR + delivery-exception event logs to find the top rework loops, so Agentforce agents are pointed at the calls that actually deflect — not the ones with the highest volume but lowest containment. Metric: cost-per-contact and first-contact resolution on the top 20 intent clusters.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Salesforce Voice</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Marie+Robinson+Sysco">Marie Robinson</a> (EVP &amp; Chief Supply Chain Officer / customer care sponsor)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>3. Source-to-Pay and supplier onboarding — the Informatica Product 360 wedge</summary>
-    <div class="use-case-body">
-      <p>The active INFA Product 360 opp ($750K) signals a live MDM gap on 500K+ SKUs from 5,000+ suppliers. AFPI mines the P2P event log (PO to invoice to payment) plus supplier-master maintenance events to expose duplicate SKUs, price-file exceptions, and the manual PIM handoffs that break the Product 360 ROI case. It moves supplier-onboarding cycle time (weeks → days) and invoice-match rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Informatica Product 360, SAP AP</p>
+      <p>The Informatica MDM footprint on Org62 signals a live master-data effort on 500K+ SKUs from 5,000+ suppliers, but new-supplier onboarding still runs in weeks with duplicate SKUs and price-file exceptions. AFPI mines the P2P event log (PO to receipt to invoice to payment) plus the supplier-master maintenance stream to expose the manual PIM handoffs and approval loops that break the MDM ROI case. Metric: supplier-onboarding cycle time (weeks to days) and three-way invoice-match rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP, Informatica MDM</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Victoria+Gutierrez+Sysco">Victoria Gutierrez</a> (EVP &amp; Chief Merchandising Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Quote-to-cash for the Rev Cloud + CLM expansion</summary>
+    <summary>3. Manufacturing / Plant-Ops Execution &mdash; the Agentforce for MFG Wedge</summary>
     <div class="use-case-body">
-      <p>Two Rev Cloud opps ($1M upgrade + $450K CLM expansion) sit at early stage; Sysco's national-account and local-market pricing has hundreds of contract templates and side-letter carve-outs. AFPI mines the CPQ + CLM event log to show cycle time from quote request to signed contract by segment, and where deal-desk approvals loop. It moves quote cycle time and margin leakage on non-standard pricing.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Rev Cloud, Salesforce CLM</p>
+      <p>The $1.07M Agentforce for Manufacturing opp (8,500 users) targets Sysco's own-brand plants across FreshPoint, Buckhead Meats/Greco, and Brakes Group. AFPI mines the MES + CMMS + quality event logs to prove throughput uplift, unplanned-downtime reduction, and OTIF gain before Agentforce agents go live &mdash; the target-state process Agentforce automates. Metric: OEE and unplanned-downtime hours per line.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> MES, CMMS</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Tom+Peck+Sysco">Tom Peck</a> (EVP &amp; Chief Information &amp; Digital Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Contact Center Agent Desktop &mdash; AF4Service + Voice Build</summary>
+    <div class="use-case-body">
+      <p>The $1.25M AF4Service + Customer Copilot opp targets Sysco's ~900 customer-care agents handling delivery, credit, product-substitution, and short-ship calls. Task mining captures on-screen actions to isolate after-call-work steps, tab-switching, and the specific lookups (SAP, order-mgmt, delivery portal) that eat AHT. Feeds the Agentforce business case directly and points automations at intents that actually deflect, not just high-volume ones. Metric: AHT, after-call-work minutes, and first-contact resolution on the top 20 intents.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, SAP OTC</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Greg+Bertrand+Sysco">Greg Bertrand</a> (EVP US Foodservice Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Manufacturing / plant-ops execution — the Agentforce for MFG 8500 opp</summary>
+    <summary>2. Merchandising Analyst Desktop &mdash; Category &amp; Price-File Workflow</summary>
     <div class="use-case-body">
-      <p>The $1.07M Agentforce for Manufacturing opp is at Stage 07 Pending — a real budget, real user count, and a soft business case. AFPI mines MES + maintenance + quality event logs across Sysco's own-brand plants (Buckhead Meats, FreshPoint, European Imports) to prove throughput uplift, unplanned-downtime reduction, and OTIF gain before Agentforce agents go live. Metric: OEE and unplanned-downtime hours per line.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> MES, Maintenance/CMMS</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Tom+Peck+Sysco">Tom Peck</a> (EVP &amp; Chief Information &amp; Digital Officer)</p>
+      <p>Category managers and pricing analysts flip between SAP, Informatica MDM, Excel, and supplier portals to load new items, resolve price-file exceptions, and maintain 500K+ SKUs. Task mining names the exact copy/paste and re-keying steps that Agentforce can replace with straight-through processing on the merchandising desktop. Metric: SKU maintenance touch-time per item and price-file exception rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Informatica MDM, SAP Merchandising</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Victoria+Gutierrez+Sysco">Victoria Gutierrez</a> (EVP &amp; Chief Merchandising Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <details>
+    <summary>3. Field Sales Rep &mdash; Order-Guide &amp; Quote Desktop</summary>
+    <div class="use-case-body">
+      <p>Marketing associates (Sysco's field-sales force) pull order guides, run substitutions, and quote local and national accounts across Sales Cloud, SAP, and pricing tools. Task mining exposes the swivel-chair between CRM, pricing, and order-entry &mdash; the exact workflow being modernized by the $1.6M Upside Agentic Acceleration engagement. Metric: rep touch-time per order and quote-to-order cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, SAP OTC</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ron+Phillips+Sysco">Ron Phillips</a> (EVP US Foodservice)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. FSMA 204 Food Traceability &mdash; Lot-Level Chain of Custody</summary>
+    <div class="use-case-body">
+      <p>FDA FSMA Section 204 mandates end-to-end lot-level traceability for high-risk foods, with 24-hour recall response and Critical Tracking Event evidence. Compliance Center runs receipt, transformation, shipping, and recall workflows as controlled processes with codified evidence across the WMS, TMS, and SAP receipt logs. Metric: recall response time and % of shipments with complete Key Data Element capture.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> WMS, SAP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Marie+Robinson+Sysco">Marie Robinson</a> (EVP &amp; Chief Supply Chain Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. SOX ITGC &amp; Revenue-Recognition Close Controls</summary>
+    <div class="use-case-body">
+      <p>Sysco's public-company SOX regime covers order-to-cash revenue recognition, credit-hold override controls, and IT general controls on SAP and Salesforce. Compliance Center codifies segregation-of-duties, approval, and evidence steps so the internal-audit population is always audit-ready rather than reconstructed at quarter-close. Metric: control-exception rate and audit sample pass-through rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP, Salesforce Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kenny+Cheung+Sysco">Kenny Cheung</a> (EVP &amp; Chief Financial Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Supplier Risk &amp; Food-Safety Audit &mdash; Informatica MDM Lifecycle</summary>
+    <div class="use-case-body">
+      <p>5,000+ suppliers require food-safety certification, insurance, and periodic audit refresh &mdash; today largely tracked in spreadsheets and supplier portals. Compliance Center turns supplier onboarding, requalification, and de-listing into a controlled workflow tied to the Informatica MDM record, producing evidence for FDA, USDA, and customer-audit inquiries. Metric: % of active suppliers with in-date certifications and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Informatica MDM, Supplier portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Victoria+Gutierrez+Sysco">Victoria Gutierrez</a> (EVP &amp; Chief Merchandising Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Sysco Corporation by process-mining SAP + Salesforce order-to-cash, source-to-pay, and plant-ops event logs across 330+ distribution centers and 500K+ SKUs, task-mining the contact-center, merchandising, and field-sales desktops that the in-flight AF4Service, Agentforce for MFG, and Upside Agentic rollouts will automate, and running FSMA 204 traceability, SOX ITGC, and supplier-audit workflows through Compliance Center &mdash; collapsing OTC cycle time, cutting AHT and short-ship rate, and producing always-on audit evidence for FDA and internal audit.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

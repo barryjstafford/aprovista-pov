@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -107,52 +112,40 @@
 <main>
   <h1>Safilo Group S.p.A.</h1>
   <div class="snapshot">
-    <p><strong>Retail &amp; Consumer Goods, Eyewear (Design, Manufacturing &amp; Distribution)</strong></p>
-    <p><strong>Revenue:</strong> ~€1.05B &nbsp;|&nbsp; <strong>Employees:</strong> ~3,500 &nbsp;|&nbsp; <strong>HQ:</strong> Padua, Italy</p>
-    <p><strong>Major Subsidiaries:</strong> Carrera, Polaroid Eyewear, Smith Optics, Blenders Eyewear, Privé Revaux (SPY+ and Serengeti acquired July 2026)</p>
+    <p><strong>Retail &amp; Consumer Goods, Eyewear Design &amp; Manufacturing</strong></p>
+    <p><strong>Revenue:</strong> ~&euro;1.0B (2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~3,500 &nbsp;|&nbsp; <strong>HQ:</strong> Padova, Italy</p>
+    <p><strong>Major Subsidiaries:</strong> Carrera, Polaroid Eyewear, Smith Optics, Blenders Eyewear, Priv&eacute; Revaux</p>
     <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud (Call Center), Marketing Cloud (ExactTarget), B2B Commerce, Customer Portal, Tableau, Analytics Cloud, MuleSoft, Platform</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Eleonora Dallari]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Safilo SpA | APROMORE (<a href="https://org62.my.salesforce.com/006ed00000VVWBRAA5">$95k</a>) &nbsp;|&nbsp; MC_IT_AO_SAFILO_Loyalty You&amp;Safilo (<a href="https://org62.my.salesforce.com/006ed00000eUMiQAAW">$100k</a>) &nbsp;|&nbsp; Safilo_HR &amp; ITSM (<a href="https://org62.my.salesforce.com/006ed00000VV5SzAAL">$100k</a>)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Safilo Spa - APROMORE - bdr (<a href="https://org62.my.salesforce.com/006ed00000gI4jJAAS">$95k</a>) &nbsp;|&nbsp; Safilo_HR &amp; ITSM (<a href="https://org62.my.salesforce.com/006ed00000VV5SzAAL">$100k</a>) &nbsp;|&nbsp; MC_IT_AO_SAFILO_Loyalty You&amp;Safilo (<a href="https://org62.my.salesforce.com/006ed00000eUMiQAAW">$80k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GEA1TPCL">Eleonora Dallari</a></p>
-    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Data Cloud + Service Cloud + MuleSoft)</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (MuleSoft + B2B Commerce + Service Cloud)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">80/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">80/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Full multi-cloud stack (Sales, Service, MC, B2B, Tableau, MuleSoft) plus Data Foundation #BIGBET in flight.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Live "Safilo SpA | APROMORE" opp already at Stage 02 ($95k) with named Italian NAE working the deal.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">Just closed SPY+ &amp; Serengeti acquisition (Jul 2026); multi-year plant restructuring across Italy and Slovenia.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">MuleSoft ($241k renewal) already the integration spine — event logs across ERP, Commerce, Service are minable today.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-green">Active AF One upgrade, HR &amp; ITSM, Loyalty (You&amp;Safilo), and Signature Success Swap all in pipe.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Full multi-cloud stack (Sales, Service, MC, B2B, Tableau, MuleSoft, Platform) &mdash; deep entrenched estate.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Live "Safilo Spa - APROMORE - bdr" opp at Stage 02 ($95k) with named Italian NAE working it.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">32 licensed brands, 40 country subs, multi-plant restructuring &mdash; classic O2C and P2P rework territory.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">MuleSoft is the integration spine ($241k renewal in pipe) &mdash; ERP, Commerce, Service logs are minable today.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-green">Active A1S/Voice upgrade, HR &amp; ITSM, You&amp;Safilo loyalty, and Signature Success Swap all in pipe.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-orange">EU CSRD, GDPR and product-liability CE marking apply, but no single-regulator wedge to force urgency.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>13/20</td><td class="cat-orange">CEO Angelo Trocchia and CFO layer identified, but no confirmed process-owner or CoE lead in the account yet.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>12/20</td><td class="cat-orange">CEO/CFO layer named but no confirmed process-owner or CoE lead surfaced via LinkedIn or Slack yet.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-orange">EU CSRD, GDPR and CE product-liability apply, but no single-regulator wedge to force urgency.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Safilo Group S.p.A. by mining the multi-brand Order-to-Cash, licensed-brand royalty, and post-merger integration event logs across its MuleSoft-connected stack — accelerating the SPY+/Serengeti onboarding, tightening working capital across 40+ country subsidiaries, and turning the live $95k Apromore opp into a documented, business-analyst-owned process intelligence program.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Post-Merger Integration: SPY+ and Serengeti Onboarding</summary>
+    <summary>1. Wholesale &amp; D2C Order-to-Cash across 32 Licensed Brands</summary>
     <div class="use-case-body">
-      <p>Safilo just completed the acquisition of SPY+ and Serengeti on July 1, 2026 — two brand systems that must be harmonized into the Padua ERP, MuleSoft integration layer, and B2B Commerce storefronts within 12 months. Every past Safilo integration (Solstice divestiture, Kering license unwind, plant closures in Martignacco / Ormož / Longarone) has surfaced hidden rework loops in item master, licensing royalty, and D2C order flow. AFPI mines the current-state OTC and item-onboarding processes in both target companies against the Safilo reference model, exposes conformance gaps without a PQL specialist, and lets Finance simulate policy alignment before the go-live — target 30-40% faster brand cutover and zero royalty leakage.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> B2B Commerce, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Angelo+Trocchia+Safilo">Angelo Trocchia</a> (CEO)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>2. Wholesale &amp; D2C Order-to-Cash across 32 Licensed Brands</summary>
-    <div class="use-case-body">
-      <p>Safilo runs 32 licensed brands (Boss, Tommy Hilfiger, Jimmy Choo, Levi's, Victoria Beckham, and more) plus 5+ house brands through wholly-owned subsidiaries in 40 countries and 50 distribution partners in 70. Each license carries distinct royalty triggers, minimum guarantees, and channel-exclusivity rules that today create manual credit blocks, delivery-date renegotiations, and revenue-recognition rework at every close. AFPI mines the full O2C event log across ERP, Commerce, and Service Cloud, quantifies rework hotspots by brand and geography, and hands the CFO office a business-analyst-controlled cockpit — targeting DSO reduction of 3-5 days and OTIF lift of 4-6 points.</p>
+      <p>Safilo runs 32 licensed brands (Boss, Tommy Hilfiger, Jimmy Choo, Levi's, Victoria Beckham) plus house brands through wholly-owned subsidiaries in 40 countries and distribution partners in another 30. Each license carries distinct royalty triggers, minimum guarantees, and channel-exclusivity rules that today produce manual credit blocks, delivery renegotiations, and revenue-recognition rework at every close. Mining the full O2C event log across ERP, B2B Commerce, and Service Cloud exposes the rework hotspots by brand and geography, and hands the CFO office a business-analyst-controlled cockpit. Metric: DSO reduction of 3-5 days and OTIF lift of 4-6 points.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> B2B Commerce, Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Gerd+Graehsler+Safilo">Gerd Graehsler</a> (CFO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -160,36 +153,92 @@
   </details>
 
   <details>
-    <summary>3. You&amp;Safilo Loyalty and Consumer Journey Optimization</summary>
+    <summary>2. Procure-to-Pay across the Restructured Italy / Slovenia / Far East Plant Footprint</summary>
     <div class="use-case-body">
-      <p>The MC_IT_AO_SAFILO_Loyalty (You&amp;Safilo) opportunity signals a live investment in tying Marketing Cloud, D2C storefronts, and post-purchase service into a single consumer identity — but today the customer journey fragments across dealer, e-commerce, and service touchpoints with no visibility into where drop-off actually happens. AFPI mines the end-to-end consumer event log from campaign engagement through purchase, warranty registration and repeat-order, feeds the gaps into Agentforce Marketing agents, and unlocks the Data Cloud investment already in flight. Target: 8-12% lift in loyalty-driven repeat rate and 2x faster campaign-to-conversion analysis.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud, Data Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Angela+Bianchi+Safilo">Angela Bianchi</a> (Chief Marketing Officer)</p>
+      <p>Safilo has spent five years rationalizing manufacturing &mdash; closing Martignacco (2020), selling Ormo&#382; (2021), Longarone consolidation (2023) &mdash; while shifting volume to Longarone HQ, the Chinese JV, and 3PL partners. Every plant transition produces PO exceptions, three-way match failures, and long supplier onboarding cycles that quietly consume Finance and Supply Chain FTE. Mining the P2P and inbound-quality event logs quantifies where each transition still leaks cycle-time and cost. Metric: 8-12% touchless-P2P uplift and 25% faster supplier onboarding.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ERP (AP module), MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Industrial+Officer+Safilo">Chief Industrial Officer</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Supplier &amp; Manufacturing Rationalization Across Italy / Slovenia / Far East</summary>
+    <summary>3. B2B Wholesale Order Portal &amp; Optical-Retailer Onboarding</summary>
     <div class="use-case-body">
-      <p>Safilo has been rationalizing its manufacturing footprint for five years — closing Martignacco (2020), selling Ormož (2021), and Longarone (2023) — while shifting volume to Longarone HQ, the Chinese joint venture, and 3PL partners. Every plant transition today produces PO exceptions, three-way match failures, and long supplier onboarding cycles that quietly consume Finance and Supply Chain FTE. AFPI mines the Procure-to-Pay and inbound-quality event logs, quantifies where each plant transition still leaks cycle-time and cost, and pairs Compliance Center with the wedge to keep CE, REACH, and eyewear product-liability documentation always audit-ready — reclaiming 8-12% touchless-P2P uplift.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> ERP AP (TBD), MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Massimiliano+Tabacchi+Safilo">Massimiliano Tabacchi</a> (Chief Industrial Officer)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>5. B2B Wholesale Order Portal &amp; Optical-Retailer Onboarding</summary>
-    <div class="use-case-body">
-      <p>The Salesforce B2B Commerce footprint (60,000+ Customer Portal licenses) drives wholesale orders from independent opticians, chain retailers, and department stores across 70+ markets. Retailer onboarding today involves credit checks, brand-authorization approvals, price-list assignment, and localized VAT handling — a multi-step process where drop-off directly costs new-account revenue. AFPI mines the onboarding-to-first-order event log, surfaces exactly where retailers stall, and lets Sales Ops re-simulate approval flows in weeks — target 25-35% reduction in retailer time-to-first-order and 5-8 point lift in dormant-account reactivation.</p>
+      <p>The Salesforce B2B Commerce + Customer Portal footprint (60,000+ licenses) drives wholesale orders from independent opticians, chain retailers, and department stores across 70+ markets. Retailer onboarding today involves credit checks, brand-authorization approvals, price-list assignment, and localized VAT handling &mdash; a multi-step process where drop-off directly costs new-account revenue. Mining the onboarding-to-first-order event log surfaces exactly where retailers stall and lets Sales Ops re-simulate approval flows in weeks. Metric: 25-35% reduction in retailer time-to-first-order and 5-8 point lift in dormant-account reactivation.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> B2B Commerce, Service Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Maurizio+Marchiori+Safilo">Maurizio Marchiori</a> (Chief Commercial Officer)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Commercial+Officer+Safilo">Chief Commercial Officer</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Customer Care Agent Desktop (Call Center 616+ Seats)</summary>
+    <div class="use-case-body">
+      <p>The Safilo SpA Service Cloud install is 616 Call Center seats plus 65,000 Customer Portal users, handling B2B optician queries, D2C consumer support, and warranty claims across every brand. Task mining captures each agent's on-screen actions to isolate after-call-work steps and tab-switching that eat wrap time &mdash; feeding straight into the open A1S / Voice upgrade opp. Pairs the desktop-level evidence with the open Agentforce for Service investment. Metric: AHT down 12-18% and after-call-work minutes per contact down 20%.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, ERP order screens</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Care+Safilo">Head of Customer Care</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. HR / ITSM Employee Service Desktop</summary>
+    <div class="use-case-body">
+      <p>The live $100k "Safilo_HR &amp; ITSM" opportunity signals an active build of an employee-facing service function on Salesforce &mdash; onboarding, benefits questions, IT tickets. Task mining captures how HR and IT service reps flip between HRIS, ticketing, and email today, showing exactly which repetitive steps Agentforce Employee agents can absorb before the platform goes live. Metric: first-contact resolution up 15 points and ticket handling time cut 25%.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> HRIS console, Service Cloud (HR / ITSM)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+People+Officer+Safilo">Chief People Officer</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Finance Close &amp; Multi-Brand Royalty Reconciliation</summary>
+    <div class="use-case-body">
+      <p>Safilo Finance closes 32 licensed-brand royalty statements, wholesale channel accruals, and inter-company eliminations every quarter across 40 country subsidiaries. Task mining the controller desktop reveals how much of the close is still Excel copy-paste, manual reconciliation, and email chase &mdash; the exact swivel-chair that Agentforce Operations replaces with a controlled workflow. Metric: close cycle-time down 3-4 days and manual journal-entry touches cut 40%.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ERP GL, Excel / reconciliation spreadsheets</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Group+Controller+Safilo">Group Controller</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. EU CSRD Sustainability Reporting Controls</summary>
+    <div class="use-case-body">
+      <p>As an EU-listed manufacturer, Safilo is now inside the Corporate Sustainability Reporting Directive scope &mdash; Scope 1/2/3 emissions, supplier due-diligence, and product-lifecycle disclosures must all be evidenced under limited (later reasonable) assurance. Compliance Center runs the CSRD data-collection, sign-off, and evidence-preservation workflow as a controlled process across HR, Supply Chain, and Finance, replacing today's spreadsheet-and-email chase. Metric: audit-ready CSRD data points covered and time-to-evidence cut in half.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ESG data platform, ERP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Sustainability+Safilo">Head of Sustainability</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Licensed-Brand Royalty &amp; Contract Compliance</summary>
+    <div class="use-case-body">
+      <p>Every one of Safilo's 32 licenses (Boss, Tommy Hilfiger, Dior alumni, Jimmy Choo, Levi's, David Beckham, Victoria Beckham, Isabel Marant, Marc Jacobs, and more) carries contractual minimums, royalty audits, exclusivity clauses, and territory restrictions. Compliance Center codifies the license-lifecycle controls &mdash; sell-through evidence, royalty calculation sign-off, brand-audit response &mdash; so every license renewal cycle has a clean audit trail. Metric: royalty-audit findings down and license-renewal cycle time cut.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ERP royalty ledger, contract management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=General+Counsel+Safilo">General Counsel</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. CE Marking, REACH &amp; Product-Liability Documentation</summary>
+    <div class="use-case-body">
+      <p>Eyewear (especially prescription and sun) is a regulated medical device / PPE product in most of Safilo's markets &mdash; CE marking, EU REACH substance disclosure, and per-country product-liability files must be always audit-ready for every SKU in the catalog. Compliance Center runs supplier onboarding, material declarations, and CE technical-file assembly as a controlled, evidence-preserving workflow across the plant network. Metric: audit-ready SKUs covered and mean-time-to-evidence for a regulator query cut from weeks to hours.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> PLM / QMS, supplier portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Quality+and+Regulatory+Safilo">Head of Quality &amp; Regulatory</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Safilo Group S.p.A. by mining wholesale-and-D2C order-to-cash, plant-network procure-to-pay, and B2B retailer onboarding across its MuleSoft-connected Salesforce estate, task-mining the 616-seat call-center desktop and HR/ITSM service work to fuel the in-flight A1S/Voice and HR &amp; ITSM programs, and running CSRD, licensed-brand royalty, and CE/REACH product-liability controls through Compliance Center &mdash; converting the live $95k Apromore opp into a business-analyst-owned process intelligence program that shrinks DSO, cuts AHT, and produces always-on audit evidence.</p>
+
+  <div class="actions">
     <span>Generate PDF</span>
     <span>Generate Slack Canvas</span>
     <span>Generate Vercel Page</span>
@@ -198,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

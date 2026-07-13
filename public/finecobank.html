@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -108,40 +113,38 @@
   <h1>FinecoBank S.p.A.</h1>
   <div class="snapshot">
     <p><strong>Financial Services, Banking (Direct / Online Brokerage &amp; Private Banking)</strong></p>
-    <p><strong>Revenue:</strong> €1.32B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~1,529 (plus ~3,000 PFA advisors) &nbsp;|&nbsp; <strong>HQ:</strong> Milan, Italy</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Marketing Cloud (ExactTarget), Marketing Cloud Engagement+, Signature for Marketing, Sales Cloud (CRM Consulenti Finanziari — active rebuild)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Fabio Milanesi, GM &amp; Head of IT, Operations]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Fineco - Apromore - BDR (<a href="https://org62.my.salesforce.com/006ed00000X8tSXAAZ">$100k</a>) &nbsp;|&nbsp; FinecoBank - CRM consulenti Finanziari - CSG (<a href="https://org62.my.salesforce.com/006ed00000Bus2bAAB">$1.25M</a>) &nbsp;|&nbsp; Fineco - CRM e Portale Consulenti - Core (<a href="https://org62.my.salesforce.com/0063y0000184BAIAA2">$400k</a>)</p>
+    <p><strong>Revenue:</strong> ~&euro;1.32B (FY24) &nbsp;|&nbsp; <strong>Employees:</strong> ~1,316 (plus ~3,000 PFA advisors) &nbsp;|&nbsp; <strong>HQ:</strong> Milan, Italy</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Marketing Cloud Engagement (Enterprise + Corporate), Marketing Cloud Personalization (Premium EMEA + Named Profiles), Marketing Cloud Intelligence, Marketing Cloud Advertising, Audience Studio, Salesforce Shield (Encryption at Rest, Audit Trail), Premier Success Plan</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> FinecoBank - CRM consulenti Finanziari - CSG (<a href="https://org62.my.salesforce.com/006ed00000Bus2bAAB">$1.25M</a>) &nbsp;|&nbsp; Fineco - CRM e Portale Consulenti - Core (<a href="https://org62.my.salesforce.com/0063y0000184BAIAA2">$400k</a>) &nbsp;|&nbsp; Fineco - Apromore - BDR (<a href="https://org62.my.salesforce.com/006ed00000X8tSXAAZ">$100k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01TZUT0R50">Adele Brancadoro</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Sales Cloud + Marketing Cloud)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">94/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">93/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Priority vertical: ECB-supervised Significant Institution, Italian direct bank + private banking.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep SF install base: $1.25M CRM Consulenti build + $860k MC renewal + Signature.</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">MiFID II, PSD2, ECB SREP, GDPR, KYC/AML — auditable process evidence is table stakes.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Apromore BDR opp already live at $100k — timing/interest confirmed.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">Fabio Milanesi (GM &amp; Head of IT, Operations) is the ideal single sponsor.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">ECB-supervised Significant Institution &mdash; priority FS/direct bank + private banking vertical.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep MC estate + Audience Studio + Shield; $860k renewal + $1.65M CRM Consulenti in-flight.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">MiFID II, PSD2 SCA, ECB SREP, GDPR, KYC/AML &mdash; auditable process evidence is table stakes.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Fineco-Apromore BDR opp live at $100k; SCI-backed CRM Consulenti active competitive deal.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">Fabio Milanesi (GM/Head of IT &amp; Ops) + Mauro Albanese (Head of PFA Network) both engaged.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-orange">Core-banking stack unconfirmed; digital-first bank should have rich logs but needs verify.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-orange">Active CRM Consulenti rebuild is a great wedge but no public agentic-AI CoE named yet.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-orange">Digital-first bank should have rich event logs but core-banking / OMS stack unconfirmed.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-orange">Active CRM Consulenti rebuild + MCE+ + Signature, but no public agentic-AI CoE named.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help FinecoBank S.p.A. by mining the customer-onboarding, KYC/AML, financial-advisor lifecycle, and trading-order exception flows that ride the same event logs Fineco is already surfacing into the in-flight Sales Cloud rebuild — collapsing time-to-yes for new clients, cutting rework in the ~3,000-strong PFA advisor network, and giving the ECB-facing risk team auditable, no-code process evidence in 2-4 weeks instead of the quarters a two-specialist Celonis rollout would demand.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Digital Customer Onboarding &amp; KYC/AML Straight-Through Rate</summary>
     <div class="use-case-body">
-      <p>Fineco acquires customers exclusively online, so every drop-off in ID verification, PEP screening, or MiFID suitability directly hits net new asset (NNA) growth. Today the funnel is instrumented in analytics but not process-mined end-to-end — the bank sees conversion rates but not the actual variants that stall (manual re-KYC, document rejection loops, appropriateness re-tests). AFPI mines the full onboarding event log to surface the top 3 variants blocking straight-through processing, then drives conformance against the ECB/Banca d'Italia target path. Metric: onboarding-to-first-trade cycle time and STP rate.</p>
+      <p>Fineco acquires clients exclusively online, so every drop-off in ID verification, PEP screening, or MiFID suitability directly hits net new asset (NNA) growth. Today the funnel is instrumented in analytics but not process-mined end-to-end &mdash; the bank sees conversion rates but not the actual variants that stall (manual re-KYC, document rejection loops, appropriateness re-tests). AFPI mines the full onboarding event log to surface the top variants blocking straight-through processing, then drives conformance against the ECB / Banca d'Italia target path. Metric: onboarding-to-first-trade cycle time and STP rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud / CRM Consulenti, KYC platform</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Fabio+Milanesi+FinecoBank">Fabio Milanesi</a> (GM &amp; Head of IT, Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -151,7 +154,7 @@
   <details>
     <summary>2. Financial Advisor (PFA) Lifecycle &amp; Portale Consulenti Adoption</summary>
     <div class="use-case-body">
-      <p>Fineco's ~3,000 personal financial advisors are the growth engine, and the active $1.25M "CRM Consulenti Finanziari" + $400k "Portale Consulenti Core" builds are re-platforming how they recruit, onboard, coach, and retain them. Process mining the advisor recruitment funnel, portal adoption events, and book-transfer workflow reveals which regional Area Managers are stuck in exception handling and where the new portal actually saves time versus the old one. This turns the Sales Cloud rebuild from a rip-and-replace into a measurable value story. Metric: advisor time-to-productivity and portal DAU per feature.</p>
+      <p>Fineco's ~3,000 personal financial advisors are the growth engine, and the active $1.25M "CRM Consulenti Finanziari" + $400k "Portale Consulenti Core" + $375k Portale PEM builds are re-platforming how the bank recruits, onboards, coaches, and retains them. Process mining the advisor recruitment funnel, portal adoption events, and book-transfer workflow reveals which regional Area Managers are stuck in exception handling and where the new portal actually saves time versus the old one. This turns the Sales Cloud rebuild from a rip-and-replace into a measurable value story. Metric: advisor time-to-productivity and portal DAU per feature.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud / CRM Consulenti, Portale Consulenti</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mauro+Albanese+FinecoBank">Mauro Albanese</a> (Deputy GM, Head of Network PFA &amp; Private Banking)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -161,34 +164,78 @@
   <details>
     <summary>3. Trading Order Exception &amp; Post-Trade Settlement Flow</summary>
     <div class="use-case-body">
-      <p>As one of Europe's largest direct brokers, Fineco routes millions of retail equity, ETF, CFD, and derivative orders daily. Every rejected order, failed settlement, or manual break-fix erodes margin and triggers client-service tickets. Mining the order-management-to-settlement event log exposes the exception patterns (venue rejects, corporate-action mismatches, FX cutoff timing) that consume Operations bandwidth. AFPI simulates the top interventions and quantifies the STP-rate lift before any change is coded. Metric: trade break rate and mean-time-to-resolve settlement exceptions.</p>
+      <p>As one of Europe's largest direct brokers, Fineco routes millions of retail equity, ETF, CFD, and derivative orders daily. Every rejected order, failed settlement, or manual break-fix erodes margin and triggers client-service tickets. Mining the order-management-to-settlement event log exposes the exception patterns (venue rejects, corporate-action mismatches, FX cutoff timing) that consume Operations bandwidth, and AFPI simulates the top interventions before any change is coded. Metric: trade break rate and mean-time-to-resolve settlement exceptions.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Order Management System, Settlement / Custody platform</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Paolo+Di+Grazia+FinecoBank">Paolo Di Grazia</a> (Deputy GM, Head of Global Business)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>4. Marketing-to-Cash Journey Conformance (Cross-Sell to Existing Base)</summary>
+    <summary>1. Client-Service Desktop Swivel-Chair (Care &amp; Retention)</summary>
     <div class="use-case-body">
-      <p>Fineco is renewing its $860k Marketing Cloud footprint and layering Engagement+ and Signature for Marketing on top. The declared goal is more relevant cross-sell into the 1.6M+ client base — but journey performance is currently measured in aggregate open/click/conversion, not in mined variant paths. Apromore mines the actual journey traversals (Email → Push → In-App → Trade / Deposit / Advisor Meeting) and shows which sequences convert versus which loop back. This directly de-risks the MC renewal by proving journey ROI in the customer's own data. Metric: journey-attributed AUM inflow and cross-product attach.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud, Sales Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Simone+Manni+FinecoBank">Simone Manni</a> (Head of Digital Marketing)</p>
+      <p>Fineco's client-service agents flip between the CRM console, core-banking screens, trading platform, and internal knowledge portals to resolve a single client request. Task mining the agent desktop captures exactly which app-switches, copy/paste steps, and repeated lookups eat wrap time on the most common inquiry types. That output feeds directly into an Agentforce for Service business case &mdash; each swivel step Agentforce collapses is a quantified minute back per contact. Metric: average handle time and after-call-work minutes per contact type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, core-banking front end</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Client+Care+FinecoBank">Head of Client Care &amp; Contact Center</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Compliance-Center Wedge: MiFID Suitability &amp; ECB SREP Evidence</summary>
+    <summary>2. Marketing Operations Build &amp; QA Desktop (MC Engagement+)</summary>
     <div class="use-case-body">
-      <p>ECB direct supervision (Significant Institution status since 2021) plus MiFID II suitability, appropriateness, and PSD2 SCA rules force Fineco to prove — with evidence, not slides — that every advised trade and every payment auth traversed the compliant path. Today that evidence is stitched together from log dumps for each SREP or internal-audit cycle. Apromore's Compliance Center turns this into a continuous conformance dashboard against the declared reference model, with red-flag alerts on drift and full replay for auditors. This is the classic "pay for the audit, get the ops savings free" wedge. Metric: audit prep hours and rate of first-time-right suitability checks.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Trading platform, KYC/Compliance system</p>
+      <p>Fineco is renewing its $860k Marketing Cloud footprint and layering Engagement+ and Signature for Marketing on top &mdash; but the campaign-build desktop is where the actual bottleneck lives (segment builds, journey QA, brand-review handoffs, launch approvals). Task mining the marketing operators' screens exposes how many minutes go to re-work, tool-switching between MC Engagement, Personalization, and Intelligence, and manual approvals that could be templated. Metric: campaign build cycle time and rework touches per journey.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud Engagement, Marketing Cloud Personalization</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Digital+Marketing+FinecoBank">Head of Digital Marketing Operations</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. AML / Fraud Analyst Alert-Adjudication Desktop</summary>
+    <div class="use-case-body">
+      <p>PSD2 SCA, MiFID II surveillance, and Banca d'Italia AML expectations force Fineco's compliance analysts to adjudicate a steady stream of alerts across the AML monitoring platform, case management, KYC records, and trade blotter. Task mining the analyst desktop maps the exact click path per alert type &mdash; then names the sub-steps Agentforce can auto-triage (data pulls, evidence collation, SAR draft) so humans focus on the judgement call. Metric: alerts cleared per analyst per shift and time-to-SAR-draft.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> AML monitoring platform, case management</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Claudio+Perego+FinecoBank">Claudio Perego</a> (Information Security &amp; Fraud Management)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate tied specifically to FinecoBank in Slack or web signals. Italian process-mining wins for peers (Fincantieri, Terna) show Celonis and Signavio active in the region — assume they will show up here if we don't move first.</span></h2>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. MiFID II Suitability &amp; Appropriateness Continuous Conformance</summary>
+    <div class="use-case-body">
+      <p>MiFID II requires Fineco to prove that every advised trade traversed a compliant suitability + appropriateness path, and today that evidence is stitched together from log dumps at each audit or internal-review cycle. Compliance Center codifies the reference model and continuously conforms live executions against it, red-flagging drift the day it happens instead of at the next review. This is the classic "pay for the audit, get the ops savings free" wedge. Metric: rate of first-time-right suitability checks and audit-prep hours per cycle.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Trading platform, CRM Consulenti</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Fabio+Milanesi+FinecoBank">Fabio Milanesi</a> (GM &amp; Head of IT, Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. ECB SREP &amp; AML/KYC Evidence-on-Demand</summary>
+    <div class="use-case-body">
+      <p>ECB direct supervision (Significant Institution status since 2021) plus Banca d'Italia AML expectations force Fineco to demonstrate &mdash; with evidence, not slides &mdash; that KYC refresh, PEP screening, and periodic re-review actually happened on every in-scope client. Compliance Center turns that into a continuous conformance dashboard against the declared reference model, with full replay for JST examiners and drift alerts before findings escalate. Metric: KYC / periodic-review SLA hit-rate and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> KYC / AML platform, case management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Claudio+Perego+FinecoBank">Claudio Perego</a> (Information Security &amp; Fraud Management)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. PSD2 SCA &amp; GDPR Consent Traceability</summary>
+    <div class="use-case-body">
+      <p>PSD2 Strong Customer Authentication and GDPR consent management both demand step-level traceability: which auth factor fired, which exemption was used, which consent was in force at the moment of processing. Today Fineco can produce this from logs on demand, but not continuously and not against a declared model. Compliance Center defines the SCA + consent reference model and runs live auth / consent events against it, so anomalies (silent exemption drift, expired-consent processing) are caught in-flight. Metric: SCA exemption-abuse rate and unresolved consent gaps per month.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Payment / auth platform, consent management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Data+Protection+FinecoBank">Head of Data Protection / DPO, FinecoBank</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help FinecoBank S.p.A. by mining digital onboarding, PFA advisor lifecycle, and trading-exception flows across the in-flight $1.65M CRM Consulenti build and its Marketing Cloud estate, task-mining client-service, marketing-ops, and AML-analyst desktops to size a concrete Agentforce Operations business case, and running MiFID II suitability, ECB SREP KYC, and PSD2 SCA controls through Compliance Center &mdash; collapsing onboarding cycle time, cutting AHT and rework across the ~3,000-strong advisor network, and giving the JST auditable continuous evidence in 2-4 weeks instead of the quarters a two-specialist Celonis rollout would demand.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -199,7 +246,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

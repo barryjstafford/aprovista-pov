@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -113,40 +114,38 @@
   <div class="snapshot">
     <p><strong>Manufacturing, Automotive OEM Distribution</strong></p>
     <p><strong>Revenue:</strong> ~A$1.46B &nbsp;|&nbsp; <strong>Employees:</strong> ~138 &nbsp;|&nbsp; <strong>HQ:</strong> Macquarie Park, Sydney, Australia</p>
-    <p><strong>Major Subsidiaries:</strong> National Sales Company of Kia Corporation (South Korea); dealer network of 100+ franchised dealers across Australia</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Automotive Cloud (Enterprise, pending), Marketing Cloud Advanced, Tableau, Flex Credits</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> SAP ERP, Oracle Siebel CRM/CTI (sunset in progress), Unity4 CTI</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Kia Motors AU - Apromore (<a href="https://org62.my.salesforce.com/006ed00000f9wV3AAI">$100k</a>) &nbsp;|&nbsp; Automotive Cloud + Marketing Cloud (<a href="https://org62.my.salesforce.com/006ed00000ZtYcnAAF">$359k</a>) &nbsp;|&nbsp; Kia AU Integration (<a href="https://org62.my.salesforce.com/006ed00000e4JTFAA2">$50k</a>)</p>
+    <p><strong>Major Subsidiaries:</strong> Kia franchised dealer network (100+ dealers across Australia)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Automotive Cloud (Enterprise), Marketing Cloud Advanced, Tableau, Flex Credits</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> SAP ERP, Oracle Siebel, Unity4 CTI</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Kia Motors AU - Apromore (<a href="https://org62.my.salesforce.com/006ed00000f9wV3AAI">$100k</a>) &nbsp;|&nbsp; Kia Australia - Automotive Cloud, Marketing Cloud (<a href="https://org62.my.salesforce.com/006ed00000ZtYcnAAF">$359k</a>) &nbsp;|&nbsp; Kia AU - Integration (<a href="https://org62.my.salesforce.com/006ed00000e4JTFAA2">$50k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U029NB62GQN">Katherine Lim</a></p>
-    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations (Automotive Cloud + Apromore)</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">85/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">85/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Buyer &amp; Champion Fit</td><td>15/20</td><td class="cat-green">IT Lead-BPR/SAP, IT Architect, Digital Marketing Mgr identified [Org62]; sponsor reachable.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Automotive OEM distribution — priority AFPI vertical for OTC and dealer processes.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Siebel sunset + Automotive Cloud rollout + CTI replatform = heavy in-flight process rework.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>11/12</td><td class="cat-green">Automotive Cloud + Marketing Cloud + Tableau opps live; active AE; existing Apromore opp already open.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Apromore opp already in Stage 02 ($100k) with adjacent $359k Automotive Cloud deal &mdash; timing perfect.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>11/12</td><td class="cat-green">Automotive Cloud + Marketing Cloud + Tableau live; active AE (Katherine Lim); Apromore opp already open.</td></tr>
         <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">HAE partner engaged, CCaaS AU GA Nov 2026 targeted, aligned with Kia Corp global digital push.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Automotive OEM distribution &mdash; priority AFPI vertical for order-to-cash, dealer, and after-sales flows.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Siebel sunset + Automotive Cloud rollout + CTI replatform &mdash; heavy in-flight process rework and variant risk.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">ACL/recall risk exposure, but no heavy regulated compliance regime driving mandatory process auditability.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Apromore opp already in Stage 02 ($100k) with adjacent $359k Automotive Cloud deal — timing perfect.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">ACL, dealer franchise, and recall exposure &mdash; real but not the SOX/HIPAA-grade regime that forces mandatory controls.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>15/20</td><td class="cat-orange">IT Lead-BPR/SAP, IT Architect, Digital Marketing Mgr identified; no confirmed customer-side executive champion yet.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Kia Australia Pty Ltd by mining the Siebel-to-Automotive-Cloud migration, dealer lead-to-delivery, and after-sales service processes to de-risk the CTI replatform, expose dealer bottlenecks, and give the Kia AU + HAE team an evidence-driven baseline that accelerates Automotive Cloud time-to-value by 30-40%.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Siebel-to-Automotive-Cloud Migration As-Is Discovery</summary>
     <div class="use-case-body">
-      <p>Kia AU is retiring Oracle Siebel and Unity4 CTI in favor of Automotive Cloud + CCaaS (AU GA Nov 2026). Without an event-log baseline, HAE and Salesforce ProServ are flying blind — customization risk, scope creep, and dealer disruption are high. Apromore mines the current Siebel + Unity4 flows to produce a fact-based as-is map, quantify variant explosion, and lock scope for the target-state build. Metric moved: implementation cycle time (-30%) and change-request volume post-go-live (-50%).</p>
+      <p>Kia AU is retiring Oracle Siebel and Unity4 CTI in favor of Automotive Cloud + CCaaS (AU GA Nov 2026). Without an event-log baseline, HAE and Salesforce ProServ are flying blind &mdash; customization risk, scope creep, and dealer disruption are all high. Apromore mines the current Siebel + Unity4 flows to produce a fact-based as-is map, quantify variant explosion, and lock scope for the target-state build. Metric moved: implementation cycle time (-30%) and change-request volume post-go-live (-50%).</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Oracle Siebel, Unity4</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Young+Kang+Kia+Australia">Young Kang</a> (IT Architect)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -156,7 +155,7 @@
   <details>
     <summary>2. Dealer Lead-to-Delivery Cycle Mining</summary>
     <div class="use-case-body">
-      <p>Kia AU distributes through 100+ franchised dealers — leads flow from marketing to dealer CRM to delivery, with heavy handoff friction and quote-to-order rework. Apromore mines the end-to-end lead-to-delivery path across Marketing Cloud, dealer systems, and SAP order management, exposing which dealer segments and lead sources have the longest cycles and highest drop-off. This is the highest-ROI process for the record-year new-vehicle boom in AU. Metric moved: lead-to-delivery cycle time (-15%) and dealer conversion rate (+8%).</p>
+      <p>Kia AU distributes through 100+ franchised dealers &mdash; leads flow from marketing to dealer CRM to delivery, with heavy handoff friction and quote-to-order rework. Apromore mines the end-to-end lead-to-delivery path across Marketing Cloud, dealer systems, and SAP order management, exposing which dealer segments and lead sources have the longest cycles and highest drop-off. This is the highest-ROI process for a record-year new-vehicle boom in AU. Metric moved: lead-to-delivery cycle time (-15%) and dealer conversion rate (+8%).</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud, SAP</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Tim+Manning+Kia+Australia">Tim Manning</a> (Manager, Digital Marketing)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -164,9 +163,21 @@
   </details>
 
   <details>
-    <summary>3. After-Sales Service &amp; Warranty Claims Process Mining</summary>
+    <summary>3. Vehicle Order-to-Cash and Dealer Supply Allocation</summary>
     <div class="use-case-body">
-      <p>Kia AU's after-sales/warranty flow crosses SAP, dealer DMS, and Siebel service module — with the 7-year warranty as a brand differentiator, claim throughput and dealer reimbursement cycle time directly hit CX and dealer margin. Apromore mines the claim-submission-to-reimbursement path to isolate rework loops, rejection reasons, and slow-approving dealers. Feeds Automotive Cloud service module design. Metric moved: warranty claim cycle time (-25%) and rejection rework (-40%).</p>
+      <p>SAP-driven order-to-cash from Kia Corp (Korea) through Kia AU to dealer allocation is complex &mdash; constrained supply, dealer allocation politics, and cross-border logistics create long-tail variants. Apromore mines the SAP OTC event log to reveal allocation-rework loops and dealer-priority anomalies, and links them to real revenue leakage. Classic OTC play with a Kia-AU-specific dealer-allocation wrinkle. Metric moved: order-to-delivery cycle (-12%) and rework touches per order (-30%).</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP, Automotive Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Christopher+Lee+Kia+Australia">Christopher Lee</a> (IT Lead - BPR/SAP &amp; Infrastructure)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Warranty Claims Adjudication Desktop</summary>
+    <div class="use-case-body">
+      <p>Kia AU's 7-year warranty is a brand pillar &mdash; but the claim adjudication desk flips between SAP, dealer DMS uploads, Siebel service records, and email attachments to approve or reject each claim. Task mining captures the on-screen work to expose the copy/paste, portal switching, and manual lookups that Agentforce can replace. Metric moved: claims processed per FTE per day (+35%) and rejection-rework cycle (-40%).</p>
       <p><strong>Key System(s) to be Process Mined:</strong> SAP, Oracle Siebel</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jeremy+Etcell+Kia+Australia">Jeremy Etcell</a> (Field Operations Manager - After Sales)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -174,26 +185,58 @@
   </details>
 
   <details>
-    <summary>4. Vehicle Order-to-Cash and Supply Allocation</summary>
+    <summary>2. Contact Centre Agent Handle-Time (Unity4 &rarr; CCaaS Cutover)</summary>
     <div class="use-case-body">
-      <p>SAP-driven order-to-cash from Kia Corp (Korea) to Kia AU to dealer allocation is complex: constrained supply, dealer allocation politics, and cross-border logistics create long tail variants. Apromore mines the SAP OTC event log to reveal allocation-rework loops and dealer-priority anomalies, and links them to real revenue leakage. This is the classic Apromore/Celonis OTC play with a Kia-AU-specific dealer-allocation wrinkle. Metric moved: order-to-delivery cycle (-12%) and rework touches per order (-30%).</p>
+      <p>The Unity4 CTI is being replaced by Service Cloud Voice / CCaaS in AU (GA Nov 2026). Task mining today's Unity4 agent desktop reveals AHT drivers, after-call-work steps, and repeated tab-switching that the new Automotive Cloud console must either eliminate or automate with Agentforce. Grounds the CCaaS ROI case in observed data instead of vendor claims. Metric moved: AHT (-20%) and after-call-work minutes per contact type (-30%).</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Unity4 CTI, Automotive Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Young+Kang+Kia+Australia">Young Kang</a> (IT Architect)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Marketing Ops Campaign Build &amp; Approval Desktop</summary>
+    <div class="use-case-body">
+      <p>Marketing Cloud Advanced rollout with Innocean as the digital agency means multiple humans building each campaign across Marketing Cloud Journeys, agency creative tooling, Automotive Cloud audiences, and legal-review emails. Task mining pinpoints where campaign build time is actually spent and which handoffs stall against launch dates. Metric moved: campaign build-to-launch cycle (-25%) and rework rounds per campaign (-40%).</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud, Automotive Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Tim+Manning+Kia+Australia">Tim Manning</a> (Manager, Digital Marketing)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. Vehicle Recall &amp; ACL Notification Controls</summary>
+    <div class="use-case-body">
+      <p>Australian Consumer Law and ACCC recall obligations require documented, time-boxed customer notification and dealer remediation for every safety recall. Compliance Center codifies the recall workflow as a controlled process with SLAs, sign-offs, and continuous evidence &mdash; replacing spreadsheets and email chains that create audit exposure. Metric moved: recall notification SLA hit-rate (target 100%) and time-to-evidence for ACCC.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP, Automotive Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jeremy+Etcell+Kia+Australia">Jeremy Etcell</a> (Field Operations Manager - After Sales)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Marketing Consent, Privacy &amp; CDR Controls</summary>
+    <div class="use-case-body">
+      <p>Australian Privacy Act, the emerging Consumer Data Right for non-banking sectors, and consent management under Marketing Cloud need controlled, auditable evidence for every consent capture, revocation, and downstream marketing action. Compliance Center runs consent + suppression as a controlled process with SoD and continuous audit. Metric moved: consent-breach incidents (target zero) and audit-prep cycle time (-70%).</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud, Automotive Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Tim+Manning+Kia+Australia">Tim Manning</a> (Manager, Digital Marketing)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Dealer Franchise Compliance &amp; Audit</summary>
+    <div class="use-case-body">
+      <p>Kia AU's 100+ franchised dealers each carry contractual and Motor Vehicle Franchise obligations &mdash; CX standards, warranty adherence, brand rules, and allocation fairness. Compliance Center makes the dealer-audit lifecycle (checklist, evidence capture, escalation, remediation, sign-off) a repeatable controlled process, replacing PDF-and-email audits. Metric moved: dealer-audit cycle time (-50%) and non-compliance remediation SLA hit-rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> SAP, Automotive Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Christopher+Lee+Kia+Australia">Christopher Lee</a> (IT Lead - BPR/SAP &amp; Infrastructure)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <details>
-    <summary>5. Marketing Campaign-to-Conversion Journey Mining</summary>
-    <div class="use-case-body">
-      <p>With Marketing Cloud Advanced rolling out and Innocean managing digital, Kia AU needs to see the real path from campaign impression to test-drive booking to purchase — not just channel attribution. Apromore mines the multi-touch customer journey across Marketing Cloud, Automotive Cloud, and dealer CRM to identify where high-intent leads leak. Ties to the touchless renewal automation opp. Metric moved: cost-per-acquisition (-18%) and marketing-attributed sales visibility.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud, Automotive Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Trevor+Crossman+Innocean+Kia">Trevor Crossman</a> (Head of Digital, Innocean/Kia agency)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent competitive process-mining vendor mentions (Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, Power Automate) tied to Kia Australia in Slack or public news. Open field — first-mover advantage for AFPI, especially with the Apromore opp already in Stage 02.</span></h2>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Kia Australia Pty Ltd by process-mining the Siebel-to-Automotive-Cloud migration, dealer lead-to-delivery, and SAP order-to-cash flows to de-risk the CCaaS cutover, task-mining warranty adjudication and contact-centre desktops to size the Agentforce Operations business case, and running vehicle-recall / ACL, privacy-consent, and dealer-franchise controls through Compliance Center to shrink cycle times, cut AHT, and produce always-on audit evidence for ACCC and dealer governance.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

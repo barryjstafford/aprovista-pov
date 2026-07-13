@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lucid Group, Inc. — AFPI POV</title>
+<title>Lucid Group, Inc. &mdash; AFPI POV</title>
 <style>
   body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
          color: #1a1a1a; line-height: 1.45; background: #fff; }
@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -108,41 +113,39 @@
   <h1>Lucid Group, Inc.</h1>
   <div class="snapshot">
     <p><strong>Manufacturing, Automotive &amp; Energy, Electric Vehicles</strong></p>
-    <p><strong>Revenue:</strong> ~$808M (2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~6,800 (pre-June 2026 layoff; ~5,600 post 18% cut) &nbsp;|&nbsp; <strong>HQ:</strong> Newark, CA, USA</p>
-    <p><strong>Major Subsidiaries:</strong> Lucid Motors (US OEM), Lucid Motors EMEA (Rotterdam, NL), Lucid Motors Middle East (Riyadh, KSA)</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Automotive Cloud (in-flight AI/agent motion), Sales Cloud, Service Cloud, plus active Agentforce opportunity in EMEA</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Sanjay+Chandra+Lucid+Motors">Sanjay Chandra</a>, VP Information Technology]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Lucid Motors – Agentforce (EMEA) (<a href="https://org62.my.salesforce.com/006ed00000flFSEAA2">$71.5k</a>)</p>
+    <p><strong>Revenue:</strong> ~$808M (2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~5,600 (post June 2026 18% headcount cut) &nbsp;|&nbsp; <strong>HQ:</strong> Newark, CA, USA</p>
+    <p><strong>Major Subsidiaries:</strong> Lucid USA, Lucid Motors EMEA (Rotterdam), Lucid Motors Middle East (Riyadh)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Automotive Cloud, Sales Cloud, Service Cloud, Agentforce (in-flight EMEA opp)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Lucid Motors &mdash; Agentforce (EMEA) (<a href="https://org62.my.salesforce.com/006ed00000flFSEAA2">$71.5k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U08SL9MBQUE">Sara Douglass</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">88/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">84/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Buyer Titles Present</td><td>10/10</td><td class="cat-green">Head of Operations &amp; Digital, Director S&amp;OP, Director Global Quality, Head of Engineering &amp; Technical Operations, SVP Operations — process-explicit titles already in Org62.</td></tr>
-        <tr><td>Process Complexity</td><td>15/15</td><td class="cat-green">EV OEM with dual manufacturing (Casa Grande AZ + KAEC KSA), ADAS/AV operations, warranty, dealer service, and global supply chain — high-variance flows.</td></tr>
-        <tr><td>Active Initiatives &amp; Urgency</td><td>14/15</td><td class="cat-green">New CEO Silvio Napoli (April 2026), 18% headcount cut in June 2026 to "simplify the company," active AI/Agentforce motion documented in #ZC:Lucid Motors channel.</td></tr>
-        <tr><td>Vertical Fit</td><td>14/15</td><td class="cat-green">EV manufacturing is event-log-rich — quality, warranty, and supply-chain are canonical process-mining beachheads.</td></tr>
-        <tr><td>Deal Size Potential</td><td>8/10</td><td class="cat-green">$12B+ funded (PIF majority owner), $808M revenue with growth trajectory; active Automotive Cloud + Agentforce plays raise the ceiling.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>15/15</td><td class="cat-green">New CEO Silvio Napoli (Apr 2026) plus June 2026 18% headcount cut with explicit &ldquo;simplify the company&rdquo; mandate &mdash; textbook process-mining trigger.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Active Automotive Cloud + Agentforce program under Sara Douglass; internal notes flag scheduling debt and warranty AI plays ready to instrument.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-orange">Automotive Cloud + Service Cloud event streams are minable today; ERP / MES / warranty QMS not yet confirmed &mdash; field verify.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>10/12</td><td class="cat-orange">Multi-cloud install (Automotive, Sales, Service) with an open Agentforce EMEA opp &mdash; deep enough to co-sell AFPI on Salesforce paper.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>16/20</td><td class="cat-orange">Process-explicit titles present in Org62 (Head Operations &amp; Digital, Director S&amp;OP, Director Global Quality, SVP Ops); named customer-side sponsor still TBD.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Compliance / Regulatory Wedge</td><td>7/10</td><td class="cat-orange">FMVSS, NHTSA recall workflows, EV battery regs and EU DPPR apply, but no single headline regulator drives Compliance Center as the primary wedge.</td></tr>
-        <tr><td>Salesforce Footprint</td><td>8/10</td><td class="cat-orange">Automotive Cloud + Agentforce motion is real but early — EMEA Agentforce opp is only $71.5k today, headroom to expand.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">FMVSS / NHTSA recall + EU battery passport apply, but no single big-hammer regulator makes Compliance Center the primary wedge here.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>4/6</td><td class="cat-orange">Only open opp is a $71.5k EMEA Agentforce starter &mdash; live but under-sized; need to package a $200k+ AFPI landing.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Lucid Group, Inc. by mining warranty, service-scheduling, and supply-chain event logs to give the new-CEO "simplify the company" mandate a documented, defensible target-state — accelerating the in-flight Automotive Cloud + Agentforce program with hard cycle-time and cash-recovery evidence rather than more consulting slideware, and delivering a 2–4 week first result while the cost restructure is still in motion.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Warranty Management &amp; Expiring-Warranty Revenue Recovery</summary>
     <div class="use-case-body">
-      <p>Sara Douglass and the Auto team are already positioning an AI agent for outbound reach on expiring warranties as a revenue-generation play. AFPI mines the warranty claims and renewal event log to prove exactly where claims stall, which repair paths drive the highest customer LTV, and which expiring-warranty cohorts convert — turning a "let's build an agent" pitch into a quantified target-state before Dreamforce. Metric moved: warranty-renewal conversion rate, claim cycle time.</p>
+      <p>Sara Douglass&rsquo;s auto team is already positioning an AI agent for outbound reach on expiring warranties as a revenue-generation play. AFPI mines the warranty claims + renewal event log to show exactly where claims stall, which repair paths drive the highest customer LTV, and which expiring-warranty cohorts convert &mdash; turning a &ldquo;let&rsquo;s build an agent&rdquo; pitch into a quantified target-state before Dreamforce. The output is a target-state map the Agentforce team can encode on day one. Metric moved: warranty-renewal conversion rate, claim cycle time.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Automotive Cloud, Service Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Andrew+Smith+Lucid+Motors">Andrew Smith</a> (Head of Engineering &amp; Technical Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -152,7 +155,7 @@
   <details>
     <summary>2. Service Scheduling &amp; Test-Drive Logistics Standardization</summary>
     <div class="use-case-body">
-      <p>Salesforce internal notes call out "significant technical debt and complexity around customized scheduling" — the classic case for process mining before an Automotive Cloud out-of-the-box rollout. AFPI reveals the actual scheduling variants across service appointments and test drives so Agentforce agents automate the winning path instead of encoding the mess. Metric moved: appointment-to-completion cycle time, no-show %, test-drive-to-order conversion.</p>
+      <p>Internal Salesforce notes call out &ldquo;significant technical debt and complexity around customized scheduling&rdquo; &mdash; classic ground for process mining before an Automotive Cloud out-of-the-box rollout. AFPI reveals the actual scheduling variants across service appointments and test drives so Agentforce agents automate the winning path rather than encode the mess. It also gives Masoud Qazen a defensible &ldquo;kill the customizations&rdquo; case tied to the CEO&rsquo;s simplification mandate. Metric moved: appointment-to-completion cycle time, no-show %, test-drive-to-order conversion.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Automotive Cloud (Scheduler), Service Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Masoud+Qazen+Lucid+Motors">Masoud Qazen</a> (Head of Operations &amp; Digital)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -162,43 +165,89 @@
   <details>
     <summary>3. Sales &amp; Operations Planning (S&amp;OP) Across US + KSA Plants</summary>
     <div class="use-case-body">
-      <p>Lucid runs a dual-manufacturing footprint (Casa Grande AZ and KAEC Saudi Arabia) with a Director-level S&amp;OP owner in Ian Johnson. AFPI mines the demand-to-supply-to-build event log across both plants to expose planning bullwhip, unplanned rework, and where the Middle East ramp is starving US allocation — feeding the new CEO's simplification narrative with numbers instead of consulting decks. Metric moved: forecast accuracy, plant fill-rate, inventory days.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> ERP (TBD — SAP/Oracle candidate), MES (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ian+Johnson+Lucid+Motors">Ian Johnson</a> (Director — Sales &amp; Operations Planning)</p>
+      <p>Lucid runs a dual-manufacturing footprint (Casa Grande AZ and KAEC Saudi Arabia) with a dedicated S&amp;OP owner in Ian Johnson. AFPI mines the demand-to-supply-to-build event log across both plants to expose planning bullwhip, unplanned rework, and where the Middle East ramp is starving US allocation &mdash; feeding the new CEO&rsquo;s simplification narrative with real numbers rather than consulting decks. Metric moved: forecast accuracy, plant fill-rate, inventory days on-hand.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ERP (SAP/Oracle &mdash; TBD), MES (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ian+Johnson+Lucid+Motors">Ian Johnson</a> (Director, Sales &amp; Operations Planning)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <details>
-    <summary>4. Global Quality &amp; NHTSA Recall Workflow</summary>
-    <div class="use-case-body">
-      <p>A young EV OEM with active ADAS/AV programs and a Director Global Quality (Sunghae Moon) plus a Product Safety Officer (Rick Clementz) has a structural need to defend quality escapes and recall triggers. AFPI mines the field-issue → engineering-analysis → recall-decision event log to compress time-to-containment and produce an auditable trail for NHTSA and EU homologation. Metric moved: time-to-containment on quality escapes, recall cycle time.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Quality Management System (TBD), Service Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Sunghae+Moon+Lucid+Motors">Sunghae Moon</a> (Director Global Quality)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
+  <h2>Top 3 Task Mining Use Cases</h2>
 
   <details>
-    <summary>5. Roadside &amp; Dispatch Operations for the Growing Fleet</summary>
+    <summary>1. Roadside &amp; Dispatch Agent Desktop</summary>
     <div class="use-case-body">
-      <p>Roadside assistance dispatch is called out internally as a "light and straightforward" wedge for AI agents. AFPI mines the dispatch event log — incident intake, technician routing, resolution, callback — to prove where SLA slippage happens and whether an Agentforce agent should intercept at intake, routing, or escalation. Gives Sara Douglass a numbers-backed champion case ahead of Dreamforce. Metric moved: mean time-to-resolution, first-call resolution %.</p>
+      <p>Roadside assistance dispatch is flagged internally as a &ldquo;light and straightforward&rdquo; wedge for AI agents on the growing Lucid fleet. Task mining the dispatcher desktop captures the tab-switching between incident intake, technician routing, telematics, and callback &mdash; naming exactly the steps an Agentforce dispatch agent should replace vs. leave alone. Metric moved: mean time-to-resolution, first-call resolution %, after-call-work minutes.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud (Dispatch), Automotive Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Emily+Moravits+Lucid+Motors">Emily Moravits</a> (Head of Operations ADAS / AV)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Emily+Moravits+Lucid+Motors">Emily Moravits</a> (Head of Operations, ADAS / AV)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <details>
+    <summary>2. Warranty Claim Analyst Desktop</summary>
+    <div class="use-case-body">
+      <p>Warranty claim analysts today swivel between Automotive Cloud, the dealer portal, service records, and parts / VIN lookup tools to adjudicate a single claim. Task mining exposes how much of the cycle is genuine engineering judgement vs. re-keying and status hunting &mdash; giving Andrew Smith a quantified before/after for an Agentforce-assisted analyst desktop rather than a hopeful ROI slide. Metric moved: claims per FTE per day, touch-time per claim, rework loops.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Automotive Cloud, dealer / VIN parts lookup</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Andrew+Smith+Lucid+Motors">Andrew Smith</a> (Head of Engineering &amp; Technical Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Retail Studio Configurator &amp; Order-Entry Desktop</summary>
+    <div class="use-case-body">
+      <p>Lucid&rsquo;s direct-to-consumer studio and inside-sales reps work a high-ASP configure-to-order flow across the online configurator, Sales Cloud, credit / finance tools, and delivery scheduling. Task mining shows where reps drop out to spreadsheets, chase pricing approvals, or re-enter the same customer data &mdash; a direct fit for the simplification narrative and an Agentforce sales-assist agent. Metric moved: order-configuration cycle time, quote-to-close conversion, rep touches per order.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, online configurator</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Masoud+Qazen+Lucid+Motors">Masoud Qazen</a> (Head of Operations &amp; Digital)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. NHTSA / FMVSS Recall &amp; Field-Action Workflow</summary>
+    <div class="use-case-body">
+      <p>A young EV OEM with active ADAS / AV programs has a structural need to defend quality escapes and recall triggers. Compliance Center runs the field-issue &rarr; engineering-analysis &rarr; recall-decision workflow as a controlled process with segregation-of-duties, sign-offs, and continuous evidence for NHTSA and EU homologation authorities. Metric moved: time-to-containment on quality escapes, recall cycle time, audit findings per campaign.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Quality Management System (TBD), Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Sunghae+Moon+Lucid+Motors">Sunghae Moon</a> (Director, Global Quality)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. EU Battery Passport (DPPR) &amp; KSA Homologation Controls</summary>
+    <div class="use-case-body">
+      <p>The EU Digital Product Passport for batteries (2027 enforcement) plus Gulf / KSA type-approval demand a controlled, evidence-backed pipeline for battery cell data, provenance, and end-of-life obligations. Compliance Center codifies the collect &rarr; attest &rarr; publish workflow across manufacturing and supplier data, so Lucid can stand up an auditable EU-market submission without a new spreadsheet program. Metric moved: passport-ready SKUs, evidence-generation time, non-conformance rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Battery-data platform (TBD), PLM</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rick+Clementz+Lucid+Motors">Rick Clementz</a> (Product Safety Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. ADAS / AV Model Risk &amp; Software OTA Release Governance</summary>
+    <div class="use-case-body">
+      <p>ADAS and driver-assist releases ship via OTA and are regulated across NHTSA, UNECE R157, and EU General Safety Regulation frameworks. Compliance Center runs each model / firmware release as a controlled workflow &mdash; validation evidence, sign-offs, rollback criteria, and post-release monitoring artefacts &mdash; the same shape needed as Lucid&rsquo;s AI agent surface expands into customer-facing flows. Metric moved: release governance cycle time, controlled OTA campaigns, mean-time-to-evidence for regulators.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> OTA / release management platform, MLOps pipeline</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Emily+Moravits+Lucid+Motors">Emily Moravits</a> (Head of Operations, ADAS / AV)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Lucid Group, Inc. by mining warranty, service-scheduling, and dual-plant S&amp;OP event logs to give the new-CEO simplification mandate a documented target-state, task-mining dispatch, warranty-analyst, and studio configurator desktops to name the exact swivel-chair work an Agentforce agent should absorb, and running NHTSA recall, EU battery passport, and ADAS OTA release governance through Compliance Center &mdash; delivering a 2&ndash;4 week first result with hard cycle-time, cash-recovery, and audit-evidence numbers instead of more consulting slideware.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-03. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

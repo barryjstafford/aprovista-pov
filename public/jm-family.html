@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -107,42 +112,40 @@
 <main>
   <h1>JM Family Enterprises, Inc.</h1>
   <div class="snapshot">
-    <p><strong>Automotive, Diversified Automotive Distribution &amp; Financial Services</strong></p>
+    <p><strong>Automotive, Diversified Distribution &amp; Consumer Finance</strong></p>
     <p><strong>Revenue:</strong> ~$24.7B (2025) &nbsp;|&nbsp; <strong>Employees:</strong> ~5,500 &nbsp;|&nbsp; <strong>HQ:</strong> Deerfield Beach, FL, USA</p>
     <p><strong>Major Subsidiaries:</strong> Southeast Toyota Distributors (SET), Southeast Toyota Finance / World Omni, JM&amp;A Group, Home Franchise Concepts, Futura Title &amp; Escrow</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud (Call Center), Marketing Cloud (ExactTarget), Data Cloud / Datorama, Platform, Industry Cloud, MuleSoft ($1.2M ACV), Customer Portal</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Microsoft Azure Integration Services, HubSpot (JM&amp;A — replacement in flight)</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> JM Family Automotive Renewal – Industry+Portal+Platform (<a href="https://org62.my.salesforce.com/0063y000019WLQGAA4">$4.98M</a>) &nbsp;|&nbsp; JM&amp;A – One Platform Transformation Phase 2 (<a href="https://org62.my.salesforce.com/006ed00000cW2wrAAC">$1.00M</a>) &nbsp;|&nbsp; MuleSoft Renewal 12377 #BarryBigBet (<a href="https://org62.my.salesforce.com/006ed00000NiAxiAAF">$668k</a>)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Unlimited), Service Cloud (Unlimited), Financial Services Cloud, Insurance Claims Management, Insurance Policy Administration, MuleSoft (Titanium), Tableau, Salesforce Shield, Customer Community Plus, Salesforce Connect, Signature Success</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Microsoft Azure Integration Services, HubSpot</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> JM Family Automotive LLC Renewal 2137 &mdash; Industry+Portal+Platform (<a href="https://org62.my.salesforce.com/0063y000019WLQGAA4">$4.98M</a>) &nbsp;|&nbsp; JM&amp;A HubSpot Replacement (<a href="https://org62.my.salesforce.com/006ed00000NI6T7AAL">$1.21M</a>) &nbsp;|&nbsp; JM&amp;A One Platform Transformation Phase 2 (<a href="https://org62.my.salesforce.com/006ed00000cW2wrAAC">$1.00M</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G5C2R9GD">Gordon Williams</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">84/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">88/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Buyer Titles Present</td><td>10/10</td><td class="cat-green">AVP Business Process &amp; Strategy Optimization (Larry Williams), AVP Data &amp; Automation Solutions (Dustin Camplin), Director Technology Transformation, Chief Architect, VP Technology &amp; Data Transformation — process-explicit titles in Org62.</td></tr>
-        <tr><td>Active Initiatives &amp; Urgency</td><td>14/15</td><td class="cat-green">Active $5M renewal, $1M One Platform Transformation Phase 2, $572K CRM Transformation, $461K Agentforce Upgrade, and October 2026 MuleSoft renewal with CTO-led modernization exercise underway.</td></tr>
-        <tr><td>Deal Size Potential</td><td>10/10</td><td class="cat-green">$24.7B revenue, 5,500 employees, ~$10M+ Core + $1.2M MuleSoft ACV footprint — enterprise-tier deal envelope.</td></tr>
-        <tr><td>Salesforce Footprint</td><td>10/10</td><td class="cat-green">Sales, Service, Marketing, Data Cloud, MuleSoft, Platform, Industry, Customer Portal — one of the deepest SF footprints in Southeast commercial.</td></tr>
-        <tr><td>Process Complexity</td><td>13/15</td><td class="cat-green">Multi-entity holding (SET distribution, SETF/World Omni finance, JM&amp;A F&amp;I products, Home Franchise Concepts) each with its own OTC/P2P/servicing flow — classic post-acquisition process fragmentation.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud install: Sales, Service, FSC, Insurance Claims/Policy, MuleSoft Titanium, Tableau, Shield, Communities.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">$4.98M renewal, $1.21M HubSpot Replacement, $1M One Platform Phase 2, $500K Agentforce Ops Procurement, $461K Agentforce Upgrade.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Multi-million renewals in flight for Oct 2026 (MuleSoft) and 2029 (Industry+Portal+Platform) &mdash; open budget envelope.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">Sales/Service/FSC + MuleSoft + Insurance Policy Admin + Azure Integration &mdash; event-log-rich estate across four operating companies.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">HubSpot cutover, MuleSoft-vs-Azure integration bake-off, multi-entity OTC/P2P/servicing fragmentation &mdash; explicit process pain.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Compliance / Regulatory Wedge</td><td>6/10</td><td class="cat-orange">CFPB / state DMV / F&amp;I regs and dealer-consumer protection apply but no headline enforcement action — Compliance Center is a secondary wedge, not the tip of the spear.</td></tr>
-        <tr><td>Vertical Fit</td><td>11/15</td><td class="cat-orange">Automotive distribution + F&amp;I is a strong AFPI fit, but JM Family's private, family-owned governance model makes the buying cycle longer than public peers.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>16/20</td><td class="cat-orange">Named CTO John Damalas + AVP Business Process (Larry Williams) + Chief Architect (Gregg Moore) &mdash; but no external LinkedIn-confirmed champion.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">CFPB, ECOA, Reg Z, state F&amp;I product regulation apply &mdash; secondary wedge, not the tip of the spear.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help JM Family Enterprises, Inc. by mining the actual event logs behind its four operating companies — SET vehicle distribution, SETF/World Omni finance, JM&amp;A F&amp;I product servicing, and the JM&amp;A HubSpot-to-Salesforce transformation — so CTO John Damalas walks into the October 2026 renewal and the "MuleSoft + Microsoft" modernization exercise with a documented target-state process instead of another platform bake-off, collapsing the traditional two-specialist SQL+PQL Celonis model into one no-code business-analyst view for 2-4 week time-to-value.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. JM&amp;A One Platform Transformation — HubSpot to Salesforce Migration</summary>
+    <summary>1. JM&amp;A One Platform Transformation &mdash; HubSpot to Salesforce Migration</summary>
     <div class="use-case-body">
-      <p>JM&amp;A is actively replacing HubSpot with Salesforce ($1.2M open opp) and moving into One Platform Transformation Phase 2 ($1M). AFPI mines the as-is dealer-outreach, F&amp;I quote, and product-attach flows before the cutover — exposing which handoffs cause deal drop-off — so Phase 2 lands on a documented target flow instead of a lift-and-shift. Metric moved: F&amp;I product attach rate, dealer response time.</p>
+      <p>JM&amp;A is actively replacing HubSpot with Salesforce ($1.21M open opp) and moving into One Platform Transformation Phase 2 ($1M). AFPI mines the as-is dealer-outreach, F&amp;I quote, and product-attach flows before the cutover &mdash; exposing which handoffs cause deal drop-off &mdash; so Phase 2 lands on a documented target flow instead of a lift-and-shift. Metric: F&amp;I product attach rate and dealer response time.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> HubSpot, Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Josh+Bass+JM+Family">Josh Bass</a> (VP Technology &amp; Data Transformation, JM&amp;A Group)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -150,55 +153,101 @@
   </details>
 
   <details>
-    <summary>2. SETF / World Omni Auto Finance — Loan Origination &amp; Servicing</summary>
+    <summary>2. SETF / World Omni Auto Finance &mdash; Loan Origination &amp; Servicing</summary>
     <div class="use-case-body">
-      <p>Southeast Toyota Finance (World Omni) is a consumer auto-lender with a Service Cloud Call Center org and a $1.4M open renewal. AFPI mines the loan-origination pipeline — app submitted → decisioned → funded → titled → serviced — surfacing where credit exceptions, dealer document errors, and title backlogs create dark work. Metric moved: application-to-funding cycle time, exception-rework rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud (Call Center), Loan Origination (TBD)</p>
+      <p>Southeast Toyota Finance / World Omni is a consumer auto-lender running Financial Services Cloud + Insurance Policy Admin + Service Cloud. AFPI mines the loan-origination pipeline &mdash; app submitted &rarr; decisioned &rarr; funded &rarr; titled &rarr; serviced &mdash; surfacing where credit exceptions, dealer document errors, and title backlogs create dark work. Metric: application-to-funding cycle time and exception-rework rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, Service Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Larry+Williams+JM+Family">Larry Williams</a> (AVP Business Process &amp; Strategy Optimization)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. SET Vehicle Distribution — Port-to-Dealer Allocation &amp; Accessorization</summary>
+    <summary>3. SET Vehicle Distribution &mdash; Port-to-Dealer Allocation &amp; Accessorization</summary>
     <div class="use-case-body">
-      <p>Southeast Toyota Distributors handles port processing, accessorization, dealer allocation, and TCUV certified-used flow for the five-state Southeast region. This is a physical, event-log-rich process where days-at-port and accessory rework directly hit dealer stock and consumer delivery. AFPI mines port and dealer-allocation events to surface which vessels, ports, and accessory SKUs bottleneck delivery. Metric moved: days-at-port, dealer allocation accuracy.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Vehicle Distribution TMS (TBD), Sales Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chris+Costello+JM+Family">Chris Costello</a> (Vice President — Operations)</p>
+      <p>Southeast Toyota Distributors handles port processing, accessorization, dealer allocation, and TCUV certified-used flow for the five-state Southeast region. This is a physical, event-log-rich process where days-at-port and accessory rework hit dealer stock and consumer delivery directly. AFPI mines port and dealer-allocation events to surface which vessels, ports, and accessory SKUs bottleneck delivery. Metric: days-at-port and dealer allocation accuracy.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Vehicle Distribution TMS (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chris+Costello+JM+Family">Chris Costello</a> (Vice President &mdash; Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <details>
-    <summary>4. Enterprise Integration Rationalization — MuleSoft vs Microsoft Governance</summary>
-    <div class="use-case-body">
-      <p>CTO John Damalas has publicly stated MuleSoft is "not being used correctly" and JM Family runs Microsoft Azure Integration Services in parallel. The October 2026 renewal is heading toward a broader integration bake-off. AFPI does not compete with either platform — it mines the actual integration usage and process outcomes so the platform decision is anchored to which flows deliver value, not to license price. Metric moved: integration reuse rate, integration-attributable process latency.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft, Microsoft Azure Integration Services</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Gregg+Moore+JM+Family">Gregg Moore</a> (Chief Architect)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
+  <h2>Top 3 Task Mining Use Cases</h2>
 
   <details>
-    <summary>5. Data &amp; Automation Solutions — Agentforce Readiness</summary>
+    <summary>1. JM&amp;A Dealer Services Rep Desktop &mdash; F&amp;I Quote &amp; Product Attach</summary>
     <div class="use-case-body">
-      <p>JM Family has an active $461K Agentforce Upgrade + Partner Ecosystem Management opp on JM&amp;A and a dedicated AVP for Data &amp; Automation Solutions. Agentforce ROI depends on knowing which processes have the highest deviation rate and manual-touch cost. AFPI feeds that scoring directly into the Agentforce roadmap — putting agents where deviations concentrate, not where guesswork points. Metric moved: agent-eligible touch coverage, cost-per-touch reduction.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce, Sales Cloud</p>
+      <p>JM&amp;A dealer-services reps swivel between HubSpot, quoting tools, F&amp;I product tables, and email to price and bind vehicle service contracts and GAP products. Task mining captures the on-screen work so the $500K Agentforce Operations for Procurement and the wider $461K Agentforce Upgrade land against real touch-time data, not guesswork. Metric: contracts quoted per FTE per day and touch-time per contract.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> HubSpot, F&amp;I quoting workbench</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Dustin+Camplin+JM+Family">Dustin Camplin</a> (AVP, Data &amp; Automation Solutions)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account. Microsoft Azure Integration Services is the dominant non-Salesforce platform in play, but as an iPaaS competitor to MuleSoft — not process mining.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <details>
+    <summary>2. World Omni Loan Servicing Contact Center &mdash; AHT &amp; After-Call Work</summary>
+    <div class="use-case-body">
+      <p>World Omni's Service Cloud Call Center org handles payoff quotes, title requests, hardship, and collections calls across a large consumer auto-loan book. Task mining measures each agent's after-call-work steps and the specific tabs (Service Cloud console, servicing platform, doc imaging) that inflate wrap time. Pairs with the Agentforce Operations opps as an obvious deflection target. Metric: AHT and after-call-work minutes per contact type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, loan servicing platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Larry+Williams+JM+Family">Larry Williams</a> (AVP Business Process &amp; Strategy Optimization)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. SET Dealer Support Coordinator Desktop &mdash; Allocation &amp; Accessory Ordering</summary>
+    <div class="use-case-body">
+      <p>SET dealer-support coordinators sit between dealer requests, the distribution TMS, port ops, and accessory suppliers &mdash; a screen-heavy job with heavy re-keying. Task mining captures the exact clicks that stretch accessory turnaround and mis-allocate stock, then names the straight-through candidates for Agentforce automation. Metric: coordinator handle-time per dealer request and manual re-keying steps eliminated.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Vehicle Distribution TMS</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chris+Costello+JM+Family">Chris Costello</a> (Vice President &mdash; Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. Consumer Auto-Finance Regulatory Compliance (CFPB, ECOA, Reg Z, FDCPA)</summary>
+    <div class="use-case-body">
+      <p>World Omni originates and services consumer auto loans nationwide, which puts every credit decision, adverse-action notice, servicing communication, and collections touch under CFPB, ECOA, Reg B, Reg Z, and FDCPA scrutiny. Compliance Center codifies the credit-decision and servicing workflows with controlled sign-offs, evidence capture, and continuous monitoring. Metric: audit-ready control coverage and mean-time-to-evidence per exam request.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, loan servicing platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Larry+Williams+JM+Family">Larry Williams</a> (AVP Business Process &amp; Strategy Optimization)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. F&amp;I Product Sales &mdash; State-by-State Product Regulation &amp; Refunds</summary>
+    <div class="use-case-body">
+      <p>JM&amp;A sells vehicle service contracts, GAP, and appearance products through thousands of dealer touchpoints, each governed by state-specific product regs, disclosure rules, and cancellation/refund windows. Compliance Center runs the product-sale, cancel, and refund workflow as a controlled process with per-state variants and codified SLAs so audit findings and consumer complaints drop. Metric: cancel/refund SLA hit-rate and state-specific control adherence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, F&amp;I product-admin platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Josh+Bass+JM+Family">Josh Bass</a> (VP Technology &amp; Data Transformation, JM&amp;A Group)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Agentforce &amp; AI Model Governance &mdash; Enterprise Rollout Controls</summary>
+    <div class="use-case-body">
+      <p>With $500K Agentforce Operations for Procurement and $461K Agentforce Upgrade active, JM Family is putting AI agents into procurement, servicing, and F&amp;I. Compliance Center codifies the promote/monitor/retire lifecycle for every agent and model, producing continuous evidence for internal audit and downstream regulators. Metric: agents/models under governed lifecycle and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Gregg+Moore+JM+Family">Gregg Moore</a> (Chief Architect)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help JM Family Enterprises, Inc. by mining the SET distribution, World Omni loan-origination, and JM&amp;A HubSpot-to-Salesforce cutover flows across its deep Salesforce + MuleSoft + Azure estate, task-mining the F&amp;I dealer-services and World Omni servicing desktops to size the Agentforce Operations business case, and running consumer auto-finance (CFPB/ECOA/Reg Z), state-by-state F&amp;I product, and Agentforce model-governance controls through Compliance Center &mdash; collapsing the two-specialist SQL+PQL Celonis model into one no-code business-analyst view for 2&ndash;4 week time-to-value.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-03. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

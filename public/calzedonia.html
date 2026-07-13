@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -112,43 +113,41 @@
   <h1>Oniverse Holding S.p.A. (Calzedonia Group)</h1>
   <div class="snapshot">
     <p><strong>Retail &amp; CG, Specialty Apparel Retail</strong></p>
-    <p><strong>Revenue:</strong> €3.53B (FY2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~40,000 group-wide (3,041 HQ-registered) &nbsp;|&nbsp; <strong>HQ:</strong> Dossobuono di Villafranca, Verona, Italy</p>
-    <p><strong>Major Subsidiaries:</strong> Intimissimi, Tezenis, Falconeri, Signorvino, Atelier Emé</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Commerce Cloud, Marketing Cloud (ExactTarget), MuleSoft, Service Cloud (Call Center), Order Management, Platform, Spiff, Retail Cloud (rollout in progress)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Laura Valagussa] — likely SAP or Oracle ERP given retail footprint and store count</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Calzedonia SpA Renewal 104034 Commerce Cloud (<a href="https://org62.my.salesforce.com/006ed000006u6k1AAA">$2.87M</a>) | ONIVERSE - Retail Cloud Roll Out (<a href="https://org62.my.salesforce.com/006ed00000Wg6RZAAZ">$480k</a>) | ONIVERSE - Spiff Extension All Brands/Countries (<a href="https://org62.my.salesforce.com/006ed00000A3XHpAAN">$492k</a>)</p>
+    <p><strong>Revenue:</strong> ~&euro;3.5B (FY2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~40,000 group-wide &nbsp;|&nbsp; <strong>HQ:</strong> Dossobuono di Villafranca, Verona, Italy</p>
+    <p><strong>Major Subsidiaries:</strong> Intimissimi, Tezenis, Falconeri, Signorvino, Cantiere del Pardo</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Commerce Cloud, Marketing Cloud (ExactTarget), MuleSoft, Service Cloud (Call Center), Order Management, Platform, Spiff, Data 360, Agentforce, Retail Cloud (rollout in progress)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Calzedonia SpA Renewal Commerce Cloud (<a href="https://org62.my.salesforce.com/006ed000006u6k1AAA">$2.87M</a>) &nbsp;|&nbsp; ONIVERSE Retail Cloud Roll Out (<a href="https://org62.my.salesforce.com/006ed00000Wg6RZAAZ">$480k</a>) &nbsp;|&nbsp; ONIVERSE Spiff Extension All Brands/Countries (<a href="https://org62.my.salesforce.com/006ed00000A3XHpAAN">$492k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02RG3HUJ72">Laura Valagussa</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Commerce Cloud + Order Management + Retail Cloud)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">81/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">82/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Multi-cloud install: Commerce, MC, MuleSoft, Service, OMS, Spiff; ~$10M+ in active renewals.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">SFDC Commerce+OMS+MC+MuleSoft generate rich event logs; Retail Cloud rollout in flight.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">5,732 stores, 55 countries, 8 brands under Oniverse — omnichannel order/returns complexity.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>12/15</td><td class="cat-green">Specialty apparel retail — high-volume O2C, returns, replenishment — priority sub-vertical.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-green">Dec 2023 Oniverse rebrand consolidates 8 brands; Retail Cloud + Spiff cross-brand roll-outs live.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud install: Commerce, MC, MuleSoft, Service, OMS, Spiff, Data 360, Agentforce.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">Commerce + OMS + MC + MuleSoft generate rich event logs; Retail Cloud roll-out live.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Agentforce Momentum Program graduation; FCR jumped 56%&rarr;70%; Shopper Agent live.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">5,700+ stores, 15+ brands, 59 countries &mdash; omnichannel order/returns complexity at scale.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>12/15</td><td class="cat-green">Specialty apparel retail &mdash; high-volume O2C, returns, replenishment &mdash; priority sub-vertical.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>4/8</td><td class="cat-orange">GDPR + product safety only — no SOX/KYC/HIPAA lever; compliance is not a top burning driver.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">Named AE and multi-cloud sponsors, but no direct Apromore-side champion identified yet.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>4/8</td><td class="cat-orange">GDPR + EU product safety only &mdash; no SOX/KYC/HIPAA lever; compliance is not a top burning driver.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">Frederico Succi (Head of IT Omnichannel) is a known digital sponsor, but no Apromore-side process-owner champion identified yet.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Oniverse Holding S.p.A. by mining order-to-cash, returns, and store replenishment across its 5,732 mono-brand stores in 55 countries, turning the Dec 2023 Oniverse consolidation into measurable cycle-time, working-capital, and customer-experience gains — without adding SQL/PQL specialists on top of the existing Salesforce Commerce, OMS, and MuleSoft stack.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Omnichannel Order-to-Cash Across Eight Brands</summary>
+    <summary>1. Omnichannel Order-to-Cash Across 15+ Brands</summary>
     <div class="use-case-body">
-      <p>Oniverse operates 8 brands (Calzedonia, Intimissimi, Tezenis, Falconeri, Signorvino, Atelier Emé, Intimissimi Uomo, plus Cantiere del Pardo) across e-commerce and 5,732 physical stores. Each brand runs its own O2C variant on shared Commerce Cloud + Order Management, creating hidden rework loops and inconsistent SLAs at scale. AFPI can mine every order event across brands and countries, quantify variance versus the "one Oniverse" target flow, and feed exception routing into Agentforce Operations. Metric moved: order-to-cash cycle days, first-pass yield, and manual-touch rate per order.</p>
+      <p>Oniverse runs 15+ brands (Calzedonia, Intimissimi, Tezenis, Falconeri, Signorvino, Cantiere del Pardo, and more) across e-commerce and 5,700+ stores in 59 countries on a shared Commerce Cloud + Order Management backbone. Each brand runs its own O2C variant, creating hidden rework loops and inconsistent SLAs at scale. Apromore mines every order event across brands and countries, quantifies variance versus the "one Oniverse" target flow, and hands exception routing to Agentforce Operations. Metric moved: O2C cycle time, first-pass yield, and manual-touch rate per order.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Commerce Cloud, Salesforce Order Management</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Digital+Oniverse">Head of Digital Transformation, Oniverse</a> (Digital / IT leadership)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Frederico+Succi+Oniverse">Frederico Succi</a> (Head of IT Omnichannel, Oniverse)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -156,9 +155,9 @@
   <details>
     <summary>2. Returns &amp; Reverse-Logistics Optimization</summary>
     <div class="use-case-body">
-      <p>Specialty apparel — hosiery, lingerie, cashmere — carries the highest return rates in retail, and Oniverse absorbs the cost across 55 countries with mixed carrier and store-return paths. Today, exception handling is a black box: refund-delay complaints hit Service Cloud with no upstream root-cause. AFPI can mine the full return event stream from OMS, WMS, and carrier events, isolate the top drivers of refund delay, and give Ops a variant-level view before scaling automation. Metric moved: refund cycle time, return-related contact rate, and shrink from process leakage.</p>
+      <p>Specialty apparel &mdash; hosiery, lingerie, cashmere &mdash; carries the highest return rates in retail, and Oniverse absorbs the cost across 59 countries with mixed carrier and store-return paths. Today exception handling is a black box: refund-delay complaints hit Service Cloud with no upstream root-cause visibility. Apromore mines the return event stream from OMS, WMS, and carrier events, isolates the top drivers of refund delay, and gives Ops a variant-level view before Agentforce Return Management scales further. Metric moved: refund cycle time, return-contact rate, and process-leakage shrink.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Order Management, Salesforce Service Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Operations+Oniverse">Head of Customer Operations, Oniverse</a> (Customer Ops / Service)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Operations+Oniverse">Head of Customer Operations, Oniverse</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -166,34 +165,78 @@
   <details>
     <summary>3. Store Replenishment &amp; Allocation</summary>
     <div class="use-case-body">
-      <p>With 5,732 stores across 8 brands and highly seasonal SKUs (swimwear, hosiery, cashmere), replenishment cycle time directly drives full-price sell-through. Today the process spans an ERP (likely SAP), OMS, and store systems — with allocation decisions made outside any mined baseline. AFPI can mine the replenishment event log, expose stockout-to-store-request loops, and quantify the working-capital cost of slow allocations. Metric moved: stockout rate, full-price sell-through, and days-of-cover variance per brand.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Order Management, SAP (or Oracle) ERP</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Supply+Chain+Director+Oniverse">Supply Chain Director, Oniverse</a> (Supply Chain / Logistics)</p>
+      <p>With 5,700+ stores across 15+ brands and highly seasonal SKUs (swimwear, hosiery, cashmere), replenishment cycle time directly drives full-price sell-through. Today the process spans ERP, OMS, and store systems &mdash; allocation decisions are made outside any mined baseline. Apromore mines the replenishment event log, exposes stockout-to-store-request loops, and quantifies the working-capital cost of slow allocations across brand hierarchies. Metric moved: stockout rate, full-price sell-through, and days-of-cover variance per brand.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Order Management, ERP (SAP/Oracle)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Supply+Chain+Director+Oniverse">Supply Chain Director, Oniverse</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Retail Store Associate POS &amp; Clienteling Desktop</summary>
+    <div class="use-case-body">
+      <p>Store associates across 5,700+ Oniverse stores toggle between POS, clienteling apps, endless-aisle look-ups, and returns intake &mdash; the same task looks different in every brand and country. Task mining the store-associate desktop reveals where swivel-chair between POS and Retail Cloud eats selling time, and pinpoints the steps Agentforce Retail can automate as Retail Cloud rolls out. Feeds the $480k Retail Cloud rollout with a mined baseline. Metric moved: transactions per shift, clienteling touches per associate, and returns cycle time at counter.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Retail Cloud, Store POS</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Retail+Operations+Oniverse">Head of Retail Operations, Oniverse</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Marketing-to-Cash Campaign Attribution &amp; Rework</summary>
+    <summary>2. Contact Center Agent Handle-Time &amp; Agentforce Escalations</summary>
     <div class="use-case-body">
-      <p>Oniverse spends heavily on Marketing Cloud ExactTarget ($2.1M renewal) plus SMS/WhatsApp/adaptive-website add-ons across brands, but campaign-to-order conversion mixes journeys, offers, and store fulfilment paths that no report can fully unpick. AFPI can mine the end-to-end Journey → Commerce → OMS event chain, surface where offers stall or duplicate, and let Marketing operate on a single mined truth instead of vendor dashboards. Metric moved: campaign ROI variance, duplicate-touch rate, and journey completion cycle time.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Marketing Cloud, Salesforce Commerce Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=CRM+Director+Oniverse">Group CRM Director, Oniverse</a> (Marketing / CRM)</p>
+      <p>Oniverse's Service Cloud Call Center handles multi-brand, multi-country contacts and has already lifted first-call resolution from 56% to 70% with Agentforce. The remaining 30% still fall to human agents &mdash; task mining the agent desktop exposes exactly which after-call-work steps and tab-switches drive that residual AHT. Pairs directly with the open CCaaS and SMS BDR opportunities to size next-wave automation. Metric moved: AHT, after-call-work minutes per contact type, and share of Agentforce-eligible escalations.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud console, Agentforce</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Service+Oniverse">Head of Customer Service, Oniverse</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Sales-Compensation &amp; Store-Payout Cycle (Spiff Extension)</summary>
+    <summary>3. Merchandising &amp; Buying Analyst Desktop</summary>
     <div class="use-case-body">
-      <p>The active $492k Spiff extension opportunity is pushing incentives across all brands and countries — a natural process-mining candidate the moment it goes live. AFPI can mine the full commission calculation → dispute → payout event stream, exposing where corrections, retro-adjustments, and manual overrides drive payout delays and store-team frustration. Doing this alongside the Spiff rollout gives Oniverse a mined baseline instead of a rollout that "should" be working. Metric moved: payout cycle time, dispute rate, and manual-adjustment volume.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Spiff, Salesforce Platform</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Retail+Operations+Oniverse">Head of Retail Operations, Oniverse</a> (Retail Ops / HR)</p>
+      <p>Merchandising and buying teams across the 15+ brands still stitch together spreadsheets, ERP planning screens, and BI dashboards to build assortments and re-forecast &mdash; a highly cognitive workflow ripe for task mining. Capturing analyst desktop activity reveals which spreadsheet loops and re-keying steps are eating planner hours, and where MuleSoft-connected data flows are still gapped. Feeds the Data 360 + Agentforce roadmap with a real "before" picture. Metric moved: planner touch-time per SKU decision and re-forecast cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ERP planning module, Excel / BI desktop</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Merchandising+Planning+Oniverse">Head of Merchandising Planning, Oniverse</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Slack or web mentions found tying Celonis, Signavio, ARIS, ABBYY, ServiceNow, Appian, UiPath, or Power Automate to Calzedonia/Oniverse specifically — greenfield process-mining opportunity in a strategic multi-cloud Salesforce account.</span></h2>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. GDPR &amp; Consumer Data-Subject Request Handling</summary>
+    <div class="use-case-body">
+      <p>Oniverse holds identifiable consumer data across Commerce, Marketing Cloud, Data 360, Service Cloud, and Agentforce for 15+ brands in 59 countries &mdash; every DSAR, right-to-erasure, and consent-change is a controlled process today handled ad-hoc. Compliance Center codifies DSAR intake, cross-system fulfilment, and audit evidence in a single controlled workflow with SLAs and sign-offs. Metric moved: DSAR cycle time, SLA hit-rate, and time-to-audit-evidence for Italian Garante or other EU DPAs.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Data 360, Salesforce Marketing Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Data+Protection+Officer+Oniverse">Data Protection Officer, Oniverse</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. AI Governance for Agentforce Shopper &amp; Service Agents (EU AI Act)</summary>
+    <div class="use-case-body">
+      <p>Oniverse has already deployed the Shopper Agent and Service Agent across Intimissimi and Tezenis in 25+ countries, with Agentforce consumption growing week-over-week. Under the EU AI Act, every consumer-facing AI agent needs documented risk assessment, monitoring, and change-control &mdash; today those live in FDE runbooks. Compliance Center runs the promote/monitor/retire lifecycle as a controlled workflow with evidence for every prompt and topic change. Metric moved: audit-ready agents covered and mean-time-to-evidence for AI-Act examiners.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce Observability / STDM, Data 360</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+AI+Governance+Oniverse">Head of AI Governance, Oniverse</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Product Safety &amp; Textile Traceability (EU CPR / REACH / DPP)</summary>
+    <div class="use-case-body">
+      <p>EU regulation is rapidly tightening around textile traceability &mdash; REACH restricted substances, the incoming Digital Product Passport, and country-level product-safety recalls all require audit-evidence per SKU. Oniverse sources across many countries and brands, and today product-safety attestation lives in supplier PDFs. Compliance Center runs supplier-attestation, batch-testing, and recall-notification as controlled workflows with codified evidence. Metric moved: recall cycle time, DPP-ready SKU coverage, and audit findings per brand.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ERP / PLM, Supplier portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Product+Compliance+Oniverse">Head of Product Compliance, Oniverse</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Oniverse Holding S.p.A. (Calzedonia Group) by process-mining omnichannel O2C, returns, and store replenishment across its 5,700+ stores and 15+ brands, task-mining store-associate and Agentforce-augmented service-agent desktops to shrink AHT and swivel-chair, and running GDPR, EU AI Act, and textile-traceability controls through Compliance Center &mdash; turning the Oniverse consolidation into measurable cycle-time, working-capital, and audit-readiness gains on top of the existing Salesforce Commerce, OMS, Data 360, and Agentforce stack.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

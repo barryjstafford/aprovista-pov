@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -107,11 +112,11 @@
 <main>
   <h1>Optum Financial, Inc.</h1>
   <div class="snapshot">
-    <p><strong>Healthcare &amp; Life Sciences, Health Payments &amp; Financial Services</strong></p>
+    <p><strong>Healthcare &amp; Life Sciences, Health Payments &amp; Consumer-Directed Benefits</strong></p>
     <p><strong>Revenue:</strong> ~$3B segment (parent UnitedHealth Group ~$400B) &nbsp;|&nbsp; <strong>Employees:</strong> ~7,000 (Optum Financial); 400,000+ (Optum) &nbsp;|&nbsp; <strong>HQ:</strong> Eden Prairie, MN, USA</p>
     <p><strong>Major Subsidiaries:</strong> Optum Bank, ConnectYourCare, Rally Health, Naviguard</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Tableau (confirmed via renewal opp) [field verify remainder with Charlie Stuard]</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Charlie Stuard]</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Tableau</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> </p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GCSHBRR9">Molly Hebert</a></p>
@@ -119,30 +124,28 @@
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">74/100</span> — T2 Develop</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t2">74/100</span> &mdash; T2 Develop</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Process complexity &amp; volume</td><td>14/15</td><td class="cat-green">~9M HSAs and millions of card swipes/manual claims — deep event-log terrain across bank, app, and back-office ops.</td></tr>
-        <tr><td>Regulatory / compliance pressure</td><td>13/15</td><td class="cat-green">HIPAA, IRS 213(d), OCC/FDIC, and 50-state escheatment — Compliance Center is a natural wedge.</td></tr>
-        <tr><td>Vertical fit (Healthcare payments)</td><td>12/15</td><td class="cat-green">Health-payments niche sits exactly where AFPI's OTC/adjudication process patterns land.</td></tr>
-        <tr><td>Buyer titles present (Ops, Compliance, Digital)</td><td>10/15</td><td class="cat-orange">CDTO, Chief Compliance Officer, and VP Ops titles visible — coverage exists but not yet mapped.</td></tr>
-        <tr><td>Salesforce footprint &amp; expansion signal</td><td>9/15</td><td class="cat-orange">Tableau renewal is the only confirmed SF surface — narrow relative to enterprise scale.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">HIPAA, IRS 213(d), OCC/FDIC, 50-state escheatment, plus post-Change Healthcare scrutiny &mdash; Compliance Center wedge is natural.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">~9M HSAs and millions of card swipes / manual claim substantiations create deep cycle-time and rework hot-spots.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Health-payments niche sits exactly where AFPI's OTC / adjudication process patterns land.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-orange">UHG has publicly committed to agentic-AI in claims and member service; post-Change Healthcare digital reset in flight.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>8/12</td><td class="cat-orange">Optum Bank core, HSA mobile, and back-office adjudication all produce mineable event streams; access not yet confirmed.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Buyer titles present (Ops, Compliance, Digital)</td><td>10/15</td><td class="cat-orange">Named champions still need field verification through Charlie Stuard.</td></tr>
-        <tr><td>Salesforce footprint &amp; expansion signal</td><td>9/15</td><td class="cat-orange">No active AFPI-adjacent Sales/Service Cloud footprint confirmed yet — expansion story to be built.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>5/12</td><td class="cat-red">Only a Tableau footprint confirmed &mdash; no active Sales/Service Cloud install to anchor an AFPI expansion story.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>12/20</td><td class="cat-orange">CDTO Sandeep Dadlani and CEO Bill Miller are visible, but no customer-side process-owner sponsor confirmed yet.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Optum Financial, Inc. by mining the end-to-end HSA/FSA claim substantiation and reimbursement flow across Optum Bank, the mobile app, and back-office ops to lift auto-substantiation rates, cut appeal cycle time, and generate live evidence packages for HIPAA, IRS, and state escheatment audits.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. HSA/FSA Claim Substantiation &amp; Reimbursement Cycle</summary>
     <div class="use-case-body">
-      <p>Optum Financial administers ~9M HSAs and processes millions of card swipes and manual claims that must be substantiated against IRS Section 213(d) rules. Manual substantiation, receipt requests, and denial appeals create long cycle times, member abrasion, and CFPB/IRS audit risk. AFPI mines the end-to-end claim flow across Optum Bank, the mobile app, and back-office ops to expose auto-substantiation bypass rates, appeal loop-backs, and rework hot-spots. Metric moved: substantiation auto-rate (%), average days-to-resolve appeal, cost-per-claim.</p>
+      <p>Optum Financial administers ~9M HSAs and processes millions of card swipes and manual claims that must be substantiated against IRS Section 213(d) rules. Manual substantiation, receipt requests, and denial appeals create long cycle times, member abrasion, and IRS/CFPB audit exposure. AFPI mines the end-to-end claim flow across Optum Bank core, the mobile app, and back-office ops to expose auto-substantiation bypass rates, appeal loop-backs, and rework hot-spots. Metric moved: substantiation auto-rate, average days-to-resolve appeal, cost-per-claim.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Optum Bank core, HSA mobile app</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Bill+Miller+Optum+Financial">Bill Miller</a> (CEO, Optum Financial)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -150,9 +153,9 @@
   </details>
 
   <details>
-    <summary>2. Prior Authorization &amp; Payment Integrity Handoffs</summary>
+    <summary>2. Payment-Integrity &amp; Prior-Authorization Handoffs</summary>
     <div class="use-case-body">
-      <p>Optum sits at the collision of provider claims, payer adjudication, and member cost-share — a workflow the DOJ, states, and 2024 Change Healthcare fallout have all put under a microscope. AFPI maps the true prior-auth and payment-integrity handoff paths across UHG, providers, and Optum Financial's member accounts to find rework loops and delay drivers regulators keep asking about. Metric moved: turnaround time, denial-overturn rate, compliance exception count.</p>
+      <p>Optum Financial sits inside the broader UHG collision of provider claims, payer adjudication, and member cost-share &mdash; a workflow the DOJ, state AGs, and post-Change-Healthcare regulators are still probing. AFPI maps the true prior-auth and payment-integrity handoff paths across UHG adjudication, provider claim intake, and Optum Financial member accounts to isolate rework loops and delay drivers. Metric moved: turnaround time, denial-overturn rate, compliance-exception count.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> UHG adjudication platform, provider claim intake</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Sandeep+Dadlani+Optum">Sandeep Dadlani</a> (Chief Digital &amp; Technology Officer, UnitedHealth Group)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -160,45 +163,91 @@
   </details>
 
   <details>
-    <summary>3. Member Onboarding &amp; Employer Group Implementation</summary>
+    <summary>3. Employer Group Implementation &amp; Member Onboarding</summary>
     <div class="use-case-body">
-      <p>Every new employer HSA/FSA/COBRA plan triggers a multi-week implementation involving file feeds, banking setup, card issuance, ID proofing, and IRS reporting — a classic multi-system, multi-team gauntlet. AFPI mines the full onboarding process across Salesforce, banking core, and card-issuance systems to expose stall points that erode NPS and drive employer churn. Metric moved: time-to-first-card, implementation SLA hit rate, first-year retention.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce, Optum Bank core</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Optum+Financial+Chief+Operating+Officer">Optum Financial COO / Head of Implementations</a> (TBD [field verify])</p>
+      <p>Every new employer HSA / FSA / COBRA plan triggers a multi-week implementation that spans file feeds, banking setup, card issuance, ID proofing, and IRS reporting &mdash; classic multi-team, multi-system swivel-chair. AFPI mines the full onboarding path across CRM, Optum Bank core, and card-issuance systems to expose stall points that erode NPS and drive employer churn. Metric moved: time-to-first-card, implementation SLA hit-rate, first-year employer retention.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Employer onboarding portal, Optum Bank core</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Implementations+Optum+Financial">Head of Employer Implementations, Optum Financial</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Member Service Agent Desktop &amp; Claim-Denial Wrap</summary>
+    <div class="use-case-body">
+      <p>Optum Financial's member service reps field high volumes of "why was my claim denied," card-lockout, and IRS 1099-SA questions &mdash; the exact intents UHG has said publicly it wants agentic AI to absorb. Task mining the agent desktop reveals which tabs, portals, and copy/paste steps eat handle time and which are safe auto-resolve candidates versus compliance-sensitive escalations. Feeds a defensible Agentforce Service Agent business case. Metric moved: containment rate, average handle time, first-contact resolution.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Member service console, CTI / telephony platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=VP+Member+Services+Optum+Financial">VP, Member Services, Optum Financial</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Contact Center Deflection &amp; Agentforce Readiness</summary>
+    <summary>2. Manual Claim Substantiation Reviewer Desktop</summary>
     <div class="use-case-body">
-      <p>Optum Financial's member service centers field high call volumes on "why was my claim denied," card lockouts, and IRS 1099-SA questions — exactly the queries UHG has publicly said it wants agentic AI to absorb. Before deploying Agentforce Service Agent, AFPI mines actual contact-reason paths to prove which intents are true auto-resolve candidates and which are compliance-sensitive escalations. Metric moved: containment rate, average handle time, first-contact resolution.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud (target), CTI/telephony platform</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Optum+Financial+VP+Member+Services">VP Member Services</a> (TBD [field verify])</p>
+      <p>When a card swipe or manual claim fails auto-substantiation, a reviewer flips between the claim system, uploaded receipt images, IRS 213(d) reference material, and the member portal. Task mining that reviewer desktop shows exactly which lookups and re-keys can be collapsed into an Agentforce action or a document-understanding step. Metric moved: touch time per manual claim, throughput per reviewer FTE, error-return rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Claim adjudication desktop, document / receipt viewer</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Claims+Substantiation+Optum+Financial">Head of Claims Substantiation Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Compliance Center for HIPAA, IRS &amp; State Escheatment</summary>
+    <summary>3. Broker &amp; Employer Implementation Analyst Workflow</summary>
     <div class="use-case-body">
-      <p>Optum Financial straddles HIPAA (health data), IRS (HSA custodian), OCC/FDIC (Optum Bank), and 50-state escheatment / unclaimed-property regimes — a documentation load that grew heavier after the 2024 Change Healthcare breach. AFPI Compliance Center generates evidence packages directly from live process traces, replacing spreadsheet-based control walkthroughs. Metric moved: audit prep hours, control-exception rate, breach-notification cycle time.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> GRC platform, audit evidence repositories</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Optum+Chief+Compliance+Officer">Optum Chief Compliance Officer</a> (TBD [field verify])</p>
+      <p>Implementation analysts and account managers moving a new employer through go-live cycle between CRM, banking core, card-issuance vendor portals, secure email, and spreadsheets. Task mining captures the actual on-screen steps to isolate rekeying, waiting-on-vendor time, and reconciliation loops. Directly sizes the Agentforce Operations opportunity in the implementation team. Metric moved: analyst hours per employer implementation, first-time-right rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Implementation analyst desktop, vendor portals</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Implementations+Optum+Financial">Head of Employer Implementations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. HIPAA &amp; Post-Change-Healthcare Breach-Notification Controls</summary>
+    <div class="use-case-body">
+      <p>The 2024 Change Healthcare breach raised the bar on HIPAA breach-notification response across every UHG entity, including Optum Financial's member-data flows. Compliance Center codifies incident triage, notification thresholds, and evidence collection as a controlled process, running off live traces rather than after-the-fact walkthroughs. Metric moved: breach-notification cycle time, audit prep hours, control-exception rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> GRC platform, security incident (SIEM) case management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Compliance+Officer+Optum">Chief Compliance Officer, Optum</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. IRS HSA Custodian &amp; 213(d) Substantiation Controls</summary>
+    <div class="use-case-body">
+      <p>As HSA custodian, Optum Bank must evidence that every reimbursed dollar meets IRS Section 213(d) eligibility and that annual 1099-SA / 5498-SA reporting is complete and defensible. Compliance Center turns the substantiation + reporting chain into a controlled workflow with segregation-of-duties, sign-offs, and continuous evidence. Metric moved: IRS audit prep hours, control-exception count, restatement rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Optum Bank core, tax-reporting engine</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Regulatory+Reporting+Optum+Bank">Head of Regulatory Reporting, Optum Bank</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. OCC/FDIC &amp; 50-State Escheatment / Unclaimed-Property Controls</summary>
+    <div class="use-case-body">
+      <p>Optum Bank sits under OCC/FDIC supervision and must run 50-state escheatment / unclaimed-property reporting for dormant HSAs &mdash; a documentation and cycle-time burden that scales with member count. Compliance Center pulls escheatment states, dormancy signals, and reporting sign-offs into a single controlled process with continuous evidence. Metric moved: escheatment filing cycle time, state audit findings, dormant-account exception rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Optum Bank core, unclaimed-property reporting platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Bank+Compliance+Optum+Bank">Head of Bank Compliance, Optum Bank</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Optum Financial, Inc. by mining the end-to-end HSA/FSA claim substantiation, payment-integrity handoffs, and employer onboarding flows across Optum Bank, the mobile app, and CRM, task-mining member-service and claims-reviewer desktops to expose the swivel-chair work that Agentforce Operations can absorb, and running HIPAA breach-notification, IRS HSA custodian, and OCC/FDIC escheatment controls through Compliance Center to lift auto-substantiation rates, cut appeal and handle times, and produce always-on audit evidence for federal and state regulators.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

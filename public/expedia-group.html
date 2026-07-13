@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -108,97 +113,141 @@
   <h1>Expedia Group, Inc.</h1>
   <div class="snapshot">
     <p><strong>Travel, Transportation &amp; Hospitality, Online Travel Agency</strong></p>
-    <p><strong>Revenue:</strong> $12.84B (FY2023) &nbsp;|&nbsp; <strong>Employees:</strong> ~17,100 &nbsp;|&nbsp; <strong>HQ:</strong> Seattle, WA, USA</p>
-    <p><strong>Major Subsidiaries:</strong> Hotels.com, Vrbo, Expedia.com, Orbitz, Travelocity</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Marketing Cloud (ExactTarget), B2B Commerce, Platform, Analytics Cloud, Org Permissions</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Rathi+Murthy+Expedia">Rathi Murthy</a> (CTO)]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Expedia +MCA PLS Phase 2 (<a href="https://org62.my.salesforce.com/006ed00000f8gaLAAQ">$750k</a>) &nbsp;|&nbsp; Expedia +MCA PLS Phase 1 (<a href="https://org62.my.salesforce.com/006ed00000f8eOrAAI">$249k</a>)</p>
+    <p><strong>Revenue:</strong> ~$13.7B (FY2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~16,500 &nbsp;|&nbsp; <strong>HQ:</strong> Seattle, WA, USA</p>
+    <p><strong>Major Subsidiaries:</strong> Expedia.com, Hotels.com, Vrbo, Travelocity, Trivago</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Marketing Cloud Engagement (MCE), Marketing Cloud Advanced (MCA), B2B Commerce, Platform, Analytics Cloud</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Marketo, Adobe Experience Cloud</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Expedia SOW &mdash; TPA Orchestration Marketo to MCA (<a href="https://org62.my.salesforce.com/006ed00000W0nKrAAJ">$2.5M</a>) &nbsp;|&nbsp; Expedia SOW &mdash; TEal DC MCA MCE+ Phase 2+3 (<a href="https://org62.my.salesforce.com/006ed00000WU7UfAAL">$1.72M</a>) &nbsp;|&nbsp; Expedia SOW &mdash; TPA Orchestration Pilot (<a href="https://org62.my.salesforce.com/006ed00000ZTGZtAAP">$240k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U03UT1320PR">Chris Rennix</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">72/100</span> — T2 Develop</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t2">78/100</span> &mdash; T2 Develop</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Process complexity (bookings, refunds, partner ops, service)</td><td>10/10</td><td class="cat-green">Traveler + 100+ supplier partner flows plus refunds and service — dense multi-system event logs.</td></tr>
-        <tr><td>Size &amp; scale ($12.8B revenue, 17K employees)</td><td>10/10</td><td class="cat-green">Enterprise scale gives AFPI multiple parallel process domains and material ROI targets.</td></tr>
-        <tr><td>Vertical fit (OTA / high-volume transactional)</td><td>9/10</td><td class="cat-green">OTA transactional volume is a textbook process-mining fit — cycle time and rework both quantifiable.</td></tr>
-        <tr><td>Deal momentum (2 active MCA/Agentforce-adjacent opps)</td><td>8/10</td><td class="cat-green">Two live MCA PLS opps ($750k + $249k) give AFPI a clean co-sell wedge into an active project.</td></tr>
-        <tr><td>Data readiness (mature data org, known event-log culture)</td><td>8/10</td><td class="cat-green">Mature data engineering culture and CTO-led platform team — event logs are already generated.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">$4M+ of active MCA/Agentforce-adjacent pipeline in scoping and active negotiation now.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">OTA cancellations, refunds, partner onboarding &mdash; textbook cycle-time and rework pain.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Active Marketo-to-MCA migration and MCE+ phases &mdash; agentic-orchestration land now.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>11/12</td><td class="cat-green">Multi-cloud MCA/MCE/B2B Commerce/Analytics install with named AE and live SOWs.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-green">Mature in-house data engineering culture; MCA, service, and payment event logs available.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Deal momentum (2 active MCA/Agentforce-adjacent opps)</td><td>8/10</td><td class="cat-orange">Momentum is MCA-only today; no direct process-mining champion yet identified inside the account.</td></tr>
-        <tr><td>Data readiness (mature data org, known event-log culture)</td><td>8/10</td><td class="cat-orange">Sophisticated in-house data teams may prefer to build vs. buy — need a clear TTV wedge.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>12/20</td><td class="cat-orange">SF AE engaged but no customer-side process-mining champion confirmed on LinkedIn yet.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>4/8</td><td class="cat-red">GDPR/CCPA around personalization only &mdash; no SOX/AML/HIPAA driver to force adoption.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Expedia Group, Inc. by mining the traveler-and-partner event log across Service Cloud, the supplier API layer, and Marketing Cloud journeys to expose refund cycle time, contact-deflection rework, and consent-block silent failures — giving the two live MCA PLS Agentforce phases a documented target-state process to route and act on.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Cancellation &amp; Refund Cycle Time</summary>
+    <summary>1. Cancellation &amp; Refund Cycle Time (Traveler &harr; Supplier)</summary>
     <div class="use-case-body">
-      <p>Refund and cancellation flows span the traveler, Expedia, and 100+ supplier partners (airlines, hotels, car rentals), with SLA-driven escalations that spike CSAT complaints when partner response drifts. Mining the event log across Salesforce Service Cloud, the supplier API layer, and payments will surface the true rework loops, partner-side bottlenecks, and refund-aging buckets that consume agent time. AFPI ties directly to the active MCA Phase 1/2 spend by giving Agentforce the ground-truth process map to route and act on. Metric moved: refund cycle time and Tier-2 escalation rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Supplier API layer</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jochen+Koedijk+Expedia">Jochen Koedijk</a> (Chief Customer Officer)</p>
+      <p>Refund and cancellation flows span the traveler, Expedia, and 100+ supplier partners (airlines, hotels, car rentals), with SLA-driven escalations that spike CSAT complaints when partner response drifts. Mining the event log across Service Cloud, the supplier API layer, and payments surfaces the true rework loops, partner-side bottlenecks, and refund-aging buckets that consume agent time. AFPI ties directly to the live MCA phases by giving Agentforce Operations the ground-truth process map to route and act on. Metric moved: median refund cycle time and Tier-2 escalation rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Supplier API / payments platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=VP+Traveler+Experience+Expedia+Group">VP, Traveler Experience Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Partner &amp; Supply Onboarding (Property/Air)</summary>
+    <summary>2. Marketo-to-MCA Journey Orchestration Migration</summary>
     <div class="use-case-body">
-      <p>Onboarding a new hotel, alternative-accommodation host, or air partner runs through content ingestion, rate/inventory mapping, contracting, and compliance checks — typically weeks of back-and-forth email plus custom internal tooling. Process mining exposes where properties stall in the funnel (missing content, tax setup, geo tagging) and how long time-to-first-booking really takes vs. the internal SLA. AFPI plus Agentforce can auto-nudge partners at the exact stall points and auto-approve low-risk paths. Metric moved: partner time-to-live and inventory ramp velocity.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> B2B Commerce, Partner Portal (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ariane+Gorin+Expedia">Ariane Gorin</a> (CEO, ex-Expedia for Business)</p>
+      <p>The $2.5M TPA Orchestration opp is a full lift of hundreds of Marketo journeys onto Marketing Cloud Advanced. Mining the current Marketo execution log against the new MCA journey definitions exposes silent drops, consent-block failures, and the segment-build steps that eat lead time. AFPI gives the migration team an event-level diff between old and new journeys and a control surface Agentforce can automate against. Metric moved: journey-execution parity rate and campaign lead time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Marketo, Marketing Cloud Advanced (MCA)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Marketing+Technology+Expedia+Group">Head of Marketing Technology</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Traveler Support Contact-Deflection Loop</summary>
+    <summary>3. Partner &amp; Supply Onboarding (Property, Alt-Accommodation, Air)</summary>
     <div class="use-case-body">
-      <p>Millions of calls and chats hit Service Cloud each year with predictable patterns — itinerary changes, refund status, price-drop disputes, loyalty issues — but true root causes hide inside the process, not the transcript. Mining the case journey (self-service → virtual agent → human) shows which policies and system handoffs actually cause repeat contacts. AFPI feeds Agentforce Service Agents the deflection blueprint per case type; wedge is Agentforce Ops co-sell attached to the two live MCA opps. Metric moved: contained rate and cost-to-serve per booking.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Virtual Agent (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jochen+Koedijk+Expedia">Jochen Koedijk</a> (Chief Customer Officer)</p>
+      <p>Onboarding a new hotel, Vrbo host, or air partner runs through content ingestion, rate/inventory mapping, contracting, and compliance checks &mdash; typically weeks of back-and-forth email plus custom internal tooling. Process mining exposes where properties stall in the funnel (missing content, tax setup, geo tagging) and how long time-to-first-booking really takes vs. internal SLA. AFPI plus Agentforce can auto-nudge partners at the exact stall points and auto-approve low-risk paths. Metric moved: partner time-to-live and inventory ramp velocity.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> B2B Commerce, Partner onboarding portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=VP+Partner+Onboarding+Expedia+Group">VP, Global Partner Onboarding</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Traveler Support Agent Desktop (Service Cloud Console)</summary>
+    <div class="use-case-body">
+      <p>Global support agents handling itinerary changes, refunds, and price disputes toggle between Service Cloud, the reservation system, partner supplier tools, and payments. Task mining the agent desktop captures the after-call-work steps and the swivel-chair time that Agentforce Service Agents can automate away. Feeds a direct AHT and cost-to-serve business case for the active MCA/Agentforce program. Metric moved: AHT, wrap time, and after-call-work minutes per contact type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, reservation system</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Global+Contact+Center+Expedia+Group">Head of Global Contact Center Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Marketing Cloud Journey &amp; Personalization Compliance</summary>
+    <summary>2. Campaign Ops &amp; Journey Build (Marketer Desktop)</summary>
     <div class="use-case-body">
-      <p>The MCA PLS engagements are already building personalized landing solutions across Expedia, Hotels.com, and Vrbo brands — but journey execution across email, push, and paid inevitably drifts from consent/segmentation rules, especially post-GDPR/CCPA. AFPI mines the actual send-to-conversion journey to catch delivery leaks, consent-block silent failures, and slow segment build times. This is the cleanest "Compliance Center wedge" and lands inside the current MCA project team. Metric moved: campaign lead time and consent-audit exceptions.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud (ExactTarget), Analytics Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jennifer+Andre+Expedia">Jennifer Andre</a> (SVP, Global Business Services / advertising &amp; media)</p>
+      <p>The MCA migration puts marketers back in a period of building, testing, and QAing new journeys across brands (Expedia, Hotels.com, Vrbo). Task mining the marketer desktop reveals how much time goes to segment iteration, approval routing, and cross-brand QA vs. actual creative work. Directly quantifies the productivity uplift Agentforce agents can deliver inside MCA. Metric moved: journey-build time per campaign and QA rework rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud Advanced, Marketo</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Director+Marketing+Operations+Expedia+Group">Director, Marketing Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Order-to-Cash on the B2B (Expedia TAAP / Expedia for Business) Book</summary>
+    <summary>3. Property Manager Content &amp; Rate Update Desktop</summary>
     <div class="use-case-body">
-      <p>The B2B Commerce footprint powers agent-partner and corporate-travel bookings where invoicing, chargebacks, and settlement disputes create hidden aging. Mining the order-to-cash process across Salesforce and the finance stack surfaces where disputes originate, which partner segments carry the aging, and where auto-write-off thresholds should sit. AFPI gives finance ops the audit-grade process view that supports Agentforce automation in dispute triage. Metric moved: DSO on partner book and dispute cycle time.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> B2B Commerce, Finance ERP (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Scott+Schenkel+Expedia">Scott Schenkel</a> (CFO)</p>
+      <p>Hotel and Vrbo property managers spend measurable time on repetitive content, rate, and availability updates across the partner extranet. Task mining a sample of internal partner-support reps who handle these updates on behalf of managers exposes the routine, high-volume tasks Agentforce can straight-through. Wedge is a partner-experience narrative that plugs into the current B2B Commerce estate. Metric moved: manual-touches per property per week.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Partner extranet, B2B Commerce</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=VP+Partner+Experience+Expedia+Group">VP, Partner Experience</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. GDPR / CCPA Consent &amp; Personalization Controls</summary>
+    <div class="use-case-body">
+      <p>MCA journeys across Expedia, Hotels.com, and Vrbo brands touch consented traveler data across EU, UK, and California residents. Compliance Center codifies the consent-check step inside every journey and produces continuous evidence that no personalization runs against a withdrawn consent. Landing point is the live MCA program itself. Metric moved: consent-audit exceptions and time-to-evidence per DSAR.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud Advanced, consent management platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Privacy+Officer+Expedia+Group">Chief Privacy Officer</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. PCI-DSS Payment &amp; Refund Controls</summary>
+    <div class="use-case-body">
+      <p>Every booking, cancellation, and refund touches cardholder data across Expedia's payment estate and partner settlement flows. Compliance Center runs the PCI-DSS control library as a continuously monitored process, evidencing scope, segregation of duties, and change control for auditors. Especially valuable as Agentforce agents begin acting on refunds. Metric moved: PCI evidence coverage and mean-time-to-remediate control failures.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Payments platform, refund workflow</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Payments+Compliance+Expedia+Group">Head of Payments Compliance</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Model Risk &amp; Agentforce Action Governance</summary>
+    <div class="use-case-body">
+      <p>As Agentforce agents begin taking actions inside Expedia's traveler and partner journeys, model-risk and action-governance obligations move from a nice-to-have to a hard control requirement (recommender bias, refund-authorization limits, EU AI Act). Compliance Center codifies the promote/monitor/retire lifecycle for every model and every agent action, with evidence for internal audit and regulators. Metric moved: audit-ready models/agents covered and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Model registry / MLOps pipeline, Agentforce runtime</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+AI+Governance+Expedia+Group">Head of AI Governance / Model Risk</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Expedia Group, Inc. by mining cancellation, refund, and partner-onboarding processes across Service Cloud, the supplier API layer, and the live Marketo-to-MCA migration, task-mining traveler-support agent and marketer desktops to size the exact swivel-chair work Agentforce Operations can eliminate, and running GDPR/CCPA consent, PCI-DSS payment, and Agentforce action-governance controls through Compliance Center to cut refund cycle time, shrink AHT, and produce always-on audit evidence across every travel brand.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

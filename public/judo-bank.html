@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -111,41 +112,39 @@
 <main>
   <h1>Judo Bank Pty Limited</h1>
   <div class="snapshot">
-    <p><strong>Financial Services, SME &amp; Commercial Banking (Neobank / Challenger ADI)</strong></p>
-    <p><strong>Revenue:</strong> A$268M &nbsp;|&nbsp; <strong>Employees:</strong> ~500 &nbsp;|&nbsp; <strong>HQ:</strong> Melbourne (Southbank), Australia</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Financial Services Cloud (FSC), Agentforce, Data Cloud, Tableau Next, Slack (Enterprise+), Signature Success, Informatica CDGC</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> nCino (loan origination — currently being replaced per Org62 opp)</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Judo Bank - Apromore (<a href="https://org62.my.salesforce.com/006ed00000WiQdtAAF">$275K</a>) &nbsp;|&nbsp; nCino removal (<a href="https://org62.my.salesforce.com/006ed00000WdkuzAAB">$1.0M</a>) &nbsp;|&nbsp; FSC Group uplift (<a href="https://org62.my.salesforce.com/006ed00000VjqQQAAZ">$275K</a>)</p>
+    <p><strong>Financial Services, SME &amp; Commercial Banking (Challenger ADI)</strong></p>
+    <p><strong>Revenue:</strong> A$268M &nbsp;|&nbsp; <strong>Employees:</strong> ~500 &nbsp;|&nbsp; <strong>HQ:</strong> Southbank (Melbourne), Australia</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Financial Services Cloud, Agentforce, Data Cloud, Tableau Next, Slack (Enterprise+), Signature Success, Informatica CDGC</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> nCino</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Judo Bank Pty Limited - Apromore (<a href="https://org62.my.salesforce.com/006ed00000WiQdtAAF">$275k</a>) &nbsp;|&nbsp; nCino removal (<a href="https://org62.my.salesforce.com/006ed00000WdkuzAAB">$1.0M</a>) &nbsp;|&nbsp; Judo Bank Pty Limited - FSC Group uplift (<a href="https://org62.my.salesforce.com/006ed00000VjqQQAAZ">$275k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U03TQFJPDNF">David Sharp</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Financial Services Cloud + Agentforce)</p>
   </div>
 
-  <details class="pov-aproscore" open>
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">89/100</span> — T1 Pursue</summary>
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">89/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">FSC, Agentforce, Data Cloud, Tableau Next, Slack, Signature — deep multi-cloud install base.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Priority vertical — SME commercial lending, APRA-regulated ADI.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Active Apromore opp $275K in stage 02, close Oct 2026 — deal is live.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">nCino removal ($1M opp), Agentforce POC, FSC refactor, CDGC data governance all in flight.</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">APRA CPS 230/234, AUSTRAC AML/CTF, RG 271 disputes — audit-trail process evidence in demand.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Priority AFPI vertical &mdash; SME commercial lending, APRA-regulated ADI.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">FSC, Agentforce, Data Cloud, Tableau Next, Slack, Signature, Informatica CDGC &mdash; deep install.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Active $275k Apromore opp in Stage 02, close Oct 2026 &mdash; deal is live and named.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">$1M nCino removal + FSC uplift + Agentforce POC + Tableau Next Phase 2 + CDGC in flight.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">APRA CPS 230/234, AUSTRAC AML/CTF, ASIC RG 271 &mdash; Compliance Center wedge is direct.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Process-Pain Intensity</td><td>10/15</td><td class="cat-orange">Pain implied (nCino replacement, householding rework) but no cycle-time metrics surfaced yet.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>13/20</td><td class="cat-orange">AE relationship strong via David Sharp, but named VP Operational Excellence / COO champion still to be confirmed.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">AE relationship strong (David Sharp) but no LinkedIn-verified customer-side process-improvement champion confirmed.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>12/15</td><td class="cat-orange">Pain strongly implied (nCino replacement, householding rework, RG 271 clock) but no published cycle-time or rework metrics yet.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Judo Bank Pty Limited by mining its SME loan-origination and credit-decisioning flows across nCino, FSC, and the incoming Agentforce fabric to expose handoff bottlenecks and rework loops during the nCino-to-Salesforce migration — cutting weeks off time-to-yes for relationship-banker deals and giving APRA auditors a defensible, evidence-based view of every credit decision.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. SME Loan Origination &amp; Credit-Decisioning Migration (nCino → FSC)</summary>
+    <summary>1. SME Loan Origination &amp; Credit-Decisioning Migration (nCino &rarr; FSC)</summary>
     <div class="use-case-body">
-      <p>100% of Judo's originated loans (ex-treasury and mortgage) currently route through nCino/Salesforce, with an active $1M opp to remove nCino and re-platform on FSC. Mining the current origination process before, during, and after cutover exposes where relationship bankers actually get stuck — householding, pricing exceptions, credit committee handoffs — and gives Judo an evidence-based blueprint for the target-state on FSC. Without this, the migration risks paving cow paths. Metric moved: time-to-yes on commercial loans (target 30–50% reduction), plus a 20%+ lift in first-time-right applications.</p>
+      <p>Nearly all originated loans (ex-treasury and mortgage) currently route through nCino/Salesforce, with an active $1M opp to remove nCino and re-platform on FSC. Mining the current origination process before, during, and after cutover exposes where relationship bankers actually get stuck &mdash; householding, pricing exceptions, credit committee handoffs &mdash; and gives Judo an evidence-based blueprint for the target state on FSC. Without this, the migration risks paving cow paths. Metric moved: time-to-yes on commercial loans (target 30-50% reduction), plus a 20%+ lift in first-time-right applications.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> nCino, Salesforce FSC</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chris+Bayliss+Judo+Bank">Chris Bayliss</a> (Deputy CEO &amp; Chief Financial Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -155,7 +154,7 @@
   <details>
     <summary>2. KYC / AML Onboarding for SME Customers &amp; UBOs</summary>
     <div class="use-case-body">
-      <p>AUSTRAC has intensified AML/CTF program reviews across Australian ADIs, and SME onboarding — with layered corporate structures and Ultimate Beneficial Owner checks — is where onboarding stalls most often at Judo. Mining the end-to-end onboarding process across FSC, identity-verification vendors, and manual analyst review reveals the concrete handoffs where cases sit idle, get re-worked, or escalate. AFPI's Compliance Center wedge turns that into an auditable "prove-how-a-decision-was-made" pack for AUSTRAC. Metric moved: onboarding cycle time and analyst rework rate.</p>
+      <p>AUSTRAC has intensified AML/CTF program reviews across Australian ADIs, and SME onboarding &mdash; with layered corporate structures and Ultimate Beneficial Owner checks &mdash; is where onboarding stalls most often. Mining the end-to-end onboarding process across FSC, identity-verification vendors, and manual analyst review reveals the concrete handoffs where cases sit idle, get re-worked, or escalate. Feeds Compliance Center directly. Metric moved: onboarding cycle time and analyst rework rate on high-risk SME cases.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce FSC, KYC/AML platform</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Yien+Hong+Judo+Bank">Yien Hong</a> (Chief Risk Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -163,36 +162,80 @@
   </details>
 
   <details>
-    <summary>3. Dispute &amp; Complaint Handling under RG 271</summary>
+    <summary>3. Credit Approval &amp; Exception Handling (Relationship-Banker Model)</summary>
     <div class="use-case-body">
-      <p>ASIC's RG 271 imposes hard 30-day resolution windows on internal dispute resolution, and boards are personally accountable for evidence of adherence. Mining Judo's complaint intake, triage, and resolution flow across FSC Service Cloud and manual back-office queues surfaces exactly which case types blow past the deadline and why. The output is a live control that regulators can inspect, not a spreadsheet reconciled after the fact. Metric moved: % of complaints resolved within RG 271 windows and reduction in remediation payouts.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce FSC Service Cloud, complaints case log</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Megan+Collins+Judo+Bank">Megan Collins</a> (Chief Operating Officer)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Term-Deposit Renewal &amp; Retention Journey</summary>
-    <div class="use-case-body">
-      <p>Judo's funding book leans heavily on retail term deposits, and every basis point of rollover-attrition directly hits net-interest margin. Mining the renewal journey — from maturity notice, through digital renewal channel, to the manual save-desk in the contact centre — reveals where depositors drop off and which touchpoints actually save the deposit. AFPI feeds the process-signals into Agentforce, which can then act on at-risk depositors in real time. Metric moved: TD retention rate (target +200–400 bps) and cost-per-retained-dollar.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce FSC, deposit core system</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Michael+Ryan+Judo+Bank">Michael Ryan</a> (Head of Retail Deposits)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>5. Credit Approval &amp; Exception Handling (Relationship-Banker Model)</summary>
-    <div class="use-case-body">
-      <p>Judo's differentiator is the relationship-banker credit model — human judgment layered onto data — but that same judgment creates non-standard paths, delegated-authority breaches, and pricing exceptions that are invisible to leadership. Mining the credit-approval workflow (including the custom household object built to work around nCino's native model) shows which exception paths are systemic vs. one-off, and where authority limits are being bypassed. This becomes the control fabric for Agentforce-assisted credit ops. Metric moved: exception-rate on delegated authority and average days-in-committee.</p>
+      <p>Judo's differentiator is the relationship-banker credit model &mdash; human judgment layered onto data &mdash; but that same judgment creates non-standard paths, delegated-authority breaches, and pricing exceptions that are invisible to leadership. Mining the credit-approval workflow (including the custom household object built to work around nCino's native model) shows which exception paths are systemic vs. one-off, and where authority limits get bypassed. Becomes the control fabric for Agentforce-assisted credit ops. Metric moved: exception-rate on delegated authority and average days-in-committee.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce FSC (custom household object), nCino</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Frank+Versace+Judo+Bank">Frank Versace</a> (Chief Third Party Banking Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent competitive process-mining mentions (Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, Power Automate) tied to Judo Bank in Slack or public sources — the field is open, and Apromore has the active $275K opp already on the table.</span></h2>
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Relationship-Banker Desktop (During nCino &rarr; FSC Cutover)</summary>
+    <div class="use-case-body">
+      <p>Relationship bankers today flip between nCino, FSC, credit-committee spreadsheets, and email to progress a single SME deal &mdash; and the nCino removal will re-shuffle every one of those steps. Task mining the banker desktop captures the copy/paste, screen-hop, and lookup steps that survive the migration and names them for Agentforce automation. Metric moved: banker touch-time per new deal and cases completed per FTE per day.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> nCino desktop, FSC console</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Frank+Versace+Judo+Bank">Frank Versace</a> (Chief Third Party Banking Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Complaints &amp; Dispute-Resolution Analyst Desktop (RG 271)</summary>
+    <div class="use-case-body">
+      <p>ASIC's RG 271 gives analysts a hard 30-day clock on every internal dispute, and the desktop reality is that a case moves across FSC Service Cloud, complaint templates in Word, and email threads before a resolution letter ships. Task mining exposes the exact re-keying and cross-tab work that eats the clock. The output is both a queue-time reduction and cleaner audit evidence. Metric moved: analyst minutes per complaint and % of cases resolved within RG 271 windows.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> FSC Service Cloud console, complaint document templates</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Megan+Collins+Judo+Bank">Megan Collins</a> (Chief Operating Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Term-Deposit Save-Desk Contact-Centre Task Mining</summary>
+    <div class="use-case-body">
+      <p>Judo's funding book leans heavily on retail term deposits, and the save-desk agent has ~5 minutes at maturity to keep a depositor. Task mining that agent's desktop &mdash; deposit core system, FSC, pricing sheet, retention scripts &mdash; shows which tabs and manual lookups eat the save-window, and where Agentforce can pre-load the pitch. Metric moved: TD retention rate (target +200-400 bps) and average handle time on save calls.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Deposit core system, Salesforce FSC console</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Michael+Ryan+Judo+Bank">Michael Ryan</a> (Head of Retail Deposits)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. APRA CPS 230 Operational Risk &amp; Critical-Operations Controls</summary>
+    <div class="use-case-body">
+      <p>APRA CPS 230 (effective July 2025) forces every ADI to identify, control, and continuously test its "critical operations" &mdash; loan origination, payments, deposits &mdash; with mapped tolerances and third-party dependency evidence. Compliance Center runs those controls as live, auditable processes with automated evidence capture and exception-flow triggers. This is exactly the shape APRA wants under CPS 230 examinations. Metric moved: mean-time-to-evidence per critical operation and audit findings per review.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce FSC, core banking / payments</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Yien+Hong+Judo+Bank">Yien Hong</a> (Chief Risk Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. AUSTRAC AML/CTF Program &amp; SMR Evidence</summary>
+    <div class="use-case-body">
+      <p>AUSTRAC enforcement against ADIs has escalated, and Judo's SME concentration means layered ownership, cash-intensive customers, and cross-border flows sit in the risk cross-hairs. Compliance Center codifies the AML/CTF program &mdash; risk assessment, transaction monitoring outputs, SMR filing, and board reporting &mdash; as controlled workflows with segregation of duties. Every alert becomes an audit-ready case. Metric moved: alert-clearing SLA hit-rate and time-to-SMR.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> AML monitoring platform, FSC case management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Yien+Hong+Judo+Bank">Yien Hong</a> (Chief Risk Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. ASIC RG 271 Complaints Resolution SLA Controls</summary>
+    <div class="use-case-body">
+      <p>RG 271 imposes hard resolution windows (30 days for most, 21 for credit) with personal board accountability for evidence of adherence. Compliance Center runs complaints as a controlled workflow with codified SLAs, escalation paths, and audit-ready reporting to ASIC. The output is a live control fabric, not a spreadsheet reconciled after the fact. Metric moved: % of complaints resolved within RG 271 windows and reduction in remediation payouts.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce FSC Service Cloud, complaints case log</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Megan+Collins+Judo+Bank">Megan Collins</a> (Chief Operating Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Judo Bank Pty Limited by mining SME loan-origination, KYC/AML onboarding, and relationship-banker credit workflows across nCino and FSC during the $1M nCino-to-Salesforce migration, task-mining banker and complaints-analyst desktops to expose the copy/paste work that Agentforce can absorb, and running APRA CPS 230, AUSTRAC AML/CTF, and ASIC RG 271 controls through Compliance Center &mdash; cutting weeks off time-to-yes, lifting term-deposit retention, and delivering always-on regulator-ready evidence.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -203,7 +246,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

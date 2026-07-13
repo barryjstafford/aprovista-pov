@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -113,42 +114,40 @@
   <div class="snapshot">
     <p><strong>Financial Services, Insurance (P&amp;C / Reinsurance)</strong></p>
     <p><strong>Revenue:</strong> US$21.8B (FY24 GWP) &nbsp;|&nbsp; <strong>Employees:</strong> ~13,500 &nbsp;|&nbsp; <strong>HQ:</strong> Sydney, Australia</p>
-    <p><strong>Major Subsidiaries:</strong> QBE North America, QBE International (London / Lloyd's), QBE Australia Pacific, Equator Re (Bermuda), QBE Raheja (India JV)</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Enterprise Edition), MuleSoft (global integration backbone, $3.2M ACV renewal Dec 2024)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Guidewire policy/claims platform, legacy underwriting core systems (multi-regional), broker portals; Informatica RFP active May 2026 [Slack]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> QBE Insurance: CPS 230 Operational Resilience (<a href="https://org62.my.salesforce.com/006ed00000CCqLhAAL">$200K</a>) | QBE Core Modernisation – Service (Risk Engineers) (<a href="https://org62.my.salesforce.com/006ed00000I73BhAAJ">$165K</a>) | SO - QBE Insurance - CORE - Motor Insurance (<a href="https://org62.my.salesforce.com/006ed00000ZIbRZAA1">$157K</a>)</p>
+    <p><strong>Major Subsidiaries:</strong> QBE North America, QBE International (London / Lloyd's), QBE Australia Pacific, Equator Re (Bermuda), QBE European Operations</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Unlimited Edition), Sales &amp; Service Cloud (Unlimited), MuleSoft, Marketing Cloud (ExactTarget), Datorama, Analytics Cloud, Informatica MDM</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Guidewire PolicyCenter, Guidewire ClaimCenter</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> QBE EO: Underwriting WB Phase 2, FSC, Data 360, Agentforce, Mule, MC, Canvas (<a href="https://org62.my.salesforce.com/006ed000001ymHJAAY">$1.125M</a>) &nbsp;|&nbsp; QBE - Underwriting Workbench - SF CTO + Mule CTO - CSG (<a href="https://org62.my.salesforce.com/006ed00000ZFX7aAAH">$800k</a>) &nbsp;|&nbsp; QBE Insurance: CPS 230 Operational Resilience (<a href="https://org62.my.salesforce.com/006ed00000CCqLhAAL">$200k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GFQTKPFH">Isabelle Farrar</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">90/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">92/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Global P&amp;C insurer — priority vertical with underwriting, claims, and CPS 230 process pain.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$3.2M MuleSoft ACV + Sales Cloud; Big Bet Strat account; multi-region deal team engaged.</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">APRA CPS 230 live July 2025, PRA/FCA in UK, NAIC in US, IFRS 17 — dedicated $200K opp.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Alex Taylor Global Head of Emerging Tech; QBE Core Modernisation program in motion.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>16/20</td><td class="cat-green">Emerging Tech, CIO office, Risk Engineers, and Isabelle Farrar (SF AE) all reachable.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Global P&amp;C + specialty insurer across 27 countries &mdash; top-priority AFPI vertical.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Sales Cloud, MuleSoft, Marketing Cloud, Datorama, Informatica MDM &mdash; multi-cloud incumbent.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">APRA CPS 230 live; PRA/FCA in UK, NAIC in US, IFRS 17 &mdash; dedicated $200k CPS 230 opp.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Underwriting Workbench + Agentforce/Data 360 opp at Stage 04, Core Modernisation in flight.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">Underwriting-to-bind and claims lifecycle span Guidewire + legacy in every region &mdash; classic PM target.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-orange">Open opps are mostly Stage 01 and sub-$200K individually — bundling required to clear ACV bar.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-orange">Guidewire + legacy core systems are minable but event-log extraction plan needs scoping.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>15/20</td><td class="cat-orange">Salesforce AE (Isabelle Farrar) and SF CTO team engaged; customer-side process champion not yet confirmed on LinkedIn.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-orange">Guidewire and legacy core systems are minable but event-log extraction plan still needs scoping.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help QBE Insurance Group Limited by mining the underwriting-to-bind, claims-lifecycle, and operational-resilience (CPS 230) flows across Guidewire and MuleSoft to expose silent deviations, cut Time-to-Quote and Time-to-Settle, and give the CPS 230 program a defensible evidence base — value QBE's Emerging Tech team can bank in the same fiscal year as the Core Modernisation spend.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Commercial Underwriting: Digital Twin of Submission-to-Bind</summary>
+    <summary>1. Underwriting Workbench: Submission-to-Bind Digital Twin</summary>
     <div class="use-case-body">
-      <p>QBE writes commercial and specialty risks across 27 countries where each region has its own submission triage, referral, and pricing workflow layered on Guidewire and legacy core systems. Silent deviations — off-model discounts, out-of-appetite risks bound anyway, missed referrals — leak underwriting margin and slow Time-to-Quote. Apromore mines the actual submission-to-bind flow to visualize compliance leakage and referral bottlenecks (this is the exact "Digital Twin of Underwriting" narrative Marcello just presented to Suncorp NZ [Slack]). Metric moved: Time-to-Quote and referral-compliance rate.</p>
+      <p>QBE has a $1.125M Underwriting Workbench Phase 2 opp (Stage 04) layered on FSC, Data 360, Agentforce, MuleSoft, and Marketing Cloud &mdash; the exact scaffolding a digital twin of underwriting sits on. Across 27 countries each region has its own submission triage, referral, and pricing flow bolted on Guidewire and legacy cores, so silent deviations (off-model discounts, missed referrals, out-of-appetite risks bound anyway) quietly leak margin. Apromore mines the actual submission-to-bind flow to expose referral-compliance leakage and Time-to-Quote drag &mdash; feeding the exact process steps Agentforce should automate in Phase 3. Metric moved: Time-to-Quote and referral-compliance rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Guidewire PolicyCenter, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alex+Taylor+QBE+Insurance">Alex Taylor</a> (Global Head of Emerging Technology)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Underwriting+Workbench+QBE">Head of Underwriting Workbench Program</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -156,44 +155,88 @@
   <details>
     <summary>2. Claims Lifecycle: FNOL-to-Settlement Cycle-Time Reduction</summary>
     <div class="use-case-body">
-      <p>Claims is QBE's biggest operational cost and the process most exposed to customer NPS and regulator scrutiny. Multi-region claims handling spans Guidewire ClaimCenter, broker portals, third-party assessors, and legal panel firms — creating rework loops, duplicate handoffs, and long tails on complex claims. Apromore mines the end-to-end FNOL-to-settlement flow to isolate the loops that drive cycle time and identify agentic-automation candidates (triage, reserve setting, fraud flags). Metric moved: average claims cycle time and rework rate.</p>
+      <p>Claims is QBE's biggest operational cost and the process most exposed to customer NPS and regulator scrutiny across Australia Pacific, UK/Europe, and North America. Multi-region claims handling spans Guidewire ClaimCenter, broker portals, third-party assessors, and legal panel firms &mdash; producing rework loops, duplicate handoffs, and long tails on complex claims. Apromore mines the end-to-end FNOL-to-settlement flow to isolate the loops that drive cycle time and identify agentic-automation candidates (triage, reserve setting, fraud flags). Metric moved: average claims cycle time and rework rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Guidewire ClaimCenter, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Claims+Officer+QBE+Insurance">Head of Claims Operations, Australia Pacific</a> (Named Contact – field verify)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Claims+Operations+QBE+Australia">Head of Claims Operations, Australia Pacific</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. CPS 230 Operational Resilience: Critical Operations Evidence Base</summary>
+    <summary>3. Motor Insurance: Quote-to-Renewal Journey Optimization</summary>
     <div class="use-case-body">
-      <p>APRA's CPS 230 (Operational Risk Management) came into effect July 2025 and requires QBE to identify critical operations, map end-to-end dependencies, set tolerance levels, and prove operational resilience continuously — not just in an annual attestation. QBE already has a named opportunity for this ($200K, close May 2027). Apromore turns process mining into the evidence layer for CPS 230: continuously mined critical-operation maps, tolerance breach detection, and third-party dependency visibility. Metric moved: audit cost per critical operation and time-to-attest.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Guidewire, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Risk+Officer+QBE+Insurance">Chief Risk Officer, Australia Pacific</a> (Named Contact – field verify)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Broker &amp; Intermediary Onboarding Harmonization</summary>
-    <div class="use-case-body">
-      <p>QBE's Sales Cloud + MuleSoft footprint runs global broker onboarding, appointment, licensing, and compliance workflows that today are configured differently by region. The QBE Core Modernisation program (Service / Risk Engineers opp, $165K) is the wedge — Apromore mines actual onboarding flows across regions to expose harmonization opportunities and quantify duplicated effort before the modernisation blueprint locks in. Metric moved: broker time-to-activate and cost per onboarding.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chris+Erikson+QBE">Chris Erikson</a> (Salesforce Global Account Lead, MuleSoft)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>5. Motor Insurance Journey: Quote-to-Renewal Automation</summary>
-    <div class="use-case-body">
-      <p>QBE has an open opp for CORE – Motor Insurance ($157K, close Dec 2026) — a natural entry point to mine the retail motor quote-to-renewal journey where drop-off, retention, and X-Date renewal execution move the loss ratio directly. Apromore mines the digital quote flow across web + broker channels, exposes quote-abandonment drivers, and hands Agentforce the highest-value process steps for autonomous action. Metric moved: quote conversion rate and renewal retention.</p>
+      <p>The open $157.5k SO - QBE Insurance - CORE - Motor Insurance opp is a wedge into the retail motor quote-to-renewal journey where drop-off, retention, and X-Date renewal execution move the loss ratio directly. Digital quote flows span web, broker, and comparison channels backed by Guidewire and Sales Cloud &mdash; today no one has a single view of where quotes abandon or why. Apromore mines the actual multi-channel flow, exposes abandonment drivers and pricing-loop rework, and hands Agentforce the highest-value process steps for autonomous action. Metric moved: quote conversion rate and renewal retention.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Guidewire PolicyCenter, Salesforce Sales Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Motor+Insurance+QBE+Australia">Head of Motor, QBE Australia Pacific</a> (Named Contact – field verify)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Motor+Insurance+QBE+Australia">Head of Motor, QBE Australia Pacific</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Celonis, Signavio, ARIS, ABBYY, ServiceNow, Appian, UiPath, or Power Automate mentions tied to QBE Insurance surfaced in Slack or web signals — clean competitive lane for Apromore inside the existing Salesforce + MuleSoft install base.</span></h2>
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Commercial Underwriter Desktop Swivel-Chair</summary>
+    <div class="use-case-body">
+      <p>QBE commercial and specialty underwriters flip between the Underwriting Workbench, Guidewire, external rating tools, submission email, and referral spreadsheets to price and bind a single risk. Task mining the underwriter desktop reveals how much time is lost to app-switching, copy/paste, and repeated lookups that Agentforce Operations could automate. Feeds the Phase 2/3 Underwriting Workbench business case directly. Metric moved: cases per underwriter per day and touch-time per submission.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Underwriting Workbench, Guidewire PolicyCenter</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Commercial+Underwriting+Ops+QBE">Head of Commercial Underwriting Ops</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Claims Adjuster After-Call Wrap and Documentation</summary>
+    <div class="use-case-body">
+      <p>Claims adjusters on Guidewire ClaimCenter carry measurable AHT and wrap variability &mdash; after-call documentation, note-taking, and reserve updates typically bleed minutes per contact. Task mining captures each adjuster's on-screen actions to isolate the specific tabs and forms that eat wrap time, then names the exact steps Agentforce should replace with summarization and auto-fill. Pairs directly with the QBE Core Modernisation - Service (Risk Engineers) opp. Metric moved: AHT and after-call-work minutes per claim contact.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Guidewire ClaimCenter, Service Cloud console</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Claims+Contact+Center+QBE+Australia">Head of Claims Contact Center, QBE Australia Pacific</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Broker Onboarding &amp; Appointment Desktop</summary>
+    <div class="use-case-body">
+      <p>Broker appointment, licensing, and compliance onboarding is configured differently by region and today runs across Sales Cloud, MuleSoft-fronted core systems, and manual document workflows. Task mining broker-services desktops exposes re-keying between the onboarding portal and downstream cores, then quantifies the duplicated effort that the Core Modernisation program should collapse before the blueprint locks. Metric moved: broker time-to-activate and manual-touch count per new appointment.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, broker onboarding portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Broker+Services+QBE+Australia">Head of Broker Services, QBE Australia Pacific</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. APRA CPS 230 Operational Resilience Evidence Base</summary>
+    <div class="use-case-body">
+      <p>APRA CPS 230 came into force July 2025 and requires QBE to identify critical operations, map end-to-end dependencies, set tolerance levels, and prove operational resilience continuously &mdash; not just at annual attestation. QBE already carries a named $200k CPS 230 Operational Resilience opp. Compliance Center turns process mining into the evidence layer: continuously mined critical-operation maps, tolerance-breach detection, and third-party dependency visibility. Metric moved: audit cost per critical operation and time-to-attest.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Guidewire, MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Risk+Officer+QBE+Australia">Chief Risk Officer, QBE Australia Pacific</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. IFRS 17 Actuarial Close &amp; Reinsurance Settlement Controls</summary>
+    <div class="use-case-body">
+      <p>IFRS 17 has moved insurance actuarial close from spreadsheet-plus-attestation into a fully controlled, auditable process across every reporting unit &mdash; QBE reports across Australia, UK, and North America and cedes to Equator Re. Compliance Center runs the close and reinsurance treaty settlement as controlled workflows with segregation-of-duties, sign-offs, and continuous evidence. Metric moved: close cycle time and audit findings per reporting unit.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Actuarial engine, GL / consolidation platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Actuary+QBE+IFRS+17">Chief Actuary / Head of IFRS 17 Program</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Conduct Risk &amp; PRA/FCA Consumer Duty Controls (UK)</summary>
+    <div class="use-case-body">
+      <p>QBE European Operations sits under PRA/FCA supervision where Consumer Duty and conduct-risk obligations require demonstrable, evidence-backed customer-outcome monitoring across underwriting, pricing, and claims. Compliance Center codifies conduct-risk controls as continuously monitored process controls with codified SLAs, exceptions, and audit trails linked to the actual event log. Metric moved: conduct-risk breach detection lead-time and audit finding volume.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Guidewire PolicyCenter, ClaimCenter</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Conduct+Risk+QBE+Europe">Head of Conduct Risk, QBE European Operations</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help QBE Insurance Group Limited by process-mining underwriting-to-bind, claims FNOL-to-settlement, and motor quote-to-renewal flows across Guidewire and MuleSoft, task-mining underwriter, claims-adjuster, and broker-onboarding desktops to feed the Underwriting Workbench and Core Modernisation Agentforce business cases, and running CPS 230, IFRS 17, and PRA/FCA conduct-risk controls through Compliance Center to cut Time-to-Quote and cycle time while producing always-on regulator evidence.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

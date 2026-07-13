@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -107,89 +112,133 @@
 <main>
   <h1>Axpo Italia S.p.A.</h1>
   <div class="snapshot">
-    <p><strong>Utilities, Energy Retail &amp; Trading (Electricity, Gas, Renewables)</strong></p>
-    <p><strong>Revenue:</strong> €2.5B &nbsp;|&nbsp; <strong>Employees:</strong> ~5,000 &nbsp;|&nbsp; <strong>HQ:</strong> Genova, Italy</p>
-    <p><strong>Major Subsidiaries:</strong> Pulsee (digital retail brand), Axpo Servizi Produzione Italia (ASPI), Axpo Energy Solutions Italia (AESI), Urbasolar</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud (Einstein 1), Marketing Cloud, Data Cloud, MuleSoft, Heroku, Agentforce (in-flight upgrade)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> SAP (energy retail billing), Bit2win CPQ (being replaced), Not confirmed [field verify with Emanuele Mammoliti, Head of ICT]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> MS - AXPO - Apromore (<a href="https://org62.my.salesforce.com/006ed00000XiGNpAAN">$100k</a>) &nbsp;|&nbsp; Axpo Italia - Bit2win replacement (<a href="https://org62.my.salesforce.com/006ed00000ctjhlAAA">$270k</a>) &nbsp;|&nbsp; Agentforce 1 Upgrade (<a href="https://org62.my.salesforce.com/006ed00000WkJA5AAN">$234k</a>)</p>
+    <p><strong>Utilities, Energy Retail &amp; Trading</strong></p>
+    <p><strong>Revenue:</strong> ~&euro;2.5B &nbsp;|&nbsp; <strong>Employees:</strong> ~5,000 &nbsp;|&nbsp; <strong>HQ:</strong> Genova, Italy</p>
+    <p><strong>Major Subsidiaries:</strong> Pulsee, Axpo Servizi Produzione Italia (ASPI), Axpo Energy Solutions Italia (AESI), Urbasolar</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud (Einstein 1), Marketing Cloud, Data Cloud, MuleSoft, Heroku</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> SAP, Bit2win CPQ</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Axpo Italia - Bit2win replacement (<a href="https://org62.my.salesforce.com/006ed00000ctjhlAAA">$270k</a>) &nbsp;|&nbsp; Agentforce 1 Upgrade (<a href="https://org62.my.salesforce.com/006ed00000WkJA5AAN">$234k</a>) &nbsp;|&nbsp; MS - AXPO - Apromore (<a href="https://org62.my.salesforce.com/006ed00000XiGNpAAN">$100k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GLNRP14Z">Andrea Zanchetta</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (MuleSoft)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">91/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">91/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$8.7M TCV 3-yr renewal Oct-2024; 10 open opps incl. $2.3M platform renewal, Heroku, Data Cloud, MuleSoft — Zanchetta deeply embedded.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>19/20</td><td class="cat-green">Active $100k "MS - AXPO - Apromore" opp already in stage 02; CIO Emanuele Mammoliti named and reachable via Zanchetta.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">$234k Agentforce 1 upgrade in pipe, Einstein Service AI pilot live, Pulsee digital replatform on Heroku + Data Cloud.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">MuleSoft-orchestrated flows (3.9→4.4 migration done), Sales/Service/Marketing/Data Cloud, Heroku APIs — event logs abundant.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Energy retail + trading, priority EMEA vertical; ARERA-regulated with dual B2B (Axpo) + B2C (Pulsee) brand complexity.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$2.3M platform renewal + $601k MuleSoft renewal in pipe; Sales/Service/MC/Data Cloud/Heroku/MuleSoft install &mdash; Zanchetta deeply embedded.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">$234k Agentforce 1 upgrade open, Einstein 1 Service live, Pulsee digital replatform on Heroku + Data Cloud + MuleSoft.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>19/20</td><td class="cat-green">Live $100k &quot;MS - AXPO - Apromore&quot; opp in stage 02 plus $80k Process Mining BDR opp; CIO Emanuele Mammoliti reachable via Zanchetta.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Energy retail + trading is a priority EMEA vertical; ARERA-regulated with dual B2B (Axpo) and B2C (Pulsee) brand complexity.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">MuleSoft-orchestrated flows (3.9&rarr;4.4 migration done), Service Cloud, Heroku APIs, SAP billing &mdash; event logs abundant.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Process-Pain Intensity</td><td>11/15</td><td class="cat-orange">Bit2win CPQ replacement + Pulsee brand launch signal quote/onboarding pain, but no acute public trigger (outage, restatement).</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-orange">ARERA + GDPR (Privacy Center engaged Sep-2024) present; CSRD applies via Axpo Group but Italy-entity exposure less acute than DSOs.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>11/15</td><td class="cat-orange">Bit2win CPQ replacement + Pulsee launch signal quote/onboarding drag, but no acute public trigger (outage, restatement).</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-orange">ARERA + GDPR (Privacy Center engaged 2024) present; CSRD applies via Axpo Group but Italy-entity exposure less acute than DSOs.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Axpo Italia S.p.A. by mining the quote-to-cash, customer-onboarding, and service-case event logs across MuleSoft, Bit2win/CPQ and Service Cloud — de-risking the active $100k Apromore opp, giving the $270k Bit2win replacement a validated target-state before rebuild, and providing the process baseline the $234k Agentforce 1 upgrade needs to prove ROI on autonomous service resolution for both the Axpo B2B book and the Pulsee digital-native brand.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Bit2win CPQ Replacement — Baseline the Quote-to-Contract Process Before You Rebuild</summary>
+    <summary>1. Bit2win CPQ Replacement &mdash; Baseline Quote-to-Contract Before You Rebuild</summary>
     <div class="use-case-body">
-      <p>Axpo Italia is actively replacing Bit2win CPQ ($270k opp in stage 02) — the quote-to-contract flow for Flexy Mix, Smart Portfolio, and Corporate PPA products spans MuleSoft, Bit2win, and Sales/Service Cloud, with heavy pricing-desk touchpoints for structured energy products. Rebuilding on a new CPQ without first mining the as-is flow risks re-implementing the same rework loops (pricing exceptions, contract redlines, credit checks). AFPI mines the current event log to expose which product variants generate the most cycle-time drag and hand-offs, so the new CPQ is designed against real friction — not the sales team's memory. Metric moved: quote-to-signed cycle time, pricing-exception rate, deal-desk touches per quote.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Bit2win, MuleSoft</p>
+      <p>Axpo Italia is actively replacing Bit2win CPQ ($270k opp in stage 02) &mdash; the quote-to-contract flow for Flexy Mix, Smart Portfolio, and Corporate PPA products spans MuleSoft, Bit2win, and Sales Cloud, with heavy pricing-desk touchpoints for structured energy products. Rebuilding on a new CPQ without first mining the as-is flow risks re-implementing the same rework loops (pricing exceptions, contract redlines, credit checks). AFPI mines the current event log to expose which product variants generate the most cycle-time drag and hand-offs so the new CPQ is designed against real friction. Metric moved: quote-to-signed cycle time, pricing-exception rate, deal-desk touches per quote.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Bit2win CPQ, MuleSoft</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Emanuele+Mammoliti+Axpo+Italia">Emanuele Mammoliti</a> (Head of ICT)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Pulsee Customer Onboarding &amp; Switching (Fornitura) — Digital-Native Retail</summary>
+    <summary>2. Pulsee Customer Onboarding &amp; Switching (Fornitura) &mdash; Digital-Native Retail</summary>
     <div class="use-case-body">
-      <p>Pulsee is Axpo Italia's digital-only residential retail brand, replatformed on Heroku + Data Cloud + MuleSoft for scale. Every new-customer sign-up triggers a regulated fornitura-switching flow across the distributor (E-Distribuzione / SNAM), SAP billing, and Marketing Cloud — a single stuck switch drops the customer into a black hole and shows up as a Service Cloud case. AFPI mines the end-to-end onboarding event log to quantify switch-completion rate, drop-off variants, and case-generating patterns, feeding the Agentforce 1 upgrade with the real conformance map so the autonomous agent handles the 80% path and escalates the 20%. Metric moved: switch completion rate, days-to-first-invoice, abandoned-onboarding rate.</p>
+      <p>Pulsee is Axpo Italia&#39;s digital-only residential retail brand, replatformed on Heroku + Data Cloud + MuleSoft for scale. Every new-customer sign-up triggers a regulated fornitura-switching flow across the distributor (E-Distribuzione / SNAM), SAP billing, and Marketing Cloud &mdash; a single stuck switch drops the customer into a black hole and shows up as a Service Cloud case. AFPI mines the end-to-end onboarding event log to quantify switch-completion rate, drop-off variants, and case-generating patterns, feeding the Agentforce 1 upgrade with the real conformance map. Metric moved: switch completion rate, days-to-first-invoice, abandoned-onboarding rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Heroku, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Salvatore+Pinto+Pulsee+Axpo">Salvatore Pinto</a> (CEO Business Unit Consumer / Pulsee)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Salvatore+Pinto+Pulsee+Axpo+Italia">Salvatore Pinto</a> (CEO Business Unit Consumer / Pulsee)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Service Case-to-Resolution — De-Risking the Agentforce 1 Upgrade</summary>
+    <summary>3. MuleSoft-Mediated Integration Flows &mdash; Defending the $601k Renewal With a Shared Baseline</summary>
     <div class="use-case-body">
-      <p>The $234k Agentforce 1 upgrade opp lands Autonomous Agents on top of an Einstein 1 Service Cloud that already handles both Axpo B2B (energy portfolios, PPA contract changes) and Pulsee B2C (billing disputes, switching support). Deploying Agentforce without knowing which case types are actually deflectable is a coin-flip. AFPI mines the case event log to expose case-type variant patterns, agent-touch counts, and self-service leakage — producing the "what should the agent take" whitelist that turns the upgrade from a feature buy into a measured deflection program. Metric moved: agent-deflectable case %, first-contact resolution, average handle time.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Salvatore+Pinto+Pulsee+Axpo">Salvatore Pinto</a> (CEO Business Unit Consumer / Pulsee)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Field Service for Smartbox — Meter/Device Install and Maintenance</summary>
-    <div class="use-case-body">
-      <p>The "Axpo - Field Service for Smartbox" opp ($90k, stage 02) signals a field-service rollout for Axpo's Smartbox smart-metering / energy-management devices installed at customer premises. Every install, replacement, and firmware-related service call is an event chain across MuleSoft, Service Cloud, and dispatch — first-time-fix rates on regulated metering directly drive customer satisfaction and billing accuracy. AFPI mines the dispatch-to-close event log to expose reschedule loops, missing-part patterns, and technician-skill mismatches BEFORE Field Service goes live at scale. Metric moved: first-time-fix rate, mean time to install, truck-roll cost per install.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, SAP</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Simone+Demarchi+Axpo+Italia">Simone Demarchi</a> (COO / Chief Operating Officer, Axpo Italia)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>5. MuleSoft-Mediated Integration Flows — Defending the $601k Renewal With a Shared Baseline</summary>
-    <div class="use-case-body">
-      <p>Axpo has an in-flight $601k MuleSoft renewal (2027 close) plus a live MuleSoft-Flex-Gateway-on-Heroku architecture referenced publicly at the May-2024 Milan Meetup (Integration Architects Schenone &amp; Scaiano). Every critical flow — billing, CRM sync, Pulsee onboarding, Smartbox telemetry — passes through MuleSoft, meaning MuleSoft holds the richest event stream in the estate. AFPI mines those API/orchestration logs to give the integration team an X-ray of which flows are load-bearing, which are stale, and where duplicated flows can be retired — hardening the business case for the renewal and expansion. Metric moved: retired-flow count, mean flow latency, integration-related incident volume.</p>
+      <p>Axpo has an in-flight $601k MuleSoft renewal (2027 close) plus a live MuleSoft-Flex-Gateway-on-Heroku architecture referenced publicly at the May-2024 Milan Meetup (Integration Architects Schenone &amp; Scaiano). Every critical flow &mdash; billing, CRM sync, Pulsee onboarding, Smartbox telemetry &mdash; passes through MuleSoft, meaning MuleSoft holds the richest event stream in the estate. AFPI mines those API/orchestration logs to X-ray which flows are load-bearing, which are stale, and where duplicated flows can be retired &mdash; hardening the business case for the renewal and expansion. Metric moved: retired-flow count, mean flow latency, integration-related incident volume.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft, Heroku</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alessandro+Schenone+Axpo+Italia">Alessandro Schenone</a> (Integration Architect)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Service Agent Desktop &mdash; De-Risking the Agentforce 1 Upgrade</summary>
+    <div class="use-case-body">
+      <p>The $234k Agentforce 1 upgrade lands Autonomous Agents on top of an Einstein 1 Service Cloud that already serves both Axpo B2B (energy portfolios, PPA contract changes) and Pulsee B2C (billing disputes, switching support). Task mining captures each service agent&#39;s on-screen actions &mdash; which tabs they flip through, which SAP screens they re-key from, where they wait &mdash; producing the &quot;what should the agent take&quot; whitelist that turns the upgrade from a feature buy into a measured deflection program. Metric moved: agent-deflectable case %, average handle time, after-call-work minutes per contact.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, SAP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Salvatore+Pinto+Pulsee+Axpo+Italia">Salvatore Pinto</a> (CEO Business Unit Consumer / Pulsee)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Smartbox Field Technician Desktop &mdash; Install &amp; Truck-Roll Efficiency</summary>
+    <div class="use-case-body">
+      <p>The &quot;Axpo - Field Service for Smartbox&quot; opp ($90k, stage 02) rolls Field Service out for Axpo&#39;s Smartbox smart-metering and energy-management devices installed at customer premises. Task mining the technician mobile / dispatch desktop exposes reschedule loops, missing-part patterns, and manual re-keying between Field Service, SAP billing, and the meter-management app before it goes to scale. Feeds a hard first-time-fix and truck-roll-cost business case. Metric moved: first-time-fix rate, mean time to install, average tasks-per-job.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Field Service mobile, SAP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Simone+Demarchi+Axpo+Italia">Simone Demarchi</a> (COO, Axpo Italia)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Deal Desk / Pricing Analyst Task Mining &mdash; Structured-Energy Quote Turnaround</summary>
+    <div class="use-case-body">
+      <p>Structured energy quotes (Flexy Mix, Corporate PPA) run through a small pricing desk that swivels between Excel pricing models, Bit2win, SAP tariff tables, and email approvals &mdash; the Bit2win replacement will not fix desk-side friction unless that friction is visible. Task mining captures the desk&#39;s screen-level activity to reveal how much time is spent re-keying vs. actually pricing, and where the same exception is being re-solved case-by-case. Feeds Agentforce Operations candidates and the target-state design for the new CPQ. Metric moved: quote turnaround time, pricing-analyst touch-time per quote, repeat-exception rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Bit2win CPQ, Excel</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Emanuele+Mammoliti+Axpo+Italia">Emanuele Mammoliti</a> (Head of ICT)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. ARERA-Regulated Switching &amp; Billing Controls</summary>
+    <div class="use-case-body">
+      <p>ARERA rules mandate strict timelines and consumer protections around retail switching, dual-invoicing prevention, and complaint handling &mdash; each violation is fineable and materially impacts Pulsee&#39;s digital-native brand promise. Compliance Center codifies the switching, complaint-response, and billing-correction workflows as controlled processes with segregation of duties, evidence capture, and SLA monitoring. Metric moved: ARERA SLA hit-rate, dual-invoicing incidents, complaint-response cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Emanuele+Mammoliti+Axpo+Italia">Emanuele Mammoliti</a> (Head of ICT)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. GDPR / Privacy Center for Pulsee Residential Data &mdash; Consent, DSAR, and Retention</summary>
+    <div class="use-case-body">
+      <p>Pulsee&#39;s digital retail model collects rich consumption and marketing data on Italian residential consumers &mdash; Privacy Center was engaged in Sep-2024, so the plumbing exists but the operating process needs to be evidenced. Compliance Center runs consent capture, DSAR fulfilment, and retention deletion as controlled workflows across Marketing Cloud, Data Cloud, and SAP billing with per-request audit trails. Metric moved: DSAR fulfilment cycle time, retention exceptions cleared, marketing-consent conformance.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Salvatore+Pinto+Pulsee+Axpo+Italia">Salvatore Pinto</a> (CEO Business Unit Consumer / Pulsee)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. CSRD Sustainability &amp; Emissions Reporting Controls (Renewables Portfolio)</summary>
+    <div class="use-case-body">
+      <p>Axpo Group is CSRD in-scope, which pushes Italy-entity operations to produce auditable evidence on renewables generation, carbon intensity, and supplier ESG data flowing from ASPI, AESI, and Urbasolar into consolidated reporting. Compliance Center controls the collect-transform-attest workflow for ESG data with sign-offs and immutable evidence, replacing the spreadsheet-plus-email choreography that most Italian utilities still run. Metric moved: reporting-package cycle time, control exceptions, audit findings per reporting unit.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Simone+Demarchi+Axpo+Italia">Simone Demarchi</a> (COO, Axpo Italia)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Axpo Italia S.p.A. by mining the Bit2win-to-new-CPQ quote-to-contract flow, Pulsee fornitura-switching, and MuleSoft-orchestrated integrations to hand the $270k CPQ rebuild and $234k Agentforce 1 upgrade a validated target-state; task-mining the service, field-technician, and pricing-desk desktops to expose the swivel-chair work Agentforce Operations can eliminate; and running ARERA switching, GDPR/Privacy Center, and CSRD sustainability controls through Compliance Center to shrink cycle times, cut truck-roll and handle-time costs, and produce always-on audit evidence across the Axpo B2B and Pulsee B2C brands.</p>
+
+  <div class="actions">
     <span>Generate PDF</span>
     <span>Generate Slack Canvas</span>
     <span>Generate Vercel Page</span>
@@ -198,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

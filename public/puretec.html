@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -114,39 +115,37 @@
     <p><strong>Manufacturing, Water Filtration &amp; Treatment Equipment</strong></p>
     <p><strong>Revenue:</strong> ~AUD $10M (est.) &nbsp;|&nbsp; <strong>Employees:</strong> ~117 &nbsp;|&nbsp; <strong>HQ:</strong> Lonsdale, South Australia, Australia</p>
     <p><strong>Major Subsidiaries:</strong> Puretec Pty Ltd (AU), Puretec New Zealand</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Consumer Goods Cloud, Marketing Cloud Advanced, Data Cloud, MuleSoft, Slack, Pardot / Account Engagement</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> NetSuite ERP, Google Workspace (migrating to Microsoft 365), WhatsApp / Google Chat (order comms) <em>[Slack]</em></p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Puretec Group - Apromore (<a href="https://org62.my.salesforce.com/006ed00000eF5RlAAK">$100k</a>) | Sales + Service Automations + Efficiencies (<a href="https://org62.my.salesforce.com/006ed00000W3djzAAB">$108k</a>) | MC ExactTarget + Platform + Pardot Renewal (<a href="https://org62.my.salesforce.com/0063y00001AiSldAAF">$134k</a>)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Consumer Goods Cloud (Retail Execution), Marketing Cloud Advanced, Data Cloud, MuleSoft, Slack Enterprise Plus, Marketing Cloud Account Engagement (Pardot), Salesforce Shield, Digital Engagement, Einstein for Sales &amp; Service</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> NetSuite, Google Workspace, Microsoft 365, WhatsApp</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Puretec Group - Apromore (<a href="https://org62.my.salesforce.com/006ed00000eF5RlAAK">$100k</a>) &nbsp;|&nbsp; Sales + Service Automations + Efficiencies (<a href="https://org62.my.salesforce.com/006ed00000W3djzAAB">$108k</a>) &nbsp;|&nbsp; SFA + Org + Call Center Renewal (<a href="https://org62.my.salesforce.com/0063y00001AiSlhAAF">$168k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U06MAS1NWLQ">Maddison Schmid</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (MuleSoft + Data Cloud)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">67/100</span> — T2 Develop</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t2">67/100</span> &mdash; T2 Develop</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Wall-to-wall SF: Sales, Service, CG Cloud, MC Advanced, Data Cloud, MuleSoft, Slack — active $100k Apromore opp.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">NetSuite-SF integration 9 mo late; 90+ customizations vs peer norm of 9-10; data-trust issues force hybrid manual workflows.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-green">Just 10x'd martech spend (MC Adv + Data Cloud); AI conversations post-Dreamforce; migrating Google→Microsoft.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-green">NetSuite + Salesforce + MuleSoft = clean event-log surface for O2C and service mining; 4,000+ SKUs across systems.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">CEO Russell Hornsey and MD Michael Hornsey engaged; IT lead Wakas (10 mo tenure); no dedicated CoE yet.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Wall-to-wall SF: Sales, Service, CG Cloud, MC Advanced, Data Cloud, MuleSoft, Slack &mdash; active $100k Apromore opp already in flight.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">NetSuite&harr;SF integration 9 mo late; 90+ customizations vs peer norm of ~10; data-trust issues force hybrid manual workflows.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-green">Just 10x'd martech spend (MC Advanced + Data Cloud); AI conversations post-Dreamforce; migrating Google to Microsoft.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-green">NetSuite + Salesforce + MuleSoft yields a clean event-log surface for O2C, service, and CG Cloud field mining across 4,000+ SKUs.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">CEO Russell Hornsey and MD Michael Hornsey engaged; IT lead Wakas ~10 mo tenure; no dedicated Process CoE yet.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>3/6</td><td class="cat-orange">$100k Apromore opp is below the $200k ACV bar; family-owned SMB — budget discipline high, martech just absorbed 10x lift.</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>2/8</td><td class="cat-red">Consumer-goods water filtration — no SOX/HIPAA/NERC driver; compliance is a weak wedge here.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>3/6</td><td class="cat-orange">$100k Apromore opp sits below the $200k ACV bar; family-owned SMB just absorbed a 10x martech lift, so budget discipline is high.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>2/8</td><td class="cat-red">Consumer-goods water filtration &mdash; no SOX/HIPAA/NERC driver; compliance wedge is thin beyond ISO 9001 and Australian Consumer Law.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Puretec Group Pty Ltd by mining the NetSuite ↔ Salesforce order-to-cash chain and Consumer Goods Cloud plumber-network service flow to surface the exact rework loops behind their data-trust issues, unlocking the 3.5-days-lost-to-admin the sales team is bleeding and de-risking the martech + Data Cloud investment they just made.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. NetSuite ↔ Salesforce Order-to-Cash Reconciliation</summary>
+    <summary>1. NetSuite &harr; Salesforce Order-to-Cash Reconciliation</summary>
     <div class="use-case-body">
-      <p>Puretec's 9-month NetSuite-Salesforce integration is still forcing hybrid manual workflows — staff can't trust SF order data, so they double-check in NetSuite [Slack]. Apromore mines the actual O2C event log across both systems to expose sync failures, duplicate keys, and manual reconciliation loops that MuleSoft alone can't see. Metric moved: eliminate manual reconciliation touches per order and cut order-to-invoice cycle time by 30-40%.</p>
+      <p>Puretec's 9-month NetSuite&harr;Salesforce integration is still forcing hybrid manual workflows &mdash; staff can't trust SF order data, so they double-check in NetSuite [Slack]. Apromore mines the actual O2C event log across both systems to expose sync failures, duplicate keys, and manual reconciliation loops that MuleSoft alone can't see. It puts a real number on the workaround tax the finance and ops teams are paying every day. Metric moved: eliminate manual reconciliation touches per order and cut order-to-invoice cycle time by 30-40%.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> NetSuite, Salesforce Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Brad+Maslen+Puretec">Brad Maslen</a> (Chief Financial Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -154,29 +153,9 @@
   </details>
 
   <details>
-    <summary>2. Consumer Goods Cloud Field Sales Effectiveness</summary>
+    <summary>2. Customer Care Case-Resolution &amp; Warranty Rework</summary>
     <div class="use-case-body">
-      <p>Puretec's sales reps get 3.5 days of selling time per week — the rest is admin, meetings, and manual info-gathering from customer care before plumber visits [Slack]. Apromore mines the CG Cloud + Service Cloud event log to map the true pre-visit intelligence flow: what reps do vs. what the mobile app was designed for. Metric moved: recover 1-1.5 selling days per rep per week and lift visit-to-order conversion.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Consumer Goods Cloud, Service Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=William+Archer+Puretec">William Archer</a> (National Sales Manager | Australia)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>3. Plumber &amp; Distributor Loyalty Engagement Path</summary>
-    <div class="use-case-body">
-      <p>Just closed a Marketing Cloud Advanced + Data Cloud deal powering loyalty across the plumber network [Slack] — Puretec now needs to prove ROI on a 10x martech lift. Apromore mines the Data Cloud engagement events tied to plumber orders and cartridge-replacement cycles to show which journeys actually drive repurchase vs. which are noise. Metric moved: increase cartridge-replacement attach rate at the 12-month mark and lift plumber lifetime value.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud, Data Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Scott+Marshall+Puretec">Scott Marshall</a> (Senior Manager - Marketing &amp; Brand)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Customer Care Case-Resolution &amp; Warranty Rework</summary>
-    <div class="use-case-body">
-      <p>Data-trust issues mean customer care agents can't rely on Salesforce for last-order/delivery context, so they field manual inbound and rework cases [Slack]. Apromore mines Service Cloud case flows against install-base and delivery events to expose which case categories loop back for rework and which SKUs generate disproportionate warranty volume across the 4,000+ SKU catalog. Metric moved: reduce average handle time and warranty-driven service cost per case.</p>
+      <p>Data-trust issues mean customer care agents can't rely on Salesforce for last-order or delivery context, so they field manual inbound and rework cases [Slack]. Apromore mines Service Cloud case flows against install-base and delivery events to expose which case categories loop back for rework and which SKUs generate disproportionate warranty volume across the 4,000+ SKU catalog. The result is a targeted list of the top 5-10 defect patterns and process handoffs to fix first. Metric moved: reduce average handle time and warranty-driven service cost per case.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, NetSuite</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Megan+Russell+Puretec">Megan Russell</a> (Customer Service Manager)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -184,16 +163,80 @@
   </details>
 
   <details>
-    <summary>5. MuleSoft Integration Health &amp; Data-Quality Feedback Loop</summary>
+    <summary>3. Plumber &amp; Distributor Loyalty Engagement Path</summary>
     <div class="use-case-body">
-      <p>Puretec was "forced into MuleSoft without validation options" and integration issues have run 9+ months [Slack] — a classic case where the integration layer works but the process it enables doesn't. Apromore reads the MuleSoft API-invocation and event bus logs to show which integrations are actually being used, where retries and dead-letter events pile up, and which broken flows drive the hybrid-system workarounds. Metric moved: cut integration-related manual workarounds and shorten future integration validation cycles.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft, Salesforce Platform</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Wakas+Puretec">Wakas</a> (IT Lead)</p>
+      <p>Puretec just closed a Marketing Cloud Advanced + Data Cloud deal powering loyalty across the plumber network [Slack] &mdash; they now need to prove ROI on a 10x martech lift. Apromore mines the Data Cloud engagement events tied to plumber orders and cartridge-replacement cycles to show which journeys actually drive repurchase versus which are noise. It also isolates the drop-off points between digital touch and next cartridge sale. Metric moved: increase cartridge-replacement attach rate at the 12-month mark and lift plumber lifetime value.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Scott+Marshall+Puretec">Scott Marshall</a> (Senior Manager - Marketing &amp; Brand)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent mentions of Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate tied to Puretec across Slack or web sources — clean competitive field for AFPI.</span></h2>
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Field Sales Rep Pre-Visit Admin Desktop</summary>
+    <div class="use-case-body">
+      <p>Puretec's field sales reps get only 3.5 days of selling time per week &mdash; the rest is admin, meetings, and manual info-gathering from customer care before plumber visits [Slack]. Task mining the CG Cloud mobile and desktop clients captures exactly which apps, tabs, and copy-paste steps reps burn time in when preparing a call. That names the specific tasks Agentforce can eliminate through auto-briefing and next-best-action prompts. Metric moved: recover 1-1.5 selling days per rep per week and lift visit-to-order conversion.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Consumer Goods Cloud, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=William+Archer+Puretec">William Archer</a> (National Sales Manager, Australia)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Customer Care Agent Desktop Swivel-Chair</summary>
+    <div class="use-case-body">
+      <p>Because the SF order data isn't fully trusted, care agents pivot to NetSuite, spreadsheets, and WhatsApp threads on almost every case [Slack]. Task mining the agent desktop captures each app-switch, search, and re-key so the team can quantify swivel-chair minutes per contact type. That directly feeds an Agentforce for Service business case with real touch-time evidence, not survey data. Metric moved: cut average handle time and after-call-work minutes per case, and reduce escalations driven by missing context.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, NetSuite</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Megan+Russell+Puretec">Megan Russell</a> (Customer Service Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Finance &amp; AR Reconciliation Desktop Work</summary>
+    <div class="use-case-body">
+      <p>Puretec's finance team manually reconciles order and invoice records across NetSuite and Salesforce because the integration is still unstable [Slack]. Task mining the finance desktop shows precisely how many minutes per invoice go to Excel exports, side-by-side comparisons, and re-keys &mdash; and which staff carry the largest workaround load. It also produces a prioritised list of the top integration defects to fix in MuleSoft first. Metric moved: reduce manual finance reconciliation FTE effort and shrink month-end close.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> NetSuite, Excel / finance desktop</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Brad+Maslen+Puretec">Brad Maslen</a> (Chief Financial Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. ISO 9001 Quality Management System Controls</summary>
+    <div class="use-case-body">
+      <p>As a regulated water-filtration manufacturer supplying plumbers and OEMs, Puretec runs under ISO 9001-style quality controls covering incoming inspection, batch release, and non-conformance handling. Compliance Center codifies each control as a controlled workflow with segregation of duties and continuous evidence, replacing spreadsheet-and-attestation practice. It also links non-conformance events back to the process map so root cause is visible, not guessed. Metric moved: audit findings per surveillance visit and time-to-close on non-conformance reports.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> NetSuite (QMS module), Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Operations+Puretec+Group">Head of Operations / Quality</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Product Warranty &amp; Recall Traceability across 4,000+ SKUs</summary>
+    <div class="use-case-body">
+      <p>Water-filter and cartridge products carry warranty and consumer-protection obligations under Australian Consumer Law, and any batch-level defect triggers traceability requirements back to lot. Compliance Center turns warranty and recall handling into a single controlled workflow across NetSuite, Service Cloud, and the plumber loyalty programme &mdash; with codified SLAs, evidence, and customer notifications. That gives the leadership team a defensible audit trail if a batch has to be recalled. Metric moved: time-to-notify affected customers and warranty exposure aged over 30 days.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> NetSuite, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Megan+Russell+Puretec">Megan Russell</a> (Customer Service Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Loyalty Consent &amp; Australian Privacy Act Handling</summary>
+    <div class="use-case-body">
+      <p>The new Marketing Cloud + Data Cloud loyalty programme collects plumber and distributor consent under the Australian Privacy Act 1988 and the Spam Act 2003 &mdash; opt-in, preference change, and unsubscribe events must all be honoured across channels. Compliance Center runs the consent lifecycle as a controlled workflow with cross-channel enforcement and audit-ready evidence for the OAIC. It also protects the 10x martech investment from being kneecapped by a preventable breach. Metric moved: percentage of contacts with valid current consent and time-to-honour unsubscribe/preference changes.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Scott+Marshall+Puretec">Scott Marshall</a> (Senior Manager - Marketing &amp; Brand)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Puretec Group Pty Ltd by mining the NetSuite&harr;Salesforce order-to-cash chain and Consumer Goods Cloud plumber-network service flow to expose the exact rework loops behind their data-trust issues, task-mining field-sales, care-agent, and finance desktops to recover the 3.5-days-lost-to-admin the sales team is bleeding, and running ISO 9001 quality, product warranty/recall, and Australian Privacy Act consent through Compliance Center &mdash; de-risking the 10x martech and Data Cloud investment they just made while giving the family owners a defensible audit trail across 4,000+ SKUs.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

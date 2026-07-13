@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -109,40 +114,38 @@
   <div class="snapshot">
     <p><strong>Travel, Transportation &amp; Hospitality, Ferry &amp; Cruise Shipping</strong></p>
     <p><strong>Revenue:</strong> ~$500M &nbsp;|&nbsp; <strong>Employees:</strong> ~1,708 &nbsp;|&nbsp; <strong>HQ:</strong> Genoa, Italy</p>
-    <p><strong>Major Subsidiaries:</strong> GNV España SL, SNAV (sister MSC Group ferry brand)</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales &amp; Service Cloud Unlimited, Data Cloud, Marketing Cloud Engagement, Loyalty Management, ExactTarget, Shield, Tableau (in-flight)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Medallia (in replacement), Jakala (SI partner) [Slack]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> GNV - Apromore (<a href="https://org62.my.salesforce.com/006ed00000MFcczAAD">$68k</a>) &nbsp;|&nbsp; GNV - Personalization rinnovo (<a href="https://org62.my.salesforce.com/006ed00000UQ7PaAAL">$166k</a>) &nbsp;|&nbsp; GNV - Agentic BI Tableau - BDR (<a href="https://org62.my.salesforce.com/006ed00000adz8XAAQ">TBD</a>)</p>
+    <p><strong>Major Subsidiaries:</strong> GNV Espa&ntilde;a SL, SNAV (sister MSC Group ferry brand)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales &amp; Service Cloud Unlimited, Data Cloud, Marketing Cloud Engagement, Loyalty Management, ExactTarget, Shield, Tableau</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> GNV - Progetto Agentforce (<a href="https://org62.my.salesforce.com/006ed00000gAEkfAAG">$80k</a>) &nbsp;|&nbsp; GNV - Personalization rinnovo (<a href="https://org62.my.salesforce.com/006ed00000UQ7PaAAL">$166k</a>) &nbsp;|&nbsp; GNV Renewal 249181 MC ExactTarget (<a href="https://org62.my.salesforce.com/006ed00000RPuKSAA1">$237k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GYLDPEFJ">Stefania Blandini</a></p>
-    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Data Cloud + Service Cloud)</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t2">78/100</span> &mdash; T2 Develop</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Active AFPI Opportunity in Cycle</td><td>18/20</td><td class="cat-green">Live "GNV - Apromore" opp ($68k) in Stage 03 "Validating Benefits &amp; Value" closing Oct 2026.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Co-Sell Fit</td><td>13/15</td><td class="cat-green">Multi-cloud Wave 1 signed Apr 2025: Sales/Service Unlimited, Data Cloud, MC, Loyalty — deep runway.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Big Transformation Project Wave 1 signed; Wave 2 MuleSoft + Agent Fabric aligned to AI journey.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>16/20</td><td class="cat-orange">CIO Barbara Poli engaged with SF at Dreamforce; CEO, CFO, CCO, Chief Port Ops all mapped in Org62.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>11/15</td><td class="cat-orange">Fleet expansion (Polaris '24, Orion '25, 3 more in '26) plus Medallia replacement flag scale strain.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud install: Sales/Service Unlimited, Data Cloud, MC, Loyalty, Shield, Tableau.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Live "GNV - Progetto Agentforce" opp ($80k) plus Wave 2 MuleSoft + Agent Fabric roadmap.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-green">$237k MC ExactTarget renewal in "02 Negotiate" clears the $200k rubric bar.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>12/15</td><td class="cat-green">Fleet scaling 13&rarr;16+ vessels through 2027; port turnaround, contact-center spikes, freight.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>11/15</td><td class="cat-orange">Ferry/cruise shipping is secondary AFPI vertical but rich in mineable operational flows.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>7/12</td><td class="cat-orange">SF event logs plentiful, but port ops / fleet management / booking ERPs not yet confirmed as mineable.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>3/6</td><td class="cat-orange">Active opp is a $68k pilot — below $200k rubric bar; needs expansion path to Wave 2 to hit T1 economics.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">SOLAS/MARPOL/EU MRV + GDPR apply, but no explicit audit-driven urgency signalled.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>8/12</td><td class="cat-orange">SF event logs plentiful; port ops, fleet management, and booking ERPs not yet confirmed as mineable.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Grandi Navi Veloci S.p.A. by mining the booking-to-boarding, port turnaround, and customer-service event logs already flowing through the newly-live Data Cloud + Sales/Service platform — de-risking Wave 2 (MuleSoft + Agent Fabric) with a documented target-state process, and expanding the in-cycle $68k pilot into a compounding revenue-management, port-ops, and customer-experience play as the fleet scales to eight vessels by 2027.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Booking-to-Boarding Journey &amp; Revenue Management</summary>
     <div class="use-case-body">
-      <p>GNV sells passenger and freight tickets through gnv.it, call center, travel agencies, and B2B corporate channels, then hands the passenger off to check-in, port boarding, and onboard revenue capture. Manual price overrides, cross-channel double bookings, and abandoned-cart drop-offs today cost measurable revenue per sailing and blur the yield picture that Revenue Management Manager Maurizio Ammendolia is expected to defend. AFPI mines the full booking-to-boarding event log across MC Engagement, Loyalty, and Service Cloud, exposes conversion leaks by channel, and lets the yield team re-simulate policy changes without a SQL specialist — targeting 2-4 pt conversion uplift and 3-6% ancillary revenue lift. This is the natural expansion path for the in-cycle Apromore opp ($68k) into a durable Wave 2 anchor.</p>
+      <p>GNV sells passenger and freight tickets through gnv.it, call center, travel agencies, and B2B channels, then hands the passenger off to check-in, port boarding, and onboard revenue capture. Manual price overrides, cross-channel double bookings, and abandoned-cart drop-offs today blur the yield picture that Revenue Management is expected to defend. AFPI mines the full booking-to-boarding event log across MC Engagement, Loyalty, and Service Cloud, exposes conversion leaks by channel, and lets the yield team re-simulate policy changes without a SQL specialist &mdash; targeting 2-4 pt conversion uplift and 3-6% ancillary revenue lift.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, MC Engagement</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Maurizio+Ammendolia+GNV">Maurizio Ammendolia</a> (Revenue Management &amp; Pricing Manager)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -152,7 +155,7 @@
   <details>
     <summary>2. Port Turnaround &amp; Vessel Operations</summary>
     <div class="use-case-body">
-      <p>Every minute a cruiseferry is berthed at Genoa, Palermo, Barcelona, or Tangier is a minute not selling cabins and not moving freight — turnaround performance is the single biggest lever on fleet utilization as GNV scales from 13 to 16+ vessels through 2027. Today, port coordination across the Chief Port Operations Officer, Italian Agency Port Coordinator, and local port agents runs on tribal knowledge and disconnected checklists. AFPI mines the entire disembark-clean-provision-embark event flow, quantifies the delay causes, and gives Andrea Balabani a fact-based ranking of where the next hour of turnaround savings sits — 5-10% turnaround improvement compounds directly into revenue capacity.</p>
+      <p>Every minute a cruiseferry is berthed at Genoa, Palermo, Barcelona, or Tangier is a minute not selling cabins and not moving freight &mdash; turnaround performance is the single biggest lever on fleet utilization as GNV scales from 13 to 16+ vessels through 2027. Today, port coordination across the Chief Port Operations Officer and local port agents runs on tribal knowledge and disconnected checklists. AFPI mines the entire disembark-clean-provision-embark event flow, quantifies delay causes, and gives leadership a fact-based ranking of where the next hour of turnaround savings sits &mdash; 5-10% turnaround improvement compounds directly into revenue capacity.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Port Ops System (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Andrea+Balabani+GNV">Andrea Balabani</a> (Chief Port Operations Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -160,36 +163,80 @@
   </details>
 
   <details>
-    <summary>3. Contact Center &amp; Customer Service Case Resolution</summary>
+    <summary>3. Freight Sales &amp; B2B Order-to-Cash</summary>
     <div class="use-case-body">
-      <p>Customer Service Manager Virginia Rivano runs a high-volume, seasonally-spiky contact center handling booking changes, refunds, disruption re-accommodation, and freight escalations in Italian, English, Spanish, and French. Slack signals confirm strong interest in AI-generated knowledge articles from historical case data ([Slack] Olga Eberini, May 2026) — a classic downstream Agentforce Service play, but only useful if the underlying case-resolution process is measured. AFPI mines every case path, identifies rework loops (transfers, re-opens, escalation to CCO), and feeds an Agentforce Service rollout that is grounded in the real process, not the documented one. Target: 15-25% deflection lift and 20% AHT reduction on repeat intents.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, MC Engagement</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Virginia+Rivano+GNV">Virginia Rivano</a> (Contact Center &amp; Customer Service Manager)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Freight Sales &amp; B2B Order-to-Cash</summary>
-    <div class="use-case-body">
-      <p>Freight is GNV's stickier, higher-margin revenue leg — hauliers, logistics operators, and MSC Group intercompany bookings across Sicily, Sardinia, Spain, Morocco, Albania, and Tunisia routes. Sales Freight Manager Alessandro Feniello and Cost &amp; Contract Manager Lorenzo Cammarata today wrestle with contract exceptions, credit blocks, and manual pricing tiers that slow quote-to-loaded-vehicle cycle time and inflate DSO. AFPI mines the freight quote-to-cash event log inside the newly-live Sales &amp; Service platform, exposes the exception paths that eat margin, and lets Finance re-simulate credit and pricing rules without IT — 3-5 days DSO reduction plus visible margin recovery on non-standard tariffs.</p>
+      <p>Freight is GNV's stickier, higher-margin revenue leg &mdash; hauliers, logistics operators, and MSC Group intercompany bookings across Sicily, Sardinia, Spain, Morocco, Albania, and Tunisia routes. Sales Freight and Cost &amp; Contract managers today wrestle with contract exceptions, credit blocks, and manual pricing tiers that slow quote-to-loaded-vehicle cycle time and inflate DSO. AFPI mines the freight quote-to-cash event log inside the newly-live Sales &amp; Service platform, exposes the exception paths that eat margin, and lets Finance re-simulate credit and pricing rules without IT &mdash; 3-5 days DSO reduction plus margin recovery on non-standard tariffs.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Service Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alessandro+Feniello+GNV">Alessandro Feniello</a> (Sales Freight Manager)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>5. Wave 2 Integration Readiness (MuleSoft + Agent Fabric)</summary>
+    <summary>1. Contact Center Agent Handle-Time &amp; After-Call-Work</summary>
     <div class="use-case-body">
-      <p>The Dreamforce 2025 SIC brief explicitly names Wave 2 as MC expansion + Contact Center + MuleSoft, aligned to GNV's AI transformation journey — with the acknowledgement that MuleSoft was not adopted in Wave 1. Every one of those hop points needs a defensible target-state process before an integration architect draws the first API contract, otherwise Wave 2 slips or scope-creeps. AFPI process-mines the current cross-system flows (booking → CRM → billing → CDP → MC) and hands CIO Barbara Poli a documented, quantified integration roadmap, protecting the AI investment with an evidence-based Center of Excellence. This is the wedge that turns the $68k Apromore pilot into a Wave 2 anchor tenant.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Data Cloud, MC Engagement</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Barbara+Poli+GNV">Barbara Poli</a> (Chief Information &amp; Technology Officer)</p>
+      <p>Customer Service Manager Virginia Rivano runs a high-volume, seasonally-spiky contact center handling booking changes, refunds, disruption re-accommodation, and freight escalations in four languages. Task mining captures each agent's on-screen actions to isolate the after-call-work steps and the tabs that eat wrap time &mdash; feeding directly into the live $80k Agentforce opp as an evidence-based automation backlog. Metric: AHT and after-call-work minutes per contact type, plus 15-25% deflection lift on repeat intents.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, booking system desktop</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Virginia+Rivano+GNV">Virginia Rivano</a> (Contact Center &amp; Customer Service Manager)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account. Note: Microsoft competed hard on the Wave 1 CRM/MC deal and lost to Salesforce (April 2025 [Slack]) — Power Automate remains a latent threat if Wave 2 is not locked down.</span></h2>
+  <details>
+    <summary>2. Revenue-Management Analyst Desktop Swivel-Chair</summary>
+    <div class="use-case-body">
+      <p>Yield analysts at GNV flip between Sales Cloud, MC Engagement dashboards, Tableau, spreadsheets, and email to price sailings, run promo overrides, and reconcile channel performance. Task mining the analyst desktop exposes the copy-paste and re-key steps that stretch every pricing cycle, and hands Revenue Management a ranked list of steps Agentforce can automate. Metric: analyst cycles per week and touch-time per pricing decision.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Tableau, MC Engagement</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Maurizio+Ammendolia+GNV">Maurizio Ammendolia</a> (Revenue Management &amp; Pricing Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Port Agent &amp; Boarding Staff Task Capture</summary>
+    <div class="use-case-body">
+      <p>Port agents and boarding staff at Genoa, Palermo, Barcelona, and Tangier work across radio, printed manifests, a boarding app, and Service Cloud tickets to move each sailing. Task mining the port agent desktop and mobile app reveals the specific manual steps &mdash; manifest reconciliation, exception escalation, freight check-in &mdash; that pace turnaround. Feeds a targeted Agentforce Ops rollout and gives the CPOO a defensible investment case. Metric: manual touch count per departure and exception-resolution time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Boarding app, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Andrea+Balabani+GNV">Andrea Balabani</a> (Chief Port Operations Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. EU MRV &amp; FuelEU Maritime Emissions Reporting</summary>
+    <div class="use-case-body">
+      <p>EU MRV and FuelEU Maritime put every GNV sailing under a formal fuel-consumption and CO2 reporting regime, with verifier attestation and public disclosure. Compliance Center codifies the data-capture, verification, and sign-off process as a controlled workflow, producing continuous evidence for verifiers and shielding the company from penalty exposure as the ETS phase-in ramps. Metric: audit-ready voyages covered and mean-time-to-evidence per verifier request.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Fleet management / emissions telemetry, GL</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Sustainability+GNV">Head of Sustainability / HSE</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. GDPR Data-Subject &amp; Marketing Consent Controls</summary>
+    <div class="use-case-body">
+      <p>GNV's Marketing Cloud + Data Cloud + Loyalty stack ingests booking, browsing, and post-sail behavioural data across EU jurisdictions &mdash; GDPR data-subject requests and consent state changes have to be honoured within statutory windows. Compliance Center runs DSAR fulfilment and consent propagation as a single controlled workflow across every touched system, with codified SLAs and evidence trails. Metric: DSAR SLA hit-rate and consent-lag across MC/Data Cloud/Loyalty.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Data Cloud, MC Engagement</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=DPO+Grandi+Navi+Veloci">Data Protection Officer</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. ISM Code &amp; Port State Control Audit Readiness</summary>
+    <div class="use-case-body">
+      <p>Every GNV vessel operates under the ISM Code with periodic Port State Control inspections in Italian, Spanish, French, Moroccan, Albanian, and Tunisian ports. Non-conformities today are tracked in siloed logs and remediated inconsistently. Compliance Center runs ISM audits, PSC findings, and closure evidence as a controlled workflow with segregation-of-duties and always-on reporting &mdash; cutting time-to-close on findings and reducing detention risk. Metric: PSC finding closure time and repeat-non-conformity rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Fleet management, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=DPA+ISM+Grandi+Navi+Veloci">Designated Person Ashore (ISM DPA)</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Grandi Navi Veloci S.p.A. by process-mining booking-to-boarding, port turnaround, and freight order-to-cash across its live Sales/Service Cloud + Data Cloud + MC estate, task-mining contact-center and revenue-management desktops to build the evidence base for the in-flight $80k Agentforce opp, and running EU MRV/FuelEU emissions, GDPR consent, and ISM/Port State Control audits through Compliance Center &mdash; compounding revenue capacity, cutting DSO and AHT, and shielding a fleet scaling from 13 to 16+ vessels through 2027 from regulatory penalty risk.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -200,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

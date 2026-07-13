@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -112,40 +113,38 @@
   <h1>Workiva Inc.</h1>
   <div class="snapshot">
     <p><strong>Technology, Cloud Software (Financial Reporting, ESG &amp; GRC)</strong></p>
-    <p><strong>Revenue:</strong> ~$738M (FY2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~2,800 &nbsp;|&nbsp; <strong>HQ:</strong> Ames, Iowa, USA</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (1,629 seats), SteelBrick CPQ (807 seats), Slack (3,375 seats), Signature Success</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Eric Bloomberg — likely NetSuite for finance and the Workiva platform itself for close/reporting]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Apromore Process Mining (<a href="https://org62.my.salesforce.com/006ed00000a3ciMAAQ">$200k</a>) &nbsp;·&nbsp; Workiva - Revenue Cloud (<a href="https://org62.my.salesforce.com/006ed00000VKJUTAA5">$700k</a>) &nbsp;·&nbsp; Workiva - Data Cloud (<a href="https://org62.my.salesforce.com/006ed00000VLMYLAA5">$300k</a>)</p>
+    <p><strong>Revenue:</strong> ~$739M (FY2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~2,828 &nbsp;|&nbsp; <strong>HQ:</strong> Ames, Iowa, USA</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales &amp; Service Cloud (Unlimited + Enterprise), CPQ Plus (Unlimited), Slack Enterprise Grid, Salesforce Shield, Einstein for Sales, Field Audit Trail, Force.com Platform, Signature Success</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Apromore Process Mining (<a href="https://org62.my.salesforce.com/006ed00000a3ciMAAQ">$200k</a>) &nbsp;|&nbsp; Workiva - Revenue Cloud (<a href="https://org62.my.salesforce.com/006ed00000VKJUTAA5">$700k</a>) &nbsp;|&nbsp; Workiva Agentforce for Sales +1500 (<a href="https://org62.my.salesforce.com/006ed00000amSrhAAE">$467k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U098MJ5Q9SM">Eric Bloomberg</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">73/100</span> — T2 Develop</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t2">76/100</span> &mdash; T2 Develop</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$3.35M renewal in play; 1,629 CRM + 807 CPQ + 3,375 Slack seats; Signature Success active.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Active Agentforce for Sales ($467k), Data Cloud ($300k), and Revenue Cloud ($700k) pursuits.</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">Public co (NYSE:WK) with SOX/ICFR obligations; their platform serves the same regime.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>8/12</td><td class="cat-orange">Confirmed SFDC + CPQ + Slack event logs; ERP layer for finance still to be verified.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>10/15</td><td class="cat-orange">Scale-up SaaS pain: quote-to-cash, renewals, and customer onboarding cycle time.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep install: $9.3M Sales/Service Unlimited, $2.6M CPQ Plus, $2.4M Slack Grid, Shield, Field Audit Trail; $3.35M renewal staged.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Live Apromore ($200k), Revenue Cloud ($700k), Agentforce for Sales ($467k), Data Cloud ($300k) &mdash; multi-cloud pursuit.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">NYSE:WK SOX/ICFR filer whose own product serves the same regime; ESEF, ESG, and audit-evidence obligations across every reporting unit.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-orange">Sales Cloud, CPQ, and Slack event logs are confirmed and instrumented; internal ERP / finance layer still to be verified.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>11/15</td><td class="cat-orange">CPQ &rarr; Revenue Cloud transition, renewal motion, and time-to-first-filing onboarding all named &mdash; concrete cycle-time pain.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>8/15</td><td class="cat-red">Technology/SaaS is not a top-priority AFPI vertical; compliance-heavy nature partially offsets.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>13/20</td><td class="cat-orange">CFO/CIO buyers reachable, but no named process-owner sponsor identified in Slack yet.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>8/15</td><td class="cat-red">Technology / SaaS is not a top-priority AFPI vertical; SOX/ESG software vendor status partially offsets.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>4/6</td><td class="cat-orange">Named Apromore Process Mining opp at stage 01, $200k &mdash; must expand beyond the minimum ACV floor and get executive-sponsored.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Workiva Inc. by mining its quote-to-cash, renewal, and customer-onboarding processes across Sales Cloud, CPQ, and Slack to compress cycle time on the Revenue Cloud transition, protect subscription renewals, and give the CFO an evidenced view of internal SOX/ICFR execution — delivered in weeks, not quarters, by one no-code analyst instead of a SQL+PQL specialist pair.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Quote-to-Cash Harmonization Across Sales Cloud, CPQ, and Revenue Cloud</summary>
+    <summary>1. CPQ &rarr; Revenue Cloud Quote-to-Cash Harmonization</summary>
     <div class="use-case-body">
-      <p>Workiva is mid-transition from SteelBrick CPQ (807 seats) onto Revenue Cloud (open $700k opp). That migration is the highest-risk process in the account — approval loops, discount overrides, and manual re-quotes tend to explode during CPQ platform swaps. Mining the current quote-to-order-to-cash event log surfaces every rework loop and non-standard path before cutover, so the Revenue Cloud rollout starts from a cleansed process baseline. Metric moved: quote cycle time and % first-pass-clean orders.</p>
+      <p>Workiva is mid-transition from SteelBrick CPQ Plus (Unlimited) onto Revenue Cloud (open $700k opp). That migration is the single highest-risk process in the account &mdash; approval loops, discount overrides, and manual re-quotes tend to explode during CPQ platform swaps. Mining the current quote-to-order-to-cash event log surfaces every rework loop and non-standard path before cutover, so Revenue Cloud rolls out on a cleansed process baseline. Metric moved: quote cycle time and % first-pass-clean orders.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce CPQ, Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jill+Klindt+Workiva">Jill Klindt</a> (CFO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -155,7 +154,7 @@
   <details>
     <summary>2. Subscription Renewal &amp; Retention Lifecycle</summary>
     <div class="use-case-body">
-      <p>A $3.35M Full-CRM/CPQ/Org-Permission renewal is already staged for FY28, and a $674k Slack renewal sits alongside it. For a SaaS whose entire P&amp;L rides on renewal rates, the renewal-motion process — health-score triggers, CSM outreach, upsell timing, executive escalation — is the single biggest revenue-protecting flow to mine. AFPI reveals where renewals silently slip into "at risk" and which CSM plays actually correlate with saves. Metric moved: gross retention and % renewals closed >60 days early.</p>
+      <p>A $3.35M Full CRM / CPQ / Org-Permission renewal is already staged for FY28 alongside a $674k Slack renewal &mdash; for a SaaS whose entire P&amp;L rides on retention, the renewal motion is the single biggest revenue-protecting flow to mine. Health-score triggers, CSM outreach, upsell timing, and executive escalation all sit inside Sales Cloud and Slack today. AFPI reveals where renewals silently slip into &ldquo;at risk&rdquo; and which CSM plays actually correlate with saves. Metric moved: gross retention and % renewals closed &gt;60 days early.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Slack</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Julie+Iskow+Workiva">Julie Iskow</a> (President &amp; CEO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -165,34 +164,78 @@
   <details>
     <summary>3. Customer Onboarding &amp; Time-to-First-Filing</summary>
     <div class="use-case-body">
-      <p>Workiva's value only lands when a customer files their first SEC report, ESG disclosure, or SOX narrative on the platform — everything before that is at-risk revenue. The onboarding process today spans Sales handoff, Signature Success ($300k opp), implementation, and enablement over Slack channels. Mining the end-to-end handoff exposes stalled implementations, ghost tasks, and where enablement content doesn't translate into product adoption. Metric moved: time-to-first-filing and 90-day product-usage rate.</p>
+      <p>Workiva&rsquo;s value only lands once a customer files their first SEC report, ESEF disclosure, or SOX narrative on the platform &mdash; everything before that is at-risk revenue. Onboarding today spans Sales handoff, Signature Success ($300k opp), implementation, and enablement over Slack channels. Mining the end-to-end handoff exposes stalled implementations, ghost tasks, and where enablement content doesn&rsquo;t translate into product adoption. Metric moved: time-to-first-filing and 90-day product-usage rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Slack</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Customer+Officer+Workiva">Chief Customer Officer</a> (Customer Success &amp; Services)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kim+Huffman+Workiva">Kim Huffman</a> (CIO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Sales-Rep Selling Workflow &amp; COMT Methodology Adoption</summary>
+    <div class="use-case-body">
+      <p>Workiva has invested heavily in the Command of the Message (COMT) sales methodology and is already using Einstein Conversation Insights to auto-populate rep scorecards. Task mining the underlying desktop &mdash; Sales Cloud, Slack, deck tools, e-signature, and prospecting apps &mdash; exposes where reps swivel-chair, re-key opportunity data, and drop out of the methodology in-flight. Feeds an Agentforce for Sales business case directly on top of the open $467k opp. Metric moved: selling time per opportunity and methodology-adherence rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud console, Slack</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=VP+Sales+Operations+Workiva">VP, Sales Operations</a> (Revenue Ops)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Internal Financial Close &amp; SOX ICFR Execution</summary>
+    <summary>2. Finance Close &amp; SOX Control-Testing Analyst Desktop</summary>
     <div class="use-case-body">
-      <p>Workiva itself is a public NYSE:WK filer whose own finance team lives the exact pain their product solves. The internal financial close, SOX narrative sign-off, and ICFR control-testing workflow is a high-signal, high-executive-visibility process — and the CFO gets to prove "we run our own house on process intelligence." AFPI shows late-cycle bottlenecks in accrual reviews, control evidence collection, and management review sign-offs, and where automation could take work off the shoulders of the close team. Metric moved: days-to-close and % controls with evidence gathered on first pass.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Workiva platform, NetSuite (TBD)</p>
+      <p>Workiva itself is a public NYSE:WK filer whose own finance team lives the pain their product solves &mdash; the CFO gets to prove &ldquo;we run our own house on process intelligence.&rdquo; Task mining the close-analyst and SOX-tester desktop captures every screen touched between GL, control evidence, and management review sign-off. Names the exact repetitive steps Agentforce Operations can automate. Metric moved: analyst touch-time per close cycle and % controls with evidence gathered on first pass.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Workiva platform, GL / ERP</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jill+Klindt+Workiva">Jill Klindt</a> (CFO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Employee &amp; Customer Support Case-to-Resolution</summary>
+    <summary>3. Customer Support &amp; Signature Success Case Handling</summary>
     <div class="use-case-body">
-      <p>With 3,375 Slack seats and Signature Success in the estate, both internal IT/HR and external customer support run through highly-instrumented systems. Mining case-to-resolution flow reveals reassignment loops, SLA breach precursors, and channels where cases sit idle in a Slack DM instead of the case queue — perfect priming ground for the open Agentforce for Sales expansion and future Agentforce Service adoption. Metric moved: mean time to resolve and % cases resolved without escalation.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Slack, Sales Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=CIO+Workiva">CIO / VP IT Operations</a> (Employee Experience &amp; IT)</p>
+      <p>With 3,375 Slack Enterprise Grid seats and a $300k Signature Success opp in play, customer support already runs through highly-instrumented systems. Task mining the support-engineer desktop captures reassignment loops, tabbing between Salesforce cases and Slack DMs, and after-case-work steps that stretch handle time. Perfect priming ground for future Agentforce Service adoption. Metric moved: mean time to resolve and % cases resolved without escalation.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, Slack</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Customer+Officer+Workiva">Chief Customer Officer</a> (Customer Success &amp; Services)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent process-mining competitor mentions tied directly to Workiva Inc. in #apromore-gtm-faq or public sources; Celonis, IBM, and MS Power Automate Process Mining show up broadly in the Apromore GTM channel this quarter (Legrand, Cristian Lay, Severn Trent), but not against this account — field verify at first meeting.</span></h2>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. Internal SOX / ICFR Control Execution &mdash; &ldquo;Workiva on Workiva + Apromore&rdquo;</summary>
+    <div class="use-case-body">
+      <p>Workiva&rsquo;s own SOX narrative, ICFR control-testing, and management review sign-off is a high-signal, high-executive-visibility process. Compliance Center codifies the promote-test-attest workflow with segregation-of-duties, evidence, and continuous monitoring &mdash; the same shape Workiva itself sells to customers. A reference-story opportunity for the CFO. Metric moved: days-to-close and audit-findings per reporting unit.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Workiva platform, GL / ERP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jill+Klindt+Workiva">Jill Klindt</a> (CFO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Workiva AI Model-Risk &amp; Agentic Lifecycle Governance</summary>
+    <div class="use-case-body">
+      <p>Workiva AI (launched September 2025) is the company&rsquo;s agentic platform &mdash; every model deployed touches customer financial disclosures, so lifecycle controls are non-negotiable. Compliance Center codifies the promote / monitor / retire workflow and produces continuous evidence for internal audit and external assurance. Especially important as Agentforce lands across sales, service, and internal ops. Metric moved: audit-ready models covered and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Model registry / MLOps, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Technology+Officer+Workiva">Chief Technology Officer</a> (Workiva AI Program)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Slack + Salesforce Data-Retention &amp; Regulated-Comms Evidence</summary>
+    <div class="use-case-body">
+      <p>Workiva runs a 3,375-seat Slack Enterprise Grid alongside Salesforce Shield / Field Audit Trail &mdash; a strong signal that regulated communications and audit-trail controls are already scoped. Compliance Center consolidates the retention, DLP, and legal-hold workflow across Slack channels and Salesforce records into a single controlled process with codified SLAs. Metric moved: retention-policy coverage and time-to-produce evidence on regulatory or legal request.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Slack Enterprise Grid, Salesforce Shield</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Compliance+Officer+Workiva">Chief Compliance Officer</a> (Legal &amp; Compliance)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Workiva Inc. by mining its CPQ&rarr;Revenue Cloud quote-to-cash, renewal, and customer-onboarding processes across Sales Cloud, CPQ, and Slack, task-mining sales-rep, finance-close, and support desktops to expose the swivel-chair work Agentforce Operations can eliminate, and running Workiva&rsquo;s own SOX/ICFR execution and Workiva AI model-governance controls through Compliance Center to compress cycle times, protect the $3.35M renewal, and give the CFO always-on audit evidence.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -203,7 +246,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -111,11 +112,11 @@
 <main>
   <h1>Stellantis N.V.</h1>
   <div class="snapshot">
-    <p><strong>Manufacturing, Automotive OEM &mdash; Parts &amp; Aftersales (Mopar)</strong></p>
-    <p><strong>Revenue:</strong> ~$189B (FY2024 group) &nbsp;|&nbsp; <strong>Employees:</strong> ~258,000 group / ~113,000 North America &nbsp;|&nbsp; <strong>HQ:</strong> Auburn Hills, Michigan (Mopar / FCA US); group HQ Amsterdam, Netherlands</p>
+    <p><strong>Manufacturing, Automotive OEM</strong></p>
+    <p><strong>Revenue:</strong> ~$189B (FY2024 group) &nbsp;|&nbsp; <strong>Employees:</strong> ~258,000 &nbsp;|&nbsp; <strong>HQ:</strong> Amsterdam, Netherlands (North America ops: Auburn Hills, MI)</p>
     <p><strong>Major Subsidiaries:</strong> Chrysler, Jeep, Ram, Dodge, Fiat</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Tableau (Stellantis NA COE-Tableau), Heroku (Stellantis NA COE-Heroku), MuleSoft, CRM Analytics, Agentforce (active), Genesys Cloud (partner)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://salesforce.enterprise.slack.com/team/U05T2FB0RSS">Allie Miller</a>] &mdash; Mopar parts &amp; aftersales stack (typical mix of SAP / dealer DMS / ServiceNow) not attested in Org62 or Slack signals.</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Tableau, Heroku, MuleSoft, CRM Analytics, Agentforce, Slack</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> Stellantis Mopar - Apromore [AMER Split 50%] (<a href="https://org62.my.salesforce.com/006ed00000ZrRabAAF">$500k</a>) &nbsp;&middot;&nbsp; Stellantis FCA US - Fleet Management Phase 1 (<a href="https://org62.my.salesforce.com/006ed00000YlA5BAAV">$744k</a>) &nbsp;&middot;&nbsp; Stellantis Mopar #BeatBI Tableau [AMER Split 50%] (<a href="https://org62.my.salesforce.com/006ed00000VD7JZAA1">$78k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U05T2FB0RSS">Allie Miller</a></p>
@@ -123,15 +124,15 @@
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">85/100</span> &mdash; T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">85/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
         <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep SF footprint: Sales/Service/Tableau/Heroku/MuleSoft/Agentforce + Allie Miller relationship.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">Automotive OEM aftersales &mdash; a priority vertical for process mining globally.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Active Agentforce, AutoAgents, Fleet Mgmt Phase 1, and a live Apromore POC opp.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">Automotive OEM aftersales &mdash; priority AFPI vertical globally.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Active Agentforce, Fleet Mgmt Phase 1, and a live $500k Apromore Mopar POC opp.</td></tr>
         <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Mopar parts backorders, warranty cycle time, dealer service dispatch are well-known pains.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-orange">Salesforce Service &amp; Fleet event logs available; Mopar SAP/DMS stack not yet attested.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-orange">Service Cloud &amp; Fleet event logs available; Mopar SAP/DMS stack not yet attested.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
         <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">NHTSA recall / warranty audit exposure exists, but not the primary buying driver at Mopar.</td></tr>
         <tr><td>Buyer &amp; Champion Fit</td><td>15/20</td><td class="cat-orange">AE relationship strong; named process-mining sponsor at Mopar VP level still to be locked.</td></tr>
@@ -139,14 +140,12 @@
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Stellantis N.V. by mining the Mopar parts order-to-cash, warranty claims, and dealer service processes end-to-end &mdash; collapsing dealer backorder cycle time, recovering warranty leakage, and giving the Agentforce rollout the process baseline it needs to prove ROI in weeks, not quarters.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Mopar Parts Order-to-Cash &amp; Dealer Backorder Reduction</summary>
     <div class="use-case-body">
-      <p>Mine the end-to-end parts order path from dealer order entry through distribution center pick/pack, freight, and dealer receipt. Backorder churn and split shipments are the largest complaint driver in Mopar aftersales and directly hit dealer CSI scores. Apromore isolates the variants and bottlenecks driving late-order and no-fill events, feeding a targeted Agentforce Operations play on the top 10 SKUs. Metric moved: dealer fill-rate + order cycle time.</p>
+      <p>Mine the end-to-end parts order path from dealer order entry through DC pick/pack, freight, and dealer receipt. Backorder churn and split shipments are the largest complaint driver in Mopar aftersales and directly hit dealer CSI scores. Apromore isolates the variants and bottlenecks driving late-order and no-fill events, feeding a targeted Agentforce Operations play on the top 10 SKUs. Metric moved: dealer fill-rate + order cycle time.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> SAP (parts ERP), Salesforce Service Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=VP+Mopar+Parts+Operations+Stellantis">VP Mopar Parts &amp; Service Operations</a> (Mopar aftersales leadership, Auburn Hills)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -164,17 +163,7 @@
   </details>
 
   <details>
-    <summary>3. Dealer Service Ticket Dispatch &amp; Fix-First-Visit</summary>
-    <div class="use-case-body">
-      <p>Service Cloud is already in-flight for the Mopar dealer network. Mine the ticket lifecycle from customer schedule through diagnostic, parts pull, tech dispatch, and close &mdash; especially the multi-visit repeat repair variant that erodes CSI. Apromore identifies the variant paths driving fix-first-visit misses so Agentforce Service Agents can pre-empt the parts/knowledge gap. Metric moved: first-visit resolution rate + repeat-repair %.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Dealer DMS</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Director+Aftersales+Digital+Stellantis+Mopar">Director, Aftersales Digital / Service Experience</a> (Mopar)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Commercial Fleet Onboarding &amp; Order Fulfillment</summary>
+    <summary>3. Commercial Fleet Onboarding &amp; Order Fulfillment</summary>
     <div class="use-case-body">
       <p>The Stellantis FCA US Fleet Management Phase 1 opp ($744k, Stage 03) is a natural anchor. Mine the fleet customer journey from RFP through vehicle configuration, order placement, dealer allocation, delivery, and post-sale service enrollment. Late allocations and dealer swap loops are the biggest friction points that push out fleet revenue recognition. Metric moved: fleet order-to-delivery cycle + on-time delivery %.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, SAP</p>
@@ -183,17 +172,71 @@
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>5. Dealer Lead-to-Order &amp; Digital Retailing Handoff</summary>
+    <summary>1. Dealer Service Advisor Desktop Swivel-Chair</summary>
     <div class="use-case-body">
-      <p>Mine the dealer lead journey from OEM digital lead capture (Stellantis.com brand sites) through dealer CRM assignment, follow-up, and vehicle sale close. Lead leakage between the OEM digital layer and the dealer DMS is a chronic Mopar/Chrysler channel gap and a top Agentforce Sales use case candidate. Apromore quantifies where leads die, giving the Agentforce and Digital Retailing teams a targeted first play. Metric moved: lead-to-appointment conversion + speed-to-first-response.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, Dealer DMS</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Digital+Retail+Stellantis+North+America">Head of Digital Retail, North America</a> (Stellantis / Mopar brands)</p>
+      <p>Dealer service advisors flip between the DMS, warranty portal, parts catalog, VIN lookup, and Salesforce Service Cloud to write up a single repair order. Task mining the advisor desktop reveals how much time is lost to app-switching, copy/paste of VIN/customer data, and repeated parts lookups. Feeds an Agentforce Operations business case for dealer-facing agent assist. Metric moved: RO write-up time + advisor throughput per bay.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Dealer DMS</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Director+Dealer+Service+Experience+Stellantis+Mopar">Director, Dealer Service Experience</a> (Mopar)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline"><a href="https://www.celonis.com/customer-success-stories/"><strong>Celonis</strong></a> &mdash; Heavy automotive-OEM footprint (BMW, VW) makes Celonis the default incumbent to displace in any Mopar procurement conversation. &nbsp;&middot;&nbsp; <a href="https://www.servicenow.com/products/process-mining.html"><strong>ServiceNow</strong></a> &mdash; ServiceNow ITOM &amp; process mining likely present in Stellantis IT ops; scope carefully to business/aftersales processes to avoid overlap. &nbsp;&middot;&nbsp; <a href="https://www.uipath.com/"><strong>UiPath</strong></a> &mdash; RPA presence common in auto back-office; position Apromore as the process baseline that makes their automations targeted.</span></h2>
+  <details>
+    <summary>2. Warranty Adjudicator Desktop &amp; Claim Review</summary>
+    <div class="use-case-body">
+      <p>Mopar warranty adjudicators split time between the claim system, engineering bulletins, PDF attachments, and the supplier chargeback tool. Task mining exposes re-keying between the claim UI and evidence repositories, plus the specific screens where reject loops originate. Pairs directly with the Process Mining warranty use case above &mdash; task mining names the exact micro-steps Agentforce can automate. Metric moved: adjudicator claims/day + touch-time per claim.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Warranty adjudication UI, supplier chargeback tool</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Manager+Warranty+Adjudication+Stellantis">Manager, Warranty Adjudication</a> (FCA US)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Fleet Sales &amp; Digital Retailing Handoff</summary>
+    <div class="use-case-body">
+      <p>Fleet sales reps and digital-retail lead handlers work across Sales Cloud, dealer allocation tools, configuration engines, and email/spreadsheet for RFP responses. Task mining captures the specific hops that stall a fleet quote and the manual reconciliation steps between OEM and dealer systems. Directly informs where Agentforce Sales Coach and lead-triage agents plug in. Metric moved: quote turnaround time + rep-touch minutes per opportunity.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, dealer allocation portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Digital+Retail+Stellantis+North+America">Head of Digital Retail, North America</a> (Stellantis)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. NHTSA Recall Campaign Execution &amp; Evidence</summary>
+    <div class="use-case-body">
+      <p>US safety recalls carry mandatory notification, remedy, and reporting timelines under NHTSA rules. Compliance Center runs the recall campaign as a controlled workflow &mdash; notify VIN owners, track remedy install at dealer, and produce continuous evidence for TREAD Act quarterly reporting. Especially valuable as recall volumes have driven material 2024-25 charges. Metric moved: remedy completion rate + audit-ready evidence lead time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Recall management platform, Salesforce Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Director+Product+Safety+Compliance+Stellantis">Director, Product Safety &amp; Compliance</a> (Stellantis North America)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Supplier Chargeback &amp; Warranty Recovery Controls</summary>
+    <div class="use-case-body">
+      <p>Warranty supplier recovery hinges on defensible, documented linkage between the failed part, the paid claim, and the chargeback issued to the supplier. Compliance Center codifies segregation of duties, sign-offs, and evidence retention across engineering, warranty ops, and supplier quality &mdash; turning ad-hoc email trails into an auditable control. Metric moved: chargeback dispute win-rate + recovery $ per claim.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Warranty module (SAP), supplier chargeback tool</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Supplier+Quality+Stellantis">Head of Supplier Quality &amp; Warranty Recovery</a> (Stellantis)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Agentforce &amp; AI Model Governance (EU AI Act + internal)</summary>
+    <div class="use-case-body">
+      <p>With Agentforce landing across Mopar service, fleet sales, and dealer support, Stellantis needs a formal lifecycle control for AI agents and models &mdash; especially given EU AI Act obligations tied to the Amsterdam group. Compliance Center runs the promote/monitor/retire process for each agent and produces continuous evidence for internal risk and EU regulators. Metric moved: audit-ready agents covered + mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+AI+Officer+Stellantis">Chief AI Officer / Head of AI Governance</a> (Stellantis)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Stellantis N.V. by process-mining Mopar parts order-to-cash, warranty claims, and fleet order fulfillment to collapse dealer backorder and cycle time, task-mining dealer-advisor and warranty-adjudicator desktops to feed a targeted Agentforce Operations rollout, and running NHTSA recall, supplier-chargeback, and Agentforce/EU-AI-Act model governance through Compliance Center to produce always-on audit evidence and recover warranty leakage.</p>
 
   <div class="actions">
     <span>Generate PDF</span>

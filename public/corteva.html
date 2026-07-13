@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -108,97 +113,141 @@
   <h1>Corteva, Inc.</h1>
   <div class="snapshot">
     <p><strong>Agriculture &amp; Mining, Agricultural Inputs (Seed &amp; Crop Protection)</strong></p>
-    <p><strong>Revenue:</strong> ~$17B (FY24) &nbsp;|&nbsp; <strong>Employees:</strong> ~22,000 &nbsp;|&nbsp; <strong>HQ:</strong> Indianapolis, IN, USA</p>
-    <p><strong>Major Subsidiaries:</strong> Pioneer Hi-Bred, Brevant Seeds, Granular</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (SFA renewal in flight), Agentforce 1 Edition, B2B Commerce, Tableau (Pioneer Hi-Bred), Experience Cloud</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Corteva IT / Digital lead]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Corteva Agriscience LLC Renewal 5 SFA (<a href="https://org62.my.salesforce.com/006ed00000NuXbyAAF">$4.98M</a>) &nbsp;|&nbsp; Agentforce Contact Center (<a href="https://org62.my.salesforce.com/006ed00000diYvZAAU">$450K</a>) &nbsp;|&nbsp; B2B Commerce (<a href="https://org62.my.salesforce.com/006ed00000cpbywAAA">$320K</a>)</p>
+    <p><strong>Revenue:</strong> ~$17.4B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~21,500 &nbsp;|&nbsp; <strong>HQ:</strong> Indianapolis, IN, USA</p>
+    <p><strong>Major Subsidiaries:</strong> Pioneer Hi-Bred International, Stoller Group, Symborg, Brevant Seeds, Granular</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Enterprise / Unlimited / Professional), Sales &amp; Service Cloud, Force.com Platform, Tableau (Creator), Mobile, Salesforce Platform (Capped Unlimited), Sandbox (Full Copy)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Corteva Agriscience LLC Renewal 6 SFA (<a href="https://org62.my.salesforce.com/006ed00000NuXbyAAF">$4.98M</a>) &nbsp;|&nbsp; Corteva &mdash; AES w/ Renewal Bundle (<a href="https://org62.my.salesforce.com/006ed00000XIeYfAAL">$1.6M</a>) &nbsp;|&nbsp; Agentforce Contact Center (<a href="https://org62.my.salesforce.com/006ed00000diYvZAAU">$450k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01SCKR3U2F">Jason Frankel</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">91/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">91/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Company Size &amp; Complexity</td><td>15/15</td><td class="cat-green">~$17B revenue, ~22K employees, global ag-chem + seed business — enterprise-scale process complexity.</td></tr>
-        <tr><td>Salesforce Footprint</td><td>15/15</td><td class="cat-green">Sales Cloud, Agentforce 1, B2B Commerce, Tableau, Experience Cloud — deep multi-cloud presence.</td></tr>
-        <tr><td>Active Buying Signals</td><td>13/15</td><td class="cat-green">$4.98M SFA renewal, $450K Agentforce Contact Center, plus B2B Commerce and R&amp;D Compliance in flight.</td></tr>
-        <tr><td>Process Complexity (R&amp;D, Grower Ops, CC)</td><td>13/15</td><td class="cat-green">Regulatory submissions, seed production, grower O2C — all event-log-rich, multi-year processes.</td></tr>
-        <tr><td>Vertical Fit (Ag / Regulated Manufacturing)</td><td>12/15</td><td class="cat-green">Regulated agricultural inputs — EPA, EU REACH, and country-specific dossiers make Compliance Center a natural wedge.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud install: Sales Cloud, Service Cloud, Force.com, Tableau, plus Agentforce &amp; B2B Commerce in flight.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Live Agentforce Contact Center, Agronomist Agent MVP, and Grower 360 Transformation opps &mdash; active AI adoption.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">EPA, EU REACH, national ag-chem dossiers, plus SOX &mdash; strong Compliance Center wedge.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">$4.98M SFA renewal + $1.6M AES bundle + $450k Agentforce CC all in flight &mdash; budget owned, timing live.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>15/15</td><td class="cat-green">Grower O2C, seed-production planning, and 3-7yr regulatory dossiers &mdash; event-log-rich, high-stakes cycle time.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Process Complexity (R&amp;D, Grower Ops, CC)</td><td>13/15</td><td class="cat-green">Strong on paper, but no confirmed non-SF systems yet — data-readiness needs field verification before mining.</td></tr>
-        <tr><td>Vertical Fit (Ag / Regulated Manufacturing)</td><td>12/15</td><td class="cat-green">Ag vertical is less penetrated than FSI / manufacturing for process mining — reference stories are thinner.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>16/20</td><td class="cat-orange">Salesforce AE and program sponsors engaged, but no customer-side process-improvement champion confirmed via LinkedIn.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>12/15</td><td class="cat-orange">Agriculture is regulated-manufacturing-adjacent but less penetrated than FSI &mdash; reference stories are thinner.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Corteva, Inc. by mining the Grower Order-to-Cash and Agentforce Contact Center event logs to expose rebate leakage, credit-hold rework, and case-handling variance — giving the $4.98M SFA renewal and live Agentforce opps a documented ROI story before the AI licenses spin up at scale.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Grower Order-to-Cash &amp; Rebate Reconciliation</summary>
     <div class="use-case-body">
-      <p>The Grower 360 Transformation opp signals Corteva is rebuilding how growers and retailers order seed, crop protection, and traits — a process notoriously fragmented across retailer channels, distributor rebates, and season-tied pricing. AFPI can mine the current O2C event log to expose rework loops (rebate disputes, credit-hold escalations, mis-priced orders) that erode margin at planting-season peak. The metric moved is DSO and rebate-leakage percentage, both directly tied to working capital.</p>
+      <p>The live Grower 360 Transformation opp signals Corteva is rebuilding how growers and retailers order seed, crop protection, and traits &mdash; a process notoriously fragmented across retailer channels, distributor rebates, and season-tied pricing. AFPI mines the current O2C event log to expose rework loops (rebate disputes, credit-hold escalations, mis-priced orders) that erode margin at planting-season peak. The metric moved is DSO and rebate-leakage percentage, both directly tied to working capital.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, B2B Commerce</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Sam+Eathington+Corteva">Sam Eathington</a> (Chief Technology &amp; Digital Officer)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Corteva+VP+Commercial+Operations">VP Commercial Operations, Corteva</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Agronomist / Field Advisor Case Handling (Agentforce Contact Center wedge)</summary>
+    <summary>2. Seed Production Planning &amp; Field-to-Bag Traceability</summary>
     <div class="use-case-body">
-      <p>With a live $450K Agentforce Contact Center opp and the Agronomist Agent MVP, Corteva is standing up AI-assisted case deflection for grower &amp; retailer inquiries — but no one has yet quantified handle-time variance or first-contact-resolution across the current process. AFPI mines the case-history log to prove exactly where AI agents win vs. where human agronomists must remain in the loop, giving the CC program a defensible ROI story before the AI licenses spin up at scale. Metric moved: AHT, FCR, deflection rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce, Service Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Corteva+Contact+Center+lead">Contact Center Program Lead</a> (TBD — paired with Agentforce AE)</p>
+      <p>Pioneer Hi-Bred runs a season-locked production process &mdash; parent seed to production fields to conditioning plants to bag/tag &mdash; where a two-week slip cascades into next-season shortages. AFPI mines the S/4HANA-plus-MES process to expose deviation patterns (yield variance, conditioning-plant queue time, tag-and-treat rework) that today live in siloed dashboards. Metric: on-time-in-full to distributor, shrink, and planning-cycle accuracy.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP S/4HANA, MES</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Pioneer+Seed+Supply+Chain+Corteva">Head of Pioneer Seed Supply Chain</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. R&amp;D Regulatory Submission &amp; Compliance Cycle</summary>
+    <summary>3. Sales Force Automation Adoption &amp; Territory Coverage</summary>
     <div class="use-case-body">
-      <p>The Corteva R&amp;D Compliance Project opp aligns with a regulated-product lifecycle that runs across EPA, EU REACH, and dozens of national ag-chem authorities — each submission is a 3-7 year process with document handoffs across toxicology, field trials, and regulatory affairs. AFPI + Compliance Center wedge mines the submission event log to surface bottlenecks (usually toxicology sign-off and country-specific dossier variants) and gives regulatory ops a live control tower. Metric moved: submission cycle time, on-time-approval rate, cost per submission.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Corteva Regulatory Systems (TBD), Document Management (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Corteva+Regulatory+Affairs+VP">VP Regulatory Affairs</a> (TBD)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Seed Production Planning &amp; Field-to-Bag Traceability</summary>
-    <div class="use-case-body">
-      <p>Pioneer Hi-Bred (Corteva's seed brand) runs a season-locked production process — parent seed to production fields to conditioning plants to bag/tag — where a two-week slip cascades into next-season shortages. AFPI mines the S/4HANA-and-MES process to expose deviation patterns (yield variance, conditioning-plant queue time, tag-and-treat rework) that today live in siloed dashboards. Metric moved: on-time-in-full to distributor, shrink, planning-cycle accuracy.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> SAP S/4HANA (TBD), MES (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Pioneer+Supply+Chain+Corteva">Pioneer Seed Supply Chain Lead</a> (TBD)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>5. Sales Force Automation Adoption &amp; Territory Coverage (SFA Renewal wedge)</summary>
-    <div class="use-case-body">
-      <p>The $4.98M SFA renewal is the anchor conversation — AFPI mines Sales Cloud activity data to show which territories, reps, and account tiers are actually driving pipeline vs. which are running on autopilot. This turns the renewal conversation from "same seats again" into a coverage-and-adoption optimization play, and directly justifies expanding to Agentforce for Sales. Metric moved: rep productivity per territory, opportunity aging, cross-sell rate into Pioneer accounts.</p>
+      <p>The $4.98M SFA renewal is the anchor conversation &mdash; AFPI mines Sales Cloud activity data to show which territories, reps, and account tiers are actually driving pipeline versus which are running on autopilot. This turns the renewal from "same seats again" into a coverage-and-adoption optimization play and directly justifies the AES-bundle expansion and Agentforce for Sales attach. Metric moved: rep productivity per territory, opportunity aging, cross-sell rate into Pioneer accounts.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Tableau</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Corteva+VP+Commercial+Effectiveness">VP Commercial Effectiveness</a> (TBD — paired with account owner)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Corteva+VP+Commercial+Effectiveness">VP Commercial Effectiveness, Corteva</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Agronomist / Field Advisor Contact Center Desktop</summary>
+    <div class="use-case-body">
+      <p>The $450k Agentforce Contact Center opp and the Agronomist Agent MVP will only pay back if we know exactly where human agronomists lose time today. Task mining the agronomist desktop captures every screen-hop between Service Cloud, product-info portals, distributor systems, and email while resolving a grower or retailer inquiry &mdash; naming the specific steps AI agents can deflect. Metric moved: AHT, first-contact resolution, and automatable-touch percentage.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, Agentforce</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Corteva+Contact+Center+Program+Lead">Contact Center Program Lead, Corteva</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Regulatory Affairs Dossier Assembly Desktop</summary>
+    <div class="use-case-body">
+      <p>Each EPA / EU REACH / national ag-chem dossier is assembled by regulatory affairs specialists who swivel-chair between the toxicology data lake, document-management system, translation tools, and country-specific submission portals. Task mining the specialist desktop exposes where a single dossier variant loses days to re-keying and version reconciliation &mdash; the exact steps Agentforce Operations can automate. Metric moved: dossier assembly touch-time and rework loops per submission.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Regulatory document management, submission portals</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Corteva+Regulatory+Affairs+Director">Director, Regulatory Affairs, Corteva</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. R&amp;D Scientist Data-Capture Desktop (Field Trials to Registration)</summary>
+    <div class="use-case-body">
+      <p>Corteva R&amp;D scientists spend measurable time moving field-trial results, greenhouse observations, and lab data between LIMS, Excel, and R&amp;D community sites &mdash; the R&amp;D Platform and External App Communities opp is essentially a rebuild of that flow. Task mining the scientist desktop identifies where hand-keying between LIMS, statistical tools, and Salesforce Experience Cloud consumes hours that Agentforce could reclaim. Metric moved: data-entry touch-time per trial and trial-to-registration cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> LIMS, Experience Cloud (R&amp;D Community)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Corteva+R%26D+Digital+Director">Director, R&amp;D Digital, Corteva</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. EPA / EU REACH Regulatory Submission Control Tower</summary>
+    <div class="use-case-body">
+      <p>Every crop-protection molecule Corteva sells lives inside a 3-7 year submission lifecycle across EPA, EU REACH, and dozens of national authorities &mdash; today tracked in spreadsheets and email. Compliance Center codifies the submission process as a controlled workflow with segregation-of-duties, sign-offs, and audit-ready evidence at every stage-gate. This is the natural landing wedge for the R&amp;D Compliance Project opp. Metric moved: on-time-approval rate and audit-finding count per submission.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Regulatory document management, submission portals</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Corteva+VP+Regulatory+Affairs">VP Regulatory Affairs, Corteva</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Agentforce &amp; AI Model Lifecycle Governance</summary>
+    <div class="use-case-body">
+      <p>As Corteva stands up Agronomist Agent, Contact Center AI, and Sales AI, every model touching grower advice or regulated product claims becomes a governance surface. Compliance Center runs the promote/monitor/retire lifecycle for AI/ML models with continuous evidence &mdash; important both for internal risk and for the EU AI Act as it lands on ag-chem advisory tools. Metric moved: audit-ready models covered and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce, model registry</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Corteva+Chief+Digital+Officer">Chief Digital / AI Officer, Corteva</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. SOX Financial Close &amp; Rebate Accrual Controls</summary>
+    <div class="use-case-body">
+      <p>As a large US-listed manufacturer, Corteva's quarterly close depends on rebate accruals, revenue recognition on multi-season grower programs, and consolidation across seed and crop-protection segments &mdash; all SOX-controlled. Compliance Center runs the close as a controlled workflow with sign-offs, evidence, and exception handling, and directly feeds off the Grower O2C process mining above. Metric moved: close cycle time, control-exception count, and audit findings.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP S/4HANA (finance), GL / consolidation</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Corteva+Corporate+Controller">Corporate Controller, Corteva</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Corteva, Inc. by mining Grower Order-to-Cash, seed-production, and SFA-adoption event logs across Sales Cloud, B2B Commerce, and S/4HANA to expose rebate leakage and cycle-time loss, task-mining agronomist, regulatory-affairs, and R&amp;D scientist desktops to build the ROI case for the live Agentforce Contact Center and Agronomist Agent programs, and running EPA / EU REACH submissions, AI-model lifecycle, and SOX close through Compliance Center to convert the $4.98M SFA renewal, $1.6M AES bundle, and $450k Agentforce opps into a defensible AFPI landing motion.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

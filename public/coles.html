@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coles Group Limited — AFPI POV</title>
+<title>Coles Group Limited &mdash; AFPI POV</title>
 <style>
   body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
          color: #1a1a1a; line-height: 1.45; background: #fff; }
@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -112,88 +113,130 @@
   <h1>Coles Group Limited</h1>
   <div class="snapshot">
     <p><strong>Retail &amp; Consumer Goods, Grocery &amp; Supermarkets</strong></p>
-    <p><strong>Revenue:</strong> A$44.5B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~120,000 &nbsp;|&nbsp; <strong>HQ:</strong> Hawthorn East, Victoria, Australia</p>
-    <p><strong>Major Subsidiaries:</strong> Coles Supermarkets, Coles Liquor (Liquorland, First Choice, Vintage Cellars), Coles Express (Viva Energy alliance), Coles Online, flybuys (50% JV with Wesfarmers)</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Marketing Cloud, Marketing Cloud Personalization, MuleSoft, Signature Success</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> SAP S/4HANA (finance &amp; merchandising), Manhattan WMS (DC operations), Responsys (Marketing Cloud is actively replacing) [Slack][Org62]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Coles - Apromore (<a href="https://org62.my.salesforce.com/006ed00000bOQnFAAW">$500k</a>) | Coles - MC-Responsys Replace (<a href="https://org62.my.salesforce.com/006ed00000cs1m1AAA">$750k</a>) | MS - Integration Consolidation Mule-led (<a href="https://org62.my.salesforce.com/006ed00000cjG2jAAE">$180k</a>)</p>
+    <p><strong>Revenue:</strong> A$43.7B (FY24) &nbsp;|&nbsp; <strong>Employees:</strong> ~120,000 &nbsp;|&nbsp; <strong>HQ:</strong> Hawthorn East, Victoria, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> Coles Supermarkets, Coles Online, Coles Liquor (Liquorland, Vintage Cellars, First Choice Liquor), Coles Express, Coles Financial Services / flybuys</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Service Cloud (Unlimited), Sales &amp; Service Cloud (Unlimited), Lightning Platform, Force.com, Employee Apps &amp; Community, Salesforce Shield, Salesforce Backup &amp; Recover, Salesforce Archive, Tableau (Creator + Tableau+), Data Cloud, Agentforce Conversations, CRM Analytics, Signature Success</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> SAP S/4HANA, Manhattan WMS, Responsys</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Coles - Apromore (<a href="https://org62.my.salesforce.com/006ed00000bOQnFAAW">$500k</a>) &nbsp;|&nbsp; Coles - MC-Responsys Replace (<a href="https://org62.my.salesforce.com/006ed00000cs1m1AAA">$750k</a>) &nbsp;|&nbsp; Coles Liquor - Contact Centre [+80 SC+SV+A4S] (<a href="https://org62.my.salesforce.com/006ed00000PfxlhAAB">$213k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0B25P8RH6U">Rod Andrewartha</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">86/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Live "Coles - Apromore" $500K opp already at Stage 02 — deal is real and current.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Multi-cloud SF customer: $1M+ platform renewal, MC, Service Cloud, MuleSoft, Signature Success.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">Retail &amp; CG — top-priority AFPI vertical with proven process-mining ROI stories.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Simply Coles cost-out program, DC ramp (Ocado/Witron), online fulfilment cycle-time pressure.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-green">SAP S/4HANA + Manhattan WMS + Salesforce = rich, minable event logs across O2C and fulfilment.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Live &quot;Coles - Apromore&quot; $500k standalone opp already at Stage 02 &mdash; deal is real and current.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud install: Service Cloud, Lightning Platform, Shield, Tableau, Data Cloud, Agentforce, Signature Success.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">Retail &amp; CG grocery &mdash; priority AFPI vertical with proven process-mining ROI stories.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Active P&amp;C Agentforce, Data Cloud, MuleSoft-led integration consolidation and $1M+ platform renewal.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Simply Coles cost-out program, Ocado/Witron automated-DC ramp and online-fulfilment cycle-time pressure.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">ASX/food-safety/Fair-Work exposure is material but not SOX-grade — moderate compliance urgency.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>16/20</td><td class="cat-orange">AE sponsor identified but named business-side champion (COO/Supply Chain) still to be confirmed.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>15/20</td><td class="cat-orange">Salesforce AE sponsor engaged (Rod Andrewartha) but named customer-side business champion still to be confirmed.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">ASX / food-safety / Fair Work / Modern Slavery exposure is material but not SOX-grade &mdash; moderate compliance urgency.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Coles Group Limited by mining SAP S/4HANA, Manhattan WMS, and Salesforce event logs across supply-chain replenishment, online fulfilment, and store operations to quantify the Simply Coles cost-out program in dollars, cut e-com pick-to-doorstep cycle time, and de-risk the Ocado/Witron automated-DC ramp — turning gut-feel process pain into a defensible board-level ROI narrative.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Supply-Chain Replenishment &amp; DC Throughput (Ocado/Witron Ramp)</summary>
-    <div class="use-case-box use-case-body">
-      <p>Coles is spending A$1B+ on two automated customer fulfilment centres (Ocado) plus Witron ambient DCs. Ramp-up is the highest-risk period — bottlenecks between forecast, replenishment order, DC pick, and store receipt destroy availability. Apromore mines SAP replenishment events and Manhattan WMS pick/pack events to expose where the automated flow diverges from the designed process and why fill-rate stalls. Metric moved: on-shelf availability (OSA), DC labour cost per case.</p>
+    <summary>1. Supply-Chain Replenishment &amp; Automated-DC Throughput (Ocado / Witron Ramp)</summary>
+    <div class="use-case-body">
+      <p>Coles is spending well over A$1B on two Ocado customer-fulfilment centres and Witron ambient DCs. Ramp-up is the highest-risk period &mdash; bottlenecks between forecast, replenishment order, DC pick, and store receipt destroy on-shelf availability. Apromore mines SAP S/4HANA replenishment events and Manhattan WMS pick/pack events to expose where the automated flow diverges from design and why fill-rate stalls. Metric moved: on-shelf availability (OSA) and DC labour cost per case.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> SAP S/4HANA, Manhattan WMS</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Matthew+Swindells+Coles">Matthew Swindells</a> (Chief Operations &amp; Sustainability Officer)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Operations+Officer+Coles+Group">Chief Operations &amp; Supply Chain Officer</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
     <summary>2. Online Order-to-Doorstep Cycle Time (Coles Online + Click&amp;Collect)</summary>
-    <div class="use-case-box use-case-body">
-      <p>Coles Online is the fastest-growing channel and its unit economics live or die on cycle time — order capture, pick, dispatch, last-mile, delivered. Apromore mines the end-to-end event log across the e-com platform, WMS, and delivery/last-mile carrier events to find the true rework loops (re-picks, substitutions, missed windows, redeliveries). Directly ties to Simply Coles digital cost-per-order targets. Metric moved: cost-to-serve per online order, NPS-linked missed-window rate.</p>
+    <div class="use-case-body">
+      <p>Coles Online is the fastest-growing channel and its unit economics live or die on cycle time &mdash; order capture, pick, dispatch, last-mile, delivered. Apromore mines the end-to-end event log across the e-commerce platform, Manhattan WMS, and delivery/last-mile carrier events to find the true rework loops (re-picks, substitutions, missed windows, redeliveries). Directly ties to Simply Coles digital cost-per-order targets. Metric moved: cost-to-serve per online order and missed-window rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Manhattan WMS, Salesforce Service Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Amanda+McVay+Coles">Amanda McVay</a> (Chief Digital &amp; Technology Officer)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Digital+Officer+Coles+Group">Chief Digital &amp; Technology Officer</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Customer Service Case Handling (Service Cloud Efficiency)</summary>
-    <div class="use-case-box use-case-body">
-      <p>Coles runs Service Cloud plus the Coles Liquor contact-centre expansion ([+80 SC+SV+A4S] $213K opp). Case-handling is a hidden cost centre — refunds, substitutions disputes, delivery escalations. Apromore mines Service Cloud case-lifecycle events to spot re-open loops, rework between queues, and where Agentforce would deflect vs. a live agent. Direct feed to the Agentforce business case Rod is building. Metric moved: average handle time, one-touch resolution rate, cost-per-case.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Zena+Srzich+Coles">Zena Srzich</a> (Chief Customer Officer)</p>
+    <summary>3. Procure-to-Pay &amp; Supplier Onboarding (SAP S/4HANA)</summary>
+    <div class="use-case-body">
+      <p>Coles' move to SAP S/4HANA is a live event-log gold-mine for procure-to-pay. Payment-block loops, off-catalogue spend, duplicate invoices, and slow supplier onboarding drag on working capital and supplier trust across a 8,000+ vendor base. Apromore mines SAP purchase-order, GR and invoice events to quantify DPO leakage and target the Agentforce Ops-style automations Coles is already scoping. Metric moved: touchless-invoice rate, working capital days, and supplier-onboarding cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP S/4HANA, MuleSoft integration layer</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Financial+Officer+Coles+Group">Chief Financial Officer</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Coles Liquor Contact-Centre Agent Handle-Time (Service Cloud + Agentforce)</summary>
+    <div class="use-case-body">
+      <p>The $213k Coles Liquor Contact Centre opp (80 Service Cloud + Service Voice + Agentforce seats) is the perfect task-mining beachhead. Agents flip between Service Cloud console, order management, and Liquorland/First Choice inventory screens on every call. Task mining captures each agent's on-screen actions to isolate after-call-work steps and the tabs that eat wrap-time &mdash; then names the exact steps Agentforce should replace. Metric moved: AHT, after-call-work minutes, and Agentforce deflection rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, Coles Liquor order-management desktop</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Service+Coles+Liquor">Head of Coles Liquor Customer Service</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Marketing Cloud Migration &amp; Journey Effectiveness (Responsys Replace)</summary>
-    <div class="use-case-box use-case-body">
-      <p>Coles is actively replacing Responsys with Marketing Cloud ($750K opp). Migrating journeys blind is how migrations blow out — Apromore mines Responsys event logs and the new Marketing Cloud send/engagement logs to compare the as-is versus to-be customer journeys, expose orphaned or under-performing paths, and de-risk cutover. Metric moved: journey completion rate, email-to-basket conversion, migration risk reduction.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Marketing Cloud, Responsys</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Amanda+McVay+Coles">Amanda McVay</a> (Chief Digital &amp; Technology Officer)</p>
+    <summary>2. Marketing Cloud Migration &amp; Journey Ops (Responsys Replace)</summary>
+    <div class="use-case-body">
+      <p>Coles is actively replacing Responsys with Marketing Cloud (the $750k MC-Responsys Replace opp). Migrating journeys blind is how migrations blow out. Task mining the campaign-operations desktop &mdash; how marketing ops staff actually build, QA, and troubleshoot journeys in Responsys today versus MC Journey Builder tomorrow &mdash; exposes the manual re-work and copy-paste that Agentforce and MC Personalization can automate. Metric moved: journey build cycle time, QA rework rate, and migration risk reduction.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Responsys campaign desktop, Marketing Cloud Journey Builder</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+CRM+Marketing+Coles+Group">Head of CRM / Personalisation</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Procure-to-Pay &amp; Supplier Onboarding (SAP S/4HANA)</summary>
-    <div class="use-case-box use-case-body">
-      <p>Coles moved to SAP S/4HANA — a live event log gold-mine for P2P. Payment-block loops, off-catalogue spend, duplicate invoices, and slow supplier onboarding hit working capital and supplier trust. Apromore mines SAP purchase-order, GR, and invoice events to quantify DPO drag and target Agentforce Ops-style automations. Metric moved: touchless-invoice rate, working capital, supplier NPS.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> SAP S/4HANA</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Charlie+Elias+Coles">Charlie Elias</a> (Chief Financial Officer)</p>
+    <summary>3. Store P&amp;C Ops Desktop Swivel-Chair (P&amp;C Agentforce)</summary>
+    <div class="use-case-body">
+      <p>The $75k Coles P&amp;C Agentforce opp targets HR/people-and-culture back-office work across 120,000 team members. Task mining the P&amp;C shared-services desktop shows how much time is lost switching between the HRIS (SAP SuccessFactors or equivalent), payroll, rostering, and case-management tools to answer a single team-member query. Feeds the Agentforce for HR business case directly. Metric moved: query resolution time, one-touch resolution rate, and P&amp;C FTE deflection.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Coles P&amp;C shared-services desktop, HRIS</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+People+Officer+Coles+Group">Chief People Officer</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No named competitor mentions found tied to Coles Group in Slack, but assume <strong>Celonis</strong> is the incumbent to displace across ANZ retail — Marcello La Rosa has been open that Apromore is "like Celonis, only better" thanks to no-code (no PQL) and 2–4 week time-to-value.</span></h2>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. Food Safety &amp; Product-Recall Controls (FSANZ)</summary>
+    <div class="use-case-body">
+      <p>Grocery retailers live under Food Standards Australia New Zealand (FSANZ), state health regulators, and Coles' own private-label QA regime. Product recalls today mix email, spreadsheets, and SAP holds &mdash; slow, noisy, and hard to audit. Compliance Center codifies recall notification, store-level withdrawal, supplier root-cause, and customer refund into one controlled workflow with continuous evidence. Metric moved: time-to-full-withdrawal, recall coverage rate, and audit-finding count.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP S/4HANA (materials + holds), Coles QA / recall system</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Quality+Food+Safety+Coles">Head of Quality &amp; Food Safety</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Fair Work / Wage Compliance &amp; Rostering Controls</summary>
+    <div class="use-case-body">
+      <p>Coles has settled multi-million-dollar Fair Work underpayment matters and lives under continuous scrutiny from the Fair Work Ombudsman and the SDA union. Compliance Center gives one controlled workflow for time-and-attendance to payroll reconciliation, exception-based interpretation of the General Retail Industry Award, and evidence for FWO inquiries. Metric moved: underpayment exception rate, remediation cycle time, and audit-ready wage-compliance evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Rostering / time-and-attendance, payroll</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Employee+Relations+Coles+Group">Head of Employee Relations / Payroll Compliance</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Modern Slavery &amp; Supplier ESG Assurance</summary>
+    <div class="use-case-body">
+      <p>The Modern Slavery Act 2018 (Cth) requires Coles to report annually on due-diligence over its 8,000+ supplier base, and ASX/investor pressure adds broader ESG assurance on private-label sourcing. Compliance Center runs supplier onboarding, human-rights risk assessment, corrective-action tracking, and annual statement evidence as one controlled workflow across SAP vendor master and Coles' Responsible Sourcing programme. Metric moved: percentage of high-risk suppliers assessed, remediation SLA hit-rate, and time-to-statement.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP S/4HANA vendor master, Coles Responsible Sourcing platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Responsible+Sourcing+Coles+Group">Head of Responsible Sourcing / ESG</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Coles Group Limited by mining SAP S/4HANA, Manhattan WMS, and Salesforce event logs across replenishment, online fulfilment, and procure-to-pay, task-mining the Coles Liquor contact-centre, Marketing Cloud migration, and P&amp;C shared-services desktops to expose the swivel-chair work Agentforce Operations should absorb, and running food-safety recall, Fair Work wage, and Modern Slavery supplier controls through Compliance Center &mdash; quantifying the Simply Coles cost-out program in dollars, cutting e-com pick-to-doorstep cycle time, and de-risking the Ocado/Witron automated-DC ramp.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. &quot;AproVista AI SDR Agent&quot; &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

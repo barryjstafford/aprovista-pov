@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -114,49 +115,47 @@
     <p><strong>Technology, Communications &amp; Defence Electronics</strong></p>
     <p><strong>Revenue:</strong> ~A$630M (FY2025 guidance) &nbsp;|&nbsp; <strong>Employees:</strong> ~1,000 &nbsp;|&nbsp; <strong>HQ:</strong> Mawson Lakes, Adelaide, Australia</p>
     <p><strong>Major Subsidiaries:</strong> Minelab Electronics, DTC (Domo Tactical Communications), Zetron, Minetec, Codan Defence Electronics</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (historical SFA install base), Tableau (renewal history)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> SAP (active multi-business-unit rollout — 3 integrations in progress per champion, [Slack])</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Codan - Apromore (<a href="https://org62.my.salesforce.com/006ed00000Z0X6HAAV">$70k</a>) | Codan - Unification transformation (<a href="https://org62.my.salesforce.com/006ed00000WJQE5AAP">$59k</a>)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Professional Edition)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> SAP</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Codan - Apromore (<a href="https://org62.my.salesforce.com/006ed00000Z0X6HAAV">$0</a>) &nbsp;|&nbsp; Codan - Unification transformation (<a href="https://org62.my.salesforce.com/006ed00000WJQE5AAP">$59k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U06MAS1NWLQ">Maddison Schmid</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
   </div>
 
-  <details class="pov-aproscore" open>
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">83/100</span> — T1 Pursue</summary>
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">81/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">Champion says SAP-defined processes "aren't being followed"; gaps and broken flows named explicitly [Slack].</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">SAP rollout across 3 BUs + Adaptive Dynamics acquisition (May 2026) + active Unification transformation opp.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">SAP is the primary target; strong event-log source across O2C, P2P, and MDM domains.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">Global IT Ops Mgr, CFO, VP Eng &amp; Ops, Group Systems Mgr all present; SF AE Maddison has already logged the ask.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-green">Live $70k Apromore opp already in Stage 02, close 31 Oct 2026 — deal is real, not aspirational.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">Champion says the "defined SAP solution processes aren't being followed" &mdash; explicit conformance pain [Slack].</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Live SAP rollout across three BUs + active "Unification transformation" opp already logged.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">SAP is the primary source-of-truth &mdash; strong event-log coverage for O2C, P2P, and MDM.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">SF AE Maddison Schmid has already surfaced the ask on behalf of Codan's IT Ops sponsor [Slack].</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-green">Codan - Apromore opp live in Stage 02 with close 31 Oct 2026 &mdash; deal is real, not aspirational.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">Defence-electronics export controls apply, but no SOX/HIPAA/KYC pressure — moderate not high.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>11/15</td><td class="cat-orange">Communications &amp; Metal Detection are secondary priorities vs. FinServ / HLS / Public Sector.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>6/12</td><td class="cat-orange">Small Sales Cloud Professional Edition footprint only &mdash; no multi-cloud install base to co-sell against.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">Defence export controls apply, but no SOX/HIPAA/KYC pressure &mdash; moderate not high.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Codan Limited by mining the live SAP rollout across its three business units to expose where the pre-defined SAP flows diverge from how Minelab, DTC, and Zetron actually operate — cutting rework, protecting go-live dates, and giving CFO Michael Barton event-level evidence that the unification transformation is landing.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. SAP Multi-Business-Unit Rollout Conformance</summary>
     <div class="use-case-body">
-      <p>Codan is mid-rollout of SAP across Minelab, DTC, and Zetron with three more integrations queued. The champion's own words: "the defined SAP solution processes aren't being followed." Apromore process mining ingests SAP event logs and shows the delta between the design-time BPMN and the runtime path — per BU, per role, per exception. Metric moved: rework and change-request volume in the 90 days post go-live, and % of transactions on the happy path.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> SAP ECC/S/4HANA</p>
+      <p>Codan is mid-rollout of SAP across Minelab, DTC, and Zetron with three more BU integrations queued. The champion's own words: "the defined SAP solution processes aren't being followed." Apromore mines the SAP event log and shows the delta between the design-time BPMN and the runtime path, per BU, per role, per exception. Metric moved: rework and change-request volume in the 90 days post go-live and % of transactions on the happy path.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP ECC / S/4HANA</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jamie+McMillan+Codan">Jamie McMillan</a> (Global IT Operations Manager)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Post-Acquisition Unification of Order-to-Cash (Minelab / DTC / Zetron)</summary>
+    <summary>2. Post-Acquisition Order-to-Cash Unification (Minelab / DTC / Zetron)</summary>
     <div class="use-case-body">
-      <p>Codan has grown by acquisition (DTC, Zetron, Minetec, Adaptive Dynamics) and each entity carries its own O2C variant. The active "Codan - Unification transformation" opp signals executive appetite. Apromore mines quote-to-cash across the three heritage stacks, ranks variants by volume and cost, and gives the CFO a defensible target-state before SAP finalises the design. Metric moved: variant count, order cycle time, and unbilled AR at month-end.</p>
+      <p>Codan has grown by acquisition (DTC, Zetron, Minetec, Adaptive Dynamics) and each entity carries its own O2C variant. The active "Codan - Unification transformation" opp signals executive appetite to converge. Apromore mines quote-to-cash across the heritage stacks, ranks variants by volume and cost, and gives the CFO a defensible target-state before SAP finalises the design. Metric moved: variant count, order cycle time, and unbilled AR at month-end.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> SAP, Salesforce Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Michael+Barton+Codan">Michael Barton</a> (Chief Financial Officer &amp; Company Secretary)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -164,36 +163,80 @@
   </details>
 
   <details>
-    <summary>3. Global Supply Chain &amp; Procure-to-Pay Visibility</summary>
+    <summary>3. Global Procure-to-Pay &amp; Supply Chain Visibility</summary>
     <div class="use-case-body">
-      <p>Codan sells to 150+ countries and manufactures across Australia, Canada, US, and UK — a complex P2P footprint with export controls layered on top. Today the Supply Chain team lacks a single event view across POs, GRs, and invoices. Apromore reveals maverick spend, duplicate-vendor loops, and payment-term violations without a data-warehouse project. Metric moved: on-time delivery and touchless PO rate.</p>
+      <p>Codan sells to 150+ countries and manufactures across Australia, Canada, US, and UK &mdash; a complex P2P footprint with export controls layered on top. Today the Supply Chain team lacks a single event view across POs, GRs, and invoices. Apromore reveals maverick spend, duplicate-vendor loops, and payment-term violations without a data-warehouse project. Metric moved: on-time delivery and touchless PO rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> SAP MM, SAP Ariba</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Tryphine+Kyokuhairwa+Codan">Tryphine Kyokuhairwa</a> (Supply Chain &amp; Logistics Manager)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>4. Engineering Change &amp; New-Product-Introduction Cycle Time</summary>
+    <summary>1. SAP End-User Desktop Adoption During Rollout</summary>
     <div class="use-case-body">
-      <p>Codan Defence Electronics and Minelab live on a constant cadence of new-product-introduction and engineering-change orders. VP Engineering &amp; Operations owns time-to-market as a KPI. Mining the ECO / NPI workflow across PLM and SAP surfaces where drawings sit in approval queues, where BOM churn drives late procurement, and which product lines carry the longest lead-time debt. Metric moved: median ECO lead time and % first-pass approval.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> SAP PP, PLM</p>
+      <p>The champion's specific worry is that the "as-designed" SAP flow isn't being followed at the desktop. Task mining captures the actual keystrokes and app-switching pattern of key users in Minelab, DTC, and Zetron and shows the exact steps where operators bypass SAP for spreadsheets or email. Feeds the training + change-management workstream with concrete evidence, not opinion. Metric moved: adoption rate on standard SAP screens and time-to-competency for new users.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP GUI / Fiori, Excel</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jamie+McMillan+Codan">Jamie McMillan</a> (Global IT Operations Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Engineering Change &amp; New-Product-Introduction Desktop Workflow</summary>
+    <div class="use-case-body">
+      <p>Codan Defence Electronics and Minelab live on a constant cadence of new-product-introduction and engineering-change orders. Engineers flip between PLM, SAP PP, drawing tools, and email to close a single ECO. Task mining exposes where drawings sit in reviewer inboxes, where BOM churn drives late procurement, and which product lines carry the longest lead-time debt. Metric moved: median ECO cycle time and % first-pass approval.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> PLM, SAP PP</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jack+Sudarev+Codan">Jack Sudarev</a> (VP Engineering &amp; Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Customer Service &amp; Warranty Case Handling (ANZ + Global)</summary>
+    <summary>3. Customer Service &amp; Warranty / RMA Agent Desktop</summary>
     <div class="use-case-body">
-      <p>Metal Detection and Communications both carry high-touch warranty and RMA workloads. Case volumes spike after each product launch and the current process is split across Salesforce Service Cloud, SAP, and email. Apromore stitches the case journey end-to-end, exposes hand-off delays between service and engineering, and shows where repeat-contact cases cluster. Metric moved: first-contact resolution and mean-time-to-close for RMAs.</p>
+      <p>Metal Detection and Communications both carry high-touch warranty and RMA workloads that spike after every product launch. Agents pivot between Salesforce Service Cloud, SAP, and email to close a single case. Task mining stitches the agent journey, exposes hand-off delays between service and engineering, and names the specific after-call-work steps ripe for Agentforce automation. Metric moved: first-contact resolution and mean-time-to-close for RMAs.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, SAP</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Lyndall+Fahey+Codan">Lyndall Fahey</a> (Customer Service Manager, ANZ)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent mentions of Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate tied to Codan in Slack or public sources — the deal is open-field with no incumbent process-mining vendor to displace.</span></h2>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. Defence &amp; Dual-Use Export Controls (ITAR / DEC / Australian Defence Trade Controls)</summary>
+    <div class="use-case-body">
+      <p>Codan Defence Electronics, DTC, and elements of Codan Radio Communications sell into defence and dual-use markets covered by ITAR, US EAR, and the Australian Defence Trade Controls Act. Compliance Center codifies the pre-shipment screening, end-user verification, and licence-tracking workflow as a controlled process with SoD, sign-offs, and evidence retention. Metric moved: audit-ready shipments and mean-time-to-evidence for a control audit.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP SD, trade-compliance / denied-party screening</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Michael+Barton+Codan">Michael Barton</a> (Chief Financial Officer &amp; Company Secretary)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. SAP Segregation-of-Duties &amp; ASX Financial Reporting Controls</summary>
+    <div class="use-case-body">
+      <p>As an ASX-listed group with a live SAP rollout across three BUs, Codan needs a defensible SoD design before go-live, not after. Compliance Center runs SoD conflicts, sensitive-access reviews, and period-close controls as a single controlled workflow with evidence retained per BU. Especially important as unification pulls previously separate Minelab, DTC, and Zetron legers onto one platform. Metric moved: SoD conflicts closed and mean-time-to-remediation.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP FICO, SAP GRC</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Michael+Barton+Codan">Michael Barton</a> (Chief Financial Officer &amp; Company Secretary)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Design-Change Control for Defence &amp; Dual-Use Products</summary>
+    <div class="use-case-body">
+      <p>Defence and dual-use products carry design-change control obligations that go well beyond commercial ECO. Every drawing revision, BOM change, and firmware update needs a documented approval trail linked to the export-classification decision. Compliance Center runs the design-change workflow with codified approvers, evidence retention, and linkage back to the ITAR/DEC classification &mdash; auditable per product line. Metric moved: audit findings per programme and cycle time on classified change orders.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> PLM, SAP PP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jack+Sudarev+Codan">Jack Sudarev</a> (VP Engineering &amp; Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Codan Limited by mining the live SAP rollout across Minelab, DTC, and Zetron to expose exactly where the pre-defined flows diverge from how each BU actually operates, task-mining SAP end-users and RMA agents to surface the swivel-chair work Agentforce can eliminate, and running defence export controls and SAP segregation-of-duties through Compliance Center &mdash; cutting rework, protecting go-live dates, and giving CFO Michael Barton event-level evidence that the unification transformation is landing.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

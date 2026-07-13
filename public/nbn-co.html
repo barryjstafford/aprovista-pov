@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -114,38 +115,36 @@
     <p><strong>Communications &amp; Media, Wholesale Broadband Infrastructure</strong></p>
     <p><strong>Revenue:</strong> ~A$5.8B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~5,500 &nbsp;|&nbsp; <strong>HQ:</strong> North Sydney, Australia</p>
     <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Marketing Cloud, Tableau, Agentforce 1 Edition, Data Cloud, Experience Cloud (Partner Portal)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with William Jones — likely SAP or Oracle for finance, ServiceNow for ITSM given Telco footprint]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> NBN Co Limited Renewal 700 Call Center, 1 Customer Portal, 1700 Partner (<a href="https://org62.my.salesforce.com/006ed00000F2ZCLAA3">$3.42M</a>) &nbsp;|&nbsp; NBN Co - Upgrade Agentforce 1 Edition (+1000) (<a href="https://org62.my.salesforce.com/006ed00000WgUYkAAN">$924K</a>) &nbsp;|&nbsp; NBN | Agentforce + Data Cloud (AELA) #AELAANZ (<a href="https://org62.my.salesforce.com/006ed00000XfsizAAB">$784K</a>)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> NBN Co Renewal &mdash; Service Cloud 700 + Partner Portal (<a href="https://org62.my.salesforce.com/006ed00000F2ZCLAA3">$3.42M</a>) &nbsp;|&nbsp; NBN Co &mdash; Upgrade Agentforce 1 Edition (+1000) (<a href="https://org62.my.salesforce.com/006ed00000WgUYkAAN">$924K</a>) &nbsp;|&nbsp; NBN &mdash; Agentforce + Data Cloud AELA (<a href="https://org62.my.salesforce.com/006ed00000XfsizAAB">$784K</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G17X1ECE">William Jones</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">85/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">85/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$10M+ open pipeline: $3.4M renewal, Agentforce+DC AELA, Tableau Plus, CTO offer, SF Remediation SOW.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Active SF Remediation SOW confirms process debt; network activation + service assurance drag known.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">Dense Salesforce estate (Sales/Service/MC/Tableau/Agentforce/Data Cloud) — mineable logs abundant.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Agentforce 1 upgrade + Data Cloud AELA both in negotiation — active agentic-AI transformation.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>12/15</td><td class="cat-green">Telco / Comms &amp; Media is a priority AFPI vertical — service assurance + activation are canonical.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$5M+ open pipeline: $3.4M Service Cloud renewal, $924K Agentforce upgrade, $784K Data Cloud AELA.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Two active Agentforce opps in negotiation &mdash; classic pre-deployment mining window.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">Dense SF estate (Sales/Service/MC/Tableau/Agentforce/Data Cloud) &mdash; mineable logs abundant.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Service activation, fault-to-resolve, and RSP wholesale order flow all carry SLA and TIO exposure.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-orange">$5M+ SF pipeline in flight &mdash; AFPI attach can ride the renewal + Agentforce close cycle.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-orange">Fed-gov-owned; TIO ombudsman + Critical Infrastructure Act apply, but no SOX/KYC urgency driver.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">CIO/COO reachable via SF AE team; no named AFPI sponsor yet — needs discovery meeting to lock.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">CIO/COO reachable via SF AE team; no named AFPI sponsor yet &mdash; needs discovery meeting to lock.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-orange">Fed-gov-owned; TIO ombudsman + Security of Critical Infrastructure Act apply, no SOX/KYC urgency.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help NBN Co Limited by mining service-activation, fault-to-resolve, and RSP wholesale-order-management flows across Sales Cloud, Service Cloud, Data Cloud, and its OSS/BSS estate — giving CEO Ellie Sweeney and the CTO office defensible baselines to prove where the $3.4M Service Cloud renewal, the Agentforce 1 upgrade, and the Data Cloud AELA will actually move the needle on installation cycle time, right-first-time rates, and TIO complaint volume.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Service Activation &amp; Installation Cycle Compression (RSP-facing)</summary>
     <div class="use-case-body">
-      <p>NBN Co orchestrates activation for every retail service provider (Telstra, Optus, TPG, Aussie Broadband, etc.) across FTTP, FTTN, HFC, and Fixed Wireless — a hand-off-heavy process where each rework loop directly hits SLAs, RSP satisfaction, and TIO complaint volume. Mining Order → Design → Field-Job → Activation → Confirmation across Service Cloud and the OSS/BSS event stream will expose where truck-rolls repeat, where "appointment missed" and "premises not ready" traces diverge from happy-path, and which RSP+technology combinations burn the most cycle time. AFPI can baseline this in weeks and give the COO the evidence pack the Agentforce activation-agent business case needs. Target metric: cut mean activation cycle by 20% and lift right-first-time by 8 points.</p>
+      <p>NBN Co orchestrates activation for every retail service provider &mdash; Telstra, Optus, TPG, Aussie Broadband &mdash; across FTTP, FTTN, HFC, and Fixed Wireless. It is a hand-off-heavy process where every rework loop hits SLAs, RSP satisfaction, and TIO complaint volume. Mining Order &rarr; Design &rarr; Field-Job &rarr; Activation &rarr; Confirmation across Service Cloud and the OSS/BSS event stream exposes where truck-rolls repeat and which RSP + technology combinations burn the most cycle time. Target metric: cut mean activation cycle by 20% and lift right-first-time by 8 points.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Data Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ellie+Sweeney+NBN+Co">Ellie Sweeney</a> (Chief Executive Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -155,7 +154,7 @@
   <details>
     <summary>2. Fault-to-Resolve &amp; Assurance (Trouble-Ticket Flow)</summary>
     <div class="use-case-body">
-      <p>Fault handling on the wholesale network is the single most visible NBN process — every unresolved incident ends up in TIO complaint data and government dashboards. Mining the trouble-ticket lifecycle (RSP-raised ticket → NBN triage → Tier 2 → field dispatch → close → RSP callback) across Service Cloud and Data Cloud will surface reroute loops between Tier-1/Tier-2, cases that bounce between "customer premises" vs "network fault" classifications, and where SLA breaches actually originate. AFPI hands the Assurance leadership team a diagnostic they cannot get from BI dashboards — the actual process graph, with variants ranked by cost. Target metric: cut mean-time-to-restore by 25% and drop repeat-fault rate by 30%.</p>
+      <p>Fault handling on the wholesale network is the single most visible NBN process &mdash; every unresolved incident ends up in TIO complaint data and government dashboards. Mining the trouble-ticket lifecycle (RSP-raised ticket &rarr; NBN triage &rarr; Tier 2 &rarr; field dispatch &rarr; close) across Service Cloud and Data Cloud surfaces reroute loops between Tier-1/Tier-2, misclassified "customer premises" vs "network fault" traces, and where SLA breaches actually originate. AFPI hands Assurance leadership a diagnostic no BI dashboard can &mdash; the actual process graph with variants ranked by cost. Target metric: cut MTTR by 25% and drop repeat-fault rate by 30%.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Data Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Operating+Officer+NBN+Co">Chief Operating Officer</a> (Network Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -165,34 +164,78 @@
   <details>
     <summary>3. Wholesale Order-to-Bill (RSP Partner Portal)</summary>
     <div class="use-case-body">
-      <p>NBN's B2B revenue model is entirely wholesale — every dollar comes through an RSP order placed via the Partner Portal. Mining the wholesale Order-to-Bill process across Experience Cloud (Partner Portal) → Sales Cloud → invoicing systems will expose where RSP orders stall on validation, credit checks, or CVC/AVC configuration errors, and where downstream billing exceptions cluster. This maps directly onto the $3.4M Service Cloud renewal case: prove the current portal costs X hours of RSP-facing rework, and the renewal becomes a value story, not a price story. Target metric: cut wholesale-order-to-active cycle by 30% and eliminate 40% of billing exceptions at source.</p>
+      <p>NBN's B2B revenue model is entirely wholesale &mdash; every dollar comes through an RSP order placed via the Partner Portal. Mining Order-to-Bill across Experience Cloud &rarr; Sales Cloud &rarr; invoicing exposes where RSP orders stall on validation, credit checks, or CVC/AVC configuration errors, and where downstream billing exceptions cluster. This maps directly onto the $3.4M Service Cloud renewal case: prove the current portal costs X hours of RSP-facing rework, and the renewal becomes a value story, not a price story. Target metric: cut wholesale-order-to-active cycle by 30% and eliminate 40% of billing exceptions at source.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Experience Cloud, Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Customer+Officer+NBN+Co">Chief Customer Officer</a> (Wholesale &amp; RSP)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>4. Agentforce Readiness — Case Deflection &amp; Agent Assist</summary>
+    <summary>1. Tier-2 Fault Diagnostic Desktop (OSS/BSS Swivel-Chair)</summary>
     <div class="use-case-body">
-      <p>NBN Co has an active $924K Agentforce 1 upgrade (+1000 users) and a $784K Agentforce + Data Cloud AELA — both in stage 2, both needing a defensible baseline before rollout. You cannot deploy an agent on a process you have not mined. AFPI can map the current case-handling variants across Service Cloud + Data Cloud, isolate the 5-10 high-volume intents that Agentforce should own on day one, and quantify the deflection ceiling before any prompt is written. This de-risks the AELA and gives William Jones the value narrative to close both opps as a linked bet. Target metric: identify 30% of case volume as agent-eligible with quantified handle-time savings.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Data Cloud</p>
+      <p>Tier-2 network diagnostic agents flip between the Service Cloud console, OSS/BSS diagnostic tools, network topology viewers, and knowledge base to triage a single fault. Task mining the desktop captures how much time is lost to app-switching, copy/paste of circuit IDs, and repeated lookups &mdash; the exact micro-tasks Agentforce Operations should own. Feeds the $924K Agentforce 1 upgrade business case directly. Target metric: cut mean triage touch-time by 35% and lift closed-on-first-touch by 12 points.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, OSS/BSS diagnostic tools</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Network+Assurance+NBN+Co">Head of Network Assurance</a> (Tier-2 Ops)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. RSP-Facing Service Cloud Agent Handle-Time</summary>
+    <div class="use-case-body">
+      <p>The 700+ agent Service Cloud renewal implies a substantial contact-centre estate serving RSP partners. Task mining agent desktops isolates the wrap-time steps and the tabs that eat after-call-work &mdash; on-screen actions that dashboards never see. Pairs directly with the Agentforce for Service uplift in the $784K AELA. Target metric: cut AHT by 20% and after-call-work by 30% on top-3 contact types.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, knowledge base</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Wholesale+Customer+Service+NBN+Co">Head of Wholesale Customer Service</a> (Contact Centre Ops)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Field Technician Mobile Task Capture</summary>
+    <div class="use-case-body">
+      <p>Field technicians and subcontractors carry mobile devices running work-order apps, dispatch, and photo-evidence capture &mdash; a highly variable process where variance drives repeat truck-rolls. Task mining the field-facing app stream exposes where technicians deviate from work instructions, which asset-scan steps get skipped, and where "premises not ready" gets miscoded. Metric: cut repeat truck-rolls by 15% and lift first-visit completion by 8 points.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Field Service, work-order dispatch app</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Field+Operations+NBN+Co">Head of Field Operations</a> (Deployment)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. TIO Complaint Root-Cause &amp; Regulatory Reporting</summary>
+    <div class="use-case-body">
+      <p>As a federal-government-owned entity under the Telecommunications Consumer Protections Code and the TIO ombudsman regime, every escalated complaint is a political liability. Compliance Center codifies the complaint-handling flow (RSP escalation &rarr; NBN Level 1 &rarr; Level 2 &rarr; TIO referral &rarr; resolution) as a controlled workflow with segregation-of-duties, sign-offs, and always-on audit evidence. Every mined variant becomes an audit-ready control. Metric: cut TIO-referred complaints by 20% and shorten resolution cycle by 15%.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, complaints case log</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Legal+and+Regulatory+Officer+NBN+Co">Chief Legal &amp; Regulatory Officer</a> (Compliance)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Security of Critical Infrastructure Act (SoCI) Controls</summary>
+    <div class="use-case-body">
+      <p>NBN Co is a declared Systems of National Significance asset under the Security of Critical Infrastructure Act, obliged to demonstrate risk-management, incident-response, and access-control processes to the Cyber and Infrastructure Security Centre (CISC). Compliance Center runs the risk-management program (identify &rarr; assess &rarr; mitigate &rarr; report) with codified controls, sign-offs, and evidence that answers CISC in one click rather than a spreadsheet drill. Metric: audit-ready control coverage and mean-time-to-evidence-package.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> GRC platform, IAM / access-control logs</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Security+Officer+NBN+Co">Chief Security Officer</a> (CISO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Agentforce Model &amp; AI Governance for Regulated Ops</summary>
+    <div class="use-case-body">
+      <p>The $924K Agentforce 1 uplift and $784K Data Cloud AELA put agentic AI directly into RSP-facing service processes &mdash; territory that will draw scrutiny from the TIO, the ACMA, and the federal government as majority owner. Compliance Center runs the AI lifecycle (promote &rarr; monitor &rarr; drift-review &rarr; retire) as a controlled process with codified evidence, so the Agentforce rollout has a defensible audit trail from day one. Metric: agents in governed lifecycle coverage and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce runtime, Data Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Technology+Officer+NBN+Co">Chief Technology Officer</a> (Digital &amp; AI)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <details>
-    <summary>5. Compliance &amp; TIO Complaint Root-Cause Mining</summary>
-    <div class="use-case-body">
-      <p>As a federal-government-owned entity operating under the Telecommunications Consumer Protections Code, the TIO ombudsman regime, and the Security of Critical Infrastructure Act, NBN Co carries public-facing accountability that no private telco does — every escalated complaint is a political liability. Mining the complaint-handling flow (RSP escalation → NBN Level 1 → Level 2 → TIO referral → resolution) across Service Cloud and the compliance evidence trail will pinpoint which process variants systematically end in TIO referral, and which controls actually prevent it. AFPI's Compliance Center wedge fits here perfectly — every mined variant is an audit-ready control. Target metric: cut TIO-referred complaints by 20% and shorten resolution cycle by 15%.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Data Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Legal+Officer+NBN+Co">Chief Legal &amp; Regulatory Officer</a> (Compliance)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent competitive mentions found tying Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate directly to NBN Co — the process-mining field is open. Telcos globally (Vodafone, Deutsche Telekom, BT) have Celonis footprints, so a proactive Apromore engagement here pre-empts an inbound Celonis pitch tied to the Agentforce rollout.</span></h2>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help NBN Co Limited by mining service-activation, fault-to-resolve, and wholesale-order-to-bill flows across Service Cloud, Experience Cloud, and Data Cloud, task-mining Tier-2 diagnostic and contact-centre desktops to prove where Agentforce Operations can eliminate swivel-chair work, and running TIO complaint, SoCI, and Agentforce AI-lifecycle controls through Compliance Center to cut activation cycle, MTTR, and TIO referrals while giving CISC and the ombudsman always-on audit evidence.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -203,7 +246,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

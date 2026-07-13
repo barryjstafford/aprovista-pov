@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -108,10 +113,10 @@
   <h1>Duferco Energia S.p.A.</h1>
   <div class="snapshot">
     <p><strong>Utilities, Electricity &amp; Gas Retail + Energy Trading</strong></p>
-    <p><strong>Revenue:</strong> €2.68B &nbsp;|&nbsp; <strong>Employees:</strong> 368 &nbsp;|&nbsp; <strong>HQ:</strong> Genova, Italy</p>
-    <p><strong>Major Subsidiaries:</strong> Duferco Mobility, Elettra Car Sharing (part of Duferco Group with Duferco Italia Holding, Duferco Travi e Profilati, Duferco Commerciale)</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> MuleSoft, Sales Cloud, Service Cloud, Marketing Cloud (ExactTarget), Industries CPQ (Vlocity Utilities), SteelBrick CPQ, Billing Plus, Partner Community, Mobile Publisher, Sandboxes</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Andrea Zanchetta] — likely SAP IS-U or comparable retail-energy billing stack given Billing Plus + Vlocity Utilities footprint.</p>
+    <p><strong>Revenue:</strong> ~&euro;2.68B &nbsp;|&nbsp; <strong>Employees:</strong> ~368 &nbsp;|&nbsp; <strong>HQ:</strong> Genova, Italy</p>
+    <p><strong>Major Subsidiaries:</strong> Duferco Mobility, Elettra Car Sharing</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Enterprise), Service Cloud (Enterprise), Service Cloud Voice with Amazon Connect, Energy &amp; Utilities Cloud (Vlocity Utilities), Salesforce CPQ Plus, Billing Plus, Marketing Cloud Engagement (ExactTarget), MuleSoft Anypoint (Platinum), Mobile Publisher, Digital Engagement, Salesforce Shield, Privacy Center, Data Mask, Salesforce Maps, Partner &amp; Customer Communities, Own Accelerate (Azure)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> MS - Duferco Energia - Apromore (<a href="https://org62.my.salesforce.com/006ed00000XiHwbAAF">$100k</a>) &nbsp;|&nbsp; Duferco - Process Mining Assessment - BDR (<a href="https://org62.my.salesforce.com/006ed00000cGzUfAAK">$80k</a>) &nbsp;|&nbsp; Renewal 36 MuleSoft (<a href="https://org62.my.salesforce.com/006ed00000fsRWfAAM">$369k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GLNRP14Z">Andrea Zanchetta</a></p>
@@ -119,32 +124,30 @@
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">89/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">92/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Buyer &amp; Champion Fit</td><td>19/20</td><td class="cat-green">Active $100k Apromore opp + $80k Process Mining Assessment already in stage 02 — champion is engaged and qualified.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Priority vertical: retail electricity + gas + energy trading — event-log-rich, ARERA-regulated, chronic switching pain.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud: MuleSoft ($369k renewal), Vlocity Utilities CPQ, Billing Plus, Sales/Service, MC — Zanchetta owns 9 open opps.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Two active process-mining opps totalling $180k in flight + $43k MAF expansion validating benefits — budget is live now.</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">ARERA retail-energy regulation, PUN/PSV indexed pricing, EU energy-market rules, CSRD — audit-grade process evidence is table stakes.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Italian retail electricity + gas + energy trading &mdash; priority AFPI vertical with rich, ARERA-regulated event logs.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep E&amp;U Cloud stack: MuleSoft Platinum, Vlocity Utilities, Billing Plus, CPQ Plus, Service Cloud Voice, Shield.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Two live PM opps ($100k Apromore + $80k Assessment) plus $43k MAF expansion validating benefits &mdash; budget is now.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">Mobile Publisher SEV-1 hit 700k customers; Freshdesk replacement, ARERA switching windows, complaint indennizzi all acknowledged.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">Andrea Zanchetta owns 13 open opps; Rosa Pepe leads delivery; Agentforce lab attendance shows sponsor engagement.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-orange">MuleSoft + Vlocity Utilities + Billing Plus imply strong log surface, but core billing/ERP stack not yet named — needs discovery.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>9/12</td><td class="cat-orange">Multiple add-on opps (MC Next, MAF expansion, Mobile Publisher) show momentum, but no named Agentforce or AI CoE program yet.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-orange">MuleSoft + Vlocity + Billing Plus give strong log surface, but the core meter-data / billing back-end is not yet named.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-orange">Agentforce Voice ($150k) and Agentforce 1 Upgrade ($100k) are still early-stage; no formal AI CoE or Data Cloud program yet.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Duferco Energia S.p.A. by mining the meter-to-cash, customer-switching, and MuleSoft-orchestrated billing flows across Vlocity Utilities CPQ, Billing Plus and the retail energy stack — de-risking the active $100k Apromore opp and $80k Process Mining Assessment, defending the $369k MuleSoft renewal with a shared process baseline, and giving Andrea Zanchetta a concrete ROI story rooted in first-bill-right, DSO, and ARERA compliance.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Meter-to-Cash for Retail Electricity &amp; Gas (Luce &amp; Gas)</summary>
     <div class="use-case-body">
-      <p>Duferco Energia sells electricity and gas to households, condominiums, SMEs and large corporates on PUN/PSV-indexed plans — every new fornitura, plan change, and price re-indexing touches MuleSoft, Vlocity Utilities CPQ and Billing Plus. Billing exceptions, delayed switching (voltura/subentro), and payment-plan rework are chronic and drive both inbound call volume and credit-note issuance. AFPI mines the end-to-end meter-to-cash event log to quantify DSO, first-bill-right rate and self-service leakage, then feeds a concrete target-state into the ongoing MC Next migration and the MuleSoft renewal. Metric moved: DSO, first-bill-right %, cost-to-serve per customer, first-call resolution.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft, Vlocity Utilities CPQ (Billing Plus)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=CFO+Duferco+Energia">CFO — TBD</a> (Chief Financial Officer, Duferco Energia)</p>
+      <p>Duferco Energia sells electricity and gas to ~700k households, condominiums, SMEs and large corporates on PUN/PSV-indexed plans &mdash; every new fornitura, plan change, and re-indexing touches MuleSoft, Vlocity Utilities CPQ and Billing Plus. Billing exceptions, delayed switching and payment-plan rework are chronic and drive both inbound call volume and credit-note issuance. AFPI mines the end-to-end meter-to-cash event log to quantify DSO, first-bill-right rate and self-service leakage, then feeds a concrete target-state into the ongoing MC Next migration and the $369k MuleSoft renewal. Metric moved: DSO, first-bill-right %, cost-to-serve per customer.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft, Billing Plus</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=CFO+Duferco+Energia">CFO &mdash; TBD</a> (Chief Financial Officer, Duferco Energia)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -152,9 +155,9 @@
   <details>
     <summary>2. Customer Switching &amp; Contract Onboarding (Voltura / Subentro / Cambio Fornitore)</summary>
     <div class="use-case-body">
-      <p>Italian retail energy is fiercely churn-driven — Duferco Energia must onboard new customers from incumbents (voltura, subentro, cambio fornitore) within ARERA-mandated windows and hand-off cleanly between commercial, distributor (SII) and billing systems. Every stall between contract signature and first bill is a churn risk and an ARERA exposure. AFPI mines the CPQ-to-activation event log across Sales Cloud, Vlocity Utilities and the SII integration mediated by MuleSoft to expose which variants blow the switching SLA and why (documentation loops, POD/PDR mismatches, credit-check bounces). Metric moved: ARERA-compliant switching %, contract-to-first-bill cycle time, early-life churn rate.</p>
+      <p>Italian retail energy is fiercely churn-driven &mdash; Duferco Energia must onboard new customers from incumbents (voltura, subentro, cambio fornitore) within ARERA-mandated windows and hand off cleanly between commercial, distributor (SII) and billing systems. Every stall between contract signature and first bill is a churn risk and an ARERA exposure. AFPI mines the CPQ-to-activation event log across Sales Cloud, Vlocity Utilities and the SII integration mediated by MuleSoft to expose which variants blow the switching SLA and why (documentation loops, POD/PDR mismatches, credit-check bounces). Metric moved: ARERA-compliant switching %, contract-to-first-bill cycle time, early-life churn.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Vlocity Utilities CPQ, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Sales+Duferco+Energia">Head of Retail Sales — TBD</a> (Direttore Vendite, Duferco Energia)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Sales+Duferco+Energia">Head of Retail Sales &mdash; TBD</a> (Direttore Vendite, Duferco Energia)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -162,34 +165,80 @@
   <details>
     <summary>3. Energy Trading Front-to-Back Settlement</summary>
     <div class="use-case-body">
-      <p>Duferco Energia operates a dedicated wholesale trading desk on Italian and European power/gas markets — every trade must flow cleanly from front-office execution through risk, back-office confirmation, settlement and regulatory reporting (REMIT, EMIR). Failed confirmations, break-fixes and manual reconciliations are where P&amp;L bleeds and audit findings emerge. AFPI mines the trade-lifecycle event log to expose which counterparties, product types and desk workflows generate the most rework, and how long confirmations really sit before matching. Directly reinforces the audit-grade posture that regulators and internal risk demand. Metric moved: STP rate, break resolution time, REMIT reporting cycle time, operational-risk loss events.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft, Trading &amp; Risk platform (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Trading+Duferco+Energia">Head of Energy Trading — TBD</a> (Direttore Trading, Duferco Energia)</p>
+      <p>Duferco Energia operates a dedicated wholesale trading desk on Italian and European power / gas markets &mdash; every trade must flow cleanly from front-office execution through risk, back-office confirmation, settlement and regulatory reporting (REMIT, EMIR). Failed confirmations, break-fixes and manual reconciliations are where P&amp;L bleeds and audit findings emerge. AFPI mines the trade-lifecycle event log to expose which counterparties, product types and desk workflows generate the most rework, and how long confirmations really sit before matching. Metric moved: STP rate, break resolution time, REMIT reporting cycle time, operational-risk loss events.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Trading &amp; Risk platform, MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Energy+Trading+Duferco+Energia">Head of Energy Trading &mdash; TBD</a> (Direttore Trading, Duferco Energia)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Service Cloud Voice Agent Handle-Time &amp; After-Call-Work</summary>
+    <div class="use-case-body">
+      <p>Since the December 2024 go-live, Duferco Energia's entire customer service estate runs on Service Cloud Voice with Amazon Connect, replacing Freshdesk across phone, email and WhatsApp. Agents still juggle the Service Cloud console, Vlocity Utilities screens and the billing back-end &mdash; every extra tab is measurable AHT and wrap-time waste. Task mining captures on-screen actions to isolate the after-call-work steps that could go to Agentforce Voice (the open $150k opp). Metric moved: AHT, ACW minutes per contact type, first-call resolution.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud Voice console, Vlocity Utilities</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Care+Duferco+Energia">Head of Customer Care &mdash; TBD</a> (Responsabile Customer Care, Duferco Energia)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Customer Service &amp; Complaint Handling (ARERA Reclami)</summary>
+    <summary>2. Billing &amp; Credit-Note Analyst Desktop Rework</summary>
     <div class="use-case-body">
-      <p>ARERA enforces strict SLAs on Duferco Energia's handling of written complaints (reclami scritti), billing disputes and quality-of-service events — miss the deadline and the customer gets an automatic indennizzo (compensation) that the retailer eats. Complaints ricochet across Service Cloud, MuleSoft, the billing stack and back-office analysts, with plenty of dead time between hops. AFPI mines the reclamo-to-resolution event log to expose which complaint categories bust the ARERA clock, where handoffs stall, and which agents/BUs are outliers. Feeds a real ROI case for Agentforce and self-service investment. Metric moved: ARERA SLA-compliant %, indennizzo payout, complaint reopen rate, cost-per-complaint.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Operations+Duferco+Energia">Head of Customer Operations — TBD</a> (Responsabile Customer Care, Duferco Energia)</p>
+      <p>Billing and credit-management analysts spend their day reconciling meter data, disputed line items, and payment-plan changes across Billing Plus, MuleSoft-orchestrated data flows, and email attachments from the distributor. Every disputed bill triggers a manual credit-note workflow that is impossible to see in a BPMN diagram. Task mining the analyst desktop names the exact steps &mdash; the copy-paste, the spreadsheet, the portal login &mdash; that Agentforce can automate. Metric moved: credit-note cycle time, credit-notes per analyst per day, first-bill-right %.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Billing Plus, MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Billing+Duferco+Energia">Head of Billing &amp; Credit &mdash; TBD</a> (Responsabile Fatturazione, Duferco Energia)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. E-Mobility Operations (Duferco Mobility &amp; Elettra Car Sharing)</summary>
+    <summary>3. E-Mobility Ops Desktop (Duferco Mobility &amp; Elettra Car Sharing)</summary>
     <div class="use-case-body">
-      <p>Duferco Mobility and the Elettra electric car-sharing platform are the group's fastest-growing bet on the energy transition — vehicle onboarding, session activation, charging authorisation, and post-trip billing span the mobility app, the OCPP charging network, MuleSoft and the retail-energy billing stack. Every failed charge session, disputed trip fee, or asset-availability gap is a direct hit on customer experience and unit economics. AFPI mines the session-to-invoice event log to expose fallout patterns, authorisation failures and vehicle-utilisation blockers — a clean fit with the active Mobile Publisher and MC Next investments. Metric moved: session success rate, revenue per vehicle-day, dispute rate, activation cycle time.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Mobile Publisher / mobility app, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Duferco+Mobility+CEO">Head of Duferco Mobility — TBD</a> (Direttore Mobility &amp; E-Mobility)</p>
+      <p>Duferco Mobility and the Elettra electric car-sharing platform are the group's fastest-growing bet on the energy transition &mdash; vehicle onboarding, session activation, charging authorisation and post-trip billing span the Mobile Publisher app, the OCPP charging network, MuleSoft and the retail-energy billing stack. Operations analysts still handle failed charge sessions, disputed trip fees and asset-availability gaps by hand across multiple screens. Task mining the mobility-ops desktop exposes fallout patterns and the copy/paste steps between the OCPP portal and Billing Plus, feeding both the active Mobile Publisher work and the MC Next roadmap. Metric moved: session success rate, revenue per vehicle-day, dispute rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Mobile Publisher mobility app, OCPP charging portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Duferco+Mobility+Director">Head of Duferco Mobility &mdash; TBD</a> (Direttore Mobility &amp; E-Mobility)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. ARERA Complaint SLA &amp; Indennizzo Controls (Reclami Scritti)</summary>
+    <div class="use-case-body">
+      <p>ARERA enforces strict SLAs on Duferco Energia's handling of written complaints (reclami scritti), billing disputes and quality-of-service events &mdash; miss the deadline and the retailer pays an automatic indennizzo. Compliance Center codifies the complaint-to-resolution workflow with controlled SLAs, sign-offs and continuous evidence for the ARERA regulator. Every reopened complaint or missed deadline is captured as a control event, not a spreadsheet line. Metric moved: ARERA SLA-compliant %, indennizzo payout, complaint reopen rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Billing Plus</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Compliance+Manager+Duferco+Energia">Head of Regulatory Compliance &mdash; TBD</a> (Responsabile Compliance Regolatoria)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. REMIT / EMIR Trading Surveillance &amp; Reporting</summary>
+    <div class="use-case-body">
+      <p>Duferco Energia's wholesale trading desk is directly in scope for REMIT (wholesale energy market transparency) and EMIR (derivatives reporting) &mdash; every trade, cancellation, and inside-information disclosure needs an auditable chain of controls. Compliance Center runs the reporting and surveillance workflow with segregation-of-duties, sign-offs and evidence, so ACER and ESMA examiners get an always-on view instead of a stitched-together annual submission. Metric moved: on-time REMIT/EMIR reporting %, surveillance-alert clearance time, audit findings per cycle.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Trading &amp; Risk platform, MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Risk+Duferco+Energia">Head of Trading Risk / Compliance &mdash; TBD</a> (Responsabile Risk &amp; Compliance Trading)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. CSRD &amp; Green Energy Certification Evidence</summary>
+    <div class="use-case-body">
+      <p>Duferco Energia sells green-energy tariffs and green mobility (Elettra), and as a Duferco Group entity must contribute to CSRD sustainability reporting from FY25 onward. Compliance Center runs the evidence lifecycle for Guarantee of Origin allocation, green-tariff attestations and CSRD KPIs as a controlled workflow with auditor-ready sign-offs. Ties the group's ESG narrative to real underlying transactions rather than spreadsheet totals. Metric moved: auditor-ready CSRD KPIs, Guarantee-of-Origin traceability, restatement risk.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Billing Plus, MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Sustainability+Manager+Duferco+Energia">Head of Sustainability / ESG Reporting &mdash; TBD</a> (Responsabile Sostenibilit&agrave;)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Duferco Energia S.p.A. by mining meter-to-cash, customer-switching and energy-trading flows across MuleSoft, Vlocity Utilities and Billing Plus, task-mining Service Cloud Voice, billing analyst and e-mobility desktops to seed the Agentforce Voice and MC Next investments, and running ARERA complaint, REMIT/EMIR trading and CSRD evidence through Compliance Center &mdash; de-risking the active $100k Apromore opp and $80k Process Mining Assessment, defending the $369k MuleSoft renewal, and giving Andrea Zanchetta a concrete first-bill-right, DSO, AHT and ARERA-SLA ROI story.</p>
+
+  <div class="actions">
     <span>Generate PDF</span>
     <span>Generate Slack Canvas</span>
     <span>Generate Vercel Page</span>
@@ -198,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

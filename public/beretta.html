@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fabbrica D'Armi Pietro Beretta S.p.A. — AFPI POV</title>
+<title>Fabbrica d'Armi Pietro Beretta S.p.A. &mdash; AFPI POV</title>
 <style>
   body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
          color: #1a1a1a; line-height: 1.45; background: #fff; }
@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -109,45 +110,43 @@
   </div>
 </header>
 <main>
-  <h1>Fabbrica D'Armi Pietro Beretta S.p.A.</h1>
+  <h1>Fabbrica d'Armi Pietro Beretta S.p.A.</h1>
   <div class="snapshot">
     <p><strong>Manufacturing, Sporting Firearms &amp; Defense</strong></p>
     <p><strong>Revenue:</strong> ~$435M (Civil + BDT divisions; Beretta Holding group ~$1B+) &nbsp;|&nbsp; <strong>Employees:</strong> ~6,500 group (~3,000 at S.p.A.) &nbsp;|&nbsp; <strong>HQ:</strong> Gardone Val Trompia, Italy</p>
-    <p><strong>Major Subsidiaries:</strong> Benelli Armi, Sako, Franchi, Stoeger, Tikka, Burris Optics</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (251 Full CRM + 560 Partner + 21,502 Customer Portal), Marketing Cloud ExactTarget, Data Cloud for Marketing, Tableau, HR Service, Service Cloud (Call Center — AU)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Umberto Arrighini, IT Manager] — presumed ERP given multi-brand manufacturing footprint</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Fabbrica D'Armi Beretta Civil Renewal 251 Full CRM (<a href="https://org62.my.salesforce.com/006ed000006tbGQAAY">$721k</a>) | Beretta_Apromore (<a href="https://org62.my.salesforce.com/006ed00000f6UjlAAE">$50k</a>) | HR Service + Tableau_Beretta_BDR (<a href="https://org62.my.salesforce.com/006ed00000X6kQSAAZ">$60k</a>)</p>
+    <p><strong>Major Subsidiaries:</strong> Benelli Armi, Sako, Franchi, Stoeger, Burris Optics</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales &amp; Service Cloud Unlimited, Sales Cloud Unlimited, Partner Community Unlimited, Customer Community Unlimited, Marketing Cloud Engagement (ExactTarget) Corporate, CRM Analytics (Tableau CRM), Social Studio, Heroku, Event Monitoring, Platform Encryption, Salesforce Customer Identity</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Beretta (Civil) Renewal 251 Full CRM + 560 Partner + 21,502 Customer Portal (<a href="https://org62.my.salesforce.com/006ed000006tbGQAAY">$722k</a>) &nbsp;|&nbsp; Beretta_Apromore (<a href="https://org62.my.salesforce.com/006ed00000f6UjlAAE">$50k</a>) &nbsp;|&nbsp; HR Service + Tableau_Beretta_BDR (<a href="https://org62.my.salesforce.com/006ed00000X6kQSAAZ">$60k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G920F8GK">Stefano Miglietta</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Sales Cloud + Data Cloud)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">85/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">85/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$1M+ ARR, dedicated NAE, $721k Full CRM renewal in Negotiate stage right now.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Beretta_Apromore opp already open at $50k; APROMORE_BERETTA_BDR pipeline entry exists.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>17/20</td><td class="cat-green">IT Manager Arrighini, IT-Apps head Lari, Digital PM Modenesi, Servitization lead Zanardelli.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>12/15</td><td class="cat-orange">Multi-brand rollup (Benelli, Sako, Burris, Holland &amp; Holland, SwissP) — classic O2C/P2P harmonization pain.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>12/15</td><td class="cat-orange">Discrete manufacturing + regulated dual-use goods sits squarely in Apromore's priority verticals.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$1M+ ARR install base, active $722k Full CRM renewal in Negotiate right now, dedicated NAE.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Beretta_Apromore opp already open at $50k &mdash; a live entry point, not a cold approach.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Discrete manufacturing + regulated dual-use goods sits squarely in AFPI's priority verticals.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>17/20</td><td class="cat-green">IT Manager Arrighini, IT-Apps head Lari, Digital PM Modenesi, Servitization lead Zanardelli all mapped.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-green">Marketing Cloud + CRM Analytics + Servitization function signal AI momentum; no public AF CoE yet.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-green">ITAR, EU dual-use export controls, ATF — heavy but not the highest-risk regime we score.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-green">Data Cloud + Servitization + Digital PM signal AI momentum, but no public AF / CoE announcement yet.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-orange">Salesforce logs are minable today; ERP / trade-compliance backbone is presumed but not confirmed.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-orange">ITAR, EU dual-use export controls, ATF &mdash; heavy but not the highest-risk regime we score.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Fabbrica D'Armi Pietro Beretta S.p.A. by mining the order-to-cash, export-compliance, and post-M&amp;A brand-integration processes across its Benelli/Sako/Franchi/Burris portfolio to cut dealer-order cycle time, prove ITAR/EU dual-use control effectiveness, and turn its live Data Cloud investment into an executable operations-optimization loop.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Global Dealer Order-to-Cash Harmonization Across Beretta Holding Brands</summary>
     <div class="use-case-body">
-      <p>Beretta, Benelli, Sako, Franchi, Stoeger, Tikka, and Burris each run distinct dealer-facing order flows with different lead times, discount ladders, and back-order logic. Mining the end-to-end O2C event log surfaces where the multi-brand model creates duplicated touches, split shipments, and manual credit-check exceptions. AFPI can quantify the "harmonization dividend" — a single dealer experience across brands — and target the 10-15% of orders that consume 40% of ops cost. Metric moved: order-cycle-time and cost-to-serve per dealer.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, ERP (TBD)</p>
+      <p>Beretta, Benelli, Sako, Franchi, Stoeger, Tikka, and Burris each run distinct dealer-facing order flows with different lead times, discount ladders, and back-order logic. Mining the end-to-end O2C event log surfaces where the multi-brand model creates duplicated touches, split shipments, and manual credit-check exceptions. AFPI can quantify the harmonization dividend &mdash; a single dealer experience across brands &mdash; and target the 10-15% of orders that consume 40% of ops cost. Metric moved: order-cycle-time and cost-to-serve per dealer.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, ERP</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Isaac+Gallinella+Beretta">Isaac Gallinella</a> (Sales Operations Manager, Beretta USA)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -156,8 +155,8 @@
   <details>
     <summary>2. Export-Control &amp; Dual-Use Licensing Workflow (ITAR / EU 821)</summary>
     <div class="use-case-body">
-      <p>Every civilian and defense shipment out of Gardone or Accokeek touches an ITAR / EU dual-use license workflow with heavy rework when destination, end-user, or product classification changes late. Mining the license-approval → export-doc → shipment-release trail exposes rework loops, expired-license risk, and shipments that sat in customs waiting on a re-classify. AFPI adds a Compliance Center overlay so audit evidence and control effectiveness are byproducts of the mining, not a separate project. Metric moved: percentage of shipments held for compliance rework and time-to-license-approval.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> ERP, Trade-Compliance module (TBD)</p>
+      <p>Every civilian and defense shipment out of Gardone or Accokeek touches an ITAR / EU dual-use license workflow with heavy rework when destination, end-user, or product classification changes late in the cycle. Mining the license-approval &rarr; export-doc &rarr; shipment-release trail exposes rework loops, expired-license risk, and shipments held in customs waiting on a re-classify. AFPI targets the exact steps where compliance rework crushes on-time-ship. Metric moved: percent of shipments held for compliance rework and time-to-license-approval.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ERP, Trade-Compliance module</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Stefano+Lari+Beretta">Stefano Lari</a> (Responsabile IT Applicazioni Gestionali)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -166,34 +165,78 @@
   <details>
     <summary>3. Post-Acquisition Brand-Integration Playbook (Holland &amp; Holland, Chapuis, SwissP Defence)</summary>
     <div class="use-case-body">
-      <p>Beretta Holding has absorbed Holland &amp; Holland (UK), Chapuis Armes (FR), and SwissP Defence (former RUAG Ammotec) in recent years — each still running non-native master data, catalog, and finance flows. Mining the as-is processes in each acquired entity against the Gardone reference model shows exactly where integration is stuck (usually item-master, pricing, and returns). AFPI turns each integration playbook from a 12-month IT project into an evidence-based, sequenced work backlog. Metric moved: time-to-integrate a new acquisition and share of revenue running on the reference model.</p>
+      <p>Beretta Holding has absorbed Holland &amp; Holland (UK), Chapuis Armes (FR), and SwissP Defence (former RUAG Ammotec) &mdash; each still running non-native master data, catalog, and finance flows. Mining the as-is processes in each acquired entity against the Gardone reference model shows exactly where integration is stuck (usually item-master, pricing, and returns). AFPI turns each integration playbook from a 12-month IT project into an evidence-based, sequenced work backlog. Metric moved: time-to-integrate a new acquisition and share of revenue running on the reference model.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> ERP, Salesforce Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Umberto+Arrighini+Beretta">Umberto Arrighini</a> (IT Manager)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>4. Warranty, Repair &amp; Servitization Flow — Turning Field Service into a Data Product</summary>
+    <summary>1. Dealer-Service Rep Desktop Swivel-Chair Across Multi-Brand Portals</summary>
     <div class="use-case-body">
-      <p>Beretta has a "Digital Business Development — Servitization &amp; Service Platforms" function under Riccardo Zanardelli, which signals a live push to monetize post-sale service across sporting arms and armed forces contracts. Mining the warranty-claim → armorer-repair → replacement-parts → dealer-close-out flow shows leakage (uncaptured warranty revenue, parts stockouts, repeat repairs). AFPI feeds the same event log into Agentforce Operations so a service agent can act on the mined bottleneck. Metric moved: repair turnaround time and attach rate of paid service contracts.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, ERP</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Riccardo+Zanardelli+Beretta">Riccardo Zanardelli</a> (Digital Business Development Manager, Servitization &amp; Service Platforms)</p>
+      <p>With 560 partner-community and 21,502 customer-portal users on the Civil renewal, dealer-service reps hop between Salesforce, brand-specific price lists, ERP order entry, and freight portals to answer one dealer question. Task mining the rep desktop shows how many app-switches, copy-pastes, and repeated lookups a single dealer inquiry actually costs. That evidence feeds Agentforce Operations directly &mdash; naming the exact clicks a service agent should absorb. Metric moved: dealer-inquiry handle time and share of inquiries resolvable without human touch.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud console, brand price-list portals</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Isaac+Gallinella+Beretta">Isaac Gallinella</a> (Sales Operations Manager, Beretta USA)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Marketing-Lead-to-Revenue Loop (Data Cloud + Marketing Cloud + Sales Cloud)</summary>
+    <summary>2. Warranty, Repair &amp; Servitization Desktop &mdash; Turning Field Service into a Data Product</summary>
     <div class="use-case-body">
-      <p>The active $33k Data Cloud for Marketing and $197k MC ExactTarget renewal indicate Beretta is stitching first-party dealer + consumer signals into a lifecycle loop. Mining the campaign → lead → dealer-handoff → closed order path shows where the loop breaks (lead-response SLA, dealer visibility, attribution to bricks-and-mortar sale). AFPI proves ROI on the Data Cloud investment by tying mined process gains directly to conversion metrics the CMO already owns. Metric moved: lead-to-order conversion and marketing-influenced revenue.</p>
+      <p>Beretta's Digital Business Development &mdash; Servitization &amp; Service Platforms function under Riccardo Zanardelli is a live push to monetize post-sale service across sporting arms and armed-forces contracts. Task mining the warranty-claim &rarr; armorer-repair &rarr; parts-replacement &rarr; dealer-close-out desktop reveals leakage (uncaptured warranty revenue, parts stockouts, repeat repairs). AFPI feeds the same signal into Agentforce so a service agent can act on the mined bottleneck, not just report on it. Metric moved: repair turnaround time and attach rate of paid service contracts.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, ERP repair-order</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Riccardo+Zanardelli+Beretta">Riccardo Zanardelli</a> (Digital Business Development, Servitization &amp; Service Platforms)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Marketing-Operations Desktop &mdash; Campaign-to-Dealer-Handoff (Data Cloud + Marketing Cloud + Sales Cloud)</summary>
+    <div class="use-case-body">
+      <p>The $197k Marketing Cloud ExactTarget renewal and CRM Analytics stack indicate Beretta is stitching first-party dealer + consumer signals into a lifecycle loop. Task mining the marketing-ops desktop captures the manual stitching between campaign builder, journey audience export, dealer-handoff spreadsheet, and Sales Cloud lead queue. That maps exactly which steps Agentforce Marketing can automate to close the loop. Metric moved: lead-response SLA and marketing-influenced revenue routed to a named dealer.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Marketing Cloud, Salesforce Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Davide+Modenesi+Beretta">Davide Modenesi</a> (Digital Project Management)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Beretta-specific competitor mentions surfaced in Slack or web signals; Celonis is the presumed default in Italian discrete-manufacturing accounts and should be probed on first call — Apromore's edge is collapsing SQL + PQL specialists into one no-code business analyst for 2-4 week time-to-value.</span></h2>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. ITAR &amp; EU Dual-Use Export-License Control Effectiveness</summary>
+    <div class="use-case-body">
+      <p>ITAR (US), EU Regulation 821/2021 dual-use, and Italian AMA licensing put every civil and defense shipment under formal license controls with heavy penalties for violation. Compliance Center codifies the license-issue &rarr; end-use-check &rarr; shipment-release control set and produces continuous audit evidence tied to the actual mined process, not a hand-built binder. That closes the loop between the operations team and the compliance team on the same event log. Metric moved: audit-ready shipments covered and mean-time-to-evidence per license type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ERP, Trade-Compliance module</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Stefano+Lari+Beretta">Stefano Lari</a> (Responsabile IT Applicazioni Gestionali)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Firearm Serialization, ATF Recordkeeping &amp; Product-Recall Traceability</summary>
+    <div class="use-case-body">
+      <p>US ATF Form 4473 recordkeeping and EU firearms directive traceability require Beretta USA and Gardone to prove every serialized unit's chain-of-custody from manufacture to dealer to end-user. Compliance Center runs serialization + dealer-transfer + recall-notification as a controlled workflow with sign-offs and evidence retention. That converts a periodic ATF inspection scramble into an always-on control. Metric moved: percent of serialized units with complete chain-of-custody and time-to-execute a targeted recall.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ERP serialization, Salesforce Sales Cloud dealer-network</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Umberto+Arrighini+Beretta">Umberto Arrighini</a> (IT Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Segregation-of-Duties &amp; SOX-Style Controls Across Beretta Holding Consolidation</summary>
+    <div class="use-case-body">
+      <p>A multi-brand holding structure &mdash; Beretta, Benelli, Sako, Franchi, Stoeger, Burris, Holland &amp; Holland, Chapuis, SwissP Defence &mdash; forces IFRS consolidation, intercompany reconciliation, and segregation-of-duties across entities with heterogeneous ERPs. Compliance Center codifies close-cycle, journal-approval, and intercompany-settle controls as executable workflows with evidence. That gives the CFO office a single defensible view of control effectiveness across every acquired entity. Metric moved: close cycle time and audit findings per reporting unit.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ERP GL, consolidation platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Umberto+Arrighini+Beretta">Umberto Arrighini</a> (IT Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Fabbrica d'Armi Pietro Beretta S.p.A. by mining multi-brand dealer order-to-cash, export licensing, and post-acquisition brand-integration flows across its Beretta / Benelli / Sako / Burris estate, task-mining dealer-service, servitization, and marketing-ops desktops to expose the swivel-chair work Agentforce Operations can absorb, and running ITAR / EU dual-use, ATF serialization, and multi-entity SOX-style controls through Compliance Center &mdash; cutting order cycle time, lifting warranty attach, and turning periodic export-audit scrambles into always-on control evidence.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

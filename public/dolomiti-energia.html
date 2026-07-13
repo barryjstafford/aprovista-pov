@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -112,43 +113,41 @@
   <h1>Dolomiti Energia S.p.A.</h1>
   <div class="snapshot">
     <p><strong>Utilities, Multi-Utility (Electricity, Gas, Water, District Heating)</strong></p>
-    <p><strong>Revenue:</strong> EUR 935M &nbsp;|&nbsp; <strong>Employees:</strong> ~1,300 &nbsp;|&nbsp; <strong>HQ:</strong> Trento, Italy</p>
+    <p><strong>Revenue:</strong> ~EUR 935M &nbsp;|&nbsp; <strong>Employees:</strong> ~1,300 &nbsp;|&nbsp; <strong>HQ:</strong> Trento, Italy</p>
     <p><strong>Major Subsidiaries:</strong> Dolomiti Energia Holding, Hydro Dolomiti Energia, Dolomiti Energia Trading, Dolomiti Reti, Novareti</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (406-user Full CRM), Service Cloud, Marketing Cloud (ExactTarget), Agentforce for Service, Data Cloud, Slack Sales Elevate, Signature Success, Backup, Data Mask, Security Center</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Edoardo Fistolera] — likely SAP ISU / IS-U for utilities billing given multi-utility scale, plus in-house Digital Factory stack</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Apromore - Dolomiti Energia - Process Mining (<a href="https://org62.my.salesforce.com/006ed00000TwcAfAAJ">$60k</a>) &nbsp;·&nbsp; Customer Service AI (<a href="https://org62.my.salesforce.com/006ed000002nrd8AAA">$90k</a>) &nbsp;·&nbsp; Agentforce for Service Upgrade + Flex (<a href="https://org62.my.salesforce.com/006ed00000Ol7t3AAB">$79k</a>)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (406-user Full CRM), Service Cloud, Marketing Cloud, Agentforce for Service, Data Cloud, Slack Sales Elevate, Signature Success, Backup, Data Mask, Security Center</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Apromore &mdash; Dolomiti Energia &mdash; Process Mining (<a href="https://org62.my.salesforce.com/006ed00000TwcAfAAJ">$60k</a>) &nbsp;|&nbsp; Dolomiti &mdash; Customer Service AI (<a href="https://org62.my.salesforce.com/006ed000002nrd8AAA">$90k</a>) &nbsp;|&nbsp; Dolomiti &mdash; Agentforce for Service Upgrade + Flex (<a href="https://org62.my.salesforce.com/006ed00000Ol7t3AAB">$79k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U086X181JA3">Lorenzo Pratesi</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">85/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint & Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud footprint; active Apromore opp already in Stage 02 with SF AE.</td></tr>
-        <tr><td>Buyer & Champion Fit</td><td>18/20</td><td class="cat-green">CIDO Fistolera on stage at SF Service Summit 2025; Ops Director + IT Ops Head named [Slack].</td></tr>
-        <tr><td>Transformation & Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">"Digital Factory" org, Agentforce for Service in flight, Data Cloud expansion Phase 2.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Utilities is a priority AFPI vertical — meter-to-cash, outage/field service, regulatory.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>12/15</td><td class="cat-green">Antitrust sanction on billing practices (2023) [Slack]; customer-care rework signals.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud install + active Apromore Process Mining opp already in flight.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Agentforce for Service upgrade + Customer Service AI opp; CIDO on-stage at SF Service Summit 2025.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">CIDO Edoardo Fistolera publicly named [Slack]; multi-role sponsor bench across Ops and IT.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">AGCM antitrust sanction on billing (2023) + ARERA switch rules + CSRD ESG reporting.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Utilities is a priority AFPI vertical &mdash; meter-to-cash, outage/field, regulatory.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Systems & Event-Log Readiness</td><td>7/12</td><td class="cat-orange">Non-SF stack unconfirmed; SAP IS-U likely but not verified — data-readiness gap flagged.</td></tr>
-        <tr><td>Commercial Timing & Deal Viability</td><td>4/6</td><td class="cat-orange">Apromore opp sits at $60k — below the $200k viability threshold; needs expansion narrative.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>7/12</td><td class="cat-red">Non-SF stack unconfirmed; SAP IS-U likely but not verified &mdash; data-readiness gap flagged.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>12/15</td><td class="cat-orange">AGCM billing sanction + care rework signals present, but pain not yet quantified in $/FTE terms.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Dolomiti Energia S.p.A. by mining meter-to-cash, customer-care, and field-service processes to shrink billing rework, cut outage-response cycle time, and pre-empt regulatory scrutiny — directly amplifying the Agentforce for Service investment already in flight.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Meter-to-Cash Billing Accuracy & Regulatory Defense</summary>
+    <summary>1. Meter-to-Cash Billing Accuracy &amp; Regulatory Defense</summary>
     <div class="use-case-body">
-      <p>Multi-utility billing across electricity, gas, water and district heating is the highest-risk process at Dolomiti — AGCM fined the company in 2023 for improper commercial practices in billing [Slack]. AFPI mines the meter-read → bill → dispute → adjustment path to expose where holds, manual re-issues and complaints originate, giving the CIDO an auditable evidence base and a lever to compress dispute resolution. Metric moved: bill-rework rate and dispute cycle time.</p>
+      <p>Multi-utility billing across electricity, gas, water and district heating is the highest-risk process at Dolomiti &mdash; AGCM sanctioned the company in 2023 for improper commercial practices in billing [Slack]. AFPI mines the meter-read &rarr; bill &rarr; dispute &rarr; adjustment path to expose where holds, manual re-issues, and complaint loops originate, giving the CIDO an auditable evidence base and a lever to compress dispute resolution. Directly de-risks any repeat regulator scrutiny. Metric moved: bill-rework rate and dispute cycle time.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> SAP IS-U, Salesforce Service Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Edoardo+Fistolera+Dolomiti+Energia">Edoardo Fistolera</a> (Chief Information and Digital Officer)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Edoardo+Fistolera+Dolomiti+Energia">Edoardo Fistolera</a> (Chief Information &amp; Digital Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -156,44 +155,88 @@
   <details>
     <summary>2. Customer-Care Case-to-Resolution (Agentforce Amplifier)</summary>
     <div class="use-case-body">
-      <p>Dolomiti has an active Agentforce for Service upgrade and a Customer Service AI opp — but agent success depends on knowing which case types actually loop, escalate or re-open. AFPI mines the full case lifecycle in Service Cloud to quantify handoff waste, identify the top automation candidates for Agentforce, and produce the before/after ROI story that unlocks Phase 2 spend. Metric moved: first-contact resolution and average handle time.</p>
+      <p>Dolomiti has an active Agentforce for Service upgrade and a Customer Service AI opp &mdash; but agent success depends on knowing which case types actually loop, escalate, or re-open. AFPI mines the full case lifecycle in Service Cloud to quantify handoff waste, isolate the top automation candidates for Agentforce, and produce the before/after ROI story that unlocks Phase 2 spend. Metric moved: first-contact resolution and average handle time.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, SAP IS-U</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Luca+Landoni+Dolomiti+Energia">Luca Landoni</a> (Service Manager, Customer Care)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Care+Dolomiti+Energia">Head of Customer Care Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Field-Service Dispatch & Outage Response</summary>
+    <summary>3. Field-Service Dispatch &amp; Outage Response</summary>
     <div class="use-case-body">
-      <p>Hydro Dolomiti Energia operates hydro assets across the Alpine grid where outage-to-restore and planned-maintenance cycle time drive both SAIDI/SAIFI and margin. AFPI mines dispatch → technician-en-route → repair → close-out to surface schedule breakage, travel waste and rework visits — building the operating case for extending Agentforce into field service. Metric moved: mean-time-to-repair and truck-roll efficiency.</p>
+      <p>Hydro Dolomiti Energia operates hydro assets across the Alpine grid where outage-to-restore and planned-maintenance cycle time drive both SAIDI/SAIFI and margin. AFPI mines dispatch &rarr; technician-en-route &rarr; repair &rarr; close-out to surface schedule breakage, travel waste, and rework visits &mdash; building the operating case for extending Agentforce into field service. Metric moved: mean-time-to-repair and truck-roll efficiency.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, SAP PM</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alberto+Pinter+Hydro+Dolomiti+Energia">Alberto Pinter</a> (Head of Technical & Admin Development, Hydro Dolomiti)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Field+Operations+Hydro+Dolomiti">Head of Field Operations, Hydro Dolomiti</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Contact-Center Agent Desktop Swivel-Chair</summary>
+    <div class="use-case-body">
+      <p>Multi-utility care agents flip between Service Cloud, the billing system, the metering platform, and knowledge/email to resolve a single call. Task mining the agent desktop reveals how much wrap-up time is lost to app-switching, copy/paste, and repeated lookups &mdash; the exact tasks Agentforce for Service can safely automate. Feeds the Agentforce upgrade business case directly. Metric moved: after-call-work minutes and cases per agent per day.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, billing/CIS desktop</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Contact+Center+Manager+Dolomiti+Energia">Contact Center Manager</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Customer Onboarding & Switch-In / Switch-Out</summary>
+    <summary>2. Back-Office Billing Exception Handling</summary>
     <div class="use-case-body">
-      <p>Italian free-market energy switching is heavily choreographed and time-boxed by ARERA rules — a single stalled step turns into a regulatory breach. AFPI mines the switch-in / switch-out variant tree to expose which supplier interactions, KYC steps, and internal handoffs cause missed SLAs, and to prove where Marketing Cloud journeys and Agentforce can safely automate. Metric moved: on-time-switch % and onboarding cycle time.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales/Service Cloud, SAP IS-U</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Arianna+Pontalti+Dolomiti+Energia">Arianna Pontalti</a> (Operations Director)</p>
+      <p>The AGCM billing case exposes just how manual the exception-handling desk still is &mdash; bill holds, re-issues, credit adjustments, and dispute correspondence are keyed across billing, CRM, and spreadsheets. Task mining the exception-desk desktop quantifies re-keying, tab-switching, and rework loops between apps, naming the exact steps Agentforce or a bot could straight-through. Metric moved: manual touches per exception and exception clearance time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Billing/CIS desktop, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Billing+Operations+Manager+Dolomiti+Energia">Billing Operations Manager</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. ESG & Sustainability Reporting Assurance</summary>
+    <summary>3. Sales &amp; Onboarding Desktop for Switch-In</summary>
     <div class="use-case-body">
-      <p>Dolomiti is a signature "green" utility (majority hydro) with a dedicated Group ESG lead — CSRD-era reporting demands auditable, source-of-record evidence of how emissions, water and grid data actually flow from operational systems into disclosure. AFPI's Compliance Center wedge mines the reporting close cycle to surface manual bridges, late data, and re-open loops that put assurance at risk. Metric moved: reporting cycle time and audit finding count.</p>
+      <p>Italian free-market switching (ARERA-governed) is heavily choreographed &mdash; sales/onboarding reps toggle between Sales Cloud, the CIS, ID verification, and contract portals to complete a single new customer. Task mining that desktop exposes where re-keying and lookup loops stretch onboarding TAT past ARERA windows &mdash; a direct feed into Marketing Cloud journey design and Agentforce automation. Metric moved: onboarding cycle time and manual-touch count per new customer.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, billing/CIS onboarding desktop</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Sales+Operations+Dolomiti+Energia">Head of Sales Operations</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. AGCM / Consumer-Code Billing Controls</summary>
+    <div class="use-case-body">
+      <p>The 2023 AGCM sanction on unfair commercial practices makes billing conduct an ongoing exam risk &mdash; every price change, bill reissue, and disclosure needs codified evidence. Compliance Center runs those controls as a permanent workflow with SoD, sign-offs, and always-on audit trails, so the CIDO can prove to the regulator that the process has been permanently remediated. Metric moved: controls covered and mean-time-to-evidence per exam.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Billing/CIS, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Compliance+Dolomiti+Energia">Head of Compliance / Consumer Affairs</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. ARERA Switch-In / Switch-Out SLA Assurance</summary>
+    <div class="use-case-body">
+      <p>ARERA imposes strict time-boxed steps for supplier switching &mdash; missed windows turn into regulatory breaches and refund liability. Compliance Center codifies the switch workflow with hard SLA gates, supplier-interaction checkpoints, and audit-ready evidence for every case. Metric moved: on-time switch % and breach-related refund exposure.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Billing/CIS switch module, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Regulatory+Affairs+Dolomiti+Energia">Head of Regulatory Affairs</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. CSRD / ESG Reporting Assurance (Green-Utility Positioning)</summary>
+    <div class="use-case-body">
+      <p>Dolomiti is positioned as a majority-hydro "green" utility &mdash; but CSRD-era assurance demands auditable, source-of-record evidence of how emissions, water, and grid data actually flow from operational systems into disclosure. Compliance Center mines the reporting close cycle to surface manual bridges, late data, and re-open loops that put external assurance at risk. Metric moved: reporting cycle time and audit finding count.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> SAP S/4HANA, Salesforce Data Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alessia+Andreatta+Dolomiti+Energia">Alessia Andreatta</a> (Group Head of ESG)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+ESG+Dolomiti+Energia">Group Head of ESG / Sustainability</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent competitor mentions (Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, Power Automate) tied to Dolomiti Energia in Slack or Org62 — greenfield process-mining opportunity, no incumbent to displace.</span></h2>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Dolomiti Energia S.p.A. by process-mining meter-to-cash, customer-care, and hydro field-service workflows across its Salesforce and utilities-billing estate, task-mining care-agent, exception-desk, and onboarding desktops to expose the swivel-chair work Agentforce for Service can safely automate, and running AGCM billing, ARERA switching, and CSRD ESG controls through Compliance Center to compress dispute cycle time, cut AHT, and produce always-on regulatory evidence.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

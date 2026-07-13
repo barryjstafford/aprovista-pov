@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -107,42 +112,40 @@
 <main>
   <h1>Cars.com Inc.</h1>
   <div class="snapshot">
-    <p><strong>Technology, Automotive Marketplace &amp; Dealer Services (NYSE: CARS)</strong></p>
+    <p><strong>Technology, Automotive Marketplace &amp; Dealer Services</strong></p>
     <p><strong>Revenue:</strong> ~$689M (FY2023) &nbsp;|&nbsp; <strong>Employees:</strong> ~1,700 &nbsp;|&nbsp; <strong>HQ:</strong> Chicago, IL, USA</p>
-    <p><strong>Major Subsidiaries:</strong> Cars.com Marketplace, Dealer Inspire, AccuTrade, Cars Commerce Media, DealerCloud LLC (JV with Del Grande Dealer Group)</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Full CRM (Sales + Service Cloud, ~2,690 users), SteelBrick CPQ, Sandbox, Slack Enterprise (~2,000 users), MuleSoft, Tableau, Agentforce (Phase 0 in flight), Signature Success</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Oracle (order mgmt, billing, revrec, collections), Amazon Redshift, HubSpot, Jira, AWS Voice, Zapier/CozyRoc, custom Apex services</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Cars Commerce Renewal — CPQ + Full CRM + Sandbox (<a href="https://org62.my.salesforce.com/0063y000018kBStAAM">$4.99M</a>) &nbsp;|&nbsp; Cars: Agentforce for Supply Chain (<a href="https://org62.my.salesforce.com/006ed00000XpcUsAAJ">$500k</a>) &nbsp;|&nbsp; Agentforce Contact Center (<a href="https://org62.my.salesforce.com/006ed00000emWHtAAM">$135k</a>)</p>
+    <p><strong>Major Subsidiaries:</strong> Dealer Inspire, AccuTrade, DealerRater, Cars Commerce Media, DealerCloud LLC (JV with Del Grande Dealer Group)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud + Service Cloud (Full CRM ~2,690 users), SteelBrick CPQ, Sandbox, Slack Enterprise, MuleSoft, Tableau, Agentforce (Phase 0), Signature Success</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Oracle, Amazon Redshift, HubSpot, Jira, AWS Voice, Zapier</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Cars Commerce Renewal &mdash; CPQ + Full CRM + Sandbox (<a href="https://org62.my.salesforce.com/0063y000018kBStAAM">$4.99M</a>) &nbsp;|&nbsp; Cars: Agentforce for Supply Chain (<a href="https://org62.my.salesforce.com/006ed00000XpcUsAAJ">$500k</a>) &nbsp;|&nbsp; Agentforce Contact Center (<a href="https://org62.my.salesforce.com/006ed00000emWHtAAM">$135k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
-    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02C75PUETV">Liz Bilash</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02C75PUETV">Elizabeth Bilash</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">88/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">86/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Systems Landscape</td><td>15/15</td><td class="cat-green">Oracle + Salesforce + Redshift + HubSpot + Jira + AWS Voice + MuleSoft + custom Apex — the exact heterogeneous stack process mining was built for.</td></tr>
-        <tr><td>Active Initiatives &amp; Urgency</td><td>15/15</td><td class="cat-green">$6M July renewal at risk; $1.5M ARI in-flight; CTO/CEO/CFO explicit "fix the foundation" ask; RFP threat if Salesforce can't demonstrate value.</td></tr>
-        <tr><td>Process Complexity</td><td>14/15</td><td class="cat-green">Just consolidated two Salesforce orgs (Cars.com + Blue/Dealer Inspire); DealerCloud JV launched Feb 2026; multi-brand rev-share flows across marketplace, media, and dealer SaaS.</td></tr>
-        <tr><td>Salesforce Footprint</td><td>10/10</td><td class="cat-green">Full CRM at ~2,690 users, CPQ, MuleSoft, Tableau, Slack Enterprise, Agentforce Phase 0, Signature Success — deep, wide, and mission-critical.</td></tr>
-        <tr><td>Deal Size Potential</td><td>9/10</td><td class="cat-green">$4.99M July renewal, $18M 3-year commit contingent on ARI, $500k Agentforce Supply Chain opp already in flight.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>12/12</td><td class="cat-green">Salesforce + Oracle + Redshift + MuleSoft + HubSpot + Jira + AWS Voice + custom Apex &mdash; ideal heterogeneous mining substrate.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Full CRM at ~2,690 users, CPQ, MuleSoft, Tableau, Slack Enterprise, Agentforce Phase 0, Signature Success.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Agentforce Phase 0 in flight, $1.5M ARI investment, DealerCloud JV built on Agentforce Automotive at NADA.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">$4.99M July renewal, $18M 3-year commit contingent on ARI, $500k Agentforce Supply Chain opp already sourced.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">CTO/CEO/CFO explicit "fix the foundation" ask; post-consolidation Cars.com + Blue Org quote-to-cash colliding.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Compliance / Regulatory Wedge</td><td>5/10</td><td class="cat-orange">Consumer data (CCPA/state privacy) and state DMV/dealer rules apply, but no headline regulator — Compliance Center is not the primary wedge.</td></tr>
-        <tr><td>Buyer Titles Present</td><td>8/10</td><td class="cat-orange">CTO, CPO, VP OEM Operations, Director Rev Strategy &amp; Ops present via Dealer Inspire — but the Cars Commerce parent CTO / VP Enterprise Systems referenced in Slack are not yet in Org62.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>4/8</td><td class="cat-red">CCPA and state DMV/dealer rules apply but no headline regulator &mdash; Compliance Center is a secondary wedge.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>10/15</td><td class="cat-orange">Tech / automotive-marketplace is not a top-tier AFPI vertical, though multi-brand SaaS ops complexity qualifies it.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Cars.com Inc. by mining its post-consolidation Salesforce, Oracle, and Redshift event logs to expose exactly where the "foundation" is broken — turning the CTO/CEO/CFO's abstract frustration into a documented target-state process map that de-risks the $18M three-year renewal, accelerates Agentforce Phase 0 out of KPMG delay, and gives DealerCloud a measured baseline before the JV scales to more dealer groups.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Post-Consolidation Salesforce Org Cleanup (Cars.com + Blue Org)</summary>
     <div class="use-case-body">
-      <p>Cars.com just decommissioned the legacy Cars.com Inc. org and migrated all contracts into the Cars Commerce Blue org. Two years of divergent CPQ, quoting, and account-hierarchy processes are now colliding in one place — the exact scenario where Apromore's event-log mining exposes duplicate variants, orphaned automations, and manual reconciliation loops that Celonis needs a two-specialist SQL+PQL team to model. Metric moved: quote-to-cash cycle time, quote error rate, discount policy adherence.</p>
+      <p>Cars Commerce has decommissioned the legacy Cars.com Inc. org and migrated all contracts into the Blue org &mdash; leaving two years of divergent CPQ, quoting, and account-hierarchy processes colliding in one place. Apromore's event-log mining exposes duplicate variants, orphaned automations, and manual reconciliation loops that a Celonis-style two-specialist SQL+PQL team would need weeks to model. This turns the merged org from a support burden into a documented target-state process on the July renewal timeline. Metric moved: quote-to-cash cycle time, quote error rate, discount policy adherence.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, SteelBrick CPQ</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Dan+Schroeder+Cars+Commerce">Dan Schroeder</a> (Chief Product Officer, Dealer Inspire)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -150,55 +153,101 @@
   </details>
 
   <details>
-    <summary>2. Integration &amp; Data Foundation Discovery (the "fix the foundation" ask)</summary>
+    <summary>2. Integration &amp; Data Foundation Discovery ("Fix the Foundation")</summary>
     <div class="use-case-body">
-      <p>CTO / CEO / CFO have explicitly told Salesforce the platform's foundation is broken across Oracle, Redshift, HubSpot, Jira, AWS Voice, MuleSoft, Zapier/CozyRoc, and custom Apex — with an $18M three-year renewal riding on the answer. Apromore mines the actual cross-system event sequences (rather than the architecture diagram people wish were true) to prove which integrations are one-off spreadsheets, which flows still have manual approvals, and where reconciliation loops live. This is the fastest way to convert the ARI investment into a defensible target-state roadmap. Metric moved: number of manual handoffs eliminated, integration re-work rate, foundation-remediation ROI.</p>
+      <p>The CTO, CEO, and CFO have told Salesforce directly that the platform's foundation is broken across Oracle, Redshift, HubSpot, Jira, AWS Voice, MuleSoft, and custom Apex &mdash; with an $18M three-year renewal riding on the fix. Apromore mines actual cross-system event sequences (not the architecture diagram people wish were true) to prove which integrations are one-off spreadsheets, which flows still hide manual approvals, and where reconciliation loops live. That converts the $1.5M ARI investment into a defensible target-state roadmap. Metric moved: manual handoffs eliminated, integration re-work rate, foundation-remediation ROI.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce (CRM + CPQ), Oracle</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Caitlin+Oliver+Cars+Commerce">Caitlin Oliver</a> (Chief Technical Officer, Launch Digital Marketing / Cars Commerce)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Caitlin+Oliver+Cars+Commerce">Caitlin Oliver</a> (Chief Technology Officer, Cars Commerce)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Agentforce Phase 0 Acceleration &amp; Value Measurement</summary>
+    <summary>3. Dealer Onboarding &amp; Website Fulfillment (Dealer Inspire)</summary>
     <div class="use-case-body">
-      <p>Cars' Agentforce Phase 0 is one month behind schedule after KPMG shortfalls, and leadership needs to tie business value to the next $3.5M investment tranche. Apromore mines the exact "before" process a candidate agent will replace — internal employee agent, contact center, supply chain — so every deployed agent has a measured pre-state cycle time and a proven variant to automate. That turns "Agentforce is delayed" into "Agentforce cut this process 47%" in the same quarter. Metric moved: agent-eligible task automation rate, agent ROI per use case.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce, Sales Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Katie+Helgesen+Cars+Commerce">Katie Helgesen</a> (Director, Revenue Strategy &amp; Operations)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Dealer Onboarding &amp; Website Fulfillment (Dealer Inspire)</summary>
-    <div class="use-case-body">
-      <p>Dealer Inspire onboards new dealer websites at scale — endorsed by nearly every OEM — but the handoff from sale through website launch runs across Sales Cloud, Jira, custom Apex, and Dealer Inspire's own fulfillment tooling. Apromore mines the actual PR-to-launch event log to expose which dealer segments hit re-work loops, which OEM contracts trigger custom exceptions, and where the "Onboarding Process" that Salesforce demoed at Chicago World Tour breaks down in real life. Metric moved: dealer time-to-live, first-90-day dealer NPS, fulfillment SLA hit rate.</p>
+      <p>Dealer Inspire onboards new dealer websites at scale &mdash; endorsed by nearly every OEM &mdash; but the handoff from signed order through website launch spans Sales Cloud, Jira, custom Apex, and Dealer Inspire's own fulfillment tooling. Apromore mines the actual order-to-launch event log to expose which dealer segments hit re-work loops, which OEM contracts trigger custom exceptions, and where the "onboarding process" Salesforce demoed at Chicago World Tour breaks in real life. Metric moved: dealer time-to-live, first-90-day dealer NPS, fulfillment SLA hit rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Jira</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=DeAnna+Kertson+Cars+Commerce">DeAnna Kertson</a> (Senior Director of Website Fulfillment, Dealer Inspire)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>5. DealerCloud JV Process Baseline (Agentforce Automotive)</summary>
+    <summary>1. CPQ Quote-Build &amp; Discount-Approval Desktop</summary>
     <div class="use-case-body">
-      <p>DealerCloud LLC — the Cars Commerce + Del Grande + Salesforce JV built on Agentforce Automotive — launched at NADA in February 2026 as one of the first CRMs of its kind. Before it scales to additional dealer groups, Apromore mines Del Grande's actual sales, service, and F&amp;I event logs to establish a control-group baseline the JV can measure lift against. That protects the "agentic enterprise" narrative with hard numbers and gives the joint GTM team a repeatable pattern for the next dealer-group onboarding. Metric moved: dealer sales cycle time, F&amp;I attach rate, agent-assisted deal close rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> DealerCloud (Agentforce Automotive), Sales Cloud</p>
+      <p>Cars Commerce sales operations analysts spend measurable time toggling between SteelBrick CPQ, Sales Cloud opportunities, and Excel discount-approval templates to close multi-product dealer packages. Task mining captures the on-screen actions to isolate where analysts leave CPQ to re-work quotes, chase pricing approvals, or re-key package details &mdash; then names the specific steps Agentforce Operations can automate. Feeds a direct business case into the July renewal. Metric moved: quotes per analyst per day, discount-approval turnaround, quote-touch count.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SteelBrick CPQ, Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Katie+Helgesen+Cars+Commerce">Katie Helgesen</a> (Director, Revenue Strategy &amp; Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Contact Center Agent Handle-Time (AWS Voice + Service Cloud)</summary>
+    <div class="use-case-body">
+      <p>Cars Commerce's contact center handles dealer support and consumer questions across AWS Voice with an open $135k Agentforce Contact Center opp on the table. Task mining captures each agent's on-screen actions to isolate the after-call-work minutes, the tabs that eat wrap time, and the specific dealer-support scripts that are copy-paste candidates for Agentforce. That converts "add Agentforce" into "cut AHT by X seconds on these five call types." Metric moved: AHT, after-call-work time, first-contact resolution.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, AWS Voice</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Contact+Center+Operations+Cars+Commerce">Head of Contact Center Operations, Cars Commerce</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Media Ad-Ops &amp; Campaign Trafficking Workflow</summary>
+    <div class="use-case-body">
+      <p>Cars Commerce Media traffics OEM and dealer campaigns across a media ad-serving stack, HubSpot, and back-office billing in Oracle. Task mining exposes how much analyst time is lost re-keying campaign specs between the ad-server console, HubSpot, and the invoice/billing hand-off &mdash; classic candidates for Agentforce-assisted straight-through processing. Directly supports the $500k Agentforce for Supply Chain opp expansion narrative. Metric moved: campaign launch cycle time, re-work rate, media-billing dispute rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Ad-serving platform, HubSpot</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Media+Operations+Cars+Commerce">VP, Media Operations, Cars Commerce</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. CCPA / State Privacy Consumer-Request Handling</summary>
+    <div class="use-case-body">
+      <p>Cars.com sits on consumer-lead data across multiple state privacy regimes (CCPA/CPRA, VCDPA, CTDPA) with escalating deletion-request volumes. Compliance Center runs the intake-to-fulfillment workflow as a controlled process across the consumer intake portal, Data Cloud, and downstream marketing systems &mdash; with codified SLAs, audit evidence, and segregation-of-duties. Metric moved: request-fulfillment SLA hit-rate, time-to-delete, audit-ready evidence coverage.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Data Cloud, consumer-request intake portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Privacy+Officer+Cars+Commerce">Head of Privacy / Data Governance, Cars Commerce</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Dealer Contract &amp; Discount Governance (SOX-lite Revenue Controls)</summary>
+    <div class="use-case-body">
+      <p>As a NYSE-listed company, Cars Commerce carries SOX revenue-recognition controls across CPQ, Oracle, and Redshift &mdash; and the recent org consolidation has muddied the discount-approval and contract-modification workflow. Compliance Center codifies the quote-approval, contract-amendment, and rev-rec sign-off flow with segregation-of-duties and continuous evidence for the external auditor. Metric moved: control-exception count, audit findings, close-cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SteelBrick CPQ, Oracle GL</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Controller+Cars+Commerce">Corporate Controller / VP Revenue Ops, Cars Commerce</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Agentforce Model Governance &amp; Audit Trail</summary>
+    <div class="use-case-body">
+      <p>With Agentforce Phase 0 landing in supply chain and contact center &mdash; and DealerCloud built on Agentforce Automotive going live at NADA &mdash; every deployed agent needs a documented lifecycle: approved, monitored, retired, evidenced. Compliance Center runs the agent promote/monitor/retire workflow with continuous audit evidence tied back to the process mined baseline, protecting the "agentic enterprise" narrative from regulator and board scrutiny. Metric moved: audit-ready agents in production, mean-time-to-evidence, agent-drift incidents.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce, Data Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Joe+Chura+Cars+Commerce">Joe Chura</a> (Chief Executive Officer, Dealer Inspire)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Cars.com Inc. by mining post-consolidation quote-to-cash and dealer-onboarding event logs across Salesforce, Oracle, and Redshift, task-mining CPQ analyst and contact-center agent desktops to hard-cost the Agentforce Phase 0 business case, and running CCPA privacy, SOX-lite revenue, and Agentforce model-governance controls through Compliance Center &mdash; de-risking the $4.99M July renewal and turning the $18M three-year commit into a documented, measurable "fix the foundation" outcome.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-03. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

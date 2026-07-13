@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -108,41 +113,39 @@
   <h1>De Agostini Editore S.p.A.</h1>
   <div class="snapshot">
     <p><strong>Communications &amp; Media, Publishing (collectible partworks &amp; digital learning)</strong></p>
-    <p><strong>Revenue:</strong> ~€800M (Editore division, De Agostini Group ~€4.7B consolidated) &nbsp;|&nbsp; <strong>Employees:</strong> ~10,000 group-wide (Editore ~400 direct) &nbsp;|&nbsp; <strong>HQ:</strong> Novara, Italy</p>
-    <p><strong>Major Subsidiaries:</strong> De Agostini Publishing, De Agostini UK, DeA Planeta Libros, DeA Scuola, Grupo Planeta-De Agostini (JV)</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud (implied via IT CRM, Sale &amp; Distribution Manager role and active Org62 relationship)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Davide+Ardizio+De+Agostini">Davide Ardizio, CIO</a>]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> MC - De Agostini Editore - BDR #netcomm26 (<a href="https://org62.my.salesforce.com/006ed00000b8lvjAAA">$110k</a>) | De Agostini - Apromore - BDR (<a href="https://org62.my.salesforce.com/006ed00000YK11BAAT">$70k</a>)</p>
+    <p><strong>Revenue:</strong> ~&euro;800M (Editore division, De Agostini Group ~&euro;4.7B consolidated) &nbsp;|&nbsp; <strong>Employees:</strong> ~10,000 group-wide (Editore ~400 direct) &nbsp;|&nbsp; <strong>HQ:</strong> Novara, Italy</p>
+    <p><strong>Major Subsidiaries:</strong> De Agostini Publishing, De Agostini UK, DeA Planeta Libros, DeA Scuola, Grupo Planeta-De Agostini</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> MC - De Agostini Editore - BDR #netcomm26 (<a href="https://org62.my.salesforce.com/006ed00000b8lvjAAA">$110k</a>) &nbsp;|&nbsp; De Agostini - Apromore - BDR (<a href="https://org62.my.salesforce.com/006ed00000YK11BAAT">$70k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01FTD44K5M">Fulvio Negri</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">78/100</span> — T2 Develop</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t2">76/100</span> &mdash; T2 Develop</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">CIO, Group CIO, Group CTO, CEO, IT Supply Chain Manager, and Procurement Director all mapped in Org62.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Partworks publishing is a textbook rework/returns/print-forecast pain profile ripe for AFPI mining.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>10/12</td><td class="cat-green">Active AE Fulvio Negri, two open Apromore opps ($110k + $70k) closing Q4 2026, EBC Milan SIC-137461 in-flight.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>9/12</td><td class="cat-orange">Milan RT/SIC session in progress and new De Agostini attendees added June 2026 — real motion, but no public AI mandate yet.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-orange">Salesforce Sales/Service confirmed via IT CRM &amp; Distribution Manager title; core ERP and print/distribution stack TBD.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Partworks publishing is a textbook rework / returns / print-forecast pain profile ripe for AFPI mining.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>17/20</td><td class="cat-green">CIO, Group CTO, Direttore Commerciale, Direttore Acquisti, IT Supply Chain &amp; Distribution roles all mapped in Org62.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>10/12</td><td class="cat-green">Two active Apromore-linked opps ($110k + $70k) on Fulvio Negri&rsquo;s book, closing late 2026.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>9/12</td><td class="cat-orange">Real motion in EMEA territory but no public AI or Agentforce mandate at Editore division yet.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-orange">Salesforce Sales/Service confirmed by IT CRM &amp; Distribution roles; core ERP and print/distribution stack still TBD.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>4/8</td><td class="cat-red">GDPR and Italian consumer/subscription law apply, but no heavy sector regime (no SOX, no HIPAA, no Basel) — Compliance Center wedge is modest.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>10/15</td><td class="cat-orange">Communications &amp; Media / Publishing sits outside top-priority verticals but is process-rich enough to earn a targeted play.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>4/8</td><td class="cat-red">GDPR + Italian consumer / subscription law apply, but no SOX / HIPAA / Basel &mdash; Compliance Center wedge is modest.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>4/6</td><td class="cat-orange">Two open opps combined ~$180k ACV &mdash; below the $200k threshold; needs expansion path to clear.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help De Agostini Editore S.p.A. by mining the partworks issue-planning, subscription-fulfilment, and returns event logs across Sales Cloud and their distribution stack — exposing the print-forecast and returns variants that quietly erode margin on every collectible series — and by giving the CIO&#39;s office a defensible conformance view before the Milan RT engagement converts into a broader Salesforce-Apromore expansion.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Partworks Issue Planning &amp; Print Forecast Accuracy</summary>
     <div class="use-case-body">
-      <p>De Agostini&#39;s core collectibles business ships weekly issues of long-tail series (models, cookbooks, kids&#39; encyclopedias, etc.) into edicola and direct-subscription channels across Italy, France, UK, and Iberia. Print run over-forecasts inflate pulp write-offs on the tail; under-forecasts kill sell-through on the head. AFPI mines the plan-to-print-to-distribute event log to expose where forecasting overrides, contributor delays, and edicola allocation rules diverge from the target flow, and quantifies the actual variance-to-plan by series and market. Metric moved: pulp-write-off percentage and sell-through rate per issue.</p>
+      <p>De Agostini&rsquo;s core collectibles business ships weekly issues of long-tail series (models, cookbooks, kids&rsquo; encyclopedias) into edicola and direct-subscription channels across Italy, France, UK and Iberia. Print-run over-forecasts inflate pulp write-offs on the tail; under-forecasts kill sell-through on the head. AFPI mines the plan-to-print-to-distribute event log to expose where forecasting overrides, contributor delays, and edicola allocation rules diverge from the target flow, and quantifies actual variance-to-plan by series and market. Metric moved: pulp write-off percentage and sell-through rate per issue.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Editorial Planning &amp; Print Management (TBD), Salesforce Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Stefano+Bordignoni+De+Agostini">Stefano Bordignoni</a> (Direttore Commerciale)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -152,7 +155,7 @@
   <details>
     <summary>2. Subscription Order-to-Fulfilment &amp; Churn Recovery</summary>
     <div class="use-case-body">
-      <p>Direct home-delivery subscriptions are the highest-margin channel but carry a heavy operational tail: missed deliveries, address changes mid-series, payment failures, and skipped-issue disputes each trigger service events that today flow through Service Cloud plus a fulfilment 3PL. AFPI reconstructs the true subscriber journey against the target renewal path, isolates the exception branches driving involuntary churn, and hands two or three variants to Agentforce for automated recovery. Metric moved: subscription completion rate and involuntary churn on active series.</p>
+      <p>Direct home-delivery subscriptions are the highest-margin channel but carry a heavy operational tail: missed deliveries, address changes mid-series, payment failures and skipped-issue disputes each trigger service events that today flow through Service Cloud plus a fulfilment 3PL. AFPI reconstructs the true subscriber journey against the target renewal path, isolates the exception branches driving involuntary churn, and hands two or three variants to Agentforce for automated recovery. Metric moved: subscription completion rate and involuntary churn on active series.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Fulfilment / 3PL WMS (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Tiziana+Scafetta+De+Agostini">Tiziana Scafetta</a> (IT CRM, Sale &amp; Distribution Manager)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -162,34 +165,80 @@
   <details>
     <summary>3. Edicola Returns &amp; Reverse-Logistics Reconciliation</summary>
     <div class="use-case-body">
-      <p>Unsold newsstand copies flow back through a distributor-managed reverse-logistics chain and must be counted, credited, and destroyed under Italian consumer law. Reconciliation lags and credit disputes with distributors are a chronic drag on cash and on the finance close. AFPI mines the returns event log (dispatch, receipt, count, credit note, destruction) to expose distributor-specific bottlenecks and multi-hand-off loops, and gives finance and commercial a shared conformance view. Metric moved: returns-cycle days and credit-note dispute rate.</p>
+      <p>Unsold newsstand copies flow back through a distributor-managed reverse-logistics chain and must be counted, credited and destroyed under Italian consumer law. Reconciliation lags and credit-note disputes with distributors are a chronic drag on cash and on the finance close. AFPI mines the returns event log (dispatch, receipt, count, credit note, destruction) to expose distributor-specific bottlenecks and multi-hand-off loops, and gives finance and commercial a shared conformance view. Metric moved: returns-cycle days and credit-note dispute rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Distributor Returns Portal (TBD), Finance / Credit-Note ledger (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rudi+Ghirelli+De+Agostini">Rudi Ghirelli</a> (IT Demand Manager / IT Supply Chain Manager)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rudi+Ghirelli+De+Agostini">Rudi Ghirelli</a> (IT Demand / Supply Chain Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Subscriber Service Agent Desktop Swivel-Chair</summary>
+    <div class="use-case-body">
+      <p>Editore&rsquo;s subscriber-care agents jump between Service Cloud, the fulfilment 3PL portal, a payments UI and email to close a single subscriber ticket &mdash; delivery escalation, missed-issue re-ship, address change mid-series. Task mining captures each agent&rsquo;s on-screen actions to isolate the after-call-work steps and tabs eating handle time, and pinpoints the exact clicks Agentforce can replace. Feeds a direct Agentforce for Service business case tied to Service Cloud. Metric moved: average handle time and after-call-work minutes per ticket.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud console, Fulfilment 3PL portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Tiziana+Scafetta+De+Agostini">Tiziana Scafetta</a> (IT CRM, Sale &amp; Distribution Manager)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Procure-to-Pay for Print, Paper &amp; Collectible Componentry</summary>
+    <summary>2. Editorial Planning Coordinator Desktop</summary>
     <div class="use-case-body">
-      <p>Every partworks series carries a bill of materials — paper, ink, plastic collectible parts (models, figurines, minerals), and print capacity — sourced against tight editorial calendars. Late supplier confirmations and expedited spot buys are a recurring margin leak that shows up in the Direttore Acquisti&#39;s books but rarely in the CFO&#39;s dashboards. AFPI mines P2P from requisition to invoice-clear, exposes the maverick-buy variants, and quantifies avoidable rush costs by supplier and series. Metric moved: expedited-freight spend and on-time supplier confirmation rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> ERP P2P (TBD), Supplier Portal (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Silvia+Riccardi+De+Agostini">Silvia Riccardi</a> (Direttore Acquisti)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>5. Digital &amp; DeA Scuola Content Publishing Pipeline</summary>
-    <div class="use-case-body">
-      <p>The digital-learning arm (DeA Scuola, DeA app catalogue) runs a parallel content pipeline from author brief through editorial QA, digital packaging, and platform release — a very different tempo from partworks but the same conformance question: where does the target release calendar diverge from reality? AFPI mines editorial-workflow event data to expose stalls at rights clearance, QA, and localisation hand-offs, and quantifies the drag each variant puts on release-date slippage. Metric moved: content release on-time rate and rework loops per title.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Editorial Workflow / DAM (TBD), Digital Publishing Platform (TBD)</p>
+      <p>Series planners coordinate weekly issue release across an editorial planning tool, spreadsheets, and email to contributors, printers and distributors &mdash; then re-key the same commitments into Sales Cloud and the print-run system. Task mining records what a planner actually does end-to-end, showing where copy-paste and email chases replace real integration. This becomes both a straight automation case and a data feed into the Process Mining partworks analysis. Metric moved: planner touch-time per issue and re-work hours per release window.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Editorial Planning tool (TBD), Salesforce Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Lorenzo+Manfredi+De+Agostini">Lorenzo Manfredi</a> (Group Chief Technology Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
+  <details>
+    <summary>3. Accounts Payable Analyst &mdash; Invoice-Match Swivel-Chair</summary>
+    <div class="use-case-body">
+      <p>Paper, ink, print and collectible-component invoices arrive from dozens of suppliers on tight editorial calendars. AP analysts flip between an ERP AP screen, PO records, delivery confirmations and supplier email to match and clear each invoice, with rush cycles around every issue launch. Task mining shows the exact click-paths driving three-way match exceptions and gives Direttore Acquisti a signed-off, evidence-based case for automation. Metric moved: invoice-to-clear touch-time and exception-rate per supplier.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ERP AP module (TBD), Supplier Portal (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Silvia+Riccardi+De+Agostini">Silvia Riccardi</a> (Direttore Acquisti)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. GDPR Data-Subject-Access-Request Handling</summary>
+    <div class="use-case-body">
+      <p>Editore&rsquo;s direct-subscription business holds subscriber personal data across Service Cloud, fulfilment, marketing and legacy CRM &mdash; GDPR obliges Editore to answer access, portability and erasure requests within one month with full audit evidence. Compliance Center runs the DSAR workflow as a controlled process with SLAs and codified sign-offs, and produces continuous evidence for the DPO and the Garante if asked. Metric moved: DSAR cycle time and audit-ready response rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Marketing / Subscriber data store</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Davide+Ardizio+De+Agostini">Davide Ardizio</a> (Chief Information Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Italian Consumer / Subscription-Law Contract Compliance</summary>
+    <div class="use-case-body">
+      <p>Italian consumer law (Codice del Consumo) and the EU consumer-rights directive dictate how subscription confirmations, right-of-withdrawal, price changes and cancellation flows must be presented and evidenced. Compliance Center codifies those flows on Service Cloud and the fulfilment stack as controlled processes with sign-offs and version history, so every subscriber interaction can be replayed for a regulator or class-action defence. Metric moved: consumer-law exception rate and mean-time-to-evidence a subscriber interaction.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Subscription billing platform (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Davide+Ardizio+De+Agostini">Davide Ardizio</a> (Chief Information Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Editorial Rights, Royalties &amp; Contributor Payments Attestation</summary>
+    <div class="use-case-body">
+      <p>Every partworks issue and DeA Scuola title carries a stack of author, illustrator and photo-agency rights that must be tracked, exercised inside contractual windows, and royalty-settled on time &mdash; a chronic finance-close risk when reconciled by spreadsheet. Compliance Center wraps the rights &amp; royalties workflow as a controlled process with segregation-of-duties sign-offs and audit-ready evidence per title. Metric moved: royalty-settlement cycle time and out-of-scope rights incidents per year.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Rights &amp; Royalties system (TBD), ERP GL</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Lorenzo+Manfredi+De+Agostini">Lorenzo Manfredi</a> (Group Chief Technology Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help De Agostini Editore S.p.A. by mining the partworks issue-planning, subscription-fulfilment and edicola-returns event logs across Sales Cloud, Service Cloud and its distribution stack, task-mining subscriber-care and editorial-planner desktops to expose the swivel-chair work Agentforce can automate, and running GDPR DSAR, Italian consumer-law and editorial-rights attestation through Compliance Center &mdash; producing defensible cycle-time, margin and audit-evidence wins in time for the two Apromore opps closing late 2026.</p>
+
+  <div class="actions">
     <span>Generate PDF</span>
     <span>Generate Slack Canvas</span>
     <span>Generate Vercel Page</span>
@@ -198,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

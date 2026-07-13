@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -108,41 +113,40 @@
   <h1>Ares Management Corporation</h1>
   <div class="snapshot">
     <p><strong>Financial Services, Alternative Asset Management</strong></p>
-    <p><strong>Revenue:</strong> $5.6B &nbsp;|&nbsp; <strong>Employees:</strong> ~4,250 &nbsp;|&nbsp; <strong>HQ:</strong> Los Angeles, CA, USA</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Not confirmed [field verify with Charlie Stuard]</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Charlie Stuard]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> </p>
+    <p><strong>Revenue:</strong> ~$3.9B (2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~4,250 &nbsp;|&nbsp; <strong>HQ:</strong> Los Angeles, CA, USA</p>
+    <p><strong>Major Subsidiaries:</strong> Ares Capital Corporation, Ares Credit Group, Ares Private Equity Group, Ares Real Estate Group, Ares SSG</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Enterprise + Unlimited), Service Cloud, Salesforce Shield, Marketing Cloud Account Engagement (Pardot), Slack Enterprise Plus, Tableau (Server + Cloud), Agentforce for Sales, Salesforce Inbox, Force.com</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Microsoft Teams</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Agentforce &amp; D360 CTO SOW (<a href="https://org62.my.salesforce.com/006ed00000VBWihAAH">$573k</a>) &nbsp;|&nbsp; Ares Management LLC &mdash; Agentforce Operations (<a href="https://org62.my.salesforce.com/006ed00000dKfbeAAC">$500k</a>) &nbsp;|&nbsp; MS Ares Management &mdash; Integration Land (<a href="https://org62.my.salesforce.com/006ed00000X3dWTAAZ">$120k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
-    <p><strong>Salesforce AE:</strong> TBD [field verify]</p>
-    <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U020CMUD5DK">Sergio DelRosso</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">82/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">86/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Process complexity (fund ops, credit underwriting, LP onboarding)</td><td>14/15</td><td class="cat-green">Multi-vehicle credit, PE, real estate and secondaries drive dozens of parallel origination, close and NAV variants.</td></tr>
-        <tr><td>Company size &amp; scale ($5.6B, 4,250 FTEs, global)</td><td>13/15</td><td class="cat-green">$484B AUM and global reach clear the enterprise deal-size bar and support standalone AFPI pricing.</td></tr>
-        <tr><td>Vertical fit (alt asset mgmt, private credit boom)</td><td>12/15</td><td class="cat-green">Private credit expansion is a top AFPI vertical — event-log-rich underwriting and monitoring processes.</td></tr>
-        <tr><td>Regulatory pressure (SEC, FCA, AIFMD, Dodd-Frank)</td><td>12/15</td><td class="cat-green">SEC-registered adviser plus FCA/AIFMD footprint is a direct Compliance Center wedge.</td></tr>
-        <tr><td>Signals &amp; urgency (rapid AUM growth, M&amp;A integration)</td><td>10/15</td><td class="cat-orange">Rapid AUM growth and integration activity present, but no headline transformation program surfaced yet.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">SEC-registered adviser + FCA/AIFMD; private credit under intensifying SEC exam scrutiny &mdash; direct Compliance Center wedge.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud install &mdash; Sales, Service, Shield, MC Engagement, Slack Ent+, Tableau, Agentforce for Sales, Inbox.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Active $500k Agentforce Ops opp, $573k D360 CTO SOW, TabNext POT, Data Cloud Bullseye account.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Project Houston RM control center, GLP Japan acquisition integration, TabNext rollout &mdash; measurable cycle-time and rework pain.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Alt asset mgmt / private credit at $484B AUM &mdash; priority AFPI vertical with event-log-rich underwriting and NAV workflows.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Signals &amp; urgency (rapid AUM growth, M&amp;A integration)</td><td>10/15</td><td class="cat-orange">No named transformation initiative or public process-mining RFP yet — urgency is inferred, not documented.</td></tr>
-        <tr><td>Vertical fit (alt asset mgmt, private credit boom)</td><td>12/15</td><td class="cat-green">Strong vertical but AFPI reference density in alt asset management is still building.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">Sergio DelRosso engaged and MD Global Client Solutions in Headless discussions, but no customer-side process-mining champion yet named.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-orange">Salesforce, Tableau, Slack, MC engagement logs mineable; portfolio-monitoring and fund-admin platforms still to be confirmed.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Ares Management Corporation by mining its deal-origination-through-funding event logs across the Ares Credit Group to cut middle-market close cycle time 20–30%, free up origination-officer capacity, and give the Compliance team auditable process evidence for SEC and FCA exams.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Middle-Market Direct Lending — Deal Origination to Funding Cycle Time</summary>
+    <summary>1. Middle-Market Direct Lending &mdash; Deal Origination to Funding Cycle Time</summary>
     <div class="use-case-body">
-      <p>Ares Capital Corporation and the Ares Credit Group underwrite thousands of middle-market loans annually across BDC, private credit, and SDL vehicles — the loop from term sheet through credit committee, legal docs, KYC/AML, closing, and initial fund draw touches Salesforce, credit-risk models, doc-management, and treasury systems. Mining the full origination-to-funding process exposes rework in credit memos, stalled legal reviews, and covenant-tracking handoffs that stretch closing timelines beyond peer benchmarks. AFPI overlays event logs directly onto the Ares deal pipeline in Salesforce to show where a $30M unitranche stalls versus a $200M syndicated deal, cutting avg. days-to-close by 20-30% and freeing origination officer capacity.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce (deal pipeline), Credit-risk models (TBD)</p>
+      <p>Ares Capital Corporation and the Ares Credit Group underwrite thousands of middle-market loans annually across BDC, private credit, and SDL vehicles. The loop from term sheet through credit committee, legal docs, KYC/AML, closing, and initial fund draw touches Salesforce, credit-risk models, doc-management, and treasury systems &mdash; classic swivel-chair with rework in credit memos and stalled legal reviews. AFPI overlays the deal-pipeline event log to show where a $30M unitranche stalls vs. a $200M syndicated deal. Metric: median days-to-close cut 20&ndash;30% and origination-officer capacity freed.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud (deal pipeline), credit-risk models (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kipp+deVeer+Ares+Management">Kipp deVeer</a> (Head of Ares Credit Group)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -151,8 +155,8 @@
   <details>
     <summary>2. LP Onboarding, Subscription Docs &amp; Investor KYC</summary>
     <div class="use-case-body">
-      <p>With ~$484B AUM across hundreds of institutional and HNW investors, LP onboarding is a compliance-heavy, multi-week choreography of subscription documents, accredited-investor certifications, FATCA/CRS, sanctions screening, and fund allocations — historically a top complaint in institutional investor NPS surveys across alt asset managers. AFPI mines the actual variant paths through Ares Wealth Management Solutions and the institutional IR teams, isolating where docs bounce back for correction and where sanctions/enhanced-due-diligence hits create silent queues. The metric moved is time-to-fund (goal: cut from 4-6 weeks to under 2) and IR analyst capacity.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> LP portal (TBD), Sanctions/KYC screening tools (TBD)</p>
+      <p>With ~$484B AUM across hundreds of institutional and HNW investors, LP onboarding is a compliance-heavy, multi-week choreography of subscription docs, accredited-investor certifications, FATCA/CRS, sanctions screening, and fund allocations. AFPI mines the variant paths through Ares Wealth Management Solutions and institutional IR teams to isolate where docs bounce back for correction and where enhanced-due-diligence hits create silent queues. Metric: time-to-fund cut from 4&ndash;6 weeks toward under 2 and IR-analyst capacity recovered.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> LP portal (TBD), sanctions/KYC screening tools (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Raj+Dhanda+Ares+Management">Raj Dhanda</a> (Partner, Global Head of Wealth Management Solutions)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -161,43 +165,89 @@
   <details>
     <summary>3. Fund Accounting, NAV Close &amp; Investor Reporting</summary>
     <div class="use-case-body">
-      <p>Ares runs a hybrid outsourced/in-house fund-admin model across dozens of credit, PE, real estate, and secondaries vehicles — the monthly/quarterly NAV close and LP reporting cycle involves data reconciliation between admins (SS&amp;C, State Street), internal general ledgers, and the LP portal. AFPI reveals where reconciliation exceptions repeatedly loop back to the same fund families or asset classes, which admin handoffs cause the biggest lag, and where manual overrides mask systematic data quality issues. Targeting a 3-5 day compression of quarterly close plus fewer restatements — a direct auditor and CFO win.</p>
+      <p>Ares runs a hybrid outsourced/in-house fund-admin model across dozens of credit, PE, real estate, and secondaries vehicles &mdash; the monthly/quarterly NAV close and LP reporting cycle spans admins (SS&amp;C, State Street), internal GLs, and the LP portal. AFPI reveals where reconciliation exceptions repeatedly loop back to the same fund families, which admin handoffs cause the biggest lag, and where manual overrides mask systematic data-quality issues. Metric: 3&ndash;5 day compression of quarterly close and fewer restatements.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> SS&amp;C, State Street</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jarrod+Phillips+Ares+Management">Jarrod Phillips</a> (Chief Financial Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>4. Portfolio Company Monitoring &amp; Covenant Compliance</summary>
+    <summary>1. Project Houston &mdash; Relationship-Manager Control Center Desktop</summary>
     <div class="use-case-body">
-      <p>With 500+ portfolio borrowers across the credit book, covenant testing, financial statement collection, and watchlist escalation is a distributed process split between portfolio managers, ops analysts, and third-party servicers — late or missing financials directly drive credit loss and regulatory ire. AFPI mines the flow from financial-package request through covenant test through watchlist entry, exposing which sectors, deal teams, or servicers systematically miss SLAs and where "watchlist" status quietly ages without escalation. The move-the-needle metric is reduction of non-accrual surprises and faster restructuring triggers.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Portfolio monitoring platform (TBD), Third-party loan servicers (TBD)</p>
+      <p>Ares is building "Project Houston," a Salesforce-embedded control center for its ~450 relationship managers with TabNext dashboards and mobile access (open $500k+ TabNext expansion). Task mining the RM desktop captures the actual click-paths across Sales Cloud, Tableau, portfolio data, and email &mdash; showing where insight is missed, tabs are re-opened, and questions bounce back to analysts. The output shapes which prompts and Agent actions belong in the control center. Metric: RM touch-time per client-view and % of insights consumed without analyst assist.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Tableau Next</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Michael+Pieck+Ares+Management">Michael Pieck</a> (Managing Director, Client Platforms)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Credit Analyst Underwriting Workbench Swivel-Chair</summary>
+    <div class="use-case-body">
+      <p>Middle-market credit analysts flip between Salesforce deal records, credit-risk models, spreading tools, data-room portals, and Teams to build a single credit memo. Task mining exposes the copy/paste loops, repeated lookups, and re-keying between the underwriting workbench and Salesforce that Agentforce Operations can automate &mdash; feeding directly into the in-flight $500k Agentforce Ops business case. Metric: analyst touch-time per credit memo and memos per FTE per week.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Underwriting workbench, Microsoft Teams</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mitchell+Goldstein+Ares+Management">Mitchell Goldstein</a> (Co-Head of Ares Credit Group)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Compliance Center — Regulatory Reporting, Marked-Communications &amp; SEC Exam Readiness</summary>
+    <summary>3. Investor Relations Analyst DDQ &amp; RFP Response Desktop</summary>
     <div class="use-case-body">
-      <p>As an SEC-registered adviser and FCA-authorized manager with a public BDC, Ares navigates Form ADV, Form PF, AIFMD Annex IV, marketing rule reviews, and 15c3 workflows — a growing surface as SEC scrutiny of private credit intensifies. AFPI's Compliance Center wedge maps how marketing materials, RFPs, and DDQs actually flow through legal/compliance review, quantifies review-cycle bottlenecks, and produces auditable process evidence for SEC exams and internal control attestations. The metric is reduction of MRAs/deficiency letters and audit prep hours.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Legal review / DMS (TBD), Compliance workflow tool (TBD)</p>
+      <p>IR analysts assemble investor DDQs, RFPs, and quarterly LP letters by hunting through document repositories, prior responses, and performance data &mdash; a manual assembly job that scales linearly with AUM. Task mining the IR desktop reveals where the same paragraphs are re-typed, where compliance review adds cycle time, and where AI-assisted retrieval would collapse hours per response. Pairs cleanly with the $573k D360 SOW. Metric: RFP turnaround time and IR-analyst responses shipped per week.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Document repository (TBD), Salesforce IR records</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kimberly+Stites+Ares+Management">Kimberly Stites</a> (Investor Relations Leader)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. SEC Exam Readiness &mdash; Form ADV, Form PF &amp; Marketing Rule</summary>
+    <div class="use-case-body">
+      <p>As an SEC-registered adviser and FCA-authorized manager with a public BDC, Ares navigates Form ADV, Form PF, AIFMD Annex IV, marketing rule reviews, and 15c3 workflows &mdash; a growing surface as SEC scrutiny of private credit intensifies. Compliance Center codifies how marketing materials, RFPs, and DDQs actually flow through legal/compliance review, quantifies review-cycle bottlenecks, and produces auditable process evidence for SEC exams. Metric: reduction of MRAs/deficiency letters and exam-prep hours.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Legal review / DMS (TBD), compliance workflow tool (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Naseem+Sagati+Aghili+Ares+Management">Naseem Sagati Aghili</a> (General Counsel)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <details>
+    <summary>2. Portfolio-Company Covenant Compliance &amp; Watchlist Controls</summary>
+    <div class="use-case-body">
+      <p>Across 500+ portfolio borrowers, covenant testing, financial-statement collection, and watchlist escalation is a distributed process split between portfolio managers, ops analysts, and third-party servicers &mdash; late or missing financials directly drive credit loss and regulatory ire. Compliance Center runs the flow from financial-package request through covenant test to watchlist entry as a controlled workflow with SLAs and evidence &mdash; exposing which sectors, deal teams, or servicers systematically miss dates. Metric: reduction in non-accrual surprises and faster restructuring triggers.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Portfolio monitoring platform (TBD), third-party loan servicers</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kort+Schnabel+Ares+Management">Kort Schnabel</a> (CEO, Ares Capital Corporation)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Agentforce Model-Risk &amp; AI Lifecycle Controls</summary>
+    <div class="use-case-body">
+      <p>With the in-flight $500k Agentforce Operations deal and $573k D360 CTO SOW, Ares is standing up agentic AI in a highly regulated adviser &mdash; every deployed agent needs promote/monitor/retire controls, evidence of prompt and data-source governance, and auditable output review. Compliance Center codifies that lifecycle and produces continuous evidence for SEC and internal audit. Metric: agents in production with audit-ready evidence and mean-time-to-evidence per model.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rick+Herrick+Ares+Management">Rick Herrick</a> (Chief Information Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Ares Management Corporation by mining deal-origination-to-funding, LP onboarding, and NAV-close event logs across Sales Cloud and fund-admin systems, task-mining the Project Houston RM control center and credit-analyst desktops to feed the in-flight $500k Agentforce Operations business case, and running SEC exam, portfolio-covenant, and Agentforce model-risk controls through Compliance Center to compress cycle times, expose swivel-chair work, and produce always-on audit evidence for the SEC and FCA.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

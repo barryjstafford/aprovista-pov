@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Magis Energia S.p.A. — AFPI POV</title>
+<title>Magis Energia S.p.A. &mdash; AFPI POV</title>
 <style>
   body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
          color: #1a1a1a; line-height: 1.45; background: #fff; }
@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -108,43 +113,41 @@
   <h1>Magis Energia S.p.A.</h1>
   <div class="snapshot">
     <p><strong>Utilities, Multi-Utility (Electricity, Gas, District Heating)</strong></p>
-    <p><strong>Revenue:</strong> ~€2.05B (parent Gruppo Magis / MAGIS S.p.A. FY2024 consolidated) &nbsp;|&nbsp; <strong>Employees:</strong> ~2,347 group &nbsp;|&nbsp; <strong>HQ:</strong> Verona, Italy</p>
-    <p><strong>Major Subsidiaries:</strong> Magis Power, Magis Calore, Magis Smart, Magis Ambiente, V-Reti (parent Gruppo Magis operating companies)</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Full CRM &amp; Partner Community), Field Service, Marketing Cloud (ExactTarget), Heroku, Platform Encryption</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Stefano+Cominato+AGSM+AIM">Stefano Cominato</a>, CIO]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> AGSM - Apromore - Process Mining (<a href="https://org62.my.salesforce.com/006ed00000Zdu4dAAB">$100k</a>) | AGSM - Process Mining - BDR (<a href="https://org62.my.salesforce.com/006ed00000dtLrlAAE">$100k</a>) | MS - AGSM (Gruppo Magis) - L1 Integration (<a href="https://org62.my.salesforce.com/006ed00000bb3knAAA">$90k</a>)</p>
+    <p><strong>Revenue:</strong> ~&euro;2.05B (FY2024 consolidated) &nbsp;|&nbsp; <strong>Employees:</strong> ~2,347 group &nbsp;|&nbsp; <strong>HQ:</strong> Verona, Italy</p>
+    <p><strong>Major Subsidiaries:</strong> Magis Power, Magis Calore, Magis Smart, Magis Ambiente, V-Reti</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales &amp; Service Cloud (Unlimited), Partner Community (Unlimited), Marketing Cloud Engagement (Corporate), Agentforce Conversations (Unlimited), Einstein for Service, CRM Analytics Growth, Data Cloud Segmentation &amp; Activation, Event Monitoring, Salesforce Connect, Digital Engagement (WhatsApp), Salesforce Foundations</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> AGSM - Apromore - Process Mining (<a href="https://org62.my.salesforce.com/006ed00000Zdu4dAAB">$100k</a>) &nbsp;|&nbsp; Magis - Process Mining - BDR (<a href="https://org62.my.salesforce.com/006ed00000dtLrlAAE">$100k</a>) &nbsp;|&nbsp; AGSM - Field Service (<a href="https://org62.my.salesforce.com/006ed00000Gjp0LAAR">$118k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U086X181JA3">Lorenzo Pratesi</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">86/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep install base (CRM, Field Service, MC, Heroku) plus a live Apromore Process Mining opp at Stage 02.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">MAGIS SpA merger effective Dec 2025; €1B 2025-2030 industrial plan; €120M EIB grid modernisation.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud install (Sales, Service, Partner, MC, Agentforce, Data Cloud) plus a live Apromore Process Mining opp at Stage 02.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">MAGIS S.p.A. merger effective Dec 2025; &euro;1B 2025-2030 industrial plan; &euro;120M EIB grid modernisation grant.</td></tr>
         <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Post-merger AGSM+AIM harmonisation across two CRMs, billing stacks, and field-service estates.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>17/20</td><td class="cat-green">CIO, Innovation lead, Transformation Office head, and CEO all named and reachable in Org62.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-green">Two open Process Mining opps ($100k each) — budget owned and clock already ticking to CY26 close.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>17/20</td><td class="cat-green">CIO, Innovation lead, Transformation Office head, and CEO all named and reachable via named AE Lorenzo Pratesi.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-orange">Two open Process Mining opps ($100k each) &mdash; budget owned and clock already ticking to CY26 close.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Vertical / Industry Priority</td><td>12/15</td><td class="cat-orange">Multi-utility is a solid AFPI vertical but a step below banking / insurance / life-sciences priority.</td></tr>
         <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-orange">ARERA, GDPR, NIS2, CSRD apply but no single high-stakes enforcement wedge like SOX or CPS 230.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>12/15</td><td class="cat-orange">Multi-utility is a solid AFPI vertical but a step below banking / insurance / life-sciences priority.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Magis Energia S.p.A. by mining its post-merger meter-to-cash, field-service dispatch, and customer-onboarding event logs across the newly-consolidated AGSM+AIM stack — turning the €1B MAGIS 2025-2030 industrial plan and live process-mining opp into measurable billing-cycle, first-time-fix, and switch-in cycle-time wins.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Post-Merger Meter-to-Cash Harmonisation (AGSM + AIM)</summary>
     <div class="use-case-body">
-      <p>Following the December 2025 birth of MAGIS S.p.A., two legacy meter-to-cash stacks — one from AGSM Verona, one from AIM Vicenza — still coexist across 890,000 electricity and gas customers. Bill exceptions, credit-note rework and dunning variants inflate DSO and drive contact-centre volume every cycle. AFPI mines the end-to-end read-to-bill-to-cash event log to expose which legacy variants can be retired first and which customer segments to migrate to the target platform, providing a defensible as-is baseline for the harmonisation programme. Metric moved: billing-exception rate, DSO, and cost-to-bill per customer.</p>
+      <p>Following the December 2025 birth of MAGIS S.p.A., two legacy meter-to-cash stacks &mdash; one from AGSM Verona, one from AIM Vicenza &mdash; still coexist across 890,000 electricity and gas customers. Bill exceptions, credit-note rework, and dunning variants inflate DSO and drive contact-centre volume every cycle. AFPI mines the end-to-end read-to-bill-to-cash event log to expose which legacy variants can be retired first and which customer segments to migrate to the target platform, giving the harmonisation programme a defensible as-is baseline. Metric moved: billing-exception rate, DSO, cost-to-bill per customer.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> SAP IS-U / billing stack (TBD), Sales Cloud CRM</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Davide+Casarin+AGSM+AIM">Davide Casarin</a> (Responsabile Reporting e Transformation Office)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Davide+Casarin+Magis+Energia">Davide Casarin</a> (Responsabile Reporting e Transformation Office)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -152,7 +155,7 @@
   <details>
     <summary>2. Field-Service Dispatch &amp; First-Time-Fix (V-Reti + Magis Calore)</summary>
     <div class="use-case-body">
-      <p>V-Reti (electricity/gas distribution) and Magis Calore (district heating, 8 cogeneration plants) run a shared field force across Verona, Vicenza and the wider Veneto — with EIB funding accelerating grid modernisation work orders. AFPI mines the dispatch-to-close event log in Salesforce Field Service alongside V-Reti's SCADA/OMS interfaces to expose repeat-visit patterns, parts-truck-roll misalignment, and SLA-breach clusters by asset class. The result is measurable first-time-fix improvement and lower cost-to-serve on both regulated distribution and district-heating jobs. Metric moved: first-time-fix rate, mean-time-to-restore, cost per work order.</p>
+      <p>V-Reti (electricity/gas distribution) and Magis Calore (district heating, 8 cogeneration plants) share a field force across Verona, Vicenza and the wider Veneto &mdash; with EIB funding accelerating grid modernisation work orders. AFPI mines the dispatch-to-close event log in Salesforce Field Service alongside V-Reti's SCADA/OMS interfaces to expose repeat-visit patterns, parts-truck-roll misalignment, and SLA-breach clusters by asset class. The result is measurable first-time-fix improvement and lower cost-to-serve on regulated distribution and district-heating jobs alike. Metric moved: first-time-fix rate, mean-time-to-restore, cost per work order.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, SCADA/OMS (TBD)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Michele+Bendinelli+Gruppo+Magis">Michele Bendinelli</a> (Responsabile Innovazione, Gruppo Magis)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -160,36 +163,80 @@
   </details>
 
   <details>
-    <summary>3. Customer Switch-In / Contract Activation on the Free Market</summary>
+    <summary>3. Customer Switch-In &amp; Contract Activation on the Free Market</summary>
     <div class="use-case-body">
-      <p>Italy's electricity free-market transition (fine tutela) has made customer acquisition and switch-in cycle time a direct competitive lever — Magis Energia sells power, gas and heat on the mercato libero to households, condominiums, businesses and PA. Today the switch-in journey traverses web/agent channels, credit checks, ARERA-mandated data exchanges with Acquirente Unico, and back-office activation with variants that lengthen time-to-first-bill and inflate abandonment. AFPI mines the quote-to-activation event log across Sales Cloud, Marketing Cloud journeys and back-office queues to compress cycle time and lift agent-network conversion. Metric moved: time-to-activation, switch-in abandonment rate, cost per acquisition.</p>
+      <p>Italy's electricity free-market transition (fine tutela) has made customer acquisition and switch-in cycle time a direct competitive lever &mdash; Magis Energia sells power, gas and heat on the mercato libero to households, condominiums, businesses and PA. Today the switch-in journey traverses web/agent channels, credit checks, ARERA-mandated data exchanges with Acquirente Unico, and back-office activation with variants that lengthen time-to-first-bill. AFPI mines the quote-to-activation event log across Sales Cloud, Marketing Cloud journeys, and back-office queues to compress cycle time and lift agent-network conversion. Metric moved: time-to-activation, switch-in abandonment rate, cost per acquisition.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Marketing Cloud (ExactTarget)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Donata+Dallavo+AGSM+AIM">Donata Dallavo</a> (Direzione Vendite e Processi Commerciali)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Donata+Dallavo+Magis+Energia">Donata Dallavo</a> (Direzione Vendite e Processi Commerciali)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Contact-Centre Agent Desktop &mdash; Billing Dispute Handling</summary>
+    <div class="use-case-body">
+      <p>Post-merger billing exceptions and residual dual-system rework drive high volumes into the shared AGSM+AIM contact centre. Agents flip between Service Cloud, the two legacy billing screens, and email/attachments to resolve a single dispute &mdash; classic swivel-chair with quantifiable AHT and after-call-work time. Task mining captures the agent desktop to expose which tabs and copy/paste steps eat wrap time, feeding a direct Agentforce for Service business case on the Unlimited install base already in place. Metric moved: AHT, after-call-work minutes per contact, first-contact resolution.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, legacy AGSM/AIM billing UIs</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Contact+Center+Magis+Energia">Head of Customer Operations, Magis Energia</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Credit &amp; Collections on the Regulated + Free Market Book</summary>
+    <summary>2. Field Technician Mobile Handoffs &amp; Job Documentation</summary>
     <div class="use-case-body">
-      <p>Italian multi-utility bad-debt exposure has stayed elevated post-2022 energy-price spike and the mix of regulated (maggior tutela residual) and free-market receivables complicates dunning strategy. AFPI mines the invoice-to-cash and dunning event log to reveal which customer segments respond to which reminder sequence, where manual credit-note rework compounds, and where legally-required steps (e.g. constituzione in mora) are delayed. The output is a data-grounded segmentation for Agentforce-assisted collections and a defensible reduction in provisions. Metric moved: DSO, bad-debt provision as % of revenue, contact-centre volume on billing disputes.</p>
+      <p>V-Reti and Magis Calore field techs juggle the Field Service mobile app, e-mobility charger firmware tools, SCADA/OMS lookups, and paper-legacy documentation on every job. Task mining the technician mobile session reveals where signal-off, photo capture, and part-return steps stall or duplicate, and where dispatcher call-backs cluster. That evidence targets exactly which steps to automate via Agentforce field flows and which forms to eliminate. Metric moved: on-site touch-time per job, dispatcher-to-tech callback rate, documentation completeness.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Field Service mobile, technician tablets</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=V-Reti+Field+Operations+Magis">Head of V-Reti Field Operations</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Credit &amp; Collections Analyst Desktop (Regulated + Free Market)</summary>
+    <div class="use-case-body">
+      <p>Italian multi-utility bad-debt exposure has stayed elevated post-2022 energy-price spike, and analysts today work dunning cases across Sales Cloud, SAP FI/Billing, and the legally-required constituzione-in-mora workflow. Task mining the analyst desktop pinpoints where manual credit-note preparation, PEC email drafting, and dispute-note look-ups compound rework and delay the mora clock. The evidence sizes an Agentforce collections co-pilot and quantifies the analyst FTE releasable per segment. Metric moved: cases cleared per analyst-day, manual-touch count per dunning case, time-to-mora.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, SAP FI/Billing (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Stefania+Demenego+AGSM+AIM">Stefania Demenego</a> (Gestione del credito)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Stefania+Demenego+Magis+Energia">Stefania Demenego</a> (Gestione del credito)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. ARERA Data Exchange &amp; Free-Market Switch-In Controls</summary>
+    <div class="use-case-body">
+      <p>ARERA (Italy's energy regulator) mandates strict SLAs and data-exchange formats for supplier switching, meter reads, and customer-consent handling with Acquirente Unico &mdash; enforced with monetary penalties. Compliance Center codifies the switch-in workflow as a controlled process with segregation-of-duties, sign-offs, and always-on evidence for ARERA and regional authority inquiries. Especially important as Magis expands the free-market book across the Veneto and beyond. Metric moved: ARERA-SLA breach rate, audit-ready cases, mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Acquirente Unico integration logs</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=ARERA+Compliance+Magis+Energia">Head of Regulatory Affairs, Magis Energia</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Renewables Project &amp; Grid-Connection Onboarding (Magis Power + V-Reti)</summary>
+    <summary>2. NIS2 Critical-Infrastructure Cyber-Resilience Evidence</summary>
     <div class="use-case-body">
-      <p>Gruppo Magis is investing €137M/year in the energy transition — 22 recently-acquired PV plants (~85 MWp), the largest group PV park in Trissino, and continued hydro/wind/geothermal capacity. Each project journey — permitting, EPC handoff, grid-connection request via V-Reti, GSE incentive filing, commissioning — spans multiple companies and regulators, and today lives in email plus point tools. AFPI mines the project-and-connection lifecycle event log to expose which permitting gates and internal handoffs slip most, so the programme office can pull them onto the critical path first. Metric moved: time from permit filing to first kWh, and internal handoff delays per MW commissioned.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Project/PMO system (TBD), V-Reti connection-request platform (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Marco+Serafini+AGSM+AIM">Marco Serafini</a> (Head of Strategic Plan, Control &amp; Business Development)</p>
+      <p>NIS2 designates energy suppliers and distribution operators as essential entities with binding incident reporting, risk-management, and executive-accountability duties across the group &mdash; AGSM Verona, V-Reti, Magis Power, and Magis Calore all in scope. Compliance Center runs the NIS2 control set (24h early-warning, 72h incident notification, executive attestation) as a controlled workflow with codified SLAs and continuous evidence. That collapses today's spreadsheet + email trail into a defensible audit posture for the Italian NIS2 competent authority. Metric moved: 24h/72h notification hit-rate, controls with continuous evidence, executive sign-off cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SIEM / SOC platform, GRC tooling (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Stefano+Cominato+Magis+Energia">Stefano Cominato</a> (CIO, Gruppo Magis)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account. [Slack] Note: Celonis remains the German-speaking / Northern-Italian process-mining incumbent generally — worth pre-emptively positioning against.</span></h2>
+  <details>
+    <summary>3. CSRD / ESG Reporting Controls for Grid &amp; Renewables</summary>
+    <div class="use-case-body">
+      <p>With &euro;137M/year in energy-transition capex &mdash; 22 recently-acquired PV plants (~85 MWp), Trissino solar park, and continued hydro/wind/geothermal capacity &mdash; CSRD/ESRS disclosure now covers Scope 1-3 emissions, water, biodiversity, and social metrics across Magis Power and V-Reti operations. Compliance Center codifies the data-collection, controls-testing, and management-attestation workflow so auditors get always-on evidence rather than an annual scramble. Pairs directly with the group's stated 2025-2030 industrial plan targets. Metric moved: CSRD data-points with mapped controls, attestation cycle time, restated disclosures.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ESG data platform (TBD), consolidation / GL system</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Marco+Serafini+Magis+Energia">Marco Serafini</a> (Head of Strategic Plan, Control &amp; Business Development)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Magis Energia S.p.A. by mining post-merger meter-to-cash, field-service dispatch, and free-market switch-in event logs across the newly-consolidated AGSM+AIM Salesforce estate, task-mining contact-centre, field-technician, and collections-analyst desktops to expose the swivel-chair work Agentforce can eliminate, and running ARERA, NIS2, and CSRD controls through Compliance Center to compress billing and switch-in cycle times, lift first-time-fix, and give the group audit-ready evidence for its &euro;1B 2025-2030 industrial plan.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -200,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

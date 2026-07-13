@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>America First Policy Institute — AFPI POV</title>
+<title>America First Policy Institute &mdash; AFPI POV</title>
 <style>
   body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
          color: #1a1a1a; line-height: 1.45; background: #fff; }
@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -111,89 +112,133 @@
 <main>
   <h1>America First Policy Institute</h1>
   <div class="snapshot">
-    <p><strong>Non-Profit, Public Policy Think Tank</strong></p>
-    <p><strong>Revenue:</strong> ~$2.1M &nbsp;|&nbsp; <strong>Employees:</strong> ~100 &nbsp;|&nbsp; <strong>HQ:</strong> Fairfax, VA (US)</p>
-    <p><strong>Major Subsidiaries:</strong> America First Works (501(c)(4) affiliate), America First Legal (aligned sister org)</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Not confirmed — AFPI CRM opportunity currently in evaluation stage</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Mary Kate LaCroix, Sr Director of Development Operations]</p>
+    <p><strong>Non-Profit, Public Policy Think Tank (501(c)(3))</strong></p>
+    <p><strong>Revenue:</strong> ~$51.4M (2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~172 &nbsp;|&nbsp; <strong>HQ:</strong> Washington, D.C., USA</p>
+    <p><strong>Major Subsidiaries:</strong> America First Transition Project, America 250 Civics Education Coalition</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Not confirmed &mdash; AFPI CRM opportunity in early-stage evaluation, no install base yet</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> AFPI CRM (<a href="https://org62.my.salesforce.com/006ed00000fpM5KAAU">$TBD</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
-    <p><strong>Salesforce AE:</strong> Gwyn Cavallo</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U08HX7YJ4PN">Gwyn Cavallo</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Nonprofit Cloud)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t3">22/100</span> — T4 Deprioritize</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t3">22/100</span> &mdash; T4 Deprioritize</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>7/12</td><td class="cat-orange">Active AFPI CRM opp with Gwyn Cavallo; early evaluation stage, no install base yet.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>9/20</td><td class="cat-orange">Chad Wolf (ED/CSO) + development ops leaders reachable; no process-owner sponsor.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>4/12</td><td class="cat-orange">Yusuf Mahmood, Director of AI &amp; Emerging Tech Policy — signal for AI narrative, not spend.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>3/15</td><td class="cat-red">Small non-profit; no bottleneck / cycle-time signals surfaced in Org62 or public sources.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>2/12</td><td class="cat-red">No SAP/Oracle/ServiceNow; CRM still being selected — no minable event logs today.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>4/8</td><td class="cat-orange">501(c)(3) IRS 990 filings plus c(4) affiliate cost-allocation obligations create modest control burden.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>5/12</td><td class="cat-red">Active AFPI CRM opp with Gwyn Cavallo but still at Stage 01 &mdash; no closed-won install base yet.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>8/20</td><td class="cat-red">Sindelar (CEO) and Caro Campana (COO) reachable via SF AE; no process-owner sponsor identified.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>2/6</td><td class="cat-red">Think-tank IT budget unlikely to clear $200k ACV floor for standalone AFPI in this fiscal year.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>4/12</td><td class="cat-red">AI &amp; Emerging Tech Policy center produces narrative, not internal AI/agent adoption spend.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>2/15</td><td class="cat-red">Public policy think tank — outside all Apromore priority verticals.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>1/6</td><td class="cat-red">~$2.1M annual revenue, ~100 FTE — will not clear the $200k ACV floor for AFPI.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>2/15</td><td class="cat-red">Public policy think tank &mdash; outside every Apromore priority vertical (FSI, insurance, manufacturing, energy).</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>3/12</td><td class="cat-red">No SAP/Oracle/ServiceNow footprint; CRM still being selected &mdash; no minable event logs available today.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help America First Policy Institute by monitoring the account for a trigger event (major CRM go-live, M&amp;A with a larger 501(c) network, or federal grant program requiring auditability) — today the org is too small and too early-stage in its systems footprint to justify an AFPI process-mining engagement.</p>
+  <div class="nurture-box"><strong>Nurture / Disqualify:</strong> AFPI is a T4 today. The account sits outside Apromore&rsquo;s priority verticals, has no minable event-log systems in place, and its CRM decision has not yet closed. The right move is a light-touch watch: revisit only when the Salesforce Nonprofit Cloud rollout closes and accumulates 12&ndash;18 months of event history, or if AFPI wins a federal grant program that requires auditable process controls.</div>
 
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Donor Lifecycle &amp; Development Operations</summary>
     <div class="use-case-body">
-      <p>AFPI's Development Operations team runs solicitation, gift processing, receipting, and stewardship — classic donor lifecycle. Once the AFPI CRM opp closes and 12+ months of event logs accumulate in Salesforce, Apromore could mine the donor-to-recognition flow to shorten receipt time and lift retention. Metric moved: gift-to-thank-you cycle time, donor retention rate. Not actionable today — no event logs yet.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> TBD (future Salesforce Nonprofit Cloud)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mary+Kate+LaCroix+America+First+Policy+Institute">Mary Kate LaCroix</a> (Senior Director of Development Operations)</p>
+      <p>AFPI&rsquo;s Development team runs solicitation, gift processing, receipting, and stewardship &mdash; a classic donor lifecycle that mines cleanly once event data exists. If the AFPI CRM opp closes on Nonprofit Cloud and 12+ months of gift and interaction events accumulate, Apromore can expose where receipts and stewardship touches slip. Not actionable in FY26 because there is no CRM to mine yet. Metric: gift-to-thank-you cycle time and donor retention rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Nonprofit Cloud (future), Marketing Cloud (future)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alexandra+Caro+Campana+America+First+Policy+Institute">Alexandra Caro Campana</a> (EVP &amp; COO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Grant &amp; Program Approval Workflow</summary>
+    <summary>2. Policy Research &amp; Publication Workflow</summary>
     <div class="use-case-body">
-      <p>Think tanks operate program approval workflows spanning research proposal → policy paper drafting → editorial review → publication and distribution. Mining this flow could surface rework loops between editorial and legal. Metric moved: proposal-to-publish cycle time. Blocked by absence of a workflow system with event logs.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> TBD</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Martin+Gillespie+America+First+Policy+Institute">Martin Gillespie</a> (Executive Vice President)</p>
+      <p>A think-tank&rsquo;s core process is proposal &rarr; research &rarr; editorial review &rarr; legal / comms clearance &rarr; publication &rarr; congressional distribution. Mining this flow would surface rework loops between research and editorial and quantify time-to-publication. Blocked today because no unified workflow platform captures the events end-to-end. Metric: proposal-to-publish cycle time and rework rate on major papers.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Editorial workflow / CMS (TBD), SharePoint or equivalent</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Greg+Sindelar+America+First+Policy+Institute">Greg Sindelar</a> (President &amp; CEO, interim)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Digital Campaign &amp; Email Marketing Cadence</summary>
+    <summary>3. Coalition Program &amp; Grant Management</summary>
     <div class="use-case-body">
-      <p>Digital and email marketing operations (list building, campaign send, response, follow-up) are core to any advocacy think tank. If AFPI stands up a Marketing Cloud instance alongside the CRM, mining email-to-donation attribution could quantify channel yield. Metric moved: cost per acquired donor, list decay. Aspirational; no marketing system confirmed today.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> TBD</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Remy+Hart+America+First+Policy+Institute">Remy Hart</a> (Vice President, Digital)</p>
+      <p>AFPI runs coalition programs like the America 250 Civics Education Coalition (40+ partner orgs) and the America First Transition Project, both of which require sub-grant workflow, partner reporting, and outcome tracking. Mining the grant-application-to-close-out flow could shrink partner onboarding and grant close-out cycles. Aspirational until a grants-management platform is in place. Metric: partner onboarding TAT and grant close-out cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Grants management platform (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Larry+Kudlow+America+First+Policy+Institute">Larry Kudlow</a> (Chairman)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Development Ops Gift Processing Desktop</summary>
+    <div class="use-case-body">
+      <p>Development staff processing large-donor gifts today likely swivel between email, an accounting/GL system, spreadsheets, and (eventually) Salesforce. Task mining the fundraiser desktop would show which app-switches and re-keying steps eat gift-processing time and could be eliminated by Agentforce once Nonprofit Cloud is live. Symbolic today; the real payoff arrives after CRM go-live. Metric: gifts processed per FTE per day and manual touches per gift.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Fundraiser desktop, email/Outlook</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alexandra+Caro+Campana+America+First+Policy+Institute">Alexandra Caro Campana</a> (EVP &amp; COO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. 501(c)(3) / (c)(4) Compliance &amp; Attestation</summary>
+    <summary>2. Policy Researcher Content Production Desktop</summary>
     <div class="use-case-body">
-      <p>AFPI operates alongside 501(c)(4) affiliate America First Works — activity must be segregated for IRS compliance (lobbying limits, cost allocation). Mining shared-services allocation and time-tracking flows could reduce audit prep effort. Metric moved: audit-cycle prep days. Requires a governance/time-tracking system with event logs.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> TBD</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chad+Wolf+America+First+Policy+Institute">Chad Wolf</a> (Executive Director &amp; Chief Strategy Officer)</p>
+      <p>Policy researchers produce papers, op-eds, and congressional briefings by switching between Word, web research, citation managers, and internal review threads. Task mining the researcher desktop would quantify time spent on formatting, source-checking, and rework versus original analysis &mdash; a natural feeder for Agentforce copy-assist. Not urgent today because AFPI does not measure researcher throughput operationally. Metric: paper touch-time and edit-cycle count per publication.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Word/Google Docs, research browser, citation manager</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kevin+Hassett+America+First+Policy+Institute">Kevin Hassett</a> (Board / Economic Policy)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. AI &amp; Emerging-Tech Policy Content Pipeline</summary>
+    <summary>3. Legislative Affairs Briefing &amp; Meeting-Prep Desktop</summary>
     <div class="use-case-body">
-      <p>The AI &amp; Emerging Tech Policy center produces regular content — research, op-eds, congressional briefings. As Agentforce moves into policy-adjacent conversations, mining the content-request-to-publication flow could tie AI adoption narrative to AFPI's own operations. Metric moved: content velocity. Symbolic more than commercial today.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> TBD</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Yusuf+Mahmood+America+First+Policy+Institute">Yusuf Mahmood</a> (Director, AI &amp; Emerging Technology Policy)</p>
+      <p>Legislative affairs staff prep for Hill meetings by pulling talking points, member voting records, and issue briefs from multiple sources into a single deck or one-pager. Task mining the meeting-prep desktop would expose the exact steps that Agentforce could automate as a briefing assistant. Meaningful only at greater staff scale than AFPI currently runs. Metric: prep-time per meeting and briefing turnaround time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Slides/Word, legislative-tracking web tools</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Greg+Sindelar+America+First+Policy+Institute">Greg Sindelar</a> (President &amp; CEO, interim)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent mentions of Celonis, Signavio, ARIS, ABBYY, ServiceNow, Appian, UiPath, or Power Automate tied to America First Policy Institute in Slack or public sources — the account has no visible process-mining evaluation underway.</span></h2>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. 501(c)(3) IRS Form 990 &amp; Public Disclosure Controls</summary>
+    <div class="use-case-body">
+      <p>Every 501(c)(3) files an annual Form 990 with public disclosure of program spending, executive comp, and governance answers &mdash; a live compliance surface AFPI must attest to each year. Compliance Center could codify the 990 preparation as a controlled, evidenced workflow with segregation of duties and sign-offs. Small-scale today; useful as AFPI grows. Metric: 990 prep cycle-time and audit findings per year.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Accounting/GL platform, document management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alexandra+Caro+Campana+America+First+Policy+Institute">Alexandra Caro Campana</a> (EVP &amp; COO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Lobbying-Limits &amp; c(3)/c(4) Cost Allocation</summary>
+    <div class="use-case-body">
+      <p>AFPI operates alongside 501(c)(4)-style advocacy vehicles, and shared-services time and cost must be segregated to protect the c(3)&rsquo;s lobbying limits and public-charity status. Compliance Center can run the allocation and attestation flow as a controlled process with evidenced sign-offs each period. Not required today because AFPI reports no allocation-controversy findings, but a natural safety net as headcount grows. Metric: allocation exceptions per period and audit-prep effort.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Time-tracking / HRIS, GL</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alexandra+Caro+Campana+America+First+Policy+Institute">Alexandra Caro Campana</a> (EVP &amp; COO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Federal Grant Reporting &amp; Program Audit</summary>
+    <div class="use-case-body">
+      <p>The America 250 Civics Education Coalition operates with U.S. Department of Education oversight, and any federal grant program brings 2 CFR 200 reporting, drawdown controls, and program-audit obligations. Compliance Center would run drawdown-to-report as a controlled, evidenced workflow &mdash; especially valuable if AFPI wins more federal or state grant streams. Contingent on grant-award growth. Metric: report-on-time rate and audit findings per grant.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Grants management platform (TBD), GL</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Greg+Sindelar+America+First+Policy+Institute">Greg Sindelar</a> (President &amp; CEO, interim)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help America First Policy Institute by mining the donor lifecycle and policy-research workflows once Nonprofit Cloud closes and 12&ndash;18 months of event data accrue, task-mining the fundraiser and researcher desktops to feed an Agentforce automation business case, and running 501(c)(3) IRS 990, c(3)/c(4) cost-allocation, and federal grant-reporting controls through Compliance Center &mdash; but the account is a light-touch nurture today until the CRM is live and event logs exist.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +249,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

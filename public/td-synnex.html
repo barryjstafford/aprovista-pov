@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -111,42 +112,40 @@
 <main>
   <h1>TD SYNNEX Corporation</h1>
   <div class="snapshot">
-    <p><strong>Technology, IT Distribution & Solutions Aggregation</strong></p>
-    <p><strong>Revenue:</strong> $58.4B FY25 &nbsp;|&nbsp; <strong>Employees:</strong> ~23,500 &nbsp;|&nbsp; <strong>HQ:</strong> Clearwater, FL & Fremont, CA, USA</p>
-    <p><strong>Major Subsidiaries:</strong> Hyve Solutions, Shyft Global Services, AVT Technology Solutions, TD SYNNEX Public Sector (formerly DLT Solutions), Westcon-Comstor (aggregation portfolio)</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Agentforce (in-flight Operations opp), Employee Service, Signature Success — Platform</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Custom in-house ERP (owned by SVP Business Ops Nate Hertz), ServiceNow (co-exist with Employee Service) [Slack]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> TD Synnex - Agentforce Operations (<a href="https://org62.my.salesforce.com/006ed00000cb3ibAAA">$900k</a>) &nbsp;·&nbsp; TD Synnex Employee Service Co-Exist SNOW (<a href="https://org62.my.salesforce.com/006ed00000fbjHtAAI">$435k</a>) &nbsp;·&nbsp; TD Synnex - Partner Quote to Cash (<a href="https://org62.my.salesforce.com/006ed00000VmvAFAAZ">$250k</a>)</p>
+    <p><strong>Technology, IT Distribution &amp; Solutions Aggregation</strong></p>
+    <p><strong>Revenue:</strong> ~$62.3B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~23,500 &nbsp;|&nbsp; <strong>HQ:</strong> Clearwater, FL &amp; Fremont, CA, USA</p>
+    <p><strong>Major Subsidiaries:</strong> Hyve Solutions, Shyft Global Services, AVT Technology Solutions, TD SYNNEX Public Sector, Westcon-Comstor</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Agentforce, Employee Service, Marketing Cloud, Signature Success &mdash; Platform</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Custom in-house ERP, ServiceNow</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> TD Synnex &mdash; Agentforce Operations (<a href="https://org62.my.salesforce.com/006ed00000cb3ibAAA">$900k</a>) &nbsp;|&nbsp; TD Synnex &mdash; Partner Quote to Cash (<a href="https://org62.my.salesforce.com/006ed00000VmvAFAAZ">$250k</a>) &nbsp;|&nbsp; TD Synnex &mdash; Apromore Process Mining (<a href="https://org62.my.salesforce.com/006ed00000Zz9lNAAR">$200k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G9182AMR">Peter Teruya</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">88/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">88/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Buyer & Champion Fit</td><td>19/20</td><td class="cat-green">Named champion Laxmi Badri (Prog. Mgr Automation) + exec sponsor Nate Hertz SVP Ops [Slack].</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">Active PoC to clean data + understand custom ERP utilization; O2C, procurement, returns pain [Slack].</td></tr>
-        <tr><td>Transformation & Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">$900k Agentforce Operations opp in-flight; automation CoE stood up under Laxmi.</td></tr>
-        <tr><td>Salesforce Footprint & Relationship</td><td>11/12</td><td class="cat-green">Sales/Service Cloud, Employee Service, Signature Success, multi-opp Q4/Q1 pipeline.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Technology / IT Distribution — high-volume transactional flows, priority AFPI vertical.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>19/20</td><td class="cat-green">Named champion Laxmi Badri (Program Manager Automation) tasked with procuring process mining; sponsor Nate Hertz SVP Ops [Slack].</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">Active PoC scope covers O2C, procurement, financial, returns/supply chain, IT distribution [Slack].</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">$900k Agentforce Operations opp in-flight + dedicated $200k Apromore Process Mining opp already staged.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>11/12</td><td class="cat-green">Sales/Service Cloud, Employee Service, Signature Platform, active Q1 multi-opp pipeline &gt;$3M.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Technology / IT Distribution &mdash; high-volume transactional flows, priority AFPI vertical.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Systems & Event-Log Readiness</td><td>7/12</td><td class="cat-orange">Custom home-grown ERP — event logs likely exist but require ETL work; not SAP/Oracle out-of-box.</td></tr>
-        <tr><td>Compliance & Risk Pressure</td><td>4/8</td><td class="cat-orange">SOX applies (public co) but no acute regulated-industry driver like HIPAA / NERC.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>7/12</td><td class="cat-orange">Custom home-grown ERP &mdash; event logs exist but require ETL work; not SAP/Oracle out-of-box.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>4/8</td><td class="cat-orange">SOX applies (public co) but no acute regulated-industry driver like HIPAA / NERC.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help TD SYNNEX Corporation by mining the custom ERP that Nate Hertz owns to expose bottlenecks in order-to-cash, procurement, and returns — turning Laxmi Badri's automation program into measurable throughput gains, faster partner quote-to-cash, and a defensible ROI case that de-risks the co-sell Agentforce Operations $900k deal.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Custom-ERP Order-to-Cash Bottleneck Discovery</summary>
     <div class="use-case-body">
-      <p>The custom in-house ERP is where TD SYNNEX books $58B in annual product flow — Laxmi Badri's team is already scoping process mining to understand how it is actually being used [Slack]. Apromore can event-log the ERP, surface the specific handoffs between order entry, credit check, allocation, and invoicing that stall cash conversion, and quantify DSO impact. This is the exact PoC scope Nate Hertz has sponsored and drops straight into an Agentforce Operations remediation loop. Metric: reduce DSO by 3-5 days on a $58B revenue base.</p>
+      <p>The custom in-house ERP is where TD SYNNEX books &gt;$62B in annual product flow, and Laxmi Badri's team is already scoping process mining to understand how it is actually being used [Slack]. Apromore can event-log the ERP, surface the specific handoffs between order entry, credit check, allocation, and invoicing that stall cash conversion, and quantify DSO impact. This is the exact PoC scope Nate Hertz has sponsored and drops straight into an Agentforce Operations remediation loop. Metric: reduce DSO by 3&ndash;5 days on a $62B revenue base.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Custom ERP, Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Laxmi+Badri+TD+SYNNEX">Laxmi Badri</a> (Program Manager, Automation)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -154,9 +153,9 @@
   </details>
 
   <details>
-    <summary>2. Procurement & Vendor Onboarding Cycle-Time Reduction</summary>
+    <summary>2. Procure-to-Pay Cycle-Time &amp; Vendor Onboarding</summary>
     <div class="use-case-body">
-      <p>TD SYNNEX aggregates products from 1,500+ vendors — every day of procurement cycle time is inventory cost and channel opportunity lost. Apromore can mine PO → vendor confirmation → GR → invoice-match cycles to expose rework loops and off-system approvals that show up as "manual gaps" between systems. This is a named use case in the current PoC scope alignment with Laxmi [Slack]. Metric: reduce procure-to-pay cycle time 15-20% and cut duplicate-PO rework.</p>
+      <p>TD SYNNEX aggregates products from 1,500+ vendors &mdash; every day of procurement cycle time is inventory cost and channel opportunity lost. Apromore can mine PO &rarr; vendor confirmation &rarr; GR &rarr; invoice-match cycles to expose rework loops and off-system approvals that show up as manual gaps between systems. This is a named PoC use case in the current Apromore alignment thread [Slack]. Metric: reduce procure-to-pay cycle time 15&ndash;20% and cut duplicate-PO rework.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Custom ERP, Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Nate+Hertz+TD+SYNNEX">Nate Hertz</a> (SVP Business Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -164,36 +163,80 @@
   </details>
 
   <details>
-    <summary>3. Returns & Reverse-Logistics Process Mining (Hyve / Shyft)</summary>
+    <summary>3. Partner Quote-to-Cash Standardization Across Leap Division</summary>
     <div class="use-case-body">
-      <p>Returns and depot repair are named PoC candidates — the Shyft Global Services and TD Synnex Depot Repair entities absorb the physical returns flow. Apromore can mine RMA → inbound → triage → refurb → restock cycles to identify where returns leak margin and where SLA promises to customers slip. Pair this with Agentforce Operations to orchestrate the human handoffs. Metric: cut return-to-restock lead time 25% and reduce write-off rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Custom ERP, Service Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Nate+Hertz+TD+SYNNEX">Nate Hertz</a> (SVP Business Operations)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Partner Quote-to-Cash Standardization Across Leap Division</summary>
-    <div class="use-case-body">
-      <p>TD Synnex has an open $250k Partner Quote-to-Cash opp plus a $400k Sales Cloud Leap Division opp — the partner-facing quote-configure-order-ship flow is the highest-leverage revenue process in the business. Apromore can mine current Sales Cloud + ERP handoffs across Leap and legacy divisions to expose variance between what "should" happen and what actually happens across 150k+ reseller partners. This directly de-risks the Partner Quote-to-Cash implementation. Metric: 30% faster quote-to-order and higher partner NPS.</p>
+      <p>The open $250k Partner Quote-to-Cash opp plus the $400k Sales Cloud Leap Division opp mean the partner-facing quote-configure-order-ship flow is the highest-leverage revenue process in the business. Apromore can mine Sales Cloud + ERP handoffs across Leap and legacy divisions to expose variance between what "should" happen and what actually happens across 150k+ reseller partners. This directly de-risks the Partner Quote-to-Cash implementation. Metric: 30% faster quote-to-order and higher partner NPS.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Custom ERP</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Laxmi+Badri+TD+SYNNEX">Laxmi Badri</a> (Program Manager, Automation)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>5. IT Distribution & Fulfillment Exception-Handling</summary>
+    <summary>1. IT Distribution &amp; Fulfillment Specialist Desktop</summary>
     <div class="use-case-body">
-      <p>IT Distribution Process is explicitly called out in the current PoC scope discussion [Slack]. Apromore can map the license-key provisioning, cloud-marketplace subscription, and physical distribution paths, then quantify exception-handling drag and unauthorized process variants. Feeds directly into the Agentforce Operations $900k co-sell as the "diagnose then orchestrate" wedge. Metric: reduce fulfillment exception rate by 40% and shift specialist labor to higher-value work.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Custom ERP, ServiceNow</p>
+      <p>IT Distribution is explicitly called out in the current PoC scope discussion [Slack]. Distribution specialists swivel-chair between the custom ERP, marketplace consoles, license-key provisioning tools, and Sales/Service Cloud to complete each order. Task mining exposes exactly which desktop steps eat cycle time and which are candidates for Agentforce Operations automation. Metric: reduce fulfillment exception-handling time 40% per order.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Custom ERP desktop, Sales Cloud console</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Laxmi+Badri+TD+SYNNEX">Laxmi Badri</a> (Program Manager, Automation)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No specific competitor tied to TD SYNNEX in current Slack/web signals — Laxmi Badri's team is actively evaluating process-mining solutions with no dominant incumbent named yet. Watch for <strong>Celonis</strong> as the likely reference comparison given her mandate to procure a solution. &nbsp;·&nbsp; <strong>ServiceNow</strong> is present as an Employee Service co-exist system (<a href="https://org62.my.salesforce.com/006ed00000fbjHtAAI">$435k opp</a>), not as a process-mining competitor.</span></h2>
+  <details>
+    <summary>2. Returns / RMA Triage Desktop (Shyft &amp; Hyve)</summary>
+    <div class="use-case-body">
+      <p>Shyft Global Services and the Hyve depot-repair operation absorb the physical returns flow &mdash; a named PoC use case (Returns &amp; Supply Chain Ops) [Slack]. Task mining the RMA-triage desktop reveals how much time is spent looking up customer records, checking warranty status, and re-keying between the ERP and Service Cloud &mdash; and where Agentforce can straight-through-process the routine cases. Metric: cut return-to-restock lead time 25% and reduce write-off rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> RMA/depot system, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Nate+Hertz+TD+SYNNEX">Nate Hertz</a> (SVP Business Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Employee Service Agent Desktop (ServiceNow Co-Exist)</summary>
+    <div class="use-case-body">
+      <p>The $435k Employee Service Co-Exist SNOW opp puts TD SYNNEX's internal-support agents on two consoles at once &mdash; Salesforce Employee Service on the front end, ServiceNow on the back end. Task mining shows exactly how agents move between the two and quantifies the after-call-work minutes lost to duplicate ticket entry. Feeds an immediate Agentforce for Employee Service business case. Metric: cut internal-ticket handle-time 20% and eliminate ~50% of dual-entry.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Employee Service console, ServiceNow</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Nate+Hertz+TD+SYNNEX">Nate Hertz</a> (SVP Business Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. SOX ITGC &amp; Segregation-of-Duties on the Custom ERP</summary>
+    <div class="use-case-body">
+      <p>As a NYSE-listed public company, TD SYNNEX operates under Sarbanes-Oxley &mdash; and its custom in-house ERP is where every revenue and inventory control lives. Compliance Center codifies segregation-of-duties, order-approval thresholds, and privileged-access controls as a monitored process with continuous evidence for external auditors. This is a natural extension of the Apromore PoC into the audit function. Metric: audit-ready control coverage and mean-time-to-evidence reduced from weeks to hours.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Custom ERP, identity/access platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Audit+Executive+TD+SYNNEX">Chief Audit Executive / Head of SOX</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Vendor / Third-Party Risk &amp; Trade-Compliance Controls</summary>
+    <div class="use-case-body">
+      <p>Aggregating a portfolio from 1,500+ vendors across 100+ countries means constant exposure to export controls, sanctions screening, and third-party risk obligations. Compliance Center turns vendor onboarding and re-attestation into a controlled workflow with codified sign-offs and continuous monitoring, plus alerting when a vendor moves onto a restricted list. Metric: reduce vendor re-certification cycle time and produce always-on audit evidence for trade compliance.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Custom ERP, sanctions-screening platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Compliance+Officer+TD+SYNNEX">Chief Compliance Officer</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Public-Sector Contract Compliance (TD SYNNEX Public Sector / DLT)</summary>
+    <div class="use-case-body">
+      <p>TD SYNNEX Public Sector (the former DLT Solutions business) sells into US federal, state, and local agencies &mdash; each with contract-vehicle terms (GSA, SEWP, NASPO) that carry specific compliance and reporting obligations. Compliance Center codifies the quote-to-order-to-report flow as a monitored process with sign-offs and evidence, cutting the manual work of contract-compliance reporting. Metric: contract-vehicle audit findings reduced, faster monthly/quarterly compliance reporting.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Public Sector CPQ, contract-management platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Public+Sector+Compliance+TD+SYNNEX">Head of Public Sector Compliance</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help TD SYNNEX Corporation by mining the custom ERP that Nate Hertz owns to expose bottlenecks in order-to-cash, procure-to-pay, and partner quote-to-cash, task-mining the IT-distribution, RMA-triage, and Employee Service desktops so Agentforce Operations knows exactly which swivel-chair steps to automate, and using Compliance Center to codify SOX ITGC, third-party trade compliance, and public-sector contract controls &mdash; turning Laxmi Badri's automation mandate into measurable DSO reduction, faster partner quote-to-cash, and continuous audit evidence that de-risks the in-flight $900k Agentforce Operations co-sell.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

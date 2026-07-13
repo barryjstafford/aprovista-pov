@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -113,42 +114,40 @@
   <div class="snapshot">
     <p><strong>Healthcare &amp; Life Sciences, Private Health Insurance</strong></p>
     <p><strong>Revenue:</strong> ~AU$2.06B &nbsp;|&nbsp; <strong>Employees:</strong> ~1,656 &nbsp;|&nbsp; <strong>HQ:</strong> Perth, Australia</p>
-    <p><strong>Major Subsidiaries:</strong> HBF General Insurance, CUA Health (acquired), HBF Dental, Life Ready Physio</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Slack (active renewal in flight) [Slack]</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Simon Smith / IT leadership]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> HBF Health Limited Renewal 21 Slack (<a href="https://org62.my.salesforce.com/006ed00000O1HIjAAN">$TBD</a>)</p>
+    <p><strong>Major Subsidiaries:</strong> HBF General Insurance, HBF Dental, Life Ready Physio, CUA Health (acquired)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Financial Services Cloud (Sales &amp; Service Unlimited), Agentforce for Financial Services, Customer Data Cloud, CRM Analytics Plus, Tableau (Creator/Explorer/Viewer), Salesforce Shield, Unlimited Customer Community, Marketing Cloud Engagement, Digital Engagement, Salesforce Connect, Slack</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Snowflake, Avaya (in replacement), Genesys</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> HBF Agentic Acceleration, CSG (<a href="https://org62.my.salesforce.com/006ed00000cX365AAC">$987k</a>) &nbsp;|&nbsp; HBF Apromore / Agentforce #AFWT26 (<a href="https://org62.my.salesforce.com/006ed00000XfWybAAF">$200k</a>) &nbsp;|&nbsp; MS-AU-HBF Agent Fabric #DF (<a href="https://org62.my.salesforce.com/006ed00000ejUCbAAM">$100k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G5NPNM3P">Simon Smith</a></p>
-    <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">74/100</span> — T2 Develop</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">89/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep FSC + Agentforce + Data Cloud + Tableau + Shield + MC + Slack; $1.57M and $1.01M renewals in flight.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">3 Agentforce agents live (Buddy/Member/Webchat); 20+ use case backlog; ProServ + Signature Trial engaged.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">Priority AFPI vertical &mdash; 2nd largest not-for-profit AU health fund, 1.2M members, claims + provider ops mineable.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">CIO Sanjeev Gupta named exec sponsor; GM David Beer + CRM Mgr Carl Morrall active on delivery.</td></tr>
         <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">APRA prudential + Private Health Insurance Act + PHIO complaints regime demand auditable process traceability.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Health insurance is a priority Apromore vertical — claims, prior-auth, provider ops all mineable.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>12/15</td><td class="cat-green">Claims cycle-time, provider onboarding rework, member churn touchpoints are classic PM targets.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>12/20</td><td class="cat-orange">Target COO/CIO/Claims-Ops titles likely present; no named champion surfaced yet.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-orange">Standard health-insurer core (policy admin + claims engine) yields event logs; needs data-access confirmation.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>4/6</td><td class="cat-orange">Slack renewal live but no AFPI budget line yet; sub-$500k ACV likely on first land.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>8/12</td><td class="cat-orange">Mid-tier not-for-profit; digital-transformation active but no public AF / automation CoE signal.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>4/6</td><td class="cat-orange">Apromore opp is $200k first land &mdash; needs to grow into the $987k Agentic Acceleration wave to hit &gt;$500k ACV.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-orange">Data Cloud + Snowflake zero-copy strong, but claims engine and utilisation-management log access not yet validated.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help HBF Health Limited by mining member-claims lifecycle, provider onboarding, and prior-authorisation workflows to compress claims cycle-time, cut avoidable rework, and give APRA/PHIO-grade evidence of process conformance — all through a no-code path that lets a single business analyst do the work of a SQL+PQL pair.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Claims Adjudication Cycle-Time &amp; Rework Reduction</summary>
+    <summary>1. Member Claims Adjudication Cycle-Time &amp; Rework</summary>
     <div class="use-case-body">
-      <p>Member and provider claims flow through intake, adjudication, exception handling, and payment. Manual holds, rework loops, and inconsistent exception routing drive cycle-time variance and member NPS drag. AFPI mines the claim ID as case key across the claims engine + workflow tool, quantifies rework loops by variant, and pinpoints the top 3 controllable drivers. Metric moved: median claim cycle-time and first-pass-yield.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Claims engine, workflow/BPM</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Operating+Officer+HBF+Health">COO / Chief Claims Officer</a> (Claims Operations)</p>
+      <p>Member and provider claims flow through intake, adjudication, exception handling, and payment. Manual holds, rework loops, and inconsistent exception routing drive cycle-time variance and directly feed member NPS drag. AFPI mines the claim ID as case key across the claims engine and workflow tool, quantifies rework loops by variant, and pinpoints the top 3 controllable drivers &mdash; then hands the top automatable steps to the HBF Agentforce backlog. Metric: median claim cycle time and first-pass-yield.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Claims engine, Financial Services Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=David+Beer+HBF+Health">David Beer</a> (GM, Member Connect)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -156,44 +155,88 @@
   <details>
     <summary>2. Provider Onboarding &amp; Contract-to-Payment</summary>
     <div class="use-case-body">
-      <p>Onboarding hospitals, ancillary providers, and Life Ready physio partners spans credentialing, contracting, fee-schedule loading, and first payment. Delays compound provider dissatisfaction and complaint volume to PHIO. AFPI mines the provider ID as case key across CRM + provider master + finance, exposes hand-off delays and rework, and shows where SLAs slip. Metric moved: onboarding-to-first-payment days and complaint volume.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Provider master, Salesforce</p>
+      <p>Onboarding hospitals, ancillary providers, and Life Ready physio partners spans credentialing, contracting, fee-schedule loading, and first payment. Delays compound provider dissatisfaction and complaint volume to PHIO. AFPI mines the provider ID as case key across CRM + provider master + finance, exposes hand-off delays and rework, and shows where SLAs slip. Metric: onboarding-to-first-payment days and complaint volume.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Provider master, Financial Services Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Provider+Network+HBF+Health">Head of Provider Network</a> (Provider Relations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Member Onboarding &amp; Retention Journey</summary>
+    <summary>3. Member Onboarding &amp; May-Round Retention Journey</summary>
     <div class="use-case-body">
-      <p>HBF competes with Bupa, Medibank and nib for switchers each May premium-round. New-member onboarding — quote, join, first-claim, retention save — is a multi-system funnel where drop-off drives churn. AFPI maps the actual member journey (not the designed one), identifies the variants that lead to retention vs churn, and surfaces the earliest intervention point. Metric moved: 90-day retention rate and cost-to-acquire recovery.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce, policy admin</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Marketing+Officer+HBF+Health">CMO / Head of Member Experience</a> (Member Growth)</p>
+      <p>HBF competes with Bupa, Medibank and nib for switchers each May premium round. New-member onboarding &mdash; quote, join, first-claim, retention save &mdash; is a multi-system funnel on FSC + policy admin where drop-off drives churn. AFPI maps the actual member journey (not the designed one), identifies the variants that lead to retention vs churn, and surfaces the earliest intervention point that the Member Agent can act on. Metric: 90-day retention and cost-to-acquire recovery.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, policy admin</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Sanjeev+Gupta+HBF+Health">Sanjeev Gupta</a> (Chief Information &amp; Transformation Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Contact Centre Agent Handle-Time (Post-Avaya to SCV+Genesys)</summary>
+    <div class="use-case-body">
+      <p>HBF is mid-migration from Avaya to Service Cloud Voice + Genesys, and Agent 2 (Member Agent) has already cut call-centre volume by 23%. Task mining the remaining human-handled contacts captures each on-screen action to isolate the after-call-work steps and the tabs that eat wrap time &mdash; feeding the next tranche of Agentforce automations. Metric: AHT and after-call-work minutes per contact type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud Voice, Genesys</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=David+Beer+HBF+Health">David Beer</a> (GM, Member Connect)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Prior-Authorisation &amp; Utilisation Management</summary>
+    <summary>2. Claims Assessor Desktop Swivel-Chair</summary>
     <div class="use-case-body">
-      <p>Prior-auth for high-cost procedures (surgery, imaging, ancillary bundles) is a compliance-heavy workflow with clinical review hand-offs. Variance in approval time exposes HBF to member complaints and reputational risk under PHIO. AFPI mines the auth-request ID across intake, clinical review, and decision, quantifies conformance to the documented policy, and highlights bottleneck reviewers. Metric moved: median approval time and PHIO-relevant complaint rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Utilisation management, claims engine</p>
+      <p>Claims assessors switch between the claims engine, policy admin, provider database, and email to close a single contested claim &mdash; classic swivel-chair with copy/paste and repeated lookups. Task mining the assessor desktop quantifies touch-time per claim type and names the exact steps that belong in the next Agentforce assessor agent. Metric: assessor touch-time per claim and cases closed per FTE per day.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Claims engine, policy admin</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Carl+Morrall+HBF+Health">Carl Morrall</a> (CRM Services Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Utilisation-Review Clinician Workflow</summary>
+    <div class="use-case-body">
+      <p>Utilisation-management clinicians triage prior-authorisation requests across an intake portal, medical policy library, and clinical-review notes. Task mining captures the on-screen steps that drive review time, exposes duplicate lookups, and pinpoints where an Agentforce clinical-support agent could pre-package the case for the clinician. Metric: median prior-auth turnaround and clinician touch-time per case.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Utilisation management, medical policy library</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Medical+Officer+HBF+Health">Chief Medical Officer</a> (Clinical Governance)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
   <details>
-    <summary>5. Complaints &amp; Dispute-Resolution Conformance</summary>
+    <summary>1. PHIO Complaints &amp; Dispute-Resolution Conformance</summary>
     <div class="use-case-body">
-      <p>Complaints to PHIO and internal disputes are a compliance-graded workflow — every step and hand-off must be evidenced. Manual RCA today is retrospective and expensive. AFPI turns the complaint case ID into a conformance-checked process, showing where the actual path deviates from the documented SLA-bound process. Metric moved: PHIO-referred complaint rate and time-to-resolution.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Complaints/case management, Salesforce</p>
+      <p>Complaints to PHIO and internal disputes are a compliance-graded workflow &mdash; every step and hand-off must be evidenced against the mandated SLA. Manual RCA today is retrospective and expensive. Compliance Center turns the complaint case ID into a conformance-checked process, showing where the actual path deviates from the documented SLA and generating always-on audit evidence for PHIO. Metric: PHIO-referred complaint rate and time-to-resolution.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Complaints case management, Financial Services Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Risk+Officer+HBF+Health">Chief Risk / Compliance Officer</a> (Risk &amp; Compliance)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Celonis / Signavio / ARIS / ABBYY / ServiceNow / Appian / UiPath / Power Automate mentions tied to HBF Health surfaced in Slack or public sources — greenfield for AFPI.</span></h2>
+  <details>
+    <summary>2. Agentforce Governance for APRA &amp; PHI Act Model Risk</summary>
+    <div class="use-case-body">
+      <p>Three Agentforce agents are already live in member-facing flows; APRA prudential expectations and the Private Health Insurance Act make every AI decision auditable. Compliance Center codifies promote/monitor/retire controls on the agent portfolio and produces continuous evidence for internal audit and the regulator &mdash; addressing the same CIO stability concerns HBF just closed on Agents 2 and 3. Metric: audit-ready agents covered and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Sanjeev+Gupta+HBF+Health">Sanjeev Gupta</a> (Chief Information &amp; Transformation Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Privacy Centre &amp; Member Data-Rights Controls</summary>
+    <div class="use-case-body">
+      <p>HBF has an open Privacy Centre opp on the table &mdash; consent, data-subject requests, and cross-system erasure are compliance-graded workflows under the Australian Privacy Act and the Notifiable Data Breaches scheme. Compliance Center runs those requests as a controlled, evidenced process across FSC, Data Cloud, and Snowflake so every erasure and access request has a defensible audit trail. Metric: DSR SLA hit-rate and breach-response time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Privacy Centre, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Data+Privacy+Officer+HBF+Health">Data Privacy Officer</a> (Legal &amp; Compliance)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help HBF Health Limited by process-mining member-claims adjudication, provider onboarding, and May-round retention journeys across FSC and the claims engine, task-mining contact-centre and claims-assessor desktops to feed the 20+ Agentforce use case backlog Sanjeev Gupta's team is scoping, and running PHIO complaints, APRA-grade Agentforce governance, and Privacy Centre controls through Compliance Center to compress cycle times, cut AHT, and produce always-on audit evidence for APRA and PHIO.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

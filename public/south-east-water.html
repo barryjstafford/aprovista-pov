@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -114,33 +115,31 @@
     <p><strong>Public Sector, Water Utility</strong></p>
     <p><strong>Revenue:</strong> AUD 844M &nbsp;|&nbsp; <strong>Employees:</strong> ~800 &nbsp;|&nbsp; <strong>HQ:</strong> Frankston, Victoria, Australia</p>
     <p class="group-break"><strong>Current Salesforce Products:</strong> Service Cloud, Service Cloud Voice with Amazon Connect, Messaging for In-App and Web, Marketing Cloud (ExactTarget), Einstein AI, Omni-Channel Routing</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> HiAffinity (Hansen legacy billing) [Slack], Amazon Connect telephony [Slack]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> SEW - Apromore (<a href="https://org62.my.salesforce.com/006ed00000ZoKvRAAV">$96k</a>) | South East Water - Process Mapping (<a href="https://org62.my.salesforce.com/006ed00000c9eunAAA">$150k</a>) | SEW - Roadmap implementation - CSG (<a href="https://org62.my.salesforce.com/006ed00000X59ajAAB">$750k</a>)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> HiAffinity, Amazon Connect</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> SEW - Apromore (<a href="https://org62.my.salesforce.com/006ed00000ZoKvRAAV">$96k</a>) &nbsp;|&nbsp; South East Water - Process Mapping (<a href="https://org62.my.salesforce.com/006ed00000c9eunAAA">$150k</a>) &nbsp;|&nbsp; SEW - Roadmap implementation - CSG (<a href="https://org62.my.salesforce.com/006ed00000X59ajAAB">$750k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U039KBRTJN4">Arash Khorasani</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">90/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">90/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$1.8M renewal live plus Service Cloud, SCV, Marketing Cloud install base — trusted vendor.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$1.8M renewal live plus Service Cloud, SCV, Marketing Cloud install base &mdash; trusted vendor.</td></tr>
         <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">CEO/CIO-sponsored Agentforce roadmap; SEW-Apromore opp already at Stage 4.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">Post-data-breach Phase 2 review + regulated Victorian public utility &mdash; strong pressure.</td></tr>
         <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">CIO Peter O'Donoghue is confirmed exec sponsor; CEO-level Agentic AI buy-in.</td></tr>
         <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Billing complexity, debt recovery, IVR, case mgmt, and data-breach remediation all named.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-green">Salesforce + HiAffinity Hansen billing generate rich, minable event logs end-to-end.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>12/15</td><td class="cat-orange">ANZ water utility — priority in Energy &amp; Utilities, one notch below top-tier verticals.</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">Post-data-breach Phase 2 review + regulated Victorian public utility — strong pressure.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>12/15</td><td class="cat-orange">ANZ water utility &mdash; priority in Energy &amp; Utilities, one notch below top-tier verticals.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-orange">Live $96k SEW-Apromore opp at Stage 4 &mdash; needs expansion path sized beyond first phase.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help South East Water Corporation by mining the end-to-end flows across Salesforce and the HiAffinity Hansen billing platform to build a data-backed business case for the Agentforce roadmap already in flight — collapsing billing cycle-time, evidencing debt-recovery and IVR uplift, and de-risking the Phase 2 data-breach remediation before capital is committed.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Billing-to-Cash on HiAffinity + Salesforce</summary>
@@ -155,44 +154,88 @@
   <details>
     <summary>2. Debt Recovery &amp; Hardship Management</summary>
     <div class="use-case-body">
-      <p>Debt recovery is one of the five named Agentforce priority use cases at SEW and touches the new Marketing Cloud instance for arrears communications. Mining the recovery journey — from first-missed-payment through hardship program enrolment, payment plans, and disconnection avoidance — pinpoints where cases stall, where hardship customers get re-contacted, and where automated Marketing Cloud journeys can safely replace agent touchpoints. The metric that moves is recovery-per-agent-hour and the reduction in avoidable disconnection escalations, both regulator-sensitive numbers.</p>
+      <p>Debt recovery is one of the five named Agentforce priority use cases at SEW and touches the new Marketing Cloud instance for arrears communications. Mining the recovery journey &mdash; from first-missed-payment through hardship program enrolment, payment plans, and disconnection avoidance &mdash; pinpoints where cases stall, where hardship customers get re-contacted, and where automated Marketing Cloud journeys can safely replace agent touchpoints. The metric that moves is recovery-per-agent-hour and the reduction in avoidable disconnection escalations, both regulator-sensitive numbers under the ESC Customer Service Code.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Marketing Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Amanda+Watkins+South+East+Water">Amanda Watkins</a> (Marketing Cloud lead)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Amanda+Watkins+South+East+Water">Amanda Watkins</a> (Marketing Cloud Lead)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Contact-Centre IVR to Agent Handoff (AF Voice)</summary>
+    <summary>3. Case Management &amp; Omni-Channel Routing Efficiency</summary>
     <div class="use-case-body">
-      <p>SEW's pilot Service Cloud Voice + Amazon Connect solution already handles ~30% of Billing &amp; Account calls, with a live AF Voice / IVR expansion queued as a priority Agentforce use case. Process-mining the IVR-to-agent path exposes where self-service intent is being mis-classified, where callers escalate needlessly, and which containment opportunities Agentforce Voice should own next. AFPI provides the evidence layer that converts the pilot into a full production rollout with a defensible business case. Metric: containment rate lifted from ~30% toward 55-65% on billing enquiries.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud Voice, Amazon Connect</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Claire+Twomey+South+East+Water">Claire Twomey</a> (AF program lead)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Case Management &amp; Omni-Channel Routing Efficiency</summary>
-    <div class="use-case-body">
-      <p>Case management is explicitly on the Agentforce priority list and Omni-Channel routing is already deployed across voice, message, and email. Mining case lifecycles — creation, classification, routing, reassignment, and closure — will show where Einstein AI classification is misfiring, where cases bounce between queues, and which case types are ripe for full Agentforce autonomous handling. Directly supports the business case for turning on the Einstein features already implemented but awaiting governance approval. Metric: first-contact-resolution and mean-time-to-resolve on top-5 case types.</p>
+      <p>Case management is explicitly on the Agentforce priority list and Omni-Channel routing is already deployed across voice, message, and email. Mining case lifecycles &mdash; creation, classification, routing, reassignment, and closure &mdash; will show where Einstein AI classification is misfiring, where cases bounce between queues, and which case types are ripe for full Agentforce autonomous handling. Directly supports the business case for turning on the Einstein features already implemented but awaiting governance approval. Metric: first-contact-resolution and mean-time-to-resolve on top-5 case types.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Einstein AI</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Bharath+Kadiam+South+East+Water">Bharath Kadiam</a> (Salesforce program)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Bharath+Kadiam+South+East+Water">Bharath Kadiam</a> (Salesforce Program)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Contact-Centre Agent Desktop Swivel-Chair</summary>
+    <div class="use-case-body">
+      <p>SEW's contact-centre agents work across Service Cloud, HiAffinity billing, and the Amazon Connect softphone to handle a single billing or account enquiry. Task mining the agent desktop captures every screen switch, copy/paste, and lookup between the CRM record and HiAffinity's legacy UI &mdash; the exact touchpoints where average handle time leaks and where Agentforce assistive actions should be deployed first. Feeds a defensible business case for the AF Voice / IVR containment expansion already queued. Metric: agent handle time and after-call-work minutes per contact type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, HiAffinity</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Claire+Twomey+South+East+Water">Claire Twomey</a> (AF Program Lead)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Data-Breach Remediation &amp; Data-Matching Assurance</summary>
+    <summary>2. Billing Adjustment &amp; Exception-Handling Desktop</summary>
     <div class="use-case-body">
-      <p>Phase 2 of the current engagement is a broad review of processes and systems related to historical data breaches, spanning Salesforce, HiAffinity, and ancillary systems for data matching. This is a Compliance-Center wedge: AFPI can objectively evidence how customer data actually flows across integrations, where PII touchpoints deviate from documented policy, and which processes need Compliance-Center controls before the regulator revisits. AproScore's process-mining approach lets one business analyst produce the audit-grade evidence that would otherwise require months of SQL-plus-PQL specialist work. Metric: audit evidence delivered in weeks rather than quarters.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce, HiAffinity</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Halde+Bagdadi+South+East+Water">Halde Bagdadi</a> (SEW account lead)</p>
+      <p>Billing exceptions &mdash; estimated reads, meter-swap adjustments, high-bill investigations &mdash; are today reconciled by back-office analysts flipping between HiAffinity, Excel reconciliation sheets, and Salesforce case notes. Task mining the analyst desktop exposes the manual re-key steps and the specific exception variants that are safe to route to Agentforce for straight-through processing. Directly supports the SEW-Apromore engagement's stated pain around "billing complexities" and reduces regulator-visible re-bill volume. Metric: exception cycle time and manual-touch count per billing adjustment.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> HiAffinity, Salesforce Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Halde+Bagdadi+South+East+Water">Halde Bagdadi</a> (SEW Account Lead)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent mentions of Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate tied to South East Water in Slack, web, or news signals — Apromore is engaged in parallel with the Agentforce roadmap with no visible incumbent process-mining vendor.</span></h2>
+  <details>
+    <summary>3. Field-Services Dispatch &amp; Work-Order Desktop</summary>
+    <div class="use-case-body">
+      <p>Field-services dispatchers coordinate crews across a works-management system, Salesforce cases, and email/SMS channels &mdash; a classic swivel-chair pattern where dispatch decisions and status updates are re-keyed multiple times per job. Task mining the dispatcher desktop reveals the exact steps that could be handled by an Agentforce dispatch agent (job assignment, ETA notification, exception escalation) and quantifies the touch-time reduction. Ties directly to the $214k Contact Centre Voice opp and the broader field-services roadmap. Metric: dispatcher touches per work order and mean-time-to-assign.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Works-management system, Salesforce Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Field+Services+South+East+Water">Head of Field Services</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. Data-Breach Remediation &amp; Data-Matching Assurance</summary>
+    <div class="use-case-body">
+      <p>Phase 2 of the current engagement is a broad review of processes and systems related to historical data breaches, spanning Salesforce, HiAffinity, and ancillary systems for data matching. Compliance Center codifies how customer data is supposed to flow across integrations, then continuously evidences where PII touchpoints deviate from documented policy &mdash; the exact evidence base the regulator will ask for on the next visit. AproScore's process-mining approach lets one business analyst produce audit-grade evidence that would otherwise require months of SQL-plus-PQL specialist work. Metric: audit evidence delivered in weeks rather than quarters.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce, HiAffinity</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Peter+O%27Donoghue+South+East+Water">Peter O'Donoghue</a> (CIO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. ESC Customer Service Code &amp; Hardship Compliance</summary>
+    <div class="use-case-body">
+      <p>The Essential Services Commission's Customer Service Code sets prescriptive obligations on Victorian water retailers for hardship handling, disconnection avoidance, and complaint resolution timelines &mdash; every one of which SEW must evidence to the regulator. Compliance Center runs the hardship-to-disconnection process as a controlled workflow with codified SLAs, sign-offs, and always-on audit trails, replacing the ad-hoc reporting that peer utilities have been fined for. Directly de-risks the debt-recovery Agentforce play by giving the regulator a documented control layer over automated decisions. Metric: ESC SLA hit-rate and time-to-evidence per complaint.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, HiAffinity</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Advocacy+South+East+Water">Head of Customer Advocacy</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Australian Privacy Act &amp; Notifiable Data Breach Controls</summary>
+    <div class="use-case-body">
+      <p>Following the historical data breach and the Phase 2 review, SEW must demonstrate active compliance with the Australian Privacy Act (APPs) and the Notifiable Data Breaches scheme &mdash; on every system that touches customer PII. Compliance Center runs the assess-contain-notify workflow as a codified process with segregation-of-duties, evidence, and 30-day OAIC clock tracking, so any future incident is handled by a repeatable audited path rather than a bespoke response. Also serves as the governance layer that unblocks the Einstein AI features currently held pending compliance approval. Metric: incident-to-notification cycle time and audit findings per privacy assessment.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce, HiAffinity</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Privacy+Officer+South+East+Water">Chief Privacy / Data Protection Officer</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help South East Water Corporation by process-mining the billing-to-cash, debt-recovery, and case-management flows across HiAffinity and Salesforce to build a data-backed business case for the Agentforce roadmap already in flight, task-mining the contact-centre, billing-exception, and field-dispatch desktops to expose the swivel-chair work Agentforce Operations should eliminate first, and running data-breach remediation, ESC Customer Service Code, and Notifiable Data Breach controls through Compliance Center to produce always-on audit evidence for the Victorian regulator &mdash; collapsing cycle times, cutting AHT, and de-risking Phase 2 before capital is committed.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -203,7 +246,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

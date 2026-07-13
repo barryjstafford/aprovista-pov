@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -111,42 +112,40 @@
 <main>
   <h1>Bludigit S.p.A.</h1>
   <div class="snapshot">
-    <p><strong>Utilities, Gas Distribution (Captive IT / Digital Subsidiary)</strong></p>
-    <p><strong>Revenue:</strong> ~€88M (captive; Italgas Group ~€1.95B) &nbsp;|&nbsp; <strong>Employees:</strong> ~3,144 (Italgas Group) &nbsp;|&nbsp; <strong>HQ:</strong> Turin, Italy</p>
+    <p><strong>Utilities, Gas Distribution (Captive IT / Digital Subsidiary of Italgas)</strong></p>
+    <p><strong>Revenue:</strong> ~&euro;88M (captive; Italgas Group ~&euro;1.95B) &nbsp;|&nbsp; <strong>Employees:</strong> ~3,144 (Italgas Group) &nbsp;|&nbsp; <strong>HQ:</strong> Turin, Italy</p>
     <p><strong>Major Subsidiaries:</strong> Italgas Reti, Enaon (Greece), Geoside, Seaside, Toscana Energia</p>
     <p class="group-break"><strong>Current Salesforce Products:</strong> Service Cloud (800+ Call Center seats), Sales Cloud, Platform (650+ Platform, 2,761 Own Legacy), Analytics Cloud, MuleSoft (Agent Fabric pilot), Data Cloud / Agentforce (AI Pilot Flex, Agentforce Transformation), Salesforce Voice, Marketing Cloud Engagement</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> SAP (Capex &amp; ERP), NTT Data / Lutech (SI), Atos (managed services), Equinix (SEC network) [Slack]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Bludigit Renewal 532 Call Center + Platform (<a href="https://org62.my.salesforce.com/0063y00001AOFDDAA5">$812k</a>) | MuleSoft Agent Fabric #MAF (<a href="https://org62.my.salesforce.com/006ed00000bJRK9AAO">$105k</a>) | ITALGAS RETI Agentforce Transformation (<a href="https://org62.my.salesforce.com/006ed00000ayYgPAAU">$80k</a>)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> SAP, NTT Data, Lutech, Atos, Equinix</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Bludigit Renewal 532 Call Center + Platform (<a href="https://org62.my.salesforce.com/0063y00001AOFDDAA5">$812k</a>) &nbsp;|&nbsp; MuleSoft Agent Fabric #MAF (<a href="https://org62.my.salesforce.com/006ed00000bJRK9AAO">$105k</a>) &nbsp;|&nbsp; ITALGAS RETI Agentforce Transformation (<a href="https://org62.my.salesforce.com/006ed00000ayYgPAAU">$80k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U040TV1T5NK">Andrea Ingi</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">86/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Utilities + Energy — top-priority AFPI vertical; regulated Italian gas distribution.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Utilities + Energy &mdash; top-priority AFPI vertical; regulated Italian gas distribution.</td></tr>
         <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Massive SF estate: 800+ Service seats, Platform, MuleSoft, Voice, Analytics, Own Legacy.</td></tr>
         <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Active Agentforce Transformation, MAF pilot, AI Pilot Flex, Italgas Digital Factory.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-green">SAP + Salesforce multi-cloud + MuleSoft — rich mineable event logs across Capex, O2C, Service.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>15/20</td><td class="cat-orange">Strong innovation buyers (Pulga, Durante, Ferrante) but classic COO/OpEx sponsor not yet identified.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-green">SAP + Salesforce multi-cloud + MuleSoft &mdash; rich mineable event logs across Capex, O2C, Service.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Capex approval stalls, methane-leak SLA pressure, contact-center rework &mdash; concrete pain across three surfaces.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-orange">Renewals cluster Jan-2027; AFPI must attach before contract shape locks — narrow window.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-orange">Renewals cluster Jan-2027; AFPI must attach before contract shape locks &mdash; narrow window.</td></tr>
         <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-orange">ARERA-regulated + methane leak SLAs drive pressure but no active audit-driven trigger surfaced.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Bludigit S.p.A. by mining the Capexforce investment lifecycle, the meter-to-cash and priority-service-request processes across Italgas Reti, and the 800-seat contact-center flows — surfacing rework, SLA breach patterns and integration hand-off delays so Bludigit's Digital Factory and Agentforce agents act on a proven, no-code process fact-base instead of tribal knowledge.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Capex Investment &amp; Engineering-Design Cycle</summary>
     <div class="use-case-body">
-      <p>The Capexforce solution — jointly built with Salesforce across 4 waves — coordinates the full Italgas capital investment cycle (Investments, Engineering Design, Permitting, Tendering &amp; Contracting, Execution) [Slack]. After three years in production, mining these flows will expose where investment approvals stall, which permit types blow duration SLAs, and where document rework cascades across the design→tender→execute hand-off. Directly moves capital deployment velocity — the KPI Marco Barra Caracciolo built the deal on.</p>
+      <p>Capexforce &mdash; jointly built with Salesforce over 4 waves &mdash; coordinates Italgas's full capital investment lifecycle (Investments, Engineering Design, Permitting, Tendering &amp; Contracting, Execution) [Slack]. After three years in production, mining these flows exposes where approvals stall, which permit types blow duration SLAs, and where document rework cascades across the design&rarr;tender&rarr;execute hand-off. Directly moves capital deployment velocity &mdash; the KPI Marco Barra Caracciolo built the deal on. Metric: median approval-to-execution cycle time and rework loops per Capex project.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Capexforce, SAP</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Gianmarco+Pulga+Italgas">Gianmarco Pulga</a> (Head of Digital Factory at Italgas)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -156,7 +155,7 @@
   <details>
     <summary>2. Priority Service Requests (Methane Leak Response)</summary>
     <div class="use-case-body">
-      <p>Italgas Reti runs a highly-regulated priority service request process — dispatch for suspected methane leaks — with strict response-time SLAs enforced by ARERA. This is the org so mission-critical they refused Hyperforce migration until Equinix SEC could be preserved [Slack]. Mining this end-to-end (call intake → work order → field arrival → containment → close) will show which regions and shifts miss regulatory clocks and why. Metric: % of priority interventions inside the mandated response window.</p>
+      <p>Italgas Reti runs a highly-regulated priority service request process &mdash; dispatch for suspected methane leaks &mdash; with strict response-time SLAs enforced by ARERA. This is the org so mission-critical they refused Hyperforce migration until Equinix SEC could be preserved [Slack]. Mining end-to-end (call intake &rarr; work order &rarr; field arrival &rarr; containment &rarr; close) shows which regions and shifts miss regulatory clocks and why. Metric: % of priority interventions inside the mandated response window.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, SAP field-ops</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Roberto+Ferrante+Italgas">Roberto Ferrante</a> (IT Manager, Commercial &amp; Metering Applications of Gas Distribution)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -166,34 +165,78 @@
   <details>
     <summary>3. CRM Idrico Meter-to-Cash (Water Utility Extension)</summary>
     <div class="use-case-body">
-      <p>Bludigit runs a dedicated CRM Idrico org for water-utility subsidiaries — 55+ call center seats today with active renewal and Data Protection add-ons in flight. Water meter-to-cash carries higher exception rates than gas (estimated reads, disputes, backflow adjustments). Mining reading→bill→collection→dispute exposes revenue leakage and the point at which manual rework overtakes automation. Metric: leakage % between meter and invoice, days-sales-outstanding.</p>
+      <p>Bludigit runs a dedicated CRM Idrico org for water-utility subsidiaries &mdash; 55+ call center seats today with active renewal and Data Protection add-ons in flight. Water meter-to-cash carries higher exception rates than gas (estimated reads, disputes, backflow adjustments). Mining reading&rarr;bill&rarr;collection&rarr;dispute exposes revenue leakage and the point at which manual rework overtakes automation. Metric: leakage % between meter and invoice, days-sales-outstanding.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, SAP billing</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Silvia+Ruggeri+Italgas">Silvia Ruggeri</a> (Head of Customer Care &amp; Business Support)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>4. Agentforce &amp; MAF Agent-Fabric Deflection Analysis</summary>
+    <summary>1. Contact-Center Agent Desktop &mdash; Pre-Agentforce Deflection Baseline</summary>
     <div class="use-case-body">
-      <p>Bludigit has an active MuleSoft Agent Fabric pilot ($105k) plus AI Pilot Flex and Italgas Reti Agentforce Transformation opportunities — but no baseline of the human-handled contact center processes those agents will actually deflect. Mining current call-center Service Cloud flows first gives Bludigit an evidence-based deflection target (which case types, which agent hand-offs are automatable) and a measurable post-deployment lift. Metric: automated case containment %, average handle time delta.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Giammarco+Davi+Italgas">Giammarco Davì</a> (IT Front Office Platform Manager / IT CRM Manager)</p>
+      <p>Bludigit's 800+ Service Cloud contact-center seats have an active MuleSoft Agent Fabric pilot ($105k), AI Pilot Flex, and Italgas Reti Agentforce Transformation opportunities queued &mdash; but no baseline of the human-handled flows those agents will actually deflect. Task-mining the agent desktop captures each click, tab-switch, and copy/paste to identify which case types and after-call-work steps Agentforce should target first, and to prove containment lift post-deployment. Metric: average handle time delta, automated case containment %.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud console, Salesforce Voice</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Giammarco+Davi+Italgas">Giammarco Dav&igrave;</a> (IT Front Office Platform Manager / IT CRM Manager)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Procure-to-Pay for Engineering &amp; Technical Services</summary>
+    <summary>2. Engineering &amp; Permitting Document Rework in Capexforce</summary>
     <div class="use-case-body">
-      <p>Italgas Group P2P for engineering and technical services spans SAP procurement, Capexforce tendering, and PEC-certified supplier email flows. With an active procurement organization (Zanardi) and heavy reliance on third-party SIs (NTT Data, Lutech, Atos), P2P cycle time and invoice-approval bottlenecks are a well-known utility pain. Mining requisition→PO→GR→invoice→pay surfaces the biggest CFO-visible working-capital wins. Metric: touchless-invoice %, cycle time to pay.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> SAP, Salesforce Capexforce</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Gianmaria+Zanardi+Italgas">Gianmaria Zanardi</a> (Procurement Category Manager — Engineering &amp; Technical Services)</p>
+      <p>Engineering design and permitting on Capexforce is heavily document-driven &mdash; PDFs and attachments flow between engineers, municipal permit desks, and contractors, often looping back for corrections. Task-mining the engineer's desktop (Capexforce, SAP, email, PDF markup) exposes the exact rework steps and inter-system swivel-chair burning engineering hours. Directly feeds the Agentforce Operations business case Salesforce is already building. Metric: touch-time per permit, document rework loops per Capex project.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Capexforce, SAP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Gianmarco+Pulga+Italgas">Gianmarco Pulga</a> (Head of Digital Factory at Italgas)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Celonis / ARIS / Signavio / ABBYY / ServiceNow / Appian / UiPath / Power Automate mentions tied to Bludigit or Italgas surfaced in Slack or public web sources — greenfield for AFPI.</span></h2>
+  <details>
+    <summary>3. Field Technician Mobile Workflow (Gas Distribution Ops)</summary>
+    <div class="use-case-body">
+      <p>Italgas Reti field technicians use a mobile Service Cloud workflow to close work orders, log meter readings, and attach evidence back to SAP field-ops. Task-mining the technician's mobile session isolates where they abandon the app, re-key data, or wait on synchronous back-office calls &mdash; the exact seams Agentforce mobile prompts should close. Anchors the field-productivity story for ARERA-regulated priority interventions. Metric: work-orders closed per technician-hour and mobile app-abandonment rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud mobile, SAP field-ops</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Roberto+Ferrante+Italgas">Roberto Ferrante</a> (IT Manager, Commercial &amp; Metering Applications of Gas Distribution)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. ARERA Priority-Intervention SLA Controls</summary>
+    <div class="use-case-body">
+      <p>ARERA (Italy's energy regulator) mandates strict response-time SLAs on methane-leak priority interventions with financial penalties for misses. Compliance Center codifies the intake&rarr;dispatch&rarr;field-close workflow as a controlled process with continuous evidence, segregation-of-duties, and always-on audit trails for the regulator. Removes the current spreadsheet-and-attestation model for regulatory reporting. Metric: audit-ready evidence packets produced per quarter, penalty exposure avoided.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, SAP field-ops</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Roberto+Ferrante+Italgas">Roberto Ferrante</a> (IT Manager, Commercial &amp; Metering Applications of Gas Distribution)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. GDPR &amp; Data Protection Controls for CRM Idrico / Multi-Utility</summary>
+    <div class="use-case-body">
+      <p>Bludigit has active Data Protection add-on opps on the Capexforce and CRM Idrico orgs, and the underlying utility-customer data (billing, consumption, contact history) sits under strict GDPR scrutiny. Compliance Center runs consent capture, data-subject-access requests, retention deletion, and cross-border processing controls as codified workflows with evidence. Especially valuable as Enaon (Greece) and Toscana Energia bring different national data regimes into scope. Metric: DSAR SLA hit-rate, audit findings per subsidiary.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Salesforce Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Silvia+Ruggeri+Italgas">Silvia Ruggeri</a> (Head of Customer Care &amp; Business Support)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Agentforce &amp; AI Model Lifecycle Governance</summary>
+    <div class="use-case-body">
+      <p>Bludigit's AI Pilot Flex, Agentforce Transformation, and MuleSoft Agent Fabric footprint will put multiple AI agents into production across contact center and back-office &mdash; each one subject to the EU AI Act and ARERA scrutiny for utility use cases. Compliance Center codifies the promote/monitor/retire lifecycle for every agent and model, with continuous evidence of prompt tests, drift monitors, and human-in-the-loop overrides. Metric: audit-ready agents covered, mean-time-to-evidence per regulator query.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Agentforce, MuleSoft Agent Fabric</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Gianmarco+Pulga+Italgas">Gianmarco Pulga</a> (Head of Digital Factory at Italgas)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Bludigit S.p.A. by mining the Capexforce investment lifecycle, methane-leak priority service dispatch, and CRM Idrico meter-to-cash across its Salesforce and SAP estate, task-mining the contact-center and field-technician desktops to expose the exact swivel-chair work that Agentforce Operations should deflect, and running ARERA SLA, GDPR, and Agentforce/AI model-lifecycle controls through Compliance Center to shrink cycle times, cut handle time, and produce always-on audit evidence for the Italian regulator.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

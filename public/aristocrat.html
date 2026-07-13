@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -112,41 +113,39 @@
   <h1>Aristocrat Leisure Limited</h1>
   <div class="snapshot">
     <p><strong>Consumer &amp; Retail, Gaming Technology &amp; Entertainment</strong></p>
-    <p><strong>Revenue:</strong> AU$6.6B (FY24, ~US$4.4B) &nbsp;|&nbsp; <strong>Employees:</strong> ~7,400 &nbsp;|&nbsp; <strong>HQ:</strong> North Ryde (Sydney), Australia</p>
-    <p><strong>Major Subsidiaries:</strong> Aristocrat Gaming, Aristocrat Interactive (formerly NeoGames), Pixel United, Product Madness, Plarium</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Not confirmed [field verify with <a href="https://salesforce.enterprise.slack.com/team/U01G8FAPCV8">Julia Gilmour</a>] — historical Sales Cloud / Contact Center / Engage motions in Org62, active Informatica CDGC MDM opp indicates data-platform momentum</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://salesforce.enterprise.slack.com/team/U01G8FAPCV8">Julia Gilmour</a>]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Aristocrat - Apromore (<a href="https://org62.my.salesforce.com/006ed00000g9a0sAAA">$30k</a>) &nbsp;|&nbsp; INFA - Aristocrat Leisure Limited CDGC MDM (<a href="https://org62.my.salesforce.com/006ed00000VUKdlAAH">$79k</a>)</p>
-    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Revenue:</strong> AU$6.30B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~7,400 &nbsp;|&nbsp; <strong>HQ:</strong> Sydney (North Ryde), Australia</p>
+    <p><strong>Major Subsidiaries:</strong> Aristocrat Gaming, Aristocrat Interactive (NeoGames + Anaxi), Video Gaming Technologies (VGT), Product Madness, Big Fish Games</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Slack, MuleSoft, Analytics Cloud, Salesforce Platform, Field Service, Informatica CDGC MDM (in flight)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> ServiceNow</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Aristocrat - Apromore (<a href="https://org62.my.salesforce.com/006ed00000g9a0sAAA">$30k</a>) &nbsp;|&nbsp; Aristocrat Australia ServiceNow Replacement - 501 ITSM/PnC/Finance (<a href="https://org62.my.salesforce.com/006ed00000ekgEvAAI">$670k</a>) &nbsp;|&nbsp; Aristocrat Technologies Inc. Agentforce for Manufacturing (<a href="https://org62.my.salesforce.com/006ed00000HgRZuAAN">$254k</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G8FAPCV8">Julia Gilmour</a></p>
-    <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">64/100</span> — T2 Develop</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t2">71/100</span> &mdash; T2 Develop</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">Gaming reg across 300+ jurisdictions, AML/KYC for Interactive, ASX SOX-equivalent.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>12/15</td><td class="cat-green">Post-NeoGames integration, dual-hub EGM manufacturing, multi-entity global close.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>9/12</td><td class="cat-green">Active Apromore opp + Informatica CDGC MDM opp; multi-year account presence.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-green">Informatica CDGC MDM in-flight = clean master data foundation for mining.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>13/20</td><td class="cat-orange">Finance Systems Director + Global AP + Quality Ops named; exec sponsor TBD.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Multi-cloud install base (Sales, Service, Slack, MuleSoft, Analytics, Platform, FS) + active Apromore opp.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Agentforce Manufacturing/Service/Contact Center opps + ServiceNow-to-Salesforce swap + Data 360 in flight.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">Gaming regulation across 300+ jurisdictions, AML/KYC on Interactive, ASX reporting discipline.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-orange">MuleSoft API-led + Informatica CDGC MDM in flight give a clean event-log substrate for mining.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>12/15</td><td class="cat-orange">Post-NeoGames integration, dual-hub EGM manufacturing, multi-entity close, ITSM re-platforming.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>2/6</td><td class="cat-red">$30k opp, Stage 01, close April 2027 — well below the $200k ACV threshold.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>8/15</td><td class="cat-orange">Gaming/entertainment sits outside the core priority verticals for AFPI.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>2/6</td><td class="cat-red">Apromore opp is $30k at Stage 01 with a 2027 close &mdash; well under the $200k ACV threshold, -4 red-flag deduction applied.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>8/15</td><td class="cat-red">Gaming/entertainment sits outside AFPI&rsquo;s core priority verticals (FSI, healthcare, manufacturing, public sector).</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Aristocrat Leisure Limited by mining the post-NeoGames integration processes, the dual-hub Sydney/Las Vegas EGM order-to-cash flow, and multi-jurisdiction gaming compliance workflows to compress cycle times, surface hidden rework, and de-risk the ongoing data-platform build already underway with Informatica CDGC MDM.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. NeoGames / Interactive Post-Acquisition Process Harmonization</summary>
     <div class="use-case-body">
-      <p>Aristocrat closed the ~US$1.2B NeoGames acquisition in 2024 to stand up Aristocrat Interactive as its online real-money gaming arm. The integration is still merging billing, player-onboarding, KYC, and content-release processes across two very different tech stacks. Mining the "actual" flows in Interactive against the legacy Aristocrat Gaming baseline will expose duplicate approval loops, variant explosion in KYC, and where NeoGames' operator-facing SLAs are slipping — the classic PMI value moment where a 2-4 week Apromore analyst-led discovery beats a 12-week Celonis SI engagement.</p>
+      <p>Aristocrat closed the ~US$1.2B NeoGames acquisition in April 2024 to stand up Aristocrat Interactive as its online real-money gaming arm. The integration is still merging billing, operator onboarding, KYC, and content-release processes across two very different tech stacks. Mining the actual flows in Interactive against the legacy Aristocrat Gaming baseline exposes duplicate approval loops, variant explosion in KYC, and where operator-facing SLAs are slipping &mdash; the classic PMI value moment where a 2&ndash;4 week Apromore analyst-led discovery beats a 12-week Celonis SI engagement. Metric moved: cycle time from operator signature to live content, and % of KYC cases resolved on the first pass.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> NeoGames back-office, Salesforce (Interactive operator accounts)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mohit+Gupta+Aristocrat">Mohit Gupta</a> (Finance Systems Director)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -156,17 +155,61 @@
   <details>
     <summary>2. EGM Order-to-Cash: Sydney &amp; Las Vegas Manufacturing to Casino Floor</summary>
     <div class="use-case-body">
-      <p>Aristocrat runs a dual-hub electronic gaming machine manufacturing footprint (Sydney design/build for ANZ/EMEA; Las Vegas assembly and distribution for the Americas) delivering into a heavily regulated casino-operator customer base. The O2C process — quote, jurisdictional certification, build, ship, install, revenue recognition — has notorious variance because every state/tribal jurisdiction adds its own certification wait state. Apromore can quantify the certification bottleneck and simulate parallel-track approvals; the metric that moves is days from order to installed-and-revenue-recognized.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> SAP (ERP/manufacturing, assumed), Salesforce (opportunity/install)</p>
+      <p>Aristocrat runs a dual-hub electronic gaming machine (EGM) manufacturing footprint &mdash; Sydney design/build for ANZ/EMEA, Las Vegas assembly and distribution for the Americas &mdash; delivering into a heavily regulated casino-operator customer base. The O2C process (quote, jurisdictional certification, build, ship, install, revenue recognition) has notorious variance because every state and tribal jurisdiction adds its own certification wait state. Apromore quantifies where the certification bottleneck actually lives and lets ops simulate parallel-track approvals; the metric that moves is days from order to installed-and-revenue-recognized. This dovetails directly with the $254k Agentforce-for-Manufacturing opp already in flight.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ERP/manufacturing system, Salesforce (opportunity/install)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Claire+Mileto+Aristocrat">Claire Mileto</a> (Director of Operations, Oz Group of Studios)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Multi-Jurisdiction Gaming Compliance &amp; Product Certification</summary>
+    <summary>3. ITSM / P&amp;C / Finance Migration off ServiceNow</summary>
     <div class="use-case-body">
-      <p>Aristocrat ships gaming products into 300+ regulatory jurisdictions worldwide, each with its own testing lab, submission format, and change-control regime. Certification lead time is a top gating factor on new-title revenue. Mining the submission-to-approval workflow exposes where labs, internal QA, and jurisdictional variants create rework. This is a natural home for the AFPI Compliance-Center wedge — one dashboard of active submissions, aging cases, and jurisdiction-level bottlenecks that Bronwyn's team can act on today.</p>
+      <p>The $670k &ldquo;Aristocrat Australia ServiceNow Replacement - 501 (ITSM, PnC, Finance)&rdquo; opp is a live re-platforming across three service domains at once. Migrations of this size fail when the target platform is configured against a legacy process that nobody actually follows &mdash; the classic &ldquo;lift the mess&rdquo; failure mode. Apromore mining the ServiceNow event log before cut-over gives Aristocrat a clean, evidence-based process baseline and a variant map, so the new Salesforce ITSM/PnC/Finance build starts from what actually happens rather than what the runbook says. Metric moved: fewer post-go-live change requests and faster incident MTTR.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ServiceNow, Salesforce (target platform)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mohit+Gupta+Aristocrat">Mohit Gupta</a> (Finance Systems Director)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Global Accounts Payable Desktop Workflow</summary>
+    <div class="use-case-body">
+      <p>Maria Aiello runs a centralised Global AP &amp; Client Success function serving Sydney manufacturing, Las Vegas operations, Interactive operator settlements, and Pixel United mobile-ad-spend outflows &mdash; four very different payables profiles in one team. Task mining the AP clerks&rsquo; desktops surfaces where the real work happens: PO-mismatch triage in email, duplicate-invoice hunting in ERP screens, manual re-keying between systems. The output is a heat map of where an Agentforce-for-Operations agent will actually shave minutes today, and where an early-pay discount is being missed.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ERP AP desktop client, Outlook / Slack approvals</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Maria+Aiello+Aristocrat">Maria Aiello</a> (Global Director, Accounts Payable &amp; Client Success)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Contact Center Agent Handling on the Aristocrat US CC Transformation</summary>
+    <div class="use-case-body">
+      <p>The $382k &ldquo;Aristocrat US CC Transformation&rdquo; opp plus the $200k Agentforce Contact Center opp both bet on agent-handling efficiency in the US operator-support desk. Task mining captures the actual click paths, screen swivels, and knowledge-base lookups today, so the new Service Cloud / Agentforce build is designed against real friction rather than agent survey data. Metric moved: average handle time, first-contact resolution, and % of contacts an Agentforce agent can close without human touch.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Legacy CC desktop, Salesforce Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Bronwyn+Bruzzano+Aristocrat">Bronwyn Bruzzano</a> (Director, Global Compliance Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Multi-Jurisdiction Certification Submission Prep</summary>
+    <div class="use-case-body">
+      <p>Every new EGM title has to be prepped for submission into 300+ regulatory jurisdictions, each with its own template, format, and evidence pack. Today that work is spread across a handful of specialists on desktops &mdash; document assembly, evidence collection, redaction, jurisdiction-specific edits. Task mining the submission-prep desks quantifies the hours-per-title cost, catches redundant re-work between jurisdictions with near-identical templates, and pinpoints which steps a compliance-focused Agentforce agent can automate first. Metric moved: prep hours per title and submission-ready SLA.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Document/DMS desktop tools, jurisdiction portals</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Bronwyn+Bruzzano+Aristocrat">Bronwyn Bruzzano</a> (Director, Global Compliance Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. Multi-Jurisdiction Gaming Product Certification Portfolio</summary>
+    <div class="use-case-body">
+      <p>Aristocrat ships gaming products into 300+ regulatory jurisdictions worldwide, each with its own testing lab, submission format, and change-control regime. Certification lead time is a top gating factor on new-title revenue. Compliance Center gives Bronwyn&rsquo;s team a live control view over active submissions, aging cases, expiring certifications, and jurisdiction-level bottlenecks, with the underlying process model already mined. Metric moved: revenue-recognized days lost to open-submission wait states.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Compliance workflow tools, Salesforce cases</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Bronwyn+Bruzzano+Aristocrat">Bronwyn Bruzzano</a> (Director, Global Compliance Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -174,26 +217,26 @@
   </details>
 
   <details>
-    <summary>4. Global Record-to-Report / Multi-Entity Financial Close</summary>
+    <summary>2. Interactive AML / KYC &amp; Responsible Gaming Controls</summary>
     <div class="use-case-body">
-      <p>Aristocrat's global close spans four business units (Gaming, Interactive, Pixel United, corporate), multiple currencies, and ASX-mandated half-year reporting timelines. The Finance Systems Director (Mohit Gupta), Group Finance Manager, and GM Finance Rest of World all sit in Org62 — a rare density of finance-ops titles for a single account. Mining the close cycle exposes intercompany reconciliation rework, journal-approval backlogs, and where the FP&amp;A team spends time chasing rather than analyzing. Metric moved: days-to-close and % automated journal touch-rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Oracle Fusion or SAP (ERP, assumed), Blackline (assumed)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kate+Pulford+Aristocrat">Kate Pulford</a> (GM Finance, Rest of World — APAC, EMEA, LATAM)</p>
+      <p>Aristocrat Interactive&rsquo;s online real-money gaming platform inherits AML / KYC, sanctions screening, and responsible-gaming controls that regulators inspect. Compliance Center wraps a persistent control layer around the mined KYC and responsible-gaming processes: exception rates, aging KYC queues, RG-flag escalations, and evidence-pack completeness surface in one place, with a clean audit trail for the regulator. Metric moved: KYC exception aging and audit-response cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> NeoGames KYC, Salesforce (case management)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mohit+Gupta+Aristocrat">Mohit Gupta</a> (Finance Systems Director)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Procure-to-Pay: Global Accounts Payable Cycle Time</summary>
+    <summary>3. ASX Half-Year Reporting &amp; SOX-Equivalent Financial Controls</summary>
     <div class="use-case-body">
-      <p>Maria Aiello runs Global Accounts Payable &amp; Client Success — a centralized AP function serving Sydney manufacturing, Las Vegas operations, Interactive's operator settlements, and Pixel United's mobile-ad-spend outflows. That's four wildly different payables profiles running through one team. Mining P2P surfaces duplicate-invoice risk, PO-mismatch rework, and where approver chains stall. Once quantified, this is the fastest ROI wedge — the AFPI dashboard pays for itself in early-pay discount capture within a quarter.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> SAP AP (assumed), Salesforce (supplier onboarding)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Maria+Aiello+Aristocrat">Maria Aiello</a> (Global Director, Accounts Payable &amp; Client Success)</p>
+      <p>As an ASX 50 issuer, Aristocrat runs a compressed half-year and full-year reporting close plus SOX-equivalent financial controls across four business units and multiple currencies. Compliance Center turns the mined R2R and ITGC processes into an always-on control monitor: journal-approval aging, segregation-of-duties exceptions, and control-owner completeness are visible to the CFO and to the external auditor without a spreadsheet gather. Metric moved: audit-adjustment count and days-to-half-year-close.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ERP (finance), Blackline / close tools</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kate+Pulford+Aristocrat">Kate Pulford</a> (GM Finance, Rest of World)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Celonis / Signavio / ARIS activity tied to Aristocrat surfaced in Slack or public search. Watch for competitor motion around the NeoGames integration and any SAP / Oracle transformation — those are the natural triggers for a Celonis land, and pre-empting them is the reason to move the Apromore opp out of Stage 01 quickly.</span></h2>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Aristocrat Leisure Limited by process-mining the NeoGames integration, the dual-hub EGM order-to-cash, and the ServiceNow-to-Salesforce ITSM/PnC/Finance migration; task-mining the global AP and US contact center desktops that the Agentforce opps already target; and wrapping Compliance Center around multi-jurisdiction gaming certification and ASX/SOX-equivalent controls &mdash; compressing certification lead times, protecting the $670k ServiceNow-swap and Agentforce investments, and giving Bronwyn&rsquo;s compliance team an always-on audit-ready control view.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

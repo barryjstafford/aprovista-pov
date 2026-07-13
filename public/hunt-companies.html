@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -115,38 +116,36 @@
     <p><strong>Revenue:</strong> $661M &nbsp;|&nbsp; <strong>Employees:</strong> 1,500 &nbsp;|&nbsp; <strong>HQ:</strong> El Paso, TX, United States</p>
     <p><strong>Major Subsidiaries:</strong> Hunt Military Communities, Hunt Capital Partners, Hunt Real Estate Capital, Hunt Development Group, Amerit Fleet Solutions</p>
     <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud (Call Center), Field Service Plus, Customer Communities, Marketing Cloud (ExactTarget), Datorama, CRM Analytics, MuleSoft, Salesforce Voice</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Accelerize360 (Salesforce implementation partner) [Slack]; core property-management &amp; ERP stack — Not confirmed [field verify with Michael Lowry, VP Controller]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Hunt Apromore Process Mining (<a href="https://org62.my.salesforce.com/006ed00000amKirAAE">$150k</a>) &nbsp;·&nbsp; Hunt MH Renewal 60 MuleSoft (<a href="https://org62.my.salesforce.com/006ed00000GsQYzAAN">$272k</a>)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Hunt Apromore Process Mining (<a href="https://org62.my.salesforce.com/006ed00000amKirAAE">$150k</a>) &nbsp;|&nbsp; Hunt MH Renewal 60 MuleSoft (<a href="https://org62.my.salesforce.com/006ed00000GsQYzAAN">$272k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U098MJ5Q9SM">Eric Bloomberg</a></p>
-    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Field Service + MuleSoft)</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Salesforce Field Service)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">76/100</span> — T2 Develop</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t2">76/100</span> &mdash; T2 Develop</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$2.4M+ CRM renewal, MuleSoft, Field Service Plus, Marketing Cloud, CRMA — full stack.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">VP Transformation Projects, VP Controller, VP Ops, CEO all reachable on the account.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-green">Named VP of Transformation Projects; multi-year expansion of Field Service and CRMA.</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">MHPI, HUD, DoD housing standards, and Congressional oversight drive audit rigor.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>11/15</td><td class="cat-orange">Turn/repair cycles, resident service, and inspection backlogs are well-known MHPI pain.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Full-stack install: Field Service Plus, Service Cloud, MuleSoft, Marketing Cloud, CRMA, Voice.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">MHPI, HUD, DoD housing standards, and Congressional oversight drive strong audit rigor.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>17/20</td><td class="cat-green">VP Transformation Projects, VP Ops, VP Controller, Sr Dir Ops all named and reachable.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-orange">Salesforce Field Service + MuleSoft yield rich event logs; legacy ERP stack unconfirmed.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-orange">VP of Transformation Projects owns roadmap; active Apromore opp + multi-year SFDC expansion.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>4/6</td><td class="cat-orange">Active Stage-01 opp closes 11/2026 but $150k ACV trips the sub-$200k red-flag (-4).</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>9/15</td><td class="cat-orange">Real Estate / Military Housing is not a top-priority AFPI vertical — regulated but niche.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>4/6</td><td class="cat-orange">Apromore opp closes 11/2026 but $150k ACV trips the sub-$200k red-flag (-4).</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>8/15</td><td class="cat-red">Real Estate / Military Housing is a niche vertical &mdash; regulated but not a top-priority AFPI segment.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Hunt MH Shared Services, LLC by mining the work-order, move-in/out, and resident-case flows already running in Salesforce Field Service and Service Cloud to compress turn cycle time, lift first-time-fix, and give the VP of Transformation Projects a defensible baseline for the next round of automation and AI-agent investment.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Work-Order Turn &amp; Repair Cycle Time (Field Service)</summary>
     <div class="use-case-body">
-      <p>Hunt runs 876+ Field Service Plus techs plus a large contractor pool across ~50 military installations, and turn-time on unit make-ready and resident repair is the single loudest MHPI KPI. Mining the Work Order → Service Appointment → Technician Dispatch → Complete cycle exposes rework, cross-base dispatch waste, and contractor SLA breach patterns. AFPI can quantify the hours lost per rework loop and simulate scheduling policy changes before they hit the field. Metric moved: median unit-turn days and first-time-fix rate.</p>
+      <p>Hunt runs 876+ Field Service Plus techs plus a large contractor pool across ~50 military installations, and turn-time on unit make-ready and resident repair is the loudest MHPI KPI. Mining the Work Order &rarr; Service Appointment &rarr; Dispatch &rarr; Complete cycle exposes rework loops, cross-base dispatch waste, and contractor SLA breach patterns. AFPI can quantify hours lost per rework and simulate scheduling policy changes before they hit the field. Metric moved: median unit-turn days and first-time-fix rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, Service Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Todd+Zylka+Hunt+Companies">Todd Zylka</a> (Vice President, Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -156,7 +155,7 @@
   <details>
     <summary>2. Move-In / Move-Out &amp; Lease Turnover</summary>
     <div class="use-case-body">
-      <p>PCS-driven turnover creates spiky move-in / move-out volume that has to hand off cleanly between community managers, maintenance, contractors, and billing. Mining the lease turnover process end-to-end surfaces bottlenecks between inspection, make-ready, and re-occupancy, and shows where variance across bases is driving vacancy loss. AFPI's variant analysis lets Hunt see which portfolio operations directors are running the process cleanly and which aren't. Metric moved: days-vacant per unit and turn cost variance.</p>
+      <p>PCS-driven turnover creates spiky move-in / move-out volume that has to hand off cleanly between community managers, maintenance, contractors, and billing. Mining the lease turnover process end-to-end surfaces bottlenecks between inspection, make-ready, and re-occupancy, and shows where variance across bases is driving vacancy loss. AFPI variant analysis lets Hunt see which portfolio operations directors are running the process cleanly and which aren't. Metric moved: days-vacant per unit and turn cost variance.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Field Service</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kevin+Cline+Hunt+Companies">Kevin Cline</a> (Portfolio Operations Director)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -166,34 +165,78 @@
   <details>
     <summary>3. Resident Service Case &amp; Call-Center Deflection</summary>
     <div class="use-case-body">
-      <p>Hunt has 1,585 Call Center seats and 15k+ Customer Community logins fielding resident complaints — a documented reputational pain point for privatized military housing. Mining the case-to-resolution flow shows which reason codes drive repeat contacts, where the community-manager escalation path adds days, and where an Agentforce agent could deflect routine tickets. AFPI ties the ROI of an Agentforce deployment to concrete conformance gaps rather than a demo. Metric moved: repeat-contact rate and mean-time-to-resolve.</p>
+      <p>Hunt has 1,585 Call Center seats and 15k+ Customer Community logins fielding resident complaints &mdash; a well-documented reputational pain point for privatized military housing. Mining the case-to-resolution flow shows which reason codes drive repeat contacts, where the community-manager escalation path adds days, and where an Agentforce agent could deflect routine tickets. AFPI ties Agentforce ROI to concrete conformance gaps rather than a demo. Metric moved: repeat-contact rate and mean-time-to-resolve.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Customer Communities</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chris+Radliff+Hunt+Companies">Chris Radliff</a> (Senior Director of Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>4. Preventive Maintenance &amp; Compliance Inspections</summary>
+    <summary>1. Community Manager Desktop &mdash; Resident Case Handling</summary>
     <div class="use-case-body">
-      <p>MHPI compliance obligations (HUD, DoD, environmental, lead/asbestos, life-safety) require documented preventive-maintenance and inspection cadences per unit and per base. Mining the scheduled-inspection → completion → remediation flow reveals bases running behind cadence and remediation loops that stall. This becomes the Compliance-Center wedge — a defensible audit trail plus early-warning conformance dashboards for the Congressional-scrutiny reality Hunt lives with. Metric moved: on-time inspection compliance and open-remediation age.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, MuleSoft (integration to source systems)</p>
+      <p>Community managers at each installation flip between Service Cloud, the Customer Community portal, work-order screens in Field Service, and email/Outlook while triaging resident complaints. Task mining the community-manager desktop reveals how much time is lost to app-switching, re-keying resident details, and repeated policy lookups. That evidence anchors the Agentforce for Service business case and shows exactly which steps an agent can safely take. Metric moved: cases per FTE per day and touch-time per case.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, Customer Community portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chris+Radliff+Hunt+Companies">Chris Radliff</a> (Senior Director of Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Dispatcher / Scheduling Coordinator Workbench</summary>
+    <div class="use-case-body">
+      <p>Field Service dispatchers coordinate 876+ in-house techs and a broad contractor bench across roughly 50 bases, working out of the Field Service console, MuleSoft-integrated third-party portals, spreadsheets, and Teams/email. Task mining captures the exact clicks, tab-switches, and manual re-assignments driving dispatch latency and mis-tiered assignments. This surfaces the specific automations Agentforce and MuleSoft flows should target first. Metric moved: dispatch decision time and reassignment rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Field Service dispatcher console, MuleSoft integration UIs</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Todd+Zylka+Hunt+Companies">Todd Zylka</a> (Vice President, Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Contractor Invoice-to-Pay Desktop (AP / Controller)</summary>
+    <div class="use-case-body">
+      <p>Hunt's contractor invoices route through AP staff who reconcile work-order completion in Salesforce against invoices from an external ERP/AP tool, with manual matching and re-keying between systems. Task mining the AP desktop exposes the copy-paste steps, portal logins, and email approval loops that stretch invoice cycle time. It gives the VP Controller a defensible baseline for tightening capex governance and vendor spend. Metric moved: invoice cycle days and manual-touch count per invoice.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> AP / invoicing platform, Salesforce Field Service console</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Michael+Lowry+Hunt+Companies">Michael Lowry</a> (VP Controller)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. MHPI / HUD / DoD Housing Inspection &amp; Remediation</summary>
+    <div class="use-case-body">
+      <p>MHPI compliance obligations (HUD, DoD, environmental, lead/asbestos, life-safety) require documented preventive-maintenance and inspection cadences per unit and per base, with Congressional oversight scrutinizing the results. Compliance Center codifies the scheduled-inspection &rarr; completion &rarr; remediation workflow with segregation-of-duties, evidence capture, and early-warning conformance dashboards. Bases running behind cadence surface before the auditor does. Metric moved: on-time inspection compliance and open-remediation age.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, MuleSoft</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Audra+Froom+Hunt+Companies">Audra Froom</a> (Vice President of Transformation Projects)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Contractor Onboarding, Dispatch &amp; Invoice-to-Pay</summary>
+    <summary>2. Contractor Onboarding &amp; Certification Controls</summary>
     <div class="use-case-body">
-      <p>Hunt operates a large third-party contractor network layered on top of its in-house technicians, meaning the same work order can traverse multiple ownership and payment paths. Mining the contractor lifecycle — onboarding → dispatch → completion → invoice → pay — highlights slow onboarding, dispatch-to-wrong-tier waste, and invoice cycle-time. This directly supports the VP Controller's push to tighten capex governance and vendor spend. Metric moved: contractor invoice cycle days and off-contract spend leakage.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, MuleSoft</p>
+      <p>Third-party contractors touching military housing units must clear background checks, insurance verification, safety training, and DoD-mandated certifications before they are dispatched. Compliance Center runs contractor onboarding as a controlled workflow with mandatory approvals, expirations, and auditable evidence, replacing today's spreadsheet-plus-email pattern. Expired certifications no longer slip through into dispatch. Metric moved: percentage of dispatches to fully-certified contractors and time-to-onboard.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, contractor onboarding portal</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Michael+Lowry+Hunt+Companies">Michael Lowry</a> (VP Controller)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate mentions tied to Hunt Companies were found in Slack or public sources — the Apromore Stage-01 opp appears to be uncontested at this time.</span></h2>
+  <details>
+    <summary>3. Resident Complaint Escalation &amp; Congressional-Inquiry Response</summary>
+    <div class="use-case-body">
+      <p>Hunt's 15k+ Customer Community and 1,585-seat call center generate resident complaints that can escalate to base command, DoD leadership, or Congressional inquiries within days. Compliance Center governs the escalation ladder as a controlled process &mdash; SLAs at each rung, documented sign-offs, and always-on evidence packages ready for hearing prep. This transforms escalation response from ad-hoc email threads into an auditable, defensible workflow. Metric moved: escalation SLA hit-rate and time-to-evidence-package.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Customer Communities</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chris+Radliff+Hunt+Companies">Chris Radliff</a> (Senior Director of Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Hunt MH Shared Services, LLC by mining the work-order, move-in/out, and resident-case flows already running in Salesforce Field Service and Service Cloud, task-mining community-manager, dispatcher, and AP desktops to expose the swivel-chair work that Agentforce and MuleSoft can eliminate, and running MHPI/HUD inspection, contractor certification, and Congressional-inquiry escalation through Compliance Center to compress turn cycle time, lift first-time-fix, and give the VP of Transformation Projects a defensible, audit-ready baseline for the next round of automation and AI-agent investment.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

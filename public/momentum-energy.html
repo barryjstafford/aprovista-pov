@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -112,43 +113,41 @@
   <h1>Momentum Energy Pty Ltd</h1>
   <div class="snapshot">
     <p><strong>Energy &amp; Utilities, Electricity &amp; Gas Retail</strong></p>
-    <p><strong>Revenue:</strong> ~A$2.2B &nbsp;|&nbsp; <strong>Employees:</strong> ~1,218 &nbsp;|&nbsp; <strong>HQ:</strong> Melbourne, Australia</p>
-    <p><strong>Major Subsidiaries:</strong> Hydro Tasmania (parent), Momentum Energy Retail, Entura (sibling consulting arm of Hydro Tasmania)</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> MuleSoft (Signature Success, Oct 2025 go-live), Tableau, Agentforce use cases (18+ months of internal deployments) [Slack]</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Ruchin Gupta or Bharath Kadiam — energy retailers in AU commonly run SAP IS-U or Gentrack for billing]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> No open opportunities in Org62 at time of scoring — active exec engagement on Agentic Contact Center expected to generate pipeline</p>
+    <p><strong>Revenue:</strong> ~A$2.18B &nbsp;|&nbsp; <strong>Employees:</strong> ~1,218 &nbsp;|&nbsp; <strong>HQ:</strong> Melbourne, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> Hydro Tasmania (parent), Entura (sibling consulting arm)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Service Cloud Performance Edition, Customer Community Performance, MuleSoft Anypoint Platform (Platinum) with Signature Success, Marketing Cloud Engagement, Marketing Cloud Shield, Event Monitoring, Customer Data Cloud Starter, Digital Engagement, Customer 360 Privacy Center</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Momentum - Contact Centre (<a href="https://org62.my.salesforce.com/006ed00000B7kB3AAJ">$293k</a>) &nbsp;|&nbsp; MS-Momentum Energy/Billing RFP (<a href="https://org62.my.salesforce.com/006ed00000XYhM5AAL">$280k</a>) &nbsp;|&nbsp; Momentum &ndash; AFCC Pilot + Expansion (<a href="https://org62.my.salesforce.com/006ed00000ZINWgAAP">$277k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
-    <p><strong>Salesforce AE:</strong> Karim Djelassi (TBD [field verify])</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0ALKAS2YER">Jessie Mitchell</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">82/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">87/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Energy &amp; Utilities is a priority vertical; attended June 2026 E&amp;U Process Intelligence Campfire in Melbourne [Slack]</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">18 months of live agentic use cases; committing to Agentic Contact Center + 8-10 new agent use cases [Slack]</td></tr>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>11/12</td><td class="cat-green">MuleSoft Signature Success, Tableau, active exec engagement in Hobart, Karim Djelassi owning account</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-green">MuleSoft integration layer live (Oct 2025 go-live) — API telemetry is a natural mining source</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">Exec-level SF sponsorship in place; process-mining-specific champion not yet named</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Energy retail is a priority AFPI vertical; Vy Kim from Momentum spoke at Agentforce Melbourne fireside on energy retail transformation [Slack].</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud install: Service Cloud Perf, MuleSoft Platinum + Signature, MC Engagement, Event Monitoring, CDP Starter, Digital Engagement.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Active Agentforce Contact Center pilot in negotiation, Agentforce Upside opp, WFE + AFWT in flight &mdash; agentic estate live now.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">MuleSoft Platinum + Event Monitoring already deployed &mdash; API telemetry and platform events are ready-to-mine event sources.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Contact centre modernisation, billing RFP, and market-message exceptions all named as active pain points [Org62].</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-green">Budget appetite proven via Agentic Contact Center commitment; process-mining ACV needs qualification</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">AER retail-energy rules and CDR obligations apply, but not at SOX / HIPAA intensity</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>15/20</td><td class="cat-orange">Salesforce sponsorship strong (Jessie Mitchell RVP + fireside speaker Vy Kim); no dedicated process-mining champion named on customer side yet.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">AER retail-energy rules, CDR obligations and NEM market-message compliance apply, but not at SOX / HIPAA intensity.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Momentum Energy Pty Ltd by mining the customer-onboarding, billing-to-cash, and contact-centre resolution processes that already flow through MuleSoft and the emerging Agentforce estate — turning the 8-10 planned agent-led use cases into measured cycle-time and first-contact-resolution wins instead of hopeful projections.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Contact-Centre Case Resolution &amp; Agent Handoff</summary>
     <div class="use-case-body">
-      <p>Retail energy contact centres carry unpredictable variance in first-contact resolution and repeat-caller loops driven by billing disputes, connections/disconnections and hardship enquiries. Momentum has publicly committed to a Salesforce Agentic Contact Center rollout with 8-10 agent-led use cases plus voice — mining Service Cloud + voice event logs establishes the today-state cycle time and rework rate so agent deployments can be A/B evaluated against baseline. Metric moved: average handle time, first-contact resolution, agent deflection rate.</p>
+      <p>Retail energy contact centres carry unpredictable variance in first-contact resolution and repeat-caller loops driven by billing disputes, connections/disconnections and hardship enquiries. Momentum has a $293k Contact Centre opp in negotiation plus a $277k AFCC Pilot + Expansion &mdash; mining Service Cloud + voice event logs establishes the today-state cycle time and rework rate so agent deployments can be A/B evaluated against baseline. Metric moved: average handle time, first-contact resolution, agent deflection rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ruchin+Gupta+Momentum+Energy">Ruchin Gupta</a> (Salesforce Account Executive on Momentum) — for onward introduction to Momentum contact-centre leadership</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Vy+Kim+Momentum+Energy">Vy Kim</a> (Momentum Energy &mdash; Agentforce Melbourne fireside speaker on energy retail transformation)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -156,9 +155,9 @@
   <details>
     <summary>2. Meter-to-Cash / Billing Exception Handling</summary>
     <div class="use-case-body">
-      <p>Australian energy retailers routinely see 10-20% of monthly bills flow through an exception-handling process (estimate reads, NMI disputes, market-message failures). This process spans the billing engine, market gateway, and back-office adjustments — a classic multi-system mining target where hidden rework is the single biggest lever on cost-to-serve. AFPI can quantify the exception funnel and pinpoint the two or three market-message failure types that drive most of the manual work. Metric moved: exception rate, days-to-bill, back-office FTE per 100k customers.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Billing platform (SAP IS-U or Gentrack — TBD), MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Bharath+Kadiam+Salesforce+Momentum">Bharath Kadiam</a> (Salesforce Solution Engineering — Momentum)</p>
+      <p>Australian energy retailers routinely see 10-20% of monthly bills flow through an exception-handling process (estimate reads, NMI disputes, market-message failures). The open Momentum Billing RFP ($280k) confirms billing is on the table &mdash; a classic multi-system mining target where hidden rework drives cost-to-serve. AFPI can quantify the exception funnel and pinpoint the two or three market-message failure types that account for most of the manual work. Metric moved: exception rate, days-to-bill, back-office FTE per 100k customers.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Billing platform, MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Billing+Momentum+Energy">Head of Billing Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -166,34 +165,78 @@
   <details>
     <summary>3. Customer Onboarding &amp; Move-In / Move-Out</summary>
     <div class="use-case-body">
-      <p>Momentum serves 200,000+ homes and businesses across VIC, NSW, SA and QLD, meaning move-in / move-out and switch-in flows are a high-volume, high-churn-risk journey involving market messages (NEM12/NEM13), identity checks, CDR consent, and welcome comms. Mining this end-to-end from the customer web portal through MuleSoft into billing exposes drop-off points, duplicate-record creation and hand-off delays. Metric moved: switch completion rate, days-to-active, cost per acquisition.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> MyAccount portal / MuleSoft, Salesforce Sales &amp; Service Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alicia+Gunn+Salesforce+Momentum">Alicia Gunn</a> (Salesforce — Momentum account team)</p>
+      <p>Momentum serves 200,000+ homes and businesses across VIC, NSW, SA, TAS and QLD, meaning move-in / move-out and switch-in flows are a high-volume, high-churn-risk journey involving market messages (NEM12/NEM13), identity checks, CDR consent, and welcome comms. Mining this end-to-end from the customer web portal through MuleSoft into billing exposes drop-off points, duplicate-record creation and hand-off delays. Metric moved: switch completion rate, days-to-active, cost per acquisition.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft, Salesforce Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Operations+Momentum+Energy">Head of Customer Operations</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Contact-Centre Agent Desktop Wrap-Time</summary>
+    <div class="use-case-body">
+      <p>Momentum contact-centre agents flip between Service Cloud, the billing platform, CDR consent tools and email to close a single case &mdash; unmeasured wrap and after-call work is the single biggest hidden cost on the way to Agentforce Contact Center. Task mining captures each agent's on-screen actions to isolate the specific tabs and steps that consume wrap minutes, feeding the AFCC business case directly. Metric moved: average wrap time, after-call-work minutes per contact, tabs-per-case.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, billing platform desktop</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Contact+Centre+Manager+Momentum+Energy">Contact Centre Operations Manager</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Solar / Battery / VPP Connection Workflow</summary>
+    <summary>2. Billing Back-Office Exception Handling Desktop</summary>
     <div class="use-case-body">
-      <p>Momentum markets solar, battery, EV and Virtual Power Plant / Virtual Solar Sharing products — each requiring a distributor pre-approval, metering reconfiguration, and post-install commissioning that regularly stall for weeks. Mining these connect-and-activate flows reveals which distributor jurisdictions and installer partners cause the longest lead times, and quantifies revenue-at-risk from stalled activations. Metric moved: days-from-signup-to-first-export, activation completion rate, distributor-hold rework loops.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service / Sales Cloud, Distributor market-message gateway</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Sean+Adrichem+Salesforce+Momentum">Sean Adrichem</a> (Salesforce — Momentum engagement)</p>
+      <p>The back-office team that resolves billing exceptions today rekeys between the billing engine, market-message gateway, and Salesforce cases. Task mining the exception-handling desk exposes the copy-paste patterns and repeat rework loops that Agentforce Operations could take over, and quantifies FTE recovered per exception type. Directly complements the open Billing RFP. Metric moved: manual touches per exception, FTE per 1,000 exceptions, straight-through processing rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Billing platform, Salesforce case UI</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Billing+Operations+Manager+Momentum+Energy">Billing Operations Manager</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Hardship, Payment Plans &amp; Complaints (AER / EWOV compliance)</summary>
+    <summary>3. Solar / VPP Activation Coordinator Desktop</summary>
     <div class="use-case-body">
-      <p>Under AER retail-energy rules and state ombudsman scrutiny, hardship enrolment, payment-plan management and complaint handling must follow prescribed sequences within regulated timeframes. Mining these regulated processes proves compliance (or exposes the specific step where SLAs slip), and does so with the same event data already flowing through Service Cloud — making it a natural anchor use case that pairs the Compliance Center wedge with contact-centre modernisation. Metric moved: EWOV/AER complaint count, days-to-resolution, hardship enrolment SLA breaches.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Billing platform (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Paul+Freiman+Salesforce+Momentum">Paul Freiman</a> (Salesforce Industry — Energy &amp; Utilities)</p>
+      <p>Momentum markets solar, battery, EV and Virtual Power Plant / Virtual Solar Sharing products, each requiring a distributor pre-approval, metering reconfiguration and post-install commissioning that stalls activation coordinators between distributor portals, meter data agents, and Momentum's own CRM. Task mining the activation coordinator desktop names the exact distributor-portal steps that drag lead time and quantifies revenue-at-risk from stalled activations. Metric moved: coordinator touches per activation, days-in-distributor-hold, throughput per FTE.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Distributor portal, Salesforce Sales/Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Solar+VPP+Manager+Momentum+Energy">Head of Solar / VPP Products</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Slack or web mentions tie Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath or Power Automate to Momentum Energy specifically — the field is open, and the incumbent MuleSoft + Agentforce estate positions Apromore as the natural process-intelligence layer over the same event data.</span></h2>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. AER Hardship &amp; Payment Plan Compliance</summary>
+    <div class="use-case-body">
+      <p>Under the AER retail-energy rules, hardship enrolment, payment-plan management and disconnection warnings must follow prescribed sequences within regulated timeframes. Compliance Center codifies that process as a controlled workflow with codified SLAs and evidence, and produces always-on audit artefacts for the AER and state ombudsmen. Metric moved: hardship enrolment SLA hit-rate, AER complaint count, disconnection audit findings.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, billing platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Compliance+Momentum+Energy">Head of Regulatory Compliance</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. CDR Consumer Data Right Consent Lifecycle</summary>
+    <div class="use-case-body">
+      <p>Energy CDR obligations require Momentum to record, refresh and revoke customer data-sharing consent within strict SLAs, with an auditable trail on every consent event. Compliance Center runs the consent lifecycle as a controlled workflow across MyAccount, MuleSoft and Service Cloud, producing evidence for the ACCC and OAIC on demand. Metric moved: consent audit-ready coverage, expired-consent leakage rate, consent breach count.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft, Salesforce Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Privacy+Officer+Momentum+Energy">Chief Privacy Officer / DPO</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. AEMO Market-Message SLA Controls (NEM12/NEM13)</summary>
+    <div class="use-case-body">
+      <p>Every meter read, standing data change, and switch-in exchanged with AEMO and network operators via NEM12/NEM13 market messages carries regulated response SLAs; misses drive fines and downstream billing exceptions. Compliance Center pins the market-message exchange to a controlled workflow with codified SLAs, escalations, and evidence for AEMO audits. Metric moved: market-message SLA hit-rate, unresolved failure count, audit findings per compliance cycle.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Market-message gateway, MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Market+Operations+Manager+Momentum+Energy">Head of Market Operations</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Momentum Energy Pty Ltd by mining the contact-centre, meter-to-cash, and customer-onboarding processes that already flow through MuleSoft and Service Cloud, task-mining the agent and back-office desktops to size the Agentforce Contact Center and billing-exception opportunities, and running AER hardship, CDR consent, and AEMO market-message controls through Compliance Center to shrink cycle times, cut AHT, and produce always-on regulatory evidence.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

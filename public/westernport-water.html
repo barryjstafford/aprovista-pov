@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -113,24 +114,24 @@
   <div class="snapshot">
     <p><strong>Utilities, Water &amp; Wastewater</strong></p>
     <p><strong>Revenue:</strong> ~AUD $11M &nbsp;|&nbsp; <strong>Employees:</strong> ~62 &nbsp;|&nbsp; <strong>HQ:</strong> Newhaven, VIC, Australia</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (established Org62 account since 2014; active Apromore opps in Stage 2)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Dona Tantirimudalige, Managing Director] &mdash; typical VIC water-corp stack includes SCADA, GIS (Esri), a customer billing system, and asset/works management (Maximo or equivalent), but none are Org62/Slack confirmed.</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> Westernport Water - Apromore (<a href="https://org62.my.salesforce.com/006ed00000ZoJL4AAN">$45k</a>) &nbsp;|&nbsp; Westernport Water - NZC Growth - Upgrade (<a href="https://org62.my.salesforce.com/006ed00000a1TjBAAU">$45k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
-    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U039KBRTJN4">Arash Khorasani</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GE9J3LTE">Calyn McCreadie</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t3">52/100</span> &mdash; T3 Nurture</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t3">52/100</span> &mdash; T3 Nurture</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Water utility = priority Utilities vertical (meter-to-cash, field service, connections).</td></tr>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>10/12</td><td class="cat-green">Long-standing Org62 account with named AE; two active Apromore opps in Stage 2.</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-green">ESC price submission, EPA, Safe Drinking Water Act &mdash; heavy regulated reporting burden.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>7/12</td><td class="cat-orange">Corporate Plan 2025-30 signals digital &amp; Net-Zero uplift, but no CoE or AI mandate visible.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>8/15</td><td class="cat-orange">Small staff amplifies swivel-chair effort across billing, works &amp; capital delivery.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Water utility &mdash; priority Utilities vertical (meter-to-cash, field service, connections).</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>10/12</td><td class="cat-orange">Long-standing Org62 account with two active Apromore opps in Stage 2 owned by named ECS AE.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-orange">ESC price submission, EPA, Safe Drinking Water Act &mdash; heavy regulated reporting for a small op.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>7/12</td><td class="cat-red">Corporate Plan 2025-30 signals digital &amp; Net-Zero uplift, but no CoE or AI mandate visible.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>8/15</td><td class="cat-red">Small staff amplifies swivel-chair effort across billing, works &amp; capital delivery.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
         <tr><td>Commercial Timing &amp; Deal Viability</td><td>1/6</td><td class="cat-red">Revenue base ~$11M caps discretionary spend; open opps are ~$45k, well below $200k ACV threshold.</td></tr>
         <tr><td>Systems &amp; Event-Log Readiness</td><td>3/12</td><td class="cat-red">No SAP/Oracle/ServiceNow confirmed; event-log minability unproven at this scale.</td></tr>
@@ -138,14 +139,12 @@
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Westernport Region Water Corporation by mining meter-to-cash, field work-order execution, and regulator reporting cycles so a lean 62-person team can shrink billing exceptions, cut truck-rolls per fault, and evidence Safe-Drinking-Water &amp; ESC compliance without adding headcount.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Meter-to-Cash &amp; Revenue Leakage</summary>
     <div class="use-case-body">
-      <p>Reads, estimates, billing exceptions, and dunning span the billing system, the meter data platform, and manual customer-service touches. For a small retailer any un-billed volume or write-off is material to the bottom line. AFPI would mine the full read-to-invoice-to-payment path to size revenue leakage and rework, then automate the top 3 exception patterns with Agentforce Operations. Metric moved: revenue recovered per 1,000 accounts and days-sales-outstanding.</p>
+      <p>Reads, estimates, billing exceptions, and dunning span the customer billing system, the meter data platform, and manual customer-service touches. For a small retailer any un-billed volume or write-off is material to the bottom line. AFPI mines the full read-to-invoice-to-payment path to size revenue leakage and rework, then targets the top 3 exception patterns. Metric moved: revenue recovered per 1,000 accounts and days-sales-outstanding.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Customer Billing System, Meter Data Management</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Gareth+Kennedy+Westernport+Water">Gareth Kennedy</a> (General Manager, Corporate and Customer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -155,7 +154,7 @@
   <details>
     <summary>2. Field Work-Order &amp; Fault Response</summary>
     <div class="use-case-body">
-      <p>Mains bursts, sewer chokes, water-quality callouts and planned maintenance flow across the works management system, GIS, and mobile crews. Repeat truck-rolls and unclosed jobs inflate opex on a stretched crew that covers Phillip Island plus the mainland district. Mining the dispatch-to-close path exposes rework loops and idle time by asset class. Metric moved: first-time-fix rate and average job cycle time.</p>
+      <p>Mains bursts, sewer chokes, water-quality callouts and planned maintenance flow across the works management system, GIS, and mobile crews covering Phillip Island plus the mainland district. Repeat truck-rolls and unclosed jobs inflate opex on a stretched crew. Mining the dispatch-to-close path exposes rework loops and idle time by asset class. Metric moved: first-time-fix rate and average job cycle time.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Works/Asset Management, GIS</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=David+Girdwood+Westernport+Water">David Girdwood</a> (General Manager, Assets and Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -163,19 +162,53 @@
   </details>
 
   <details>
-    <summary>3. Capital Program &amp; Renewals Delivery</summary>
+    <summary>3. New Connections &amp; Developer Servicing</summary>
     <div class="use-case-body">
-      <p>The 2025-30 corporate plan includes water-meter replacement, sewer pump-station upgrades, water-quality improvement, and renewable energy generation &mdash; a heavy capital slate for a small utility. Mining the plan-award-deliver-commission path across finance, procurement, and asset systems shows where schedule slip and change-orders originate. Metric moved: capex delivered on plan, and change-order rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Financial/ERP, Procurement</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kathy+Hawke+Westernport+Water">Kathy Hawke</a> (Executive Manager Finance / CFO)</p>
+      <p>Phillip Island growth and district development drive applications for new connections, servicing agreements, and account setup. Handoffs between customer, engineering, and billing are prone to stall &mdash; particularly around approval SLAs. Mining the end-to-end path exposes where applications age and which handoffs cause resubmits. Metric moved: application-to-connection cycle time and % straight-through applications.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Customer Billing System, Works/Asset Management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Gareth+Kennedy+Westernport+Water">Gareth Kennedy</a> (General Manager, Corporate and Customer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Customer Service Rep Desktop Swivel-Chair</summary>
+    <div class="use-case-body">
+      <p>A tiny customer-service team fields billing, connections, and fault calls on Sales Cloud while jumping to the billing system, meter data, and email. Task mining the CSR desktop reveals the exact copy/paste and lookup steps that eat handle-time, and feeds the business case for Agentforce-assisted responses. Metric moved: average handle time and after-call-work minutes per contact.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Customer Billing System</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Gareth+Kennedy+Westernport+Water">Gareth Kennedy</a> (General Manager, Corporate and Customer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Regulator &amp; Safe-Drinking-Water Compliance Evidence</summary>
+    <summary>2. Field Crew Mobile &amp; Job-Close Capture</summary>
     <div class="use-case-body">
-      <p>ESC price-submission monitoring, EPA reporting, and Safe Drinking Water Act audit responses require assembling event evidence from lab, SCADA, works, and customer systems. Today this is a manual, per-request scramble. Compliance-Center is the wedge: a re-usable mined process view of every regulated workflow, ready for on-demand audit. Metric moved: audit response time and open non-conformance count.</p>
+      <p>Field techs record job outcomes on mobile devices, then admins re-enter into the works system and GIS. Task mining the mobile-plus-back-office activity exposes double-keying and delayed job-closure that skew asset data and delay invoicing. Directly informs a mobile-first workflow rebuild. Metric moved: job-close latency and share of same-day closures.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Mobile Works App, GIS</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=David+Girdwood+Westernport+Water">David Girdwood</a> (General Manager, Assets and Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Finance &amp; AR Cash-Application Desktop</summary>
+    <div class="use-case-body">
+      <p>Finance staff at a lean utility spend time reconciling bank feeds, applying receipts to customer accounts, and clearing unallocated cash across the ERP and billing platform. Task mining exposes the manual keystrokes and screen-hops per receipt, sizing the automation opportunity and freeing time for capital-program financial control. Metric moved: unallocated cash days and receipts processed per FTE-hour.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial/ERP, Customer Billing System</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kathy+Hawke+Westernport+Water">Kathy Hawke</a> (Executive Manager Finance / CFO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. Safe Drinking Water Act Audit Evidence</summary>
+    <div class="use-case-body">
+      <p>The Victorian Safe Drinking Water Act requires documented water-quality management from source to tap, with rapid response to any non-conformance. Today, audit evidence is assembled by hand from lab, SCADA, works, and customer complaint systems. Compliance Center runs each regulated workflow as a controlled, always-audit-ready process. Metric moved: audit response time and open non-conformance count.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> LIMS, SCADA</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Dona+Tantirimudalige+Westernport+Water">Dona Tantirimudalige</a> (Managing Director)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -183,16 +216,26 @@
   </details>
 
   <details>
-    <summary>5. New Connections &amp; Developer Servicing</summary>
+    <summary>2. ESC Price Submission &amp; Regulator Reporting</summary>
     <div class="use-case-body">
-      <p>Phillip Island growth and district development drive applications for new connections, servicing agreements, and account setup. The handoffs between customer, engineering, and billing are prone to stall &mdash; particularly around approval SLAs. Mining exposes where applications age and which handoffs cause resubmits. Metric moved: application-to-connection cycle time and % straight-through applications.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Customer Billing System, Works/Asset Management</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Gareth+Kennedy+Westernport+Water">Gareth Kennedy</a> (General Manager, Corporate and Customer)</p>
+      <p>Every five years the Essential Services Commission price submission consumes months of finance and operations effort; annual performance reporting is continuous. Compliance Center codifies the data-collection and sign-off workflow so evidence is captured as work happens, not reassembled retroactively. Metric moved: cycle time to prepare each ESC pack and internal audit hours consumed.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial/ERP, Customer Billing System</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kathy+Hawke+Westernport+Water">Kathy Hawke</a> (Executive Manager Finance / CFO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent mentions of Celonis, ARIS, Signavio, ABBYY, ServiceNow (process mining), Appian, UiPath, or Power Automate tied to Westernport Water in Slack, web news, or public tenders. The 2023 Field Service opp went dead &mdash; no evidence a rival process/automation vendor won the ground.</span></h2>
+  <details>
+    <summary>3. EPA Environmental &amp; Net-Zero Reporting</summary>
+    <div class="use-case-body">
+      <p>Trade-waste, biosolids, discharge-quality and greenhouse-gas reporting for the EPA and the Corporate Plan 2025-30 Net-Zero targets require pulling data from SCADA, environmental monitoring, and finance. Compliance Center controls the workflow, evidences segregation-of-duties, and delivers a repeatable Net-Zero disclosure trail. Metric moved: reporting cycle time and exception-count per submission.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SCADA, Environmental Monitoring</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=David+Girdwood+Westernport+Water">David Girdwood</a> (General Manager, Assets and Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Westernport Region Water Corporation by mining meter-to-cash, field work-order execution, and new-connection cycles across its billing and works estate, task-mining CSR, field crew, and finance desktops to expose the swivel-chair effort a 62-person team cannot absorb, and running Safe Drinking Water Act, ESC price submission, and EPA / Net-Zero reporting through Compliance Center to shrink billing exceptions, cut truck-rolls per fault, and produce always-on regulator evidence without adding headcount.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -203,7 +246,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

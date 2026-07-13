@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -107,89 +112,133 @@
 <main>
   <h1>Cassa di Risparmio di Asti S.p.A.</h1>
   <div class="snapshot">
-    <p><strong>Financial Services, Banking (Regional / Cooperative Savings Bank)</strong></p>
-    <p><strong>Revenue:</strong> ~€247M &nbsp;|&nbsp; <strong>Employees:</strong> ~1,100 &nbsp;|&nbsp; <strong>HQ:</strong> Asti, Italy</p>
+    <p><strong>Financial Services, Banking</strong></p>
+    <p><strong>Revenue:</strong> ~&euro;247M &nbsp;|&nbsp; <strong>Employees:</strong> ~1,100 &nbsp;|&nbsp; <strong>HQ:</strong> Asti, Italy</p>
     <p><strong>Major Subsidiaries:</strong> Immobiliare Maristella (Biverbanca fully merged into Banca di Asti in 2021)</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (SFA), Service Cloud (Call Center), Analytics Cloud, MuleSoft, Marketing Cloud Engagement (ExactTarget), Data Cloud, Platform</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> TBD [field verify with Stefano Vaccaneo, Office Manager - ICT]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Renewal — SFA + Call Center + Analytics Cloud (<a href="https://org62.my.salesforce.com/006ed000006tcHKAAY">$1.34M</a>) &nbsp;|&nbsp; <strong>Banca di Asti — Apromore</strong> (<a href="https://org62.my.salesforce.com/006ed00000cOH1pAAG">$50K</a>) &nbsp;|&nbsp; MuleSoft IDP (<a href="https://org62.my.salesforce.com/006ed00000Zvs2jAAB">$100K</a>)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Financial Services Cloud (Sales &amp; Service EE), MuleSoft Anypoint Platinum, CRM Analytics Growth, Marketing Cloud Engagement (ExactTarget), Service Cloud Voice with Amazon Connect, Salesforce Shield, Agentforce for Service, Experience Cloud, Loyalty Management, Visual Remote Assistant</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Renewal &mdash; SFA + Call Center + Analytics Cloud (<a href="https://org62.my.salesforce.com/006ed000006tcHKAAY">$1.34M</a>) &nbsp;|&nbsp; Banca di Asti &mdash; Apromore (<a href="https://org62.my.salesforce.com/006ed00000cOH1pAAG">$50K</a>) &nbsp;|&nbsp; MuleSoft IDP (<a href="https://org62.my.salesforce.com/006ed00000Zvs2jAAB">$100K</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U08LXB0FA1J">Massimiliano Maffioli</a></p>
-    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Sales Cloud + Service Cloud + MuleSoft)</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Financial Services Cloud + MuleSoft)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">87/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">87/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Active Apromore/AFPI opportunity in-flight</td><td>19/20</td><td class="cat-green">Live $50K "Banca di Asti — Apromore" opp in stage 02 — deal is already qualified and moving.</td></tr>
-        <tr><td>Regulated EU bank (DORA, GDPR, MiFID II, PSD2, EBA)</td><td>14/15</td><td class="cat-green">€13B-asset Italian bank under EBA / Bank of Italy supervision — Compliance Center wedge is real.</td></tr>
-        <tr><td>Salesforce install base breadth (SFA, Service, MuleSoft, Analytics, MC, Data Cloud)</td><td>13/15</td><td class="cat-green">Broad multi-cloud footprint with $1.34M renewal in-flight — process-mining evidence protects retention.</td></tr>
-        <tr><td>Named buyer titles present (Data Governance, ICT Risk, ICT, Organizzazione, Progetti)</td><td>9/10</td><td class="cat-green">Leonardo Prunotto (Data Governance/ICT Risk), Stefano Vaccaneo (ICT), Alessio Vessoso (Organizzazione), Michela Sgrinzi (Progetti) — full buying committee.</td></tr>
-        <tr><td>Post-merger integration complexity (Biverbanca absorbed 2021)</td><td>8/10</td><td class="cat-green">Biverbanca fully merged 2021 — dual-stack legacy processes still present a natural harmonization mining story.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">EU retail bank &mdash; priority AFPI vertical; DORA + EBA + Bank of Italy supervision drive controls demand.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud: Financial Services Cloud, MuleSoft, CRM Analytics, Shield, MC, Service Cloud Voice, Agentforce.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">DORA, GDPR, MiFID II, PSD2, 5AMLD/6AMLD, UIF SOS filings &mdash; strong Compliance Center wedge.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Post-Biverbanca dual-stack, mortgage origination, call center reclami &mdash; concrete cycle-time + rework pain.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-green">Live $50K Apromore opp + $100K MuleSoft IDP + Agentforce for Service already on paper.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Non-Salesforce systems visibility (core banking stack unconfirmed)</td><td>4/10</td><td class="cat-orange">Core banking / LOS / AML platforms not confirmed in Org62 — event-log sourcing needs ICT-side discovery.</td></tr>
-        <tr><td>Recent lost-deal pattern (Agentforce + BDR plays gone Dead-Lost)</td><td>6/10</td><td class="cat-orange">Multiple 2026 Agentforce/BDR plays closed Dead-Lost — customer is selective on AI motions; AFPI must land on evidenced pain, not generic pilots.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>13/20</td><td class="cat-orange">Named ICT/Organizzazione contacts identified but no confirmed customer-side executive champion on LinkedIn.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>4/6</td><td class="cat-orange">Apromore deal live at $50K &mdash; small entry ACV; expansion to $200k+ requires evidenced use-case land.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Cassa di Risparmio di Asti S.p.A. by turning the already-open $50K Apromore opportunity into an evidenced process-intelligence layer across its Sales Cloud, Service Cloud call-center, and MuleSoft integration flows — surfacing the loan origination, KYC/AML, complaint handling, and post-Biverbanca harmonization inefficiencies that protect the $1.34M SFA/Call Center/Analytics renewal and give the ICT and Data Governance teams a DORA/EBA-defensible audit trail.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Loan Origination &amp; Underwriting (Retail Mortgage + Small Business)</summary>
+    <summary>1. Retail Mortgage &amp; Small-Business Loan Origination</summary>
     <div class="use-case-body">
-      <p>Banca di Asti is a Piedmont/Lombardy retail lender where mortgage and small-business loan files traverse relationship managers, credit, underwriting, doc prep, and closing — a hand-off-heavy process that erodes NIM in the current ECB rate environment. AFPI mines the origination event log across the LOS and Salesforce Sales Cloud (in the $1.34M renewal) to quantify stage-level cycle times, exception paths, and re-work loops, then hands the evidence to the branch-network heads to prioritize fixes. Compliance Center provides Bank of Italy examiners a defensible view of covenant reviews and disclosure timing. Metric moved: application-to-fund cycle time, pull-through rate, and per-branch variance.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, Core Banking / LOS (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Carlo+Demartini+Banca+di+Asti">Carlo Demartini</a> (Amministratore Delegato e Direttore Generale — economic buyer)</p>
+      <p>Banca di Asti is a Piedmont/Lombardy retail lender where mortgage and small-business loan files traverse relationship managers, credit, underwriting, doc prep, and closing &mdash; a hand-off-heavy process that erodes NIM in the current ECB rate environment. AFPI mines the origination event log across the LOS and Salesforce Financial Services Cloud to quantify stage-level cycle times, exception paths, and re-work loops, then hands the evidence to the branch-network heads to prioritize fixes. Metric moved: application-to-fund cycle time, pull-through rate, and per-branch variance.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, Core Banking / LOS</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Carlo+Demartini+Banca+di+Asti">Carlo Demartini</a> (Amministratore Delegato e Direttore Generale)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Contact Center &amp; Digital-Channel Case Handling (Service Cloud + Filiale OnLine)</summary>
+    <summary>2. Post-Merger Process Harmonization (Biverbanca Legacy) &amp; MuleSoft Integration</summary>
     <div class="use-case-body">
-      <p>The bank runs Service Cloud as its Call Center platform and operates a "Filiale OnLine" digital branch under Stefano Salvi. AFPI mines the case-handling event log — Service Cloud statuses, agent actions, escalations, and transfers to branch — to isolate the top intents by AHT and re-open rate. That evidence turns any future Agentforce agent (the prior generic Agentforce pilots went Dead-Lost) into a targeted, ROI-defensible deployment aimed at complaint handling, PSD2 dispute flows, and internet-banking support. Metric moved: AHT, first-contact resolution, complaint-SLA adherence.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Marketing Cloud Engagement</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Stefano+Salvi+Banca+di+Asti">Stefano Salvi</a> (Responsabile Canali Diretti - Filiale OnLine)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>3. KYC / AML Alert Investigation &amp; SOS Filing (Segnalazioni Operazioni Sospette)</summary>
-    <div class="use-case-body">
-      <p>As an EU credit institution supervised by Bank of Italy and subject to EBA / DORA / 5th–6th AML directives, Banca di Asti runs transaction monitoring, sanctions screening, and SOS (Suspicious Transaction Reporting) workflows on top of legacy AML tooling. AFPI mines the alert-to-disposition process — enrichment, L1/L2 hand-offs, escalation to Antiriciclaggio, SOS narrative preparation — to expose bottlenecks and disparate reviewer paths. Compliance Center gives UIF and Bank of Italy examiners an evidenced control story on why alerts were closed or filed. Metric moved: alerts per investigator per day, SOS filing timeliness, false-positive rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> AML / Transaction Monitoring (TBD), Salesforce Platform</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Leonardo+Prunotto+Banca+di+Asti">Leonardo Prunotto</a> (Data Governance e ICT Risk Manager)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Post-Merger Process Harmonization (Biverbanca Legacy) &amp; MuleSoft Integration</summary>
-    <div class="use-case-body">
-      <p>Biverbanca was fully absorbed into Banca di Asti in 2021, but dual-stack processes and duplicated party/account records persist in the branch network and back office. With MuleSoft actively deployed and a live $100K MuleSoft IDP opportunity in-flight, AFPI mines the reconciliation, master-data steward, and cross-stack integration events to show where harmonization is stalling — a natural revenue-per-customer story the ICT / Organizzazione teams can take to the board. Metric moved: duplicate-record rate, integration throughput, steward hours per 1,000 records.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft, Salesforce Platform</p>
+      <p>Biverbanca was fully absorbed into Banca di Asti in 2021, but dual-stack processes and duplicated party/account records still persist in the branch network and back office. With MuleSoft actively deployed and a live $100K MuleSoft IDP opportunity in-flight, AFPI mines the reconciliation, master-data steward, and cross-stack integration events to expose where harmonization is stalling &mdash; a natural revenue-per-customer story the ICT and Organizzazione teams can take to the board. Metric moved: duplicate-record rate, integration throughput, steward hours per 1,000 records.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft, Financial Services Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Stefano+Vaccaneo+Banca+di+Asti">Stefano Vaccaneo</a> (Office Manager - ICT)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Complaint Handling &amp; PSD2 / MiFID II Dispute Management</summary>
+    <summary>3. Complaint (Reclami) Handling &amp; PSD2 Dispute Management</summary>
     <div class="use-case-body">
-      <p>Italian retail banks face strict Bank of Italy timelines on complaint handling (Reclami) and PSD2 dispute resolution, and MiFID II adds appropriateness/suitability audit demands on the investment side (Paolo Canale runs Finanza; Valentina Argenta runs asset management). AFPI mines the reclamo-to-resolution event log across Service Cloud, Marketing Cloud outreach, and the back-office to expose SLA breaches, escalation loops, and evidence-gathering delays. Compliance Center produces the audit dossier when the ABF (Arbitro Bancario Finanziario) or CONSOB asks. Metric moved: complaint-SLA compliance, resolution cycle time, escalation-to-ABF rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Salesforce Sales Cloud</p>
+      <p>Italian retail banks face strict Bank of Italy timelines on complaint handling (Reclami) and PSD2 dispute resolution, with escalation to the ABF (Arbitro Bancario Finanziario) if SLAs slip. AFPI mines the reclamo-to-resolution event log across Service Cloud, Marketing Cloud outreach, and the back-office to expose SLA breaches, escalation loops, and evidence-gathering delays. Compliance Center produces the audit dossier when the ABF or CONSOB asks. Metric moved: complaint-SLA compliance, resolution cycle time, escalation-to-ABF rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Financial Services Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alessio+Vessoso+Banca+di+Asti">Alessio Vessoso</a> (Responsabile Ufficio Organizzazione)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Contact Center &amp; Filiale OnLine Agent Desktop</summary>
+    <div class="use-case-body">
+      <p>The bank runs Service Cloud with Service Cloud Voice on Amazon Connect and operates a "Filiale OnLine" digital branch. Task mining the agent desktop &mdash; Service Cloud console, core-banking lookups, e-signature, and email &mdash; isolates the exact after-call-work and app-switching steps that inflate AHT. That evidence turns the Agentforce for Service add-on already on paper into a targeted, ROI-defensible deployment aimed at complaint handling, PSD2 dispute flows, and internet-banking support. Metric moved: AHT, first-contact resolution, wrap time per contact type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, Core Banking</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Stefano+Salvi+Banca+di+Asti">Stefano Salvi</a> (Responsabile Canali Diretti - Filiale OnLine)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Branch Relationship Manager Onboarding &amp; KYC Desktop</summary>
+    <div class="use-case-body">
+      <p>New-client onboarding in the branch network pulls together KYC forms, ID verification, PEP/sanctions screening, MiFID II adequacy questionnaires, and product setup across multiple screens. Task mining the RM desktop exposes re-keying between Financial Services Cloud and core banking &mdash; then names the exact steps Agentforce or MuleSoft-driven straight-through processing can eliminate. Metric moved: onboarding cycle time, manual-touch count per new client, KYC-file completeness at first pass.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, Core Banking</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alessio+Vessoso+Banca+di+Asti">Alessio Vessoso</a> (Responsabile Ufficio Organizzazione)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. AML Investigator Desktop &amp; SOS Narrative Preparation</summary>
+    <div class="use-case-body">
+      <p>Antiriciclaggio L1/L2 investigators triage transaction-monitoring alerts, enrich them across the AML platform, core banking, and internet-banking tooling, then draft the SOS narrative for UIF filing. Task mining the investigator desktop reveals how much time is spent in swivel-chair enrichment and quality-review rework versus decision-making. Feeds an Agentforce Operations case for auto-assembly of the SOS dossier. Metric moved: alerts per investigator per day, dossier-preparation time, quality-review rework rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> AML / Transaction Monitoring, Financial Services Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Leonardo+Prunotto+Banca+di+Asti">Leonardo Prunotto</a> (Data Governance e ICT Risk Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. DORA ICT Risk &amp; Third-Party Register Controls</summary>
+    <div class="use-case-body">
+      <p>The EU Digital Operational Resilience Act (DORA) now requires Italian credit institutions to maintain an evidenced ICT risk framework, an incident-classification workflow, and a Registro dei Fornitori ICT (third-party register) that Bank of Italy examiners can audit on demand. Compliance Center codifies the ICT incident, third-party onboarding, and resilience-testing workflows on top of Salesforce Platform and MuleSoft integration logs. Especially timely as Agentforce for Service goes live &mdash; every new AI-touched process needs DORA-grade lineage. Metric moved: incident-classification cycle time, third-party register completeness, audit-ready evidence coverage.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Platform, MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Leonardo+Prunotto+Banca+di+Asti">Leonardo Prunotto</a> (Data Governance e ICT Risk Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. AML / SOS Filing &amp; 6AMLD Alert Adjudication</summary>
+    <div class="use-case-body">
+      <p>As an EU credit institution supervised by Bank of Italy and subject to 5AMLD/6AMLD, Banca di Asti runs transaction monitoring, sanctions screening, and Segnalazioni Operazioni Sospette (SOS) filing to UIF. Compliance Center gives UIF and Bank of Italy examiners an evidenced control story on why alerts were closed or filed, with codified SLAs across L1, L2, and Antiriciclaggio escalation. Metric moved: alert-clearing SLA hit-rate, time-to-SOS, false-positive rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> AML / Transaction Monitoring, Financial Services Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Leonardo+Prunotto+Banca+di+Asti">Leonardo Prunotto</a> (Data Governance e ICT Risk Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. MiFID II Suitability &amp; Appropriateness Audit Trail</summary>
+    <div class="use-case-body">
+      <p>Investment advisory and asset management workflows must produce a defensible MiFID II suitability / appropriateness dossier for every client interaction &mdash; questionnaires, product-scoring, ex-ante cost disclosures, and ex-post reporting. Compliance Center runs the suitability workflow as a controlled, evidenced process across Financial Services Cloud and the advisory platform, so CONSOB inspections and internal audit both draw from the same event log. Metric moved: suitability-file completeness, ex-ante disclosure timeliness, audit findings per portfolio review.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, Advisory Platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alessio+Vessoso+Banca+di+Asti">Alessio Vessoso</a> (Responsabile Ufficio Organizzazione)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Cassa di Risparmio di Asti S.p.A. by mining mortgage origination, post-Biverbanca harmonization, and complaint-handling flows across Financial Services Cloud, MuleSoft, and the core banking stack, task-mining the Service Cloud call-center and branch RM desktops to expose the swivel-chair work that the already-on-paper Agentforce for Service add-on can eliminate, and running DORA ICT-risk, AML/SOS, and MiFID II suitability controls through Compliance Center to shrink cycle times, protect the $1.34M SFA/Call Center/Analytics renewal, and give the ICT and Data Governance teams an evidenced audit trail for Bank of Italy, UIF, and CONSOB.</p>
+
+  <div class="actions">
     <span>Generate PDF</span>
     <span>Generate Slack Canvas</span>
     <span>Generate Vercel Page</span>
@@ -198,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

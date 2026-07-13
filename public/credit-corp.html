@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -113,70 +114,48 @@
   <div class="snapshot">
     <p><strong>Financial Services, Consumer Finance &amp; Debt Purchase</strong></p>
     <p><strong>Revenue:</strong> A$500M (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~1,730 &nbsp;|&nbsp; <strong>HQ:</strong> Sydney, Australia</p>
-    <p><strong>Major Subsidiaries:</strong> Radio Rentals, Baycorp, National Credit Management (NCML), Wallet Wizard, ClearCash</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Marketing Cloud (ExactTarget), Tableau, Service Cloud</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Tim+Cullen+Credit+Corp">Tim Cullen (CIO)</a>]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Credit Corp Group | Apromore (<a href="https://org62.my.salesforce.com/006ed00000bCELFAA4">$168k</a>) &nbsp;·&nbsp; Credit Corp Group | Document AI (<a href="https://org62.my.salesforce.com/006ed00000bfe93AAA">$130k</a>) &nbsp;·&nbsp; MC SMS Add-On (<a href="https://org62.my.salesforce.com/006ed00000UONevAAH">$92k</a>)</p>
+    <p><strong>Major Subsidiaries:</strong> Baycorp, National Credit Management, Wallet Wizard, ClearCash, Lion Finance</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Service Cloud (Enterprise), Marketing Cloud Engagement, Data Cloud (Customer Data Cloud for Marketing + Segmentation), Tableau (Creator/Explorer/Viewer), Digital Engagement, Einstein for Service, Experience Cloud, Sales Cloud</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Credit Corp Group | Apromore (<a href="https://org62.my.salesforce.com/006ed00000bCELFAA4">$168k</a>) &nbsp;|&nbsp; Credit Corp Group | Document AI (<a href="https://org62.my.salesforce.com/006ed00000bfe93AAA">$130k</a>) &nbsp;|&nbsp; MC SMS Add-On (<a href="https://org62.my.salesforce.com/006ed00000UONevAAH">$92k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02SYPH5DFS">Chris Ballinger</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Service Cloud + Document AI)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">88/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">88/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">Debt-collection cycle time, hardship rework, and post-M&amp;A integration create acute pain.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">COO, CFO, CIO, and Chief Analytics Officer all named contacts — full C-suite reach.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>11/12</td><td class="cat-green">Marketing Cloud, Tableau, Service Cloud installed; Apromore opp already open in Org62.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">A$385M Humm Group takeover in-flight; Document AI opp signals AI-forward posture.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-green">Salesforce Service Cloud + Tableau give clean event logs for collections workflows.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Broad install: Service Cloud, MC Engagement, Data Cloud, Tableau, Einstein, Sales &amp; Experience Cloud &mdash; plus live Apromore opp.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">Debt-collection cycle time, hardship rework, PDL first-contact lag, post-M&amp;A integration create acute pain.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">Consumer finance &amp; debt purchase &mdash; priority AFPI vertical with heavy regulated ops.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Document AI opp open, Einstein for Service &amp; Data Cloud live &mdash; AI-forward posture.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">ASIC NCCP hardship rules, ACCC scrutiny on debt buyers, AFCA disputes drive audit-trail demand.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-orange">Live Apromore opp at $168k sits just below the $200k ACV target — needs expansion.</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">ASIC NCCP hardship rules and ACCC scrutiny on debt buyers create audit-trail demand.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>16/20</td><td class="cat-orange">Named C-suite reachable but no LinkedIn-confirmed Process Improvement/Optimization title holder yet.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>4/6</td><td class="cat-orange">Apromore opp at $168k sits just below the $200k ACV target &mdash; needs expansion or bundling with Doc AI.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Credit Corp Group Limited by mining collections, hardship, and post-acquisition Humm Group integration flows across Service Cloud and Tableau to compress cycle time, harden ASIC/NCCP compliance evidence, and unlock 8-12% collector productivity gains inside a single quarter.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Post-Humm-Acquisition Collections Harmonization</summary>
     <div class="use-case-body">
-      <p>Credit Corp announced a A$385M takeover of Humm Group in March 2026 [Web], adding a BNPL and commercial-lending book onto its debt-purchase engine. Two collections stacks and two customer-contact strategies now need to converge — the classic post-M&amp;A trap where cycle times and cost-to-collect drift for 12-18 months. AFPI mines the as-is collections flow from both entities in parallel and surfaces the shortest path variant to standardize on. Metric moved: cost per dollar collected, target 6-10% reduction.</p>
+      <p>Credit Corp's takeover of Humm Group folds a BNPL and commercial-lending book onto its debt-purchase engine &mdash; leaving two collections stacks and two contact strategies to converge. This is the classic post-M&amp;A trap where cycle time and cost-to-collect drift for 12&ndash;18 months while ops teams pick a target-state variant by committee. AFPI mines the as-is collections flow from both entities side-by-side and surfaces the shortest-path variant to standardize on, with rework hotspots called out. Metric: cost per dollar collected, target 6&ndash;10% reduction inside two quarters.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Tableau</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Matthew+Angell+Credit+Corp">Matthew Angell</a> (Group COO — Industry Leadership &amp; Acquisitions)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Matthew+Angell+Credit+Corp">Matthew Angell</a> (Group COO &mdash; Industry Leadership &amp; Acquisitions)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Hardship &amp; NCCP Compliance Cycle</summary>
+    <summary>2. Purchased Debt Ledger (PDL) Onboarding to First-Payment</summary>
     <div class="use-case-body">
-      <p>ASIC's tightened hardship-response rules under NCCP require documented, timely handling of every customer hardship request — with regulator visibility into how variations were assessed. Manual audits sample thin; process mining gives every case a compliant trace. AFPI reconstructs the full hardship journey from intake through variation and re-contact, flagging cases that miss statutory clocks. Metric moved: hardship SLA breach rate, target &lt;2%.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Tableau</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Michael+Eadie+Credit+Corp">Michael Eadie</a> (Chief Financial Officer)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>3. Consumer Lending Origination-to-Fund</summary>
-    <div class="use-case-body">
-      <p>Wallet Wizard and ClearCash push small-amount credit through a heavily automated origination flow, but rework loops in ID verification and responsible-lending checks quietly tax the funnel. Mining the origination event log exposes where applications stall, drop, or loop — and how those variants correlate with default rates downstream. AFPI plus Document AI (already open in Org62 as a $130k opp) closes the loop between doc extraction and process. Metric moved: time-to-fund, target 20-30% reduction on straight-through cases.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Document AI</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Martin+Wu+Credit+Corp">Martin Wu</a> (Chief Analytics Officer)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Purchased Debt Ledger (PDL) Onboarding &amp; First-Contact</summary>
-    <div class="use-case-body">
-      <p>Every new PDL tranche — the core of Credit Corp's business — must be ingested, segmented, and first-contacted quickly to hit collection-curve targets. Delays between ledger settlement and first productive contact are the single biggest driver of miss-rate. AFPI mines the ledger-load-to-first-payment sequence and identifies where segmentation, contact channel choice, or dialer routing lose days. Metric moved: days-to-first-payment on new ledgers, target -25%.</p>
+      <p>Every new PDL tranche &mdash; the core of Credit Corp's model &mdash; must be ingested, segmented, and first-contacted quickly to hit the collection curve. Delays between ledger settlement and first productive contact are the single biggest driver of miss-rate. AFPI mines the ledger-load-to-first-payment sequence across Service Cloud cases and Tableau segments, exposing where segmentation, channel choice, or dialer routing lose days. Metric: days-to-first-payment on new ledgers, target &minus;25%.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Tableau</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mitch+Symes+Credit+Corp">Mitch Symes</a> (Chief Operating Officer, ANZ)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -184,16 +163,80 @@
   </details>
 
   <details>
-    <summary>5. Complaint &amp; Dispute Resolution (AFCA Path)</summary>
+    <summary>3. Consumer Lending Origination-to-Fund (Wallet Wizard / ClearCash)</summary>
     <div class="use-case-body">
-      <p>Complaints escalating to AFCA carry direct cost and regulator scrutiny — and every escalation started as an early-stage service interaction that could have been resolved sooner. Mining the complaint lifecycle from first mention through internal review to AFCA lodgement identifies the branch points that predict escalation. AFPI plus Compliance Center gives the audit-ready trail Credit Corp already has to produce. Metric moved: AFCA escalation rate per 1,000 accounts, target -15%.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Marketing Cloud</p>
+      <p>Wallet Wizard and ClearCash push small-amount credit through a heavily automated origination flow, but rework loops in ID verification and responsible-lending checks quietly tax the funnel. Mining the origination event log exposes where applications stall, drop, or loop &mdash; and how those variants correlate with default rates downstream. AFPI plus the open $130k Document AI opp closes the loop between doc extraction and process. Metric: time-to-fund, target 20&ndash;30% reduction on straight-through cases.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Document AI</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Martin+Wu+Credit+Corp">Martin Wu</a> (Chief Analytics Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Collector Desktop Swivel-Chair</summary>
+    <div class="use-case-body">
+      <p>Collectors move between Service Cloud, the dialer, the PDL segmentation view in Tableau, and hardship/complaint tools for a single account. Task mining captures every screen action to isolate the copy/paste steps, repeat lookups, and screen-switches that eat handle time. Feeds a direct Agentforce for Service business case in the ANZ contact centre. Metric: talk-time and after-call-work minutes per productive contact.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, dialer</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mitch+Symes+Credit+Corp">Mitch Symes</a> (Chief Operating Officer, ANZ)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Hardship Officer NCCP Variation Assessment</summary>
+    <div class="use-case-body">
+      <p>ASIC's tightened NCCP hardship-response rules require documented, timely handling of every variation request. Hardship officers today juggle intake forms, income &amp; expenditure calculators, credit files, and case management &mdash; many with manual re-keying. Task mining exposes the exact steps where statutory clocks are put at risk and where an Agentforce assist can pre-fill decisions. Metric: hardship case touch-time and SLA-breach rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, hardship intake portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Michael+Eadie+Credit+Corp">Michael Eadie</a> (Chief Financial Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Complaints &amp; AFCA Handling Desktop</summary>
+    <div class="use-case-body">
+      <p>Complaint handlers switch between Service Cloud case detail, correspondence templates, the AFCA portal, and internal review tools &mdash; and every escalation started as an early-stage service interaction. Task mining reveals the repeat template edits, tab-switching, and PDF handling that inflate cycle time before escalation. Pairs with Compliance Center to produce the audit-ready trail. Metric: internal-dispute cycle time and AFCA escalation rate per 1,000 accounts.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, AFCA portal</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Tim+Cullen+Credit+Corp">Tim Cullen</a> (Chief Information Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent mentions of Celonis, Signavio, ARIS, ABBYY, ServiceNow, Appian, UiPath, or Power Automate tied to Credit Corp Group in Slack or public web sources — the field appears open for AFPI.</span></h2>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. ASIC NCCP Hardship Response Controls</summary>
+    <div class="use-case-body">
+      <p>ASIC's post-2023 hardship regime demands documented, timely handling of every request with regulator visibility on assessment paths. Manual audit sampling misses systemic drift; Compliance Center codifies the promote/assess/notify/re-contact workflow with segregation-of-duties and evidence on every case. Especially critical after the Humm Group merger, where two hardship books need one control model. Metric: hardship SLA breach rate, target &lt;2%, and audit findings per quarter.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, hardship case management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Michael+Eadie+Credit+Corp">Michael Eadie</a> (Chief Financial Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. AFCA Complaints Handling &amp; Evidence</summary>
+    <div class="use-case-body">
+      <p>AFCA determinations carry direct cost, remediation exposure, and ASIC scrutiny &mdash; and every escalation is preceded by an internal dispute that must be handled inside statutory clocks. Compliance Center runs the internal-dispute-to-AFCA workflow as a controlled process with logged decisions, evidence and escalation gates, so every case can be produced on demand. Metric: internal-dispute SLA hit-rate and AFCA overturned-in-favour-of-customer rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, AFCA portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Tim+Cullen+Credit+Corp">Tim Cullen</a> (Chief Information Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Responsible Lending &amp; AML/CTF Audit Trail</summary>
+    <div class="use-case-body">
+      <p>Wallet Wizard, ClearCash and other consumer-credit brands operate under ASIC responsible-lending obligations and AUSTRAC AML/CTF reporting duties. Compliance Center puts income &amp; expenditure assessments, ID verification and threshold-transaction reporting inside a codified workflow with automated evidence capture &mdash; removing spreadsheet-plus-attestation. Metric: alert-clearing SLA and audit-ready coverage of new originations.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Document AI</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Martin+Wu+Credit+Corp">Martin Wu</a> (Chief Analytics Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Credit Corp Group Limited by mining post-Humm collections, PDL first-contact and Wallet Wizard/ClearCash origination flows across Service Cloud and Tableau to compress cycle time and cost-to-collect, task-mining collector, hardship and complaints desktops to unlock 8&ndash;12% productivity gains for Agentforce, and running NCCP hardship, AFCA complaints and responsible-lending controls through Compliance Center to produce always-on ASIC/AUSTRAC/AFCA audit evidence.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

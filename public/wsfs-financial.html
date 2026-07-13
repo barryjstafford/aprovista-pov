@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -107,95 +112,142 @@
 <main>
   <h1>WSFS Financial Corporation</h1>
   <div class="snapshot">
-    <p><strong>Financial Services, Banking (Regional / Community)</strong></p>
-    <p><strong>Revenue:</strong> ~$1.4B &nbsp;|&nbsp; <strong>Employees:</strong> ~2,100 &nbsp;|&nbsp; <strong>HQ:</strong> Wilmington, DE, USA</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (SFA), Analytics Cloud, MuleSoft, Platform, Marketing Cloud Engagement, Service Cloud (in-flight), Informatica IDMC / MDM</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> TBD [field verify with Molly Buckley]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Sales Cloud + Analytics Renewal (<a href="https://org62.my.salesforce.com/0063y000018QqtiAAC">$2.37M</a>) &nbsp;|&nbsp; AEH Org Renewal — MuleSoft + Platform + CRM (<a href="https://org62.my.salesforce.com/006ed00000TfUPdAAN">$1.33M</a>) &nbsp;|&nbsp; Agentforce Operations (<a href="https://org62.my.salesforce.com/006ed00000cHZDBAA4">$600K</a>)</p>
+    <p><strong>Financial Services, Regional Banking</strong></p>
+    <p><strong>Revenue:</strong> ~$1.06B (2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~2,309 &nbsp;|&nbsp; <strong>HQ:</strong> Wilmington, DE, USA</p>
+    <p><strong>Major Subsidiaries:</strong> WSFS Bank, Bryn Mawr Trust, Cash Connect, Powdermill Financial Solutions, NewLane Finance</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Financial Services Cloud (Sales &amp; Service Unlimited), MuleSoft (Titanium + Anypoint), Salesforce Platform, CRM Analytics for Financial Services, Salesforce Shield, Salesforce Data Mask, Heroku, Sandbox (Full Copy), Backup &amp; Recover, Informatica IDMC / MDM</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> WSFS &mdash; Agentforce Operations (<a href="https://org62.my.salesforce.com/006ed00000cHZDBAA4">$600K</a>) &nbsp;|&nbsp; INFA &mdash; WSFS IDMC MDM DG Moore (<a href="https://org62.my.salesforce.com/006ed00000Y0ohBAAR">$303K</a>) &nbsp;|&nbsp; WSFS &mdash; Employee Service + Agentforce (<a href="https://org62.my.salesforce.com/006ed00000CbEebAAF">$239K</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GYCCTDLY">Molly Buckley</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">87/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Regulated vertical (bank, KYC/AML, BSA)</td><td>14/15</td><td class="cat-green">$20B+ asset bank under intensive BSA/AML and Reg E supervision — Compliance Center wedge is real.</td></tr>
-        <tr><td>Active Agentforce / Operations motion in-flight</td><td>18/20</td><td class="cat-green">$600K Agentforce Operations + $239K Employee Service + $150K Agentforce Pilot all open — AFPI feeds them evidenced processes.</td></tr>
-        <tr><td>Salesforce install base breadth (SFA, MuleSoft, MC, Service, Data Cloud shell)</td><td>13/15</td><td class="cat-green">Sales, Analytics, MuleSoft, Platform, Marketing Cloud, Service in-flight — broad canvas for cross-cloud process work.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">$20B+ asset regional bank &mdash; priority AFPI vertical with dense BSA/AML, Reg E, SOX surface.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">FSC Unlimited, MuleSoft Titanium, Shield, CRM Analytics, Platform, Heroku &mdash; broad multi-cloud install.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Agentforce Ops $600K, Employee Svc + AF $239K, Agentforce Pilot, AF for Wealth &mdash; multiple in-flight AF motions.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">BSA/AML, OCC/FRB supervision, Reg E, SOX, KYC, Delaware trust regime &mdash; strong Compliance Center wedge.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Bryn Mawr integration + Cash Connect + wealth arm drive dual-stack process variance and MDM rework.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Data &amp; MDM readiness (active Informatica IDMC / MDM)</td><td>12/15</td><td class="cat-orange">Active $303K Informatica MDM opp signals master-data gaps still being solved — event logs may need staging.</td></tr>
-        <tr><td>Recent M&amp;A integration complexity (Bryn Mawr Trust)</td><td>12/15</td><td class="cat-orange">Bryn Mawr Trust + Cash Connect + Wealth arm still being harmonized — dual-stack process variance is real.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>12/20</td><td class="cat-orange">Salesforce AE Molly Buckley well-connected but no customer-side Process Improvement / Innovation title confirmed on LinkedIn.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-orange">SF + MuleSoft + Informatica strong, but core banking, LOS and AML monitoring platforms not confirmed &mdash; event-log staging TBD.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help WSFS Financial Corporation by mining its end-to-end customer onboarding, KYC/AML, and case-handling event logs so the in-flight $600K Agentforce Operations agent is pointed at the flows with the biggest cycle-time and compliance payoff — turning the Bryn Mawr integration and Informatica MDM cleanup into a measurable single-customer-view story.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Customer / Account Onboarding &amp; KYC</summary>
     <div class="use-case-body">
-      <p>WSFS onboards retail, small-business, and wealth clients through overlapping teller, digital, and Cash Connect channels — with KYC/AML checks, CIP verification, and beneficial-owner reviews stitched across the core, Salesforce, and Informatica MDM. AFPI can mine the end-to-end onboarding event log to expose rework loops, manual document chase, and cycle-time variance between branches and the digital channel, then hand clean, evidenced processes to the Agentforce Operations agent already in-flight ($600K). Metric moved: time-to-fund and abandonment rate on new accounts.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, Informatica IDMC / MDM</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rodger+Levenson+WSFS">Rodger Levenson</a> (CEO — executive sponsor)</p>
+      <p>WSFS onboards retail, small-business, and wealth clients through overlapping branch, digital, and Cash Connect channels &mdash; with KYC/AML checks, CIP verification, and beneficial-owner reviews stitched across the core, Salesforce FSC, and the active Informatica IDMC / MDM initiative. AFPI mines the end-to-end onboarding event log to expose rework loops, manual document chase, and cycle-time variance between branches and the digital channel, then hands clean, evidenced processes to the $600K Agentforce Operations agent already in-flight. Metric moved: time-to-fund and abandonment rate on new accounts.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, Informatica IDMC / MDM</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Retail+Banking+WSFS">Head of Retail Banking Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Loan Origination &amp; Underwriting (Commercial + Small Business)</summary>
+    <summary>2. Commercial &amp; SBA Loan Origination and Underwriting</summary>
     <div class="use-case-body">
-      <p>Commercial and SBA loan files traverse relationship managers, underwriting, credit, doc prep, and closing — a classic hand-off-heavy process where variance and re-work erode NIM in a rising-rate environment. AFPI mines the origination log across the LOS and Salesforce SFA (part of the $2.37M renewal) to quantify stage-level cycle times, exception paths, and covenant-review rework. That evidence turns the Agentforce Operations pilot into a targeted underwriter-assist agent rather than a generic chatbot. Metric moved: application-to-close cycle time and pull-through rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, LOS (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=commercial+banking+lead+WSFS">Commercial Banking Lead</a> (Commercial Banking COO / Head of Credit Ops)</p>
+      <p>Commercial and SBA loan files traverse relationship managers, underwriting, credit, doc prep, and closing &mdash; a classic hand-off-heavy process where variance and rework erode NIM. AFPI mines the origination log across the LOS and Salesforce FSC (part of the $2.37M renewal) to quantify stage-level cycle times, exception paths, and covenant-review rework. That evidence turns the Agentforce Operations pilot into a targeted underwriter-assist agent rather than a generic chatbot. Metric moved: application-to-close cycle time and pull-through rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, Commercial LOS</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Commercial+Banking+COO+WSFS">Commercial Banking COO</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Contact Center &amp; Employee Service (Service + Agentforce)</summary>
+    <summary>3. Post-Merger MDM &amp; Single-Customer-View Reconciliation</summary>
     <div class="use-case-body">
-      <p>WSFS has an active Employee Service + Agentforce opportunity ($239K) and an Agentforce Pilot ($150K). AFPI mines the case-handling event log — Service Cloud statuses, agent actions, escalations, transfers — to isolate the top intents by AHT and re-open rate, so the deployed Agentforce agents are pointed at the flows with the biggest handle-time payoff, not the loudest. AFPI Compliance Center adds an audit trail for regulator questions on complaint handling and Reg E disputes. Metric moved: AHT, first-contact resolution, complaint SLA.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud (in-flight), Agentforce</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=customer+experience+lead+WSFS">Customer Experience Lead</a> (Head of Customer Service / Associate Experience)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Post-Merger Integration &amp; Data Quality (Bryn Mawr Trust + Cash Connect + Wealth)</summary>
-    <div class="use-case-body">
-      <p>WSFS has absorbed Bryn Mawr Trust and runs Cash Connect and a wealth arm — meaning duplicated customer, party, and account records flow through the active Informatica IDMC / MDM initiative ($303K). AFPI mines the master-data reconciliation and manual-merge processes to show where MDM rules are firing false positives, where stewards are rubber-stamping, and where the same customer is being serviced twice. Combined with the MuleSoft integration renewal, this becomes the evidence that turns MDM from a cost center into a measurable revenue-per-customer story. Metric moved: single-customer-view coverage, steward hours per 1,000 records.</p>
+      <p>WSFS has absorbed Bryn Mawr Trust and runs Cash Connect plus a wealth arm &mdash; duplicated customer, party, and account records now flow through the active $303K Informatica IDMC / MDM initiative. AFPI mines the master-data reconciliation and manual-merge processes to show where MDM rules are firing false positives, where stewards are rubber-stamping, and where the same customer is being serviced twice across brands. Combined with the MuleSoft renewal, this turns MDM from a cost center into a measurable revenue-per-customer story. Metric moved: single-customer-view coverage, steward hours per 1,000 records.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Informatica IDMC / MDM, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=chief+information+officer+WSFS">CIO</a> (Head of Enterprise Data / CIO organization)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Data+Officer+WSFS">Chief Data Officer / Head of Enterprise Data</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Contact Center Agent Handle-Time &amp; Wrap</summary>
+    <div class="use-case-body">
+      <p>The active $239K Employee Service + Agentforce and $150K Agentforce Pilot opps put agents on Service Cloud with measurable AHT and wrap variability. Task mining captures each agent's on-screen actions to isolate the after-call-work steps and the tabs that eat wrap time &mdash; from core-banking lookups to Reg E dispute forms. Pairs directly with the deployed Agentforce agents so they are pointed at the flows with the biggest handle-time payoff, not the loudest. Metric moved: AHT, after-call-work minutes, first-contact resolution.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, core banking desktop</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=VP+Customer+Contact+Center+WSFS">VP, Customer Contact Center</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. BSA / AML Alert Investigation &amp; SAR Filing</summary>
+    <summary>2. Bryn Mawr Wealth Advisor Desktop Swivel-Chair</summary>
     <div class="use-case-body">
-      <p>As a $20B+ asset bank operating in Delaware, WSFS is subject to intensive BSA/AML supervision, and alert queues from transaction monitoring generate huge investigator caseloads. AFPI mines the alert-to-disposition process — enrichment, escalations, L1/L2 hand-offs, SAR narrative drafting — to expose bottlenecks and disparate reviewer paths, then hand a proven, auditable process to an Agentforce financial-crimes assistant. Compliance Center provides regulators the evidenced control story. Metric moved: alerts per investigator per day, SAR filing timeliness, false-positive rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Transaction Monitoring (TBD), Salesforce Platform</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=BSA+officer+WSFS">BSA Officer</a> (Head of Financial Crimes; economic buyer = Chief Risk Officer)</p>
+      <p>The $150K Agentforce for Wealth Pilot signals the Bryn Mawr Trust / Powdermill wealth-advisor desktop is the next target. Advisors flip between the trust accounting system, custody platform, financial planning tools, e-signature, and Salesforce FSC to complete a single client action. Task mining exposes re-keying and lookup patterns so Agentforce can replace exactly those steps with straight-through automation. Metric moved: advisor cases per FTE per day and touch-time per client-servicing event.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, trust accounting / custody platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Wealth+Operations+Bryn+Mawr+Trust+WSFS">Head of Wealth Operations, Bryn Mawr Trust</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <details>
+    <summary>3. Cash Connect Operations &amp; Exception Handling</summary>
+    <div class="use-case-body">
+      <p>Cash Connect's ATM cash-logistics and vault operations run a high-volume exception queue &mdash; discrepancies, courier issues, reconciliation breaks &mdash; that clerks work across multiple legacy screens and email. Task mining the ops-clerk desktop shows the exact keystroke sequences and tab-flipping burden per exception type, feeding the Agentforce Operations business case with a very concrete automation target. Metric moved: exceptions closed per FTE per day and mean-time-to-reconcile.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Cash Connect operations console, reconciliation platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Cash+Connect+Operations+WSFS">Head of Cash Connect Operations</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. BSA / AML Alert Investigation &amp; SAR Filing</summary>
+    <div class="use-case-body">
+      <p>As a $20B+ asset bank operating in Delaware, WSFS is subject to intensive BSA/AML supervision, and alert queues from transaction monitoring generate large investigator caseloads across the parent bank and Bryn Mawr Trust. Compliance Center codifies the alert-to-disposition process &mdash; enrichment, escalation, L1/L2 hand-offs, SAR narrative drafting &mdash; with segregation-of-duties, evidenced sign-offs, and SLAs. That same audit-ready shell then wraps any Agentforce financial-crimes assistant. Metric moved: alerts per investigator per day, SAR filing timeliness, false-positive rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Transaction Monitoring platform, Salesforce Platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=BSA+Officer+WSFS">BSA Officer / Head of Financial Crimes</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Reg E Dispute &amp; Complaint Handling Controls</summary>
+    <div class="use-case-body">
+      <p>Consumer disputes on debit, ACH, and card transactions are governed by strict Reg E timelines, and CFPB has raised the bar on complaint handling. Compliance Center runs the dispute lifecycle as a controlled workflow with codified SLAs, chargeback evidence packages, and clear audit trails for regulator inquiries &mdash; wrapping the active Service Cloud + Agentforce build in an evidenced control story. Metric moved: Reg E timeliness rate, complaint SLA hit-rate, provisional-credit exception count.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, dispute / chargeback platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Compliance+Officer+WSFS">Chief Compliance Officer</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Model Risk &amp; Agentforce Lifecycle Governance (SR 11-7)</summary>
+    <div class="use-case-body">
+      <p>Every ML/AI model WSFS runs &mdash; AML transaction monitoring, credit scoring, marketing propensity, and the incoming Agentforce agents &mdash; falls under SR 11-7 model-risk governance and OCC examiner scrutiny. Compliance Center codifies the promote / monitor / retire lifecycle and produces continuous evidence for examiners, and is especially important as Agentforce lands in Ops, Employee Service, and Wealth. Metric moved: audit-ready models covered and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Model registry / MLOps pipeline, Salesforce Platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Risk+Officer+WSFS">Chief Risk Officer / Head of Model Risk</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help WSFS Financial Corporation by mining end-to-end customer onboarding, commercial loan origination, and Bryn Mawr MDM reconciliation across its Financial Services Cloud, MuleSoft, and Informatica estate, task-mining the Service Cloud contact-center, wealth-advisor, and Cash Connect desktops to expose the swivel-chair work that the in-flight Agentforce Operations agent can eliminate, and running BSA/AML alert investigation, Reg E dispute handling, and SR 11-7 model-risk lifecycle through Compliance Center to shrink cycle time, cut AHT, and produce always-on audit evidence for OCC, FRB, and CFPB examiners.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

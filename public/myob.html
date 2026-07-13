@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -112,41 +113,49 @@
   <h1>MYOB Group Pty Ltd</h1>
   <div class="snapshot">
     <p><strong>Technology, Business Management Software (SME &amp; Mid-Market ERP / Accounting / Payroll)</strong></p>
-    <p><strong>Revenue:</strong> ~A$500M &nbsp;|&nbsp; <strong>Employees:</strong> ~2,700 &nbsp;|&nbsp; <strong>HQ:</strong> Cremorne / Glen Waverley, Melbourne, VIC, Australia</p>
-    <p><strong>Major Subsidiaries:</strong> MYOB Australia Pty Ltd, MYOB NZ Limited, MYOB Enterprise Solutions, MYOB Advanced (Acumatica-based ERP), Flare HR</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud (Full CRM + Call Center + Platform), Marketing Cloud Account Engagement (MCA), Data 360, Data Cloud, Agentforce, Tableau NEXT, Shield, Sales Performance Management (SPM), Signature Success</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> MYOB Advanced / Acumatica (own product, used internally), NetSuite (finance for corporate), Workday (HR — inferred, not confirmed) — <em>full ERP/back-office stack not confirmed [field verify with Michael Rule, Head of Operations &amp; Enablement]</em></p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> MYOB Renewal 576 Full CRM + 325 Call Center + 153 Platform (<a href="https://org62.my.salesforce.com/006ed00000TeM2jAAF">$1,418k</a>) | MC - MYOB - MCA + D360 (<a href="https://org62.my.salesforce.com/006ed00000IGsmrAAD">$726k</a>) | MYOB - Data Cloud + Agentforce (<a href="https://org62.my.salesforce.com/006ed00000BFzXtAAL">$404k</a>)</p>
+    <p><strong>Revenue:</strong> ~A$500M &nbsp;|&nbsp; <strong>Employees:</strong> ~1,300 &nbsp;|&nbsp; <strong>HQ:</strong> Cremorne, Melbourne, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> MYOB Australia Pty Ltd, MYOB New Zealand Group Limited, Flare HR, Tall Emu CRM, GreatSoft Australia</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud (Enterprise + Call Center), Marketing Cloud Engagement, Marketing Cloud Account Engagement, Tableau, Slack, Sales Engagement, Partner Community, Knowledge, Audit Trail, Salesforce Platform, Premier / Signature Success</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> MYOB - Apromore (<a href="https://org62.my.salesforce.com/006ed00000dNuflAAC">$30k</a>) &nbsp;|&nbsp; MYOB Renewal 576 Full CRM + 325 Call Center + 153 Platform (<a href="https://org62.my.salesforce.com/006ed00000TeM2jAAF">$1,418k</a>) &nbsp;|&nbsp; MYOB - Data Cloud + Agentforce (<a href="https://org62.my.salesforce.com/006ed00000BFzXtAAL">$404k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GLNP78RX">Angie Kalas</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">74/100</span> — T2 Develop</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t2">78/100</span> &mdash; T2 Develop</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Co-Sell Fit</td><td>14/15</td><td class="cat-green">Deep SF stack — CRM, Service, MCA, Data 360, Data Cloud, Agentforce, Tableau NEXT, Shield, SPM. Classic co-sell.</td></tr>
-        <tr><td>Digital / AI Transformation Signal</td><td>13/15</td><td class="cat-green">Active D360 + Agentforce build; Head of Transformation Change is engaged in CRM Ops project.</td></tr>
-        <tr><td>Buyer Title Density</td><td>11/15</td><td class="cat-orange">CFO, CTO, Head of Transformation, Head of Ops-Enterprise, Process Improvement Mgr — strong buyer bench.</td></tr>
-        <tr><td>Process-Heavy Vertical Fit</td><td>10/15</td><td class="cat-orange">SaaS ops: subscription lifecycle, support-to-cash, onboarding, PLG funnel — all high-repeat, mineable.</td></tr>
-        <tr><td>Account Engagement / Warm Path</td><td>9/10</td><td class="cat-green">Named AE Angie Kalas, red-account watchtower live, Success Architect assigned — clean warm path in.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud install: Sales, Service + Call Center, MC Engagement, MCA, Tableau, Slack, Platform.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Active Data Cloud + Agentforce + D360 Phase 2 builds; open Apromore opp already on the books.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">$1.4M CRM renewal at 01 Initiate + live $30k Apromore opp &mdash; budget is owned and land path exists.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>12/15</td><td class="cat-orange">SaaS subscription lifecycle, 325-seat call center, renewal automation &mdash; classic cycle-time and rework surface.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>15/20</td><td class="cat-orange">Named AE Angie Kalas + engaged transformation team, but customer-side process-mining champion not yet confirmed.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Compliance-Center Wedge</td><td>3/10</td><td class="cat-red">SME-facing product; internal compliance regime (SOC2 / privacy) is real but not a burning wedge.</td></tr>
-        <tr><td>Event-Log Data Readiness</td><td>4/10</td><td class="cat-orange">SF platform events are strong, but back-office ERP event-log availability not yet confirmed.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>3/8</td><td class="cat-red">SME-facing SaaS &mdash; real SOC 2 / privacy regime but no burning regulatory wedge for Compliance Center.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>8/12</td><td class="cat-orange">SF platform events strong; back-office ERP / billing event-log availability not yet confirmed.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help MYOB Group Pty Ltd by mining the SaaS subscription lifecycle end-to-end — trial-to-paid conversion, onboarding, support-to-cash, and renewal — so a PE-owned business under KKR margin discipline can compress cycle times, cut churn, and give the live Agentforce build objective process baselines to automate against.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Subscription Trial-to-Paid Conversion &amp; Onboarding</summary>
+    <summary>1. Subscription Renewal &amp; Retention (Support-to-Save)</summary>
     <div class="use-case-body">
-      <p>MYOB runs a product-led-growth funnel across MYOB Business, AccountRight, and MYOB Advanced trials into paid subscriptions. Every dropped step is direct ARR leakage, and marketing spend on trial capture is not paying back until users cross the activation threshold. Apromore mines the actual trial event log from Data Cloud + product telemetry, reveals where prospects stall (billing setup, bank feed connect, first invoice), and hands MCA + Agentforce a ranked list of interventions with expected lift. Metric moved: paid-conversion rate on trials, and time-to-first-value in days.</p>
+      <p>The open $1.4M renewal covers 576 Full CRM + 325 Call Center + 153 Platform seats &mdash; Service Cloud is MYOB's core member-support engine and case backlogs directly drive downgrade and churn at renewal. Apromore mines the case-to-resolution-to-renewal pathway across Service Cloud and Sales Cloud, exposes which case patterns (billing disputes, feature gaps, migration friction) statistically precede churn, and feeds the save motion an Agentforce-ready playbook. Metric: net revenue retention and CSAT-weighted renewal rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Salesforce Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Serena+Thomas+MYOB">Serena Thomas</a> (Head of Operations &mdash; Enterprise)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Trial-to-Paid Conversion &amp; Onboarding</summary>
+    <div class="use-case-body">
+      <p>MYOB runs a product-led-growth funnel across MYOB Business, AccountRight, and MYOB Advanced trials into paid subscriptions. Every dropped step is direct ARR leakage, and marketing spend on trial capture does not pay back until users cross the activation threshold. Apromore mines the trial event log from Data Cloud + product telemetry, reveals where prospects stall (billing setup, bank feed connect, first invoice), and hands MCA + Agentforce a ranked list of interventions with expected lift. Metric: paid-conversion rate and time-to-first-value in days.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Data Cloud, MYOB product telemetry</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alana+Depetro+MYOB">Alana Depetro</a> (Product Director)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -154,46 +163,80 @@
   </details>
 
   <details>
-    <summary>2. Support-to-Cash (Case → Retention / Save)</summary>
+    <summary>3. Enterprise / Mid-Market Quote-to-Cash</summary>
     <div class="use-case-body">
-      <p>The open $1.4M renewal covers 576 Full CRM + 325 Call Center + 153 Platform seats — the Service Cloud footprint is MYOB's core member-support engine, and case backlogs directly drive downgrade and churn decisions at renewal. Apromore mines the case-to-resolution-to-renewal pathway across Service Cloud, reveals which case patterns (billing disputes, feature gaps, migration friction) statistically precede churn, and feeds the save motion an Agentforce-ready playbook. Metric moved: net revenue retention and CSAT-weighted renewal rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Salesforce Sales Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Serena+Thomas+MYOB">Serena Thomas</a> (Head of Operations - Enterprise)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>3. Quote-to-Cash for the Enterprise / Mid-Market Motion</summary>
-    <div class="use-case-body">
-      <p>MYOB Enterprise Solutions and MYOB Advanced target mid-market and larger SMEs — a much slower, quote-heavy motion than the self-serve SMB base, and one where SPM (open opp) is being introduced to align seller incentives. Apromore mines the quote-approve-invoice-collect flow across Sales Cloud + billing, exposes the rework loops (discount approvals, bespoke terms, credit checks) that stretch DSO, and gives the CFO a defensible number to take to the KKR board. Metric moved: DSO, quote-cycle-time, and win-rate on approved-discount deals.</p>
+      <p>MYOB Enterprise Solutions and MYOB Advanced target mid-market and larger SMEs &mdash; a much slower, quote-heavy motion than the self-serve SMB base, and one where SPM is being introduced to align seller incentives. Apromore mines the quote-approve-invoice-collect flow across Sales Cloud and billing, exposes the rework loops (discount approvals, bespoke terms, credit checks) that stretch DSO, and gives the CFO a defensible number to take to the KKR board. Metric: DSO, quote-cycle-time, and win-rate on approved-discount deals.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, MYOB Advanced (billing/AR)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Caroline+Rawlinson+MYOB">Caroline Rawlinson</a> (CFO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>4. CRM Operations Transformation Baseline (D360 / Agentforce Enablement)</summary>
+    <summary>1. Call Center Agent Handle-Time &amp; Wrap</summary>
     <div class="use-case-body">
-      <p>MYOB has an active Data Cloud + Agentforce build and a D360 Phase 2 open opp, with Krystal McCormack running CRM Operations Project Director day-to-day. Automating on top of undocumented processes is how AI programs stall — Apromore gives the transformation team an objective as-is model of the current sales, service, and marketing ops flows so Agentforce actions are targeted at the highest-friction steps, not the loudest ones. Metric moved: Agentforce use-case ROI, and time-to-value on the D360 rollout.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, Salesforce Service Cloud</p>
+      <p>MYOB's 325-seat Service Cloud call center handles high-volume member support with measurable AHT and wrap variability. Task mining captures each agent's on-screen actions to isolate the after-call-work steps and the tabs that eat wrap time, then pairs directly with the open $250k AF Contact Centre / SCV opp. Feeds Agentforce a ranked backlog of steps to automate instead of guessing at agent surveys. Metric: AHT and after-call-work minutes per contact type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, MYOB billing / subscription platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Serena+Thomas+MYOB">Serena Thomas</a> (Head of Operations &mdash; Enterprise)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Sales &amp; BDR Desktop for Agentforce Enablement</summary>
+    <div class="use-case-body">
+      <p>The active Data Cloud + Agentforce build ($404k) will only pay back if MYOB knows where sellers and BDRs are losing time today. Task mining the AE / BDR desktop reveals swivel-chair between Sales Cloud, MCA, Slack, and email &mdash; then names the exact steps Agentforce can replace with drafted follow-ups, meeting-prep briefs, and lead routing. Prevents the classic mistake of automating on top of undocumented processes. Metric: seller productive-time per day and MQL-to-Opp cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud console, Marketing Cloud Account Engagement</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Carlie+Pilling+MYOB">Carlie Pilling</a> (Head of Transformation Change)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Lead-to-Opportunity Handoff &amp; Marketing Attribution</summary>
+    <summary>3. Marketing Ops Attribution &amp; Lead Handoff</summary>
     <div class="use-case-body">
-      <p>The open MCA + D360 opp ($726k) is about tightening the marketing-to-sales handoff across the SME funnel — where the volume is high, the routing rules are baroque, and unqualified leads waste both AE and BDR capacity. Apromore mines the MQL-to-SQL-to-Opp path, reveals which lead sources actually convert (versus which look good in Tableau NEXT dashboards), and gives marketing ops a defensible reallocation of spend. Metric moved: cost-per-SQL, MQL-to-Opp conversion, and pipeline velocity.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce MCA, Salesforce Sales Cloud</p>
+      <p>The open MCA + D360 opp ($726k) is about tightening the marketing-to-sales handoff across the SME funnel where volume is high, routing rules are baroque, and unqualified leads waste both AE and BDR capacity. Task mining the marketing-ops desktop exposes the manual list-scrubbing, re-keying, and reporting reconciliation that eats analyst hours &mdash; then feeds Agentforce Marketing a ready-made automation backlog. Metric: cost-per-SQL, MQL-to-Opp conversion, and analyst hours reclaimed.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud Account Engagement, Tableau</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rebecca+Hernandez+MYOB">Rebecca Hernandez</a> (Sales Operations Manager, Enterprise)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent MYOB-specific competitor mentions surfaced in Slack or press for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate — MYOB looks like a green-field process-mining account inside a warm Salesforce footprint.</span></h2>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. Agentforce Change &amp; Model-Lifecycle Governance</summary>
+    <div class="use-case-body">
+      <p>As Agentforce, Data Cloud, and D360 land inside MYOB's revenue-critical workflows, every prompt, action, and dataset needs a controlled promote / monitor / retire path. Compliance Center codifies that lifecycle end-to-end with segregation-of-duties, sign-offs, and continuous evidence &mdash; giving the CTO office and internal audit an always-on record that the AI stack is behaving as approved. Especially important with Salesforce Shield in play. Metric: audit-ready agents / models covered and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Carlie+Pilling+MYOB">Carlie Pilling</a> (Head of Transformation Change)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Privacy Act / Consumer Data Right (CDR) Access &amp; Consent</summary>
+    <div class="use-case-body">
+      <p>MYOB sits on payroll, tax, and small-business financial data for hundreds of thousands of Australian and New Zealand SMEs &mdash; squarely inside the Privacy Act, ATO STP requirements, and the emerging Consumer Data Right regime for accounting. Compliance Center runs subject-access, consent-capture, and data-sharing decisions as a controlled workflow, replacing ad-hoc ticket-plus-email evidence trails. Metric: SLA hit-rate on SAR / CDR requests and audit findings per quarter.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Platform, MYOB customer identity store</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Caroline+Rawlinson+MYOB">Caroline Rawlinson</a> (CFO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. SOC 2 &amp; Financial-Controls Continuous Assurance</summary>
+    <div class="use-case-body">
+      <p>As a KKR portfolio company selling into finance-team buyers, MYOB has to keep SOC 2 and internal financial-controls evidence continuously current across a growing SaaS platform. Compliance Center replaces the annual scramble with an always-on control monitor: access-provisioning, change-management, incident-response, and segregation-of-duties as codified workflows with automatic evidence capture. Metric: control coverage percentage and audit-prep hours saved per cycle.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Platform, MYOB Advanced (finance)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Caroline+Rawlinson+MYOB">Caroline Rawlinson</a> (CFO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help MYOB Group Pty Ltd by mining the subscription-renewal, trial-to-paid, and enterprise quote-to-cash flows across its Salesforce estate to protect the $1.4M renewal and cut DSO, task-mining the 325-seat call center and seller / marketing-ops desktops to give the live Agentforce build objective baselines to automate against, and running Agentforce model-governance, Privacy Act / CDR, and SOC 2 controls through Compliance Center to give the KKR-owned business always-on audit evidence.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

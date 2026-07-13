@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -62,9 +63,10 @@
                    padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
                    color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
   hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
-  .fine { text-align: center; color: #aaa; font-size: .75em;
-          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
-  .fine a { color: #aaa; }
+  .fine { text-align: center; color: #888; font-size: .88em;
+          margin-top: 20px; padding-top: 10px; border-top: 1px solid #eee;
+          line-height: 1.5; }
+  .fine a { color: #888; }
   .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
   .snapshot p { margin: 0; }
   .snapshot .opps a { font-size: .78em; }
@@ -93,14 +95,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -111,42 +113,50 @@
 <main>
   <h1>Sycomp, A Technology Company, Inc.</h1>
   <div class="snapshot">
-    <p><strong>Technology, IT Infrastructure &amp; Logistics Services</strong></p>
-    <p><strong>Revenue:</strong> ~$58M (US entity; global ~$600M incl. India ops) &nbsp;|&nbsp; <strong>Employees:</strong> ~395 (US) / ~800 global &nbsp;|&nbsp; <strong>HQ:</strong> Foster City, California, USA</p>
-    <p><strong>Major Subsidiaries:</strong> Sycomp Technologies India Pvt Ltd, Sycomp Technologies Singapore Pte Ltd, Sycomp Technologies Hong Kong Ltd, Sycomp Technologies Ireland Ltd, Sycomp BR</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (530 SFA seats), Customer Portal / Experience Cloud (1,925 seats), Slack (333 seats), Agentforce (Onboarding Agent + Deal Agent in activation)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Oracle ERP (Oracle ID referenced in onboarding workflow), custom BOM/RFQ tooling</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Sycomp | Apromore - Full Deployment (<a href="https://org62.my.salesforce.com/006ed00000eMkTPAA0">$620k</a>) &nbsp;·&nbsp; Sycomp | Data 360 - Starter Package (<a href="https://org62.my.salesforce.com/006ed00000ZN3ylAAD">$430k</a>) &nbsp;·&nbsp; Sycomp | Apromore [Data Mining] (<a href="https://org62.my.salesforce.com/006ed00000X2d78AAB">$210k</a>)</p>
+    <p><strong>Technology, IT Infrastructure &amp; Managed Services</strong></p>
+    <p><strong>Revenue:</strong> ~$58M (US entity) &nbsp;|&nbsp; <strong>Employees:</strong> ~395 (US) / ~800 global &nbsp;|&nbsp; <strong>HQ:</strong> Foster City, California, USA</p>
+    <p><strong>Major Subsidiaries:</strong> Sycomp Technologies India, Sycomp Technologies Singapore, Sycomp Technologies Hong Kong, Sycomp Technologies Ireland, Sycomp Brazil</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Enterprise Edition), Service Cloud (Enterprise Edition), Customer Community Plus / Experience Cloud, Force.com Platform, Tableau Cloud (Creator/Explorer/Viewer), Knowledge, Net Zero Cloud, Sustainability Cloud, Salesforce Foundations, Slack</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Oracle ERP</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Sycomp | Apromore - Full Deployment (<a href="https://org62.my.salesforce.com/006ed00000eMkTPAA0">$620k</a>) &nbsp;|&nbsp; Sycomp | Data 360 - Starter Package (<a href="https://org62.my.salesforce.com/006ed00000ZN3ylAAD">$430k</a>) &nbsp;|&nbsp; Sycomp | Apromore [Data Mining] (<a href="https://org62.my.salesforce.com/006ed00000X2d78AAB">$210k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0984PSBCUW">Robert Radusinovic</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">82/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">87/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Full SF stack (SFA + Portal + Slack) + $4M+ open pipeline; "North Star Big Bet" account.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Two Agentforce agents in active build (Onboarding, Deal); SKO commitment locked.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>15/15</td><td class="cat-green">Robert flagged "no standardized SOPs"; process homogenization is agent prerequisite.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Two open Apromore opps ($620K + $210K); CFO org owns budget; POC scoped at $25K.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">Karthik Nagarajan (Dir Enterprise Systems→CFO) is engaged; Irvine on-site pending.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>15/15</td><td class="cat-green">"No standardized SOPs" flagged internally &mdash; process homogenization is the prerequisite blocking Agentforce agents from scaling.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Full SF stack (SFA + Service + Portal + Slack + Tableau) plus $4M+ open pipeline; "Big Bet" account with SIC engagement.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Two Agentforce agents (Onboarding + Deal) in active build; SIC held Jun-23-26 with headless solution shown by Eli Lieberman.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Two live Apromore opps ($620k Full Deployment + $210k Data Mining) plus $430k Data 360 &mdash; budget committed.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>17/20</td><td class="cat-green">Robert Radusinovic (SF AE) leading; Saurabh Saxena (VP Eng) hosted SIC; Karthik Nagarajan (Dir Enterprise Systems) engaged.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>4/8</td><td class="cat-orange">No primary regulated regime; some SOX exposure via CFO org but not the driver.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>11/15</td><td class="cat-orange">IT services / logistics is adjacent to top verticals; strong ops profile pulls it up.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>4/8</td><td class="cat-orange">No primary regulated regime &mdash; some SOX exposure via CFO org, but compliance is not the deal driver.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>11/15</td><td class="cat-orange">IT infrastructure / managed services is adjacent to top AFPI verticals; strong ops profile pulls score up but not full marks.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Sycomp, A Technology Company, Inc. by mining their Oracle-and-Salesforce order-to-cash, BOM-sourcing, and customer-onboarding flows to expose the SOP variance that is currently blocking their Onboarding and Deal Agentforce agents from scaling — collapsing weeks of manual process mapping into no-code discovery a business analyst can run in days, unlocking the joint agent-to-agent story with Salesforce.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Onboarding Agent SOP Discovery (Priority-1 Pre-Work)</summary>
+    <summary>1. Cross-Entity Order-to-Cash Across 6 Legal Entities</summary>
     <div class="use-case-body">
-      <p>The Onboarding Agent needs to check Oracle ID and account onboarding status and automate a manual email/doc process — but with no standardized SOPs it cannot go live. Apromore can mine the actual as-run onboarding sequences across Oracle, email, and the Salesforce Customer Portal to surface the top 3-5 variants that need to be homogenized before the agent goes live at SKO. This directly unblocks the May 4 Nashville SKO demo commitment and validates data residency assumptions.</p>
+      <p>Sycomp bills the same customer through US, India, Singapore, HK, Ireland, or Brazil depending on ship-from location, and the Salesforce opp-to-invoice-to-cash chain runs through Oracle GL and back into 530 Sales Cloud seats. This creates entity-selection variance, deal-desk exceptions, and DSO drag that no dashboard exposes. Apromore mines the actual quote-to-order-to-cash path across all six entities and pinpoints where invoice cycle time and revenue leakage happen. Metric moved: quote-to-order cycle time and DSO days.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, Oracle ERP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=James+Cline+Sycomp">James Cline</a> (CFO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Onboarding Agent SOP Discovery (Priority-1 Pre-Work)</summary>
+    <div class="use-case-body">
+      <p>The Onboarding Agentforce agent needs to check Oracle ID and account onboarding status and replace a manual email/doc workflow &mdash; but with no standardized SOPs it cannot go live. Apromore mines the as-run onboarding sequence across Oracle ERP, email, and Salesforce Experience Cloud to expose the top 3-5 variants that must be homogenized before the agent scales. This directly unblocks the joint Agentforce demo commitment and validates the data-residency assumptions across the six entities. Metric moved: onboarding cycle time and agent conformance rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Oracle ERP, Salesforce Experience Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Karthik+Nagarajan+Sycomp">Karthik Nagarajan</a> (Director, Enterprise Systems)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -154,19 +164,21 @@
   </details>
 
   <details>
-    <summary>2. Deal Agent — Cross-Entity BOM Sourcing Optimization</summary>
+    <summary>3. Cross-Entity BOM Sourcing &amp; Deal Agent Enablement</summary>
     <div class="use-case-body">
-      <p>The Deal Agent is supposed to optimize purchasing decisions at the BOM stage across duty costs, unit cost, and RFQs — but the data is not centralized and Praveen's team cannot scope the agent until process mapping is done. Apromore mines the actual RFQ → PO → duty-cost → COGS path across the 55+ global integration centers to quantify the leak, prioritize where cross-entity leverage exists, and build the process model the Deal Agent will execute against.</p>
+      <p>The Deal Agentforce agent is designed to optimize purchasing decisions at the BOM stage across duty costs, unit cost, and RFQs &mdash; but the data is not centralized across the 55+ global integration centers and process mapping is a blocker. Apromore mines the actual RFQ &rarr; PO &rarr; duty-cost &rarr; COGS path in Oracle to quantify the leak, prioritize cross-entity leverage, and build the reference process model the Deal Agent will execute against. Metric moved: sourcing cycle time and duty-cost variance per BOM line.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Oracle ERP, custom RFQ tooling</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chris+Elgaaen+Sycomp">Chris Elgaaen</a> (VP Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>3. Quote-to-Cash Variance Across Global Entities</summary>
+    <summary>1. Deal-Desk / Quote-Configuration Desktop Swivel-Chair</summary>
     <div class="use-case-body">
-      <p>Sycomp operates as a US + India + Singapore + Hong Kong + Ireland + Brazil footprint with the same customers being invoiced through different entities depending on ship-from location. VP Sales Allen Shahdadi's team is renewing 530 SFA seats — Apromore mines the Salesforce opp-to-invoice-to-cash cycle to expose entity-selection variance, DSO drag, and the deal-desk exceptions that never close cleanly. Metric moved: DSO days and quote-to-order cycle time.</p>
+      <p>Sales reps configuring multi-entity infrastructure deals flip between Sales Cloud, Oracle ERP, BOM/RFQ tools, and email to get a single quote out the door. Task mining the deal-desk desktop captures the exact app-switch, copy/paste, and lookup patterns eating rep time &mdash; and names the steps Agentforce Operations can automate to hit the Big Bet velocity target. Metric moved: quote build time per rep and deal-desk exception rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, Oracle ERP</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Allen+Shahdadi+Sycomp">Allen Shahdadi</a> (VP Sales)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -174,9 +186,9 @@
   </details>
 
   <details>
-    <summary>4. Customer Portal Case &amp; Service Deflection</summary>
+    <summary>2. Managed-Services Engineer Case-Handling AHT</summary>
     <div class="use-case-body">
-      <p>1,925 Customer Portal seats and 333 Slack seats power Sycomp's managed-services delivery to its own enterprise clients. Apromore mines the case lifecycle across Portal → Slack → engineer → resolution to expose the recurring rework patterns and identify which case categories should be handled by the ITSM co-sell motion with Salesforce vs. by human engineers. This directly feeds the ITSM co-sell narrative with Winston Harris and Daniel Morton.</p>
+      <p>1,925 Customer Portal seats and 333 Slack seats power Sycomp's managed-services delivery to its own enterprise clients. Task mining the engineer console isolates the after-case-work steps, Slack context-switching, and knowledge-base lookups that inflate AHT and rework. Directly feeds the ITSM co-sell narrative from the June SIC with Muddu Sudhakar's team. Metric moved: engineer AHT and rework rate per case category.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Slack</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Saurabh+Saxena+Sycomp">Saurabh Saxena</a> (VP Engineering)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -184,16 +196,48 @@
   </details>
 
   <details>
-    <summary>5. Finance Close &amp; Multi-Entity Consolidation</summary>
+    <summary>3. Procurement Buyer Cross-System Sourcing Desktop</summary>
     <div class="use-case-body">
-      <p>CFO James Cline owns the Enterprise Systems function and is the escalation point for Karthik. Apromore mines the monthly close across Oracle GL and the 6+ legal entities (US, India, Singapore, HK, Ireland, Brazil) to expose the manual reconciliation and duty-cost restatement steps that stretch close by days. This is a natural CFO-office wedge that pairs with the Deal Agent's cost-savings story to build a single ROI narrative for James.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Oracle ERP, Excel/consolidation layer</p>
+      <p>Procurement buyers move between the RFQ tool, supplier email, Oracle PO screens, and internal duty-cost lookups for every sourcing decision. Task mining the buyer desktop quantifies how much decision time is manual data-gathering versus actual judgment &mdash; the exact seam where the Deal Agent should insert. Metric moved: buyer decision cycle time and % of sourcing steps automatable.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Custom RFQ tooling, Oracle ERP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chris+Elgaaen+Sycomp">Chris Elgaaen</a> (VP Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. SOX ITGC &amp; Segregation-of-Duties Across Oracle + Salesforce</summary>
+    <div class="use-case-body">
+      <p>As a growing multi-entity technology services company, Sycomp's CFO org owns SOX ITGCs spanning Oracle ERP and Salesforce. Compliance Center codifies quote, PO, and revenue-recognition approval flows with segregation-of-duties, sign-offs, and continuous evidence &mdash; replacing today's spreadsheet-plus-attestation model. Metric moved: audit findings per quarter and mean-time-to-evidence for SOX walk-throughs.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Oracle ERP, Salesforce Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=James+Cline+Sycomp">James Cline</a> (CFO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline"><a href="https://salesforce.enterprise.slack.com/archives/C09LK6XLXAL/p1773762912099079"><strong>Celonis</strong></a> — Karthik is actively evaluating alongside UiPath and Apromore per Robert's Mar-17 selling-support request. &nbsp;·&nbsp; <a href="https://salesforce.enterprise.slack.com/archives/C09AVLQG3AR/p1774985170148999"><strong>UiPath</strong></a> — same eval; Robert notes Regrello complements Apromore for the ASC play and asks for qualification support. &nbsp;·&nbsp; <a href="https://salesforce.enterprise.slack.com/archives/C06JES0V15F/p1782306411561309"><strong>Celonis</strong></a> — recent KUKA reference: enterprise Celonis rollout stalled due to programming dependency; Apromore's no-code path wins on time-to-value.</span></h2>
+  <details>
+    <summary>2. Cross-Border Export Controls &amp; Duty-Cost Attestation</summary>
+    <div class="use-case-body">
+      <p>Shipping infrastructure hardware from US, Ireland, Singapore, HK, India, and Brazil pulls Sycomp into export controls (EAR/ITAR), country-of-origin rules, and duty-cost attestation on every deal. Compliance Center runs the classification / license / duty workflow as a controlled process with codified checkpoints so exceptions cannot slip. Metric moved: shipment-hold rate and duty-cost restatement events per quarter.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Oracle ERP, custom RFQ tooling</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chris+Elgaaen+Sycomp">Chris Elgaaen</a> (VP Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Agentforce Agent Governance &amp; Model-Risk Controls</summary>
+    <div class="use-case-body">
+      <p>With the Onboarding Agent and Deal Agent going live inside a CFO-owned Enterprise Systems function, Sycomp needs a lifecycle control layer for agent promotion, monitoring, and retirement before anything touches customer-facing revenue flows. Compliance Center produces continuous evidence that each agent is running against an approved SOP and flags drift when it does not. Metric moved: agent audit-readiness score and mean-time-to-evidence per agent decision class.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Agentforce runtime, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Karthik+Nagarajan+Sycomp">Karthik Nagarajan</a> (Director, Enterprise Systems)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Sycomp, A Technology Company, Inc. by mining their Oracle-and-Salesforce order-to-cash, onboarding, and BOM-sourcing flows across six legal entities to expose the SOP variance blocking the Onboarding and Deal Agentforce agents, task-mining deal-desk and managed-services engineer desktops to name the swivel-chair work Agentforce Operations should automate, and running SOX ITGC, cross-border export, and agent-governance controls through Compliance Center &mdash; collapsing weeks of manual process mapping into no-code discovery a business analyst can run in days.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +248,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

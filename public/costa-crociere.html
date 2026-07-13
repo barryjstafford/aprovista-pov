@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -108,43 +113,41 @@
   <h1>Costa Crociere S.p.A.</h1>
   <div class="snapshot">
     <p><strong>Travel, Transportation &amp; Hospitality, Cruise Lines</strong></p>
-    <p><strong>Revenue:</strong> ~$4.55B &nbsp;|&nbsp; <strong>Employees:</strong> ~3,350 (shore-side; ~19K incl. crew) &nbsp;|&nbsp; <strong>HQ:</strong> Genoa, Italy</p>
+    <p><strong>Revenue:</strong> ~$4.55B &nbsp;|&nbsp; <strong>Employees:</strong> ~3,354 (shore-side; ~19K incl. crew) &nbsp;|&nbsp; <strong>HQ:</strong> Genoa, Italy</p>
     <p><strong>Major Subsidiaries:</strong> AIDA Cruises (German branch), Costa Crociere Pte Ltd (Singapore), Costa Crociere Shanghai Rep Office</p>
     <p class="group-break"><strong>Current Salesforce Products:</strong> MuleSoft, Sales Cloud, Service Cloud, Informatica MDM, Informatica Data Mask</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> On-ship commerce platform (non-Salesforce), Webmethods (legacy, MuleSoft migration in-flight) [Slack]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Costa - Apromore (<a href="https://org62.my.salesforce.com/006ed00000bgm1JAAQ">$70k</a>) &nbsp;|&nbsp; Costa Crociere: AI Enterprise Architecture per Dipartimenti Corporate (<a href="https://org62.my.salesforce.com/006ed00000Wkb8bAAB">$108k</a>) &nbsp;|&nbsp; INFA - Costa Crociere E2 MDM (<a href="https://org62.my.salesforce.com/006ed00000efWo5AAE">$233k</a>)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> webMethods</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Costa &mdash; Apromore (<a href="https://org62.my.salesforce.com/006ed00000bgm1JAAQ">$110k</a>) &nbsp;|&nbsp; INFA &mdash; Costa Crociere E2 MDM (<a href="https://org62.my.salesforce.com/006ed00000efWo5AAE">$233k</a>) &nbsp;|&nbsp; Costa Crociere: AI Enterprise Architecture per Dipartimenti Corporate (<a href="https://org62.my.salesforce.com/006ed00000Wkb8bAAB">$60k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GYLDPEFJ">Stefania Blandini</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">84/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Active AFPI Opportunity in Late Stage</td><td>20/20</td><td class="cat-green">Live "Costa - Apromore" opp ($70k) at Stage 04 — Confirming Value With Power. Highest buying signal.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Co-Sell Fit</td><td>14/15</td><td class="cat-green">MuleSoft $1.29M renewal, Informatica MDM/Data Mask, Service Cloud, AI Enterprise Architecture opp all live.</td></tr>
-        <tr><td>Process Complexity &amp; Volume</td><td>13/15</td><td class="cat-green">B2C bookings + massive B2B travel-agency network + on-ship ops across ~10 ships — dense multi-system event logs.</td></tr>
-        <tr><td>Buyer Titles &amp; Champion Access</td><td>12/15</td><td class="cat-green">Named Italian AE (Blandini) actively selling Service expansion; Emanuela Murenu, Enrica Hu, Olga Eberini engaged [Slack].</td></tr>
-        <tr><td>Regulatory / Compliance Drivers</td><td>11/15</td><td class="cat-green">EU MRV, IMO decarbonization, EU CSRD, GDPR (guest PII) and PSD2 — durable compliance wedge.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">MuleSoft $1.29M renewal, Sales &amp; Service Cloud, Informatica MDM/Data Mask &mdash; deep Salesforce estate.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">webMethods&rarr;MuleSoft agentic-layer opps at Stage 04 + Corporate AI Enterprise Architecture in flight.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">EU MRV, IMO decarbonization, EU ETS-Maritime, GDPR, EU CSRD &mdash; durable Compliance Center wedge.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Booking-to-boarding, B2B agency network, ship-to-shore reconciliation across ~10 ships &mdash; dense logs.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-green">MuleSoft + Informatica MDM = clean event trails; on-ship telemetry intermittent (MQTT) lowers score.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Data Readiness / Event-Log Availability</td><td>7/10</td><td class="cat-orange">On-ship systems often disconnected/intermittent (MQTT pattern) — some processes need shore-side event-log stitching first.</td></tr>
-        <tr><td>Executive Sponsorship / Board Mandate</td><td>9/15</td><td class="cat-orange">CIO/CFO sponsorship not yet confirmed on Apromore specifically; opp being driven bottom-up from Corporate departments.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>11/15</td><td class="cat-orange">Cruise/hospitality not a stated top-tier AFPI vertical, but complex multi-system ops keep the wedge intact.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>15/20</td><td class="cat-orange">Named Italian AE selling Service expansion; no executive customer-side sponsor confirmed on Apromore yet.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Costa Crociere S.p.A. by mining the guest booking, travel-agency B2B, and on-ship-to-shore operational event logs across its MuleSoft-connected estate to lift booking conversion, cut travel-agency friction, and give the in-flight AI Enterprise Architecture program a documented target-state process — protecting the live Apromore opp already at Stage 04.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Guest Booking-to-Boarding Journey</summary>
     <div class="use-case-body">
-      <p>Costa books guests across web, mobile, direct-to-consumer contact centers, and the AIDA German branch, then hands the guest through pre-cruise upsell, check-in, and boarding across ~10 ships. Booking cart-abandonment, payment-failure loops, and check-in queue exceptions each shave points off net promoter score and per-guest revenue. AFPI mines the full booking-to-boarding event log across Sales Cloud, MuleSoft flows, and the reservation platform, exposes drop-off hotspots, and lets a business analyst re-simulate policy changes without a PQL specialist — targeting 3-5 pt conversion lift and 15-20% reduction in booking-support contact volume.</p>
+      <p>Costa books guests across web, mobile, direct-to-consumer contact centers, and the AIDA German branch, then hands each guest through pre-cruise upsell, check-in, and boarding across ~10 ships. Cart abandonment, payment-failure loops, and check-in exceptions each shave points off net promoter score and per-guest revenue. AFPI mines the full booking-to-boarding event log across Sales Cloud, MuleSoft flows, and the reservation platform, exposes drop-off hotspots, and lets a business analyst re-simulate policy changes without a PQL specialist. Metric: booking conversion rate and check-in cycle time per ship.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mario+Zanetti+Costa+Crociere">Mario Zanetti</a> (President)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mario+Zanetti+Costa+Crociere">Mario Zanetti</a> (President, Costa Crociere)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -152,44 +155,90 @@
   <details>
     <summary>2. Travel-Agency (B2B) Partner Enablement &amp; Flex Credits</summary>
     <div class="use-case-body">
-      <p>Costa's B2B channel — a massive travel-agency network — is the growth engine, and Emanuela Murenu is actively positioning Flex Credits to empower it [Slack]. Today agency partners bounce across booking tools, credit lookups, and back-office support with no shared view of their own case history. AFPI mines the agency-to-Costa case flow, quantifies handoff loops, and feeds Agentforce for Service to auto-route the highest-value agencies — targeting 20-30% faster case resolution and measurable Flex Credits attach uplift on partner books.</p>
+      <p>Costa's B2B channel &mdash; a massive travel-agency network &mdash; is the growth engine, and Salesforce is actively positioning Flex Credits and Agentforce for Service to empower it. Today agency partners bounce across booking tools, credit lookups, and back-office support with no shared view of their own case history. AFPI mines the agency-to-Costa case flow, quantifies handoff loops, and feeds Agentforce for Service to auto-route the highest-value agencies. Metric: agency case cycle time and Flex Credits attach rate per partner tier.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Emanuela+Murenu+Salesforce">Emanuela Murenu</a> (Salesforce Core AE, working the Service expansion)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Trade+Sales+Costa+Crociere">Head of Trade Sales</a> (Costa Crociere B2B, TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Back-Office Case-to-Resolution (HR + Corporate Service)</summary>
+    <summary>3. Ship-to-Shore Operational Data Flow &amp; MDM Reconciliation</summary>
     <div class="use-case-body">
-      <p>The active "Costa Crociere SPA - HR Service - BDR" opp and the Agentforce for Service positioning [Slack] point at a live back-office transformation across HR, IT, and finance shared services for ~3,350 shore-side employees. Today employee tickets sprawl across email, ticketing tools, and manager handoffs with long tails on approvals. AFPI mines the case event log, exposes bottlenecks, and lets Agentforce auto-resolve the top intent categories — target 25-35% deflection on tier-1 and 4-6 day cut in approval cycle time.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Stefania+Blandini+Salesforce">Stefania Blandini</a> (Salesforce Account Executive)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Ship-to-Shore Operational Data Flow &amp; MDM Reconciliation</summary>
-    <div class="use-case-body">
-      <p>Costa runs a Webmethods-to-MuleSoft agentic-layer migration and an INFA MDM E2 program in parallel — event data flowing between ships (intermittent MQTT) and shore-side master data. Every reconciliation gap between ship POS, on-board revenue, and shore-side guest records leaks margin and creates PII/GDPR risk. AFPI mines the end-to-end data flow, quantifies reconciliation exceptions, and gives Data Cloud + Informatica a documented target-state — cutting MDM data-quality issues by 30-40% and closing the highest-value on-ship revenue leakage streams.</p>
+      <p>Costa runs a webMethods-to-MuleSoft agentic-layer migration and an Informatica MDM E2 program in parallel &mdash; event data flowing between ships (intermittent MQTT) and shore-side master data. Every reconciliation gap between ship POS, on-board revenue, and shore-side guest records leaks margin and creates PII/GDPR risk. AFPI mines the end-to-end data flow, quantifies reconciliation exceptions, and gives Data Cloud + Informatica a documented target-state process. Metric: MDM data-quality issue count and on-ship revenue leakage recovered.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft, Informatica MDM</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Luigi+Stefanelli+Costa+Crociere">Luigi Stefanelli</a> (CIO)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Luigi+Stefanelli+Costa+Crociere">Luigi Stefanelli</a> (CIO, Costa Crociere)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Contact Center Agent Handle-Time on Booking Support</summary>
+    <div class="use-case-body">
+      <p>Costa's guest-support agents flip between the reservation system, Service Cloud console, refund/loyalty tools, and email while handling booking-support contacts. Task mining captures each agent's on-screen actions, isolates after-call-work steps, and pinpoints the tabs that eat wrap time &mdash; feeding a direct Agentforce for Service business case. Metric: average handle time and after-call-work minutes per contact type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, reservation platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Guest+Contact+Center+Costa+Crociere">Head of Guest Contact Center Operations</a> (Costa Crociere, TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. EU MRV / IMO Decarbonization Compliance Reporting</summary>
+    <summary>2. Trade Support Desk Desktop Swivel-Chair</summary>
     <div class="use-case-body">
-      <p>Costa's LNG-powered Smeralda and Toscana plus the wider fleet sit at the center of EU MRV emissions reporting, IMO 2030/2050 decarbonization, and EU ETS-Maritime obligations — every voyage is a compliance event. Today the fuel-log-to-emissions-report path spans on-ship telemetry, shore-side energy management, and finance sign-off with manual reconciliation. AFPI process-mines the voyage-to-report flow, pairs Compliance Center to auto-evidence each voyage against MRV/ETS schedules, and turns a compliance line item into a durable renewal moat — targeting 40-50% reduction in reporting-cycle FTE.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft, Compliance Center</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Costa+Crociere+Sustainability+Officer">Head of Sustainability</a> (Costa Crociere Sustainability Office)</p>
+      <p>Costa's trade-support desk fields questions from thousands of travel agencies covering group bookings, commissions, and cancellation exceptions. Agents pivot between the agency portal, Service Cloud, commission tools, and finance systems for each inquiry. Task mining exposes the exact copy/paste and lookup steps that Agentforce or straight-through processing can replace. Metric: agency ticket touch-time and re-keying steps per inquiry type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Trade agency portal, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Trade+Support+Manager+Costa+Crociere">Trade Support Operations Lead</a> (Costa Crociere, TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
+  <details>
+    <summary>3. Corporate HR &amp; Finance Shared-Services Desktop</summary>
+    <div class="use-case-body">
+      <p>The live "Costa Crociere SPA - HR Service - BDR" opp and the Agentforce for Service positioning point at a back-office transformation for ~3,354 shore-side employees across HR, IT, and finance shared services. Today employee-service reps toggle between HR portal, ticketing, ERP, and email. Task mining exposes tier-1 request patterns and the exact desktop steps ripe for Agentforce deflection. Metric: tier-1 ticket touch-time and manual approval cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> HR shared-services portal, ERP/finance console</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=HR+Operations+Costa+Crociere">Head of HR Shared Services</a> (Costa Crociere, TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. EU MRV / IMO Decarbonization Voyage Reporting</summary>
+    <div class="use-case-body">
+      <p>Costa's LNG-powered Smeralda and Toscana plus the wider fleet sit at the center of EU MRV emissions reporting, IMO 2030/2050 decarbonization, and EU ETS-Maritime obligations &mdash; every voyage is a compliance event. Today the fuel-log-to-emissions-report path spans on-ship telemetry, shore-side energy management, and finance sign-off with manual reconciliation. Compliance Center codifies the voyage-to-report flow with segregation-of-duties and always-on evidence, turning a compliance line item into a durable renewal moat. Metric: reporting-cycle FTE and voyage-level audit findings.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Voyage data platform, shore-side energy management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Sustainability+Costa+Crociere">Head of Sustainability</a> (Costa Crociere Sustainability Office, TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. GDPR + EU CSRD Guest PII &amp; ESG Attestation</summary>
+    <div class="use-case-body">
+      <p>Costa handles guest PII across booking, on-board spend, loyalty, and Chinese/Singapore rep offices &mdash; and EU CSRD now forces continuous ESG attestation to standardized disclosure lines. Compliance Center runs the DSR-fulfilment and ESG-evidence workflows as controlled processes on top of Informatica MDM and Data Cloud, replacing spreadsheet-plus-attestation with codified sign-off. Metric: DSR SLA hit-rate and mean-time-to-CSRD-evidence per disclosure line.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Informatica MDM, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Data+Protection+Officer+Costa+Crociere">Data Protection Officer / Head of ESG</a> (Costa Crociere, TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. AI Enterprise Architecture Model Risk &amp; EU AI Act</summary>
+    <div class="use-case-body">
+      <p>Costa's live "AI Enterprise Architecture per Dipartimenti Corporate" opp puts every model deployed across Corporate departments under the EU AI Act's high-risk and general-purpose obligations. Compliance Center codifies model promote/monitor/retire lifecycle, records who signed off, and produces continuous evidence for regulators &mdash; critical as Agentforce lands in booking, service, and HR. Metric: audit-ready models covered and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Model registry, MLOps pipeline</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Luigi+Stefanelli+Costa+Crociere">Luigi Stefanelli</a> (CIO, Costa Crociere)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Costa Crociere S.p.A. by mining the booking-to-boarding, travel-agency B2B, and ship-to-shore MDM reconciliation flows across its MuleSoft-connected Salesforce and Informatica estate, task-mining guest contact-center, trade-support, and HR shared-services desktops to feed Agentforce Operations, and running EU MRV/IMO voyage reporting, GDPR/CSRD guest PII, and EU AI Act model-risk controls through Compliance Center &mdash; protecting the live Apromore Stage 04 opp and giving the Corporate AI Enterprise Architecture program a documented target-state.</p>
+
+  <div class="actions">
     <span>Generate PDF</span>
     <span>Generate Slack Canvas</span>
     <span>Generate Vercel Page</span>
@@ -198,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

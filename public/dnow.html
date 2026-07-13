@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -108,42 +113,40 @@
   <h1>DNOW Inc.</h1>
   <div class="snapshot">
     <p><strong>Manufacturing, Automotive &amp; Energy, Energy &amp; Industrial Distribution</strong></p>
-    <p><strong>Revenue:</strong> ~$2.6B (2024 standalone); pro-forma ~$5–6B post-MRC Global combination &nbsp;|&nbsp; <strong>Employees:</strong> ~5,175 (standalone); ~10,000+ combined &nbsp;|&nbsp; <strong>HQ:</strong> Houston, TX, USA</p>
+    <p><strong>Revenue:</strong> ~$2.6B (2024 standalone); pro-forma ~$5&ndash;6B post-MRC Global combination &nbsp;|&nbsp; <strong>Employees:</strong> ~5,175 (standalone); ~10,000+ combined &nbsp;|&nbsp; <strong>HQ:</strong> Houston, TX, USA</p>
     <p><strong>Major Subsidiaries:</strong> Odessa Pumps, Power Service, Whitco Supply, MacLean International, TS&amp;M Supply</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (SFA), Service Cloud (Call Center), Informatica MDM (Product 360, Supplier, Customer — active expansion)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> DigitalNOW eCommerce platform</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> MRC Global – MULA + Signature Success (<a href="https://org62.my.salesforce.com/006ed00000bab2AAAQ">$750k</a>) &nbsp;|&nbsp; INFA MDM Product 360 (<a href="https://org62.my.salesforce.com/006ed00000fjL0fAAE">$300k</a>) &nbsp;|&nbsp; INFA MDM Supplier / Customer Expansion (<a href="https://org62.my.salesforce.com/006ed00000fiSllAAE">$100k</a>)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (SFA), Service Cloud (Call Center), Informatica MDM (Product 360, Supplier, Customer)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> DigitalNOW eCommerce, eSpec Configurator</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> MRC Global &ndash; MULA + Signature Success (<a href="https://org62.my.salesforce.com/006ed00000bab2AAAQ">$750k</a>) &nbsp;|&nbsp; INFA MDM Product 360 (<a href="https://org62.my.salesforce.com/006ed00000fjL0fAAE">$300k</a>) &nbsp;|&nbsp; INFA MDM Supplier / Customer Expansion (<a href="https://org62.my.salesforce.com/006ed00000fiSllAAE">$100k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U036XCPN1PG">Gwendolyn Ortiz</a></p>
-    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Informatica MDM)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">86/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Buyer Titles Present</td><td>10/10</td><td class="cat-green">Process Optimization Mgr, Dir CSM Business Process, VP Supply Chain — process-explicit titles already in Org62.</td></tr>
-        <tr><td>Process Complexity</td><td>15/15</td><td class="cat-green">Post-merger dual OTC/P2P stacks plus fragmented supplier base = classic process-mining terrain.</td></tr>
-        <tr><td>Active Initiatives &amp; Urgency</td><td>14/15</td><td class="cat-green">MRC Global merger integration plus three active Informatica MDM expansions in flight.</td></tr>
-        <tr><td>Deal Size Potential</td><td>9/10</td><td class="cat-green">Combined ~$5–6B revenue, ~10K+ employees, active MULA + Signature Success proposal.</td></tr>
-        <tr><td>Vertical Fit</td><td>13/15</td><td class="cat-green">Energy/industrial distribution — OTC, P2P, warehouse and credit are naturally event-log-rich.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">Post-merger dual OTC/P2P stacks + fragmented supplier base = classic process-mining terrain.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">MRC Global merger integration + three active Informatica MDM expansions in flight.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Energy/industrial distribution &mdash; OTC, P2P, warehouse and credit are naturally event-log-rich.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>17/20</td><td class="cat-green">Process Optimization Mgr, Dir CSM Business Process, VP Supply Chain &mdash; process-explicit titles in Org62.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Combined ~$5&ndash;6B revenue, ~10K+ employees, active $750k MULA + Signature Success proposal.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Compliance / Regulatory Wedge</td><td>6/10</td><td class="cat-orange">SOX and export controls apply, but no headline regulator — Compliance Center is not the wedge.</td></tr>
-        <tr><td>Salesforce Footprint</td><td>7/10</td><td class="cat-orange">Only Sales Cloud SFA + Service Cloud Call Center today — narrow relative to enterprise size.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>4/8</td><td class="cat-orange">SOX and export controls apply, but no headline regulator &mdash; Compliance Center is not the wedge.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>9/12</td><td class="cat-orange">Sales Cloud SFA + Service Cloud Call Center + INFA MDM &mdash; narrow relative to enterprise size.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help DNOW Inc. by mining its post-merger Order-to-Cash and Procure-to-Pay event logs to converge the DNOW and MRC Global process stacks — cutting quote-to-cash cycle time, exposing off-catalog spend, and giving the Sales Cloud / MULA rollout a documented target-state process before it locks in.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Post-Merger Order-to-Cash Harmonization (DNOW + MRC Global)</summary>
     <div class="use-case-body">
-      <p>DNOW's combination with MRC Global creates two parallel OTC stacks with duplicative branch, credit, and billing steps. AFPI mines both legacy event logs to expose which variants win on cycle time and margin, then guides a single target flow — the classic 2–4 week time-to-value case for merger integration. Metric moved: quote-to-cash cycle time and DSO.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> DNOW ERP (TBD), MRC Global ERP (TBD)</p>
+      <p>DNOW's combination with MRC Global creates two parallel OTC stacks with duplicative branch, credit, and billing steps. AFPI mines both legacy event logs to expose which variants win on cycle time and margin, then guides a single target flow &mdash; the classic 2&ndash;4 week time-to-value case for merger integration. Metric moved: quote-to-cash cycle time and DSO.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> DNOW ERP, MRC Global ERP</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ramy+Matta+DNOW">Ramy Matta</a> (Process Optimization Manager, Projects Team)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -152,8 +155,8 @@
   <details>
     <summary>2. Procure-to-Pay &amp; Supplier Onboarding (MDM adjacency)</summary>
     <div class="use-case-body">
-      <p>The active Informatica MDM Product 360 + Supplier expansion opps confirm master-data pain across a fragmented supplier base. AFPI mines the actual P2P event log — PR → PO → GR → invoice — to prove where duplicate suppliers, off-catalog buys, and manual approvals leak margin, feeding directly into the MDM cleanup program rather than competing with it. Metric moved: PO cycle time, off-catalog spend %.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Informatica MDM (Supplier), DNOW ERP AP (TBD)</p>
+      <p>The active Informatica MDM Product 360 + Supplier expansion opps confirm master-data pain across a fragmented supplier base. AFPI mines the actual P2P event log &mdash; PR to PO to GR to invoice &mdash; to prove where duplicate suppliers, off-catalog buys, and manual approvals leak margin, feeding directly into the MDM cleanup program rather than competing with it. Metric moved: PO cycle time, off-catalog spend %.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Informatica MDM (Supplier), DNOW ERP AP</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jessie+Wang+DNOW">Jessie Wang</a> (Director, Data and Business Technology)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -163,42 +166,88 @@
     <summary>3. Warehouse-to-Ship Fulfillment for PVF, Pumps &amp; Artificial Lift</summary>
     <div class="use-case-body">
       <p>Distribution of PVF, pumps, and artificial-lift equipment across dozens of branches is a same-day-turn business where pick/pack/ship deviations hit customer NPS immediately. AFPI mines WMS + ERP events to show branches with hidden re-work loops and stockout patterns, then routes the improvement work into Agentforce Operations. Metric moved: perfect-order rate, branch fill rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> DNOW WMS (TBD), DNOW ERP (TBD)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> DNOW WMS, DNOW ERP</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Timm+Bohnert+DNOW">Timm Bohnert</a> (VP Supply Chain)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>4. Quote-to-Order via eSpec &amp; DigitalNOW eCommerce</summary>
+    <summary>1. Credit Analyst Desktop &amp; Collections Workflow</summary>
     <div class="use-case-body">
-      <p>DigitalNOW and the eSpec configurator are the digital front door, but the handoff from configured quote to fulfilled order runs through Sales Cloud and the underlying ERP. AFPI reveals where digital orders drop into manual rework — pricing overrides, credit holds, spec exceptions — collapsing the SQL+PQL Celonis model into a single no-code business-analyst view. Metric moved: digital order straight-through rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> DigitalNOW eCommerce, eSpec Configurator</p>
+      <p>The DNOW Credit Department runs its own Service Cloud Call Center org where analysts flip between the ERP AR module, credit-bureau portals, Service Cloud cases, and Outlook to clear a single credit app or work a delinquent account. Task mining captures the on-screen action stream to isolate the specific re-keying and dual-entry loops Agentforce can automate. Metric moved: credit-app turnaround time and collector cases per FTE per day.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, DNOW ERP AR</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Terrie+Williams+DNOW">Terrie Williams</a> (Director of CSM Business Process)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Inside-Sales / Quote Desk Swivel-Chair (eSpec + Sales Cloud)</summary>
+    <div class="use-case-body">
+      <p>Inside sales at DNOW route large PVF and pump quotes through the eSpec configurator, Sales Cloud, DigitalNOW, and the branch ERP &mdash; often with manual pricing overrides and spec exceptions. Task mining the quote-desk desktop shows where reps burn time re-typing between systems and which quote types deserve straight-through processing via Agentforce. Metric moved: quote cycle time and rep throughput.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, eSpec Configurator</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chris+Daniels+DNOW">Chris Daniels</a> (Director of Integrated Solutions)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Credit Approval &amp; Collections Operations</summary>
+    <summary>3. Branch Counter &amp; Warehouse Picker Task Capture</summary>
     <div class="use-case-body">
-      <p>The DNOW Credit Department runs its own Service Cloud Call Center org (open renewal in flight). Credit-app turnaround and collections dunning are event-log-rich processes where AFPI directly quantifies where credit reviews stall and which delinquent-account paths recover cash fastest. Metric moved: credit-app SLA, cash conversion cycle.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud (Call Center), DNOW ERP AR (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Terrie+Williams+DNOW">Terrie Williams</a> (Director of CSM Business Process)</p>
+      <p>Branch counter reps and warehouse pickers switch between the WMS, RF scanner apps, branch ERP screens, and printed pick tickets to fulfill each order. Task mining exposes how much time the day loses to lookups, exception handling, and inventory-mismatch fixes &mdash; giving Supply Chain a task-level baseline before deploying handheld or agent-assisted workflows. Metric moved: picks per hour and exception-handling touch time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> DNOW WMS, branch ERP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Timm+Bohnert+DNOW">Timm Bohnert</a> (VP Supply Chain)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. SOX Controls over Post-Merger OTC &amp; P2P</summary>
+    <div class="use-case-body">
+      <p>Combining DNOW and MRC Global forces a single SOX narrative across two OTC and P2P stacks, two chart-of-accounts variants, and duplicated approval matrices. Compliance Center codifies segregation-of-duties, journal-entry approvals, and revenue-recognition controls as a controlled workflow with continuous evidence for external audit. Metric moved: SOX control-testing effort and audit findings.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> DNOW ERP GL, MRC Global ERP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=SOX+Internal+Audit+DNOW">VP, Internal Audit / SOX</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Export-Control &amp; Trade-Compliance Screening (OFAC / BIS)</summary>
+    <div class="use-case-body">
+      <p>DNOW ships pipes, valves, fittings, and artificial-lift equipment into international oil &amp; gas markets that trigger OFAC sanctions screening and BIS export-license requirements. Compliance Center runs a controlled workflow across order-entry, denied-party screening, ECCN classification, and license-management &mdash; producing evidence for every shipment. Metric moved: screening SLA hit-rate and audit-ready license records.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> DNOW ERP order entry, denied-party screening tool</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Trade+Compliance+DNOW">Director, Trade Compliance</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Supplier &amp; Product Master-Data Governance (INFA MDM)</summary>
+    <div class="use-case-body">
+      <p>Three active Informatica MDM opportunities (Product 360, Supplier, Customer) point to a real governance program under way. Compliance Center codifies the stewardship and change-control workflow &mdash; who can create, merge, or retire a supplier or product record &mdash; with codified approvals and audit trail. Metric moved: master-data change SLA and stewardship policy-compliance rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Informatica MDM (Product, Supplier, Customer)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jessie+Wang+DNOW">Jessie Wang</a> (Director, Data and Business Technology)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help DNOW Inc. by mining post-merger Order-to-Cash, Procure-to-Pay, and branch-fulfillment event logs across the DNOW and MRC Global estate, task-mining the credit-desk, inside-sales, and warehouse desktops to expose the swivel-chair work that Agentforce Operations can eliminate, and running SOX, export-control, and Informatica MDM stewardship through Compliance Center &mdash; collapsing quote-to-cash cycle time, cutting off-catalog spend, and giving the MULA + Signature Success rollout a documented target-state process before it locks in.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-03. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

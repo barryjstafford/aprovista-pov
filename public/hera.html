@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -108,88 +113,132 @@
   <h1>Hera S.p.A.</h1>
   <div class="snapshot">
     <p><strong>Utilities, Multi-Utility (Gas, Electricity, Water, Waste)</strong></p>
-    <p><strong>Revenue:</strong> ~€15.5B &nbsp;|&nbsp; <strong>Employees:</strong> ~9,400 &nbsp;|&nbsp; <strong>HQ:</strong> Bologna, Italy</p>
+    <p><strong>Revenue:</strong> ~&euro;13B (2025) &nbsp;|&nbsp; <strong>Employees:</strong> ~10,456 &nbsp;|&nbsp; <strong>HQ:</strong> Bologna, Italy</p>
     <p><strong>Major Subsidiaries:</strong> Hera Comm, Herambiente, HeraTech, Inrete Distribuzione Energia, AcegasApsAmga</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Field Service (Flotte / Servizi Ambientali), Platform, Marketing Cloud</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Andrea Ingi] — SAP suspected as ERP core for a €15B Italian multi-utility but not evidenced in Org62 or Slack.</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Hera Renewal — Call Center + Org Permission + Platform (<a href="https://org62.my.salesforce.com/006ed00000CoE0rAAF">$779K</a>) &nbsp;|&nbsp; Servizi Ambientali — Flotte Replacement (<a href="https://org62.my.salesforce.com/006ed00000BqgrFAAR">$581K</a>) &nbsp;|&nbsp; MS - Hera CTOh SoW (<a href="https://org62.my.salesforce.com/006ed00000ZdxaLAAR">$200K</a>)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Field Service, Platform, Marketing Cloud (ExactTarget), MuleSoft, SteelBrick CPQ, Experience Cloud (Customer Portal)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> SAP, SAP PI</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> HERA SpA - Agentforce 4Serv - bundle (<a href="https://org62.my.salesforce.com/006ed00000SbCq6AAF">$803K</a>) &nbsp;|&nbsp; Hera S.p.A. Renewal 1992 Call Center + Org Permission + Platform (<a href="https://org62.my.salesforce.com/006ed00000CoE0rAAF">$779K</a>) &nbsp;|&nbsp; Hera S.p.A. Servizi Ambientali &mdash; Flotte Replacement (<a href="https://org62.my.salesforce.com/006ed00000BqgrFAAR">$581K</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U040TV1T5NK">Andrea Ingi</a></p>
-    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Field Service)</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">76/100</span> — T2 Develop</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">82/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud footprint (Sales, Service, Field Service, Platform, Marketing) with $1M+ open pipeline across renewal + new business.</td></tr>
-        <tr><td>Industry / Vertical Priority (Utilities)</td><td>13/15</td><td class="cat-green">Multi-utility (gas/electric/water/waste) — top-tier AFPI target vertical for meter-to-cash, field-ops, and outage-response mining.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Field-service flotte replacement + Servizi Ambientali Sistema Comuni signal active operational-process rework and route-planning pain.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-green">Salesforce Field Service + Service Cloud produce clean event logs today; SAP ERP (suspected) would add meter-to-cash logs.</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">ARERA (Italian utility regulator), GDPR, and EU Taxonomy reporting create audit-trail demand — Compliance Center wedge is real.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud install (Sales, Service, Field Service, Platform, MC ExactTarget, MuleSoft, CPQ) + $10M+ open pipeline anchored by the FY28 renewal.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Multi-utility (gas/electric/water/waste) &mdash; top-tier AFPI target for meter-to-cash, field-ops, and outage-response mining.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Active $581K flotte replacement + $779K call-center renewal + SAP PI replacement signal live rework and route-planning pain.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">Salesforce Field Service + Service Cloud produce clean logs today; SAP confirmed via two active replacement opps adds meter-to-cash event logs.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-green">$803K Agentforce 4Serv bundle in pipeline + MuleSoft AgentFabric renewal + $50K SWE approved (Jun-2026) for Hera Waste Management discovery.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>11/20</td><td class="cat-orange">No named executive sponsor for process mining yet in Org62 or Slack — need Andrea Ingi to nominate a business-side champion.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>7/12</td><td class="cat-orange">Active Salesforce work is heavy on core CRM renewals; no visible Agentforce Operations or ERP-migration signal yet at Hera.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>11/20</td><td class="cat-orange">Andrea Ingi engaged as Salesforce AE, but no customer-side process-owner champion confirmed on LinkedIn or Slack yet.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-orange">Clear >$200k ACV path via Agentforce 4Serv + flotte, but SWE-funded discovery is still in flight &mdash; must convert to signed AFPI ACV.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Hera S.p.A. by mining the Servizi Ambientali field-service, customer-care, and meter-to-cash event logs already sitting in its Salesforce Field Service and Service Cloud instances — turning the $581K flotte-replacement project into an evidence-led route- and dispatch-optimization story that also de-risks the $779K renewal and pre-positions Agentforce Operations across a €15B multi-utility.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Environmental Services (Servizi Ambientali) Field Dispatch &amp; Route Optimization</summary>
+    <summary>1. Servizi Ambientali Field Dispatch &amp; Route Optimization</summary>
     <div class="use-case-body">
-      <p>Herambiente and Hera Servizi Ambientali run one of Italy's largest waste-collection and environmental-services operations, with an active $581K flotte replacement project modernizing the fleet-dispatch stack on Salesforce Field Service. AFPI mines the dispatch-to-completion event log — work-order creation, crew assignment, route deviation, on-site duration, exception codes — to expose where routes are being re-planned, where crews idle, and where the same address gets re-serviced. That evidence turns the flotte project from a like-for-like replacement into a measurable route- and crew-productivity story. Metric moved: jobs per crew-day, route deviation minutes, first-visit completion.</p>
+      <p>Herambiente and Hera Servizi Ambientali run one of Italy's largest waste-collection and environmental-services operations, with an active $581K flotte replacement modernizing dispatch on Salesforce Field Service. AFPI mines the dispatch-to-completion event log &mdash; work-order creation, crew assignment, route deviation, on-site duration, exception codes &mdash; to expose where routes get re-planned, where crews idle, and where the same address gets re-serviced. That evidence turns a like-for-like fleet replacement into a measurable route- and crew-productivity story, directly reinforcing the $50K SWE-funded discovery already approved for Hera Waste Management. Metric moved: jobs per crew-day, route deviation minutes, first-visit completion.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, Service Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Herambiente+Operations+Director+Hera">Herambiente Operations Director</a> (Head of Servizi Ambientali Operations)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Herambiente+Operations+Hera">Head of Herambiente Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Customer Care &amp; Complaint-to-Resolution (Hera Comm)</summary>
+    <summary>2. Meter-to-Cash &amp; Billing Exception Handling</summary>
     <div class="use-case-body">
-      <p>Hera Comm serves ~3.7M electricity and gas customers with a call-center footprint governed by ARERA quality standards (call-response time, complaint SLA, invoice-dispute resolution) — and the $779K Call Center renewal opp puts the process squarely in the AE's line of sight. AFPI mines the case-to-resolution event log in Service Cloud to isolate the top complaint intents by handle-time and re-open rate, exposing where escalations, transfers, and back-office loops eat SLA budget. Compliance Center then produces the ARERA-audit-ready control story. Metric moved: complaint SLA compliance %, AHT, first-contact resolution.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Sales Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Hera+Comm+Customer+Care+Director">Hera Comm Customer Care Director</a> (Head of Customer Operations)</p>
+      <p>A &euro;13B multi-utility runs meter-to-cash across gas, electric, water, and district-heating meters &mdash; with the classic reading &rarr; billing &rarr; collection loop that ARERA scrutinizes and that generates a long tail of billing-exception cases in Service Cloud. With SAP confirmed as the ERP core (two active SAP-replacement opps), AFPI mines the meter-read-to-cash event log across SAP and Salesforce to expose stuck bills, estimated-reading loops, and manual re-billing rework. That evidence funds the Agentforce 4Serv billing-exception agent already sized at $803K in pipeline. Metric moved: unbilled days, exception rate, DSO.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP, Salesforce Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Hera+CFO+Finance+Transformation">Head of Billing &amp; Revenue Assurance</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Meter-to-Cash &amp; Billing Exception Handling</summary>
+    <summary>3. Grid Connection &amp; New-Service Activation (Inrete Distribuzione Energia)</summary>
     <div class="use-case-body">
-      <p>A €15B Italian multi-utility runs meter-to-cash across gas, electric, water, and district-heating meters — with the classic reading → billing → collection loop that ARERA scrutinizes and that generates a long tail of billing-exception cases in Service Cloud. AFPI mines the meter-read-to-cash event log across the ERP (suspected SAP) and Salesforce to expose stuck bills, estimated-reading loops, and manual re-billing rework. That evidence directly funds an Agentforce Operations agent for billing-exception triage — the natural next Salesforce buy on top of the current renewal. Metric moved: unbilled days, exception rate, DSO.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> SAP (suspected), Salesforce Service Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Hera+CFO+Finance+Transformation">CFO / Finance Transformation Lead</a> (Head of Billing &amp; Revenue Assurance)</p>
+      <p>Inrete Distribuzione Energia handles new gas and electricity connection requests across Emilia-Romagna and Veneto &mdash; a regulated, hand-off-heavy process (survey &rarr; design &rarr; works order &rarr; commissioning &rarr; activation) where ARERA measures elapsed-time compliance and applies penalties for slippage. AFPI mines the connection-request event log across Salesforce and the works-management system to expose which stage is eating the SLA, where surveys are being redone, and where the field crew is waiting on design. Delivered as an integrated Field Service play, this de-risks the FY28 platform renewal already in pipeline. Metric moved: elapsed connection time, ARERA SLA compliance, re-visit rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, SAP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Inrete+Distribuzione+Energia+Operations+Hera">Head of Inrete Network Operations</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Hera Comm Customer-Care Agent Handle-Time</summary>
+    <div class="use-case-body">
+      <p>Hera Comm serves ~3.7M electricity and gas customers with a call-center footprint governed by ARERA quality standards, and the $779K Call Center renewal + $200K Contact Center BDR opp put the front-line desktop squarely in play. Task mining captures each agent's on-screen actions to isolate after-call-work steps and the tabs that eat wrap time on billing disputes, tariff changes, and complaint intake. Pairs directly with the $803K Agentforce 4Serv bundle by naming the exact steps an agent can absorb. Metric moved: AHT, after-call-work minutes per contact type, first-contact resolution.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, SAP CIS</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Hera+Comm+Customer+Care+Director">Hera Comm Customer Care Director</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Grid Connection &amp; New-Service Activation (Inrete Distribuzione Energia)</summary>
+    <summary>2. Servizi Ambientali Dispatcher &amp; Back-Office Desktop</summary>
     <div class="use-case-body">
-      <p>Inrete Distribuzione Energia handles new gas and electricity connection requests across Emilia-Romagna and Veneto — a regulated, hand-off-heavy process (survey → design → works order → commissioning → activation) where ARERA measures elapsed-time compliance. AFPI mines the connection request event log across Salesforce and the works-management system to expose which stage is eating the SLA, where surveys are being redone, and where the field crew is waiting on design. Delivered as an integrated Field Service play, this reinforces the current $779K platform renewal. Metric moved: elapsed connection time, SLA compliance, re-visit rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, Platform</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Inrete+Distribuzione+Operations+Hera">Inrete Distribuzione Operations Lead</a> (Head of Network Operations)</p>
+      <p>The flotte-replacement project only mines what happens inside Field Service &mdash; but a large slice of waste-ops effort still lives in the dispatcher's desktop (route edits, comune-specific exception handling, penalty triage). Task mining the dispatcher and B2G back-office desktops exposes the manual re-keying between Field Service, the comune portal, and the invoice/penalty spreadsheet. That evidence directly informs which desktop steps Agentforce Operations can replace. Metric moved: dispatcher touch-time per exception, manual re-keys per shift.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Field Service console, comune portals</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Hera+Servizi+Ambientali+Dispatch">Head of Servizi Ambientali Dispatch Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Municipal Contract &amp; Sistema Comuni Delivery (B2G Service Governance)</summary>
+    <summary>3. Field Technician Mobile Task Capture (Inrete + Reti)</summary>
     <div class="use-case-body">
-      <p>Hera's Servizi Ambientali Sistema Comuni opp signals active work on the municipal-contract delivery model — the B2G motion where waste and environmental services are delivered under multi-year contracts with hundreds of Italian comuni, each with its own SLA, tariff, and reporting cadence. AFPI mines the contract-to-invoice event log to expose where deliverables slip against municipal SLAs, where penalty clauses trigger, and where invoice-verification loops with the comune eat margin. This is the highest-leverage nurture wedge behind the flotte project. Metric moved: SLA compliance per comune, penalty exposure, contract-margin variance.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, Field Service</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Hera+Servizi+Ambientali+B2G+Director">Servizi Ambientali B2G Director</a> (Head of Public-Sector Contracts)</p>
+      <p>Inrete and Reti field technicians completing gas/electric works orders swivel between the Field Service mobile app, safety-permit forms, and photo-evidence capture &mdash; often re-keying meter readings and asset IDs. Task mining the technician mobile / tablet exposes idle, re-keying, and repeat-visit patterns that never surface in Field Service alone. Feeds a direct Agentforce Operations business case for a technician co-pilot. Metric moved: on-site touch-time, re-visit rate, safety-permit rework.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Field Service mobile, works-management system</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Inrete+Reti+Field+Operations+Hera">Head of Reti Field Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. ARERA Quality-of-Service &amp; SLA Reporting</summary>
+    <div class="use-case-body">
+      <p>ARERA (the Italian utilities regulator) sets binding quality-of-service standards on call-response time, complaint resolution, connection SLAs, and billing accuracy &mdash; and levies penalties for slippage. Compliance Center codifies those standards as continuous, event-driven controls on top of Service Cloud and Field Service, replacing the current end-of-period spreadsheet attestation with always-on evidence. Especially critical as Agentforce lands in call center and Servizi Ambientali. Metric moved: ARERA SLA compliance %, penalty exposure, mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Field Service</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Hera+Regulatory+ARERA+Compliance">Head of Regulatory Affairs / ARERA Compliance</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. EU CSRD / Taxonomy &amp; Sustainability Evidence</summary>
+    <div class="use-case-body">
+      <p>As a large Italian public-interest entity, Hera reports under CSRD and EU Taxonomy, which demand auditable evidence for environmental metrics: waste diverted, water quality, GHG scopes, circular-economy KPIs. Compliance Center turns those disclosures into a controlled, evidence-generating process linked to the underlying operational events in Herambiente, Inrete, and the water arm. Removes spreadsheet re-work at year-end and builds an audit trail suitable for the statutory auditor. Metric moved: audit findings per disclosure, close cycle time, control-coverage %.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ESG/EHS platform, SAP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Hera+Sustainability+CSRD+Hera">Head of Sustainability &amp; ESG Reporting</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. GDPR &amp; Privacy Center Controls (Hera Comm)</summary>
+    <div class="use-case-body">
+      <p>The open $616K Privacy Center LP1 add-on and $200K Comm Privacy Center opps signal that GDPR consent, data-subject-access, and retention controls are actively being rebuilt at Hera Comm. Compliance Center codifies the DSAR-to-fulfilment workflow &mdash; intake, identity verification, cross-system extract, review, delivery &mdash; as a controlled process with segregation-of-duties and evidence. Directly complements the Privacy Center product buy. Metric moved: DSAR cycle time, breach-notification readiness, consent-coverage %.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Privacy Center, SAP CIS</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Hera+DPO+Data+Protection+Officer">Data Protection Officer (DPO), Hera Group</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Hera S.p.A. by mining Servizi Ambientali dispatch, Hera Comm meter-to-cash, and Inrete grid-connection event logs across its Salesforce Field Service, Service Cloud, and SAP estate, task-mining call-center and dispatcher desktops to size the swivel-chair work that the $803K Agentforce 4Serv bundle is meant to absorb, and running ARERA quality-of-service, CSRD, and GDPR controls through Compliance Center to shrink cycle times, cut AHT, and produce always-on evidence for the Italian regulator.</p>
+
+  <div class="actions">
     <span>Generate PDF</span>
     <span>Generate Slack Canvas</span>
     <span>Generate Vercel Page</span>
@@ -198,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

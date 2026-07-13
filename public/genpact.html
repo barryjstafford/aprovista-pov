@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Genpact Limited — AFPI POV</title>
+<title>Genpact Ltd. — AFPI POV</title>
 <style>
   body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
          color: #1a1a1a; line-height: 1.45; background: #fff; }
@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -105,45 +110,46 @@
   </div>
 </header>
 <main>
-  <h1>Genpact Limited</h1>
+  <h1>Genpact Ltd.</h1>
   <div class="snapshot">
     <p><strong>Professional Services, Business Process Management &amp; Digital Operations</strong></p>
-    <p><strong>Revenue:</strong> $4.8B (FY2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~125,000 &nbsp;|&nbsp; <strong>HQ:</strong> New York, NY, USA (incorporated Bermuda)</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (confirmed via active Agentic Marketing Platform opp)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with account team]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> QLFD - Genpact - Agentic Marketing Platform - Ultimate (<a href="https://org62.my.salesforce.com/006ed00000aD8eBAAS">$135k</a>)</p>
+    <p><strong>Revenue:</strong> ~$4.8B (FY2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~125,000 &nbsp;|&nbsp; <strong>HQ:</strong> New York, USA (incorporated Bermuda)</p>
+    <p><strong>Major Subsidiaries:</strong> Rightpoint, Headstrong, Enquero, PNMsoft, Barkawi Management Consultants</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales &amp; Service Cloud (Unlimited), Force.com Embedded Edition (OEM), Customer Community Plus (OEM), ISVForce Platform</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Genpact Cora, SAP, Oracle, Workday, ServiceNow</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> QLFD &mdash; Genpact &mdash; Agentic Marketing Platform &mdash; Ultimate (<a href="https://org62.my.salesforce.com/006ed00000aD8eBAAS">$135k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02EEJ7CD6X">Thomas Baker</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t3">58/100</span> — T3 Nurture</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t3">54/100</span> &mdash; T3 Nurture</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Process complexity signals</td><td>14/15</td><td class="cat-green">Global BPM firm running 125K+ FTEs across F&amp;A, procurement, supply chain — process complexity is the core of the business.</td></tr>
-        <tr><td>Buying titles present</td><td>8/10</td><td class="cat-green">CEO, CFO, and SVP Digital Transformation identifiable — process-explicit leadership already visible.</td></tr>
-        <tr><td>Data readiness</td><td>10/15</td><td class="cat-orange">Cora AI platform implies event-log capability, but no direct signal Genpact would expose internal logs to a third-party tool.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-green">Cora AI platform + active Agentforce/Agentic Marketing opp; agentic ops is a public strategic pillar under CEO BK Kalra.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-green">Runs client SAP, Oracle, ServiceNow, and SFDC event logs daily &mdash; deep event-log fluency inside Cora practice.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>10/15</td><td class="cat-orange">Process is the product &mdash; complexity is the core business, but internal pain is diffused across client engagements.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>10/20</td><td class="cat-orange">Process-explicit leadership exists (SVP Digital Transformation, CFO) but no direct AFPI champion confirmed customer-side.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">SOX, GDPR, SOC 2, and financial-crimes exposure via riskCanvas &mdash; moderate internal compliance wedge.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Vertical fit</td><td>10/15</td><td class="cat-orange">BPM services vertical — competitively aligned with Celonis partnership program, not a natural AFPI end-customer.</td></tr>
-        <tr><td>Salesforce install base &amp; open opp</td><td>9/15</td><td class="cat-orange">Only one active $135k Agentic Marketing Platform opp — narrow relative to a 125K-employee enterprise.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>6/15</td><td class="cat-red">BPM services vertical &mdash; Genpact is a Celonis global implementation partner, not a natural AFPI end customer.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>5/12</td><td class="cat-red">Small confirmed SF footprint dominated by OEM/ISV storage add-ons; one $135k Agentic Marketing opp is the only relevant open deal.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Genpact Limited by embedding process-discovery inside their Cora AI platform and Agentforce Operations client engagements — turning AFPI from an internal-tool sale into a co-sell wedge that finds where their end-customers' agents should act, without competing with Genpact's own Celonis services practice.</p>
-
   <div class="nurture-box">
-    <p><strong>Why Not Now:</strong> Genpact is a T3 Nurture, not a T1/T2 pursuit. As a global BPM/professional-services firm, Genpact is deeply embedded in the process-mining ecosystem — they are one of the largest Celonis global implementation partners and have built a substantial services practice around it. Selling AFPI to Genpact for their own internal use would compete directly with an active partner relationship they monetize with clients. In addition, Genpact's own Cora AI/automation platform overlaps conceptually with parts of the AFPI value proposition. Combined with the fact that they run client operations rather than transformative internal process change, this reduces urgency and creates a material competitive-posture red flag. The correct motion is co-sell/OEM-partner, not direct enterprise sale.</p>
+    <p><strong>Why Not Now:</strong> Genpact is a T3 Nurture, not a T1/T2 pursuit. As a global BPM/professional-services firm, Genpact is deeply embedded in the process-mining ecosystem &mdash; they are one of the largest Celonis global implementation partners and have built a substantial services practice around it. Selling AFPI to Genpact for their own internal use would compete with an active partner relationship they monetize with clients, and their own Cora AI platform overlaps conceptually with parts of the AFPI value proposition. The correct motion is co-sell into their client engagements (Agentforce Operations wedge) rather than direct enterprise sale &mdash; monitor for a genuine internal transformation trigger or an OEM/embed conversation before escalating.</p>
   </div>
 
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Agentforce Operations Discovery Layer (embedded in current $135k opp)</summary>
+    <summary>1. Agentforce Operations Discovery Layer (Marketing Ops)</summary>
     <div class="use-case-body">
-      <p>The active Agentic Marketing Platform opportunity is the most credible near-term wedge. AFPI attaches as the process-discovery layer that finds where Genpact's marketing operations agents should act — campaign approval loops, brief-to-launch handoffs, MQL-to-SQL routing. Rather than replacing anything, AFPI feeds intelligence into the Agentforce build already scoped. Metric moved: agent deployment velocity and campaign cycle time.</p>
+      <p>The active $135k Agentic Marketing Platform &mdash; Ultimate opp is the most credible near-term AFPI wedge. Process mining attaches as the discovery layer that finds where Genpact's marketing operations agents should act &mdash; campaign approval loops, brief-to-launch handoffs, MQL-to-SQL routing. Rather than replacing anything, AFPI feeds intelligence into the Agentforce build already scoped, shortening design cycles inside the same SOW. Metric: agent deployment velocity and campaign cycle time.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Agentforce</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Balaji+Ganapathy+Genpact">Balaji Ganapathy</a> (SVP, Digital Transformation)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -151,55 +157,101 @@
   </details>
 
   <details>
-    <summary>2. Cora + AFPI Co-Innovation (OEM/embed motion)</summary>
+    <summary>2. Client F&amp;A Shared-Services Diagnostic Acceleration</summary>
     <div class="use-case-body">
-      <p>The strategic path to T2. A partnership conversation positioning AFPI as an embedded intelligence layer Genpact resells inside Cora to their end-customers — not a rip-and-replace of Celonis internally. This flips the motion from competitive to complementary and unlocks a much larger TCV via services multiplier. Metric moved: Cora ARR uplift and time-to-value on Genpact-delivered transformation engagements.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Cora AI, Agentforce</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=BK+Kalra+Genpact">BK Kalra</a> (CEO)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>3. Client-Facing F&amp;A Shared-Services Wedge</summary>
-    <div class="use-case-body">
-      <p>Genpact's F&amp;A shared-services engagements — Order-to-Cash, Procure-to-Pay, Record-to-Report — are the ideal AFPI attach for their clients (not for Genpact itself). Position AFPI as the tool Genpact consultants use to accelerate diagnostic phase from 8 weeks to 2 weeks on client transformation projects, driving faster billable-hour recognition and better outcome-based deal structures. Metric moved: consultant utilization and diagnostic cycle time.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Cora AI, client ERP systems</p>
+      <p>Genpact's F&amp;A shared-services engagements &mdash; Order-to-Cash, Procure-to-Pay, Record-to-Report &mdash; already run through the classic diagnostic-plus-transformation model. AFPI attaches as the tool Genpact consultants use to compress the diagnostic phase from ~8 weeks to ~2 weeks, driving faster billable recognition and better outcome-based deal structures. This is a services-multiplier wedge, not an internal-tool sale. Metric: consultant utilization and diagnostic cycle time on client transformation projects.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Cora AI, client ERP (SAP/Oracle)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Balaji+Ganapathy+Genpact">Balaji Ganapathy</a> (SVP, Digital Transformation)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Contact Center &amp; Service Operations Discovery</summary>
+    <summary>3. Internal Corporate O2C / P2P Transformation (rare trigger)</summary>
     <div class="use-case-body">
-      <p>Genpact runs contact-center operations for many of the world's largest enterprises. If the current Agentforce opp expands into Service Cloud + Contact Center, AFPI mines the case-handling event log to find where AI agents should route, deflect, or escalate. This is where the no-code business-analyst simplicity vs. Celonis-SQL+PQL matters most — Genpact's own client-facing consultants can adopt it faster than developers can be trained. Metric moved: first-contact resolution and AHT.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Agentforce Service</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=BK+Kalra+Genpact">BK Kalra</a> (CEO)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>5. Internal Corporate Process Transformation (rare wedge)</summary>
-    <div class="use-case-body">
-      <p>The one narrow path to a direct internal sale: if Genpact's own corporate function (not a client engagement) issues an RFP for internal Order-to-Cash or Procure-to-Pay transformation, that is a valid AFPI wedge on business-analyst simplicity vs. their current tooling. Extremely rare given they eat their own dog food with Cora, but worth monitoring. Trigger: earnings commentary from <a href="https://www.linkedin.com/search/results/people/?keywords=Mike+Weiner+Genpact">Mike Weiner</a> narrating a shift from headcount-based BPM to outcome-based agentic services. Metric moved: internal process cycle time and outcome-linked revenue mix.</p>
+      <p>The one narrow direct-internal path: if a Genpact corporate function (not a client engagement) issues an RFP for internal Order-to-Cash or Procure-to-Pay transformation, AFPI can wedge on business-analyst simplicity vs. their current SQL+PQL tooling. Extremely rare given they eat their own dog food with Cora, but worth monitoring. Trigger to watch: earnings commentary from CFO Mike Weiner narrating a shift from headcount-based BPM toward outcome-based agentic services. Metric: internal process cycle time and outcome-linked revenue mix.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Cora AI, internal ERP</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mike+Weiner+Genpact">Mike Weiner</a> (CFO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Client Contact-Center Agent Desktop (BPO Operations)</summary>
+    <div class="use-case-body">
+      <p>Genpact runs contact-center operations for many Fortune 500 clients &mdash; AHT and wrap variability are their KPI. Task mining captures each agent's on-screen actions to isolate after-call-work and the tabs that eat wrap time, then feeds an Agentforce for Service business case to the same client. This is a co-sell-into-clients play, not an internal sale. Metric: AHT and after-call-work minutes per contact type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, client-side agent desktop</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=BK+Kalra+Genpact">BK Kalra</a> (CEO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. F&amp;A Shared-Services Desktop Swivel-Chair</summary>
+    <div class="use-case-body">
+      <p>F&amp;A processors managing invoice, reconciliation, and dispute workflows flip between ERP, ticketing, email, and Excel to complete a single item. Task mining the F&amp;A analyst desktop exposes re-keying, tab-switching, and reconciliation lookups &mdash; the exact steps Agentforce Operations can replace on Cora-managed client accounts. Metric: F&amp;A analyst touch-time per invoice/reconciliation and manual-touch count.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Client ERP (SAP/Oracle), Cora AI cockpit</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Balaji+Ganapathy+Genpact">Balaji Ganapathy</a> (SVP, Digital Transformation)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Consultant Diagnostic Desktop (Rightpoint / Cora Squads)</summary>
+    <div class="use-case-body">
+      <p>Rightpoint and Cora consulting squads spend the discovery phase pulling data from client systems, running Miro/Excel workshops, and stitching a target-state view. Task mining the consultant desktop shows where the diagnostic actually spends time &mdash; and gives Genpact evidence that AFPI-embedded discovery replaces days of manual synthesis with hours. Metric: consultant hours per client diagnostic and diagnostic-to-SOW conversion time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Consultant desktop tooling (Miro/Excel), Cora AI</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Balaji+Ganapathy+Genpact">Balaji Ganapathy</a> (SVP, Digital Transformation)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. SOX &amp; SOC 2 Controls Evidence Automation</summary>
+    <div class="use-case-body">
+      <p>As a NYSE-listed company operating in 30+ countries with 125K FTEs, Genpact runs a heavy SOX + SOC 2 internal-controls program with continuous auditor scrutiny. Compliance Center codifies controls as a controlled workflow with segregation-of-duties, sign-offs, and always-on evidence &mdash; especially valuable across access-control, change-management, and revenue-recognition controls. Metric: audit cycle time and control exceptions per reporting unit.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Workday / Oracle GL, ITGC platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mike+Weiner+Genpact">Mike Weiner</a> (CFO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Client-Side Financial-Crimes Adjudication (riskCanvas Extension)</summary>
+    <div class="use-case-body">
+      <p>Genpact's riskCanvas practice already runs financial-crimes alert adjudication for bank clients &mdash; AML/KYC alerts, transaction monitoring, SAR filings. Compliance Center gives their clients a single controlled workflow for alert triage, escalation, and SAR filing with codified SLAs, and gives Genpact a services multiplier on top of the AFPI license. Metric: alert-clearing SLA hit-rate and time-to-SAR at client sites.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> riskCanvas platform, client core banking</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=BK+Kalra+Genpact">BK Kalra</a> (CEO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. GDPR &amp; Global Data-Handling Controls (Delivery Centers)</summary>
+    <div class="use-case-body">
+      <p>Genpact delivery centers in India, Philippines, Romania, and Mexico handle EU personal data on behalf of clients &mdash; every access event, transfer, and retention step is subject to GDPR, DPDP (India), and client-imposed data-handling controls. Compliance Center runs the data-handling process as a controlled workflow with evidence for every access &mdash; a differentiator when defending contracts against auditors and CISOs at large regulated clients. Metric: audit-ready evidence coverage and client-audit findings per delivery center.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> IAM / DLP platform, ticketing</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Balaji+Ganapathy+Genpact">Balaji Ganapathy</a> (SVP, Digital Transformation)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Genpact Ltd. by process-mining the Agentic Marketing Platform build and client F&amp;A shared-services engagements to compress discovery from weeks to days, task-mining contact-center and F&amp;A desktops to expose the swivel-chair work Agentforce Operations can eliminate on their clients' behalf, and running SOX, financial-crimes, and GDPR delivery-center controls through Compliance Center &mdash; positioning AFPI as a co-sell wedge that multiplies Genpact's services revenue rather than competing with their Celonis partnership.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

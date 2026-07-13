@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -114,8 +115,8 @@
     <p><strong>Technology, Semiconductors (Integrated Device Manufacturer)</strong></p>
     <p><strong>Revenue:</strong> $4.40B (FY2025) &nbsp;|&nbsp; <strong>Employees:</strong> ~19,400 &nbsp;|&nbsp; <strong>HQ:</strong> Chandler, Arizona, United States</p>
     <p><strong>Major Subsidiaries:</strong> Microsemi Corporation, Atmel Corporation, Silicon Storage Technology (SST), Micrel, Standard Microsystems (SMSC)</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (SFA), Service Cloud, Marketing Cloud (ExactTarget + Pardot), Experience Cloud (Customer Community), Tableau, Agentforce Operations (Regrello), Sandboxes</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> SAP ERP, Oracle, ServiceNow (per active Regrello / Supply Chain integrations [Slack])</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (SFA), Service Cloud, Marketing Cloud (ExactTarget + Pardot), Experience Cloud, Tableau, Agentforce Operations (Regrello), Sandboxes</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> SAP, Oracle, ServiceNow</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> Microchip - Apromore (<a href="https://org62.my.salesforce.com/006ed00000fFdsfAAC">$350k</a>) &nbsp;|&nbsp; Microchip - Agentforce 360 (<a href="https://org62.my.salesforce.com/006ed00000Qt9dBAAR">$300k</a>) &nbsp;|&nbsp; Microchip - Data 360 for Customer 360 (<a href="https://org62.my.salesforce.com/006ed00000f2k5aAAA">$300k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U046UE9DHCH">Abby Bowman</a></p>
@@ -123,30 +124,28 @@
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">88/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">88/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Active Deal Motion</td><td>15/15</td><td class="cat-green">Live Microchip-Apromore opp at $350k Stage 2, plus Marcello La Rosa deep-dive scheduled [Slack].</td></tr>
-        <tr><td>Executive Buyer Interest</td><td>13/15</td><td class="cat-green">Theresa named champion asking for "control tower view across processes" [Slack #regr-customer-microchip].</td></tr>
-        <tr><td>Process Complexity / Multi-System</td><td>13/15</td><td class="cat-green">Global semi IDM with fabs, assembly/test, 5 major M&amp;A carve-ins (Atmel, Microsemi, SST, Micrel, SMSC).</td></tr>
-        <tr><td>Salesforce Footprint Depth</td><td>12/15</td><td class="cat-green">Broad SF stack: SFA renewal $4.1M, Tableau $709k, Pardot, ExactTarget, Communities.</td></tr>
-        <tr><td>Agentforce Operations Attach</td><td>10/10</td><td class="cat-green">Active Regrello supply-chain deployment; Apromore-Regrello lifecycle is the co-sell wedge.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$4.1M SFA renewal, $709k Tableau renewal, Pardot + ExactTarget + Experience Cloud &mdash; multi-cloud install.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Live Agentforce Operations (Regrello) rollout across supply chain, PCN, rebates + $300k AF 360 opp.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Microchip-Apromore opp live at $350k Stage 2 with Marcello La Rosa deep-dive on the calendar [Slack].</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>17/20</td><td class="cat-green">Theresa (digital/process lead) asked for a "control tower view across processes" in the weekly sync [Slack].</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">5 major M&amp;A carve-ins (Atmel, Microsemi, SST, Micrel, SMSC) drive variant explosion in O2C + supply chain.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Financial Health Momentum</td><td>4/10</td><td class="cat-red">FY25 net income -$2.7M; Fab 2 Tempe closed Nov 2024; cyclical semi downturn = cost pressure.</td></tr>
-        <tr><td>Data Readiness / Event Logs</td><td>6/10</td><td class="cat-orange">SAP/Oracle event logs likely available but not confirmed; Parquet-format data still being negotiated [Slack].</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-orange">SOX/SOC1 flagged during Regrello migration but no ITAR/export-control program surfaced yet on the account.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>12/15</td><td class="cat-orange">Semi/IDM is a strong process-mining target but not a top-priority AFPI vertical vs. FSI/Insurance/Life-Sciences.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Microchip Technology Incorporated by mining the order-to-cash, procure-to-pay, and supply-chain processes across their post-M&amp;A SAP/Oracle landscape to expose the "control tower" view Theresa is asking for — cutting cycle time on custom-order fulfillment, surfacing the root causes of the working-capital drag from FY25's cyclical downturn, and grounding their live Agentforce Operations (Regrello) rollout in evidence-based process discovery.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Post-M&amp;A Order-to-Cash Harmonization Across Atmel / Microsemi / SST Business Units</summary>
     <div class="use-case-body">
-      <p>Microchip has absorbed five major semiconductor businesses (Atmel, Microsemi, SST, Micrel, SMSC) each with its own quote-to-cash instance and channel-partner routing. This creates variant explosion in how a customer PO becomes revenue — the exact scenario Apromore's variant explorer was built for. Mining the SAP sales-order and billing tables against the Salesforce SFA pipeline will expose the divergent paths that delay cash conversion. Metric moved: DSO reduction and quote-to-order cycle time.</p>
+      <p>Microchip has absorbed five major semiconductor businesses (Atmel, Microsemi, SST, Micrel, SMSC), each with its own quote-to-cash instance and channel-partner routing. This drives variant explosion in how a customer PO becomes revenue &mdash; the exact scenario Apromore's variant explorer was built for. Mining the SAP sales-order and billing tables against the Sales Cloud pipeline exposes the divergent paths that delay cash conversion. Metric moved: DSO reduction and quote-to-order cycle time.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> SAP ECC (SD/Billing), Salesforce Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Eric+Bjornholt+Microchip">J. Eric Bjornholt</a> (CFO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -156,7 +155,7 @@
   <details>
     <summary>2. Fab &amp; Assembly/Test Supply Chain Cycle Time (Gresham OR + Colorado Springs + Chachoengsao + Calamba)</summary>
     <div class="use-case-body">
-      <p>Microchip runs Fab 4 (Oregon), Fab 5 (Colorado Springs), and assembly/test in Thailand and the Philippines — with wafer starts flowing to global test then to distribution. Cycle-time slippage between these nodes is the single biggest lever on inventory and lead-times, and semi customers are hyper-sensitive to lead-time promises. Apromore mines the MES + SAP transactional logs to reveal actual node-to-node cycle time versus planned, and pinpoints where blueprints stall (the same "20-min-becoming-6-second" and "120-min print job" pain Juma flagged in the weekly leadership sync). Metric moved: wafer-to-ship cycle-time variance.</p>
+      <p>Microchip runs Fab 4 (Oregon), Fab 5 (Colorado Springs), and assembly/test in Thailand and the Philippines &mdash; with wafer starts flowing to global test then to distribution. Cycle-time slippage between these nodes is the single biggest lever on inventory and lead-times, and semi customers are hyper-sensitive to lead-time promises. Apromore mines the MES + SAP transactional logs to reveal actual node-to-node cycle time versus planned and pinpoints where blueprints stall (the same "20-min becoming 6-second" and "120-min print job" pain Juma flagged in the weekly leadership sync). Metric moved: wafer-to-ship cycle-time variance.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> SAP ECC (MM/PP), MES</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rich+Simoncic+Microchip">Rich Simoncic</a> (COO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -164,36 +163,80 @@
   </details>
 
   <details>
-    <summary>3. Third-Party Supplier &amp; Blueprint Audit Process (63 child blueprints today in Regrello)</summary>
+    <summary>3. Third-Party Supplier &amp; Blueprint Audit Process (63 Child Blueprints in Agentforce Operations)</summary>
     <div class="use-case-body">
-      <p>Microchip is already running a Third-Party Supplier Survey inside Agentforce Operations (Regrello) with 63 child blueprints — a perfect Apromore ingest target. Mining the actual traversal of those blueprints against SLA reveals which supplier types loop, escalate, or stall, and lets Microchip simulate a leaner survey design before re-deploying. This is a co-sell layup: Regrello does the workflow, Apromore does the evidence loop. Metric moved: supplier onboarding cycle time and audit re-work rate.</p>
+      <p>Microchip is already running a Third-Party Supplier Survey inside Agentforce Operations (Regrello) with 63 child blueprints &mdash; a perfect Apromore ingest target. Mining the actual traversal of those blueprints against SLA reveals which supplier types loop, escalate, or stall, and lets Microchip simulate a leaner survey design before re-deploying. This is a co-sell layup: Regrello does the workflow, Apromore does the evidence loop. Metric moved: supplier onboarding cycle time and audit re-work rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Agentforce Operations (Regrello), SAP MM</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Saurabh+Microchip">Saurabh</a> (Supply Chain Ops Lead — surname TBD [field verify])</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Saurabh+Microchip+Technology">Saurabh</a> (Supply Chain Ops Lead &mdash; surname TBD [field verify])</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Cisco First Article &amp; Customer-Specific Quote-Escalation Desktop</summary>
+    <div class="use-case-body">
+      <p>Microchip's Cisco First Article workflow has a documented data-mapping bug (BUG-16 / Case-10701 per the leadership sync) &mdash; Customer Contact field not auto-mapping, blueprint transfer stalling. That's a symptom, not a root cause. Task mining the actual keystroke/click flow across Service Cloud console and Regrello desktop shows where reps deviate from the designed path, which quote types trigger escalation, and which customer segments consume the most engineering time per revenue dollar. Metric moved: first-article turn-around and engineering-hour margin.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud console, Agentforce Operations (Regrello)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Theresa+Microchip+Technology">Theresa</a> (Digital &amp; Process Champion &mdash; surname TBD [field verify])</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Cisco First Article &amp; Customer-Specific Quote-Escalation Workflow</summary>
+    <summary>2. Global Sales Rebate Reconciliation Desktop (Compass / Salesforce / Regrello)</summary>
     <div class="use-case-body">
-      <p>Microchip's Cisco First Article workflow has a documented data-mapping bug (BUG-16 / Case-10701 per the leadership sync) — Customer Contact field not auto-mapping, blueprint transfer stalling. That's a symptom, not a root cause. Apromore mines the actual case-flow across Service Cloud + Regrello to show where the process deviates from the designed path, which quote types trigger escalation, and which customer segments consume the most engineering time per revenue dollar. Metric moved: first-article turn-around and engineering-hour margin.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Agentforce Operations (Regrello)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Theresa+Microchip">Theresa</a> (Digital &amp; Process Champion — surname TBD [field verify])</p>
+      <p>Microchip is completing a Compass/Salesforce/Regrello integration to standardize how its global sales organization manages customer rebates [Slack, #marketing-microchip]. The rebate-analyst desktop today spans Compass extracts, Salesforce accounts/opps, and Regrello approval blueprints &mdash; classic swivel-chair with re-keying. Task mining captures each analyst's on-screen actions to isolate where reconciliation stalls and which approval steps eat cycle time. Metric moved: rebate close time and manual-touch count per rebate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Compass rebate tool, Salesforce Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Eric+Bjornholt+Microchip">J. Eric Bjornholt</a> (CFO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. SOX / SOC1 Compliance-Center Wedge on the Agentforce Operations Migration</summary>
+    <summary>3. APJ RFQ / Purchasing Approval Desktop</summary>
     <div class="use-case-body">
-      <p>The Microchip weekly sync flagged an open SOX/SOC1 compliance-certificate question during the Agentforce Operations (Regrello) migration. Apromore's Compliance Center layers conformance-checking on top of any mined process — so as Microchip migrates blueprints from legacy V4 to V5, they get automated evidence that each control (segregation of duties, approval routing, audit trail) still fires. This turns a migration risk into a compliance selling point for internal audit. Metric moved: control-attestation coverage and audit-cycle time.</p>
+      <p>Microchip's APJ teams are leveraging Regrello's RFQ workflow for internal tracking and supplier quote collection, with three new finance approval processes moving into production [Slack]. Task mining the buyer and approver desktops exposes the "click here, wait, alt-tab, paste" pattern that RFQ users still fall into and identifies the exact steps Agentforce Operations agents can automate. Feeds a direct Agentforce Operations business case. Metric moved: RFQ cycle time and approver touch-time per request.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce Operations (Regrello), SAP MM</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Saurabh+Microchip+Technology">Saurabh</a> (Supply Chain Ops Lead &mdash; surname TBD [field verify])</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. SOX / SOC1 Compliance on the Agentforce Operations Migration</summary>
+    <div class="use-case-body">
+      <p>The Microchip weekly sync flagged an open SOX/SOC1 compliance-certificate question during the Agentforce Operations (Regrello) migration from legacy V4 to V5 [Slack]. Compliance Center layers conformance-checking on top of any mined process &mdash; so as Microchip migrates blueprints, they get automated evidence that each control (segregation of duties, approval routing, audit trail) still fires post-migration. This turns a migration risk into a compliance selling point for internal audit. Metric moved: control-attestation coverage and audit-cycle time.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Agentforce Operations (Regrello), SAP FI/CO</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Juma+Microchip">Juma</a> (IT/Platform Lead — surname TBD [field verify])</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Juma+Microchip+Technology">Juma</a> (IT / Platform Lead &mdash; surname TBD [field verify])</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline"><a href="https://salesforce.enterprise.slack.com/archives/C06N1U8J03S/p1782307473334739"><strong>Celonis</strong></a> — flagged as the German-market incumbent in a #all-manufacturing-germany talk track ("Apromore ist wie Celonis, nur besser"); no direct Celonis footprint confirmed at Microchip yet. &nbsp;·&nbsp; <a href="https://salesforce.enterprise.slack.com/archives/C056Q05LCTX/p1777386373429689"><strong>ServiceNow</strong></a> — Microchip's Service Cloud + Regrello footprint suggests ServiceNow is a lateral competitor for the process-mining workflow layer; no live deal thread yet.</span></h2>
+  <details>
+    <summary>2. Global Product Change Notification (PCN) Audit Trail</summary>
+    <div class="use-case-body">
+      <p>Microchip has modernized its global Product Change Notification (PCN) process on Regrello, replacing a legacy tracker with automated, cross-functional workflow [Slack]. PCN is a customer-facing regulated obligation &mdash; auto/industrial/defense buyers require notification within contractual windows and full traceability of who approved what. Compliance Center runs PCN as a controlled workflow with SLAs, segregation of duties, sign-offs, and continuous evidence for customer audits. Metric moved: on-time PCN notification rate and audit-response time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce Operations (Regrello), SAP PLM</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Theresa+Microchip+Technology">Theresa</a> (Digital &amp; Process Champion &mdash; surname TBD [field verify])</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Export Control / ITAR / Dual-Use Semiconductor Compliance</summary>
+    <div class="use-case-body">
+      <p>Microchip ships defense, aerospace, and automotive-grade parts through Microsemi &mdash; putting a chunk of the order book under US export controls (EAR/ITAR) and end-use screening. A missed hold or a mis-classified part is a regulator-visible event. Compliance Center codifies the screen-classify-hold-release sequence, and mines the SAP + Sales Cloud order stream to flag any order that skipped a control step. Metric moved: control-hit coverage rate and time-to-clear on flagged orders.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP GTS, Salesforce Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rich+Simoncic+Microchip">Rich Simoncic</a> (COO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Microchip Technology Incorporated by process-mining post-M&amp;A order-to-cash, fab/assembly-test cycle time, and the 63-blueprint Regrello supplier workflow across their SAP and Sales Cloud estate, task-mining the Cisco First Article, global rebate, and APJ RFQ desktops to expose the swivel-chair work Agentforce Operations can eliminate, and running SOX/SOC1, global PCN, and export-control processes through Compliance Center to cut cycle time, harden the Regrello migration, and produce always-on audit evidence for internal and customer regulators.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

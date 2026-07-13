@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -107,97 +112,142 @@
 <main>
   <h1>Australian Unity Limited</h1>
   <div class="snapshot">
-    <p><strong>Financial Services, Diversified Mutual (Health Insurance, Wealth, Banking, Aged Care)</strong></p>
-    <p><strong>Revenue:</strong> A$1.04B &nbsp;|&nbsp; <strong>Employees:</strong> ~7,000 &nbsp;|&nbsp; <strong>HQ:</strong> South Melbourne, VIC, Australia</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Marketing Cloud (ExactTarget, Datorama, Platform)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=CIO+Australian+Unity">CIO / Head of Enterprise Architecture</a>]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> MC ExactTarget/Platform/CRM Renewal 26105 (<a href="https://org62.my.salesforce.com/006ed00000UY7sEAAT">$699k</a>)</p>
+    <p><strong>Financial Services, Diversified Mutual (Health Insurance, Wealth, Banking, Aged &amp; Home Care)</strong></p>
+    <p><strong>Revenue:</strong> ~A$1.26B &nbsp;|&nbsp; <strong>Employees:</strong> ~7,000 &nbsp;|&nbsp; <strong>HQ:</strong> Melbourne, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> Australian Unity Bank, Australian Unity Health, Australian Unity Home Health, Lifeplan Australia, Big Sky Building Society</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Health Cloud (Unlimited + Remote Caregiver + Field Scheduler), Sales &amp; Service Cloud Unlimited, Lightning Platform Plus, Salesforce Shield (with dedicated encryption at rest), Customer Community Plus, Marketing Cloud (ExactTarget/Platform), Tableau Cloud, Field Service, Signature Success</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> AU_HomeHealth JanDeal Quoting (<a href="https://org62.my.salesforce.com/006ed00000fL2C5AAK">$2.24M</a>) &nbsp;|&nbsp; AU Home Health Field Service Contractor/Dispatcher (<a href="https://org62.my.salesforce.com/006ed00000aVOHRAA4">$830k</a>) &nbsp;|&nbsp; Australian Unity Private Health Insurance Transformation (<a href="https://org62.my.salesforce.com/006ed00000VvVoPAAV">$502k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/WJNE56DRD">George OConnor</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">74/100</span> — T2 Develop</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">87/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Regulatory &amp; Compliance Pressure (FS + Aged Care)</td><td>14/15</td><td class="cat-green">APRA, ASIC, AUSTRAC plus Aged Care Act 2024 stack multiple regulator-defensible process requirements.</td></tr>
-        <tr><td>Compliance-Center Wedge Fit</td><td>9/10</td><td class="cat-green">Post-Royal-Commission wealth remediation and aged care attestation both demand process-attached controls.</td></tr>
-        <tr><td>Process Complexity (multi-LOB mutual)</td><td>12/15</td><td class="cat-orange">Health insurance, wealth, banking, aged care and retirement villages in one mutual — many process islands.</td></tr>
-        <tr><td>Deal Momentum (renewal in-flight)</td><td>9/15</td><td class="cat-orange">$699k Marketing Cloud renewal in flight gives a natural co-sell entry, but no core CRM anchor deal.</td></tr>
-        <tr><td>Salesforce Footprint (MC only, no core CRM)</td><td>8/15</td><td class="cat-orange">Marketing Cloud only — no Sales/Service Cloud or Data Cloud yet, so AFPI expands surface area rather than deepening it.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">APRA, ASIC, AUSTRAC, Aged Care Act 2024, Private Health Insurance Act &mdash; deep Compliance Center wedge.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">$5.1M renewal, $2.2M Home Health JanDeal, $1.9M FY27 CSG Core Extension all in flight now.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$10M+ Health Cloud, $6M Sales/Service, $5.5M Shield, Tableau, Field Service, Community &mdash; anchor tenant.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">Financial Services + Healthcare &mdash; two priority AFPI verticals inside one mutual.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">Sales, Service, Health Cloud, Field Service, Marketing Cloud, Tableau &mdash; rich Salesforce event streams.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Deal Momentum (renewal in-flight)</td><td>9/15</td><td class="cat-orange">Renewal cycle is the co-sell wedge but no new-logo core-CRM deal exists to attach to.</td></tr>
-        <tr><td>Salesforce Footprint (MC only, no core CRM)</td><td>8/15</td><td class="cat-orange">Narrow SF footprint limits integrated Sales/Service Cloud + AFPI plays until core CRM lands.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>12/20</td><td class="cat-orange">AE (George OConnor) engaged and transformation opps active, but no named customer-side process champion confirmed.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">PHI Transformation and Home Health Field Service opps signal acknowledged cycle-time and dispatch pain.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Australian Unity Limited by mining the multi-LOB event log across Aged Care onboarding, Private Health claims, and Wealth KYC to give the mutual a regulator-defensible process map — attaching Compliance Center controls to statutory clocks under the Aged Care Act 2024, APRA, and AUSTRAC while the Marketing Cloud renewal opens a natural co-sell wedge.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Aged Care &amp; Home Care Package Onboarding</summary>
+    <summary>1. Private Health Insurance Claims Adjudication</summary>
     <div class="use-case-body">
-      <p>The onboarding journey from initial enquiry through ACAT assessment, Home Care Package assignment, funding activation, and first service delivery involves dozens of hand-offs across intake teams, clinical assessors, and government portals — with statutory clocks under the Aged Care Act 2024. AFPI mines the actual event log across CRM, clinical, and Services Australia touchpoints to expose where the median 45–60 day journey is being blown out by rework and unassigned queues. The metric it moves is time-to-first-service and unallocated-package leakage, both directly tied to funded revenue and regulator attestation.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Clinical assessment platform (TBD), CRM (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Operating+Officer+Home+Health+Australian+Unity">COO, Home Health</a> (Chief Operating Officer, Home Health)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>2. Private Health Insurance Claims Adjudication</summary>
-    <div class="use-case-body">
-      <p>Health insurance claims flow through eligibility checks, provider validation, gap-cover rules, and manual clinical review — with APRA and Private Health Insurance Ombudsman scrutiny on turnaround times. Straight-through-processing rates in the mid-70s hide the real story: a long tail of claims cycling through rework loops that consume clinical assessor capacity. AFPI compares the "as-designed" claims process against the true event log to surface the two or three loop patterns that account for most of the manual effort, moving STP rate and claims-cost-per-policy.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Claims adjudication platform (TBD), Provider network system (TBD)</p>
+      <p>Australian Unity's Private Health Insurance Transformation ($502k opp in flight) is rebuilding claims adjudication on Salesforce Health Cloud, but straight-through-processing rates in the mid-70s hide a long tail of claims cycling through eligibility, provider validation, gap-cover, and manual clinical review. Mining the claims event log across Health Cloud, provider network, and PHIO complaint feeds surfaces the two or three loop patterns that consume most clinical-assessor capacity. Ties directly to APRA and Private Health Insurance Ombudsman turnaround-time scrutiny. Metric: STP rate and claims-cost-per-policy.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Health Cloud, claims adjudication platform</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Operating+Officer+Health+Insurance+Australian+Unity">COO, Health Insurance</a> (Chief Operating Officer, Health Insurance)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Wealth &amp; Advice Client-Onboarding and KYC Refresh</summary>
+    <summary>2. Home Care Package Onboarding &amp; ACAT-to-First-Service</summary>
     <div class="use-case-body">
-      <p>Post Royal Commission, wealth onboarding at Australian Unity carries a heavy KYC / DDO / Best-Interest-Duty documentation burden across advice, platform, and trustee entities. Every remediation cycle from AUSTRAC or ASIC starts with "show us your process" — and the actual process only lives in operator memory. AFPI produces the regulator-defensible process map with variant analysis and compliance-center controls attached, cutting onboarding cycle time and audit prep hours.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Advice platform (TBD), KYC/AML tooling (TBD)</p>
+      <p>The intake-to-first-service journey for a Home Care Package spans enquiry, ACAT assessment, funding activation via Services Australia, care-plan design, and Field Service dispatch &mdash; with statutory clocks under the Aged Care Act 2024. AFPI mines the event log across Health Cloud, Field Service, and Services Australia touchpoints to expose where the 45-60 day median is being blown out by rework, unassigned queues, and provider capacity mismatch. Directly supports the $2.24M Home Health JanDeal and $830k Field Service Contractor/Dispatcher opps. Metric: time-to-first-service and unallocated-package leakage.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Health Cloud, Field Service</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Operating+Officer+Home+Health+Australian+Unity">COO, Home Health</a> (Chief Operating Officer, Home Health)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Wealth &amp; Advice Client Onboarding and KYC Refresh</summary>
+    <div class="use-case-body">
+      <p>Post Royal Commission, wealth onboarding at Australian Unity carries a heavy KYC / DDO / Best-Interest-Duty documentation burden across advice, platform, and trustee entities under Lifeplan. Every remediation cycle from AUSTRAC or ASIC starts with "show us your process" &mdash; and the real process only lives in operator memory. AFPI produces the regulator-defensible process map with variant analysis and Compliance-Center controls attached, cutting onboarding cycle time and audit-prep hours. Metric: onboarding cycle time and audit findings per remediation cycle.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Advice platform, KYC/AML tooling</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Group+Executive+Wealth+Capital+Australian+Unity">Group Executive, Wealth &amp; Capital Markets</a> (Group Executive, Wealth &amp; Capital Markets)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>4. Marketing Cloud Journey Reconciliation Against Service Outcomes</summary>
+    <summary>1. Health Insurance Claims-Assessor Desktop</summary>
     <div class="use-case-body">
-      <p>With a A$699k Marketing Cloud renewal in flight (ExactTarget, Platform, plus prior Datorama), the natural co-sell wedge is proving that outbound journeys convert to actual serviced outcomes — enrolments, retained members, funded packages — not just click-throughs. AFPI ingests Marketing Cloud send events alongside downstream CRM and operational events to expose where campaign responders drop out of the servicing funnel. This moves conversion-to-serviced-outcome and gives the CMO renewal-cycle ammunition.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Marketing Cloud (ExactTarget), Datorama</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Marketing+Officer+Australian+Unity">Chief Marketing Officer</a> (Chief Marketing Officer)</p>
+      <p>Clinical claims assessors on Health Cloud rotate through eligibility screens, provider look-ups, gap-cover rules engines, and email/attachment handoffs to decide a single non-STP claim. Task mining the assessor desktop reveals exactly which swivel-chair steps eat handle-time and where Agentforce for Service can replace the repetitive lookup and copy/paste. Feeds the Private Health Insurance Transformation business case directly. Metric: claims per assessor per day and non-STP touch-time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Health Cloud console, claims/policy admin</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Claims+Operations+Australian+Unity">Head of Claims Operations, Health Insurance</a> (Head of Claims Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Retirement Village Resident Lifecycle &amp; Contract Administration</summary>
+    <summary>2. Home Health Field-Service Dispatcher Console</summary>
     <div class="use-case-body">
-      <p>Australian Unity's retirement villages (a distinct Group Services entity) run a long-tail contract process — from initial deposit through DMF calculation, exit refunds, and estate settlement — that is state-legislation-specific and litigation-prone. Contract handoffs between village managers, legal, finance, and family typically span 60–120 days per exit, with cash and reputational exposure at each step. AFPI maps the full contract lifecycle event log and surfaces which villages, contract vintages, or state jurisdictions drive the worst exit-cycle outliers, moving DMF release time and settlement disputes.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Village management system (TBD), Finance/GL (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=General+Manager+Retirement+Communities+Australian+Unity">GM, Retirement Communities</a> (General Manager, Retirement Communities)</p>
+      <p>The $830k Field Service Contractor/Dispatcher opp is standing up dispatch on Salesforce Field Service for Home Health carers. Task mining the dispatcher console captures the exact tab-flip patterns &mdash; between the schedule board, carer availability, client care-plan, and mobile app &mdash; that today make dispatchers a bottleneck at scale. Names the specific steps Agentforce Operations can automate. Metric: dispatches per dispatcher per hour and rework/re-dispatch rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Field Service console, mobile carer app</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Field+Operations+Home+Health+Australian+Unity">Head of Field Operations, Home Health</a> (Head of Field Operations, Home Health)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <details>
+    <summary>3. Australian Unity Bank Advisor/Onboarding Desktop</summary>
+    <div class="use-case-body">
+      <p>Australian Unity Bank customer onboarding (via the former Big Sky Building Society platform) pulls together identity verification, KYC forms, credit checks, and product setup across multiple screens. Task mining exposes re-keying between the onboarding portal and core banking &mdash; then names the exact steps an Agentforce Operations bot can replace with straight-through processing. Metric: onboarding cycle time and manual-touch count per new customer.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Bank onboarding portal, core banking</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Australian+Unity+Bank+Operations">Head of Bank Operations, Australian Unity</a> (Head of Bank Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. Aged Care Act 2024 Statutory-Clock Attestation</summary>
+    <div class="use-case-body">
+      <p>The 2024 Aged Care Act reforms put statutory clocks on assessment, package allocation, and first-service delivery, with attestation obligations to the Aged Care Quality &amp; Safety Commission. Compliance Center attaches process-level controls to the Home Care Package workflow &mdash; segregation of duties, evidence capture, exception routing &mdash; and produces always-on audit evidence rather than point-in-time reports. Metric: attestation-ready packages and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Health Cloud, Field Service (audit logs)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Risk+Officer+Australian+Unity">Chief Risk Officer</a> (Chief Risk Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. APRA Prudential Standards &amp; PHIO Complaint-Handling</summary>
+    <div class="use-case-body">
+      <p>As an APRA-regulated health insurer and life-insurance / friendly-society operator, Australian Unity must evidence prudential process controls and Private Health Insurance Ombudsman complaint SLAs. Compliance Center runs complaint intake, triage, resolution, and root-cause as one controlled workflow with codified SLAs and sign-offs. Metric: PHIO complaint SLA hit-rate and repeat-cause complaint rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud (complaints), Health Cloud (policy admin)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Regulatory+Compliance+Australian+Unity">Head of Regulatory Compliance</a> (Head of Regulatory Compliance)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. AUSTRAC AML / KYC Adjudication across Bank + Wealth</summary>
+    <div class="use-case-body">
+      <p>AUSTRAC obligations sit across Australian Unity Bank, Lifeplan trustee business, and the wealth advice arm &mdash; on different platforms with different alert queues. Compliance Center gives one controlled workflow for alert triage, escalation, and SMR filing with codified SLAs and evidence chains across LOBs. Metric: alert-clearing SLA hit-rate and time-to-SMR.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> AML monitoring platform, case management (Service Cloud)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Financial+Crime+Australian+Unity">Head of Financial Crime / MLRO</a> (Head of Financial Crime, MLRO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Australian Unity Limited by process-mining Private Health claims, Home Care Package onboarding, and wealth KYC across its Health Cloud, Field Service, and Marketing Cloud estate, task-mining claims-assessor and Home Health dispatcher desktops to expose the swivel-chair work that Agentforce Operations can eliminate inside the $2.2M Home Health JanDeal and $502k PHI Transformation, and running Aged Care Act 2024, APRA/PHIO, and AUSTRAC obligations through Compliance Center to produce always-on attestation evidence and shrink cycle times across every LOB.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

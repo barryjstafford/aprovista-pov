@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -112,10 +113,10 @@
   <h1>Bupa HI Pty Ltd</h1>
   <div class="snapshot">
     <p><strong>Healthcare &amp; Life Sciences, Health Insurance</strong></p>
-    <p><strong>Revenue:</strong> A$4.84B &nbsp;|&nbsp; <strong>Employees:</strong> ~17,000 &nbsp;|&nbsp; <strong>HQ:</strong> Sydney, Australia</p>
-    <p><strong>Major Subsidiaries:</strong> Bupa Health Insurance, Bupa Dental, Bupa Villages and Aged Care, Bupa Medical Visa Services, Mindplace</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Health Cloud, Marketing Cloud (ExactTarget), Service Cloud (Call Center), Data Cloud, MuleSoft, Loyalty Management, B2B Commerce, Platform</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Pega (targeted for replacement), Smartcomm, Tealium, Microsoft Azure</p>
+    <p><strong>Revenue:</strong> A$4.84B &nbsp;|&nbsp; <strong>Employees:</strong> ~17,000 (Bupa Australia) &nbsp;|&nbsp; <strong>HQ:</strong> Sydney, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> Bupa Health Insurance, Bupa Dental, Bupa Villages and Aged Care, Bupa Medical Visa Services, Dental Corporation</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud Enterprise, Health Cloud Enterprise, Marketing Cloud, Service Cloud (Call Center), Data Cloud, MuleSoft, Tableau (Creator/Viewer/Explorer), Salesforce Shield, Privacy Center, B2B Commerce, Customer Data Cloud, Loyalty Management, Force.com, Salesforce Scheduler</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Pega, Smartcomm, Tealium, Microsoft Azure</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> Bupa - Apromore (<a href="https://org62.my.salesforce.com/006ed00000fBg9BAAS">$100k</a>) &nbsp;|&nbsp; Bupa - Pega replacement (<a href="https://org62.my.salesforce.com/006ed00000ZcpTZAAZ">$700k</a>) &nbsp;|&nbsp; Bupa - Health Cloud - Health Services Group (<a href="https://org62.my.salesforce.com/006ed00000Qb6x7AAB">$750k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U08SLCTM6MC">Sam Philp</a></p>
@@ -123,30 +124,28 @@
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">89/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">89/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">14+ active opps spanning Health Cloud, MC, Data Cloud, MuleSoft, Loyalty — deeply embedded.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Active "Bupa - Apromore" opp already at Stage 02 with named AE Sam Philp.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">Health insurance + aged care = priority regulated vertical for AFPI.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Claims processing, Pega replacement, patient-record integration, aged-care compliance.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Pega retirement, Blua digital-health platform launch, Bupa APAC unification underway.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud install: Health Cloud, Sales, Service, MC, Data Cloud, MuleSoft, Shield, Tableau, B2B Commerce.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Active "Bupa - Apromore" $100k opp at Stage 02 with named AE Sam Philp; $700k Pega-replacement in flight.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">Health insurance + aged care &mdash; priority regulated vertical for AFPI in ANZ.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Claims adjudication, Pega replacement, aged-care admission, patient-record integration all named in opps.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Pega retirement, Blua digital-health launch, Bupa APAC platform unification underway.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-orange">Aged-care royal-commission legacy + APRA/private-health regulator scrutiny — mostly addressed.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-orange">Mixed Azure + Pega + SF stack — event logs exist but Pega extraction path needs proving.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-orange">APRA private-health regulator + aged-care royal-commission legacy &mdash; mostly addressed, ongoing scrutiny.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-orange">Mixed Azure + Pega + SF stack &mdash; event logs exist but Pega extraction path needs proving.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Bupa HI Pty Ltd by mining claims, member-onboarding, and aged-care admission processes to accelerate the Pega retirement, prove Blua ROI, and give Bupa APAC a single fact-based view of variation across health-insurance, dental, and aged-care lines — cutting claims cycle time and boosting agent-assisted resolution rates.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Health-Insurance Claims Processing &amp; Adjudication</summary>
+    <summary>1. Health-Insurance Claims Adjudication</summary>
     <div class="use-case-body">
-      <p>Bupa's private-health claims funnel spans OCR intake, provider validation, benefit-rule adjudication, and payment — with rework and manual exceptions concentrated in dental and extras. Mining the end-to-end log surfaces the ~15-20% of claims that touch three or more human queues and quantifies the CSAT/cycle-time cost. AFPI plus Agentforce Operations can automate the deterministic branches while flagging outliers to human adjudicators. Target metric: claims cycle time and straight-through-processing rate.</p>
+      <p>Bupa's private-health claims funnel spans OCR intake, provider validation, benefit-rule adjudication, and payment &mdash; with rework and manual exceptions concentrated in dental and extras. Mining the end-to-end log surfaces the ~15-20% of claims that touch three or more human queues and quantifies the CSAT + cycle-time cost. Apromore plus Agentforce Operations can automate the deterministic branches while flagging outliers to human adjudicators. Metric: claims cycle time and straight-through-processing rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Pega, Salesforce Health Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Operating+Officer+Bupa+Australia">COO, Health Insurance</a> (Chief Operating Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -156,7 +155,7 @@
   <details>
     <summary>2. Pega-to-Salesforce Migration De-Risking</summary>
     <div class="use-case-body">
-      <p>The active $700k "Bupa - Pega replacement" opp gives AFPI a natural wedge: mine the current Pega case-flow to build an evidence-based as-is map before the Salesforce Service/Health Cloud re-build begins. Without this, migrations replicate legacy variants and slip 6-9 months. Apromore's no-code discovery lets a business analyst validate the target-state design and identify which case types truly need custom logic. Target metric: migration scope reduction and time-to-cutover.</p>
+      <p>The active $700k "Bupa - Pega replacement" opp gives AFPI a natural wedge: mine the current Pega case-flow to build an evidence-based as-is map before the Salesforce Service/Health Cloud re-build begins. Without this, migrations replicate legacy variants and slip 6-9 months. Apromore's no-code discovery lets a business analyst validate the target-state design and identify which case types truly need custom logic. Metric: migration scope reduction and time-to-cutover.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Pega, Salesforce Service Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Digital+Transformation+Bupa+Australia">Head of Digital Transformation</a> (Head of Digital Transformation)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -166,34 +165,78 @@
   <details>
     <summary>3. Aged-Care Resident Admission &amp; Patient-Record Integration</summary>
     <div class="use-case-body">
-      <p>Bupa Villages and Aged Care operates 50+ homes with resident admission, ACFI/AN-ACC funding assessments, and clinical-record onboarding — the MuleSoft "Integrate Patient Records" opps show the integration is under active build. Process mining reveals where admission handoffs stall between GP, aged-care assessor, and Bupa clinical staff, driving both funding leakage and family experience issues. AFPI plus Agentforce Operations orchestrate the exceptions post-integration. Target metric: admission cycle time and funding-classification accuracy.</p>
+      <p>Bupa Villages and Aged Care operates ~59 homes with resident admission, ACFI/AN-ACC funding assessments, and clinical-record onboarding &mdash; the MuleSoft "Integrate Patient Records" opps show the integration is under active build. Process mining reveals where admission handoffs stall between GP, aged-care assessor, and Bupa clinical staff, driving both funding leakage and family-experience issues. AFPI plus Agentforce Operations orchestrate the exceptions post-integration. Metric: admission cycle time and funding-classification accuracy.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft, Salesforce Health Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Managing+Director+Villages+Aged+Care+Bupa">MD, Villages &amp; Aged Care</a> (Managing Director)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>4. Member Onboarding &amp; Loyalty Journey Optimization</summary>
+    <summary>1. Claims Adjudicator Desktop Swivel-Chair</summary>
     <div class="use-case-body">
-      <p>The active Marketing Cloud + Loyalty Management opps ($380k NB Loyalty, $600k Smartcomm/Tealium replacement) reshape how members are acquired, welcomed, and retained across Blua, myBupa, and traditional channels. Mining the multi-channel onboarding process shows where drop-off happens between quote, apply, verify, and first-claim. Apromore quantifies which touchpoints move NPS versus which just add cost. Target metric: first-90-day retention and Blua digital-adoption rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Marketing Cloud, Salesforce Loyalty Management</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Customer+Officer+Bupa+Australia">Chief Customer Officer</a> (Chief Customer Officer)</p>
+      <p>Claims adjudicators flip between Pega case forms, Health Cloud member records, provider portals, and Smartcomm correspondence templates to close a single claim. Task mining the adjudicator desktop reveals how much time is lost to app-switching, copy/paste of rebate schedules, and repeated policy-eligibility lookups that Agentforce could automate. Feeds an Agentforce Operations business case directly and pairs with the Pega-replacement opp. Metric: adjudications per FTE per day and touch-time per claim.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Pega adjudicator console, Salesforce Health Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Claims+Operations+Bupa+Australia">Head of Claims Operations</a> (Head of Claims Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Provider Contracting &amp; Network Management</summary>
+    <summary>2. Contact Centre Member Servicing Handle-Time</summary>
     <div class="use-case-body">
-      <p>Bupa's Members First provider network (dental, optical, allied health) requires continuous contract renegotiation, credentialing, and outcome-based tariff updates. The process is spreadsheet-heavy and stretches across Legal, Provider Ops, and Actuarial. Mining the contract lifecycle exposes where renewals slip and where negotiated savings leak back through claims. AFPI plus Agentforce Operations automate renewal triggers and standardize evidence packs. Target metric: contract cycle time and negotiated-price realization.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Health Cloud, Pega</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Director+Provider+Network+Bupa+Australia">Director, Provider Networks</a> (Director, Provider Networks)</p>
+      <p>Bupa's member-servicing agents (1550-seat Call Center on Service Cloud) juggle policy lookups, provider searches, corporate-plan rules, and Smartcomm letters during every call. Task mining captures each agent's on-screen actions to isolate after-call-work and the tabs that eat wrap time &mdash; then names the exact steps Agentforce for Service can replace. Directly supports the $600k Smartcomm/Tealium replacement play. Metric: AHT and after-call-work minutes per contact type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, Smartcomm</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Contact+Centre+Bupa+Australia">Head of Contact Centre Operations</a> (Head of Contact Centre)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate mentions found tied to Bupa Australia in Slack or web search. Pega is present in the current stack and is a replacement target — not a process-mining competitor. Field verify with the Salesforce AE before positioning.</span></h2>
+  <details>
+    <summary>3. Aged-Care Clinical Documentation &amp; Rostering</summary>
+    <div class="use-case-body">
+      <p>Aged-care staff toggle between clinical charting, AN-ACC assessment tools, incident reporting, and rostering &mdash; each additional screen taxing an already stretched workforce. Task mining exposes the copy/paste and re-keying that dominate the documentation day, and quantifies how much clinician time returns to residents once Agentforce Operations closes those loops. Metric: minutes-per-shift on admin versus care and incident-report completion cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Aged-care clinical platform, rostering/workforce system</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Clinical+Officer+Bupa+Aged+Care">Chief Clinical Officer, Aged Care</a> (Chief Clinical Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. APRA Private-Health Insurer Prudential Reporting</summary>
+    <div class="use-case-body">
+      <p>Bupa HI is one of Australia's largest private health insurers and must produce APRA HRS-series prudential returns plus PHIAC-legacy statistical reporting on a locked cadence. Compliance Center codifies data-lineage, reviewer sign-off, and evidence retention for every return, and continuously monitors whether the underlying claims + membership processes drift from certified behaviour. Especially important as Data Cloud becomes the source of record. Metric: return cycle time and audit findings per quarter.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Data Cloud, GL / actuarial reporting platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Risk+Officer+Bupa+Australia">Chief Risk Officer</a> (Chief Risk Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Aged-Care Quality Standards &amp; Serious Incident Response</summary>
+    <div class="use-case-body">
+      <p>Post-royal-commission, the Aged Care Quality &amp; Safety Commission enforces the eight Quality Standards and Serious Incident Response Scheme (SIRS) with continuous evidence. Compliance Center runs incident triage, notification, investigation, and remediation as a controlled workflow with segregation-of-duties and always-on evidence, replacing the current spreadsheet + email trail. Directly de-risks the sector's number-one reputational exposure. Metric: SIRS notification SLA hit-rate and Quality Standards audit close-out time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Aged-care incident-management platform, case management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Compliance+Bupa+Aged+Care">Head of Aged-Care Compliance</a> (Head of Compliance)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Privacy Act / OAIC Notifiable Data Breach &amp; Consent</summary>
+    <div class="use-case-body">
+      <p>Bupa handles millions of sensitive health records across insurance, dental, and aged care, all in scope for the Privacy Act, the Notifiable Data Breaches scheme, and the incoming Privacy Act reforms. Compliance Center runs breach triage, OAIC notification, and consent-lifecycle changes as a controlled process with codified SLAs and auditable evidence &mdash; a natural extension of Bupa's active Privacy Center + Salesforce Shield estate. Metric: breach-notification SLA hit-rate and consent-change cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Privacy Center, Salesforce Shield</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Privacy+Officer+Bupa+Australia">Chief Privacy Officer</a> (Chief Privacy Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Bupa HI Pty Ltd by mining claims adjudication, Pega-to-Salesforce migration, and aged-care admission across its Health Cloud, MuleSoft, and legacy Pega estate, task-mining adjudicator, contact-centre, and clinical desktops to expose the swivel-chair work Agentforce Operations can eliminate, and running APRA prudential, Aged-Care SIRS, and Privacy Act controls through Compliance Center to cut claims cycle time, de-risk the Pega retirement, and produce always-on audit evidence for APRA and the Aged Care Quality Commission.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

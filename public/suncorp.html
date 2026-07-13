@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -112,88 +113,132 @@
   <h1>Suncorp Group Limited</h1>
   <div class="snapshot">
     <p><strong>Financial Services, General Insurance</strong></p>
-    <p><strong>Revenue:</strong> A$14.3B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~13,500 &nbsp;|&nbsp; <strong>HQ:</strong> Brisbane (Milton), Australia</p>
+    <p><strong>Revenue:</strong> A$14.3B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~13,757 &nbsp;|&nbsp; <strong>HQ:</strong> Milton (Brisbane), Australia</p>
     <p><strong>Major Subsidiaries:</strong> AAI Limited (AAMI, GIO, Suncorp Insurance, Apia, Shannons), Vero Insurance NZ, AA Insurance NZ, Suncorp New Zealand Services, Asteron Life</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Financial Services Cloud (1Platform FSC), Sales Cloud (SFA), Service Cloud (Home Claims), Marketing Cloud &amp; Pardot, Tableau (38K+ users), CRM Analytics, Data Cloud, MuleSoft (CloudHub 2.0, Omni Gateway/MAF)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Guidewire (policy/claims core), Axway (being displaced by MuleSoft), UiPath (deprioritised for Claims orchestration), SAP, Genesys</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Suncorp Broker – Big Insurance Play Implementation (<a href="https://org62.my.salesforce.com/006ed00000ABWoPAAX">$5.0M</a>) | Suncorp Trans-Tasman #AELA (<a href="https://org62.my.salesforce.com/006ed00000dH6nJAAS">$1.0M</a>) | MS-Suncorp-IDP for AI Orchestration (<a href="https://org62.my.salesforce.com/006ed00000J9dGyAAJ">$100K</a>)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Financial Services Cloud, Sales Cloud, Service Cloud, Marketing Cloud (ExactTarget) &amp; Pardot, Tableau (38K+ users, incl. Tableau Cloud Plus), MuleSoft (Anypoint Platinum, CloudHub 2.0, Omni Gateway/MAF), Data Cloud, Salesforce Shield, Salesforce Scheduler, Salesforce Platform, Signature Success (multi-cloud)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Guidewire, SAP, Genesys, ServiceNow, UiPath, Databricks, Axway</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Suncorp Broker &mdash; Big Insurance Play Implementation CSG (<a href="https://org62.my.salesforce.com/006ed00000ABWoPAAX">$5.0M</a>) &nbsp;|&nbsp; Suncorp Trans-Tasman #AELA (<a href="https://org62.my.salesforce.com/006ed00000dH6nJAAS">$1.1M</a>) &nbsp;|&nbsp; Suncorp AU MuleSoft CTO #CTO (<a href="https://org62.my.salesforce.com/006ed00000EmW3xAAF">$450k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02GT576ZQQ">Irene Zaslavsky</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (MuleSoft + Financial Services Cloud)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">90/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Relationship &amp; Product Adoption</td><td>15/15</td><td class="cat-green">Deep incumbent: FSC, MuleSoft, Tableau (38K+), Data Cloud, MC — anchor account [Slack]</td></tr>
-        <tr><td>Process Complexity &amp; Volume</td><td>14/15</td><td class="cat-green">Multi-brand insurer (AAMI/GIO/Vero); millions of claims/policies annually</td></tr>
-        <tr><td>Active Transformation Signals</td><td>13/15</td><td class="cat-green">MuleSoft Claims Orchestration live, Axway rip-out, CloudHub 2.0 modernisation [Slack]</td></tr>
-        <tr><td>Regulatory / Compliance Pressure</td><td>10/10</td><td class="cat-green">APRA CPS 230, ASIC RG271 claims-handling regulation, GI Code of Practice</td></tr>
-        <tr><td>Event-Log Data Readiness</td><td>12/15</td><td class="cat-green">MuleSoft + Data Cloud + Guidewire = strong event-log substrate for mining</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Top-two Trans-Tasman P&amp;C insurer &mdash; priority AFPI vertical across every brand.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Anchor account: FSC, MuleSoft, Tableau (38K+), Data Cloud, MC + Signature multi-cloud, ~$4M PS ARR.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">$5M CSG Broker program, MuleSoft Agent Fabric win vs UiPath, Sep-2026 AI reassessment window [Slack].</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">APRA CPS 230 (live Jul-2025), ASIC RG271 claims-handling, GI Code of Practice, financial hardship.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Multi-brand claims across AAMI/GIO/Vero, CAT-event surges, Home Claims Assessor/Repair RFP [Slack].</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Existing Process Mining Footprint</td><td>4/10</td><td class="cat-orange">No confirmed Celonis/Signavio deployment; greenfield but competitive risk exists</td></tr>
-        <tr><td>Post-Divestiture Distraction</td><td>6/10</td><td class="cat-orange">Just closed A$4.9B sale of Suncorp Bank to ANZ (2024) — insurance-pure-play reset ongoing</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">Strong SF exec bench (CAIO Paranagama, CEO Consumer Harrison) &mdash; but no confirmed customer-side process-mining champion yet.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-orange">$5M CSG Broker &amp; $1.1M AELA in Scoping; Apromore-specific ACV not yet carved out of these programs.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Suncorp Group Limited by mining the end-to-end claims lifecycle across AAMI, GIO and Vero — surfacing the friction, hand-off waste and cycle-time drivers that are currently invisible in Guidewire and MuleSoft logs — so the new insurance-pure-play organisation can hit its FY26 automation and cost-to-income targets without a second consulting-led discovery.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Multi-Brand Claims Lifecycle Harmonisation (AAMI · GIO · Vero)</summary>
+    <summary>1. Multi-Brand Claims Lifecycle Harmonisation (AAMI &middot; GIO &middot; Vero)</summary>
     <div class="use-case-body">
-      <p>Suncorp runs three flagship personal-lines brands on shared claims infrastructure but with divergent workflows, SLA definitions and rework loops. First Notification of Loss (FNOL) → assessment → settlement can vary by weeks across brands for the same peril. Apromore mines Guidewire ClaimCenter + MuleSoft Omni Gateway event logs to expose the true variant tree, quantify rework cost by brand, and produce a data-backed harmonisation roadmap that reduces cycle time and lifts NPS. Metric it moves: average claim cycle time ↓ 20-30%, straight-through-processing ↑ 15pp.</p>
+      <p>Suncorp runs three flagship personal-lines brands on shared claims infrastructure but with divergent workflows, SLA definitions and rework loops &mdash; FNOL to settlement can vary by weeks across brands for the same peril. With Omni Gateway (MAF) now live for Claims orchestration [Slack], Apromore mines the Guidewire ClaimCenter + MuleSoft event stream to expose the true variant tree, quantify rework cost by brand, and produce a data-backed harmonisation roadmap. Especially load-bearing for the Home Claims Assessor &amp; Repair RFP covering 4,000 internal staff and 3,500 supply-chain partners. Metric: average claim cycle time &darr; 20-30%, straight-through-processing &uarr; 15pp.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Guidewire ClaimCenter, MuleSoft Omni Gateway</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Adam+Bennett+Suncorp">Adam Bennett</a> (Chief Insurance Officer, Consumer)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Michael+Miller+Suncorp">Michael Miller</a> (CEO, Commercial &amp; Personal Insurance)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Home Claims Digital-First Journey Optimisation</summary>
+    <summary>2. Broker Quote-to-Bind for the "Big Insurance Play" ($5M CSG Program)</summary>
     <div class="use-case-body">
-      <p>Home Claims is already a live Salesforce Success Plan at Suncorp (Service Cloud + Data Cloud) with major storm-event volume spikes. Digital-first FNOL should be reducing agent load, but rework, mid-stream channel switches and "digital deflection failures" are eroding the ROI. Mining Service Cloud + Data Cloud event flows reveals which journey segments actually deflect vs. which round-trip back to voice — enabling targeted Agentforce interventions on the highest-leverage steps. Metric it moves: digital containment rate ↑ 12pp, cost-per-claim ↓ A$40–60.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Data Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Michael+Miller+Suncorp">Michael Miller</a> (EGM Claims &amp; Customer Experience)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>3. Broker Quote-to-Bind for the "Big Insurance Play" ($5M CSG program)</summary>
-    <div class="use-case-body">
-      <p>The A$5M Suncorp Broker Big Insurance Play (Vero commercial + intermediaries) is in Scoping stage with CSG. Discovery of the current broker submission → underwriting → quote → bind → policy issuance workflow is exactly the multi-week, spreadsheet-driven exercise Apromore compresses. Process mining lets CSG walk in on Day 1 with the actual variant map, submission-to-bind cycle time by broker segment, and the rework hotspots — turning a 6-week discovery into a 2-week evidence-based blueprint. Metric it moves: implementation risk ↓, time-to-value of the A$5M program pulled forward 4-8 weeks.</p>
+      <p>The A$5M Suncorp Broker Big Insurance Play (Vero commercial + intermediaries) is in Scoping with CSG. Discovery of the current broker submission &rarr; underwriting &rarr; quote &rarr; bind &rarr; policy-issuance workflow is exactly the multi-week, spreadsheet-driven exercise Apromore compresses. Process mining lets CSG walk in on Day 1 with the actual variant map, submission-to-bind cycle time by broker segment, and rework hotspots &mdash; turning a 6-week discovery into a 2-week evidence-based blueprint. Metric: implementation risk &darr;, time-to-value of the A$5M program pulled forward 4-8 weeks.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, Guidewire PolicyCenter</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Anna+Cartwright+Suncorp">Anna Cartwright</a> (EGM Intermediaries &amp; Business Insurance)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=David+Hoffman+Suncorp">David Hoffman</a> (EGM, Commercial Underwriting)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Trans-Tasman Operating Model &amp; AELA Program Validation</summary>
+    <summary>3. Home Claims Assessor &amp; Repair Supply-Chain Orchestration</summary>
     <div class="use-case-body">
-      <p>The active "Suncorp Trans-Tasman #AELA" opportunity ($1M) implies an executive-led-agent play spanning AU (Suncorp Corporate Services) and NZ (Vero, AA Insurance, Asteron Life). Post-bank-divestiture, Suncorp needs to prove its "one insurance group" operating model. Apromore mines the actual cross-border shared-services workflows (finance close, procurement, HR onboarding, IT change) to expose where the operating model is genuinely shared vs. duplicated — a decisive input for the AELA business case. Metric it moves: shared-services duplication ↓, AELA ROI defensibility ↑.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> SAP (Finance/HR), Salesforce Platform</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jeremy+Robson+Suncorp">Jeremy Robson</a> (Group CFO)</p>
+      <p>The active Home Claims Assessor/Repair RFP puts 4,000 internal staff and ~3,500 external supply-chain partners on a single panel-ecosystem workflow &mdash; and CAT events routinely swamp this pipeline (the "Surge Strategy" was the opening topic at Suncorp's Feb 2026 ELT offsite with Paul Whitelam) [Slack]. Apromore mines the ClaimCenter + Service Cloud + partner-portal event logs to expose where assessment-to-repair-to-payment cycle time actually leaks, which panel partners are the SLA outliers, and which handoffs pile up during a storm surge. Metric: assessment-to-repair-completion cycle time &darr;, CAT-event surge absorption capacity &uarr;.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Guidewire ClaimCenter, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Natalie+Major+Suncorp+Home+Claims">Natalie Major</a> (HO Home Claims Supply Chain)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Claims Consultant Desktop Swivel-Chair (AAMI / GIO / Suncorp)</summary>
+    <div class="use-case-body">
+      <p>Consumer claims consultants flip between Guidewire ClaimCenter, Service Cloud, policy admin, panel-partner portals and email to progress a single claim &mdash; and Suncorp is actively evaluating Agentforce vs UiPath for exactly this desktop layer [Slack SIC-133769, Sep-2026 reassessment]. Task mining the consultant desktop reveals how much time is lost to app-switching, copy/paste, and rework lookups that Agentforce could automate, giving the tooling reassessment a defensible business case. Metric: consultant touch-time per claim &darr;, cases-per-FTE-per-day &uarr;.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Guidewire ClaimCenter, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kara+Stone+Suncorp+Home+Claims">Kara Stone</a> (Home Claims)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. APRA CPS 230 Operational Resilience &amp; Control Attestation</summary>
+    <summary>2. Contact Centre Agent Handle-Time (Home Claims + Consumer)</summary>
     <div class="use-case-body">
-      <p>APRA CPS 230 (effective July 2025) forces Suncorp to identify its critical operations, map end-to-end process dependencies, define tolerance levels, and evidence controls to the regulator annually. Today this is largely Visio + interview-based. Apromore's Compliance Center wedge auto-derives the as-is process map from event logs and continuously monitors conformance against declared tolerances — turning CPS 230 from a project into a live control. Metric it moves: CPS 230 attestation prep ↓ from 4-6 months to weeks; audit-defensibility ↑.</p>
+      <p>Suncorp's Home Claims and Consumer contact centres run on Service Cloud + Genesys with measurable AHT and after-call-work variability &mdash; and post-bank-divestiture cost-to-income targets make this the single largest OPEX lever. Task mining captures each agent's on-screen actions to isolate the wrap-time tabs and the after-call-work steps that eat handle time, then names the exact steps Agentforce for Service can replace. Metric: AHT and after-call-work minutes per contact type &darr;, digital deflection retention &uarr;.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, Genesys</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Craig+White+Suncorp">Craig White</a> (CEO, Home Repair)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Broker &amp; Vero Underwriter Desktop</summary>
+    <div class="use-case-body">
+      <p>Vero commercial underwriters and intermediary-facing brokers work across PolicyCenter, FSC, rating engines and email to complete a submission-to-bind &mdash; feeding directly into the $5M CSG Big Insurance Play. Task mining the underwriter desktop exposes copy/paste between rating, exposure-management and policy admin, and the specific screens where Agentforce for Sales/FSC can automate straight-through submission handling. Metric: submission-to-quote cycle time &darr;, quote-to-bind conversion &uarr;.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Guidewire PolicyCenter, Financial Services Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Andrea+Copley+Vero+Suncorp">Andrea Copley</a> (EM, Distribution, Vero)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. APRA CPS 230 Operational Resilience &amp; Control Attestation</summary>
+    <div class="use-case-body">
+      <p>APRA CPS 230 (effective July 2025) forces Suncorp to identify its critical operations, map end-to-end process dependencies, define tolerance levels, and evidence controls to the regulator annually. Today this is largely Visio + interview-based across 19 orgs. Apromore's Compliance Center auto-derives the as-is process map from MuleSoft + ServiceNow event logs and continuously monitors conformance against declared tolerances &mdash; turning CPS 230 from a 4-6 month project into a live control. Metric: attestation prep cycle &darr; from months to weeks, audit-defensibility &uarr;.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft (transactional spine), ServiceNow (ITSM)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Fiona+Thompson+Suncorp">Fiona Thompson</a> (Group Chief Risk Officer)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Priyanka+Paranagama+Suncorp">Priyanka Paranagama</a> (CAIO &amp; Group CTO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline"><a href="https://salesforce.enterprise.slack.com/archives/C039HML02R2/p1782355405660789"><strong>UiPath</strong></a> — [Slack, Jun 2026] Suncorp initially picked UiPath for AI orchestration; MuleSoft displaced it via Omni Gateway — Apromore now well-positioned to prove why process mining should precede any automation tool selection. &nbsp;·&nbsp; <a href="https://salesforce.enterprise.slack.com/archives/C04PFS7UYNA/p1777440081610229"><strong>Celonis</strong></a> — [Slack, Apr 2026] Named as "the platzhirsch" in ANZ SE community; no confirmed Suncorp deployment yet — greenfield window to land Apromore alongside their existing MuleSoft/Data Cloud stack. &nbsp;·&nbsp; <a href="https://salesforce.enterprise.slack.com/archives/C04PFS7UYNA/p1777440081610229"><strong>ServiceNow</strong></a> — [Slack] Present as ITSM at most Australian majors; process-mining play should avoid the ITSM lane and lead with claims + intermediaries.</span></h2>
+  <details>
+    <summary>2. ASIC RG271 Internal Dispute Resolution &amp; Claims Handling</summary>
+    <div class="use-case-body">
+      <p>ASIC RG271 requires financial firms to acknowledge complaints in 24 hours and resolve most in 30 days with a documented decision, and the Insurance Code of Practice layers SLA obligations across every claim. Today complaint and claim decisions are stitched across ClaimCenter, Service Cloud and email &mdash; hard to prove regulator-ready timeliness at scale. Compliance Center codifies IDR/claims workflows with segregation-of-duties, sign-offs and continuous conformance monitoring against RG271 timeframes. Metric: RG271 SLA hit-rate &uarr;, breach-remediation cycle time &darr;.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Guidewire ClaimCenter</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Lisa+Harrison+Suncorp">Lisa Harrison</a> (CEO, Consumer Insurance)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. General Insurance Code of Practice &amp; Financial Hardship Controls</summary>
+    <div class="use-case-body">
+      <p>The 2020 GI Code of Practice and vulnerable-customer/financial-hardship rules require Suncorp to identify at-risk customers early, offer tailored support, and evidence every touchpoint back to the regulator. Home Claims (Service Cloud + Data Cloud) is the largest surface for this because storm and flood claimants disproportionately need hardship pathways. Compliance Center runs hardship as a controlled workflow with vulnerability triggers, escalation SLAs and audit trail across every channel. Metric: vulnerable-customer identification lead time &darr;, Code-compliance evidence gaps &darr;.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Paul+Callanan+Suncorp+Home+Claims">Paul Callanan</a> (HO Home Claims Working Loss &amp; Terri Scheer Claims)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Suncorp Group Limited by mining the Guidewire + MuleSoft Omni Gateway claims and broker quote-to-bind flows across AAMI, GIO and Vero to expose the cycle-time and rework hotspots feeding the $5M CSG Broker "Big Insurance Play" and the Home Claims Assessor/Repair RFP, task-mining claims-consultant and contact-centre desktops to size the exact Agentforce automation opportunity ahead of the September 2026 UiPath reassessment, and running APRA CPS 230, ASIC RG271 and GI Code obligations through Compliance Center to convert one-off attestations into continuously monitored controls.</p>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline"><a href="https://salesforce.enterprise.slack.com/archives/C039HML02R2/p1782355405660789"><strong>UiPath</strong></a> &mdash; [Slack, Jun 2026] Suncorp&rsquo;s data team initially picked UiPath for AI orchestration; MuleSoft Omni Gateway/MAF has now displaced it for Claims orchestration and a September 2026 tooling reassessment is live &mdash; Apromore is well positioned to prove why process mining should precede any automation-tool re-selection.</span></h2>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +249,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

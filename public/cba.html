@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Commonwealth Bank of Australia — AFPI POV</title>
+<title>Commonwealth Bank of Australia &mdash; AFPI POV</title>
 <style>
   body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
          color: #1a1a1a; line-height: 1.45; background: #fff; }
@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -112,53 +113,51 @@
   <h1>Commonwealth Bank of Australia</h1>
   <div class="snapshot">
     <p><strong>Financial Services, Banking</strong></p>
-    <p><strong>Revenue:</strong> AUD ~$27.2B (FY25 operating income) &nbsp;|&nbsp; <strong>Employees:</strong> ~53,000 &nbsp;|&nbsp; <strong>HQ:</strong> Sydney, Australia</p>
+    <p><strong>Revenue:</strong> ~AUD $27.2B (FY25 operating income) &nbsp;|&nbsp; <strong>Employees:</strong> ~50,000 &nbsp;|&nbsp; <strong>HQ:</strong> Sydney, Australia</p>
     <p><strong>Major Subsidiaries:</strong> ASB Bank (NZ), Bankwest, Colonial First State, CommInsure, CommSec</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Marketing Cloud (Journey Builder, SMS/Email), MuleSoft, Professional Services engagements</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Pega (decision engine) [Slack], SAS, in-house core banking platform (CommSee), AWS &amp; Azure workloads</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> None currently in Org62 — CBA is between major AFPI-aligned cycles.</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales &amp; Service Cloud (Unlimited Edition), Salesforce Shield, Platform Encryption, Force.com (Unlimited), Tableau Cloud / Tableau Next, Data Cloud, Salesforce Foundations, MuleSoft</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Pega, SAS, CommSee, AWS, Azure</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> None currently open in Org62.</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GME7FZND">Scott Smyth</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">86/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Priority vertical — Banking is #1 target; ANZ Bank &amp; Westpac already live proof points [Slack].</td></tr>
-        <tr><td>Compliance & Risk Pressure</td><td>8/8</td><td class="cat-green">APRA CPS 230, AUSTRAC AML/CTF, ASIC Design &amp; Distribution — deep, mandatory event-log demand.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Post-AUSTRAC remediation, complaint-handling &amp; hardship backlogs, high manual rework in ops.</td></tr>
-        <tr><td>Transformation & Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Public Anthropic + AWS AI deals, 200+ agentic use cases live, "AI factory" roadmap — massive tailwind.</td></tr>
-        <tr><td>Systems & Event-Log Readiness</td><td>10/12</td><td class="cat-green">Rich digital estate — Salesforce Marketing Cloud, Pega, CommSee, MuleSoft — event logs abundant.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Priority vertical &mdash; Banking is #1 AFPI target; ANZ Bank &amp; Westpac already live reference points.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">APRA CPS 230, AUSTRAC AML/CTF, ASIC RG 271 &amp; DDO &mdash; mandatory event-log demand.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud install: Sales &amp; Service Unlimited, Shield, Force.com, Tableau Next, Data Cloud, MuleSoft.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Public Anthropic + AWS AI deals; 200+ agentic use cases live; "AI factory" roadmap in flight.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Complaint-handling, hardship &amp; mortgage-origination backlogs; post-AUSTRAC remediation still shaping ops.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Commercial Timing & Deal Viability</td><td>4/6</td><td class="cat-orange">No open Org62 opps today; large budget capacity but no funded AFPI cycle in flight.</td></tr>
-        <tr><td>Buyer & Champion Fit</td><td>15/20</td><td class="cat-orange">Target CX/Ops/Risk titles present at scale but no confirmed executive sponsor for process mining.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>3/6</td><td class="cat-red">No open Org62 opps &gt;$10k today &mdash; large budget capacity but no funded AFPI cycle in flight.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">Retail/Ops/Risk exec titles present at scale but no confirmed customer-side process-mining sponsor.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Commonwealth Bank of Australia by mining the end-to-end complaint-handling, hardship-assistance, mortgage-origination and AUSTRAC-controls processes across Salesforce Marketing Cloud, Pega and core banking — surfacing conformance breaches and rework loops before regulators do, and giving CBA's "AI factory" a data-grounded target list for its 200+ agentic use cases so ROI is measured, not assumed.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Complaint Handling &amp; Remediation Conformance (ASIC RG 271)</summary>
     <div class="use-case-body">
-      <p>Under ASIC RG 271 CBA must acknowledge complaints in 24 hours and resolve in 30 days — with an internal dispute-resolution audit trail. Today the process spans multiple contact channels, Pega decisioning, and manual case-handler triage, and breaches drive both AFCA escalations and reputational cost. Apromore mines the case lifecycle across Marketing Cloud → Pega → core banking to expose where SLA breaches originate (queue routing, missing evidence, credit-decision handoffs) and quantify rework. Metric moved: reduce &gt;30-day breach rate and cut AFCA escalation volume.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Pega, Salesforce Marketing Cloud</p>
+      <p>Under ASIC RG 271, CBA must acknowledge complaints in 24 hours and resolve in 30 days with a defensible internal-dispute-resolution trail. Today the flow spans Marketing Cloud comms, Pega decisioning, Service Cloud cases, and manual handler triage &mdash; and breaches drive AFCA escalations and reputational cost. Apromore mines the case lifecycle across Service Cloud, Pega, and CommSee to expose where SLA breaches originate (routing, missing evidence, credit-decision handoffs) and quantify rework. Metric: reduce &gt;30-day breach rate and cut AFCA escalation volume.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Pega</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Angus+Sullivan+Commonwealth+Bank">Angus Sullivan</a> (Group Executive, Retail Banking Services)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Financial-Hardship Assistance End-to-End Flow</summary>
+    <summary>2. Financial-Hardship Assistance End-to-End</summary>
     <div class="use-case-body">
-      <p>Post-COVID and through the 2024-26 cost-of-living cycle, hardship-assistance volumes at CBA have stayed structurally elevated and every step is regulator-watched. The process today mixes digital self-service, call-centre triage, credit assessment, and repayment restructuring — with multiple hand-offs where customers drop out or miss deadlines. Apromore mines the actual hardship journey to find bottleneck touchpoints, no-response drop-offs, and manual credit re-work, feeding Agentforce Operations agents the right high-value automation targets. Metric moved: reduce hardship time-to-decision and increase successful arrangement completion.</p>
+      <p>Through the 2024-26 cost-of-living cycle, hardship-assistance volumes at CBA have stayed structurally elevated and every step is regulator-watched. The flow mixes digital self-service, contact-centre triage, credit assessment, and repayment restructuring with multiple hand-offs where customers drop out or miss deadlines. Apromore mines the actual hardship journey to find bottleneck touchpoints, no-response drop-offs, and manual credit re-work &mdash; then hands Agentforce Operations a ranked automation target list. Metric: reduce hardship time-to-decision and lift arrangement completion rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Pega, CommSee</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rodrigo+Castillo+Commonwealth+Bank">Rodrigo Castillo</a> (EGM Everyday Banking &amp; Digital)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rodrigo+Castillo+Commonwealth+Bank">Rodrigo Castillo</a> (EGM, Everyday Banking &amp; Digital)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -166,34 +165,78 @@
   <details>
     <summary>3. Mortgage Origination &amp; Approval Cycle Time</summary>
     <div class="use-case-body">
-      <p>Home lending is CBA's largest earnings engine and broker-channel time-to-yes is a competitive weapon — a day of cycle-time is worth material market share against Macquarie and NAB. The origination flow spans broker portals, credit decisioning, valuations, verification-of-income and documentation with heavy conditional-approval rework. Apromore mines each application's actual event log to find rework loops (repeated doc requests, credit re-runs), broker-versus-branch variance, and where AI agents can automate verification. Metric moved: reduce median time-to-unconditional-approval and lift straight-through-processing rate.</p>
+      <p>Home lending is CBA's largest earnings engine and broker-channel time-to-yes is a competitive weapon &mdash; a day of cycle-time is material market share against Macquarie and NAB. The origination flow spans broker portals, credit decisioning, valuations, verification-of-income, and documentation with heavy conditional-approval rework. Apromore mines each application's actual event log to find rework loops (repeated doc requests, credit re-runs), broker-versus-branch variance, and where AI agents can automate verification. Metric: reduce median time-to-unconditional-approval and lift straight-through-processing rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> CommSee, Pega</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Michael+Baumann+Commonwealth+Bank">Dr Michael Baumann</a> (Group Executive, Home Buying)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>4. AUSTRAC AML/CTF Transaction-Monitoring Alert Triage</summary>
+    <summary>1. Contact-Centre Agent Desktop Swivel-Chair</summary>
     <div class="use-case-body">
-      <p>CBA's 2018 AUSTRAC settlement (AUD $700M) permanently reshaped financial-crime scrutiny — every alert-triage decision is now audited. Analysts today juggle SAS/Pega alert queues, manual SME escalation, and lengthy suspicious-matter-report drafting. Apromore mines the alert-to-SMR lifecycle to find where analysts loop, where dispositions vary unfairly between teams, and where AI-assisted triage cuts total-review-time without weakening controls. Metric moved: reduce mean alert-review time and improve conformance to the internal FinCrime playbook.</p>
+      <p>CBA's retail contact centres run agents across Service Cloud, CommSee, Pega, and multiple product-specific screens for a single call &mdash; a well-known driver of AHT and post-call wrap-time variance. Task mining captures each agent's on-screen actions to isolate the after-call-work steps and the tabs that eat wrap time. Findings feed directly into the "AI factory" backlog and pair with Agentforce for Service. Metric: reduce AHT and after-call-work minutes per contact type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, CommSee</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Angus+Sullivan+Commonwealth+Bank">Angus Sullivan</a> (Group Executive, Retail Banking Services)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Financial-Crime Analyst Alert-Triage Desktop</summary>
+    <div class="use-case-body">
+      <p>Post-2018 AUSTRAC settlement, CBA's financial-crime analysts adjudicate high alert volumes across SAS, Pega, and internal knowledge tools &mdash; today largely a manual, screen-flipping activity. Task mining maps the actual analyst desktop journey (which sources they open, in what order, and where they re-key data) to expose triage variance and automation candidates without loosening controls. Findings become the evidence base for AI-assisted triage inside the Agentforce estate. Metric: reduce mean alert-review time and improve conformance to the FinCrime playbook.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> SAS, Pega</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alan+Docherty+Commonwealth+Bank">Alan Docherty</a> (Group Executive, Financial Services &amp; CFO Retail)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alan+Docherty+Commonwealth+Bank">Alan Docherty</a> (Group Executive, Financial Services)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Marketing Cloud Journey &amp; Consent-to-Send Conformance</summary>
+    <summary>3. Mortgage Assessor Verification Desktop</summary>
     <div class="use-case-body">
-      <p>CBA's Marketing Cloud estate — already the subject of two Salesforce PS "operational excellence" engagements — powers hourly email/SMS responses that flow into Pega decisioning [Slack]. Under Privacy Act reforms and ASIC hawking rules, consent state and journey exits must be provably honoured. Apromore mines the send-request → consent-check → journey-exit → Pega-decision path to find silent drops, retry storms, and consent-conformance gaps. Metric moved: reduce mis-send incidents and shorten journey-orchestration change lead time.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Marketing Cloud, Pega</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Monique+Macleod+Commonwealth+Bank">Monique Macleod</a> (Chief Marketing Officer)</p>
+      <p>Mortgage assessors flip between broker portals, income-verification services, valuation tools, credit decision engines, and CommSee to complete a single application &mdash; a swivel-chair pattern that inflates cycle time and hides rework. Task mining the assessor desktop reveals the exact re-key and re-check steps that Agentforce Operations agents can replace with straight-through processing. Pairs directly with the Home Buying process-mining use case above. Metric: cases per assessor per day and touch-time per application.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> CommSee, broker portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Michael+Baumann+Commonwealth+Bank">Dr Michael Baumann</a> (Group Executive, Home Buying)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline"><a href="https://salesforce.enterprise.slack.com/archives/C04PFS7UYNA/p1777440081610229"><strong>Celonis</strong></a> — ANZ SE community flagged CBA-adjacent Aussie banks (ANZ, Westpac) as live process-mining reference points, positioning Apromore as the one-role alternative to Celonis' SQL+PQL model. &nbsp;·&nbsp; <a href="https://salesforce.enterprise.slack.com/archives/C0ACK44QECT/p1782145900473309"><strong>UiPath / Power Automate</strong></a> — Adjacent AF-Ops discussions frame RPA vendors as complementary to process mining, not competitive — talk-track applies to CBA's existing automation estate.</span></h2>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. APRA CPS 230 Operational-Resilience Controls</summary>
+    <div class="use-case-body">
+      <p>APRA CPS 230 requires CBA to identify critical operations, set tolerance levels, and continuously evidence that controls are working across material service providers. Compliance Center codifies the CPS 230 process map (identify &rarr; test &rarr; attest &rarr; report) and produces always-on evidence rather than point-in-time attestation. It plugs directly into the process-mining use cases above so a breach in complaint or hardship cycle time becomes a live CPS 230 signal. Metric: mean-time-to-evidence per critical operation and audit findings per business unit.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Pega</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Nigel+Williams+Commonwealth+Bank">Nigel Williams</a> (Group Chief Risk Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. AUSTRAC AML/CTF Alert-to-SMR Controls</summary>
+    <div class="use-case-body">
+      <p>CBA's 2018 AUSTRAC settlement (AUD $700M) permanently reshaped financial-crime scrutiny &mdash; every alert-triage decision is now audited. Compliance Center wraps the alert-to-Suspicious-Matter-Report lifecycle in a controlled workflow with segregation of duties, mandatory evidence, and codified SLAs. Pairs with the SAS/Pega task-mining use case to give the CFO of Financial Services a defensible, always-on control view. Metric: alert-clearing SLA hit-rate and time-to-SMR.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAS, Pega</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alan+Docherty+Commonwealth+Bank">Alan Docherty</a> (Group Executive, Financial Services)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Agentic-AI Model Lifecycle &amp; APRA CPG 235 Data Risk</summary>
+    <div class="use-case-body">
+      <p>With 200+ agentic use cases in flight (Anthropic + AWS partnership), CBA's model-risk and data-management obligations under APRA CPG 235 &amp; the AI Ethics framework are compounding fast. Compliance Center runs the promote-monitor-retire lifecycle for every deployed agent, capturing evidence of model behaviour, drift, and human-in-the-loop overrides. This is the control layer that lets CBA scale its "AI factory" without a regulatory or reputational surprise. Metric: audit-ready agents covered and mean-time-to-evidence per model change.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Data Cloud, MLOps pipeline</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rodrigo+Castillo+Commonwealth+Bank">Rodrigo Castillo</a> (EGM, Everyday Banking &amp; Digital)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Commonwealth Bank of Australia by process-mining complaint-handling, financial-hardship, and mortgage-origination flows across Service Cloud, Pega, and CommSee, task-mining contact-centre, financial-crime-analyst, and mortgage-assessor desktops to hand Agentforce Operations a ranked automation backlog, and running APRA CPS 230, AUSTRAC AML/CTF, and agentic-AI model-lifecycle controls through Compliance Center &mdash; cutting cycle time and AHT while producing always-on audit evidence for APRA, AUSTRAC, and ASIC.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

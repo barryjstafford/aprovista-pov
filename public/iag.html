@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -115,85 +116,127 @@
     <p><strong>Revenue:</strong> ~A$17.6B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~13,000 &nbsp;|&nbsp; <strong>HQ:</strong> Sydney, Australia</p>
     <p><strong>Major Subsidiaries:</strong> NRMA Insurance, CGU Insurance, NZI, AMI Insurance, WFI Insurance</p>
     <p class="group-break"><strong>Current Salesforce Products:</strong> MuleSoft Anypoint Platform (AEH, API Groups, Flex Gateway), Sales Cloud, Service Cloud</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Verint Kana (contact centre, 3,000+ users, end-of-life), GitHub Actions (CI/CD), Apigee <span style="font-size:.78em;color:#666;">[Slack]</span></p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Insurance Australia Group - CGU/ WFI Transformation (<a href="https://org62.my.salesforce.com/006ed00000LgdnGAAR">$100k</a>) &nbsp;·&nbsp; Verint Kana Replacement — Retail Insurance AU pilot &amp; AELA (~$5M ACV in play) <span style="font-size:.78em;color:#666;">[Slack]</span></p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Verint Kana, Apigee</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Insurance Australia Group &mdash; CGU/WFI Transformation (<a href="https://org62.my.salesforce.com/006ed00000LgdnGAAR">$100k</a>) &nbsp;|&nbsp; Verint Kana Replacement &mdash; Retail Insurance AU Pilot (<a href="https://org62.my.salesforce.com/006ed00000VqsnFAAR">Pilot</a>) &nbsp;|&nbsp; Verint Replacement at Scale &mdash; AELA (<a href="https://org62.my.salesforce.com/006ed00000WyZ27AAF">~$5M ACV</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02FWKAHAMA">James Toulson</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">87/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">87/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">P&amp;C insurance is a top AFPI vertical — claims, underwriting, contact-centre process pain.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Verint Kana EOL, 3,000+ contact-centre users, 100+ APIs, portal &amp; underwriting friction.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">MuleSoft AEH is a native event-log source — API, service, and case flows are minable today.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>11/12</td><td class="cat-green">Deep MuleSoft engagement, live Sales/Service Cloud, ~$5M ACV Verint displacement in flight.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Positioned move from telephony-centric CC to customer-centric agentic model with Agentforce.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">~$5M ACV Verint displacement in play; PS-led pilot circumvents formal RFI/RFP.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">P&amp;C insurance is a priority AFPI vertical &mdash; claims, underwriting, contact-centre pain.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">MuleSoft AEH is a native event-log source; API, service, and case flows minable today.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>11/12</td><td class="cat-green">Deep MuleSoft engagement, live Sales/Service Cloud, active $5M-scale co-sell in flight.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Explicit shift from telephony-centric CC to customer-centric agentic model on Agentforce.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-orange">RFI/RFP being circumvented via PS-led pilot — timing depends on approval outcome.</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">APRA prudential regime + AFCA complaints scrutiny drive silent-deviation transparency.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">APRA prudential regime + AFCA complaints scrutiny &mdash; not extreme but material.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">Salesforce sponsors engaged (Toulson, Miles, Vodden) but no customer-side LinkedIn champion confirmed.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Insurance Australia Group Limited by mining its MuleSoft AEH API flows, Verint contact-centre transcripts, and CGU/WFI claims and underwriting event streams to expose silent deviations and compliance leakage across NRMA, CGU, and NZI — accelerating the Verint→Agentforce transformation, shortening quote and claim cycle times by 20–35%, and freeing underwriter and consultant capacity for high-complexity risks.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Contact-Centre First-Contact Resolution &amp; Verint→Agentforce Transition</summary>
+    <summary>1. Commercial Underwriting Digital Twin (CGU / WFI)</summary>
     <div class="use-case-body">
-      <p>IAG's Retail Insurance AU division is scoping a ~$5M ACV displacement of Verint Kana across 3,000+ users, with a Professional Services-led pilot positioning the shift from a telephony-centric CC to a customer-centric agentic model. Apromore mines call routing, hold/transfer/repeat-contact patterns, and case handling in Service Cloud to expose exactly which journeys are candidates for autonomous agents vs. augmented humans — grounding the Agentforce business case in evidence, not hunch. It moves first-contact resolution, average handle time, and repeat-contact rate — the same KPIs the RFI will be judged on.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Verint Kana, Service Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Hamish+Miles+IAG">Hamish Miles</a> (Retail Insurance AU sponsor, referenced on the Verint pilot)</p>
+      <p>The open CGU/WFI Transformation opp is the exact wedge for the "Digital Twin of Underwriting" narrative Marcello La Rosa is running with P&amp;C carriers. Apromore visualises actual commercial-lines submission-to-bind flows across CGU and WFI to surface silent deviations, referral loops, and time-to-quote drag. Feeds the Agentic Workbench so autonomous agents triage submissions and flag invisible bottlenecks in real time. Metric: time-to-quote, quote-to-bind conversion, and underwriter capacity for high-complexity risks.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> CGU/WFI underwriting stack, Salesforce Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Martin+Vodden+IAG">Martin Vodden</a> (CGU/WFI account lead, IAG)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Commercial Underwriting Digital Twin (CGU / WFI)</summary>
+    <summary>2. Motor &amp; Home Claims Cycle-Time (NRMA)</summary>
     <div class="use-case-body">
-      <p>The open CGU/WFI Transformation opp is the exact wedge for the "Digital Twin of Underwriting" narrative Marcello La Rosa is running with Suncorp and the P&amp;C industry team. Apromore visualises actual commercial-lines submission-to-bind flows to surface silent deviations, referral loops, and time-to-quote drag — feeding the Agentic Workbench so autonomous agents triage submissions and flag invisible bottlenecks in real time. It moves time-to-quote, quote-to-bind conversion, and underwriter capacity for high-complexity risks.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> CGU/WFI underwriting stack, Salesforce</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Martin+Vodden+IAG">Martin Vodden</a> (CGU/WFI account lead)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>3. Motor &amp; Home Claims Cycle-Time (NRMA)</summary>
-    <div class="use-case-body">
-      <p>NRMA processes some of the largest motor and home claims volumes in Australia, and post-CAT event surge periods routinely blow through SLA targets. Apromore mines FNOL-to-settlement event logs across policy admin, assessing, repairer network scheduling, and payment systems to isolate the true rework loops (duplicate assessments, information-request ping-pong, panel escalations). Pairs directly with Agentforce Operations for autonomous triage of straight-through claims. Moves cycle time, straight-through processing rate, and customer NPS during CAT events.</p>
+      <p>NRMA runs some of the largest motor and home claims volumes in Australia, and post-CAT event surges routinely blow through SLA targets. Apromore mines FNOL-to-settlement event logs across policy admin, assessing, repairer scheduling, and payments to isolate the true rework loops &mdash; duplicate assessments, information-request ping-pong, panel escalations. Pairs directly with Agentforce Operations for autonomous triage of straight-through claims. Metric: cycle time, straight-through processing rate, and customer NPS during CAT events.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Claims platform, MuleSoft AEH</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Halde+Bagdadi+IAG">Halde Bagdadi</a> (referenced on IAG Salesforce account team)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Halde+Bagdadi+IAG">Halde Bagdadi</a> (IAG Salesforce account team)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. API &amp; Partner Onboarding via MuleSoft AEH</summary>
+    <summary>3. Contact-Centre Case &amp; Journey Flow (Verint&rarr;Agentforce Cutover)</summary>
     <div class="use-case-body">
-      <p>IAG is onboarding external banks and credit unions to consume 100+ APIs through Anypoint Experience Hub, with API Groups (e.g. "quote &amp; buy") as the navigation mechanism. Apromore mines Anypoint access logs, portal telemetry, and Flex Gateway traffic to show which API groups get adopted, which fail on first contract, and where partners bail out — turning the AEH uplift into a measurable governance story and feeding an "agent-ready" API catalog. Moves partner activation time, API adoption rate, and support-ticket volume from external consumers.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft Anypoint (AEH), Flex Gateway</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=James+Smart+IAG">James Smart</a> (MuleSoft account team, IAG)</p>
+      <p>Retail Insurance AU is scoping a ~$5M ACV displacement of Verint Kana across 3,000+ users. Before the cutover, Apromore mines existing case/journey flows in Service Cloud plus MuleSoft API traffic to expose exactly which journeys are candidates for autonomous agents versus augmented humans &mdash; grounding the Agentforce business case in evidence, not hunch. Metric: first-contact resolution, average handle time, repeat-contact rate &mdash; the same KPIs the RFI will be judged on.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Verint Kana</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Hamish+Miles+IAG">Hamish Miles</a> (Retail Insurance AU sponsor, IAG)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Contact-Centre Consultant Desktop &amp; After-Call Work</summary>
+    <div class="use-case-body">
+      <p>3,000+ Retail Insurance AU consultants sit on Verint Kana today and will move to Agentforce for Service. Task mining captures each consultant's on-screen actions to isolate the after-call-work steps, tab-switching, and copy/paste that eat wrap time. Feeds the Agentforce Operations business case with exact task-level automation candidates. Metric: after-call-work minutes per contact type and consultant handle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Verint Kana desktop, Service Cloud console</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Hamish+Miles+IAG">Hamish Miles</a> (Retail Insurance AU sponsor, IAG)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Regulatory &amp; AFCA Complaints Handling</summary>
+    <summary>2. Commercial Underwriter Swivel-Chair (CGU / WFI)</summary>
     <div class="use-case-body">
-      <p>Australian general insurers face heightened APRA prudential scrutiny and AFCA (Australian Financial Complaints Authority) timeliness reporting, with complaint mishandling driving both fines and remediation programs. Apromore mines the complaint lifecycle end-to-end — intake channel, triage, internal dispute resolution, AFCA escalation, remediation payment — surfacing which categories of complaint routinely miss the 30/45-day thresholds and where the delays actually sit. The output feeds automated case orchestration in Service Cloud and provides an auditable process-map artefact regulators accept. Moves complaint-resolution SLA compliance, remediation cost, and AFCA determination win-rate.</p>
+      <p>CGU and WFI commercial underwriters flip between broker submissions in email, policy admin, rating engines, and Salesforce to complete a single quote. Task mining the underwriter desktop reveals the exact steps lost to app-switching, repeated lookups, and manual data re-entry that Agentforce can eliminate. Directly informs the CGU/WFI Transformation opp scope and ROI. Metric: quotes per underwriter per day and touch-time per submission.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Underwriting workbench, Outlook/email</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Martin+Vodden+IAG">Martin Vodden</a> (CGU/WFI account lead, IAG)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Claims Assessor Desktop (NRMA Motor &amp; Home)</summary>
+    <div class="use-case-body">
+      <p>NRMA claims assessors juggle FNOL intake, photo review, repairer portal lookups, and payment approvals across multiple systems. Task mining exposes the highest-frequency desktop patterns &mdash; the ones ripe for straight-through processing or Agentforce autonomous handling. Especially valuable during CAT event surges where every saved minute compounds across tens of thousands of claims. Metric: assessor cases per day and manual-touch count per claim.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Claims desktop, repairer portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Halde+Bagdadi+IAG">Halde Bagdadi</a> (IAG Salesforce account team)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. AFCA Complaints Handling &amp; 30/45-Day SLAs</summary>
+    <div class="use-case-body">
+      <p>Australian general insurers face heightened AFCA (Australian Financial Complaints Authority) timeliness reporting, where complaint mishandling drives fines and remediation programs. Compliance Center codifies the complaint lifecycle end-to-end &mdash; intake, triage, internal dispute resolution, AFCA escalation, remediation payment &mdash; with segregation of duties and continuous evidence. Feeds automated case orchestration in Service Cloud and produces an auditable artefact regulators accept. Metric: complaint-resolution SLA compliance and AFCA determination win-rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, complaints/case system</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=James+Toulson+IAG+Salesforce">James Toulson</a> (Salesforce AE, IAG)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent competitor mentions (Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, Power Automate) tied directly to IAG surfaced in Slack or public sources — clean field for Apromore-first positioning ahead of the Retail Insurance AU pilot.</span></h2>
+  <details>
+    <summary>2. APRA CPS 230 Operational Risk &amp; Third-Party Controls</summary>
+    <div class="use-case-body">
+      <p>APRA CPS 230 requires regulated insurers to identify critical operations, set tolerance levels, and maintain evidenced controls over third-party service providers &mdash; a heavy lift for a group with NRMA, CGU, NZI, AMI, and WFI running on shared platforms. Compliance Center runs the CPS 230 control library as a live, monitored workflow with escalation and evidence pipeline. Metric: control coverage of critical operations and mean-time-to-evidence for APRA reviews.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Vendor management, GRC platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=James+Toulson+IAG+Salesforce">James Toulson</a> (Salesforce AE, IAG)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Agentforce Model Risk &amp; Auto-Adjudication Governance</summary>
+    <div class="use-case-body">
+      <p>As Agentforce lands in claims and contact-centre workflows, APRA and the Financial Accountability Regime (FAR) expect every autonomous decision to be traceable, tested, and controllable. Compliance Center codifies the promote/monitor/retire lifecycle for each agent skill and produces continuous evidence for internal audit and regulators. Especially important given the Verint&rarr;Agentforce cutover in Retail Insurance AU. Metric: audit-ready agent skills covered and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Hamish+Miles+IAG">Hamish Miles</a> (Retail Insurance AU sponsor, IAG)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Insurance Australia Group Limited by mining CGU/WFI underwriting, NRMA claims, and Verint&rarr;Agentforce contact-centre flows across its MuleSoft AEH and Salesforce estate, task-mining the consultant, underwriter, and claims-assessor desktops to expose the swivel-chair work Agentforce Operations can eliminate, and running AFCA complaints, APRA CPS 230, and Agentforce model-risk controls through Compliance Center to compress cycle times, lift first-contact resolution, and deliver always-on regulator-ready evidence.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

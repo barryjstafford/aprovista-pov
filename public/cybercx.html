@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -111,89 +112,131 @@
 <main>
   <h1>CyberCX Pty Ltd</h1>
   <div class="snapshot">
-    <p><strong>Technology, Cybersecurity Services</strong></p>
+    <p><strong>Technology, Cybersecurity Professional Services</strong></p>
     <p><strong>Revenue:</strong> ~A$300M &nbsp;|&nbsp; <strong>Employees:</strong> ~1,400 &nbsp;|&nbsp; <strong>HQ:</strong> Melbourne, Australia</p>
     <p><strong>Major Subsidiaries:</strong> Phriendly Phishing, Decipher Works, CQR Consulting, CloudTen Industries, Basis Networks</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Marketing Cloud (SLK), Pardot, Sales Performance Management (SPM), MuleSoft, Salesforce Automotive (AELA), Salesforce for Automotive</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Kofax, Talend (both flagged for consolidation per active MuleSoft opp) [Org62]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> CyberCX Renewal 679 SFA / 1902 Call Center (<a href="https://org62.my.salesforce.com/006ed0000092dWLAAY">$1.87M</a>) | CyberCX AELA Upgrade (<a href="https://org62.my.salesforce.com/006ed00000acRleAAE">$770K</a>) | MuleSoft L3 Integration Consolidation replacing Kofax/Talend (<a href="https://org62.my.salesforce.com/006ed00000Vhhe9AAB">$270K</a>)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Unlimited + Enterprise), Service Cloud (Unlimited), Marketing Cloud Account Engagement (Pardot), Revenue Intelligence, Customer Data Cloud, Agentforce Conversations, Event Monitoring, Salesforce Inbox, CRM Analytics, MuleSoft</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Kofax, Talend</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> CyberCX - Apromore (<a href="https://org62.my.salesforce.com/006ed00000f4mWHAAY">$120k</a>) &nbsp;|&nbsp; MuleSoft L3 Kofax/Talend Consolidation (<a href="https://org62.my.salesforce.com/006ed00000Vhhe9AAB">$270k</a>) &nbsp;|&nbsp; CyberCX AELA Upgrade (<a href="https://org62.my.salesforce.com/006ed00000acRleAAE">$770k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G17X1ECE">William Jones</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (MuleSoft + Sales Cloud)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">68/100</span> — T2 Develop</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t2">79/100</span> &mdash; T2 Develop</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint & Relationship</td><td>12/12</td><td class="cat-green">Deep Sales/Service/Marketing/MuleSoft footprint; $3M+ active pipeline across 10 opps.</td></tr>
-        <tr><td>Transformation & Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Active MuleSoft consolidation opp replacing Kofax + Talend; AELA upgrade in flight.</td></tr>
-        <tr><td>Compliance & Risk Pressure</td><td>8/8</td><td class="cat-green">Cyber consultancy operates under ISM, Essential Eight, IRAP, ISO 27001, SOC 2.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>10/15</td><td class="cat-orange">Cybersecurity professional services — process-heavy delivery but not top priority vertical.</td></tr>
-        <tr><td>Commercial Timing & Deal Viability</td><td>5/6</td><td class="cat-green">Multiple active opps well above $200K threshold; renewal cycle active now.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud install: Sales, Service, MC Account Engagement, Data Cloud, MuleSoft, Revenue Intelligence.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">Operates under ISM, Essential Eight, IRAP, ISO 27001, SOC 2 &mdash; strong Compliance Center wedge.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Active $3M+ pipeline; existing $120k Apromore opp already in Stage 02 [Org62].</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Data Cloud live; Agentforce retry in flight; MuleSoft consolidating Kofax + Talend; AELA upgrade active.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">24 acquisitions since 2019 create post-M&amp;A delivery variance; SOC/IR SLA pressure acknowledged in EBC prep.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Systems & Event-Log Readiness</td><td>6/12</td><td class="cat-orange">Sales/Service Cloud generate strong logs; ERP + ITSM system-of-record not confirmed.</td></tr>
-        <tr><td>Buyer & Champion Fit</td><td>10/20</td><td class="cat-orange">No named process owner surfaced yet; COO / CFO / Delivery-Ops sponsor still TBD.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>9/15</td><td class="cat-orange">Cybersecurity professional services &mdash; process-heavy but not top-priority AFPI vertical.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>12/20</td><td class="cat-orange">CEO John Paitaridis + SF AE William Jones engaged, but no customer-side process-owner champion confirmed.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help CyberCX Pty Ltd by mining its consulting-engagement lifecycle, incident-response workflow, and quote-to-cash processes across Sales Cloud + MuleSoft, cutting cycle time on complex security engagements by 15-25% and giving executives evidence-based visibility into utilization, SLA adherence, and post-M&A operational drift across 12+ acquired brands.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Post-Acquisition Delivery Harmonization</summary>
     <div class="use-case-body">
-      <p>CyberCX has rolled up 15+ Australian and NZ cybersecurity firms (Phriendly Phishing, Decipher Works, CQR, CloudTen, Basis, Asterisk, Foresight) since 2019. Each brand joined with its own PSA, ticketing, and delivery methodology, creating hidden variance in how the same "penetration test" or "IR retainer" is scoped, delivered, and invoiced. Apromore mines the Sales-Cloud-to-delivery-system event stream to reveal the true happy path vs. brand-specific detours — the foundation for standardizing service catalogs and margin. Metric moved: engagement cycle time and gross margin variance across acquired brands.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, PSA / ticketing</p>
+      <p>CyberCX has rolled up 24 Australian and NZ cybersecurity firms since 2019 (Phriendly Phishing, Decipher Works, CQR, CloudTen, Basis Networks and more), each with its own PSA, ticketing, and delivery methodology. The same "penetration test" or "IR retainer" is scoped, delivered, and invoiced differently across the acquired brands &mdash; hidden variance eats margin and blocks the Asia expansion plan. Apromore mines the Sales Cloud &rarr; delivery-system event stream to reveal the true happy path versus brand-specific detours, giving the executive team an evidence base to standardize service catalogs and gross margin. Metric moved: engagement cycle time and gross-margin variance across acquired brands.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, PSA / delivery ticketing</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=John+Paitaridis+CyberCX">John Paitaridis</a> (Group CEO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Incident Response &amp; SOC Ticket Flow</summary>
+    <summary>2. Quote-to-Cash &amp; Statement-of-Work Cycle</summary>
     <div class="use-case-body">
-      <p>CyberCX runs the largest Australian-owned SOC and IR practice; every incident ticket has a strict lifecycle from alert triage to containment, eradication, recovery, and client reporting. Analysts frequently context-switch between platforms, and SLAs against enterprise + government customers are contractually binding. Apromore mines the SIEM/SOAR/ITSM log to expose rework loops, tier-1-to-tier-2 escalation lag, and mean-time-to-contain by threat category. Metric moved: MTTD/MTTR, SLA breach rate, analyst utilization.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> ServiceNow ITSM, SIEM/SOAR</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alastair+MacGibbon+CyberCX">Alastair MacGibbon</a> (Chief Strategy Officer)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>3. Quote-to-Cash &amp; Statement-of-Work Cycle</summary>
-    <div class="use-case-body">
-      <p>Custom-scoped consulting engagements move through opportunity → SOW drafting → legal review → PO → resource allocation → invoicing, often with multiple approval loops and back-and-forth with the client. This directly ties to the $1.87M Sales Cloud renewal and the $770K AELA upgrade in flight [Org62]. Apromore mines the Sales Cloud + CPQ + finance event log to expose approval bottlenecks, discount leakage, and where SOWs stall for weeks before signature. Metric moved: quote-to-signed-SOW cycle time, deal desk throughput, DSO.</p>
+      <p>Custom-scoped consulting engagements move through opportunity &rarr; SOW drafting &rarr; legal review &rarr; PO &rarr; resource allocation &rarr; invoicing, with multiple approval loops and client back-and-forth. This directly touches the $1.87M Sales Cloud renewal and the $770k AELA upgrade currently in flight. Apromore mines the Sales Cloud + CPQ + finance event log to expose approval bottlenecks, discount leakage, and where SOWs stall for weeks before signature. Metric moved: quote-to-signed-SOW cycle time, deal-desk throughput, DSO.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, CPQ</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Liam+O'Shannessy+CyberCX">Liam O'Shannessy</a> (Executive Director, Testing &amp; Assurance)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Liam+O%27Shannessy+CyberCX">Liam O'Shannessy</a> (Executive Director, Testing &amp; Assurance)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Integration Consolidation: Kofax + Talend Retirement</summary>
+    <summary>3. Integration Consolidation: Kofax + Talend Retirement</summary>
     <div class="use-case-body">
-      <p>An active MuleSoft opp ($270K, stage 3 [Org62]) is explicitly positioning to replace Kofax and Talend for integration workloads. Before ripping and replacing, Apromore mines the current end-to-end flows through Kofax/Talend to surface every downstream dependency, hidden branching logic, and manual workaround — de-risking the migration and giving MuleSoft a target-state process map to build against. Metric moved: migration risk (defects caught pre-cutover), integration retirement velocity, licence savings realized.</p>
+      <p>The active MuleSoft L3 opp ($270k, Stage 03) is explicitly positioned to replace Kofax and Talend for integration workloads. Before rip-and-replace, Apromore mines the current end-to-end flows through Kofax and Talend to surface every downstream dependency, hidden branching, and manual workaround &mdash; de-risking the cutover and giving MuleSoft a target-state process map to build against. Metric moved: pre-cutover defect capture rate, integration-retirement velocity, licence savings realized.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Kofax, Talend</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Anthony+Boland+CyberCX">Anthony Boland</a> (Chief Information Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>5. Compliance-Center: IRAP / Essential Eight Evidence Automation</summary>
+    <summary>1. SOC Analyst Desktop Swivel-Chair</summary>
     <div class="use-case-body">
-      <p>CyberCX both assesses clients against and operates its own controls under ISM, Essential Eight, IRAP, ISO 27001, and SOC 2. Compliance evidence today is largely manual — screenshots, ticket exports, sampled logs. Apromore's Compliance Center wedge continuously conforms live event logs against declared control models, producing audit-ready evidence packs and flagging drift as it happens. This is a natural add-on to the SOC and IR use cases above. Metric moved: audit prep hours, control-drift detection lag, IRAP re-assessment cost.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> ServiceNow GRC, Salesforce Service Cloud</p>
+      <p>CyberCX runs the largest Australian-owned SOC, and every alert cycles a tier-1 analyst through SIEM, SOAR, threat-intel portals, ticketing, and email while the SLA clock runs. Task mining the SOC analyst desktop captures how much time is lost to app-switching, copy/paste enrichment, and repeated lookups that Agentforce for Service could automate &mdash; and directly repositions the "lackluster" Agentforce deployment as a task-mining-led business case. Metric moved: mean-time-to-triage per alert and analyst-touch minutes per incident.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SIEM / SOAR consoles, ITSM ticketing</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alastair+MacGibbon+CyberCX">Alastair MacGibbon</a> (Chief Strategy Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Consulting Engagement Manager Desktop</summary>
+    <div class="use-case-body">
+      <p>Engagement managers spend the day flipping between Salesforce, delivery ticketing, timesheets, and spreadsheet trackers to keep custom cyber engagements on time and on margin. Task mining exposes the exact steps where they re-key status, chase approvals, and reconcile utilization &mdash; feeding an Agentforce Operations bench of straight-through automations. Metric moved: manager admin hours per engagement week and utilization-report cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, delivery / PSA workbench</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Liam+O%27Shannessy+CyberCX">Liam O'Shannessy</a> (Executive Director, Testing &amp; Assurance)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Post-Acquisition Employee Onboarding</summary>
+    <div class="use-case-body">
+      <p>Each new acquisition drops a batch of employees who need CyberCX HR provisioning, laptop imaging, security clearance checks, and access to Salesforce, delivery, and email systems. Task mining the HR/IT onboarding desktop shows how much of the day-one experience is manual copy-between-systems &mdash; exactly the shape of work Agentforce and MuleSoft can automate. Metric moved: onboarding cycle time per acquired employee and IT tickets raised in the first 30 days.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> HR platform, IT service desk</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Anthony+Boland+CyberCX">Anthony Boland</a> (Chief Information Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. IRAP / ISM / Essential Eight Evidence Automation</summary>
+    <div class="use-case-body">
+      <p>CyberCX both assesses clients against and operates its own controls under the ACSC Information Security Manual, Essential Eight, and IRAP. Compliance evidence today is largely manual &mdash; screenshots, ticket exports, sampled logs &mdash; and re-collected for every re-assessment cycle. Compliance Center continuously conforms live event logs against declared control models, produces audit-ready evidence packs, and flags drift the moment it happens. Metric moved: audit-prep hours per IRAP re-assessment and control-drift detection lag.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ITSM / GRC platform, Salesforce Service Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Katherine+Mansted+CyberCX">Katherine Mansted</a> (Executive Director, Cyber Intelligence)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Celonis, ARIS, Signavio, ABBYY, ServiceNow-Process-Mining, Appian, UiPath, or Power Automate deployments tied to CyberCX surfaced in Slack or web scans — greenfield opportunity for Apromore.</span></h2>
+  <details>
+    <summary>2. ISO 27001 &amp; SOC 2 Continuous Controls</summary>
+    <div class="use-case-body">
+      <p>ISO 27001 and SOC 2 Type II require continuous evidence that controls operated effectively across the audit window, not a point-in-time snapshot. Compliance Center runs each control as a monitored workflow with codified thresholds, sign-offs, and always-on evidence &mdash; the exact shape needed as CyberCX layers Agentforce and Data Cloud into client-touching services. Metric moved: control exceptions closed within SLA and time-to-evidence per audit request.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> GRC platform, Salesforce Shield / Event Monitoring</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alastair+MacGibbon+CyberCX">Alastair MacGibbon</a> (Chief Strategy Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. AI / Agentforce Model Governance</summary>
+    <div class="use-case-body">
+      <p>The July 2025 EBC brief flagged that CyberCX's initial Agentforce deployment was "lackluster" and a retry is in flight on top of a live Data Cloud instance. Every internal AI use case &mdash; alert triage, engagement summarization, propensity scoring &mdash; needs a lifecycle governance record before it can be trusted with client-facing security data. Compliance Center codifies the promote/monitor/retire process and produces continuous evidence for both internal risk and client-audit demands. Metric moved: audit-ready models covered and mean-time-to-evidence for AI governance reviews.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Data Cloud, model registry</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Anthony+Boland+CyberCX">Anthony Boland</a> (Chief Information Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help CyberCX Pty Ltd by mining its post-acquisition delivery, quote-to-cash, and Kofax/Talend-to-MuleSoft integration workflows across Sales Cloud and the wider Salesforce estate, task-mining SOC-analyst and engagement-manager desktops to sharpen the Agentforce retry, and running IRAP, ISO 27001, SOC 2, and internal AI-model governance through Compliance Center to compress cycle time, cut analyst touch-time, and produce always-on audit evidence for regulators and clients.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -107,98 +112,142 @@
 <main>
   <h1>JPMorgan Chase &amp; Co.</h1>
   <div class="snapshot">
-    <p><strong>Financial Services, Banking (Global Universal Bank)</strong></p>
-    <p><strong>Revenue:</strong> ~$177B (FY24 net revenue) &nbsp;|&nbsp; <strong>Employees:</strong> ~317,000 &nbsp;|&nbsp; <strong>HQ:</strong> New York, NY, USA</p>
-    <p><strong>Major Subsidiaries:</strong> J.P. Morgan Securities, Chase Bank, J.P. Morgan Private Bank, J.P. Morgan Asset Management, JPMorgan Chase Bank N.A.</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Tableau, Analytics Cloud, Service Cloud, Agentforce (Flex Credits purchased Jan 2026), Expert Services / Signature Success</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Naveen / Anish Bhimani org]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Tableau + Analytics + Platform renewal (<a href="https://org62.my.salesforce.com/006ed00000ThDEDAA3">$16.4M</a>) &nbsp;|&nbsp; Expert Services FY27 New Business (<a href="https://org62.my.salesforce.com/006ed00000TlYTnAAN">$1.0M</a>) &nbsp;|&nbsp; Tab CTO + Expertise Hours Renewal (<a href="https://org62.my.salesforce.com/006ed00000SxJg2AAF">$1.0M</a>)</p>
+    <p><strong>Financial Services, Banking</strong></p>
+    <p><strong>Revenue:</strong> ~US$182.4B (2026) &nbsp;|&nbsp; <strong>Employees:</strong> ~318,500 &nbsp;|&nbsp; <strong>HQ:</strong> New York, NY, United States</p>
+    <p><strong>Major Subsidiaries:</strong> Chase Bank, J.P. Morgan &amp; Co., J.P. Morgan Asset Management, Chase UK, One Equity Partners</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Financial Services Cloud, Tableau, Analytics Cloud, Marketing Cloud Engagement, Data Cloud, Agentforce (Flex Credits, Jan 2026)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Tableau + Analytics + Platform Renewal (<a href="https://org62.my.salesforce.com/006ed00000ThDEDAA3">$16.4M</a>) &nbsp;|&nbsp; JPMC CCB Client Central &mdash; Data Cloud for Meeting Prep (<a href="https://org62.my.salesforce.com/006ed00000OAlCkAAL">$2.8M</a>) &nbsp;|&nbsp; JPMC Wealth FSC + AF + D360 (<a href="https://org62.my.salesforce.com/006ed00000VoSLpAAN">$1.6M</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
-    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U08SUH058H1">Hanifa Begum Bahar</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GYLBM27J">Samantha Gutierrez</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">88/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">91/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Vertical fit &amp; process complexity</td><td>12/12</td><td class="cat-green">Regulated banking at global scale — KYC, payments, and reporting are naturally event-log-rich.</td></tr>
-        <tr><td>Compliance / regulatory pressure</td><td>12/12</td><td class="cat-green">Basel III, CCAR, Dodd-Frank, OCC — Compliance Center is a direct wedge for reporting lineage.</td></tr>
-        <tr><td>Existing Salesforce footprint</td><td>12/12</td><td class="cat-green">Tableau, Analytics, Service Cloud, Agentforce Flex Credits — deep multi-cloud platform investment.</td></tr>
-        <tr><td>Executive AI mandate</td><td>11/12</td><td class="cat-green">FINS CAB participation and Agentforce Flex Credit purchase signal top-down AI investment mandate.</td></tr>
-        <tr><td>Stated intent in Apromore/Regrello</td><td>11/12</td><td class="cat-green">CAB Nov 2025 — publicly flagged Apromore interest through Anish Bhimani (CPO, Global Banking).</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Global universal bank &mdash; top AFPI priority vertical across every geography.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$53M SFA renewal, $16M Tableau+Analytics+Platform renewal, FSC+AF+D360 across six LOBs.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Agentforce Flex Credits (Jan 2026) + multiple in-flight FSC + Agentforce + Data 360 opps.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">Basel III endgame, CCAR, LCR, Dodd-Frank, OCC, KYC/AML &mdash; direct Compliance Center wedge.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">~$10T/day payments, KYC onboarding, syndication and reporting &mdash; event-log-rich by design.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Executive AI mandate</td><td>11/12</td><td class="cat-orange">Strong signal but Agentforce Flex Credits still in early consumption — process-mining wedge needs anchoring.</td></tr>
-        <tr><td>Stated intent in Apromore/Regrello</td><td>11/12</td><td class="cat-orange">CAB interest is genuine but not yet an active pipeline opp — must convert intent into a scoped pilot.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>4/6</td><td class="cat-orange">FINS CAB Apromore interest is fresh but no active AFPI pipeline yet &mdash; must scope a paid pilot.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>15/20</td><td class="cat-orange">Anish Bhimani (CPO, Global Banking) publicly named as sponsor; no customer-side pilot lead confirmed.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help JPMorgan Chase &amp; Co. by mining its consumer onboarding, wholesale payments, and regulatory reporting event logs to convert the FINS CAB Apromore interest into a scoped pilot — collapsing SQL+PQL specialists into a single no-code analyst view and feeding the highest-frequency broken flows straight into the existing Agentforce Flex Credit estate.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Consumer Onboarding &amp; KYC/AML Cycle Time</summary>
     <div class="use-case-body">
-      <p>Chase Consumer &amp; Community Banking onboards millions of retail and small-business customers a year through a fragmented KYC/AML workflow that spans branch, digital, and back-office review queues. AFPI mines the actual account-opening event log to expose rework loops, manual escalations, and stalled cases that quietly push regulatory SLAs. The play plugs directly into the existing Agentforce Flex Credit footprint so Chase pays for outcomes, not implementation; the metric it moves is median onboarding cycle time and first-touch-resolution rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Agentforce</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Anish+Bhimani+JPMorgan+Chase">Anish Bhimani</a> (CPO, Global Banking)</p>
+      <p>Chase Consumer &amp; Community Banking onboards millions of retail and small-business customers per year through a fragmented KYC/AML workflow that spans branch, digital, and back-office review queues. Apromore mines the actual account-opening event log to expose rework loops, manual escalations, and stalled cases that quietly push regulatory SLAs. The play plugs directly into the existing Agentforce Flex Credit footprint so Chase pays for outcomes, not implementation. Metric: median onboarding cycle time and first-touch-resolution rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, KYC/AML platform (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Anish+Bhimani+JPMorgan+Chase">Anish Bhimani</a> (Managing Director and Chief Product Officer, Global Banking)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Commercial &amp; Investment Bank Deal Lifecycle</summary>
+    <summary>2. Wholesale Payments &amp; Wire Exception Handling</summary>
     <div class="use-case-body">
-      <p>The end-to-end path from pitch → mandate → syndication → booking spans dozens of internal systems and every desk runs its own variant. AFPI reconstructs the real process from CRM, deal-management, and settlement events to show where mandates leak, where legal review re-queues, and where booking breaks. Value framing against TPL: the process-mining tier reveals the top three revenue-leak paths inside a quarter, well under a single lost mandate. Metric: mandate-to-book cycle time and revenue leakage per stage.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud / CRM, Deal-management platform (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Sanoke+Viswanathan+JPMorgan+Chase">Sanoke Viswanathan</a> (CEO, International Consumer Bank / former CAO of CIB)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>3. Service Case Deflection for the $100M+ Service Cloud Estate</summary>
-    <div class="use-case-body">
-      <p>JPMC is a Service Cloud RED account with active escalations and sensitive routing. AFPI mines the case-handling event log — swivel-chair between agents, hold-and-resume, escalation ping-pong — and hands the highest-frequency broken flows straight to Agentforce for automation. This is the fastest Compliance-Center wedge: the same process log surfaces reg-mandated complaint SLAs. Metric: cost-to-serve per case and % cases fully agent-resolved.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Agentforce</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Service+Cloud+CSM+JPMorgan+Chase">Service Cloud CSM</a> (in #jpmorgan-support-csm-collabration)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Wholesale Payments &amp; Wire Exception Handling</summary>
-    <div class="use-case-body">
-      <p>JPM Payments processes ~$10T/day; every wire that lands in exception review is a manual cost and a customer-experience risk. AFPI mines the exception queue to distinguish repeatable failure patterns (data quality, sanctions hit, cutoff timing) from true one-offs, then routes the repeatable ones to Agentforce Operations. This is the clearest 2-4 week time-to-value story vs. Celonis — no PQL specialist, one no-code analyst inside Payments Ops can pilot. Metric: exception-clear rate per FTE and STP percentage.</p>
+      <p>J.P. Morgan Payments processes roughly $10T per day; every wire that lands in exception review is a manual cost and a customer-experience risk. Apromore mines the exception queue to distinguish repeatable failure patterns (data quality, sanctions hit, cutoff timing) from true one-offs, then routes the repeatable ones to Agentforce Operations. This is the clearest 2-4 week time-to-value story vs. a specialist SQL/PQL platform &mdash; one no-code analyst inside Payments Ops can pilot. Metric: exception-clear rate per FTE and STP percentage.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Payments platform (TBD), Agentforce</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Takis+Georgakopoulos+JPMorgan+Chase">Takis Georgakopoulos</a> (Global Head of Payments)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Global+Head+Payments+JPMorgan+Chase">Global Head of Payments</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Regulatory Reporting &amp; Compliance Center Wedge</summary>
+    <summary>3. Commercial &amp; Investment Bank Deal Lifecycle</summary>
     <div class="use-case-body">
-      <p>Basel III endgame, CCAR, LCR, and OCC reporting all consume upstream operational data whose lineage is only partly documented. AFPI's Compliance Center lays a process-lineage view over reporting workflows so audit and internal risk see the same picture control functions do — a defensible answer to "prove the process." Metric: audit-finding count and reporting close-cycle days.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Regulatory reporting platform (TBD), Tableau</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Elena+Korablina+JPMorgan+Chase">Elena Korablina</a> (Global Controller)</p>
+      <p>The end-to-end path from pitch &rarr; mandate &rarr; syndication &rarr; booking spans dozens of internal systems and every desk runs its own variant. Apromore reconstructs the real process from CRM, deal-management, and settlement events to show where mandates leak, where legal review re-queues, and where booking breaks. Value framing against TPL: the process-mining tier reveals the top three revenue-leak paths inside a quarter, well under a single lost mandate. Metric: mandate-to-book cycle time and revenue leakage per stage.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud / CRM, Deal-management platform (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+CIB+Operations+JPMorgan+Chase">Head of CIB Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Wealth Advisor Desktop &amp; Meeting Prep</summary>
+    <div class="use-case-body">
+      <p>The active $2.8M CCB Client Central &mdash; Data Cloud for Meeting Prep opp is aimed squarely at bringing advisor context together in one pane. Task mining the advisor desktop today captures the exact swivel-chair between FSC, custody, planning tools, and email that Client Central is being built to replace &mdash; and quantifies the FTE hours saved in the business case. Feeds Agentforce Operations directly. Metric: meeting-prep minutes per advisor per client and post-meeting note-writing time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, Data Cloud (Client Central)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Wealth+Technology+JPMorgan+Chase">Head of Wealth Technology</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Chase Service Cloud Agent Handle-Time</summary>
+    <div class="use-case-body">
+      <p>Chase's Consumer &amp; Community Banking contact centers run on Service Cloud with measurable AHT and after-call-work variability across product lines. Task mining captures each agent's on-screen actions to isolate the tabs and macros that eat wrap time, then hands the highest-frequency broken flows to Agentforce for automation. Pairs directly with the Agentforce Flex Credit spend already committed. Metric: AHT and after-call-work minutes per contact type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, Agentforce</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Consumer+Contact+Center+JPMorgan+Chase">Head of Consumer Contact Center Operations</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Private Client Onboarding Desktop</summary>
+    <div class="use-case-body">
+      <p>The $1.6M Private Client FSC + AF + D360 opp is being built to modernize the onboarding of high-net-worth clients across Chase Private Client and J.P. Morgan Private Bank. Task mining exposes re-keying between the onboarding portal, KYC systems, custody, and product setup &mdash; then names the exact steps where Agentforce can drive straight-through processing. Metric: onboarding cycle time and manual-touch count per new private client.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, Private Bank onboarding portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Private+Bank+Onboarding+JPMorgan+Chase">Head of Private Bank Onboarding</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. Basel III Endgame &amp; CCAR Reporting Lineage</summary>
+    <div class="use-case-body">
+      <p>Basel III endgame, CCAR, LCR, and OCC reporting all consume upstream operational data whose lineage is only partly documented across dozens of source systems. Compliance Center lays a process-lineage view over reporting workflows so audit and internal risk see the same picture control functions do &mdash; a defensible answer to "prove the process." Especially valuable as regulators sharpen focus on model risk and end-to-end reconcilability. Metric: audit-finding count and reporting close-cycle days.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Regulatory reporting platform (TBD), Tableau</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Global+Controller+JPMorgan+Chase">Global Controller / Head of Regulatory Reporting</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. AML / SAR Alert Adjudication</summary>
+    <div class="use-case-body">
+      <p>Chase and J.P. Morgan sit on billions of daily transactions that generate a firehose of AML alerts &mdash; every one of which must be adjudicated with defensible evidence and cleared within regulator-mandated windows. Compliance Center runs alert triage, escalation, and SAR filing as a controlled workflow with codified SLAs, and the same event log feeds the process-mining view of where alerts slip. Metric: alert-clearing SLA hit-rate and time-to-SAR.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> AML monitoring platform (TBD), case management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+AML+Compliance+JPMorgan+Chase">Head of Global AML Compliance</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Model Risk &amp; Agentforce Lifecycle Governance</summary>
+    <div class="use-case-body">
+      <p>As JPMC scales Agentforce across Consumer, Wealth, Business Banking, and Private Client, every deployed agent is a governed model under SR 11-7 and the firm's internal Model Risk Management policy. Compliance Center codifies the promote/monitor/retire lifecycle for agents and models, producing continuous audit evidence for internal review and regulator examinations. Directly de-risks the Agentforce Flex Credit consumption ramp. Metric: audit-ready agents in production and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce, model registry / MLOps pipeline</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Model+Risk+Officer+JPMorgan+Chase">Chief Model Risk Officer</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help JPMorgan Chase &amp; Co. by mining consumer onboarding, wholesale payments, and CIB deal-lifecycle event logs across the Salesforce and legacy banking estate, task-mining advisor, contact-center, and private-client desktops to redirect swivel-chair work into the existing Agentforce Flex Credit spend, and running Basel III / CCAR reporting, AML / SAR adjudication, and Agentforce model-lifecycle governance through Compliance Center to cut cycle times, lift STP, and deliver always-on regulator-ready evidence.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

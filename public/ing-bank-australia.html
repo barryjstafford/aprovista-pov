@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -112,53 +113,51 @@
   <h1>ING Bank (Australia) Limited</h1>
   <div class="snapshot">
     <p><strong>Financial Services, Retail &amp; Business Banking</strong></p>
-    <p><strong>Revenue:</strong> €971M total income (2025) &nbsp;|&nbsp; <strong>Employees:</strong> ~2,050 FTE &nbsp;|&nbsp; <strong>HQ:</strong> Sydney, Australia</p>
-    <p><strong>Major Subsidiaries:</strong> ING Bank N.V. (parent), ING Direct Australia</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Full CRM), Platform, Marketing Cloud (ExactTarget), Data Cloud / Data 360, Tableau, Informatica PowerCenter → IDMC (migration in flight)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Google Gemini (customer-facing chatbot for CC 2.0), internal data platforms "radar" and "neo", Genesys-adjacent contact centre stack [Slack]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> ING Bank - Apromore (<a href="https://org62.my.salesforce.com/006ed00000XH2IZAA1">$250k</a>) | ING Bank - Agentforce Complaint Management (<a href="https://org62.my.salesforce.com/006ed00000XH5wMAAT">$150k</a>) | ING Bank - Agentforce for Mortgages (<a href="https://org62.my.salesforce.com/006ed00000XfQtBAAV">$250k</a>)</p>
+    <p><strong>Revenue:</strong> ~A$1.69B (2023) &nbsp;|&nbsp; <strong>Employees:</strong> ~2,486 &nbsp;|&nbsp; <strong>HQ:</strong> Sydney, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> ING Direct Australia (retail brand), parent ING Groep N.V.</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Unlimited Edition), Marketing Cloud Engagement (Corporate + Pro), Marketing Cloud Personalisation, Tableau (Creator/Viewer/Explorer + Data Mgmt), Salesforce Shield, Data Mask, Privacy Center, Distributed Marketing, Social Studio, Informatica PowerCenter &rarr; IDMC (migration in flight)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Google Gemini, radar, neo</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> ING Bank - Apromore (<a href="https://org62.my.salesforce.com/006ed00000XH2IZAA1">$250k</a>) &nbsp;|&nbsp; ING Bank - Agentforce Complaint Management (<a href="https://org62.my.salesforce.com/006ed00000XH5wMAAT">$150k</a>) &nbsp;|&nbsp; ING Bank - Agentforce for Mortgages (<a href="https://org62.my.salesforce.com/006ed00000XfQtBAAV">$250k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U09PQ17SDN0">Michel Pirog</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">95/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">95/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Retail + business banking — top-priority FSC vertical; ANZ, Westpac, NAB already live proof points.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Full CRM + Platform + Marketing Cloud + Data 360 + Tableau + Informatica IDMC in flight.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Live Agentforce Complaints + Mortgages opps, Data 360 upgrade, GenAI in contact centre.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">COO Berkay Özlüdil engaged, tribes mapped, Apromore demo already scheduled with COO [Slack].</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">APRA CPS230 operational-resilience regulation live; existing Security Center opps [Org62].</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Retail + business banking &mdash; top-priority FSC vertical; ANZ, NAB, Westpac already live proof points.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Full Sales Cloud + MC Engagement/Personalisation + Tableau + Shield + Informatica IDMC in flight.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Live Agentforce Complaints + Mortgages opps; Gemini in CC 2.0; Data 360 &amp; MC Personalisation moving.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">APRA CPS230 op-resilience regime + open Security Center opp; AUSTRAC AML pressure across retail bank.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">$250K Apromore opp stage 2 + $20K POC stage 5 (Negotiating) &mdash; timing is now.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">$250K Apromore opp already in Org62 stage 2; COO demo scheduled — timing is optimal.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-orange">Salesforce + MC give clean logs; legacy "radar" / "neo" backends may need connectors.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-orange">Salesforce + MC give clean logs; legacy "radar"/"neo" backends may need connectors and data-eng effort.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">COO Berkay &Ouml;zl&uuml;dil engaged; Megan Green (Complaints) &amp; Tina Imada (Mortgages) named &mdash; no LinkedIn-verified champion yet.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help ING Bank (Australia) Limited by mining complaints, mortgage origination, and broker workflows to hit the COO's 5% cost-reduction mandate, prove the 50%-in-2-days complaints KPI, and give APRA CPS230 an evidence-based operational-resilience control plane — the same wedge that landed at NAB, ANZ, and Westpac.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Complaints Management — Root-Cause &amp; 2-Day Resolution KPI</summary>
+    <summary>1. Complaints Management &mdash; Root-Cause &amp; 2-Day Resolution KPI</summary>
     <div class="use-case-body">
-      <p>Complaints Manager Megan Green's team has a strict KPI to resolve 50% of complaints within two days but lacks deep reporting for root-cause analysis and workforce management tooling [Slack]. Apromore reconstructs the full complaint lifecycle from Service Cloud + telephony logs, exposes the variants that blow past 48 hours, and pinpoints handoffs where SLA breaks. This is the "low-hanging fruit" COO Tijn Lodsteijn asked for — measurable within 3-4 weeks and directly attributable to the cost-reduction mandate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Contact Centre 2.0 telephony</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Megan+Green+ING">Megan Green</a> (Head of Complaints Management)</p>
+      <p>Complaints Manager Megan Green's team has a strict KPI to resolve 50% of complaints within two days but lacks root-cause reporting and workforce-management tooling [Slack]. Apromore reconstructs the full complaint lifecycle from Service Cloud + CC 2.0 telephony logs, exposes variants that blow past 48 hours, and pinpoints the handoffs where SLA breaks. This is the "low-hanging fruit" COO Tijn Lodsteijn asked for &mdash; measurable within 3-4 weeks and directly attributable to the 5% cost-reduction mandate. Metric: complaint cycle time and 48-hour SLA hit-rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, CC 2.0 telephony</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Megan+Green+ING+Australia">Megan Green</a> (Head of Complaints Management)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Mortgage Origination — Credit Decision Cycle Time</summary>
+    <summary>2. Mortgage Origination &mdash; Credit Decision Cycle Time</summary>
     <div class="use-case-body">
-      <p>ING enhanced mortgage credit decisioning in 2025 with ML-based scorecards to enable faster, more digitised applications, and Australia was a principal driver of the group's €28.5B residential mortgage growth [Web]. Mining origination end-to-end will expose where broker submissions stall between "radar/neo" backends and Salesforce, quantify manual-touch rework, and validate the ML-scorecard uplift. Directly moves days-to-decision and pull-through rate on the highest-revenue product line.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce (FSC/Platform), core banking backends (radar, neo)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Tina+Imada+ING">Tina Imada</a> (Mortgages / Loan Origination Lead)</p>
+      <p>ING enhanced mortgage credit decisioning in 2025 with ML scorecards to enable faster, more digitised applications, and Australia was a principal driver of the group's €28.5B residential mortgage growth [Web]. Mining origination end-to-end will expose where broker submissions stall between "radar/neo" backends and Salesforce, quantify manual-touch rework, and validate the ML-scorecard uplift. Directly moves days-to-decision and pull-through on the highest-revenue product line and feeds the Agentforce for Mortgages business case. Metric: median days-to-decision and drop-off rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce FSC/Platform, core banking backends (radar, neo)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Tina+Imada+ING+Australia">Tina Imada</a> (Mortgages / Loan Origination Lead)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -166,34 +165,78 @@
   <details>
     <summary>3. Broker Portal &amp; Dormant-Broker Reactivation</summary>
     <div class="use-case-body">
-      <p>Mortgage broker channel is a strategic growth lever, and Tina Imada is explicitly interested in automating outreach and reactivating dormant brokers with Agentforce [Slack]. Apromore maps the broker-journey process from onboarding through deal submission, identifies where brokers go silent, and feeds Agentforce with the trigger events (last-touch, funnel exit) that make automated reactivation actually convert. Pairs cleanly with the existing $100K Broker Portal opp.</p>
+      <p>The mortgage broker channel is a strategic growth lever, and Tina Imada is explicitly interested in automating outreach and reactivating dormant brokers with Agentforce [Slack]. Apromore maps the broker journey from onboarding through deal submission, identifies where brokers go silent, and feeds Agentforce the trigger events (last-touch, funnel exit) that make automated reactivation actually convert. Pairs cleanly with the open $100K Broker Portal opp. Metric: dormant-broker reactivation rate and broker submission volume.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Broker Portal, Marketing Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Evan+Kaplan+Salesforce">Evan Kaplan</a> (Salesforce Broker Team Lead)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Broker+Channel+ING+Australia">Head of Broker Channel</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. CC 2.0 Contact-Centre Agent Handle-Time</summary>
+    <div class="use-case-body">
+      <p>ING AU's Contact Centre 2.0 is rolling in Gemini as a customer-facing assistant and Agentforce is the paired internal play &mdash; but before either lands, task mining the agent desktop reveals where AHT and after-call-work minutes actually leak. Capturing on-screen actions across Service Cloud, telephony, and the internal "radar/neo" lookups names the exact swivel-chair steps Agentforce should replace. Feeds the Agentforce Complaint Management opp with a defensible ROI baseline. Metric: AHT, wrap minutes per contact type, and app-switch count.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, CC 2.0 telephony</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Contact+Centre+ING+Australia">Head of Contact Centre Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Business Transaction Account Launch — Micro / SME Onboarding</summary>
+    <summary>2. Mortgage Credit-Assessor Desktop Swivel-Chair</summary>
     <div class="use-case-body">
-      <p>ING is aggressively expanding business banking under Hein Wegdam, with the digital-only Business Transaction Account (BTA) for the Micro segment launching this year [Slack]. Apromore instruments the new BTA onboarding process from day one so ING can spot friction, drop-off, and KYC bottlenecks in near-real-time — turning launch metrics into a continuous improvement loop rather than a post-mortem. Highest-leverage moment: mine the process while it's still being designed.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce FSC, Data 360</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Thomas+van+Pel+ING">Thomas van Pel</a> (Growth / Digital Sales, Business Banking)</p>
+      <p>Credit assessors flip between the broker submission in Salesforce, the ML-scorecard output, "radar/neo" servicing lookups, valuation portals, and email to complete a single application. Task mining the assessor desktop quantifies how much time is lost to re-keying, copy/paste, and repeated lookups &mdash; the exact tasks Agentforce for Mortgages can automate as straight-through steps. Directly validates the $250K Mortgages opp's productivity case. Metric: assessor cases per FTE per day and manual-touch count per application.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce FSC, valuation portals</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Tina+Imada+ING+Australia">Tina Imada</a> (Mortgages / Loan Origination Lead)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. APRA CPS230 Operational Resilience — Continuous Conformance</summary>
+    <summary>3. Fraud Case Investigator Desktop</summary>
     <div class="use-case-body">
-      <p>APRA CPS230 mandates end-to-end operational-resilience controls with evidence of critical-process performance, tolerance breaches, and third-party dependencies — a regime that goes live during FY27 [Docs]. Apromore's Compliance Center wedge produces on-demand audit trails and conformance dashboards for the four critical processes (payments, lending, deposits, incident response), replacing the annual manual attestation with continuous monitoring. Ties directly to the existing Security Center opps already in the pipeline.</p>
+      <p>The open Fraud Management opp ($150K) points at fraud analysts hopping between the fraud monitoring platform, Service Cloud cases, core banking, and email/attachment evidence. Task mining exposes the on-screen steps investigators repeat for every alert &mdash; and highlights where a first-pass Agentforce triage could compress the queue before humans touch it. Directly de-risks the Fraud Management deployment plan. Metric: analyst handle-time per alert and false-positive-clearing throughput.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Fraud Management System, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Fraud+Operations+ING+Australia">Head of Fraud Operations</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. APRA CPS 230 Operational Resilience &mdash; Continuous Conformance</summary>
+    <div class="use-case-body">
+      <p>APRA CPS 230 mandates end-to-end operational-resilience controls with evidence of critical-process performance, tolerance breaches, and third-party dependencies &mdash; and the regime is live for the majors [Docs]. Compliance Center produces on-demand audit trails and conformance dashboards for the four critical processes (payments, lending, deposits, incident response), replacing annual manual attestation with continuous monitoring. Ties directly to the existing Security Center opp already in the pipeline. Metric: critical-process coverage and mean-time-to-evidence for APRA queries.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Platform, Fraud Management System</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Berkay+Ozludil+ING">Berkay Özlüdil</a> (COO)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Berkay+Ozludil+ING+Australia">Berkay &Ouml;zl&uuml;dil</a> (COO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline"><a href="https://salesforce.enterprise.slack.com/archives/C0AE23LG9R9/p1776989968341449"><strong>Google Gemini</strong></a> — ING deploying Gemini as customer-facing chatbot in CC 2.0; internal Agentforce is the paired play, not a competing bot [Slack]. &nbsp;·&nbsp; <a href="https://salesforce.enterprise.slack.com/archives/C02DUF9TW1E/p1774403382409409"><strong>Celonis / Signavio / ARIS</strong></a> — beaten by Apromore at NAB in a crowded process-mining bake-off; no evidence of any incumbent process-mining tool at ING AU [Slack].</span></h2>
+  <details>
+    <summary>2. AUSTRAC AML / KYC Alert Adjudication</summary>
+    <div class="use-case-body">
+      <p>AUSTRAC and cross-border AML reporting require adjudicated evidence on every alert &mdash; and Australian banks are under sustained enforcement pressure post-Westpac and post-CBA. Compliance Center runs alert triage, escalation, and SMR filing as a single controlled workflow with codified SLAs and full evidence trails. Integrates with the Fraud Management stack and gives the CRO a defensible position on AUSTRAC readiness. Metric: alert-clearing SLA hit-rate and time-to-SMR.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Fraud Management System, core banking</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Financial+Crime+ING+Australia">Head of Financial Crime</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. ASIC RG 271 Complaint Regulatory Reporting</summary>
+    <div class="use-case-body">
+      <p>ASIC RG 271 requires banks to record, classify, and report complaints on a mandatory 30-day SLA with granular breach and remediation evidence. Compliance Center takes the Service Cloud complaint stream, codifies the RG 271 workflow, and produces an always-on report the CRO and ASIC can query directly &mdash; pairing perfectly with the Complaints Management process-mining use case above. Metric: RG 271 SLA breach rate and reporting error rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, CC 2.0 telephony</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Complaints+Compliance+ING+Australia">Head of Regulatory Reporting</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help ING Bank (Australia) Limited by process-mining complaints, mortgage origination, and broker workflows to hit the COO's 5% cost-reduction mandate and the 50%-in-2-days complaints KPI, task-mining CC 2.0 agents and mortgage credit assessors to expose the swivel-chair work Agentforce Operations should automate, and running APRA CPS 230, AUSTRAC AML, and ASIC RG 271 through Compliance Center to give ING a continuous, evidence-based operational-resilience and financial-crime control plane.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

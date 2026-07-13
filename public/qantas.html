@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -112,43 +113,41 @@
   <h1>Qantas Airways Limited</h1>
   <div class="snapshot">
     <p><strong>Travel, Transportation &amp; Hospitality, Airlines</strong></p>
-    <p><strong>Revenue:</strong> A$23.8B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~29,700 &nbsp;|&nbsp; <strong>HQ:</strong> Mascot, Australia</p>
+    <p><strong>Revenue:</strong> ~A$23.8B (FY25) &nbsp;|&nbsp; <strong>Employees:</strong> ~29,700 &nbsp;|&nbsp; <strong>HQ:</strong> Mascot, Australia</p>
     <p><strong>Major Subsidiaries:</strong> Jetstar, QantasLink, Qantas Freight, Qantas Loyalty (Frequent Flyer), TripADeal</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud Unlimited, Service Cloud Unlimited, MuleSoft Titanium (Anypoint), Tableau, Slack Enterprise+, Signature Success, Einstein for Service</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Jodi Smith] — airline ops stack likely includes Sabre/Amadeus, Jeppesen and SAP but not visible in Org62.</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Qantas - Apromore - Safety &amp; Risk (<a href="https://org62.my.salesforce.com/006ed00000dV6lpAAC">$200k</a>) | Qantas - 360 Digital Transformation #Upside (<a href="https://org62.my.salesforce.com/006ed00000cEHcbAAG">$2.03M</a>) | Qantas C360 Digital Transformation Multi-Cloud (<a href="https://org62.my.salesforce.com/006ed00000acvjhAAA">$2.03M</a>)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales &amp; Service Cloud Unlimited, MuleSoft Anypoint (Titanium), Tableau (Creator/Explorer/Viewer), Slack Business Plus, Einstein for Service, CRM Analytics Plus, Service Cloud Voice, Salesforce Shield (Event Monitoring, Platform Encryption, Field Audit Trail), Salesforce Data Mask, Customer 360 Privacy Center</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Qantas - Apromore - Safety &amp; Risk (<a href="https://org62.my.salesforce.com/006ed00000dV6lpAAC">$200k</a>) &nbsp;|&nbsp; Qantas - 360 Digital Transformation #Upside (<a href="https://org62.my.salesforce.com/006ed00000cEHcbAAG">$2.03M</a>) &nbsp;|&nbsp; MC - Qantas - Disruption SMS Consolidation (<a href="https://org62.my.salesforce.com/006ed00000YvvFhAAJ">$371k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U09MEGGAJGL">Jodi Smith</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">88/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">88/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Unlimited SFDC + MuleSoft Titanium + Tableau + Slack E+ + Signature Success — deep enterprise footprint.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Live "Qantas – Apromore – Safety &amp; Risk" opp already at $200k stage 02, close Dec 2026.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">AE surfaced fuel-conservation play across crew, flight, ground; disruptions and safety backlogs named.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>17/20</td><td class="cat-green">Jodi Smith engaged with strategy leads; TTH + Airline specialist channels active on the play.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">$3.1M renewal + $2M Multi-Cloud C360 + Gemini experimentation on fuel behaviours in flight.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Live "Qantas &ndash; Apromore &ndash; Safety &amp; Risk" opp at $200k, stage 02, close Dec 2026.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Unlimited Sales/Service + MuleSoft Titanium + Tableau + Shield + Slack &mdash; deep enterprise footprint.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">AE surfaced fuel-conservation, disruption recovery, and safety-case backlogs as active pain themes.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">Service Cloud, MuleSoft, Event Monitoring, and airline ops systems all leave rich, minable event logs.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">$3.1M renewal + two $2M+ multi-cloud C360 transformations + PMA Flight Ops renewal in flight.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>10/15</td><td class="cat-orange">Airlines is adjacent, not a priority vertical — award partial vertical-fit points per targeting rubric.</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-orange">CASA / IOSA audit regime is real but narrower than SOX/AML — solid signal, not a top wedge.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>10/15</td><td class="cat-orange">Airlines is adjacent, not a top-priority AFPI vertical &mdash; partial vertical-fit points per rubric.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>17/20</td><td class="cat-orange">Jodi Smith actively co-selling with Qantas strategy leads; no customer-side executive champion confirmed on LinkedIn yet.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Qantas Airways Limited by mining the on-time-departure, disruption-recovery, and safety &amp; risk case-management processes that already have a live $200k opp and executive sponsorship, delivering measurable fuel, dispatch reliability, and crew-productivity gains that plug directly into the in-flight $2M multi-cloud transformation.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Safety &amp; Risk Case-Management Cycle Time</summary>
     <div class="use-case-body">
-      <p>Every safety report, hazard, and incident at Qantas Group must be triaged, investigated, and closed under CASA and IOSA audit windows. Today those cases flow through multiple hand-offs across flight ops, engineering, and cabin safety with limited end-to-end visibility. AFPI can mine the full case lifecycle to expose reopens, aged queues, and investigator bottlenecks, then trigger Agentforce actions to route, escalate, and close cases faster. Target metric: median case cycle time and % reopened after closure. This use case is already funded via the live Apromore Safety &amp; Risk opp.</p>
+      <p>Every safety report, hazard, and incident at Qantas Group must be triaged, investigated, and closed under CASA and IOSA audit windows. Today those cases flow through multiple hand-offs across flight ops, engineering, and cabin safety with limited end-to-end visibility. AFPI can mine the full case lifecycle to expose reopens, aged queues, and investigator bottlenecks, then feed Agentforce nudges that route and escalate the right cases faster. Target metric: median case cycle time and % reopened after closure &mdash; already funded via the live $200k Apromore Safety &amp; Risk opp.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Safety+Qantas">Head of Group Safety</a> (Head of Group Safety)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Group+Safety+Qantas">Head of Group Safety</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -156,9 +155,9 @@
   <details>
     <summary>2. On-Time Departure &amp; Turnaround Sequence</summary>
     <div class="use-case-body">
-      <p>Turnaround is a choreography of fuelling, catering, cleaning, boarding, and dispatch — dozens of dependent steps that ripple into delay codes when any actor slips. Mining the actual event sequence per aircraft rotation exposes where the median turnaround hides its longest tail, and which airport or ground-handler is the systemic offender. AFPI can then feed Agentforce Operations with realtime nudges to gate agents and crew. Metric: on-time-departure % (D0/D15) and average turnaround minutes by port.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Sabre/Departure Control, ServiceNow</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=VP+Operations+Qantas">VP Airline Operations</a> (VP Airline Operations)</p>
+      <p>Turnaround is a choreography of fuelling, catering, cleaning, boarding, and dispatch &mdash; dozens of dependent steps that ripple into delay codes when any actor slips. Mining the actual event sequence per aircraft rotation exposes where the median turnaround hides its longest tail, and which port or ground handler is the systemic offender. Insight lands into Agentforce Operations as realtime nudges to gate agents and crew. Metric: on-time-departure % (D0/D15) and average turnaround minutes by port.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Departure Control System, MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=VP+Airline+Operations+Qantas">VP Airline Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -166,34 +165,78 @@
   <details>
     <summary>3. Irregular Operations (IROps) &amp; Disruption Recovery</summary>
     <div class="use-case-body">
-      <p>Cancellations, diversions, and weather events force a scramble across crew rescheduling, aircraft swap, hotel &amp; ground transport, and passenger re-accommodation. Slack signal shows Qantas is already tackling "Disruption SMS Consolidation" ($370k opp). Apromore can mine the disruption playbook end-to-end to prove where recovery time is lost and which cohorts of passengers are repeatedly under-served. Metric: hours from event to full recovery, and Net Promoter recovery after a disruption.</p>
+      <p>Cancellations, diversions, and weather events force a scramble across crew rescheduling, aircraft swap, hotel &amp; ground transport, and passenger re-accommodation. The live $371k "Disruption SMS Consolidation" opp already targets the outbound leg &mdash; process mining proves where the inbound recovery time is actually lost and which passenger cohorts are repeatedly under-served. Metric: hours from disruption event to full recovery and NPS bounce-back after the event.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Marketing Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Customer+Officer+Qantas">Chief Customer Officer</a> (Chief Customer Officer)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Customer+Officer+Qantas">Chief Customer Officer</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Contact Centre Agent Handle-Time (Loyalty + Voice)</summary>
+    <div class="use-case-body">
+      <p>The open $300k Contact Centre opp and $896k MC-Qantas Loyalty opp both hinge on freeing agent capacity during peak disruption and redemption spikes. Task mining the Service Cloud Voice console captures per-agent screen actions, tab-switching, and after-call-work minutes to isolate the exact steps Agentforce for Service can absorb. Feeds a tight AHT business case tied to the current Voice + Einstein for Service install base. Metric: AHT and after-call-work minutes per contact reason.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud Voice, Loyalty platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Contact+Centre+Qantas">Head of Contact Centre Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Fuel-Conservation Behavioural Compliance Loop</summary>
+    <summary>2. Crew Rostering &amp; Change Desktop</summary>
     <div class="use-case-body">
-      <p>Jodi Smith directly named this as a Qantas strategy-lead priority in June 2026: getting pilots, cabin crew, and ground staff to consistently execute fuel-saving procedures during taxi, climb, cruise, and descent. Much of the work is behavioural and offline, but each behaviour leaves a digital trace in flight-data, dispatch, and crew-briefing systems. AFPI can mine the compliance loop — briefed → executed → measured → coached — and pair it with Agentforce nudges. Metric: kg of fuel saved per sector vs plan.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Jeppesen/OFP, Salesforce Platform</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Sustainability+Officer+Qantas">Chief Sustainability Officer</a> (Chief Sustainability Officer)</p>
+      <p>The $750k PMA Flight Ops for Cabin Crew renewal signals continued investment in the crew management stack. Roster changes, sick-swap approvals, and open-time bidding today involve heavy manual coordination across rostering, comms, and payroll screens. Task mining the crew planner desktop exposes rekey and swivel-chair steps that are ripe for Agentforce Operations to automate. Metric: minutes per roster change and % changes completed without escalation.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Crew management system, PMA Flight Ops</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Crew+Operations+Qantas">Head of Crew Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Loyalty Redemption &amp; Complaint Resolution</summary>
+    <summary>3. Loyalty Redemption &amp; Complaint Desktop</summary>
     <div class="use-case-body">
-      <p>Qantas Frequent Flyer is one of the world's largest loyalty programs; award redemption, points-plus-pay, and status-recognition disputes flow through Service Cloud with Einstein for Service. Mining the redemption and complaint funnel exposes where members abandon at seat-selection, where partner-award nights stall, and which agent segments carry the highest handle time. AFPI + Agentforce can then automate the top 3 friction patterns. Metric: complaint TTR and redemption completion rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Marketing Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=CEO+Qantas+Loyalty">CEO Qantas Loyalty</a> (CEO Qantas Loyalty)</p>
+      <p>Qantas Frequent Flyer is one of the world's largest loyalty programs; award redemption, points-plus-pay, and status-recognition disputes flow through Service Cloud with Einstein for Service. Task mining the redemption/complaint agent desktop reveals where members abandon at seat-selection, where partner-award nights stall, and which agent segments carry the highest handle time. AFPI + Agentforce then automates the top three friction patterns. Metric: complaint TTR and redemption completion rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Loyalty platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=CEO+Qantas+Loyalty">CEO, Qantas Loyalty</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Celonis, Signavio, ARIS, ABBYY, ServiceNow, Appian, UiPath, or Power Automate mentions tied to Qantas surfaced in Slack or public news — landscape looks open, protect the Apromore Safety &amp; Risk opp already in flight.</span></h2>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. CASA / IOSA Safety Audit Evidence Loop</summary>
+    <div class="use-case-body">
+      <p>Qantas's operating certificate depends on continuous evidence for CASA (Australia) and biennial IOSA renewal &mdash; today assembled from Service Cloud safety cases, engineering logs, and manual spreadsheets. Compliance Center runs the audit-evidence workflow as a controlled process with segregation of duties, sign-offs, and always-on evidence pointers. Directly extends the Apromore Safety &amp; Risk opp into a codified audit posture. Metric: audit findings per cycle and mean-time-to-evidence per finding.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Field Audit Trail</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Regulatory+Compliance+Qantas">Head of Regulatory Compliance</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Fuel-Conservation Behavioural Compliance Loop</summary>
+    <div class="use-case-body">
+      <p>Jodi Smith named fuel-conservation compliance as a Qantas strategy-lead priority: getting pilots, cabin crew, and ground staff to consistently execute fuel-saving procedures during taxi, climb, cruise, and descent. Each behaviour leaves a digital trace in flight-data, dispatch, and briefing systems. Compliance Center codifies the briefed &rarr; executed &rarr; measured &rarr; coached loop as a controlled workflow with evidence and coaching handoffs to line managers. Metric: kg of fuel saved per sector vs plan and % coached-and-improved crew.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Flight-data / OFP, Salesforce Platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Sustainability+Officer+Qantas">Chief Sustainability Officer</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Trust 2.0 &mdash; Cyber, Privacy &amp; Data-Access Controls</summary>
+    <div class="use-case-body">
+      <p>The live $361k "Qantas Airways &mdash; Trust 2.0" opp signals a post-incident tightening of privacy, data-access, and cyber-response controls across the customer estate. Compliance Center runs those controls as a codified workflow &mdash; access reviews, exception approvals, breach playbooks &mdash; with continuous evidence pulled from Shield, Event Monitoring, and Data Mask. Metric: control exceptions closed on SLA and audit-ready evidence coverage per regulated data domain.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Shield / Event Monitoring, MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Information+Security+Officer+Qantas">Chief Information Security Officer</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Qantas Airways Limited by process-mining safety-case, on-time-departure, and disruption-recovery flows on top of its Service Cloud + MuleSoft estate, task-mining contact-centre, crew, and loyalty desktops to unlock the AHT and swivel-chair gains that Agentforce Operations can absorb, and running CASA/IOSA audit evidence, fuel-conservation coaching, and Trust 2.0 access controls through Compliance Center &mdash; converting the live $200k Apromore Safety &amp; Risk opp into a group-wide operational intelligence footprint.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

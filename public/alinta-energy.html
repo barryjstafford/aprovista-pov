@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alinta Energy — AFPI POV</title>
+<title>Alinta Energy Pty Ltd — AFPI POV</title>
 <style>
   body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
          color: #1a1a1a; line-height: 1.45; background: #fff; }
@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -109,45 +110,43 @@
   </div>
 </header>
 <main>
-  <h1>Alinta Energy</h1>
+  <h1>Alinta Energy Pty Ltd</h1>
   <div class="snapshot">
     <p><strong>Energy &amp; Utilities, Retail Electricity &amp; Gas</strong></p>
-    <p><strong>Revenue:</strong> ~AUD $2.5B &nbsp;|&nbsp; <strong>Employees:</strong> ~1,200 &nbsp;|&nbsp; <strong>HQ:</strong> Sydney, Australia (WA operations from Perth)</p>
-    <p><strong>Major Subsidiaries:</strong> Alinta Energy WA Pty Ltd, Alinta Servco Pty Ltd, Alinta Energy (LPG) Pty Ltd, Alinta Sales</p>
+    <p><strong>Revenue:</strong> ~AUD $2.5B &nbsp;|&nbsp; <strong>Employees:</strong> ~1,200 &nbsp;|&nbsp; <strong>HQ:</strong> Sydney, Australia</p>
+    <p><strong>Major Subsidiaries:</strong> Alinta Energy WA Pty Ltd, Alinta Servco Pty Ltd, Alinta Energy (LPG) Pty Ltd, Flinders Power</p>
     <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Customer 360 (Retail Transformation), MuleSoft, Tableau, Slack, Signature Success</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Oracle EPM [Org62 contact — Adam Costello, FP&amp;A Manager, Oracle EPM Optimisation]</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Oracle EPM</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> Alinta RT Get Started (<a href="https://org62.my.salesforce.com/006ed00000Wjc57AAB">$5,051k</a>) &nbsp;|&nbsp; Alinta Transformation Value Drop 1 - Core (<a href="https://org62.my.salesforce.com/006ed00000MDvOoAAL">$2,341k</a>) &nbsp;|&nbsp; Alinta / EA Take Over MergeCo (<a href="https://org62.my.salesforce.com/006ed00000QpKvNAAV">$1,638k</a>)</p>
-    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
-    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GY0P0B6U">Edward Lakman</a></p>
-    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Customer 360 Retail Transformation)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G51ECS0M">Angelo Miranda</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">87/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">87/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Energy &amp; Utilities is a top-priority AFPI vertical; retail energy = process-heavy.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud: C360 RT, MuleSoft, Tableau, Slack, Signature Success all live.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">$5M RT program + MergeCo integration with EnergyAustralia — peak transformation.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">Post-merger process fragmentation + retail move-in/move-out + vulnerable customer flows.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">Salesforce Core, MuleSoft, Oracle EPM — all produce minable event logs.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Energy &amp; Utilities is a top-priority AFPI vertical; AU retail energy is deeply process-heavy.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud install: Sales, Service, C360 RT, MuleSoft, Tableau, Slack, Signature Success.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">$5M RT program + MergeCo integration + Data Cloud &amp; Agentforce upside &mdash; peak transformation.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">Post-EA merger fragmentation + retail move-in/move-out + vulnerable-customer hardship flows.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">Salesforce Core + MuleSoft + Oracle EPM &mdash; all produce clean, minable event logs.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-orange">AER retail code + WA safety regime present, but not a bet-the-company driver like SOX.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>4/6</td><td class="cat-orange">Apromore opp exists at $80k — below $200k threshold; needs to scale into a Servco deal.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>15/20</td><td class="cat-orange">Multiple named process owners on the AE side but no exec-level customer champion confirmed on LinkedIn.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-orange">AER retail code + WA safety regime present, but not a bet-the-company driver like SOX or IFRS 17.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Alinta Energy by mining the Retail Transformation and MergeCo integration processes — move-in/move-out, billing exceptions, dispatch, and vulnerable-customer handoffs — to accelerate the $5M+ C360 rollout by 2-4 weeks per workstream, expose the highest-ROI Agentforce automation targets, and de-risk the post-EnergyAustralia handover with objective, event-log evidence instead of subjective discovery.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Post-Merger MergeCo Order-to-Cash Harmonization</summary>
     <div class="use-case-body">
-      <p>Alinta is absorbing EnergyAustralia customer contracts ("MergeCo" — three active opps totalling ~$2.6M). Two distinct O2C processes now run in parallel across duplicated CIS, billing, and CRM stacks. Without objective mapping, harmonization decisions are being made from tribal knowledge — driving rework, mis-billing risk, and integration debt. Mining both O2C event logs side-by-side surfaces the variant graph, exposes cheapest-path harmonization, and produces the fact base Alinta needs before its C360 target-state locks in. Metric moved: integration timeline (target 24 → 12 months, per Petrobras proof point) and mis-bill exception rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales/Service Cloud, Oracle EPM</p>
+      <p>Alinta is absorbing EnergyAustralia customer contracts under the "MergeCo" banner &mdash; three active opps totalling ~$2.6M in ACV. Two distinct O2C flows now run in parallel across duplicated CIS, billing, and CRM stacks, and harmonization decisions are being made from tribal knowledge rather than fact. Mining both O2C event logs side-by-side surfaces the variant graph and produces the objective basis the C360 target-state needs before design lock. Metric moved: integration timeline (target 24 &rarr; 12 months) and mis-bill exception rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales/Service Cloud, MuleSoft</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Nick+Smith+Alinta+Energy">Nick Smith</a> (CIO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -156,7 +155,7 @@
   <details>
     <summary>2. Retail Move-In / Move-Out &amp; Customer Onboarding</summary>
     <div class="use-case-body">
-      <p>Move-in/move-out is the highest-volume retail process at Alinta and the single biggest churn and complaint driver in AU energy retail. The Retail Transformation ("Alinta RT Get Started" — $5M) explicitly targets this journey, but pain is being discovered manually in workshops. Mining the actual MuleSoft + Sales/Service Cloud event stream reveals where handoffs stall (identity checks, meter data delays, credit checks), where agents re-work orchestrations, and where the "happy path" masks 15+ real variants. Feeds Agentforce Operations with the exact orchestration gaps to auto-resolve. Metric moved: onboarding cycle time and first-call resolution.</p>
+      <p>Move-in/move-out is the highest-volume retail process at Alinta and the single biggest churn and complaint driver in AU energy. The $5M Retail Transformation ("Alinta RT Get Started") explicitly targets this journey but pain is being discovered manually in workshops. Mining the actual MuleSoft + Service Cloud event stream reveals where handoffs stall (identity, meter data, credit checks) and where the "happy path" masks 15+ real variants. Metric moved: onboarding cycle time and first-call resolution.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, MuleSoft</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Abigail+Spadotto+Alinta+Energy">Abigail Spadotto</a> (Customer Experience Process Owner)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -166,34 +165,78 @@
   <details>
     <summary>3. Meter-to-Cash Billing Exception Handling</summary>
     <div class="use-case-body">
-      <p>Retail energy carries an exception rate an order of magnitude above SaaS — estimated meter reads, market settlement mismatches, and dispute-driven adjustments all create manual rework in Alinta's billing operations. Mining the Oracle EPM + Sales/Service billing exception queues quantifies which exception classes drive the most agent time and financial leakage, and which are prime candidates for Agentforce agent-assist. Marcus Krznaric's Customer Service Operations team and Kathryn Griffiths' Finance team already own the KPI. Metric moved: exception backlog age and cost-to-serve per bill.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Oracle EPM, Salesforce Service Cloud</p>
+      <p>Retail energy carries an exception rate an order of magnitude above SaaS &mdash; estimated meter reads, market settlement mismatches, and dispute-driven adjustments all create manual rework in Alinta's billing ops. Mining the billing exception queues quantifies which exception classes drive the most agent time and financial leakage. Feeds Agentforce Operations with a ranked automation backlog. Metric moved: exception backlog age and cost-to-serve per bill.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Oracle EPM</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kathryn+Griffiths+Alinta+Energy">Kathryn Griffiths</a> (Head of Finance)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>4. Field Service Dispatch &amp; SLA Compliance (WA Wholesale)</summary>
+    <summary>1. Contact Center Agent Desktop &amp; AHT Reduction</summary>
     <div class="use-case-body">
-      <p>Alinta's WA Wholesale Operations (Brent Graham, GM) coordinates generation, C&amp;I service, and safety-critical dispatch. SLA breaches are expensive and safety incidents even more so. Mining dispatch and work-order data in Salesforce Field Service exposes SLA leakage points, technician utilisation gaps, and re-visit loops — with Warren Hawkins' Safety Operations team as the guardrail lens. Ron van Rooij's Australian Energy Week talk ("Fix the Foundation First") makes this exact case for the AU energy sector. Metric moved: SLA compliance %, re-visit rate, safety incident lead-time.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, MuleSoft</p>
+      <p>Alinta's retail contact-center agents flip between Service Cloud, the CIS/billing stack, meter data portals, and hardship tools to resolve a single call. Task mining the agent desktop exposes the exact after-call-work steps, tabs, and lookups that eat wrap time and AHT. Pairs directly with the C360 RT Agentforce workstream to size and rank agent-assist automations. Metric moved: AHT, after-call-work minutes per contact, and first-call resolution.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, CIS/billing desktop</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Marcus+Krznaric+Alinta+Energy">Marcus Krznaric</a> (Customer Service Operations Lead)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Field Service Dispatch &amp; Technician Utilisation (WA Wholesale)</summary>
+    <div class="use-case-body">
+      <p>WA Wholesale Operations coordinates generation, C&amp;I service, and safety-critical dispatch across a distributed field workforce. Task mining the dispatch console and technician mobile apps captures on-screen swivel-chair between work-order entry, safety checklists, and asset lookups. Combined with process mining of the Field Service log, it isolates where dispatcher time is lost vs. where re-visits originate. Metric moved: dispatcher productivity, SLA compliance %, re-visit rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, dispatch console</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Brent+Graham+Alinta+Energy">Brent Graham</a> (GM WA Wholesale Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Vulnerable Customer &amp; Hardship Case Handling</summary>
+    <summary>3. Finance &amp; FP&amp;A Close Desktop (Oracle EPM Optimisation)</summary>
     <div class="use-case-body">
-      <p>AER's Better Bills / hardship framework is a compliance hotspot for every AU energy retailer, and Todd McDonald (Functional Operations Manager, Vulnerable Customers) explicitly owns this process at Alinta. The hardship journey spans intake, assessment, payment plans, and reactivation — with mandatory disclosures at each step. Mining the case + payment-plan event log proves compliance by construction, identifies where customers drop out of the hardship funnel, and highlights the plans most likely to succeed vs. fail. Metric moved: hardship completion rate, regulatory audit exceptions, disconnection avoidance.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Oracle EPM</p>
+      <p>Alinta's FP&amp;A team runs a monthly close across Oracle EPM with manual reconciliation between GL, retail settlement, and management reporting. Task mining the analyst desktop exposes the true time spent in spreadsheet re-keying, variance-hunt clicks, and email-attachment handoffs &mdash; the exact work an Oracle EPM optimisation program aims to eliminate. Feeds a hard business case for controls automation. Metric moved: close cycle time and analyst hours per close.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Oracle EPM, Excel/Outlook desktop</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Adam+Costello+Alinta+Energy">Adam Costello</a> (FP&amp;A Manager, Oracle EPM Optimisation)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. Vulnerable Customer &amp; Hardship Case Handling (AER Better Bills)</summary>
+    <div class="use-case-body">
+      <p>The AER Better Bills / hardship framework is the single biggest compliance hotspot for every AU energy retailer. The hardship journey spans intake, assessment, payment plans, and reactivation &mdash; with mandatory disclosures at each step. Compliance Center runs the process as a controlled workflow with codified SLAs, sign-offs, and audit-ready evidence for every case. Metric moved: hardship completion rate, regulatory audit exceptions, disconnection-avoidance rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, CIS/billing</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Todd+McDonald+Alinta+Energy">Todd McDonald</a> (Functional Operations Manager, Vulnerable Customers)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No competitor-specific mentions tied to Alinta Energy found in Slack or web signals. Broader ANZ energy sector shows <a href="https://salesforce.enterprise.slack.com/archives/C04PFS7UYNA/p1777440081610229"><strong>Celonis</strong></a> present at peers (Origin Energy is a named Apromore reference; Endeavour Energy also engaged) — expect Celonis competitive presence if Alinta expands beyond the $80k add-on.</span></h2>
+  <details>
+    <summary>2. WA Retail Code / Gas &amp; Electricity Safety Controls</summary>
+    <div class="use-case-body">
+      <p>Alinta's WA business operates under the WA retail code and safety regime &mdash; controls audits, safety incident lifecycle, and asset compliance evidence all sit across Field Service, EHS, and asset management systems. Compliance Center consolidates the safety-critical work into a single controlled process with attested evidence per control. Especially important as the MergeCo integration lands new assets on the WA operating model. Metric moved: safety incident lead-time and audit exceptions per WA code check.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, EHS / asset management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Warren+Hawkins+Alinta+Energy">Warren Hawkins</a> (Head of Safety Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Post-Acquisition Integration Controls (Sembcorp Ownership)</summary>
+    <div class="use-case-body">
+      <p>With Sembcorp Industries closing its A$6.5B acquisition of Alinta in Feb 2026, integration controls, delegated-authority changes, and finance/close controls are all in flux. Compliance Center codifies the new control library (SOX-adjacent for a Singapore-listed parent) as a controlled workflow &mdash; every DoA change, journal, and reconciliation attested and evidenced. Also underpins the MergeCo customer-book transfer controls. Metric moved: audit-ready controls covered, time-to-evidence, and time-to-remediate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Oracle EPM, Salesforce Sales/Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kathryn+Griffiths+Alinta+Energy">Kathryn Griffiths</a> (Head of Finance)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Alinta Energy Pty Ltd by mining the $5M Retail Transformation and MergeCo O2C flows across Salesforce and MuleSoft to accelerate design lock and cut mis-bill exceptions, task-mining agent, dispatcher, and FP&amp;A desktops to size Agentforce Operations automation for AHT and close-cycle wins, and running AER hardship, WA safety, and post-Sembcorp integration controls through Compliance Center to produce always-on audit evidence for regulators and the new parent company.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

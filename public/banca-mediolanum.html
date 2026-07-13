@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -108,88 +113,130 @@
   <h1>Banca Mediolanum S.p.A.</h1>
   <div class="snapshot">
     <p><strong>Financial Services, Retail Banking &amp; Wealth Management</strong></p>
-    <p><strong>Revenue:</strong> ~€954M &nbsp;|&nbsp; <strong>Employees:</strong> ~3,800 &nbsp;|&nbsp; <strong>HQ:</strong> Basiglio (Milan), Italy</p>
+    <p><strong>Revenue:</strong> ~&euro;954M &nbsp;|&nbsp; <strong>Employees:</strong> ~3,800 &nbsp;|&nbsp; <strong>HQ:</strong> Basiglio (Milan), Italy</p>
     <p><strong>Major Subsidiaries:</strong> Mediolanum Vita, Mediolanum Assicurazioni, Mediolanum Gestione Fondi SGR, Bankhaus August Lenz &amp; Co. (Germany), Banco Mediolanum (Spain)</p>
     <p class="group-break"><strong>Current Salesforce Products:</strong> Informatica Data Integration, Informatica Data Governance + Privacy, Informatica MDM IDMC, Informatica MDM Self-Managed, Informatica IPU, Informatica DaaS</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Daniele Risi]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Apromore - Mediolanum - BDR (<a href="https://org62.my.salesforce.com/006ed00000ZZBndAAH">$200K</a>)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Apromore - Mediolanum - BDR (<a href="https://org62.my.salesforce.com/006ed00000ZZBndAAH">$200k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G8B7KJJF">Daniele Risi</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Informatica MDM + Data Governance)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">85/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">85/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Industry / Vertical Priority (★ Financial Services)</td><td>15/15</td><td class="cat-green">Priority vertical: retail bank + insurance + asset management under ECB direct supervision — full-marks vertical fit.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">$200K Apromore BDR opp already open in Org62 (Stage 02, New Business) — pipeline created, not cold.</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">ECB Significant Institution since 2021 + DORA + Bank of Italy AML + Solvency II via insurance subs — audit surface is maximal.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Priority vertical: retail bank + insurance + asset management under ECB direct supervision.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">$200K Apromore BDR opp already open in Org62 (Stage 02, New Business) &mdash; pipeline created, not cold.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">ECB Significant Institution + DORA + Bank of Italy AML + Solvency II via insurance subs &mdash; audit surface is maximal.</td></tr>
         <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">Deep Informatica footprint (MDM IDMC + Self-Managed, DG+Privacy, Data Integration, IPU, DaaS) = event logs already governed.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>10/12</td><td class="cat-green">Full Informatica stack counts as SF footprint; Named AE (Daniele Risi) engaged; core-CRM whitespace is upside not blocker.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>10/12</td><td class="cat-green">Full Informatica stack counts as SF footprint; named AE (Daniele Risi) engaged; core-CRM whitespace is upside.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Buyer &amp; Champion Fit (named process owner surfaced)</td><td>14/20</td><td class="cat-orange">Active BDR opp exists but a named business-side process/COO champion is not yet published; Risi is the bridge — field verify champion.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum (public signals)</td><td>9/12</td><td class="cat-orange">MDM investment + 2025 Mediobanca divestment signal change, but no publicly-declared AI CoE or Agentforce Ops program yet.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">Active BDR opp exists but a named business-side process/COO champion is not yet published; Risi is the bridge &mdash; field verify.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>9/12</td><td class="cat-orange">MDM investment + 2025 Mediobanca divestment signal change, but no publicly-declared AI CoE or Agentforce Ops program yet.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Banca Mediolanum S.p.A. by mining the cross-border onboarding, wealth-advisor productivity, AML/DORA, and post-Mediobanca-divestment operating-model processes across the existing Informatica MDM + Data Governance backbone — converting the already-open $200K BDR opp into an evidenced roadmap that shortens Family Banker time-to-invest, tightens ECB/DORA audit trails, and quantifies harmonization across Italy, Germany (Bankhaus Lenz), and Spain (Banco Mediolanum).</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Family Banker Client-Onboarding &amp; KYC (Retail Wealth)</summary>
     <div class="use-case-body">
-      <p>Banca Mediolanum's differentiator is its ~6,000 Family Bankers advising retail wealth clients across Italy, Germany, Spain, and Ireland — but that model turns onboarding into a many-hop process across advisor app, KYC engine, custody, and MDM. AFPI mines the client-to-first-investment journey to expose where documents get re-requested, where AML/PEP checks bounce back, and where advisors abandon in favor of manual work-arounds. With Informatica MDM already governing the golden customer record, the event log is unusually clean and ready to mine. Metric moved: onboarding cycle time, advisor drop-off rate, first-investment time-to-fund.</p>
+      <p>Banca Mediolanum's differentiator is its ~6,000 Family Bankers advising retail wealth clients across Italy, Germany, Spain, and Ireland &mdash; but that model turns onboarding into a many-hop process across advisor app, KYC engine, custody, and MDM. AFPI mines the client-to-first-investment journey to expose where documents get re-requested, where AML/PEP checks bounce back, and where advisors abandon in favor of manual work-arounds. With Informatica MDM already governing the golden customer record, the event log is unusually clean and ready to mine. Metric moved: onboarding cycle time, advisor drop-off rate, first-investment time-to-fund.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Informatica MDM IDMC, KYC / Onboarding platform (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Operating+Officer+Banca+Mediolanum">COO / Head of Family Banker Operations</a> (TBD — field verify with Daniele Risi)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Operating+Officer+Banca+Mediolanum">COO / Head of Family Banker Operations</a> (TBD &mdash; field verify with Daniele Risi)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. AML Alert-to-SAR &amp; DORA Operational-Resilience Evidence</summary>
+    <summary>2. Cross-Border Operating-Model Harmonization (IT / DE / ES / IE)</summary>
     <div class="use-case-body">
-      <p>As an ECB Significant Institution operating retail deposits, insurance, and asset management across four EU jurisdictions, Mediolanum files a large volume of Segnalazioni Antiriciclaggio and is directly in DORA's operational-resilience scope. AFPI mines the transaction-monitoring alert-to-disposition-to-SAR-filing process to quantify investigator variance, escalation rework, and SLA breaches; Compliance Center then produces the evidenced control trail that Banca d'Italia inspectors and DORA regulators expect on demand. This is a defensive, board-visible use case that funds itself in a single audit cycle. Metric moved: alerts per investigator per day, SAR filing timeliness, false-positive rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Transaction Monitoring (TBD), Informatica Data Governance + Privacy</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Financial+Crime+Banca+Mediolanum">Head of Financial Crime / AML</a> (TBD — field verify)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>3. Cross-Border Operating-Model Harmonization (IT / DE / ES / IE)</summary>
-    <div class="use-case-body">
-      <p>Banca Mediolanum operates the same "Family Banker" model across four legal entities — Banca Mediolanum (IT), Bankhaus August Lenz (DE), Banco Mediolanum (Spain), and the Irish life/asset entity — but each stack has grown its own onboarding, complaint, and product-transfer variations. AFPI mines the same golden process across all four subsidiaries to quantify variance, expose which country's flow is best-in-class, and generate a data-backed harmonization roadmap. This directly supports the cost-to-serve and CET1 story to the ECB. Metric moved: process-variance rate across subsidiaries, cost-per-transaction gap, harmonization-milestone slippage.</p>
+      <p>Banca Mediolanum runs the same "Family Banker" model across four legal entities &mdash; Banca Mediolanum (IT), Bankhaus August Lenz (DE), Banco Mediolanum (Spain), and the Irish life/asset entity &mdash; but each stack has grown its own onboarding, complaint, and product-transfer variations. AFPI mines the same golden process across all four subsidiaries to quantify variance, expose which country's flow is best-in-class, and generate a data-backed harmonization roadmap. This directly supports the cost-to-serve and CET1 story to the ECB. Metric moved: process-variance rate across subsidiaries, cost-per-transaction gap, harmonization-milestone slippage.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Informatica MDM Self-Managed, Core Banking (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+International+Operations+Banca+Mediolanum">Head of International Operations</a> (TBD — field verify)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+International+Operations+Banca+Mediolanum">Head of International Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Post-Mediobanca-Divestment Treasury &amp; Reporting Reshape</summary>
+    <summary>3. Post-Mediobanca-Divestment Treasury &amp; Reporting Reshape</summary>
     <div class="use-case-body">
-      <p>In June 2025 Banca Mediolanum divested its full 3.5% stake in Mediobanca via accelerated bookbuild, freeing roughly €548M in capital and forcing a reshape of treasury reporting, investment governance, and ECB CET1 disclosures. AFPI mines the month-end close, investment-decision, and regulatory-reporting flows to expose where teams are still doing manual reconciliation post-divestment, and where governance controls have not yet caught up to the new capital base. This is a time-boxed, high-visibility play tied to a real board-level event. Metric moved: month-end close cycle time, reconciliation exception rate, ECB report re-work rate.</p>
+      <p>In June 2025 Banca Mediolanum divested its full 3.5% stake in Mediobanca via accelerated bookbuild, freeing roughly &euro;548M in capital and forcing a reshape of treasury reporting, investment governance, and ECB CET1 disclosures. AFPI mines the month-end close, investment-decision, and regulatory-reporting flows to expose where teams are still doing manual reconciliation post-divestment, and where governance controls have not yet caught up to the new capital base. This is a time-boxed, high-visibility play tied to a real board-level event. Metric moved: month-end close cycle time, reconciliation exception rate, ECB report re-work rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Informatica Data Integration, Treasury / Regulatory Reporting (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=CFO+Banca+Mediolanum">CFO / Head of Regulatory Reporting</a> (TBD — field verify)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=CFO+Banca+Mediolanum">CFO / Head of Regulatory Reporting</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Family Banker Advisor Desktop Swivel-Chair</summary>
+    <div class="use-case-body">
+      <p>Family Bankers flip between the advisor portal, KYC/AML tools, order-entry, custody portal, and email/chat to service a single retail wealth client. Task mining captures each advisor's on-screen actions to isolate the copy/paste, re-key, and app-switch steps that eat productive selling time. That feeds a direct Agentforce Operations business case &mdash; the biggest swivel-chair tasks become the first candidates for straight-through automation. Metric moved: touch-time per client interaction, advisor administrative-time share, tabs opened per case.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Advisor desktop portal, Informatica MDM IDMC</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Advisor+Productivity+Banca+Mediolanum">Head of Advisor Productivity / Digital Workplace</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Master-Data Steward Workflow (Informatica MDM Optimization)</summary>
+    <summary>2. AML Investigator Desktop &amp; Alert Adjudication</summary>
     <div class="use-case-body">
-      <p>Mediolanum runs both Informatica MDM IDMC and MDM Self-Managed — a dual-topology install indicating an active migration and steward-workflow modernization program. AFPI mines the steward, merge/split, and survivorship rule-firing patterns in MDM to expose where rules are producing false-positive duplicates, where stewards are rubber-stamping suggestions, and where the same client is being serviced twice across Italian, German, and Spanish subs. This is the "AFPI on top of Informatica" reference story Salesforce needs in EU FinServ, and it maps directly into Daniele Risi's account-plan. Metric moved: steward hours per 1,000 records, false-positive merge rate, single-client-view coverage across subs.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Informatica MDM IDMC, Informatica MDM Self-Managed</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Data+Governance+Banca+Mediolanum">Head of Data Governance / MDM</a> (TBD — field verify)</p>
+      <p>Financial-crime investigators triaging AML alerts jump between the transaction-monitoring platform, sanctions/PEP screening tools, core banking, and case management to disposition each alert. Task mining exposes the exact on-screen steps that drive investigator variance and false-positive rework, then quantifies where an Agentforce assistant can pre-package evidence. Pairs directly with the Compliance Center wedge for DORA and Bank of Italy AML. Metric moved: alerts per investigator per day, average time per alert, evidence-gathering keystrokes eliminated.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Transaction Monitoring platform (TBD), Case Management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Financial+Crime+Banca+Mediolanum">Head of Financial Crime / AML Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline"><a href="https://salesforce.enterprise.slack.com/archives/C06N1U8J03S/p1782307473334739"><strong>Celonis</strong></a> — EU banking mindshare is Celonis's; internal EMEA positioning is "Apromore is like Celonis, only better" — collapse Celonis's two-specialist SQL+PQL model into one no-code business analyst. No account-specific Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate footprint confirmed at Banca Mediolanum today [Slack].</span></h2>
+  <details>
+    <summary>3. MDM Steward Workbench Task Analysis</summary>
+    <div class="use-case-body">
+      <p>Mediolanum runs both Informatica MDM IDMC and MDM Self-Managed &mdash; a dual-topology install indicating an active migration and steward-workflow modernization program. Task mining the steward workbench reveals where stewards spend the majority of their time (merge/split, survivorship overrides, duplicate research), which rules produce the highest false-positive counts, and which steps can be safely automated. This is the "AFPI on top of Informatica" reference story Salesforce needs in EU FinServ. Metric moved: steward hours per 1,000 records, false-positive merge rate, single-client-view coverage across subs.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Informatica MDM IDMC, Informatica MDM Self-Managed</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Data+Governance+Banca+Mediolanum">Head of Data Governance / MDM</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. DORA Operational-Resilience Evidence &amp; Testing</summary>
+    <div class="use-case-body">
+      <p>As an ECB Significant Institution operating retail deposits, insurance, and asset management across four EU jurisdictions, Banca Mediolanum is directly in DORA's operational-resilience scope &mdash; ICT third-party register, TLPT threat-led testing, and incident-classification evidence are all in play. Compliance Center runs the DORA control catalog as a live, monitored workflow with codified evidence at every step, so an ECB inspector request can be answered without a fire drill. Metric moved: DORA control coverage, evidence mean-time-to-produce, third-party register exception rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ICT third-party register, Informatica Data Governance + Privacy</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Risk+Officer+Banca+Mediolanum">Chief Risk Officer / Head of Operational Resilience</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. AML Alert-to-SAR Control &amp; Segnalazioni Antiriciclaggio</summary>
+    <div class="use-case-body">
+      <p>Bank of Italy AML rules require adjudicated evidence on every suspicious-activity alert, and Mediolanum files a large volume of Segnalazioni Antiriciclaggio across its Italian, German, and Spanish entities. Compliance Center codifies the alert-to-disposition-to-SAR-filing workflow with segregation-of-duties, escalation SLAs, and full evidence, then reuses the same controlled flow across subsidiaries so each regulator gets a consistent trail. Metric moved: SAR filing timeliness, alert-clearing SLA hit-rate, cross-border consistency score.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Transaction Monitoring platform, Case Management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Compliance+Banca+Mediolanum">Head of Compliance / MLRO Italia</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Solvency II &amp; Insurance-Sub Regulatory Reporting Controls</summary>
+    <div class="use-case-body">
+      <p>Mediolanum Vita and Mediolanum Assicurazioni operate under Solvency II, with IVASS oversight in Italy and equivalent supervision in the group's other insurance footprints. Solvency II QRT submission, ORSA governance, and technical-provisions sign-off are all controlled processes that today live in a mix of spreadsheets, actuarial engines, and attestation forms. Compliance Center consolidates them into one controlled workflow with codified sign-offs and audit-ready evidence. Metric moved: QRT submission cycle time, ORSA control coverage, audit findings per reporting cycle.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Actuarial engine, GL / Consolidation platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Actuary+Mediolanum+Vita">Chief Actuary / Head of Solvency II Program (Mediolanum Vita)</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Banca Mediolanum S.p.A. by mining Family Banker onboarding, cross-border operating-model, and post-Mediobanca-divestment treasury processes on the existing Informatica MDM + Data Governance backbone, task-mining advisor, AML-investigator, and MDM-steward desktops to expose the swivel-chair work that Agentforce Operations can eliminate, and running DORA, AML/SAR, and Solvency II controls through Compliance Center &mdash; converting the already-open $200K BDR opp into an evidenced roadmap that shortens time-to-invest, tightens ECB/DORA audit trails, and quantifies harmonization across Italy, Germany, Spain, and Ireland.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -200,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

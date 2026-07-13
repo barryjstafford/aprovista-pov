@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -108,10 +113,10 @@
   <h1>A2A S.p.A.</h1>
   <div class="snapshot">
     <p><strong>Utilities, Multi-Utility (Electricity, Gas, Water, Waste, District Heating)</strong></p>
-    <p><strong>Revenue:</strong> €13.3B &nbsp;|&nbsp; <strong>Employees:</strong> 12,000 &nbsp;|&nbsp; <strong>HQ:</strong> Milan, Italy</p>
+    <p><strong>Revenue:</strong> ~&euro;13.3B (2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~12,000 &nbsp;|&nbsp; <strong>HQ:</strong> Milan, Italy</p>
     <p><strong>Major Subsidiaries:</strong> A2A Energia, A2A Ambiente, Unareti, A2A Ciclo Idrico, A2A E-Mobility</p>
     <p class="group-break"><strong>Current Salesforce Products:</strong> MuleSoft, Marketing Cloud (ExactTarget), Sales Cloud, Service Cloud (Call Center), Agentforce for Sales, Net Zero Cloud, Informatica</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> SAP, ServiceNow (ITSM)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> SAP, ServiceNow</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> A2A SpA - (Apromore) (<a href="https://org62.my.salesforce.com/006ed00000UGyYPAA1">$300k</a>) &nbsp;|&nbsp; A2A SpA - (ITSM Corporate) (<a href="https://org62.my.salesforce.com/006ed00000XtaW6AAJ">$1.5M</a>) &nbsp;|&nbsp; A2A SpA Renewal 5960 MuleSoft (<a href="https://org62.my.salesforce.com/006ed00000RQJDxAAP">$4.6M</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01G8QT2RR8">Roberto Manzoli</a></p>
@@ -119,77 +124,121 @@
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">88/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">88/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep, multi-cloud install: MuleSoft ($4.6M renewal), MC, Sales/Service, Agentforce, Informatica, NZC — Manzoli owns 12+ open opps.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">Active $300k Apromore opp already in stage 02 — the process-mining champion is already engaged and qualified.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Agentforce for Sales live, ITSM Corporate $1.5M, Net Zero Cloud, Digital Product Evolution — transformation is executive-sponsored.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Multi-utility (power, gas, water, waste) — heavily regulated, event-log-rich across every business unit.</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">ARERA regulation, EU CSRD, water/waste concession renewals — audit-grade process evidence is table stakes.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud install: MuleSoft ($4.6M renewal), MC ExactTarget, Sales/Service, Agentforce, Informatica, NZC &mdash; Manzoli owns 15+ open opps.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Active $300k Apromore opp in stage 02 with $11.5M Full-CRM renewal and $1.5M ITSM budget cycles landing in-window.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">Italian multi-utility (power, gas, water, waste, district heat) &mdash; priority AFPI vertical with regulated event-log-rich ops.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Agentforce for Sales live, Agentforce Voice $1M and Agentforce Service in-flight, ITSM consolidation and Net Zero Cloud active.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">Apromore opp already at stage 02 &mdash; process-mining sponsor engaged; multi-BU CEO/CFO coverage across Energia, Ambiente, Unareti.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>8/12</td><td class="cat-orange">SAP + ServiceNow signals present but not confirmed at scale; MuleSoft-mediated event logs need discovery to validate.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>10/15</td><td class="cat-orange">No public storm/failure trigger like a T&amp;D peer — pain is chronic (billing, waste-collection scheduling) rather than acute.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-orange">SAP and ServiceNow footprints inferred but not fully validated at scale; MuleSoft-mediated event logs need discovery to confirm coverage.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>11/15</td><td class="cat-orange">No public acute trigger (storm, outage penalty) &mdash; pain is chronic (billing exceptions, waste-route deviations, ARERA SLA) rather than crisis-driven.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help A2A S.p.A. by mining the meter-to-cash, waste-collection, and ITSM event logs across SAP, MuleSoft and ServiceNow — de-risking the active $300k Apromore opp, defending the $4.6M MuleSoft renewal with a shared process baseline, and giving the ITSM Corporate program ($1.5M) a validated target-state before automation.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Meter-to-Cash Across A2A Energia (Electricity + Gas Retail)</summary>
+    <summary>1. A2A Energia Meter-to-Cash (Electricity + Gas Retail)</summary>
     <div class="use-case-body">
-      <p>A2A Energia serves ~3M retail customers across electricity and gas with a MuleSoft-orchestrated flow that spans SAP IS-U, MC ExactTarget, and the Sales/Service Cloud call center. Billing exceptions, switching (fornitura) delays, and payment-plan rework are chronic — every unresolved exception drives an inbound call and a credit-note. AFPI mines the end-to-end meter-to-cash event log to quantify DSO, first-bill-right rate, and self-service leakage, feeding the Agentforce-for-Sales rollout with the real variant map. Metric moved: DSO, cost-to-serve per customer, first-call resolution.</p>
+      <p>A2A Energia serves ~3M retail customers across electricity and gas via a MuleSoft-orchestrated flow spanning SAP IS-U, MC ExactTarget, and the Sales/Service Cloud call center. Billing exceptions, switching (fornitura) delays, and payment-plan rework are chronic &mdash; every unresolved exception drives an inbound call and a credit-note. AFPI mines the end-to-end meter-to-cash event log to quantify DSO, first-bill-right rate, and self-service leakage, feeding the Agentforce-for-Sales rollout with the real variant map. Metric moved: DSO, cost-to-serve per customer, first-call resolution.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> SAP IS-U, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Luca+Moroni+A2A">Luca Moroni</a> (CEO, A2A Energia)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Luca+Moroni+A2A+Energia">Luca Moroni</a> (CEO, A2A Energia)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. ITSM Corporate Program — Baseline Before You Automate</summary>
+    <summary>2. Unareti Grid Connections &amp; Distribution Work Orders</summary>
     <div class="use-case-body">
-      <p>The $1.5M ITSM Corporate opp signals A2A is consolidating IT service management across the group — but automating a fractured incident/problem/change process just makes the friction faster. AFPI runs discovery FIRST on the ServiceNow event logs (or the target platform) to expose ticket-bounce patterns, SLA breach root causes, and cross-BU handoff delays across A2A Ambiente, Unareti, Ciclo Idrico and A2A Energia. That baseline becomes the design input for the ITSM consolidation and the KPI dashboard for hypercare. Metric moved: MTTR, first-time-fix, ticket-reopen rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> ServiceNow, SAP</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Fabio+Massoli+A2A">Fabio Massoli</a> (CFO — ITSM sponsor)</p>
+      <p>Unareti is A2A's electricity/gas DSO covering ~1M customers in Milan and Brescia &mdash; every connection, upgrade, and unplanned outage is an ARERA-regulated event with strict SLA windows and financial penalties for miss. AFPI mines the connection-request-to-energization process across SAP and the field-service platform to expose which variants blow the ARERA SLA and why (documentation loops, contractor availability, permit delays). The same discovery underpins outage-restoration reporting to the regulator. Metric moved: ARERA-compliant connection %, average connection cycle time, outage restoration time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP, MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Giuseppe+Mastropieri+Unareti+A2A">Giuseppe Mastropieri</a> (CEO, Unareti)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Waste-Collection &amp; Route Optimization (A2A Ambiente)</summary>
+    <summary>3. A2A Ambiente Waste-Collection &amp; Route Conformance</summary>
     <div class="use-case-body">
-      <p>A2A Ambiente is the group's environmental services arm — municipal waste collection, treatment plants, and district-heating grid maintenance across Lombardy. Route deviations, missed pickups, and unplanned truck downtime drive concession-fee exposure with municipalities (Milan, Brescia, Bergamo). AFPI mines the fleet management and work-order event logs to expose route-conformance gaps, dispatch rework and asset-availability patterns — directly protecting the municipal SLAs that anchor A2A's largest concessions. Metric moved: route conformance, missed-pickup rate, cost per tonne collected.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> SAP, Fleet/Work-Order System</p>
+      <p>A2A Ambiente runs municipal waste collection, treatment plants, and district-heating grid maintenance across Lombardy. Route deviations, missed pickups, and unplanned truck downtime drive concession-fee exposure with Milan, Brescia, and Bergamo. AFPI mines fleet-management and work-order event logs to expose route-conformance gaps, dispatch rework, and asset-availability patterns &mdash; directly protecting the municipal SLAs that anchor A2A's largest concessions. Metric moved: route conformance, missed-pickup rate, cost per tonne collected.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP, Fleet / Work-Order Platform</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Fulvio+Roncari+A2A+Ambiente">Fulvio Roncari</a> (CEO, A2A Ambiente)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>4. Grid Connections &amp; Distribution Work Orders (Unareti)</summary>
+    <summary>1. A2A Energia Contact Center Agent Desktop</summary>
     <div class="use-case-body">
-      <p>Unareti is A2A's electricity/gas distribution DSO covering ~1M customers in Milan and Brescia — every new connection, upgrade, and unplanned outage is an ARERA-regulated event with strict SLA windows and financial penalties for miss. AFPI mines the connection-request-to-energization process across SAP and the field-service platform to expose which variants blow the ARERA SLA and why (documentation loops, contractor availability, permit delays). Same discovery underpins the storm/outage restoration process for reg reporting. Metric moved: ARERA-compliant connection %, average connection cycle time, outage restoration time.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> SAP, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Giuseppe+Mastropieri+Unareti">Giuseppe Mastropieri</a> (CEO, Unareti)</p>
+      <p>The Service Cloud call center handling millions of Italian retail energy customers is the fastest path to an Agentforce Voice / Service business case &mdash; agents pivot between Service Cloud, SAP IS-U, billing tools, and MC ExactTarget on every call. Task mining captures on-screen actions to isolate wrap-time, after-call-work, and swivel-chair steps that Agentforce can automate. Directly feeds the open $1M Agentforce Voice and $540k Agentforce Service opps. Metric moved: AHT, after-call-work minutes, tabs opened per contact.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, SAP IS-U</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Contact+Center+Operations+A2A+Energia">Head of A2A Energia Contact Center Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. CSRD &amp; Net Zero Cloud — Sustainability Data Lineage as Process Evidence</summary>
+    <summary>2. Unareti Field-Dispatch &amp; Back-Office Desktop</summary>
     <div class="use-case-body">
-      <p>A2A has an active Net Zero Cloud opp and is subject to full EU CSRD reporting starting FY26 — Scope 1/2/3 emissions, waste-diversion rates, water-loss metrics all require audit-grade lineage of how numbers were produced. AFPI's Compliance Center wedge produces continuously-updated process evidence for the emissions-data-collection workflow across the five business units, collapsing the annual CSRD assurance cycle from months to weeks and de-risking the external auditor sign-off. Directly complements Net Zero Cloud rather than competing with it. Metric moved: CSRD assurance cycle time, restatement rate, auditor query resolution time.</p>
+      <p>Unareti dispatchers coordinate crews across SCADA / outage-management, SAP work orders, contractor portals, and ARERA reporting screens &mdash; every crew allocation involves multiple lookups and manual re-keying. Task mining the dispatcher desktop exposes the specific steps where crews sit idle waiting on paperwork or approvals, and where dispatchers duplicate data across systems. Metric moved: dispatcher touches per work order, crew-idle minutes, ARERA-report cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP work-order desktop, outage-management client</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Operations+Unareti+A2A">Head of Unareti Network Operations</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Group Finance &amp; Procurement Back-Office</summary>
+    <div class="use-case-body">
+      <p>Group finance and procurement staff at A2A HQ execute PO approvals, invoice matching, and monthly-close activities across SAP, Excel, and internal portals &mdash; classic knowledge-worker rework territory. Task mining the finance desktop captures exactly where preparers copy/paste between SAP and spreadsheets and how many approval touches each invoice takes, producing a defensible business case for straight-through processing pilots. Metric moved: invoice-cycle time, touch count per PO, close-cycle days.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP FI/CO desktop, Excel / financial spreadsheets</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Fabio+Massoli+A2A+CFO">Fabio Massoli</a> (Group CFO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. CSRD Sustainability Reporting &amp; Net Zero Cloud Lineage</summary>
+    <div class="use-case-body">
+      <p>A2A is subject to full EU CSRD reporting with Scope 1/2/3 emissions, waste-diversion, and water-loss metrics all requiring audit-grade lineage of how numbers were produced. Compliance Center produces continuously-updated process evidence for the emissions-data-collection workflow across the five business units, collapsing the annual CSRD assurance cycle from months to weeks and de-risking external-auditor sign-off. Complements the open Net Zero Cloud footprint rather than competing with it. Metric moved: CSRD assurance cycle time, restatement rate, auditor-query resolution time.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Net Zero Cloud, SAP</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Andrea+Salvini+A2A">Andrea Salvini</a> (Chief Sustainability Officer)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Andrea+Salvini+A2A+Sustainability">Andrea Salvini</a> (Chief Sustainability Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
+  <details>
+    <summary>2. ARERA Regulatory Controls (Unareti + Ciclo Idrico)</summary>
+    <div class="use-case-body">
+      <p>ARERA (the Italian energy and water regulator) mandates specific SLAs, tariff-application accuracy, and quality-of-service metrics for both distribution (Unareti) and water (A2A Ciclo Idrico), with financial penalties and public reporting. Compliance Center codifies each ARERA control as a monitored process, produces continuous evidence for the annual regulatory data submission, and flags variants that risk penalty exposure before the submission window closes. Metric moved: ARERA control coverage, evidence collection cycle time, penalty exposure at close.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP, MuleSoft</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Regulatory+Affairs+A2A+Unareti">Head of Regulatory Affairs, Unareti / Ciclo Idrico</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. IT Change &amp; Access Controls Around the ITSM Consolidation</summary>
+    <div class="use-case-body">
+      <p>The $1.5M ITSM Corporate program will run change, incident, and access management across A2A Ambiente, Unareti, Ciclo Idrico, and A2A Energia &mdash; a regulated multi-utility change process where every SAP transport, MuleSoft flow deploy, or Salesforce metadata change touches revenue-critical systems. Compliance Center enforces segregation-of-duties, approval evidence, and audit-ready change records across the consolidated ITSM platform, giving internal audit and external auditors a single source of truth. Metric moved: unauthorized-change rate, SoD-violation count, audit-evidence lead time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ServiceNow / target ITSM, SAP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Fabio+Massoli+A2A+CFO">Fabio Massoli</a> (Group CFO &mdash; ITSM sponsor)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help A2A S.p.A. by mining meter-to-cash, Unareti grid-connection, and Ambiente waste-collection processes across SAP and MuleSoft to close the active $300k Apromore opp and defend the $4.6M MuleSoft renewal, task-mining the Energia contact center and finance desktops to unlock Agentforce Voice/Service value, and running CSRD, ARERA, and ITSM-change controls through Compliance Center so the group's regulated multi-utility operations get audit-grade evidence continuously rather than annually.</p>
+
+  <div class="actions">
     <span>Generate PDF</span>
     <span>Generate Slack Canvas</span>
     <span>Generate Vercel Page</span>
@@ -198,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

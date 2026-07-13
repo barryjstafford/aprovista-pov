@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -114,59 +115,47 @@
     <p><strong>Financial Services, Mutual / Customer-Owned Banking</strong></p>
     <p><strong>Revenue:</strong> A$113M (Org62) / A$14.2B total assets &nbsp;|&nbsp; <strong>Employees:</strong> ~750 &nbsp;|&nbsp; <strong>HQ:</strong> Barangaroo, Sydney, Australia</p>
     <p><strong>Major Subsidiaries:</strong> Firefighters Mutual Bank, UniBank, Health Professionals Bank, Australian Mutual Bank</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Informatica Data Governance (open opp), Salesforce (early-stage; Service Cloud opp active)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> UltraData (core banking), Adobe AEM (migrating from Sitecore), Genesys (telephony), "Process Manager" knowledge base [Slack]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> APRO Apromore (<a href="https://org62.my.salesforce.com/006ed00000bmUbCAAU">$180k</a>), Service Cloud (<a href="https://org62.my.salesforce.com/006ed00000b0FTBAA2">$235k</a>), INFA Data Governance (<a href="https://org62.my.salesforce.com/006ed00000QP0XNAA1">$95k</a>)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> None (Service Cloud, Apromore and Informatica Data Governance in active pipeline)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> UltraData, Adobe AEM, Sitecore, Genesys, Process Manager</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> APRO Apromore (<a href="https://org62.my.salesforce.com/006ed00000bmUbCAAU">$180k</a>), Service Cloud (<a href="https://org62.my.salesforce.com/006ed00000b0FTBAA2">$235k</a>), Member Portal / Book a Banker (<a href="https://org62.my.salesforce.com/006ed00000WJKF8AAP">$120k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02SPFNB5PT">Matt Hamilton</a></p>
-    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Service Cloud + Informatica Data Governance)</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Service Cloud)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">87/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">87/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Transformation & Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Mid two-year transformation; new CEO digital pivot; funded AI + data streams [Slack].</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">Pete Few, Ben Ruming (CDO), Rahul Vera, Alec Muir, Tim Powell all engaged in the Apromore intro [Slack].</td></tr>
         <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">Pete Few: "process engineering for the next six months to avoid automating bad processes" [Slack].</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">Mutual banking is priority AFPI vertical; ANZ Bank + Westpac already live proof points.</td></tr>
-        <tr><td>Buyer & Champion Fit</td><td>18/20</td><td class="cat-green">Pete Few, Ben Ruming (CDO), Rahul Vera, Alec Muir, Tim Powell all engaged in Apromore intro [Slack].</td></tr>
-        <tr><td>Compliance & Risk Pressure</td><td>7/8</td><td class="cat-green">APRA ADI; post-merger regulatory scrutiny; AML/CTF; BCBS operational risk obligations.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">Mutual banking is priority AFPI vertical; ANZ Bank and Westpac already live proof points.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Mid two-year transformation; new CEO digital pivot; funded AI + data streams [Slack].</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">APRA ADI; post-merger regulatory scrutiny; AML/CTF; CPS 230 operational-resilience obligations.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Commercial Timing & Deal Viability</td><td>5/6</td><td class="cat-orange">Apromore opp at $180k — just under the $200k ACV benchmark; Stage 03 with named sponsor mitigates.</td></tr>
-        <tr><td>Systems & Event-Log Readiness</td><td>8/12</td><td class="cat-orange">UltraData core + Adobe AEM + Genesys plausible sources; event-log extraction not yet confirmed.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-orange">Apromore opp at $180k &mdash; just under the $200k ACV benchmark; Stage 03 with named sponsor mitigates.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>8/12</td><td class="cat-orange">UltraData core + Adobe AEM + Genesys plausible sources; event-log extraction not yet confirmed.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Teachers Mutual Bank Limited by putting a data-driven evidence base under Pete Few's six-month process engineering runway, mining the post-merger flows across UltraData core banking, Genesys contact centre, and the incoming Adobe AEM member journey — so TMBL harmonises four brands (Firefighters Mutual, UniBank, Health Professionals Bank, Australian Mutual) into a single operating model, retires "bad processes" before automating them, and gives the new CEO's digital pivot a factual baseline to measure against.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Post-Merger Brand Consolidation & Operating-Model Harmonisation</summary>
+    <summary>1. Post-Merger Brand Consolidation &amp; Operating-Model Harmonisation</summary>
     <div class="use-case-body">
       <p>The Australian Mutual Bank merger closed 1 May 2026, adding a fifth brand alongside Firefighters Mutual, UniBank, Health Professionals Bank, and TMB. Each brand runs variants of the same member-servicing processes on shared UltraData plumbing, and Pete Few explicitly wants to design the target-state operating model before pouring concrete. Apromore mines the actual variants across brands, quantifies rework and duplicate handling, and gives Katy Ecott's transformation team the process baseline needed to converge without a four-year "Project Unite" grind. Moves cost-to-serve per member and post-merger integration timeline.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> UltraData, Salesforce Service Cloud (as it rolls in)</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> UltraData, Salesforce Service Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Pete+Few+Teachers+Mutual+Bank">Pete Few</a> (Client Transformation Lead)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Contact Centre & Front-Line Servicing Optimisation</summary>
+    <summary>2. Member Onboarding &amp; "Book a Banker" Journey</summary>
     <div class="use-case-body">
-      <p>Tim Powell (Head of Customer Engagement) owns contact-centre and front-line teams running on Genesys, and Pete flagged the contact centre as a direct outcome target. Apromore mines Genesys interaction logs plus servicing case data to reveal handle-time drivers, transfer loops between brands, and repeat-contact drivers before any AI overlay is applied. Pairs cleanly with the Service Cloud opp already in flight and the "learning-curve reduction" AI stream Pete described. Moves AHT, first-contact-resolution, and cost-per-interaction.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Genesys, Salesforce Service Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Tim+Powell+Teachers+Mutual+Bank">Tim Powell</a> (Head of Customer Engagement)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>3. Member Onboarding & "Book a Banker" Journey</summary>
-    <div class="use-case-body">
-      <p>New CEO Anthony Hughes is pivoting TMBL toward younger teachers, firefighters, and healthcare workers, and the open "Member Portal / Book a Banker" opp is the acquisition wedge. Apromore mines the end-to-end journey from web enquiry (Sitecore → Adobe AEM), through booking, KYC, and account activation, exposing where prospects abandon and where compliance rework kicks the case back. Feeds directly into the process-engineering-before-automation principle Pete is enforcing. Moves conversion rate and time-to-active-account.</p>
+      <p>New CEO Anthony Hughes is pivoting TMBL toward younger teachers, firefighters, and healthcare workers, and the open "Member Portal / Book a Banker" opp is the acquisition wedge. Apromore mines the end-to-end journey from web enquiry (Sitecore &rarr; Adobe AEM), through booking, KYC, and account activation, exposing where prospects abandon and where compliance rework kicks the case back. Feeds directly into the process-engineering-before-automation principle Pete is enforcing. Moves conversion rate and time-to-active-account.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Adobe AEM, UltraData</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Sarah+Heimeier+Teachers+Mutual+Bank">Sarah Heimeier</a> (Customer Journey Lead)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -174,26 +163,80 @@
   </details>
 
   <details>
-    <summary>4. Knowledge Management Cleanup Before AI Overlay</summary>
+    <summary>3. Core-Banking "Hollow-Out" Readiness (FY27 UltraData Reduction)</summary>
     <div class="use-case-body">
-      <p>Pete flagged the current "Process Manager" knowledge base as inefficient and stated the need to clean up data and knowledge before applying AI. Apromore variant mining exposes which knowledge articles are actually invoked in real cases versus stale content, and where agent behaviour diverges from documented process — the exact input Alec Muir's AI stream needs to avoid RAG-on-rot. Positions Apromore as the discovery layer beneath any Agentforce contact-centre agent build. Moves AI answer accuracy and knowledge coverage.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Process Manager KB, Genesys</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alec+Muir+Teachers+Mutual+Bank">Alec Muir</a> (Head of Data Architecture and AI)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>5. Core-Banking "Hollow-Out" Readiness (FY27 UltraData Reduction)</summary>
-    <div class="use-case-body">
-      <p>The FY27 strategic goal is to "hollow out" UltraData core banking and reduce dependency. Doing that safely requires knowing exactly which downstream processes touch which core-banking events — a question TMBL cannot answer today from documentation alone. Apromore mines the actual event log of core interactions, exposing the true dependency map so the target architecture can be de-risked before commitment. Also arms Ben Ruming (CDO) with a factual seed for the Informatica Data Governance opp already in flight. Moves core-migration risk and rework in the FY27 architecture cycle.</p>
+      <p>The FY27 strategic goal is to "hollow out" UltraData core banking and reduce dependency. Doing that safely requires knowing exactly which downstream processes touch which core-banking events &mdash; a question TMBL cannot answer today from documentation alone. Apromore mines the actual event log of core interactions, exposing the true dependency map so the target architecture can be de-risked before commitment. Also arms Ben Ruming with a factual seed for the Informatica Data Governance opp already in flight. Moves core-migration risk and rework in the FY27 architecture cycle.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> UltraData, Informatica</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ben+Ruming+Teachers+Mutual+Bank">Ben Ruming</a> (Chief Data Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath or Power Automate mentions found in Slack or public web tied to Teachers Mutual Bank — the process-engineering agenda appears greenfield and open for Apromore to define the category with Pete Few's team.</span></h2>
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Contact Centre Agent Desktop &amp; Handle-Time Mining</summary>
+    <div class="use-case-body">
+      <p>Tim Powell owns front-line teams running on Genesys, and Pete flagged the contact centre as a direct outcome target. Task mining captures agent-desktop activity across Genesys, the Process Manager knowledge base, and (once live) Service Cloud &mdash; exposing swivel-chair copy/paste, repeated KB lookups, and where agents work around gaps in scripted flows. Pairs cleanly with the Service Cloud opp already in flight and the "learning-curve reduction" AI stream Pete described. Moves average handle time, first-contact resolution, and new-agent ramp.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Genesys, Process Manager</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Tim+Powell+Teachers+Mutual+Bank">Tim Powell</a> (Head of Customer Engagement)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Knowledge Base Article Usage &amp; Pre-AI Cleanup</summary>
+    <div class="use-case-body">
+      <p>Pete flagged the current Process Manager KB as inefficient and explicitly stated the need to clean up data and knowledge before applying AI. Task mining watches which articles agents actually open (versus which the KB says are canonical), how often they abandon articles mid-read, and where they alt-tab to SMEs instead &mdash; the exact input Alec Muir's AI stream needs to avoid RAG-on-rot. Positions Apromore as the discovery layer beneath any Agentforce contact-centre agent build. Moves AI answer accuracy and knowledge coverage.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Process Manager, Genesys</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alec+Muir+Teachers+Mutual+Bank">Alec Muir</a> (Head of Data Architecture and AI)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Post-Merger Back-Office Servicing Standardisation</summary>
+    <div class="use-case-body">
+      <p>Back-office servicing teams across four legacy brands still touch UltraData through brand-specific screens, spreadsheets, and email workarounds even after the 1 May legal merger. Task mining captures the actual keystrokes and application-switching patterns per brand, exposing where "the way Firefighters does it" quietly diverges from "the way UniBank does it" on the same underlying transaction. Gives Katy Ecott's transformation team a concrete inventory of task-level variance to standardise before automating. Moves FTE hours per case and post-merger cost-to-integrate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> UltraData, Excel/Outlook desktop</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rahul+Vera+Teachers+Mutual+Bank">Rahul Vera</a> (Head of Strategy &amp; Architecture)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. APRA CPS 230 Operational Resilience &amp; Critical-Operations Controls</summary>
+    <div class="use-case-body">
+      <p>CPS 230 came into force in July 2025 and requires ADIs to identify critical operations, map end-to-end dependencies, and continuously test tolerances. TMBL's post-merger operating model &mdash; four brands on shared UltraData plumbing &mdash; makes manual attestation of those dependencies fragile. Compliance Center codifies the CPS 230 control set against mined event data from UltraData and Genesys so tolerance breaches, third-party dependency drift, and single-points-of-failure are surfaced as they happen. Moves regulator confidence and time spent on manual attestation.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> UltraData, Genesys</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ben+Ruming+Teachers+Mutual+Bank">Ben Ruming</a> (Chief Data Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. AML/CTF &amp; KYC Onboarding Controls Audit</summary>
+    <div class="use-case-body">
+      <p>AUSTRAC has intensified enforcement on ADIs following the 2024&ndash;25 wave of major-bank findings, and TMBL's "Book a Banker" digital acquisition play compresses KYC into a shorter, more automated funnel. Compliance Center encodes AML/CTF and KYC control rules against the mined onboarding journey (Adobe AEM &rarr; UltraData), so failed-verification loops, missing PEP/sanctions checks, and out-of-order due-diligence steps are caught continuously rather than in periodic sampling. Moves AUSTRAC audit posture and onboarding compliance cost.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> UltraData, Adobe AEM</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Rahul+Vera+Teachers+Mutual+Bank">Rahul Vera</a> (Head of Strategy &amp; Architecture)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Post-Merger Consumer Protection &amp; Complaints-Handling Controls</summary>
+    <div class="use-case-body">
+      <p>Post-merger, TMBL must prove that consumer-protection obligations under the Banking Code of Practice and ASIC RG 271 (internal dispute resolution) are being applied consistently across all five brands. Compliance Center monitors complaints-handling flows mined from Genesys and (once live) Service Cloud, so SLA breaches, hardship-assistance mis-routing, and inconsistent brand-level handling are visible to Pete Few's transformation team and to Risk. Moves ASIC/AFCA breach exposure and time-to-remediate control gaps.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Genesys, Salesforce Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Pete+Few+Teachers+Mutual+Bank">Pete Few</a> (Client Transformation Lead)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Teachers Mutual Bank Limited by putting a data-driven evidence base under Pete Few's six-month process engineering runway &mdash; process-mining the post-merger flows across UltraData, Adobe AEM, and Genesys to harmonise four brands into one operating model, task-mining the Genesys agent desktop and Process Manager KB so Alec Muir's AI stream doesn't automate bad work, and using Compliance Center to continuously evidence CPS 230, AML/CTF, and RG 271 controls the regulator will demand of the merged entity.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -113,40 +114,38 @@
   <div class="snapshot">
     <p><strong>Healthcare, NDIS Plan Management</strong></p>
     <p><strong>Revenue:</strong> ~AUD $44M (operating entity) &nbsp;|&nbsp; <strong>Employees:</strong> ~1,700 (group) &nbsp;|&nbsp; <strong>HQ:</strong> Adelaide, Australia</p>
-    <p><strong>Major Subsidiaries:</strong> My Plan Manager.com.au, Assist Plan Managers, NDSP Plan Managers</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Service Cloud, Marketing Cloud, Experience Cloud, MuleSoft, Slack, Tableau, Heroku, Data Cloud (Datorama), Agentforce (in flight), Shield</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Ben+Fitzgerald+My+Plan+Manager">Ben Fitzgerald</a>]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> MyPlanManager - Apromore (<a href="https://org62.my.salesforce.com/006ed00000bO4WbAAK">$147k</a>) &nbsp;|&nbsp; My Plan Manager - AELA (<a href="https://org62.my.salesforce.com/0063y000019lTPQAA2">$210k</a>) &nbsp;|&nbsp; MyPlanManager - Agentforce (<a href="https://org62.my.salesforce.com/006ed00000W28K1AAJ">$100k</a>)</p>
+    <p><strong>Major Subsidiaries:</strong> My Plan Manager, Assist Plan Managers, NDSP Plan Managers</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Financial Services Cloud (Unlimited), Service Cloud (Unlimited + Enterprise), Marketing Cloud Engagement, Marketing Cloud Account Engagement, Marketing Cloud Personalization, MuleSoft, Experience Cloud, Heroku, Heroku Shield, Salesforce Shield, Agentforce (in flight)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> MyPlanManager &mdash; Apromore (<a href="https://org62.my.salesforce.com/006ed00000bO4WbAAK">$147k</a>) &nbsp;|&nbsp; My Plan Manager &mdash; AELA (<a href="https://org62.my.salesforce.com/0063y000019lTPQAA2">$210k</a>) &nbsp;|&nbsp; My Plan Manager &mdash; Agentic Fast Start CSG (<a href="https://org62.my.salesforce.com/006ed00000eod5bAAA">$250k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U08SLCTM6MC">Sam Philp</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">91/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">92/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>12/12</td><td class="cat-green">Service Cloud, MuleSoft, Heroku, Experience Cloud, Tableau — event-rich telemetry.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$2M+ open renewals, active AELA in stage 05, published customer story.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Live Agentforce, AELA negotiating, TAB PBI, Vibes — active AI transformation.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">60k+ clients, 1,000+ new onboardings/month, post-acquisition consolidation of NDSP + Assist.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">CIO Jane Hatch, Head of Architecture Ben Fitzgerald, Head of Product Sean Colyer engaged.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>12/12</td><td class="cat-green">FSC, Service Cloud, MuleSoft, Heroku, Experience Cloud &mdash; event-rich Salesforce-native stack.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$2M+ open renewals, live Apromore opp, active AELA in stage 05 negotiation.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Live Agentforce, Agentic Fast Start CSG, Agentforce Vibes, MC Personalization &mdash; active AI push.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Apromore opp already at stage 02 with $147k Amount &mdash; qualified budget in-hand.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">60k+ clients, 1,000+ new onboardings/month, post-acquisition NDSP + Assist consolidation.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-orange">NDIS/NDIA audit regime is real but lighter than SOX or HIPAA — moderate lift.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Apromore opp already at stage 02, $147k Amount — no timing risk.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-orange">NDIS/NDIA audit regime is real but lighter than SOX or HIPAA &mdash; moderate compliance lift.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>12/15</td><td class="cat-orange">NDIS plan management is a healthcare-adjacent niche &mdash; strong reference logo but small TAM.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help My Plan Manager Group Pty Ltd by mining its invoice-to-pay, client onboarding, and post-acquisition service integration flows to lock in the automation gains already achieved (70% touchless invoicing, 100k hours saved), expose the residual rework and duplicate-payment risk that grow with 1,000+ monthly onboardings, and give Agentforce a defensible baseline before agents are turned loose on customer-facing work.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Invoice-to-Pay Exception Mining (the last 30%)</summary>
+    <summary>1. Invoice-to-Pay Exception Mining (the Last 30%)</summary>
     <div class="use-case-body">
-      <p>MPM has publicly reported 70% touchless invoice processing and 100,000 hours saved via Service Cloud automation — but the remaining 30% consumes disproportionate operator time and carries duplicate-payment risk across ~60,000 clients. Mining the actual invoice event log will surface why exceptions loop, which provider types drive rework, and where the automation guardrails misfire. Metric moved: touchless invoice rate from 70% → 85%+, cost-per-invoice down ~25%.</p>
+      <p>MPM has publicly reported 70% touchless invoice processing and ~100,000 hours saved via Service Cloud automation, but the remaining 30% consumes disproportionate operator time and carries duplicate-payment risk across ~60,000 clients. Mining the actual invoice event log will surface why exceptions loop, which provider types drive rework, and where the automation guardrails misfire. AFPI overlays Service Cloud + MuleSoft events to isolate the specific steps that leak time. Metric moved: touchless invoice rate from 70% &rarr; 85%+, cost-per-invoice down ~25%.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, MuleSoft</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ben+Fitzgerald+My+Plan+Manager">Ben Fitzgerald</a> (Head of Business Platforms and Architecture)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -156,7 +155,7 @@
   <details>
     <summary>2. Post-Acquisition Client Onboarding Harmonization</summary>
     <div class="use-case-body">
-      <p>MPM has consolidated Assist Plan Managers and NDSP Plan Managers and is onboarding 1,000+ new NDIS participants per month. Each acquired book brought its own onboarding variant — document capture, plan validation, service agreement issuance — and CTO Richard Hilliard has publicly flagged consolidation as the primary growth lever. Mining across the merged tenants exposes the divergent paths, hand-offs, and SLA breach hotspots so a single canonical onboarding can be enforced. Metric moved: onboarding cycle time -30%, first-invoice-processed lag -40%.</p>
+      <p>MPM has consolidated Assist Plan Managers and NDSP Plan Managers and is onboarding 1,000+ new NDIS participants per month. Each acquired book brought its own onboarding variant &mdash; document capture, plan validation, service agreement issuance &mdash; and consolidation is now the primary growth lever. Mining across the merged tenants exposes the divergent paths, hand-offs, and SLA breach hotspots so a single canonical onboarding can be enforced. Metric moved: onboarding cycle time -30%, first-invoice-processed lag -40%.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Experience Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Sean+Colyer+My+Plan+Manager">Sean Colyer</a> (Head of Product)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -164,36 +163,80 @@
   </details>
 
   <details>
-    <summary>3. Agentforce Readiness — Mine Before You Automate</summary>
+    <summary>3. Participant Service-to-Cash Journey (Provider Payments)</summary>
     <div class="use-case-body">
-      <p>MPM has an active Agentforce opportunity and is deploying Agentforce Vibes and AELA. Before agents are unleashed on service and claims workflows, the underlying human-executed process needs a data-driven baseline: what does the happy path really look like, where do humans compensate for broken automation today, and which steps have the highest variance? Apromore provides that pre-agent x-ray so Agentforce ROI is measurable against a real starting point rather than assumed. Metric moved: Agentforce adoption lift measurable against ground-truth baseline; avoids the "agent as a black box on top of a broken process" trap.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Data Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jane+Hatch+My+Plan+Manager">Jane Hatch</a> (CIO)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Participant Service-to-Cash Journey (Provider Payments)</summary>
-    <div class="use-case-body">
-      <p>MPM sits between NDIS participants and thousands of service providers, mediating the pay-provider cycle. Delays, disputes, and re-work here directly damage participant experience — the exact metric MPM markets on. Mining the end-to-end journey (claim raised → validated → funded → paid) across Service Cloud, MuleSoft integrations, and Heroku-powered provider portals surfaces the bottleneck steps and lets ops target the highest-friction provider cohorts first. Metric moved: participant NPS lift, provider payment cycle days -20%.</p>
+      <p>MPM sits between NDIS participants and thousands of service providers, mediating the pay-provider cycle. Delays, disputes, and re-work here directly damage participant experience &mdash; the exact metric MPM markets on. Mining the end-to-end journey (claim raised &rarr; validated &rarr; funded &rarr; paid) across Service Cloud, MuleSoft integrations, and Heroku-powered provider portals surfaces the bottleneck steps and lets ops target the highest-friction provider cohorts first. Metric moved: participant NPS lift, provider payment cycle days -20%.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Heroku</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Brad+Wilsdon-Smith+My+Plan+Manager">Brad Wilsdon-Smith</a> (Chief Strategy, Data and Optimisation Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>5. NDIS Compliance &amp; Audit-Trail Mining</summary>
+    <summary>1. Plan Manager Agent Desktop &mdash; Case Handling Swivel-Chair</summary>
     <div class="use-case-body">
-      <p>NDIS plan managers operate under NDIA oversight with hard rules on funding allocation, provider vetting, and participant safeguards. Compliance today is largely policy plus manual sampling. Mining the compliance-relevant event streams — plan changes, budget movements, provider onboarding — produces continuous, audit-ready conformance evidence and flags deviation patterns before an NDIA review surfaces them. Metric moved: audit prep time -50%, compliance findings caught pre-audit rather than post.</p>
+      <p>Front-line plan manager agents flip between Service Cloud console, the Experience Cloud participant portal, provider databases, and email/Outlook to resolve a single participant enquiry. Task mining the agent desktop captures the tabs, copy/paste, and repeated lookups that eat wrap time and directly feeds an Agentforce Operations business case for the specific micro-tasks agents actually perform. This is the pre-agent x-ray that turns Agentforce ROI from a slide into a number. Metric moved: handle-time per participant contact -15%, after-call-work minutes down measurably.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, Experience Cloud portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jane+Hatch+My+Plan+Manager">Jane Hatch</a> (CIO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Invoice Exception Adjudication &mdash; the Human 30% Desktop</summary>
+    <div class="use-case-body">
+      <p>The 30% of invoices that don't process touchless get routed to a human queue where operators reconcile line items against plan budgets, provider agreements, and NDIS pricing rules across multiple apps and PDFs. Task mining exposes exactly which cross-application steps and re-keys happen most often in the exception queue &mdash; the shortlist of automations that would flip more of the 30% back into the automated 70%. Metric moved: minutes-per-exception invoice -30%, throughput per FTE up correspondingly.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, invoice-processing desktop tools</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ben+Fitzgerald+My+Plan+Manager">Ben Fitzgerald</a> (Head of Business Platforms and Architecture)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Post-Acquisition Ops Team Task-Variance Capture (NDSP + Assist)</summary>
+    <div class="use-case-body">
+      <p>Following the NDSP and Assist Plan Managers acquisitions, staff from three previously separate operating models now do "the same" work on the same Salesforce platform &mdash; but with different click paths, macros, and workarounds carried over from their legacy tools. Task mining across the merged operator population quantifies where variance still exists, which team's playbook is most efficient, and where retraining or automation will collapse it to one canonical way. Metric moved: task-variance across teams reduced, ramp-time for rebadged staff cut.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Experience Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Sean+Colyer+My+Plan+Manager">Sean Colyer</a> (Head of Product)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. NDIS / NDIA Audit-Trail &amp; Conformance Evidence</summary>
+    <div class="use-case-body">
+      <p>NDIS plan managers operate under NDIA oversight with hard rules on funding allocation, provider vetting, and participant safeguards. Compliance today is largely policy plus manual sampling. Compliance Center runs the compliance-relevant event streams &mdash; plan changes, budget movements, provider onboarding &mdash; as a controlled workflow with continuous, audit-ready conformance evidence and flags deviation patterns before an NDIA review surfaces them. Metric moved: audit prep time -50%, compliance findings caught pre-audit rather than post.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, MuleSoft</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Donna+Radway+My+Plan+Manager">Donna Radway</a> (Quality Assurance &amp; Continuous Improvement Manager)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate mentions tied to My Plan Manager in Slack or public web — greenfield for AFPI, with Cloudwerx already positioned as the AI/automation implementation partner.</span></h2>
+  <details>
+    <summary>2. Provider Vetting, Fraud &amp; Duplicate-Payment Controls</summary>
+    <div class="use-case-body">
+      <p>Duplicate invoices, ghost providers, and misaligned service categories are the classic fraud vectors in NDIS plan management &mdash; and they're exactly the kind of control that regulators expect to see codified after each sector inquiry. Compliance Center wraps provider vetting, duplicate detection, and payment approvals into a single controlled workflow with segregation-of-duties, sign-offs, and an evidence chain. Sits directly on the Heroku + MuleSoft data spine already in place. Metric moved: duplicate-payment leakage detected pre-payment, control breach evidence produced automatically.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft, Heroku</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Brad+Wilsdon-Smith+My+Plan+Manager">Brad Wilsdon-Smith</a> (Chief Strategy, Data and Optimisation Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Agentforce Governance &amp; AI Lifecycle Controls</summary>
+    <div class="use-case-body">
+      <p>MPM has an active Agentforce opportunity, is deploying Agentforce Vibes and AELA, and CIO Jane Hatch is running an Agentic Fast Start CSG engagement. As agents move from pilot to production on participant-facing work, an NDIS-regulated plan manager needs formal AI lifecycle controls &mdash; who deployed what agent, against which policy, with what monitoring. Compliance Center codifies the promote/monitor/retire process and produces continuous evidence for internal risk and NDIA scrutiny. Metric moved: audit-ready agents covered, mean-time-to-evidence when regulators ask.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce runtime, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jane+Hatch+My+Plan+Manager">Jane Hatch</a> (CIO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help My Plan Manager Group Pty Ltd by mining invoice-to-pay, post-acquisition onboarding, and provider payment flows across its Service Cloud + MuleSoft + Heroku spine, task-mining agent and invoice-exception desktops so Agentforce Operations has a data-driven baseline before it automates, and running NDIS conformance, duplicate-payment, and Agentforce governance through Compliance Center &mdash; locking in the 70% touchless automation gains already achieved and expanding them into the residual 30%, 1,000+ monthly onboardings, and NDIA audit surface.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

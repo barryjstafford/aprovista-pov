@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -114,39 +115,37 @@
     <p><strong>Manufacturing, Appliances &amp; Water Systems</strong></p>
     <p><strong>Revenue:</strong> A$163.7M &nbsp;|&nbsp; <strong>Employees:</strong> ~300 &nbsp;|&nbsp; <strong>HQ:</strong> Condell Park (Sydney), Australia</p>
     <p><strong>Major Subsidiaries:</strong> Zip Water UK, Zip Water US, Zip Industries (parent brand under Culligan)</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Manufacturing Cloud, Sales Cloud, Service Cloud, Platform, Digital Engagement, Security Center (per Org62 renewal + upgrade opps)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> ServiceMax (field service — via Mick Rayner, Sr. Solution Architect on record); ERP not confirmed [field verify with Nathan Keefe, IT Manager]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Zip Water - Apromore (<a href="https://org62.my.salesforce.com/006ed00000fAr8HAAS">$100k</a>) | Manufacturing Cloud upgrade (<a href="https://org62.my.salesforce.com/006ed00000b6QIjAAM">$282k</a>) | OMS Enablement (<a href="https://org62.my.salesforce.com/006ed000009DyNlAAK">$120k</a>)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Data Cloud, Marketing Cloud Account Engagement, Agentforce for Service, Salesforce Maps, Event Monitoring, Salesforce Data Mask, Salesforce Backup &amp; Recover, Force.com Platform</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Zip Water - Apromore (<a href="https://org62.my.salesforce.com/006ed00000fAr8HAAS">$100k</a>) &nbsp;|&nbsp; CC - Zip Water - OMS Enablement (<a href="https://org62.my.salesforce.com/006ed000009DyNlAAK">$120k</a>) &nbsp;|&nbsp; Zip Water (Aust) - MCA Upgrade (<a href="https://org62.my.salesforce.com/006ed00000VRtRaAAL">$50k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U029NB62GQN">Katherine Lim</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Manufacturing Cloud)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">83/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Multi-cloud SF customer with renewal + Mfg Cloud upgrade + OMS + AF Sales opps live.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Apromore opp already at Stage 02, $100k, close 2026-10-30; SCI Catalyst funding filed.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Mfg Cloud upgrade + AF for Sales + OMS enablement signal an active transformation stack.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>17/20</td><td class="cat-green">Nathan Keefe (IT Mgr), Glenn Bucknell (Head of Supply Chain), Stephen Dolahenty (CFO) reachable.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>12/15</td><td class="cat-orange">Order-to-cash + service dispatch pain implied by OMS opp + ServiceMax footprint; needs discovery.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Multi-cloud install: Sales, Service, Data Cloud, MCAE, Agentforce for Service, Event Monitoring already live.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Apromore opp at Stage 02, $100k, plus $120k OMS Enablement + $50k MCA Upgrade adding bundle-ready ACV.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">AF for Service live; AF for Sales, MCA Upgrade, OMS Enablement, Digital Engagement all in flight.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Manufacturing (Appliances) &mdash; priority AFPI vertical; specifier-driven custom-config makes it a natural process-mining fit.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>17/20</td><td class="cat-green">Nathan Keefe (IT Mgr), Glenn Bucknell (Head of Supply Chain), Stephen Dolahenty (CFO) reachable from prior discovery.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>7/12</td><td class="cat-orange">SF logs strong; ERP unconfirmed — event-log mining depth depends on backend visibility.</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>4/8</td><td class="cat-orange">Consumer appliance manufacturer — product/water safety obligations, but no heavy SOX/HIPAA driver.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>8/12</td><td class="cat-orange">SF event logs strong (Event Monitoring live); ERP/manufacturing back-end coverage still unconfirmed.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>3/8</td><td class="cat-red">Consumer appliance manufacturer &mdash; product/water-safety obligations but no heavy SOX/HIPAA/KYC driver.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Zip Water (Aust) Pty Ltd by mining its order-to-cash, service dispatch, and Manufacturing Cloud upgrade processes to accelerate the in-flight AF Catalyst pilot, cutting install-and-service cycle times, exposing quote-to-order rework, and turning the already-open $100k Apromore opp into a Manufacturing-Cloud-attached expansion.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Order-to-Cash for Premium Boiling/Chilled Tap Fulfilment</summary>
+    <summary>1. Order-to-Cash for HydroTap Configured Fulfilment</summary>
     <div class="use-case-body">
-      <p>Zip's HydroTap and specifier channel drives high-mix custom-configured orders through plumber/installer networks. Order-entry errors, credit holds, and stock allocation delays compress the delivery SLA that specifiers and builders demand. Apromore can mine the Manufacturing-Cloud-to-fulfilment flow to expose rework loops, quote-vs-order variance, and where credit and inventory holds gate revenue. Metric: DSO reduction and on-time-in-full lift.</p>
+      <p>Zip&rsquo;s HydroTap and specifier channel drive high-mix, configured orders through plumber and installer networks with tight builder SLAs. Order-entry errors, credit holds, and stock allocation delays compress the delivery promise that architects and specifiers rely on. Apromore can mine the Sales Cloud &rarr; Manufacturing Cloud &rarr; OMS event stream to expose rework loops, quote-vs-order variance, and where credit and inventory holds gate revenue. Metric: DSO reduction and on-time-in-full lift on configured orders.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Manufacturing Cloud, Order Management</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Glenn+Bucknell+Zip+Water">Glenn Bucknell</a> (Head of Supply Chain)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -154,11 +153,11 @@
   </details>
 
   <details>
-    <summary>2. Field Service &amp; Installation Dispatch (ServiceMax)</summary>
+    <summary>2. Field Service &amp; Installation Dispatch</summary>
     <div class="use-case-body">
-      <p>Zip's premium promise depends on installer scheduling, first-time-fix, and warranty response for boiling-water systems in commercial and residential sites. ServiceMax is deployed but dispatch, parts, and re-visit loops are opaque. Apromore can mine work-order lifecycles across ServiceMax and Service Cloud, spotlighting re-visit drivers and technician idle time. Metric: first-time-fix rate and mean-time-to-resolve.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> ServiceMax, Salesforce Service Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Aldo+Longhi+Zip+Water">Aldo Longhi</a> (Quality &amp; System Manager)</p>
+      <p>Zip&rsquo;s premium promise depends on installer scheduling, first-time-fix, and warranty response for boiling-water appliances across commercial and residential sites. Dispatch, parts, and re-visit loops today are opaque across the field-service estate and Service Cloud. Apromore can mine work-order lifecycles end-to-end, spotlighting re-visit drivers, technician idle time, and where SLAs slip on premium accounts. Metric: first-time-fix rate and mean-time-to-resolve.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Field Service</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Aldo+Longhi+Zip+Water">Aldo Longhi</a> (Quality &amp; Systems Manager)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -166,34 +165,78 @@
   <details>
     <summary>3. Quote-to-Order for Specifier &amp; Channel Sales</summary>
     <div class="use-case-body">
-      <p>Zip sells through architects, specifiers, plumbers, and hospitality/enterprise direct — a long quote-to-order path with heavy configuration and pricing variance. The live AF for Sales opp indicates automation intent; process mining exposes handoff gaps between Sales Cloud, Manufacturing Cloud, and pricing tools before Agentforce agents get bolted on top. Metric: quote cycle time and win-rate lift on complex configurations.</p>
+      <p>Zip sells through architects, specifiers, plumbers, and hospitality/enterprise direct &mdash; a long quote-to-order path with heavy configuration and pricing variance. The open AF for Sales opp signals automation intent; process mining first exposes handoff gaps between Sales Cloud, Manufacturing Cloud, and pricing tools before Agentforce agents get bolted on top. Metric: quote cycle time and win-rate lift on complex configurations.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, Manufacturing Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Gloria+Young+Zip+Water">Gloria Young</a> (Head of Brand &amp; Go-To-Market Commercialisation)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>4. Warranty &amp; Returns / Product-Quality Feedback Loop</summary>
+    <summary>1. Service Cloud Agent Desktop for Warranty &amp; Support Intake</summary>
     <div class="use-case-body">
-      <p>Premium appliance brands live and die by defect rate and warranty cost. Warranty claim intake, RMA, credit-note issuance, and engineering feedback loops span Service Cloud, ServiceMax, and finance. Mining this end-to-end surfaces recurring defect patterns and where credit-memo lag hurts CX. Metric: warranty cost per unit and RMA cycle time.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, ServiceMax</p>
+      <p>Zip&rsquo;s support agents handle warranty intake, RMA setup, and installer queries across Service Cloud, the field-service console, and email/attachments. Task mining the agent desktop reveals how much handle-time is lost to app-switching, copy/paste of serial numbers, and repeated warranty lookups. Feeds a direct Agentforce for Service business case on top of the live AF add-on. Metric: average handle time and cases-per-agent per shift.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud console, Field Service mobile</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Aldo+Longhi+Zip+Water">Aldo Longhi</a> (Quality &amp; Systems Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Order Entry / CS Rep Desktop for Specifier Orders</summary>
+    <div class="use-case-body">
+      <p>Specifier and channel orders get keyed and re-keyed across Sales Cloud, Manufacturing Cloud, and pricing/spec attachments before an order lands in fulfilment. Task mining the CS/order-entry desktop shows exactly where reps swivel between apps and paste from emails/PDFs &mdash; the concrete steps Agentforce can automate as the OMS Enablement opp goes live. Metric: order-entry touch-time and manual-rekey rate per order line.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, Manufacturing Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Glenn+Bucknell+Zip+Water">Glenn Bucknell</a> (Head of Supply Chain)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Field Technician Mobile &amp; Dispatcher Console</summary>
+    <div class="use-case-body">
+      <p>Installers and field technicians work from mobile devices while dispatchers coordinate from a Service Cloud console; capturing what actually happens on those screens exposes idle time between jobs, part-lookup pain, and paperwork on job completion. Task mining shows where the mobile flow forces re-entry versus straight-through and where dispatch decisions cost first-time-fix. Metric: technician productive minutes per shift and dispatch cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service mobile, Service Cloud console</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Nathan+Keefe+Zip+Water">Nathan Keefe</a> (IT Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. Product Safety &amp; WaterMark / Plumbing-Standard Audit Trail</summary>
+    <div class="use-case-body">
+      <p>Boiling-water appliances carry WaterMark, AS/NZS plumbing-product, and electrical-safety obligations across AU, UK, and US markets. Compliance Center codifies the certification renewal, defect-reporting, and recall workflows into a controlled process with segregation-of-duties, sign-offs, and always-on audit evidence. Especially important as the product portfolio expands under Culligan. Metric: certification renewals on time and mean-time-to-evidence for regulator queries.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Quality management platform, Salesforce Service Cloud (defect / recall cases)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Aldo+Longhi+Zip+Water">Aldo Longhi</a> (Quality &amp; Systems Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Modern Slavery Act &amp; Supplier Onboarding Controls</summary>
+    <div class="use-case-body">
+      <p>As an Australian manufacturer above the reporting threshold, Zip is obliged to file annual Modern Slavery statements and evidence supplier due diligence across a global component base. Compliance Center runs supplier onboarding, questionnaire review, and remediation as a controlled workflow with audit-ready evidence. Metric: supplier onboardings with completed due diligence and time-to-close remediation items.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Supplier/procurement platform, Salesforce Sales Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Stephen+Dolahenty+Zip+Water">Stephen Dolahenty</a> (CFO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Global Rollout Harmonization (AU / UK / US under Culligan)</summary>
+    <summary>3. Global Rollout Harmonization Controls (AU / UK / US under Culligan)</summary>
     <div class="use-case-body">
-      <p>Zip Water operates AU, UK, and US entities under Culligan. Order, service, and finance processes diverge by region despite a shared brand. Apromore can map "as-is" process variants across the three geos and surface the harmonization backlog — high-value work as Culligan consolidates Zip's operating model. Metric: variant count reduction and shared-service scale.</p>
+      <p>Zip Water operates AU, UK, and US entities under Culligan with divergent order, service, and finance processes despite a shared brand. Compliance Center enforces a single harmonized process baseline across the three geos with sign-offs and controlled deviations, so the Culligan operating-model consolidation happens on rails instead of via spreadsheet variance tracking. Metric: process-variant count reduction and shared-service scale realized per geo.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, Salesforce Service Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Nathan+Keefe+Zip+Water">Nathan Keefe</a> (IT Manager)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent competitor mentions (Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, Power Automate) tied to Zip Water found in Slack or public sources — greenfield for Apromore ahead of the Q3 pilot.</span></h2>
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Zip Water (Aust) Pty Ltd by mining its order-to-cash, field-service dispatch, and specifier quote-to-order flows across Manufacturing Cloud, Sales Cloud, and Field Service, task-mining the agent, order-entry, and technician desktops to expose the swivel-chair work Agentforce Operations can automate, and running product-safety, Modern Slavery, and AU/UK/US harmonization controls through Compliance Center to shrink cycle times, lift first-time-fix, and turn the in-flight $100k Apromore opp into a Manufacturing-Cloud-attached expansion.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

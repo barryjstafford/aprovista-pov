@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -113,87 +114,129 @@
   <div class="snapshot">
     <p><strong>Financial Services, Payments Infrastructure</strong></p>
     <p><strong>Revenue:</strong> A$325M &nbsp;|&nbsp; <strong>Employees:</strong> ~700 &nbsp;|&nbsp; <strong>HQ:</strong> Sydney, Australia</p>
-    <p><strong>Major Subsidiaries:</strong> Strategic Payments Services Pty Ltd, Basiq, Payment Adjunct Services</p>
+    <p><strong>Major Subsidiaries:</strong> Strategic Payments Services, Basiq</p>
     <p class="group-break"><strong>Current Salesforce Products:</strong> MuleSoft Anypoint, Informatica CDGC</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with Lachlan Mott]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Cuscal Ltd - Apromore (<a href="https://org62.my.salesforce.com/006ed00000fHSptAAG">$300k</a>) | Cuscal - Apromore PoC (<a href="https://org62.my.salesforce.com/006ed00000fLSxlAAG">$50k</a>) | MS - Cuscal - Anypoint Integration (<a href="https://org62.my.salesforce.com/006ed00000OiujqAAB">$190k</a>)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Cuscal Ltd - Apromore (<a href="https://org62.my.salesforce.com/006ed00000fHSptAAG">$300k</a>) &nbsp;|&nbsp; MS - Cuscal - Anypoint Integration (<a href="https://org62.my.salesforce.com/006ed00000OiujqAAB">$190k</a>) &nbsp;|&nbsp; Cuscal - Apromore PoC (<a href="https://org62.my.salesforce.com/006ed00000fLSxlAAG">$30k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02ADFTDCG2">Lachlan Mott</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">86/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Commercial Timing & Deal Viability</td><td>6/6</td><td class="cat-green">Active $300k Apromore opp + $50k PoC already scoped for Jul 2026 close.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Payments/FinServ — top priority vertical with dense process regulation.</td></tr>
-        <tr><td>Compliance & Risk Pressure</td><td>8/8</td><td class="cat-green">AML/CTF, APRA CPS 230, card-scheme rules, NPP compliance — high scrutiny.</td></tr>
-        <tr><td>Salesforce Footprint & Relationship</td><td>11/12</td><td class="cat-green">Active MuleSoft + Informatica CDGC opps; SF AE Lachlan Mott engaged.</td></tr>
-        <tr><td>Transformation & Agentic-AI Momentum</td><td>10/12</td><td class="cat-green">Recent IPO (2023) + Basiq acquisition driving integration/automation push.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Active $300k Apromore opp + $30k PoC in Validating Benefits &mdash; deal on paper now.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Payments &amp; data infrastructure &mdash; top priority AFPI vertical with dense process regulation.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">APRA CPS 230, AUSTRAC AML/CTF, NPP scheme rules, PCI DSS &mdash; strong Compliance Center wedge.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">Payments exceptions, dispute rework, KYC onboarding tails, scheme-fee recon &mdash; classic mining targets.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>11/12</td><td class="cat-green">Active MuleSoft Anypoint + Informatica CDGC opps in flight; SF AE Lachlan Mott engaged.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Systems & Event-Log Readiness</td><td>8/12</td><td class="cat-orange">Payments switch generates logs, but core systems not yet confirmed for mining.</td></tr>
-        <tr><td>Buyer & Champion Fit</td><td>14/20</td><td class="cat-orange">SF AE engaged; named business champion at Cuscal still to be confirmed.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>8/12</td><td class="cat-orange">Payments switch generates logs, but downstream KYC/case systems not yet confirmed for mining.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">SF AE engaged; named customer-side business champion at Cuscal still to be confirmed.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Cuscal Limited by mining its payments-processing, dispute-resolution, KYC/onboarding, and post-Basiq-integration workflows to cut cycle times, evidence CPS 230 operational-resilience controls, and unlock the automation gains a newly-listed ASX payments provider needs to defend margin.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Payments Exception & Dispute Resolution</summary>
+    <summary>1. Payments Exception &amp; Dispute Resolution</summary>
     <div class="use-case-body">
-      <p>Cuscal processes card, NPP, direct-entry and BPAY volume for 100+ ADIs and fintechs. Every failed authorization, chargeback, or NPP mis-direct becomes a dispute case that gets manually triaged. Apromore can mine the end-to-end exception flow to expose rework loops, SLA breaches with scheme networks, and the specific fallout categories driving the biggest FTE cost. Metric moved: dispute cycle time and cost-per-case.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Payments Switch, ServiceNow ITSM</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Payments+Operations+Cuscal">Head of Payments Operations</a> (TBD)</p>
+      <p>Cuscal processes card, NPP, direct-entry, and BPAY volume for 100+ ADIs and fintechs, and every failed authorization, chargeback, or NPP mis-direct becomes a dispute case that gets manually triaged. Apromore mines the end-to-end exception flow across the switch and case-management system to expose rework loops, SLA breaches against scheme networks, and the fallout categories driving the biggest FTE cost. This directly de-risks the operational-resilience story Cuscal owes both regulators and its ADI clients. Metric moved: dispute cycle time and cost-per-case.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Payments switch, case management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Payments+Operations+Cuscal">Head of Payments Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Client Onboarding & KYC/AML</summary>
+    <summary>2. Client (ADI &amp; Fintech) Onboarding &amp; KYC/AML</summary>
     <div class="use-case-body">
-      <p>Onboarding a new ADI, fintech, or corporate biller into the Cuscal switch is a multi-week workflow across compliance, technical integration, and scheme certification. Apromore can process-mine every case to expose where files stall in KYC/AML review, how often re-work is triggered by incomplete evidence, and which segments (e.g. crypto exchanges post AUSTRAC pressure) drive the longest tails. AFPI Compliance Center wraps AUSTRAC/AML control evidence around it. Metric moved: time-to-first-transaction.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce, KYC platform</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Risk+Officer+Cuscal">Chief Risk Officer</a> (TBD)</p>
+      <p>Onboarding a new ADI, fintech, or corporate biller into the Cuscal switch is a multi-week workflow spanning compliance, technical integration, and scheme certification. Apromore mines each case to expose where files stall in KYC/AML review, how often re-work is triggered by incomplete evidence, and which segments (crypto exchanges under AUSTRAC pressure, non-bank lenders) drive the longest tails. Compliance Center then wraps AUSTRAC / AML control evidence around the same event data. Metric moved: time-to-first-transaction and rework rate on onboarding cases.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> KYC platform, onboarding workflow</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Risk+Officer+Cuscal">Chief Risk Officer</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Basiq Post-Acquisition Integration & Data Access</summary>
+    <summary>3. Card &amp; Scheme Fee Reconciliation</summary>
     <div class="use-case-body">
-      <p>Cuscal acquired Basiq (open-banking data / CDR aggregator) and is integrating its accreditation, consent, and data-delivery pipelines into the group. Apromore can mine consent-lifecycle and API-integration flows to prove operational alignment, expose where CDR consent-refresh drops off, and quantify the harmonization gap. Metric moved: consent-refresh completion rate and integration time-to-value.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Basiq platform, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Open+Banking+Cuscal">Head of Open Banking</a> (TBD)</p>
+      <p>Monthly interchange, scheme-fee, and client-billing reconciliation across Visa, Mastercard, eftpos, and NPP is a grind &mdash; mismatches trigger investigations that eat analyst time and, unresolved, become revenue leakage. Apromore mines the reconciliation flow to locate the mismatch categories that drive the most rework and quantify recoverable revenue for each scheme. The signal feeds directly into finance-ops FTE and margin conversations Cuscal is having as a newly-listed ASX company. Metric moved: unreconciled-item aging and analyst FTE hours per close.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Payments switch, ERP GL</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Financial+Officer+Cuscal">Chief Financial Officer</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Dispute &amp; Chargeback Analyst Desktop</summary>
+    <div class="use-case-body">
+      <p>Dispute analysts flip between the case-management tool, the payments switch, scheme portals (Visa Resolve Online, Mastercom), and email/attachments to work a single chargeback. Task mining captures the exact click-path, exposes copy-paste and duplicate-lookup waste, and names the specific steps Agentforce or MuleSoft-orchestrated agents can automate. Pairs directly with the Apromore process-mining view of dispute cycle time. Metric moved: analyst touch-time per dispute and cases-per-FTE per day.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Case management desktop, scheme portals</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Disputes+Operations+Cuscal">Head of Disputes Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. CPS 230 Operational Resilience Evidence</summary>
+    <summary>2. KYC/Onboarding Analyst Case Handling</summary>
     <div class="use-case-body">
-      <p>APRA CPS 230 (effective July 2025) requires Cuscal to identify critical operations, map end-to-end processes, and evidence tolerance-for-disruption controls — an inherently process-mining exercise. Apromore auto-generates the live process map, replaces static Visio diagrams, and provides board-ready evidence for the annual attestation. AFPI Compliance Center packages control coverage. Metric moved: audit-prep effort, resilience-attestation cycle.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> ServiceNow, GRC platform</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Operational+Risk+Cuscal">Head of Operational Risk</a> (TBD)</p>
+      <p>Onboarding analysts assemble evidence for a new ADI or fintech across a KYC vendor, ASIC/AUSTRAC lookups, internal risk memos, and email chains &mdash; every step visible only on the desktop. Task mining quantifies where analysts spend their day, isolates the manual lookups Agentforce can automate, and separates true review from swivel-chair work. Metric moved: analyst minutes per onboarding case and cost-to-onboard.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> KYC vendor UI, email/document review</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Client+Onboarding+Cuscal">Head of Client Onboarding</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Card & Scheme Fee Reconciliation</summary>
+    <summary>3. Reconciliation Analyst Break-Investigation</summary>
     <div class="use-case-body">
-      <p>Interchange, scheme fees, and client billing reconciliation across Visa/MasterCard/eftpos/NPP is a monthly grind — mismatches trigger investigations that eat analyst time and, when unresolved, become revenue leakage. Apromore mines the reconciliation flow to locate the specific mismatch categories that drive the most rework and quantify recoverable revenue. Metric moved: unreconciled-item aging, analyst FTE hours.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Payments Switch, ERP GL</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Financial+Officer+Cuscal">Chief Financial Officer</a> (TBD)</p>
+      <p>Finance-ops analysts investigate scheme-fee and client-billing breaks by pivoting between spreadsheets, the GL, the switch's reporting layer, and scheme statements. Task mining captures the exact investigative pattern, exposes repetitive lookups, and produces a ranked list of manual work Agentforce Operations can absorb. Feeds a clean cost-to-close conversation for Cuscal's CFO. Metric moved: minutes per break, breaks-cleared per analyst per day.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Excel/Sheets, ERP GL, scheme portals</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Financial+Controller+Cuscal">Financial Controller</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent competitor mentions tied to Cuscal in Slack or public news. Celonis and Signavio have general Australian FSI presence but no observed Cuscal-specific engagement.</span></h2>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. APRA CPS 230 Operational Resilience Evidence</summary>
+    <div class="use-case-body">
+      <p>CPS 230 (effective July 2025) requires Cuscal to identify critical operations, map end-to-end processes, and evidence tolerance-for-disruption controls &mdash; an inherently process-mining exercise. Compliance Center auto-generates the live process map, replaces static Visio diagrams, and produces board-ready evidence for the annual attestation. Especially load-bearing for a payments provider whose downtime hits 100+ client ADIs. Metric moved: audit-prep effort and resilience-attestation cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Payments switch, GRC platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Operational+Risk+Cuscal">Head of Operational Risk</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. AUSTRAC AML/CTF Reporting Controls</summary>
+    <div class="use-case-body">
+      <p>Every transaction and threshold report Cuscal files with AUSTRAC needs adjudicated evidence &mdash; SMR filings, threshold transaction reports (TTRs), and international funds transfer instructions (IFTIs). Compliance Center turns the alert-to-file workflow into a controlled process with segregation-of-duties, sign-offs, and always-on evidence, replacing spreadsheet trackers. Directly addresses the AUSTRAC pressure on payments providers post-Westpac. Metric moved: alert-clearing SLA hit-rate and time-to-file.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> AML monitoring platform, case management</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Financial+Crime+Cuscal">Head of Financial Crime</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. NPP &amp; Card-Scheme Compliance / PCI DSS Attestation</summary>
+    <div class="use-case-body">
+      <p>As a Tier-1 clearer for NPP and issuer/acquirer for Visa, Mastercard, and eftpos, Cuscal owes each scheme continuous evidence of compliance with mandates, dispute-handling SLAs, and PCI DSS controls. Compliance Center runs mandate implementation and PCI attestation as controlled workflows with codified evidence, cutting the audit-prep spike each year. Metric moved: audit findings per scheme cycle and evidence-collection FTE hours.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Payments switch, GRC platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Information+Security+Officer+Cuscal">Chief Information Security Officer</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Cuscal Limited by process-mining payments exceptions, ADI/fintech onboarding, and scheme-fee reconciliation across its switch, KYC, and GL estate, task-mining the dispute, onboarding, and finance-ops desktops to expose the swivel-chair work Agentforce can absorb, and running APRA CPS 230, AUSTRAC AML/CTF, and NPP/PCI DSS controls through Compliance Center to shrink cycle times, cut analyst touch-time, and produce always-on regulator-ready evidence for a newly-listed ASX payments provider.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

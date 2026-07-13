@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DTCC (Depository Trust &amp; Clearing) — AFPI POV</title>
+<title>Depository Trust &amp; Clearing Corporation — AFPI POV</title>
 <style>
   body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
          color: #1a1a1a; line-height: 1.45; background: #fff; }
@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -105,12 +110,13 @@
   </div>
 </header>
 <main>
-  <h1>DTCC (Depository Trust &amp; Clearing)</h1>
+  <h1>Depository Trust &amp; Clearing Corporation</h1>
   <div class="snapshot">
     <p><strong>Financial Services, Post-Trade Market Infrastructure</strong></p>
-    <p><strong>Revenue:</strong> $2.7B &nbsp;|&nbsp; <strong>Employees:</strong> ~1,941 &nbsp;|&nbsp; <strong>HQ:</strong> New York, NY, US</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Not confirmed [field verify with account team]</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with account team]</p>
+    <p><strong>Revenue:</strong> ~US$2.5B (2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~5,000 &nbsp;|&nbsp; <strong>HQ:</strong> Jersey City, NJ, US</p>
+    <p><strong>Major Subsidiaries:</strong> The Depository Trust Company (DTC), National Securities Clearing Corporation (NSCC), Fixed Income Clearing Corporation (FICC), DTCC Solutions LLC, DTCC Deriv/SERV LLC</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales &amp; Service Cloud Unlimited (Service), Experience Cloud (Customer Community Unlimited), Salesforce Platform Unlimited, Sandbox (Full Copy), Premier Success</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> DTCC - Core - Agentforce - AELA (<a href="https://org62.my.salesforce.com/006ed00000XqgJVAAZ">$1.0M</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U029JQMR2H5">Taby Khan</a></p>
@@ -118,31 +124,29 @@
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">78/100</span> — T2 Develop</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">81/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Vertical fit (regulated FS / post-trade)</td><td>14/15</td><td class="cat-green">Post-trade market infrastructure — DTCC clears the vast majority of US securities daily, an event-log-rich domain.</td></tr>
-        <tr><td>Process complexity &amp; volume</td><td>13/15</td><td class="cat-green">NSCC / FICC / DTC settlement, GTR / SDR reporting, and corporate actions all produce high-volume multi-hand-off flows.</td></tr>
-        <tr><td>Compliance &amp; audit pressure</td><td>13/15</td><td class="cat-green">SIFMU designation plus CAT, EMIR REFIT, and DORA obligations make the Compliance Center wedge a direct fit.</td></tr>
-        <tr><td>Active Salesforce footprint / open Agentforce opp</td><td>12/15</td><td class="cat-green">Open $1.0M Agentforce AELA opportunity gives an immediate co-sell entry point.</td></tr>
-        <tr><td>Buyer titles present (COO, CRO, Ops)</td><td>10/15</td><td class="cat-orange">CIO, Group CRO, and General Counsel identified — process-explicit ops titles still to be surfaced.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Post-trade market infrastructure &mdash; the plumbing of US capital markets, a top-priority AFPI vertical.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">SIFMU designation plus CAT, EMIR REFIT, DORA, SEC 17Ad-22, and SOX &mdash; direct Compliance Center fit.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Open $1M Agentforce AELA plus CCO future-state deck &mdash; active internal transformation program.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">T+1 settlement exceptions, GTR/SDR reporting, corporate actions &mdash; high-volume, multi-hand-off pain.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-green">$1M AELA opp in flight and dedicated Slack war-room &mdash; well above $200k ACV threshold.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Buyer titles present (COO, CRO, Ops)</td><td>10/15</td><td class="cat-orange">CIO, Group CRO, and General Counsel identified — process-explicit ops titles still to be surfaced.</td></tr>
-        <tr><td>Active Salesforce footprint / open Agentforce opp</td><td>12/15</td><td class="cat-green">Open $1.0M Agentforce AELA opportunity gives an immediate co-sell entry point.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>10/20</td><td class="cat-red">CIO Lynn Bishop, CRO Timothy Cuddihy, and GC Nikki Poulos identified, but no LinkedIn-verified process-owner champion yet.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-orange">NSCC/FICC/DTC and CTM/ITP produce rich event logs, but data access for external mining is not yet confirmed.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help DTCC (Depository Trust &amp; Clearing) by mining the end-to-end trade settlement, regulatory reporting, and corporate actions event logs to lift straight-through-processing rates, shorten control-testing cycles, and give the open Agentforce AELA program a documented process baseline it can automate against.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Trade Settlement Exception Handling (T+1 &amp; Beyond)</summary>
     <div class="use-case-body">
-      <p>DTCC clears and settles the vast majority of US equities and fixed-income trades daily through NSCC, FICC, and DTC — with T+1 now live in the US and pressure building for T+0, every settlement exception is expensive latency risk. AFPI mines the end-to-end trade lifecycle across NSCC/CTM/ITP event logs to expose the exception patterns, hand-off delays, and manual rework loops that erode straight-through-processing rates. The play is to co-sell alongside the open Agentforce AELA opportunity: AFPI supplies the process evidence, Agentforce Operations executes the remediation agents on the exceptions AFPI surfaces. Metric moved: STP rate lift, exception cycle-time reduction, reduction in manual break resolution FTE.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> NSCC, CTM/ITP</p>
+      <p>DTCC clears and settles the vast majority of US equities and fixed-income trades daily through NSCC, FICC, and DTC &mdash; with T+1 now live and pressure building for T+0, every settlement exception is expensive latency risk. Apromore mines the trade lifecycle across NSCC/CTM/ITP event logs to expose exception patterns, hand-off delays, and manual rework loops that erode straight-through-processing. The play is to co-sell alongside the open Agentforce AELA opportunity: Apromore supplies the process evidence and Agentforce Operations executes remediation agents on the exceptions surfaced. Metric moved: STP rate lift and exception cycle-time reduction.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> NSCC/FICC clearing platform, CTM/ITP</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Lynn+Bishop+DTCC">Lynn Bishop</a> (CIO / Managing Director)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
@@ -151,53 +155,99 @@
   <details>
     <summary>2. Regulatory Reporting &amp; SDR / GTR Workflows</summary>
     <div class="use-case-body">
-      <p>DTCC operates the Global Trade Repository and Swap Data Repository — meaning it is simultaneously a regulated entity and the regulator's data plumbing for CFTC, ESMA, MAS, and JFSA reporting. AFPI mines the reporting workflows to prove control effectiveness, spot late/failed submissions, and produce audit-grade process evidence — the Compliance-Center wedge is a direct fit here for CAT, EMIR REFIT, and DORA obligations. AFPI shortens control-testing cycles from quarters to weeks and gives the CRO a live conformance dashboard the auditors can consume. Metric moved: reporting-error rate, control-testing cost, regulator remediation cycle time.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> GTR, SDR</p>
+      <p>DTCC operates the Global Trade Repository and Swap Data Repository &mdash; simultaneously a regulated entity and the regulator's data plumbing for CFTC, ESMA, MAS, and JFSA reporting. Apromore mines the reporting workflows to prove control effectiveness, spot late or failed submissions, and produce audit-grade process evidence for CAT, EMIR REFIT, and DORA obligations. It collapses control-testing from quarters to weeks and gives the CRO a live conformance dashboard auditors can consume directly. Metric moved: reporting-error rate and control-testing cost.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Global Trade Repository (GTR), Swap Data Repository (SDR)</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Timothy+Cuddihy+DTCC">Timothy Cuddihy</a> (Group Chief Risk Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Client Onboarding &amp; KYC/AML for Institutional Members</summary>
+    <summary>3. Corporate Actions Lifecycle Standardization</summary>
     <div class="use-case-body">
-      <p>Onboarding a new clearing member, fund, or omnibus account at DTCC touches legal, credit, KYC/AML, connectivity, and testing — a multi-week journey with dozens of hand-offs across teams. AFPI mines the onboarding case flow (which can be surfaced through Service Cloud plus supporting systems) to expose bottlenecks, rework loops, and SLA breaches; Agentforce Ops then executes the standard steps AFPI proves are safe to automate. This is the fastest-time-to-value co-sell against Agentforce because the process is bounded, the data is captured, and the pain is quantified. Metric moved: onboarding cycle time (days), first-time-right rate, ops cost per new member.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, KYC/AML platform (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Nikki+Poulos+DTCC">Nikki Poulos</a> (General Counsel &amp; Managing Director)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Corporate Actions Lifecycle Standardization</summary>
-    <div class="use-case-body">
-      <p>Corporate actions — dividends, mergers, tenders, redemptions — remain one of the most error-prone processes in post-trade, and DTCC's ISO 20022 CA transformation is a multi-year program to industrialize it. AFPI mines the CA event lifecycle across CA Web, GCA VS, and downstream member workflows to identify where announcements, elections, and allocations diverge from the target model, and quantifies the cost of each break. This gives the transformation office an evidence base to prioritize automation and re-work targets, rather than a swag on where the money is bleeding. Metric moved: CA break rate, indemnification claims paid, transformation ROI proof.</p>
+      <p>Corporate actions &mdash; dividends, mergers, tenders, redemptions &mdash; remain one of the most error-prone processes in post-trade, and DTCC's ISO 20022 CA transformation is a multi-year program to industrialize it. Apromore mines the CA event lifecycle across CA Web, GCA VS, and downstream member workflows to identify where announcements, elections, and allocations diverge from the target model, and quantifies the cost of each break. This gives the transformation office an evidence base to prioritize automation and rework targets rather than a swag on where money is bleeding. Metric moved: CA break rate and indemnification claims paid.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> CA Web, GCA VS</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Nadine+Chakar+DTCC">Nadine Chakar</a> (Managing Director, Digital Assets)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>5. Cyber &amp; Operational Resilience Evidence (DORA-Ready)</summary>
+    <summary>1. Settlement Operations Analyst Desktop &amp; Break Investigation</summary>
     <div class="use-case-body">
-      <p>As a Systemically Important Financial Market Utility (SIFMU) DTCC is examined by the Fed, SEC, and CFTC on operational resilience; DORA extends the same regime to European counterparties DTCC serves. AFPI mines incident, change, and vendor-management workflows to produce continuous, auditable evidence of control operation — collapsing the reactive spreadsheet drill into a live process view. The Compliance Center is the wedge: it takes the same event data AFPI is already mining and turns it into regulator-consumable attestations. Metric moved: attestation prep time, control-gap detection speed, resilience-test coverage.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Compliance Center, ITSM/change-mgmt platform (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Stephen+Scharf+DTCC">Stephen Scharf</a> (former CSO / cyber lead)</p>
+      <p>Settlement-ops analysts investigating T+1 breaks swivel between the clearing consoles, member-comms tools, email, and Service Cloud cases &mdash; a canonical swivel-chair loop that eats hours per break. Apromore task-mining captures each analyst's on-screen activity to name the exact re-keys and lookups that Agentforce Operations can automate against. This feeds the AELA business case directly with per-break minutes and per-FTE productivity numbers. Metric moved: analyst touch-time per break and breaks resolved per FTE per day.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Clearing operations console, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Settlement+Operations+DTCC">Head of Settlement Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <details>
+    <summary>2. Member Onboarding &amp; KYC Analyst Workbench</summary>
+    <div class="use-case-body">
+      <p>Onboarding a new clearing member, fund, or omnibus account at DTCC touches legal, credit, KYC/AML, connectivity, and testing &mdash; a multi-week journey with dozens of hand-offs. Task-mining the onboarding analyst desktop exposes duplicate data entry between the intake portal, KYC platform, and Service Cloud cases so Agentforce can execute standardised sub-tasks safely. Fastest time-to-value co-sell with AELA because the process is bounded, the data is captured, and the pain is quantified. Metric moved: onboarding cycle time and first-time-right rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, KYC/AML platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Nikki+Poulos+DTCC">Nikki Poulos</a> (General Counsel &amp; Managing Director)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Client Services Case Handling on Service Cloud</summary>
+    <div class="use-case-body">
+      <p>DTCC's Salesforce install base includes Service Cloud Unlimited and an Experience Cloud member portal &mdash; the front door for thousands of daily inbound member queries. Task-mining the CSR console reveals which case types are dominated by after-call-work, re-keying, and tab-hopping, then names the exact steps Agentforce for Service can absorb. This is the highest-leverage AELA landing pattern because the systems are already Salesforce-native and the ROI is measurable in minutes-per-case. Metric moved: AHT, after-call-work minutes, and self-service deflection.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, Experience Cloud member portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Client+Services+DTCC">Head of Client Services</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. SIFMU Operational Resilience Evidence (DORA-Ready)</summary>
+    <div class="use-case-body">
+      <p>As a Systemically Important Financial Market Utility, DTCC is examined by the Fed, SEC, and CFTC on operational resilience, and DORA extends the same regime to European counterparties DTCC serves. Compliance Center mines incident, change, and vendor-management workflows to produce continuous, auditable evidence of control operation &mdash; collapsing the reactive spreadsheet drill into a live process view. The event data Apromore is already mining becomes regulator-consumable attestations without a separate reporting build. Metric moved: attestation prep time and control-gap detection speed.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ITSM/change-management platform, incident-management system</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Compliance+Officer+DTCC">Chief Compliance Officer</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. CAT Consolidated Audit Trail Control Attestation</summary>
+    <div class="use-case-body">
+      <p>DTCC feeds and consumes CAT (Consolidated Audit Trail) data, and every SRO participant is on the hook for control effectiveness on submission timeliness, completeness, and error correction. Compliance Center codifies the CAT submission workflow with segregation-of-duties, exception SLAs, and evidence &mdash; then produces continuous attestation for FINRA/SEC examiners. Cuts CAT audit-response cycle from weeks of manual pull to on-demand. Metric moved: CAT error-correction cycle time and audit-finding count.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> CAT reporting engine, exception-management platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Timothy+Cuddihy+DTCC">Timothy Cuddihy</a> (Group Chief Risk Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. AI &amp; Agent Governance for Agentforce AELA Rollout</summary>
+    <div class="use-case-body">
+      <p>The $1M Agentforce AELA opportunity puts autonomous agents into DTCC's regulated workflows &mdash; instantly a model-risk and third-party-AI-governance question for a SIFMU. Compliance Center wraps the agent lifecycle in promote/monitor/retire controls with evidence, and turns every agent action into a control point auditable by the Fed, SEC, and CFTC. This is the wedge that de-risks AELA go-live and shortens the regulator approval path. Metric moved: agent-related audit findings and time-to-regulator-approval.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce platform, model / agent registry</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Model+Risk+DTCC">Head of Model Risk / AI Governance</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Depository Trust &amp; Clearing Corporation by mining T+1 settlement exceptions, GTR/SDR regulatory reporting, and ISO 20022 corporate-actions flows across NSCC/FICC/DTC and CTM/ITP, task-mining settlement, onboarding, and Service Cloud analyst desktops to feed the open $1M Agentforce AELA program with quantified swivel-chair evidence, and running SIFMU resilience, CAT attestation, and agent-governance controls through Compliance Center to lift STP rates, cut analyst touch-time, and produce always-on regulator-consumable evidence for the Fed, SEC, CFTC, and DORA.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

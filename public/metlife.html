@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -109,95 +114,140 @@
   <div class="snapshot">
     <p><strong>Financial Services, Insurance (Life, Annuities, Group Benefits, P&amp;C)</strong></p>
     <p><strong>Revenue:</strong> ~$63.5B (FY24) &nbsp;|&nbsp; <strong>Employees:</strong> ~69,000 &nbsp;|&nbsp; <strong>HQ:</strong> New York, NY, USA</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Informatica MDM, Informatica IDMC, Informatica IDQ</p>
+    <p><strong>Major Subsidiaries:</strong> Metropolitan Life Insurance Company, MetLife Investment Management, PineBridge Investments, MetLife Legal Plans, General American Life Insurance</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales &amp; Service Cloud (Unlimited), Financial Services Cloud (Einstein 1), Vlocity Insurance, Insurance Policy Administration, Insurance Claims Management, Marketing Cloud (ExactTarget Enterprise), Salesforce Shield / Platform Encryption, Event Monitoring, Force.com Enterprise, Social Studio, Informatica MDM, Informatica IDMC, Informatica IDQ</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Databricks</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> INFA Restructuring UPSIDE (<a href="https://org62.my.salesforce.com/006ed00000WAvNZAA1">$2.0M</a>) &nbsp;|&nbsp; INFA IPU ELA (<a href="https://org62.my.salesforce.com/006ed00000YO4QKAA1">$1.84M</a>) &nbsp;|&nbsp; INFA Restructuring (<a href="https://org62.my.salesforce.com/006ed00000XO0ruAAD">$1.0M</a>)</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> MetLife &mdash; National Accounts Transformation (<a href="https://org62.my.salesforce.com/006ed00000PyAirAAF">$7.0M</a>) &nbsp;|&nbsp; MetLife &mdash; GB360 EXTENSION (<a href="https://org62.my.salesforce.com/006ed00000c0foUAAQ">$4.5M</a>) &nbsp;|&nbsp; MetLife &mdash; Agentic AI for Sales and Service (<a href="https://org62.my.salesforce.com/006ed00000RtlErAAJ">$3.0M</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
-    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GEKQ7S2Y">Honoka Yamaguchi</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0AM1KPSBTK">Lindsey Hernandez</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">89/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">91/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Active Informatica MDM/IDMC/IDQ program</td><td>14/15</td><td class="cat-green">$5M+ open Informatica pipe across 6 opps — MDM data-lineage is a natural AFPI wedge.</td></tr>
-        <tr><td>Insurance vertical fit</td><td>13/15</td><td class="cat-green">Claims, underwriting, and policy admin are top AFPI event-log-rich process families.</td></tr>
-        <tr><td>Scale &amp; complexity</td><td>13/15</td><td class="cat-green">69k employees across 40+ countries with life, P&amp;C, and group benefits — heavy process fragmentation.</td></tr>
-        <tr><td>Regulatory pressure</td><td>12/15</td><td class="cat-orange">NYDFS Part 500, SOX, state insurance, and Solvency II create a defensible Compliance Center wedge.</td></tr>
-        <tr><td>CTO engagement live</td><td>12/15</td><td class="cat-orange">Active $565K MS-MetLife CTO opportunity confirms executive access into Global Tech &amp; Ops.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Life, annuities, and Group Benefits &mdash; top-priority AFPI vertical with event-log-rich workflows.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>12/12</td><td class="cat-green">Vlocity Insurance, FSC Einstein 1, Insurance Claims &amp; Policy Admin, Informatica MDM/IDMC, Databricks.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$15.7M SFA renewal in Negotiate; deep multi-cloud install: Service, FSC, MC, Shield, Vlocity.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">$3M Agentic AI opp active + MuleSoft Agent Fabric + Data Cloud / Data360 in EBR.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">NYDFS Part 500, SOX, state DOI, Solvency II &mdash; strong Compliance Center wedge across US + EMEA.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Regulatory pressure</td><td>12/15</td><td class="cat-orange">Strong regulatory story but Compliance Center is a second-play, not the lead wedge.</td></tr>
-        <tr><td>CTO engagement live</td><td>12/15</td><td class="cat-orange">CTO opp signals access but no direct process-mining champion identified yet — needs field-verify.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>15/20</td><td class="cat-orange">CTO opp + Global Tech &amp; Ops access confirmed, but no direct process-mining champion named yet.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>4/6</td><td class="cat-orange">Multiple 7-figure Agentforce opps in flight but no dedicated process-mining budget line yet.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help MetLife, Inc. by mining the claims and underwriting event logs across Group Benefits and Life &amp; Annuities — turning the $5M+ active Informatica MDM/IDMC pipe into a defensible process-lineage story that lands Agentforce Operations use cases in weeks, not quarters.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Group Benefits Claims Adjudication — The New Frontier Payoff</summary>
+    <summary>1. Group Benefits Claims Adjudication (GB360)</summary>
     <div class="use-case-body">
-      <p>MetLife's Group Benefits segment (dental, disability, absence management, voluntary) has publicly declared claims automation and adjudication speed a "New Frontier" strategic priority. AFPI mines the claims event log — intake → triage → medical review → adjudication → payment — to expose where cases stall (missing docs, provider callbacks, adjuster rework) versus where they can be routed straight to an Agentforce claims agent. This is the classic two-week pilot: no PQL specialist, one Ops analyst finds the top three broken variants and hands them to Agentforce Operations. Metric moved: claims cycle time and % straight-through processed.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Claims Platform (TBD), Informatica MDM</p>
+      <p>MetLife's Group Benefits segment (dental, disability, absence management, voluntary) is being rebuilt on GB360 &mdash; the active <a href="https://org62.my.salesforce.com/006ed00000c0foUAAQ">$4.5M GB360 EXTENSION</a> opp is the wedge. AFPI mines the claims event log &mdash; intake &rarr; triage &rarr; medical review &rarr; adjudication &rarr; payment &mdash; to expose where cases stall (missing docs, provider callbacks, adjuster rework) versus where they can be routed straight to an Agentforce claims agent. Two-week pilot: one Ops analyst finds the top three broken variants and hands them to Agentforce Operations. Metric moved: claims cycle time and % straight-through processed.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Insurance Claims Management (Salesforce), Vlocity Insurance</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ramy+Tadros+MetLife">Ramy Tadros</a> (President, U.S. Business)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Underwriting Cycle Time — Life &amp; Annuities</summary>
+    <summary>2. Life &amp; Annuities Underwriting Cycle Time</summary>
     <div class="use-case-body">
-      <p>Individual life and annuity underwriting is a multi-desk process (application → medical evidence → APS retrieval → risk classification → policy issuance) where every day of delay puts placement at risk to a competitor. AFPI overlays the actual underwriting event log to distinguish "waiting on the APS" from "waiting on internal rework" — a distinction MetLife's own underwriters can rarely quantify today. The wedge lands directly against the active <a href="https://org62.my.salesforce.com/006ed00000WoFr4AAF">$565K MS-MetLife CTO opportunity</a> as a Discovery-phase Signature Success deliverable. Metric moved: app-to-issue cycle time and NIGO (not-in-good-order) rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Underwriting Workbench (TBD), Policy Admin System (TBD)</p>
+      <p>Individual life and annuity underwriting is a multi-desk process (application &rarr; medical evidence &rarr; APS retrieval &rarr; risk classification &rarr; policy issuance) where every day of delay puts placement at risk to a competitor. AFPI overlays the actual underwriting event log to separate "waiting on external evidence" from "waiting on internal rework" &mdash; a distinction MetLife's own underwriters can rarely quantify today. Lands directly against the active <a href="https://org62.my.salesforce.com/006ed00000WoFr4AAF">$565K MS-MetLife CTO</a> engagement as a Discovery-phase Signature Success deliverable. Metric moved: app-to-issue cycle time and NIGO (not-in-good-order) rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Insurance Policy Administration (Salesforce), Vlocity Insurance</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Bill+Pappas+MetLife">Bill Pappas</a> (EVP, Head of Global Technology &amp; Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. MDM/Data Quality Process Lineage — Informatica Co-Sell Wedge</summary>
+    <summary>3. MDM / Data Quality Process Lineage &mdash; Informatica Co-Sell</summary>
     <div class="use-case-body">
-      <p>MetLife has three live Informatica MDM/IDMC restructuring and IPU ELA opps totalling <a href="https://org62.my.salesforce.com/006ed00000WAvNZAA1">$4.8M+</a>, plus an active <a href="https://org62.my.salesforce.com/006ed00000VXThKAAX">Databricks integration workstream</a>. AFPI overlays a process-lineage view on the customer/policyholder MDM ingestion and stewardship workflow — the "did our policyholder record actually survive the pipeline correctly?" question that internal risk and state examiners increasingly ask. This differentiates against Celonis, which treats MDM as an analytics problem, not a process problem: AFPI plugs into Informatica's own event streams and yields a defensible audit trail in weeks, not quarters. Metric moved: data-quality rework hours and MDM steward FTE reallocation.</p>
+      <p>MetLife has three live Informatica MDM/IDMC restructuring and IPU ELA opps totalling <a href="https://org62.my.salesforce.com/006ed00000WAvNZAA1">$4.8M+</a>, plus an active Databricks integration workstream. AFPI overlays a process-lineage view on the customer/policyholder MDM ingestion and stewardship workflow &mdash; the "did our policyholder record actually survive the pipeline correctly?" question that internal risk and state examiners increasingly ask. Plugs into Informatica's own event streams and yields a defensible audit trail in weeks, not quarters &mdash; a single business-analyst play, no PQL specialist. Metric moved: data-quality rework hours and MDM steward FTE reallocation.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Informatica MDM, Informatica IDMC</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Bill+Pappas+MetLife+CIO">Bill Pappas</a> (EVP, Head of Global Technology &amp; Operations)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Bill+Pappas+MetLife">Bill Pappas</a> (EVP, Head of Global Technology &amp; Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>4. Contact-Center Deflection &amp; Policyholder Servicing</summary>
+    <summary>1. Group Benefits Claims Examiner Desktop</summary>
     <div class="use-case-body">
-      <p>MetLife runs one of the largest life-insurance contact-center footprints in North America, servicing 90 million+ customers across policy admin, beneficiary changes, and claims status. AFPI mines the actual servicing event log (IVR path, agent handoff, hold time, transfer loop, callback) to identify the top five call reasons that can be fully absorbed by Agentforce — not guessed at from a CSAT survey. This is the natural companion play to the CTO engagement: prove the deflection ROI before the Agentforce contract is signed. Metric moved: AHT, containment rate, first-contact resolution.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Contact-Center Platform (TBD), Agentforce Operations</p>
+      <p>GB claims examiners toggle between the claims platform, policy admin, provider portals, medical-evidence attachments, and email to close a single case. Task mining the examiner desktop reveals how much of the day is lost to app-switching, copy/paste, and repeated lookups that an Agentforce claims agent could absorb. Feeds an Agentforce Operations business case directly against the <a href="https://org62.my.salesforce.com/006ed00000RtlErAAJ">$3M Agentic AI opp</a>. Metric moved: claims per examiner per day and touch-time per case.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Insurance Claims Management (Salesforce), provider portal / email</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ramy+Tadros+MetLife">Ramy Tadros</a> (President, U.S. Business)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Regulatory Reporting &amp; Compliance Center — NYDFS + Solvency II Wedge</summary>
+    <summary>2. Contact-Center Deflection &amp; Policyholder Servicing</summary>
     <div class="use-case-body">
-      <p>As a New York-domiciled insurer with major EMEA operations (MetLife Europe Services), MetLife carries a heavy NYDFS Part 500 (cyber), SOX, state insurance-department, and Solvency II reporting burden. AFPI's Compliance Center gives internal audit a defensible "prove the process" view over regulatory reporting workflows — evidence that reporting figures came from an approved, unaltered process path. It lands as the second use case on top of the same MDM/data foundation the Informatica deals are already building, and pays back inside a single reporting cycle. Metric moved: reporting-cycle days and manual-reconciliation FTE.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Informatica IDQ, GRC Platform (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=MetLife+Chief+Audit+Executive">MetLife Controller</a> (Chief Audit Executive)</p>
+      <p>MetLife runs one of the largest life-insurance contact-center footprints in North America, servicing 90M+ customers across policy admin, beneficiary changes, and claims status. Task mining captures each agent's on-screen actions to isolate the after-call-work steps and the tabs that eat wrap time &mdash; not guessed at from a CSAT survey. Natural companion play to the <a href="https://org62.my.salesforce.com/006ed00000PyAirAAF">$7M National Accounts Transformation</a>: prove the deflection ROI before Agentforce for Service is signed. Metric moved: AHT, after-call-work minutes, first-contact resolution.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, FSC agent workspace</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Ramy+Tadros+MetLife">Ramy Tadros</a> (President, U.S. Business)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <details>
+    <summary>3. Underwriter Workbench Swivel-Chair</summary>
+    <div class="use-case-body">
+      <p>US individual-life underwriters flip between policy admin, MIB, illustration tools, e-signature, and email to complete a single case. Task mining the underwriter desktop names the exact re-keying and lookup steps Agentforce can replace with straight-through processing. Pairs directly with the CTO engagement and the GTO transformation roadmap. Metric moved: underwriter cases per FTE per day and touch-time per case.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Underwriting workbench (Vlocity Insurance), MIB portal / email</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Bill+Pappas+MetLife">Bill Pappas</a> (EVP, Head of Global Technology &amp; Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. NYDFS Part 500 Cyber &amp; Third-Party Attestation</summary>
+    <div class="use-case-body">
+      <p>As a New York-domiciled insurer, MetLife carries NYDFS Part 500 cyber-attestation obligations plus quarterly third-party risk reviews across every regulated subsidiary. Compliance Center codifies the promote / monitor / attest workflow and produces continuous evidence for NYDFS examiners &mdash; especially important as Agentforce and Data Cloud land in claims and service. Metric moved: audit-ready systems covered and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> GRC platform, Salesforce Shield / Event Monitoring</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Risk+Officer+MetLife">Chief Risk Officer</a> (Global Risk Management)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Solvency II Actuarial Close &amp; EMEA Regulatory Reporting</summary>
+    <div class="use-case-body">
+      <p>MetLife Europe Services runs Solvency II reporting, QRTs, and ORSA across the EMEA footprint &mdash; a fully controlled, auditable close across every reporting unit. Compliance Center runs the close as a controlled workflow with segregation-of-duties, sign-offs, and evidence &mdash; the same shape needed for reinsurance treaty settlement. Lands second on top of the same MDM/data foundation the Informatica deals are already building. Metric moved: close cycle time and audit findings per reporting unit.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Actuarial engine, GL / consolidation platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Actuary+MetLife+Europe">Chief Actuary / Head of Solvency II Program, MetLife Europe</a></p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. SOX &amp; State-DOI Financial-Reporting Controls</summary>
+    <div class="use-case-body">
+      <p>MetLife's SEC filings plus state-DOI statutory reporting cycles run on top of the same GL / consolidation stack that Informatica MDM is being rebuilt around. Compliance Center gives internal audit a defensible "prove the process" view over the financial-close and statutory-reporting workflows &mdash; evidence that reporting figures came from an approved, unaltered process path. Pays back inside a single reporting cycle. Metric moved: reporting-cycle days and manual-reconciliation FTE.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Informatica IDQ, GL / consolidation platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=MetLife+Chief+Accounting+Officer">Chief Accounting Officer</a> (Controller's Office)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help MetLife, Inc. by mining Group Benefits claims, Life &amp; Annuities underwriting, and Informatica MDM lineage across its deep Salesforce and Vlocity Insurance estate, task-mining claims-examiner, contact-center, and underwriter desktops to expose the swivel-chair work that the $3M Agentic AI and $7M National Accounts Transformation opps must eliminate, and running NYDFS Part 500, Solvency II, and SOX / state-DOI controls through Compliance Center to shrink cycle times, cut AHT, and produce always-on audit evidence across the US and EMEA footprints.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

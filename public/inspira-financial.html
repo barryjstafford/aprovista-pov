@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -108,42 +113,40 @@
   <h1>Inspira Financial Trust, LLC</h1>
   <div class="snapshot">
     <p><strong>Financial Services, Health &amp; Retirement Custody / Trust Services</strong></p>
-    <p><strong>Revenue:</strong> $139M &nbsp;|&nbsp; <strong>Employees:</strong> 1,200 &nbsp;|&nbsp; <strong>HQ:</strong> Oak Brook, IL, USA</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (SFA), MuleSoft, Marketing Cloud (ExactTarget + Datorama), Slack Enterprise (pending), Financial Services Cloud (in-flight)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Regrello (workflow), Apromore (Phase 1 live)</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Workflow Discovery - Regrello, Apromore #Phase2 (<a href="https://org62.my.salesforce.com/006ed00000WMC3KAAX">$750k</a>) &nbsp;|&nbsp; FSC PxE &gt; AF1 for Service #Phase1 (<a href="https://org62.my.salesforce.com/006ed00000TL8I1AAL">$650k</a>) &nbsp;|&nbsp; CTO + Tiger Team - CSG (<a href="https://org62.my.salesforce.com/006ed00000bkcszAAA">$650k</a>)</p>
+    <p><strong>Revenue:</strong> ~$139M &nbsp;|&nbsp; <strong>Employees:</strong> ~1,200 &nbsp;|&nbsp; <strong>HQ:</strong> Oak Brook, IL, USA</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Financial Services Cloud (Sales &amp; Service PxE), Sales Cloud (Performance), Service Cloud (Performance), MuleSoft Anypoint (Titanium), Salesforce Shield, Marketing Cloud Engagement, Marketing Cloud Intelligence (Datorama), Marketing Cloud Shield, Tableau (Embedded + On-Prem Server), Experience Cloud (Customer Community Plus), Data Cloud (in-flight), Agentforce for Service (in-flight), Apromore (Phase 1 live), Signature Success (Platform + MuleSoft)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Regrello</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Workflow Discovery &mdash; Regrello, Apromore #Phase2 (<a href="https://org62.my.salesforce.com/006ed00000WMC3KAAX">$750k</a>) &nbsp;|&nbsp; FSC PxE &gt; AF1 for Service #Phase1 (<a href="https://org62.my.salesforce.com/006ed00000TL8I1AAL">$650k</a>) &nbsp;|&nbsp; Agentforce POC Upside (<a href="https://org62.my.salesforce.com/006ed00000Tt8nRAAR">$250k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GLPJCVPT">Drew Dorantes</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">90/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">90/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Active AFPI opportunity</td><td>15/15</td><td class="cat-green">Apromore Phase 1 already live; Phase 2 Workflow Discovery opp in flight ($750k).</td></tr>
-        <tr><td>Compliance pressure</td><td>10/10</td><td class="cat-green">ERISA, SEC, and IRS custody rules make Compliance Center a natural wedge.</td></tr>
-        <tr><td>Salesforce install base &amp; active opps</td><td>13/15</td><td class="cat-green">Sales Cloud, MuleSoft, Marketing Cloud in production; FSC + Agentforce for Service opps active.</td></tr>
-        <tr><td>Process complexity</td><td>13/15</td><td class="cat-green">Custodial ops, IRA/HSA admin, and health &amp; benefits admin span multi-team, multi-system flows.</td></tr>
-        <tr><td>Vertical fit</td><td>12/15</td><td class="cat-green">Trust custody / financial services — regulated, event-log-rich processes fit process mining exactly.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Massive install: $6.8M FSC PxE, MuleSoft Titanium, Shield, Signature Success on both Platform + MuleSoft.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>12/12</td><td class="cat-green">MuleSoft Anypoint Titanium + FSC + Service Cloud = event-log-rich stack, ready to mine today.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">ERISA, SEC 17f-2, IRS custody rules, HSA regs &mdash; strong Compliance Center wedge.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">$750k Apromore Phase 2 open + $650k FSC/AF Service + $250k AF POC &mdash; deal viable now.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Apromore Phase 1 live, FSC PxE &gt; AF for Service, Data Cloud, AF POC all in flight; CTO Tiger Team engaged.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Vertical fit</td><td>12/15</td><td class="cat-orange">Strong fit but not a top-tier target vertical (banking, insurance) at 80% of max.</td></tr>
-        <tr><td>Salesforce install base &amp; active opps</td><td>13/15</td><td class="cat-orange">Broad SF footprint, but FSC and Agentforce for Service still in early-phase rollout.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>15/20</td><td class="cat-orange">COO Karyn DeFlaco + MD App Dev Linda O&rsquo;Boyle engaged, but no LinkedIn-verified process-improvement champion yet.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>12/15</td><td class="cat-orange">M&amp;A integration pain acknowledged in exec dinner; custody/distribution flow rework not yet quantified.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Inspira Financial Trust, LLC by mining its IRA/HSA account-opening, distribution, and case-handling event streams to cut cycle time and lift Agentforce for Service containment — extending the Phase 1 Apromore footprint into a documented, audit-ready target state before FSC and Agentforce lock in.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. IRA / HSA Account Opening &amp; Funding</summary>
     <div class="use-case-body">
-      <p>Inspira administers millions of custodial IRA, HSA, and health &amp; benefit accounts; the new-account-to-first-funding cycle spans partner intake, KYC/CIP, account setup, and ACH/check funding — one of the highest-volume, most-touched processes in trust custody. Delays or rework here directly slow AUC growth and generate service tickets. AFPI would mine the SFA + FSC + MuleSoft event streams to expose rework loops, manual KYC re-checks, and funding-latency variants, then feed the winning happy-path into an Agentforce for Service agent. Metric moved: reduce account-open-to-funded cycle time by 30–40% and cut abandoned-open rework.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Financial Services Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=John+Balevic+Inspira+Financial">John Balevic</a> (Executive Sponsor)</p>
+      <p>Inspira administers millions of custodial IRA, HSA, and health &amp; benefits accounts &mdash; the new-account-to-first-funding cycle spans partner intake, KYC/CIP, custody setup, and ACH funding through MuleSoft integrations. Delays and rework here directly slow AUC growth and drive inbound service tickets. Mining the FSC + MuleSoft + custody event streams exposes rework loops, manual KYC re-checks, and funding-latency variants, then feeds the winning happy-path into the Agentforce for Service rollout. Metric: reduce open-to-funded cycle time 30-40% and cut abandoned-open rework.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, MuleSoft Anypoint</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Linda+OBoyle+Inspira+Financial">Linda O&rsquo;Boyle</a> (Managing Director, Application Development)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -151,53 +154,99 @@
   <details>
     <summary>2. Distributions, RMDs &amp; Rollovers</summary>
     <div class="use-case-body">
-      <p>Distribution processing (required minimum distributions, in-service withdrawals, rollovers to/from other custodians) is regulated by ERISA and IRS timing rules, and any process variance surfaces as compliance risk and CX pain during tax season. Apromore Phase 2 is already positioned around workflow discovery — this is the natural first mining target because it has clear regulatory deadlines and heavy manual case-handling. AFPI would surface off-happy-path cases, aging inventory, and hand-off delays between call center, ops, and tax reporting. Metric moved: cut aged-distribution inventory by 50% and eliminate late-RMD penalty exposure.</p>
+      <p>Distribution processing &mdash; required minimum distributions, in-service withdrawals, and 401(k)/IRA rollovers to and from other custodians &mdash; is governed by ERISA and IRS timing rules, so any process variance surfaces as compliance risk and CX pain during tax season. Apromore Phase 2 is positioned around workflow discovery, and this is the natural first target: clear regulatory deadlines, heavy manual case handling, and a proven Regrello/Apromore stack already in play. AFPI would surface off-happy-path cases, aging inventory, and hand-off delays across call center, ops, and tax reporting. Metric: cut aged-distribution inventory by 50% and eliminate late-RMD penalty exposure.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Apromore, Regrello</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Meg+Zwick+Inspira+Financial">Meg Zwick</a> (Head of Distributions Operations)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Karyn+DeFlaco+Inspira+Financial">Karyn DeFlaco</a> (COO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Case &amp; Service Ticket Resolution (FSC + Agentforce for Service)</summary>
+    <summary>3. Post-Merger Custody Platform Integration (Millennium Trust + Inspira)</summary>
     <div class="use-case-body">
-      <p>The FSC PxE &gt; AF1 for Service opp indicates Inspira is standing up Agentforce for Service on top of Financial Services Cloud — but agent throughput and containment only improve if the underlying case-handling process is well-understood. AFPI mines the Service Cloud case history to find repeat contact drivers, escalation loops, and knowledge gaps, then hands the discovered patterns to the Agentforce team so the agent is trained on real variants, not a whiteboard workflow. Metric moved: raise Agentforce case containment 15–25 points and cut average handle time.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, Agentforce for Service</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=David+Vogt+Inspira+Financial">David Vogt</a> (Head of Service Operations)</p>
+      <p>Inspira has explicitly named fragmented systems from the Millennium Trust + Inspira/Alegeus/PayFlex combinations as a top integration challenge (Chicago Agentforce dinner, June 2025). End-to-end custody transactions today flow across multiple legacy record-keepers plus FSC and MuleSoft, so the true target-state process is invisible. Process mining the union of those event logs is the fastest way to document the &ldquo;as-is&rdquo; before FSC and Agentforce lock in a &ldquo;to-be.&rdquo; Metric: shorten M&amp;A rationalization horizon and cut duplicate-system operating cost.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, MuleSoft Anypoint</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mike+Herman+Inspira+Financial">Mike Herman</a> (Senior Executive &mdash; SIC Sponsor)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Service Cloud Case Handling &amp; Agentforce Readiness</summary>
+    <div class="use-case-body">
+      <p>The FSC PxE &gt; AF1 for Service opp indicates Inspira is standing up Agentforce for Service on top of Financial Services Cloud, but agent throughput and containment only improve if the underlying case-handling desktop is well-understood. Task mining captures each agent&rsquo;s on-screen actions across FSC, Service Cloud console, and the custody record-keeping tabs to isolate repeat contact drivers and wrap-time leaks. Feeds directly into Agentforce training data so the agent is grounded on real variants, not a whiteboard flow. Metric: raise Agentforce case containment 15-25 points and cut average handle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, custody record-keeping platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Karyn+DeFlaco+Inspira+Financial">Karyn DeFlaco</a> (COO)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Partner / Advisor Onboarding &amp; Data Handoff</summary>
+    <summary>2. Distribution &amp; Rollover Ops Desktop Swivel-Chair</summary>
     <div class="use-case-body">
-      <p>Inspira's model depends on advisor and employer-plan channel partners feeding accounts and contributions in; the onboarding-to-active-flow process runs across MuleSoft integrations, contracts, and operations teams. Rework or delays here directly slow the growth engine and are almost never measured end-to-end. AFPI would mine the MuleSoft transaction logs and CRM stage history to expose where partner activations stall and quantify revenue-at-risk. Metric moved: shorten partner-to-first-contribution cycle by 25% and lift activation conversion.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft, Sales Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Amish+Merchant+Inspira+Financial">Amish Merchant</a> (Head of Partner Operations)</p>
+      <p>Distribution and rollover specialists move between the custody record-keeper, FSC, Regrello workflow, tax-reporting screens, and email/attachments to complete a single case. Task mining exposes exactly how much time is lost to app-switching, copy/paste of account numbers, and re-lookups &mdash; then names the specific steps Agentforce Operations can replace with straight-through processing. Feeds the ROI case for Agentforce POC Upside. Metric: cases per FTE per day and manual-touch count per distribution.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Regrello, custody record-keeping platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Linda+OBoyle+Inspira+Financial">Linda O&rsquo;Boyle</a> (Managing Director, Application Development)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Compliance Reporting &amp; Custody Controls (Compliance Center wedge)</summary>
+    <summary>3. Employer / Advisor Partner Onboarding Desktop</summary>
     <div class="use-case-body">
-      <p>As a trust company Inspira has continuous ERISA, SEC, and IRS reporting obligations plus internal custody controls; today most of that assurance is spreadsheet-and-signoff. AFPI's Compliance Center wedge would layer conformance checking on the mined processes to prove — with evidence — that every distribution, transfer, and reporting event followed the required control path. This is the "why AFPI vs. generic BPM" story: same event data, but conformance and audit-ready evidence for free. Metric moved: cut audit-prep hours 40–60% and reduce control-exception rework.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Apromore, Financial Services Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Diane+Pressley+Inspira+Financial">Diane Pressley</a> (Head of Compliance)</p>
+      <p>Employer-plan and advisor onboarding pulls together contracts, plan-setup forms, MuleSoft integration configuration, and back-office activation across multiple teams. Task mining the onboarding desktop reveals re-keying between the plan-admin portal and Sales Cloud, and where activation stalls waiting on data corrections. Names the ROI case for expanding the Agentforce POC into the growth channel. Metric: partner time-to-first-contribution and manual-touch count per activation.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, MuleSoft Anypoint</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Linda+OBoyle+Inspira+Financial">Linda O&rsquo;Boyle</a> (Managing Director, Application Development)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. ERISA / IRS Distribution &amp; RMD Controls</summary>
+    <div class="use-case-body">
+      <p>Every RMD, in-service withdrawal, and rollover carries hard IRS/ERISA deadlines and prescribed control paths &mdash; today most of the assurance is spreadsheet-plus-signoff. Compliance Center layers conformance checking on the mined distribution process to prove, with evidence, that every event followed the required control path. Directly extends the Phase 1 Apromore footprint into an audit-ready controls story. Metric: audit-prep hours cut 40-60% and late-distribution penalty exposure eliminated.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Apromore, custody record-keeping platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Karyn+DeFlaco+Inspira+Financial">Karyn DeFlaco</a> (COO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Custody Controls &amp; SEC 17f-2 / SOC 1 Evidence</summary>
+    <div class="use-case-body">
+      <p>As an IL-chartered trust company Inspira operates under state trust regulation plus SOC 1 for its custody platform. Compliance Center runs custody-controls (asset segregation, reconciliation, exception handling) as a controlled workflow with segregation-of-duties, sign-offs, and continuous evidence &mdash; the exact shape a SOC 1 auditor asks for. Pairs cleanly with the Salesforce Shield footprint already in production. Metric: audit findings per exam and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Shield, custody record-keeping platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Karyn+DeFlaco+Inspira+Financial">Karyn DeFlaco</a> (COO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. HSA / Health &amp; Benefits Compliance (IRS Pub 969 + HIPAA)</summary>
+    <div class="use-case-body">
+      <p>Inspira&rsquo;s health-and-benefits book (ex-Alegeus / PayFlex / BRI) is governed by IRS Pub 969 substantiation rules for HSAs/FSAs plus HIPAA on PHI. Compliance Center gives a single controlled workflow for substantiation, denial handling, and appeals with codified SLAs and an audit trail. Metric: substantiation SLA hit-rate and time-to-appeal-resolution.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, benefits admin platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Linda+OBoyle+Inspira+Financial">Linda O&rsquo;Boyle</a> (Managing Director, Application Development)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Inspira Financial Trust, LLC by mining IRA/HSA account-opening, distribution/RMD, and post-merger custody-integration flows across its FSC + MuleSoft Titanium estate, task-mining Service Cloud, distribution-ops, and partner-onboarding desktops to expose the swivel-chair work Agentforce Operations can eliminate, and running ERISA/IRS distribution, SEC/SOC 1 custody, and HSA substantiation controls through Compliance Center to shrink cycle times, lift Agentforce for Service containment, and deliver always-on audit-ready evidence &mdash; extending the Phase 1 Apromore footprint into a documented, controlled target state before FSC and Agentforce lock in.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

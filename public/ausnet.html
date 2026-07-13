@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -114,39 +115,37 @@
     <p><strong>Utilities, Electricity &amp; Gas Transmission &amp; Distribution</strong></p>
     <p><strong>Revenue:</strong> A$2.0B (FY24) &nbsp;|&nbsp; <strong>Employees:</strong> ~1,900 &nbsp;|&nbsp; <strong>HQ:</strong> Southbank, Melbourne, Australia</p>
     <p><strong>Major Subsidiaries:</strong> AusNet Electricity Services, AusNet Gas Services, AusNet Transmission Group, Mondo Power, Geelong Energy Hub</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Marketing Cloud (ExactTarget), Salesforce Platform, Tableau, Salesforce Industries (Utilities)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> SAP (ERP / Asset Management), ServiceNow, GE Smallworld GIS [Slack, Web]</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Energy &amp; Utilities Cloud (Salesforce Industries), Service Cloud (Unlimited), Marketing Cloud Engagement, Marketing Cloud Customer Data Platform, Customer Data Cloud, Experience Cloud (Customer Community Plus), Tableau, ExactTarget</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> SAP, ServiceNow, GE Smallworld GIS</p>
     <p class="opps"><strong>Relevant Open Opps:</strong> AusNet Renewal 299 SF Industries / Sandbox (<a href="https://org62.my.salesforce.com/006ed00000L4NwPAAV">$1,373k</a>) &nbsp;|&nbsp; AusNet - Strategic Field Mobility (<a href="https://org62.my.salesforce.com/006ed00000EdpFVAAZ">$600k</a>) &nbsp;|&nbsp; AusNet Electricity Services (Apromore) (<a href="https://org62.my.salesforce.com/006ed00000cRH25AAG">$98.5k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U042S3GC0FN">Piyush Dange</a></p>
-    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Agentforce + Data Cloud + Salesforce Industries for Utilities)</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Salesforce Industries for Utilities)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">84/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">84/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Regulated electricity &amp; gas T&amp;D — top-priority AFPI utilities vertical.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$1.37M SF Industries renewal in Negotiate; multi-cloud installed base; open Apromore opp.</td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>17/20</td><td class="cat-green">Strategic Field Mobility &amp; CTO sponsor active; utility ops &amp; risk buyers present.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Bushfire / vegetation-management, outage-restoration and connections backlog well documented.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-green">Brookfield-driven modernization + active Agentforce Contact Centre &amp; Data Cloud opps.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Regulated electricity &amp; gas T&amp;D &mdash; top-priority AFPI utilities vertical.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$1.37M SF Industries renewal in Negotiate; deep multi-cloud install + active Apromore opp.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">AER, ESV bushfire code, NER/NGR, EDPR reset &mdash; strong Compliance Center wedge.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Bushfire vegetation-mgmt, outage restoration, connections backlog well documented.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>15/20</td><td class="cat-green">CTO + Field Mobility exec sponsors engaged; utility ops &amp; risk buyers reachable.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>7/12</td><td class="cat-orange">SAP + ServiceNow logs exist but GIS/OMS event data federation not yet proven.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>4/6</td><td class="cat-orange">$98.5K Apromore opp in Stage 2 — right sponsor, needs expansion to full $200k+ ACV.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>4/6</td><td class="cat-orange">$98.5K Apromore opp in Stage 2 &mdash; right sponsor, needs expansion to full $200k+ ACV.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>8/12</td><td class="cat-orange">SAP + ServiceNow logs exist but GIS/OMS event data federation not yet proven.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help AusNet Services Ltd by mining its bushfire-risk vegetation-management, new-connections, outage-restoration, field-service dispatch and asset-inspection processes end-to-end across SAP, ServiceNow and Salesforce — cutting AER-regulated cycle times, exposing compliance gaps ahead of the next EDPR reset, and unlocking measurable Agentforce automation targets in the current $1.37M renewal cycle.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Bushfire-Risk Vegetation Management &amp; Asset Inspection Cycle</summary>
     <div class="use-case-body">
-      <p>Victorian ESV regulations require AusNet to inspect, cut and clear vegetation along ~50,000km of powerline corridors on rolling cycles. Delays or missed inspections translate into regulatory penalties and — post-Black Saturday class action — direct liability exposure. Mining the inspect → defect → work-order → contractor-dispatch → close-out flow across SAP EAM and ServiceNow will surface rework loops and contractor bottlenecks that hide inside SLA-average reporting. Metric moved: % assets inspected on-cycle and mean time-to-close high-risk defects.</p>
+      <p>Victorian ESV regulations require AusNet to inspect, cut and clear vegetation along ~50,000km of powerline corridors on rolling cycles, and delays translate directly into regulatory penalties and post-Black Saturday liability exposure. Mining the inspect &rarr; defect &rarr; work-order &rarr; contractor-dispatch &rarr; close-out flow across SAP EAM and ServiceNow surfaces rework loops and contractor bottlenecks hidden inside SLA-average reporting. AFPI overlays the GIS asset log to isolate the specific corridors where cycle time slips. Metric: % assets inspected on-cycle and mean time-to-close high-risk defects.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> SAP EAM, ServiceNow</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chad+Hymas+AusNet">Chad Hymas</a> (Chief Operating Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -154,9 +153,9 @@
   </details>
 
   <details>
-    <summary>2. New Customer Connections &amp; Distributed Energy Resource (DER) Onboarding</summary>
+    <summary>2. New Customer Connections &amp; DER Onboarding</summary>
     <div class="use-case-body">
-      <p>AER benchmarks AusNet against a Guaranteed Service Level for new-connection timeliness, and rooftop-solar / battery / EV-charger applications now dwarf legacy volumes. The process spans Salesforce (application intake), SAP (metering &amp; billing), ServiceNow (field work) and GIS. Apromore can quantify where hand-offs stall, where re-work is triggered, and where automation with Agentforce can eliminate manual triage — the same wedge Origin Energy is proving today. Metric moved: median days-to-connect and % applications completed without rework.</p>
+      <p>The AER benchmarks AusNet against Guaranteed Service Levels for new-connection timeliness, and rooftop-solar / battery / EV-charger applications now dwarf legacy volumes. The process spans Salesforce Industries (application intake), SAP (metering &amp; billing), ServiceNow (field work) and GIS &mdash; classic multi-system hand-off pain. Apromore quantifies where hand-offs stall and where Agentforce can eliminate manual triage &mdash; the same wedge Origin Energy is proving today in ANZ. Metric: median days-to-connect and % applications completed without rework.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Industries, SAP</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Alistair+Parker+AusNet">Alistair Parker</a> (Executive General Manager, Distribution)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -166,34 +165,78 @@
   <details>
     <summary>3. Outage Restoration &amp; Storm-Response Order-to-Close</summary>
     <div class="use-case-body">
-      <p>SAIDI / SAIFI reliability targets are the single largest lever in AusNet's regulated revenue determination — every extra minute of unplanned outage is directly monetized by the AER. The restoration process (OMS event → crew dispatch → field work → asset restoration → customer comms) crosses at least four systems and depends heavily on contractor availability. Process mining can isolate storm vs. business-as-usual pathways and target the 20% of jobs that generate 80% of the outage minutes. Metric moved: unplanned SAIDI minutes and % of jobs restored within Guaranteed Service Level.</p>
+      <p>SAIDI / SAIFI reliability targets are the single largest lever in AusNet's regulated revenue determination &mdash; every extra minute of unplanned outage is monetized by the AER. The restoration process (OMS event &rarr; crew dispatch &rarr; field work &rarr; asset restoration &rarr; customer comms) crosses at least four systems and depends heavily on contractor availability. Process mining isolates storm vs. business-as-usual pathways and targets the 20% of jobs that generate 80% of outage minutes. Metric: unplanned SAIDI minutes and % of jobs restored within Guaranteed Service Level.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> GE Smallworld GIS / OMS, ServiceNow</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Justin+Harding+AusNet">Justin Harding</a> (Chief Information &amp; Digital Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>4. Field Service Dispatch &amp; Contractor Work Management</summary>
+    <summary>1. Field Service Dispatch &amp; Contractor Work Desktop</summary>
     <div class="use-case-body">
-      <p>AusNet runs a hybrid workforce — internal crews plus a heavy contractor spend (Downer, Zinfra, Ventia) — and the pending "AusNet - Strategic Field Mobility" $600K opportunity is explicitly aimed at this pain. Mining the dispatch-to-invoice loop across SAP, ServiceNow and Salesforce Field Service will expose double-handling, incorrect crew skilling, and invoice-reconciliation rework. This directly de-risks the Field Mobility deal and gives the Agentforce Contact Centre opp a quantified baseline. Metric moved: right-first-time %, average productive hours per crew day.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, SAP</p>
+      <p>The pending $600k AusNet Strategic Field Mobility opportunity is explicitly aimed at contractor-heavy dispatch pain (Downer, Zinfra, Ventia). Task mining captures dispatcher on-screen activity across SAP work-management, ServiceNow, Salesforce Field Service, and invoice-reconciliation spreadsheets &mdash; exposing the double-handling and re-keying steps that Agentforce Operations can eliminate. Directly de-risks the Field Mobility deal by quantifying the productivity baseline. Metric: right-first-time %, average productive hours per crew day, and dispatcher touch-time per work order.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, SAP work-management desktop</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chad+Hymas+AusNet">Chad Hymas</a> (Chief Operating Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Regulatory Reporting &amp; EDPR Compliance Evidence Chain</summary>
+    <summary>2. Contact Centre Agent Handle-Time &amp; After-Call Work</summary>
     <div class="use-case-body">
-      <p>The 2026-31 Electricity Distribution Price Review (EDPR) reset lands mid-cycle for AusNet, and the AER requires evidence-based justification for every dollar of regulated opex/capex. Today, evidence packs are hand-assembled from SAP, ServiceNow and GIS — the classic Compliance-Center wedge. Apromore can generate a mined, replayable process baseline that becomes the AER-facing artefact, and the same conformance model catches control breaks (segregation-of-duties, safety sign-offs) before an internal audit does. Metric moved: hours per regulatory submission and reduction in control-exception rework.</p>
+      <p>The open $100k Agentforce Contact Centre opportunity presumes measurable AHT and wrap-time gains &mdash; task mining is the fastest way to prove where those gains actually live. Capturing agent desktop activity across Service Cloud, ExactTarget-driven customer comms, and the Energy &amp; Utilities Cloud console isolates the swivel-chair steps that Agentforce can automate first. This gives the Contact Centre business case a hard baseline instead of a vendor benchmark. Metric: AHT, after-call-work minutes per contact type, and % of contacts fully handled without human touch.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, Energy &amp; Utilities Cloud desktop</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Contact+Centre+AusNet">Head of Customer Contact Centre</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Field Crew Mobile-App Task Capture &amp; Safety Sign-Off</summary>
+    <div class="use-case-body">
+      <p>Field crews (internal + contractor) flip between the SAP mobile work-order app, safety / permit-to-work forms, and paper-plus-photo evidence for every task. Task mining the mobile app plus the field tablet exposes how much time is lost to re-entry, GPS/asset-ID mismatches, and repeated safety sign-offs &mdash; the exact steps a mobile Agentforce action can eliminate. Feeds the Strategic Field Mobility opp and the safety-audit narrative for ESV. Metric: minutes per work order captured in the field and % of jobs with clean safety evidence at first submission.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP mobile work-order app, Salesforce Field Service mobile</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Field+Services+AusNet">Head of Field Services Operations</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. AER EDPR Evidence Chain &amp; Regulatory Reporting</summary>
+    <div class="use-case-body">
+      <p>The 2026-31 Electricity Distribution Price Review (EDPR) reset requires evidence-based justification for every dollar of regulated opex/capex, and today packs are hand-assembled from SAP, ServiceNow and GIS. Compliance Center runs the mined process baseline as an AER-facing artefact and produces continuous, replayable evidence for internal audit. Catches control breaks (segregation-of-duties, safety sign-offs) before they surface in an examiner review. Metric: hours per regulatory submission and reduction in control-exception rework.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> SAP, ServiceNow</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mark+Ellul+AusNet">Mark Ellul</a> (Chief Financial Officer)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline"><a href="https://salesforce.enterprise.slack.com/archives/C04PFS7UYNA/p1777440081610229"><strong>Celonis</strong></a> — ANZ SE community flags Celonis as the incumbent to displace on ANZ utilities, with ANZ Bank &amp; Westpac already live as Apromore proof points on the doorstep. &nbsp;·&nbsp; <a href="https://salesforce.enterprise.slack.com/archives/C0AMCJVJXCJ/p1782206578152659"><strong>ServiceNow</strong></a> — AusNet's ITSM/ITOM footprint means ServiceNow Process Optimization will be positioned in-account; Apromore's cross-stack (SAP + GIS + SF) reach is the differentiator. &nbsp;·&nbsp; <a href="https://salesforce.enterprise.slack.com/archives/C06JASKL0QZ/p1775743655935349"><strong>UiPath</strong></a> — task-mining/RPA vendor active in ANZ utilities; frame Apromore as the process layer that tells UiPath &amp; Agentforce what to automate.</span></h2>
+  <details>
+    <summary>2. ESV Bushfire Mitigation &amp; Safety Case Conformance</summary>
+    <div class="use-case-body">
+      <p>Energy Safe Victoria requires AusNet to file and comply with a formal Electricity Safety Management Scheme (ESMS) &mdash; the bushfire mitigation, inspection, and defect-remediation processes must be conformant, documented, and auditable. Compliance Center encodes the safety-case control-set on top of the mined inspection process and produces always-on evidence for ESV. Removes the manual scramble every audit cycle. Metric: audit findings per control area and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP EAM, GE Smallworld GIS</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Safety+AusNet">Head of Safety &amp; Environment</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Agentforce &amp; AI Model Lifecycle Governance</summary>
+    <div class="use-case-body">
+      <p>With active Agentforce Contact Centre, Data Cloud, and MC opportunities, AusNet is about to run AI models against customer, outage, and connections data &mdash; a first-order model-risk exposure under emerging AER/Voluntary AI Safety Standard expectations. Compliance Center codifies the model promote/monitor/retire lifecycle and produces continuous evidence that agentic actions stayed inside policy. Especially important as customer-facing Agentforce lands in the contact centre. Metric: audit-ready models covered and % of agentic actions with clean governance evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Data Cloud, Agentforce action log</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Justin+Harding+AusNet">Justin Harding</a> (Chief Information &amp; Digital Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help AusNet Services Ltd by mining bushfire vegetation-management, DER connections, and outage-restoration processes end-to-end across SAP, ServiceNow, GIS and Salesforce Industries, task-mining field-dispatch and contact-centre desktops to give the $600k Field Mobility and $100k Agentforce Contact Centre opps a hard productivity baseline, and running EDPR evidence, ESV bushfire safety-case, and Agentforce model-lifecycle controls through Compliance Center to cut AER-regulated cycle times, expose compliance gaps ahead of the 2026-31 reset, and unlock measurable Agentforce automation targets in the current $1.37M SF Industries renewal cycle.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

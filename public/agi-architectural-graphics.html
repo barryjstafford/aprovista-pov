@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -107,100 +112,141 @@
 <main>
   <h1>Architectural Graphics, Inc.</h1>
   <div class="snapshot">
-    <p><strong>Manufacturing, Signage &amp; Wayfinding (Architectural Branding)</strong></p>
+    <p><strong>Manufacturing, Signage &amp; Wayfinding</strong></p>
     <p><strong>Revenue:</strong> ~$126M &nbsp;|&nbsp; <strong>Employees:</strong> ~785 &nbsp;|&nbsp; <strong>HQ:</strong> Virginia Beach, VA, USA</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (80 SFA), Service Cloud (43 Call Center), Field Service (150 Dispatcher + 175 Contractor logins in-flight), Platform (200 licenses), MuleSoft Anypoint, Slack (expansion pending), Marketing Cloud (advanced pending)</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://salesforce.enterprise.slack.com/team/U01FU2LDLMV">Olivia Stanziale</a> (SF AE)]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Field Service Swap +325 licenses (<a href="https://org62.my.salesforce.com/006ed00000blAt3AAE">$240K</a>) &nbsp;|&nbsp; SFA + Call Center + Platform Renewal (<a href="https://org62.my.salesforce.com/006ed000008RlW5AAK">$219K</a>) &nbsp;|&nbsp; Agentforce (<a href="https://org62.my.salesforce.com/006ed00000b4KPRAA2">$120K</a>)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (80 SFA), Service Cloud (43 Call Center), Salesforce Platform (200 licenses), MuleSoft Anypoint, Slack</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Epicor</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> AGI &mdash; Swap Platform to 150 SFS Dispatcher + 175 SFS Contractor Logins (<a href="https://org62.my.salesforce.com/006ed00000blAt3AAE">$199k</a>) &nbsp;|&nbsp; AGI Renewal 80 SFA / 43 Call Center / 200 Platform (<a href="https://org62.my.salesforce.com/006ed000008RlW5AAK">$219k</a>) &nbsp;|&nbsp; AGI &mdash; Agentforce (<a href="https://org62.my.salesforce.com/006ed00000b4KPRAA2">$120k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01FU2LDLMV">Olivia Stanziale</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t3">50/100</span> — T3 Nurture</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t3">54/100</span> &mdash; T3 Nurture</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce install-base breadth</td><td>12/15</td><td class="cat-green">Seven clouds active with six open opps — Sales, Service, Field Service, Platform, MuleSoft, Slack, Marketing Cloud all present.</td></tr>
-        <tr><td>Deal timing (Field Service swap in Stage 04)</td><td>8/10</td><td class="cat-green">$240K FS swap at Stage 04 means real event-log capture is imminent — the AFPI wedge lands the day dispatchers go live.</td></tr>
-        <tr><td>Executive AI mandate (Agentforce opp live)</td><td>10/15</td><td class="cat-orange">Agentforce deal exists at Stage 02 — AI mandate confirmed but too early for AFPI to attach as an ROI accelerator.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>11/12</td><td class="cat-green">Sales, Service, Field Service in-flight, Platform, MuleSoft, Slack &mdash; deep multi-cloud with active engagement.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>11/15</td><td class="cat-orange">Contractor swivel-chair via in-house portal, PM tickets in a homegrown system, CIO reviewing middleware.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>8/12</td><td class="cat-orange">Salesforce + Epicor + MuleSoft gives log coverage, but scale and depth are mid-market.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>8/12</td><td class="cat-orange">$120k Agentforce opp + $199k FS swap at Stage 04 + Anypoint add-on signal live AI/automation appetite.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>8/15</td><td class="cat-red">Signage/wayfinding manufacturer &mdash; adjacent to priority verticals but not core AFPI target.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Vertical fit &amp; process complexity</td><td>7/15</td><td class="cat-red">Mid-size signage/wayfinding manufacturer — event-log density is thinner than heavy-manufacturing or FS/energy peers.</td></tr>
-        <tr><td>Red-flag deductions (SDR/BDR DNC flag, small ARR ceiling)</td><td>−7</td><td class="cat-red">Account carries a "Do Not Contact" flag and total won ACV ~$440K caps realistic AFPI ARR at entry-level TPL.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>3/8</td><td class="cat-red">Light regulatory profile &mdash; no SOX, HIPAA, or heavy financial-services compliance driver.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>3/6</td><td class="cat-red">$199k FS + $120k Agentforce cap realistic AFPI ARR at entry-level TPL; SDR/BDR Do-Not-Contact flag applies.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Architectural Graphics, Inc. by mining its incoming Field Service dispatch and case event logs to prove Agentforce ROI before that opp closes — turning the $240K FS swap and $120K Agentforce deals into a documented process-improvement story rather than two isolated license transactions.</p>
-
-  <div class="nurture-box">
-    <strong>Why Not Now</strong>
-    <p>AGI is a full-stack Salesforce customer expanding steadily across Sales, Service, Field Service, MuleSoft, Slack, and Marketing Cloud — but three signals put it in T3 Nurture rather than T1/T2 Pursue. The account carries an SDR/BDR "Do Not Contact" flag, total addressable AFPI ARR is modest (~$126M revenue, ~$440K won ACV to date), and the Agentforce opportunity is still at Stage 02. The right moment is when Agentforce and the Field Service swap both advance to Stage 04/05 — engage exclusively through Olivia Stanziale until then.</p>
-  </div>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Field Service Dispatch &amp; Scheduling Optimization</summary>
+    <summary>1. Field Service Dispatch &amp; Contractor Handoff</summary>
     <div class="use-case-body">
-      <p>The $240K FS swap adds 150 dispatchers and 175 contractor logins — day one, AGI has a rich Service Appointment event stream covering scheduling, travel, first-time-fix, and re-work loops. AFPI mines that log to expose which dispatch flows over-schedule, which contractors miss SLA, and where re-visits cluster, then feeds the fixes into Agentforce Operations for automated resolution. Metric moved: first-time-fix rate and technician utilization.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, Service Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Olivia+Stanziale+Salesforce">Olivia Stanziale</a> (SF Named Account Executive — primary channel)</p>
+      <p>The $199k FS swap adds 150 dispatchers and 175 contractor logins to Field Service &mdash; day one, AGI has a rich Service Appointment event stream covering scheduling, in-house tech dispatch, and the contractor broadcast handoff. Today ~33 internal Field Service techs cover local jobs while everything else flows to contractors through AGI's in-house portal, so mining exposes where dispatch bounces between the two channels, where SLAs slip, and where re-visits cluster. AFPI feeds those exceptions to Agentforce Operations for auto-remediation. Metric moved: first-time-fix rate and technician / contractor utilization.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, AGI in-house contractor portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Field+Service+Operations+Architectural+Graphics">Head of Field Service Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Agentforce Readiness Discovery for Case-to-Resolution</summary>
+    <summary>2. Order-to-Cash for Configure-to-Order Signage</summary>
     <div class="use-case-body">
-      <p>The $120K Agentforce opp sits at Stage 02 — Determining Problem/Impact/Ideal. AFPI's fastest wedge is a two-week diagnostic that mines the Service Cloud Call Center case flow to show exactly which case paths, escalations, and manual touches Agentforce should own first — de-risking the Agentforce close and giving the CIO a documented before/after story. Metric moved: case handle time and automation-eligible-volume percentage.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud (Call Center), Salesforce Platform</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Olivia+Stanziale+Salesforce">Olivia Stanziale</a> (SF Named Account Executive — Agentforce deal owner)</p>
+      <p>Architectural signage is a configure-to-order business where each quote spawns a custom manufacturing run in Epicor plus a Field Service install visit. AFPI mines the Sales Cloud opportunity-to-invoice flow alongside Epicor production events and FS install milestones to expose where quotes stall in engineering, where install slippage delays revenue recognition, and where manual pricing overrides erode margin. Sits directly on top of the middleware review the CIO already flagged. Metric moved: quote-to-cash cycle time and margin leakage on custom orders.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Epicor ERP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=CIO+Architectural+Graphics">CIO, Architectural Graphics</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Order-to-Cash for Signage Manufacturing &amp; Install</summary>
+    <summary>3. MuleSoft Anypoint Cross-System Handoff Flows</summary>
     <div class="use-case-body">
-      <p>Architectural signage is a configure-to-order business where each quote spawns a custom manufacturing run plus a field install visit. AFPI mines the Sales Cloud opportunity-to-invoice event log alongside Field Service install events to expose where quotes stall in engineering review, where install slippage delays revenue recognition, and where manual pricing overrides erode margin. Metric moved: quote-to-cash cycle time and margin leakage on custom orders.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Field Service</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Olivia+Stanziale+Salesforce">Olivia Stanziale</a> (SF Named Account Executive)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Cross-Cloud Integration Flows via MuleSoft Anypoint</summary>
-    <div class="use-case-body">
-      <p>MuleSoft Anypoint is already live with a $70K add-on in flight, meaning integration events between Sales, Service, Field Service, and the ERP are traceable end-to-end. AFPI mines those Anypoint API and flow logs to find where cross-system handoffs stall — customer creates in Sales but never reaches Service, dispatch missing a work-order attribute — and hands the exceptions to Agentforce for auto-remediation. Metric moved: cross-cloud handoff SLA and integration exception rate.</p>
+      <p>Anypoint is already live with a $70k Advanced add-on in flight, and the CIO is actively reevaluating middleware &mdash; the ideal moment to mine integration events across Sales, Service, Field Service, Epicor, and the in-house portal end-to-end. AFPI exposes where records created in Sales never reach Service, where work orders lose attributes crossing to the contractor portal, and where retries pile up in Anypoint. Exceptions feed Agentforce for auto-remediation and reinforce the middleware business case. Metric moved: cross-system handoff SLA and integration exception rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> MuleSoft Anypoint, Sales Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Olivia+Stanziale+Salesforce">Olivia Stanziale</a> (SF Named Account Executive)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Integration+Architect+Architectural+Graphics">Integration / Middleware Lead</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Project Manager Homegrown-Ticket Desktop</summary>
+    <div class="use-case-body">
+      <p>PM tickets today live in a homegrown system (confirmed on the March demo) while dispatch and case-work run in Salesforce &mdash; PMs swivel-chair between the two dozens of times a day. Task mining the PM desktop reveals how much time goes to app-switching, copy/paste, and status lookups that Agentforce could automate, and quantifies which PM steps justify an upgrade to full Service Cloud UE. Feeds an Agentforce Operations business case ahead of the Agentforce opp. Metric moved: tickets managed per PM per day and manual touch-time per ticket.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> AGI homegrown ticketing system, Salesforce Platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Project+Management+Architectural+Graphics">Director of Project Management</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Renewal &amp; Contract Operations Ahead of FY28 SFA Renewal</summary>
+    <summary>2. Contractor Portal Work-Order Fulfillment</summary>
     <div class="use-case-body">
-      <p>The $219K SFA + Call Center + Platform renewal (close FY28-01-31) is the natural moment to attach AFPI as a Signature Success or SES deliverable. AFPI mines the renewal-quoting and contract-execution event flow to show how AGI can consolidate seven-cloud renewal cycles into a single motion — the CIO conversation becomes operational transformation, not license negotiation. Metric moved: renewal cycle time and multi-product bundle attach rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Salesforce Platform</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Olivia+Stanziale+Salesforce">Olivia Stanziale</a> (SF Named Account Executive)</p>
+      <p>Contractors operate outside Field Service Mobile entirely &mdash; they use AGI's in-house portal, fed by MuleSoft, to receive work orders and close them out. Task mining that portal captures where contractors get stuck (missing attributes, incorrect price books, upload failures) and where AGI ops has to re-key data on the Salesforce side. Directly informs the Agentforce for Service and MuleSoft slides Olivia and Morgan have been prepping. Metric moved: contractor close-out cycle time and re-keying events per work order.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> AGI contractor portal, Salesforce Field Service</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Contractor+Operations+Architectural+Graphics">Head of Contractor Operations</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <details>
+    <summary>3. Call Center Case Handling &amp; After-Call Work</summary>
+    <div class="use-case-body">
+      <p>The 43-seat Service Cloud Call Center has measurable AHT and wrap variability, especially for install / rework calls that touch both Epicor and Field Service. Task mining captures each agent's on-screen actions to isolate the after-call-work steps and the tabs that eat wrap time, then names the exact micro-tasks Agentforce can eliminate. Pairs directly with the $120k Agentforce opp. Metric moved: AHT and after-call-work minutes per case type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, Epicor ERP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Customer+Service+Manager+Architectural+Graphics">Manager, Customer Service</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. ADA &amp; Building-Code Signage Compliance Attestation</summary>
+    <div class="use-case-body">
+      <p>Architectural signage must comply with ADA, IBC, and jurisdiction-specific wayfinding codes on every install &mdash; today the attestations sit in project files and email threads. Compliance Center codifies the design-review, install-verification, and customer sign-off steps as a controlled workflow with evidence attached to each work order. Cuts audit risk and speeds up commercial customer close-out. Metric moved: attestations captured on time and audit-ready installs percentage.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, AGI project system</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Quality+Compliance+Architectural+Graphics">Head of Quality &amp; Compliance</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Contractor Onboarding &amp; Credential Controls</summary>
+    <div class="use-case-body">
+      <p>175+ contractor logins in the pipeline means AGI must run a repeatable process for insurance, W-9, background, safety-training, and portal-access provisioning &mdash; today that's a manual checklist. Compliance Center wraps contractor onboarding in a controlled workflow with segregation-of-duties, expiry tracking, and automatic revocation when credentials lapse. Reduces on-site risk and audit exposure. Metric moved: onboarding cycle time and contractors with expired credentials in production.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, AGI contractor portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Safety+Compliance+Architectural+Graphics">Safety &amp; Compliance Manager</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Agentforce Model &amp; Prompt Governance</summary>
+    <div class="use-case-body">
+      <p>As Agentforce lands in Service Cloud and Field Service, AGI needs a lifecycle for every model, prompt, and topic &mdash; introduced, tested, promoted, monitored, retired &mdash; with continuous evidence for internal audit and enterprise customers. Compliance Center runs that lifecycle end-to-end and produces the audit trail leadership expects before agentic AI touches customer-facing workflows. Metric moved: audit-ready agents in production and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agentforce, Salesforce Platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=CIO+Architectural+Graphics">CIO, Architectural Graphics</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Architectural Graphics, Inc. by mining its incoming Field Service, Epicor order-to-cash, and MuleSoft cross-system flows to prove AFPI ROI before the $199k FS swap and $120k Agentforce deals close, task-mining the PM homegrown ticketing desktop and contractor portal to expose swivel-chair work Agentforce Operations can eliminate, and running ADA/building-code signage attestation, contractor credential controls, and Agentforce model governance through Compliance Center to cut cycle time, lift first-time-fix, and produce always-on audit evidence.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-01. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

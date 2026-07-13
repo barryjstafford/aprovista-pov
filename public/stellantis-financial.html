@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -108,50 +113,50 @@
   <h1>Stellantis Financial Services, Inc.</h1>
   <div class="snapshot">
     <p><strong>Financial Services, Captive Auto Finance</strong></p>
-    <p><strong>Revenue:</strong> $229M &nbsp;|&nbsp; <strong>Employees:</strong> 550 &nbsp;|&nbsp; <strong>HQ:</strong> Atlanta, GA, USA</p>
+    <p><strong>Revenue:</strong> ~$229M &nbsp;|&nbsp; <strong>Employees:</strong> ~550 &nbsp;|&nbsp; <strong>HQ:</strong> Atlanta, GA, USA</p>
     <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Experience Cloud (Customer &amp; Partner Portals), MuleSoft, Tableau, CRM Analytics, Platform, Informatica MDM</p>
     <p><strong>Current Non-Salesforce Systems:</strong> Regrello</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Stellantis Financial Services - Apromore (<a href="https://org62.my.salesforce.com/006ed00000ZrRqjAAF">$550k</a>) &nbsp;|&nbsp; Stellantis Financial Data Mining Apromore (<a href="https://org62.my.salesforce.com/006ed00000cVB69AAG">$200k</a>) &nbsp;|&nbsp; SFS Loan Origination PH2 (<a href="https://org62.my.salesforce.com/006ed00000J32vBAAR">$1.0M</a>)</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Stellantis Financial Services - Apromore (<a href="https://org62.my.salesforce.com/006ed00000ZrRqjAAF">$550k</a>) &nbsp;|&nbsp; Stellantis Financial Data Mining Apromore (<a href="https://org62.my.salesforce.com/006ed00000cVB69AAG">$200k</a>) &nbsp;|&nbsp; SFS Loan Origination Services PH2 (<a href="https://org62.my.salesforce.com/006ed00000J32vBAAR">$1.0M</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U05T2FB0RSS">Allie Miller</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Service Cloud + MuleSoft + Informatica MDM)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">92/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">92/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Active Opportunity Alignment (Apromore opps already live)</td><td>20/20</td><td class="cat-green">Two active Apromore opps in flight ($550k + $200k) — deal is already funded and named.</td></tr>
-        <tr><td>Process Complexity &amp; Pain (loan origination, servicing, collections)</td><td>18/20</td><td class="cat-green">Loan origination, dealer floor plan, collections, and servicing — all event-log-rich, all in scope.</td></tr>
-        <tr><td>Data Readiness (MuleSoft + Informatica MDM in flight)</td><td>14/15</td><td class="cat-green">MuleSoft renewal + INFA MDM Data Fabric ($800k) mean event data is already being unified.</td></tr>
-        <tr><td>Buyer Access (SFS is a known Salesforce anchor account)</td><td>13/15</td><td class="cat-green">$5.8M SFA/Portal renewal — SFS is a top-of-list captive finance anchor with warm buyer access.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Captive auto finance &mdash; top AFPI vertical; loan origination, collections, and dealer ops all in scope.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>12/12</td><td class="cat-green">Service Cloud + MuleSoft + Informatica MDM Data Fabric ($800k) &mdash; event data already being unified.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$5.8M SFA/Portal renewal + $2.7M MuleSoft renewal &mdash; deep multi-cloud install-base and warm buyer access.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">LOS PH2 ($1M), Adaptive Agent for Sales, Marketing Agent, and two live Apromore opps &mdash; active AI push.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">Loan origination, collections cure-rate, dealer floor plan &mdash; classic event-log-rich, rework-heavy pain.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Regulatory / Compliance Pressure (CFPB, state DMV, GLBA, FDCPA)</td><td>12/15</td><td class="cat-orange">Real regulatory weight (CFPB, GLBA, FDCPA) but not the wedge — value story leads with cycle time, not audit.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>15/20</td><td class="cat-orange">Salesforce sponsor (Allie Miller) engaged and two Apromore opps named, but no customer-side champion surfaced on LinkedIn.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-orange">Two active Apromore opps ($550k + $200k) already funded &mdash; must convert and expand beyond the $750k floor.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Stellantis Financial Services, Inc. by mining the loan-origination, collections, and dealer-onboarding event streams flowing through Service Cloud, MuleSoft, and Informatica MDM — accelerating the two active Apromore opps into a documented cycle-time, cure-rate, and captive-penetration lift for the LOS PH2 and Adaptive Agent for Sales programs.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Auto Loan Origination — Time-to-Decision &amp; Dealer Funding Cycle</summary>
+    <summary>1. Auto Loan Origination &mdash; Time-to-Decision &amp; Dealer Funding Cycle</summary>
     <div class="use-case-body">
-      <p>SFS is standing up a new loan-origination platform (SFS Loan Origination Services PH2, <a href="https://org62.my.salesforce.com/006ed00000J32vBAAR">$1.0M</a>) and Adaptive Agent for Sales — both create fresh event logs across dealer submission, credit decision, contract booking, and funds disbursement. Dealers churn to competing captives when funding slips past 24 hours, and manual stipulations reviews add rework loops that never show up in KPI dashboards. AFPI mines the origination event stream from MuleSoft-integrated dealer, LOS, and Service Cloud data to expose decisioning bottlenecks, stipulation-driven rework, and dealer variance — targeting a 30-40% reduction in cycle time and higher captive penetration.</p>
+      <p>SFS is standing up a new loan-origination platform (<a href="https://org62.my.salesforce.com/006ed00000J32vBAAR">SFS LOS PH2, $1.0M</a>) plus an Adaptive Agent for Sales &mdash; both create fresh event logs across dealer submission, credit decision, stipulations review, contract booking, and funds disbursement. Dealers churn to Ally, GM Financial, and Ford Credit when funding slips past 24 hours, and manual stipulations reviews add rework loops that never show up in KPI dashboards. AFPI mines the origination event stream from MuleSoft-integrated dealer, LOS, and Service Cloud data to expose decisioning bottlenecks and dealer variance, targeting a 30-40% reduction in cycle time and higher captive penetration on Chrysler/Dodge/Jeep/Ram/Fiat retail volume.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Operating+Officer+Stellantis+Financial+Services">Chief Operating Officer</a> (Head of Originations, Stellantis Financial Services)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Originations+Stellantis+Financial+Services">Head of Originations, Stellantis Financial Services</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. Collections &amp; Delinquency Workflow Optimization</summary>
+    <summary>2. Collections Cure-Rate &amp; Delinquency Workflow Optimization</summary>
     <div class="use-case-body">
-      <p>In a rising-delinquency auto-finance market, collections cure rate is the single biggest lever on net charge-offs — every day earlier a delinquent account is worked converts directly to basis points saved. Current queues, dialer strategies, promise-to-pay follow-ups, and legal-handoff triggers are governed by static rules that no one has time to re-tune against actual behavior. AFPI mines Service Cloud case, dialer, and payment-event logs to reveal which agent paths, contact channels, and treatment sequences drive the fastest cure — feeding Agentforce to route the right contact to the right agent at the right hour. Metric: 3-5 bps improvement in net loss on portfolio scale.</p>
+      <p>In a rising-delinquency auto-finance market, cure rate is the single biggest lever on net charge-offs &mdash; every day earlier a delinquent account is worked converts directly to basis points saved. Current queues, dialer strategies, promise-to-pay follow-ups, and legal-handoff triggers are governed by static rules that no one has time to re-tune against actual behavior, and the <a href="https://org62.my.salesforce.com/006ed00000Dw8IfAAJ">SFS Collections AF Sales Coach</a> opp acknowledges the gap. AFPI mines Service Cloud case, dialer, and payment-event logs to reveal which agent paths, contact channels, and treatment sequences drive the fastest cure &mdash; feeding Agentforce to route the right contact to the right agent at the right hour. Metric: 3-5 bps improvement in net loss at portfolio scale.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Collections+Stellantis+Financial+Services">Head of Collections</a> (Stellantis Financial Services)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Collections+Stellantis+Financial+Services">Head of Collections, Stellantis Financial Services</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -159,43 +164,89 @@
   <details>
     <summary>3. Dealer Onboarding &amp; Floor Plan Servicing</summary>
     <div class="use-case-body">
-      <p>Bringing a Chrysler/Dodge/Jeep/Ram/Fiat dealer live on SFS floor plan and retail programs is a multi-team dance across credit, compliance, legal, and IT provisioning — the Experience Cloud Partner Portal ($529K subscribers on the current SFA renewal, <a href="https://org62.my.salesforce.com/006ed00000Tf7EYAAZ">$5.8M</a>) is the front door but the back-office swivel-chair is invisible. Every week of onboarding delay is lost paper contracts and lost captive share to Ally, GM Financial, and Ford Credit. AFPI mines Partner Portal, MuleSoft, and Service Cloud event logs to expose which onboarding steps stall, why, and by whom — feeding an Agentforce Operations agent that auto-nudges the blocking party. Metric: 40% faster dealer time-to-first-contract.</p>
+      <p>Bringing a Chrysler/Dodge/Jeep/Ram/Fiat dealer live on SFS floor plan and retail programs is a multi-team dance across credit, compliance, legal, and IT provisioning &mdash; the Experience Cloud Partner Portal (12,000 partner seats on the <a href="https://org62.my.salesforce.com/006ed00000Tf7EYAAZ">$5.8M SFA renewal</a>) is the front door but the back-office swivel-chair is invisible. Every week of onboarding delay is lost paper contracts and lost captive share. AFPI mines Partner Portal, MuleSoft, and Service Cloud event logs to expose which onboarding steps stall, why, and by whom &mdash; feeding an Agentforce Operations agent that auto-nudges the blocking party. Metric: 40% faster dealer time-to-first-contract.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Experience Cloud (Partner Portal), MuleSoft</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Dealer+Services+Stellantis+Financial+Services">Head of Dealer Services</a> (Stellantis Financial Services)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Dealer+Services+Stellantis+Financial+Services">Head of Dealer Services, Stellantis Financial Services</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Collections Agent Desktop &mdash; Swivel-Chair &amp; AHT Reduction</summary>
+    <div class="use-case-body">
+      <p>Collections agents flip between Service Cloud, the dialer, payment processing, promise-to-pay entry, dealer/insurance lookups, and legal-hold checklists on every account touched &mdash; and the $250k Adaptive Agent for Sales opp signals leadership is already looking for AI leverage on the front line. Task mining captures each agent's on-screen actions to isolate the exact steps that eat wrap time and the copy/paste patterns Agentforce can automate away. Feeds a defensible Agentforce Operations business case with per-FTE numbers, not vendor slideware. Metric: 15% AHT reduction and 20% wrap-time cut.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, dialer / payment platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=VP+Collections+Operations+Stellantis+Financial+Services">VP, Collections Operations, Stellantis Financial Services</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Customer Servicing &amp; Contact-Center Deflection</summary>
+    <summary>2. Loan Origination Analyst &mdash; Stipulations Review Desktop</summary>
     <div class="use-case-body">
-      <p>The Service Cloud footprint plus the $250K Adaptive Agent for Sales opp signals an active push toward AI-assisted servicing. Payoff quotes, extension requests, insurance and title issues, and end-of-lease inspections dominate call volume — and each is a repeatable process with clear event trails. AFPI mines IVR, case, and payment-event streams to find the top 10 high-volume/high-effort call intents that Agentforce can fully deflect, and quantifies the labor + AHT savings before build. Metric: 25% call deflection, 15% AHT reduction on retained calls.</p>
+      <p>Stipulations review (proof of income, insurance, address, trade payoff) is where LOS cycle time actually leaks &mdash; analysts hop between dealer document uploads, LOS screens, third-party verification portals, and Service Cloud follow-up cases. Task mining the analyst desktop quantifies rework, tab-switch cost, and which stipulation types drive the most manual touches &mdash; directly feeding LOS PH2 ($1M) and the Marketing Agent for vehicle selection opp. Metric: 25% reduction in per-app manual touch-time and rework loops.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> LOS platform, Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Credit+Operations+Stellantis+Financial+Services">Head of Credit Operations, Stellantis Financial Services</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Customer Service Rep &mdash; Payoff, Extension &amp; Title Handling Desktop</summary>
+    <div class="use-case-body">
+      <p>Payoff quotes, extension requests, insurance/title issues, and end-of-lease inspections dominate SFS servicing call volume &mdash; and each is a repeatable process the rep walks through across Service Cloud, MuleSoft-integrated payoff calculators, and the customer portal. Task mining pinpoints the top 10 high-effort call intents and quantifies exact click-paths so Agentforce can either deflect them to self-serve on the Customer Portal or auto-fill the rep flow. Metric: 25% call deflection and 15% AHT cut on retained calls.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Experience Cloud (Customer Portal)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Service+Stellantis+Financial+Services">Head of Customer Service</a> (Stellantis Financial Services)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Service+Stellantis+Financial+Services">Head of Customer Service, Stellantis Financial Services</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. CFPB Servicing &amp; Add-On Products Evidence</summary>
+    <div class="use-case-body">
+      <p>Auto captives are under active CFPB scrutiny on servicing practices, add-on product refunds (GAP, VSC), and repossession &mdash; and every finding turns into weeks of manual sampling, spreadsheets, and audit-response fire drills. Compliance Center sits on top of the mined servicing process and produces continuous, defensible evidence that every policy-mandated step ran on every account, not just the sample. Turns CFPB exams from months of pulls into on-demand dashboards. Metric: 50% reduction in exam-response labor, materially lower regulatory risk exposure.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Informatica MDM</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Compliance+Officer+Stellantis+Financial+Services">Chief Compliance Officer, Stellantis Financial Services</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Regulatory &amp; Compliance Center — CFPB, GLBA, FDCPA Evidence</summary>
+    <summary>2. GLBA Privacy &amp; FDCPA Collections-Practices Controls</summary>
     <div class="use-case-body">
-      <p>Auto captives are under active CFPB scrutiny on servicing, add-on products, repossession practices, and Servicemembers Civil Relief Act — and Stellantis Financial has publicly disclosed CFPB engagement on servicing practices. Compliance today is spreadsheets, sampling, and audit-response fire drills. AFPI's Compliance Center wedge sits on top of the mined loan-servicing and collections process and produces continuous, defensible evidence that policy-mandated steps were executed on every account — converting audits from weeks of manual pulls to on-demand dashboards. Metric: 50% reduction in audit-response labor, materially lower regulatory risk exposure.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, Informatica MDM</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Compliance+Officer+Stellantis+Financial+Services">Chief Compliance Officer</a> (Stellantis Financial Services)</p>
+      <p>Gramm-Leach-Bliley and the Fair Debt Collection Practices Act govern how SFS handles customer PII, contact frequency, hours-of-day rules, and cease-and-desist &mdash; and every collections dialer campaign is a potential regulatory tripwire. Compliance Center codifies the collections workflow as a controlled process with segregation-of-duties, mandatory checks, and audit-ready evidence on every account touched. Especially critical as Agentforce takes on customer-facing collections tasks and needs guardrails baked in. Metric: near-zero FDCPA/GLBA control exceptions and continuous evidence at every touchpoint.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, dialer / campaign platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Privacy+Compliance+Stellantis+Financial+Services">Head of Privacy &amp; Consumer Compliance, Stellantis Financial Services</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <details>
+    <summary>3. SCRA &amp; Repossession Compliance</summary>
+    <div class="use-case-body">
+      <p>The Servicemembers Civil Relief Act plus state repossession rules require verifiable proof, on every affected account, that SFS checked DoD status, capped interest rates, and honored notice periods before any adverse action. Miss one and the fine is enterprise-material. Compliance Center runs the repo/adverse-action workflow as a controlled process with mandatory SCRA checkpoints and produces evidence per account &mdash; not per sample. Metric: 100% SCRA-covered adverse actions with defensible per-account evidence, and 50% cut in state-DMV audit response time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, LOS / servicing platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Recovery+Repossession+Stellantis+Financial+Services">Head of Recovery &amp; Repossession, Stellantis Financial Services</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Stellantis Financial Services, Inc. by mining the loan-origination, collections, and dealer-onboarding processes flowing through Service Cloud, MuleSoft, and Informatica MDM, task-mining the collections and servicing desktops to expose the swivel-chair Agentforce can automate, and running CFPB, GLBA/FDCPA, and SCRA controls through Compliance Center to compress LOS PH2 cycle times, lift collections cure rate, and produce always-on regulator-ready evidence.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

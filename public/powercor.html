@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -93,14 +94,14 @@
 <header class="banner">
   <div class="banner-inner">
     <div class="banner-left">
-      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
       <img src="/banner-logo.png" alt="AproVista">
     </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -112,43 +113,41 @@
   <h1>Powercor Australia Ltd</h1>
   <div class="snapshot">
     <p><strong>Utilities, Electricity Distribution</strong></p>
-    <p><strong>Revenue:</strong> A$1.58B &nbsp;|&nbsp; <strong>Employees:</strong> ~2,063 (shared CHED Services workforce ~2,314) &nbsp;|&nbsp; <strong>HQ:</strong> Melbourne, Australia</p>
+    <p><strong>Revenue:</strong> ~A$1.58B (group) &nbsp;|&nbsp; <strong>Employees:</strong> ~2,045 (CHED shared services) &nbsp;|&nbsp; <strong>HQ:</strong> Melbourne, Australia</p>
     <p><strong>Major Subsidiaries:</strong> CitiPower, United Energy, CHED Services, Beon Energy Solutions, Victoria Power Networks</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Salesforce Field Service (ClickSoftware, 1,500+ licenses across CitiPower/Powercor/UE), Salesforce Industry, Customer Portal, Platform, Tableau, Slack</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> SAP (ERP/asset management), Outage Management System (owned by Powercor, shared with UE), GIS network model — [Slack]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Powercor/Ched Services (Apromore) (<a href="https://org62.my.salesforce.com/006ed00000cKP7dAAG">$98.5k</a>) | Ched Services Renewal — Industry + Portal + Platform (<a href="https://org62.my.salesforce.com/006ed00000Pe6UwAAJ">$408k</a>) | TAB Standalone Tableau Next (<a href="https://org62.my.salesforce.com/006ed00000GAInFAAX">$70k</a>)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Salesforce Field Service (Performance Edition, 1,500+ licenses), Salesforce Industry (Vlocity Energy &amp; Utilities Base), Service Cloud Performance Edition, Sales Cloud, Customer Community Plus, Force.com / Platform, Tableau Cloud, Marketing Cloud Engagement</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> SAP, Outage Management System, GIS network model</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Powercor/Ched Services (Apromore) (<a href="https://org62.my.salesforce.com/006ed00000cKP7dAAG">$99k</a>) &nbsp;|&nbsp; Powercor &mdash; Agentforce (<a href="https://org62.my.salesforce.com/006ed00000TtslRAAR">$150k</a>) &nbsp;|&nbsp; Ched Services/Powercor &mdash; Field Service UE (+26) (<a href="https://org62.my.salesforce.com/006ed00000VprLPAAZ">$125k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> Ron van Rooij</p>
-    <p><strong>Salesforce AE:</strong> Karim Djelassi</p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0ALKAS2YER">Jessie Mitchell</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Field Service)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">86/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">86/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">1,500+ FS licenses across CitiPower/Powercor/UE — Salesforce runs every fault callout in Victoria.</td></tr>
-        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Active $98.5k Apromore opp already at Stage 02; Karim owns the account, CHED shared services in flight.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Powercor AI program extension + United Energy new-shared-services model = live transformation window.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Regulated electricity DNSP — AER 2026-31 revenue determination drives efficiency mandates.</td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-green">SAP ERP + SFS + OMS + GIS — all rich event-log emitters; already integrated for Field Service.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">1,500+ Field Service licenses across CitiPower/Powercor/UE, plus Vlocity E&amp;U, Service Cloud, Tableau &mdash; SFDC runs every fault callout in Victoria.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Live $99k Apromore opp at Stage 02 with Jessie Mitchell + Karim; June 2026 Melbourne Process Intelligence Campfire brought Marcello and customers together.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">Priority utilities vertical &mdash; regulated Victorian DNSP with AER 2026-31 revenue determination and bushfire safety mandates driving efficiency.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">SAP ERP + SFS + Outage Management System + GIS &mdash; all rich event-log emitters, already integrated for Field Service dispatch.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Live $150k Agentforce opp + $140k+$126k Data Cloud opps + United Energy shared-services extension = active transformation window.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Buyer &amp; Champion Fit</td><td>13/20</td><td class="cat-orange">CHED CIO/CTO reachable via Salesforce team; no named process-excellence sponsor identified yet.</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">AER regulation + bushfire safety obligations present but not the primary buying trigger here.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>14/20</td><td class="cat-orange">Salesforce sponsors and CHED CIO reachable, and customers attended the Campfire &mdash; but no named customer-side process-excellence sponsor confirmed yet.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">AER regulation + bushfire safety obligations present but not the primary buying trigger; CDR/privacy adds a secondary compliance angle.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Powercor Australia Ltd by mining the newly-unified Field Service + OMS + SAP process backbone that CHED now runs across CitiPower, Powercor, and United Energy — quantifying dispatch, outage-restoration, and connections cycle-time so the group hits its AER 2026-31 productivity commitments while proving out the shared-services model.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
     <summary>1. Fault Response &amp; Outage Restoration Cycle Time</summary>
     <div class="use-case-body">
-      <p>Powercor owns the Outage Management System that now serves both Powercor and United Energy, with Salesforce Field Service dispatching 1,500+ crews across all three Victorian distributors. Mining the OMS → SFS → close-out flow will expose why some faults restore in 90 minutes and others in 8 hours, isolate dispatcher rework, and quantify the productivity gap between the three networks. AER regulators reward measurable SAIDI/SAIFI improvement in the next revenue determination, so every minute saved is directly rate-recoverable. Metric moved: mean restoration time, first-time-fix rate.</p>
+      <p>Powercor owns the Outage Management System that now dispatches across CitiPower, Powercor, and United Energy, with Salesforce Field Service coordinating 1,500+ crews. Mining the OMS &rarr; SFS &rarr; close-out flow will expose why some faults restore in 90 minutes and others in 8 hours, isolate dispatcher rework, and quantify the productivity gap between the three networks. AER regulators reward measurable SAIDI/SAIFI improvement in the next revenue determination, so every minute saved is rate-recoverable. Metric moved: mean restoration time and first-time-fix rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, Outage Management System</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+Network+Operations+Powercor">Head of Network Operations</a> (Network Operations)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Network+Operations+Powercor">Head of Network Operations, Powercor</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -156,44 +155,88 @@
   <details>
     <summary>2. New Connections &amp; Meter Installation Lead Time</summary>
     <div class="use-case-body">
-      <p>Powercor processes tens of thousands of new-connection requests annually across Victorian growth corridors — from customer application through GIS design, quoting, crew scheduling, meter install, and energization. Mining this end-to-end flow across the Customer Portal, SAP, GIS, and Field Service exposes handoff delays that cost developers weeks and Powercor customer trust. The play integrates directly with the existing $408k Industry/Portal renewal to prove Apromore alongside the same platform CHED is already investing in. Metric moved: application-to-energization lead time, back-office rework rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Industry, SAP</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+Customer+Connections+Powercor">Head of Customer Connections</a> (Customer Connections)</p>
+      <p>Powercor processes tens of thousands of new-connection requests annually across Victorian growth corridors &mdash; from customer application through GIS design, quoting, crew scheduling, meter install, and energization. Mining this end-to-end flow across the Customer Portal, SAP, GIS, and Field Service exposes handoff delays that cost developers weeks and Powercor customer trust. The play plugs directly into the live $408k Salesforce Industry + Portal renewal so Apromore proves out alongside the same Vlocity stack CHED is already investing in. Metric moved: application-to-energization lead time and back-office rework rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Industry (Vlocity), SAP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Customer+Connections+Powercor">Head of Customer Connections, Powercor</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. Vegetation Management &amp; Bushfire Compliance Inspection</summary>
+    <summary>3. Shared-Services Variant Harmonization Across CitiPower / Powercor / United Energy</summary>
     <div class="use-case-body">
-      <p>Bushfire Mitigation compliance drives a massive annual cycle of vegetation inspection, defect logging, remediation crew dispatch, and regulator reporting — the exact process the Field Service rollout was scaled to support. Mining the inspection-to-remediation flow shows where defects age past compliance windows, where re-inspections are duplicated, and where crew utilization drops off. This lands on a live regulator obligation with hard deadlines, giving CHED an audit-defensible view of network safety at scale. Metric moved: defect-clearance SLA, inspection cost per span.</p>
+      <p>The May 2026 United Energy Field Service win required a new shared-services model where CHED delivers common process across three legally-separate networks. Each entity brought its own way of dispatching, closing tickets, and reporting to the AER &mdash; the classic post-M&amp;A variant problem. Apromore's variant analysis quantifies the cost of process divergence and shows executive leadership a defensible convergence roadmap, protecting the shared-services business case that justified beating Oracle. Metric moved: process-variant count and harmonization-to-value time.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, SAP</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+Asset+Management+CHED+Services">Head of Asset Management</a> (Asset Management)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=CIO+CHED+Services+Powercor">CIO, CHED Services</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Field Service Dispatcher Desktop Swivel-Chair</summary>
+    <div class="use-case-body">
+      <p>CHED dispatchers coordinate outage response, planned works, and connection appointments by flipping between the SFS console, the Outage Management System, GIS map, and email/phone. Task mining captures every screen switch, copy/paste, and manual reassignment &mdash; exposing exactly where an Agentforce Operations agent could handle triage, ETA updates, or crew rebalancing without human touch. Pairs directly with the live $150k Powercor Agentforce opp. Metric moved: dispatcher touch-time per fault and jobs dispatched per FTE-hour.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service console, Outage Management System</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Manager+Control+Room+Operations+Powercor">Manager, Control Room Operations, Powercor</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Shared-Services Harmonization Across CitiPower / Powercor / United Energy</summary>
+    <summary>2. Contact Centre Agent Handle Time on Outage &amp; Connection Calls</summary>
     <div class="use-case-body">
-      <p>The May 2026 United Energy Field Service win required a new shared-services model where CHED delivers common process across three legally-separate networks. Each entity brought its own way of dispatching, closing tickets, and reporting to the AER — the classic post-M&amp;A variant problem. Apromore's variant analysis quantifies the cost of process divergence and shows executive leadership a defensible convergence roadmap, protecting the shared-services business case that justified beating Oracle. Metric moved: process-variant count, harmonization-to-value time.</p>
+      <p>CHED contact-centre agents handle outage status calls, new-connection enquiries, and defect complaints on Service Cloud, moving between the Customer Portal, the OMS status feed, and Vlocity E&amp;U record pages. Task mining reveals AHT and wrap-time variability by call type and isolates the on-screen steps &mdash; portal look-ups, cross-tab checks, notes rekeying &mdash; that Agentforce for Service can automate. Metric moved: average handle time and after-call-work minutes per contact type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, Customer Portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Contact+Centre+CHED+Services">Head of Contact Centre, CHED Services</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Connections Back-Office Rekeying Between Portal, GIS, and SAP</summary>
+    <div class="use-case-body">
+      <p>New-connection back-office coordinators re-enter customer, network, and asset data between the Customer Portal, GIS design tools, and SAP for provisioning and financial capture. Task mining quantifies the re-keying, duplicated approvals, and manual reconciliations that stretch developer lead times &mdash; and names the exact steps Agentforce Operations plus MuleSoft can eliminate. Metric moved: manual-touch count per new connection and back-office FTE cost per energization.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Customer Portal / Vlocity, SAP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Connections+Back+Office+Powercor">Head of Connections Back Office, Powercor</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. Bushfire Mitigation Compliance &amp; Vegetation Inspection Evidence</summary>
+    <div class="use-case-body">
+      <p>Victorian DNSPs operate under a hard bushfire-mitigation obligation that drives a massive annual cycle of vegetation inspection, defect logging, remediation crew dispatch, and regulator reporting. Compliance Center runs the inspection-to-remediation flow as a controlled workflow with codified SLAs, evidence capture, and audit-ready reporting for Energy Safe Victoria and the AER. Especially important as CHED consolidates the process across three networks. Metric moved: defect-clearance SLA hit-rate and audit findings per inspection cycle.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Field Service, SAP</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=CHED+Services+CIO+Powercor">CIO, CHED Services</a> (Technology / Shared Services)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Bushfire+Mitigation+Powercor">Head of Bushfire Mitigation / Network Safety</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. Procure-to-Pay Across Capex Network Investment</summary>
+    <summary>2. AER 2026-31 Capex Traceability &amp; Regulatory Asset Base Controls</summary>
     <div class="use-case-body">
-      <p>DNSPs run heavy capital programs (poles, transformers, protection equipment, EV/DER-ready infrastructure) with SAP purchase orders that must reconcile to AER regulatory asset base filings. Mining the P2P flow — requisition → PO → goods receipt → invoice → capitalization — surfaces maverick spend, three-way-match failures, and delayed capitalization that distorts regulatory returns. The AFPI Compliance Center adds the regulator-facing evidence layer AER reviewers demand. Metric moved: cycle time to capitalization, invoice touch-count, capex leakage.</p>
+      <p>DNSPs run heavy capital programs (poles, transformers, protection equipment, DER/EV-ready infrastructure) whose SAP purchase orders must reconcile cleanly to AER regulatory asset base filings. Compliance Center codifies the P2P and capitalization workflow &mdash; requisition, PO, goods receipt, invoice, capitalization &mdash; with segregation-of-duties and evidence, cutting AER audit findings and delayed capex recognition. Metric moved: cycle time to capitalization and audit exceptions per capex program.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> SAP, Salesforce Platform</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+Procurement+CHED+Services+Powercor">Head of Procurement</a> (Finance / Procurement)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Regulatory+Affairs+Powercor">Head of Regulatory Affairs, CHED Services</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent competitive process-mining mentions surfaced in Slack, Org62, or web for Powercor — the incumbent analytics footprint is Tableau, and Field Service was just won against Oracle (not a process-mining competitor), so AFPI enters uncontested.</span></h2>
+  <details>
+    <summary>3. Consumer Data Right (CDR) &amp; Customer Data-Sharing Controls</summary>
+    <div class="use-case-body">
+      <p>Victoria's rollout of the energy Consumer Data Right adds strict, auditable controls on how customer usage and connection data is shared with retailers and accredited third parties. Compliance Center wraps the CDR consent, share, and revoke process across the Customer Portal, Data Cloud, and MuleSoft with codified evidence for every disclosure &mdash; critical as the $140k+$126k Data Cloud opps land. Metric moved: CDR consent-handling SLA and audit-ready evidence coverage.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Customer Portal, Data Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Data+Protection+Officer+Powercor">Data Protection Officer / Head of Privacy, CHED Services</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Powercor Australia Ltd by process-mining the newly-unified Field Service + OMS + SAP backbone across CitiPower, Powercor, and United Energy to lift outage restoration and new-connection lead times, task-mining dispatcher and contact-centre desktops to feed the live Agentforce Operations opportunity, and running bushfire, AER capex, and CDR obligations through Compliance Center to give CHED audit-ready evidence for the 2026-31 revenue determination.</p>
 
   <div class="actions">
     <span>Generate PDF</span>
@@ -204,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

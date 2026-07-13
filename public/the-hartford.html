@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -107,42 +112,42 @@
 <main>
   <h1>The Hartford Financial Services Group, Inc.</h1>
   <div class="snapshot">
-    <p><strong>Financial Services, Property &amp; Casualty Insurance (Commercial Lines, Personal Lines, Group Benefits, Mutual Funds)</strong></p>
-    <p><strong>Revenue:</strong> ~$26.5B &nbsp;|&nbsp; <strong>Employees:</strong> ~19,100 &nbsp;|&nbsp; <strong>HQ:</strong> Hartford, CT, USA</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=CIO+The+Hartford">the CIO / Head of Enterprise Architecture</a>]</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=CIO+The+Hartford">the CIO / Head of Enterprise Architecture</a>]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> </p>
+    <p><strong>Financial Services, Property &amp; Casualty Insurance</strong></p>
+    <p><strong>Revenue:</strong> ~$28.4B (2024) &nbsp;|&nbsp; <strong>Employees:</strong> ~19,100 &nbsp;|&nbsp; <strong>HQ:</strong> Hartford, CT, USA</p>
+    <p><strong>Major Subsidiaries:</strong> Hartford Fire Insurance Company, Hartford Accident and Indemnity Company, Hartford Life Insurance, Navigators Group, Hartford Funds</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Force.com Platform Embedded Edition (OEM), Customer Portal (OEM), Partner Portal (OEM)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> MS - The Hartford - Data Foundations (<a href="https://org62.my.salesforce.com/006ed00000ZZPtpAAH">$300k</a>) &nbsp;|&nbsp; MS - The Hartford - GS real-time integration (<a href="https://org62.my.salesforce.com/006ed00000Zf8jqAAB">$300k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/W016W13H9C7">Nathan Romanek</a></p>
-    <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
+    <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (MuleSoft)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">72/100</span> — T2 Develop</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t2">74/100</span> &mdash; T2 Develop</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Regulatory &amp; Compliance Pressure (NAIC, state DOI, SOX, ERM)</td><td>14/15</td><td class="cat-green">SEC-registered insurer under SOX 404, NAIC Model Audit Rule, and 50-state DOI unfair-claims regimes.</td></tr>
-        <tr><td>Process Complexity (P&amp;C claims, underwriting, group benefits)</td><td>14/15</td><td class="cat-green">FNOL-to-payout, quote-to-bind, and multi-state PFML case management are all event-log-rich processes.</td></tr>
-        <tr><td>Compliance-Center Wedge Fit</td><td>9/10</td><td class="cat-green">SOX / Model Audit Rule attestation is a natural wedge — Compliance Center replaces interview-driven walkthroughs.</td></tr>
-        <tr><td>Vertical Fit &amp; ICP Alignment (large-cap insurer)</td><td>13/15</td><td class="cat-green">Top-tier US P&amp;C carrier with a top-three group disability franchise — squarely inside AFPI's insurer ICP.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">SOX 404, NAIC Model Audit Rule, 50-state DOI unfair-claims, multi-state PFML &mdash; a natural Compliance Center wedge.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">Top-tier US P&amp;C carrier and top-three group disability franchise &mdash; squarely inside AFPI's insurer ICP.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">FNOL-to-payout, quote-to-bind, and multi-state PFML case management are all event-log-rich, cycle-time processes.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>5/6</td><td class="cat-green">Two active $300k MuleSoft opps in-flight in same quarter &mdash; account is buying data / integration now.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>9/12</td><td class="cat-orange">Data Foundations + real-time integration opps signal active data-modernization spend; Agentforce not yet landed.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Vertical Fit &amp; ICP Alignment (large-cap insurer)</td><td>13/15</td><td class="cat-green">Strong ICP fit but not a category leader in every SF product line — some wallet already spoken for.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Deal Momentum</td><td>6/15</td><td class="cat-red">No confirmed active SF products or open opps in Org62 — need field validation to size co-sell motion.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>6/12</td><td class="cat-red">Install base is only Force.com OEM + Portals; no core cloud presence &mdash; limits co-sell wedge into ops leadership.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>10/20</td><td class="cat-red">SF AE (Nathan Romanek) engaged on MuleSoft opps, but no customer-side process-mining champion identified.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help The Hartford Financial Services Group, Inc. by mining its FNOL-to-payout, quote-to-bind, and group-benefits case-management event logs to expose the loop patterns that quietly drive cycle time, LAE, and DOI complaint volume — while turning the annual SOX and NAIC Model Audit Rule attestation into a live, evidence-backed artifact.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. First Notice of Loss to Claim Closure — Personal &amp; Small Commercial Auto</summary>
+    <summary>1. FNOL-to-Payout &mdash; Personal &amp; Small Commercial Auto Claims</summary>
     <div class="use-case-body">
-      <p>The FNOL-to-closure journey moves across the digital intake channel, adjuster triage, coverage verification, damage estimation, vendor dispatch, subrogation, and payout — with state-DOI unfair claims practice clocks running the entire time. Straight-through-processing rates in P&amp;C claims typically hide a long tail of files that cycle through reassignment and information-request loops that quietly consume the majority of adjuster capacity. AFPI mines the actual event log across the claims platform, the AI triage layer, and the payment system to expose the two or three loop patterns that drive rework, moving cycle time, LAE (loss adjustment expense) ratio, and DOI complaint volume.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Claims Platform (TBD), AI Triage Layer (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Claims+The+Hartford">the Head of Claims Operations</a> (Head of Claims Operations)</p>
+      <p>The FNOL-to-closure journey moves across digital intake, adjuster triage, coverage verification, damage estimation, vendor dispatch, subrogation, and payout &mdash; with state-DOI unfair-claims clocks running the whole time. Straight-through-processing rates hide a long tail of files cycling through reassignment and information-request loops that quietly consume most adjuster capacity. AFPI mines the actual event log across the claims platform, AI triage, and payment systems to expose the two or three loop patterns driving rework. Metric: median cycle time, LAE ratio, and DOI complaint volume.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Claims platform (Guidewire ClaimCenter or equivalent), payment / vendor dispatch system</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Claims+Operations+The+Hartford">Head of Claims Operations</a> (Head of Claims Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -150,9 +155,9 @@
   <details>
     <summary>2. Small Commercial Underwriting &amp; Quote-to-Bind</summary>
     <div class="use-case-body">
-      <p>The Hartford's small commercial franchise runs on speed — the winning quote is often the first one back to the independent agent — and quote-to-bind cycle time is the single biggest lever on hit-ratio. Behind the scenes the actual workflow ricochets between the agent portal, ordered third-party data (ISO, MVR, prior-carrier), the rating engine, and referrals to underwriters when a rule fires. AFPI produces the true process graph and exposes which referral rules, data-vendor latencies, or agency segments are structurally slowing the quote — the metric moved is bind rate at the target service-level, and premium per underwriter FTE.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Agent Portal (TBD), Rating Engine (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Small+Commercial+Underwriting+The+Hartford">the Head of Small Commercial Underwriting</a> (Head of Small Commercial Underwriting)</p>
+      <p>The Hartford's small commercial franchise runs on speed &mdash; the winning quote is often the first one back to the independent agent &mdash; and quote-to-bind cycle time is the single biggest lever on hit-ratio. The workflow ricochets between the agent portal, third-party data pulls (ISO, MVR, prior-carrier), the rating engine, and underwriter referrals when a rule fires. AFPI produces the true process graph and exposes which referral rules, data-vendor latencies, or agency segments structurally slow the quote. Metric: bind rate at the target SLA, and premium per underwriter FTE.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Agent portal / rating engine, third-party data-order layer</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Small+Commercial+Underwriting+The+Hartford">Head of Small Commercial Underwriting</a> (Head of Small Commercial Underwriting)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
@@ -160,43 +165,89 @@
   <details>
     <summary>3. Group Benefits Absence &amp; Disability Case Management</summary>
     <div class="use-case-body">
-      <p>The Hartford is a top-three US carrier in group disability, absence management, and paid family leave — a business where the "process" is a case that lives for weeks or months across intake, medical review, employer coordination, and periodic re-adjudication. State PFML mandates keep multiplying and each one has its own eligibility clock and appeal SLA. AFPI ingests the case-management event log and surfaces where cases stall against statutory clocks and which case segments generate disproportionate rework, moving benefit-decision cycle time, appeals-overturn rate, and PFML compliance exceptions.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Case Management Platform (TBD), Medical Review System (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Group+Benefits+Operations+The+Hartford">the Head of Group Benefits Operations</a> (Head of Group Benefits Operations)</p>
+      <p>The Hartford is a top-three US carrier in group disability, absence management, and paid family leave &mdash; a business where the "process" is a case that lives for weeks or months across intake, medical review, employer coordination, and periodic re-adjudication. State PFML mandates keep multiplying and each carries its own eligibility clock and appeal SLA. AFPI ingests the case-management event log and surfaces where cases stall against statutory clocks and which segments generate disproportionate rework. Metric: benefit-decision cycle time, appeals-overturn rate, and PFML compliance exceptions.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Case management platform, medical review system</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Group+Benefits+Operations+The+Hartford">Head of Group Benefits Operations</a> (Head of Group Benefits Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Task Mining Use Cases</h2>
+
+  <details>
+    <summary>1. Commercial Underwriter Desktop Swivel-Chair</summary>
+    <div class="use-case-body">
+      <p>Commercial underwriters bounce between the agent-facing quote portal, third-party ordered data screens (ISO, MVR, loss runs), the rating engine, and referral queues to price a single risk. Task mining the underwriter desktop reveals how much time is lost to app-switching, copy/paste, and repeated lookups that Agentforce could compress into a single guided workflow. The captured user-activity log becomes the direct business case for automation. Metric: risks priced per underwriter per day and touch-time per submission.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Underwriter workbench, third-party data portals (ISO / LexisNexis)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Commercial+Underwriting+Operations+The+Hartford">Head of Commercial Underwriting Operations</a> (Head of Commercial Underwriting Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>4. Policy Servicing &amp; Endorsement Processing (Commercial Middle Market)</summary>
+    <summary>2. Claims Adjuster After-Call and Wrap-Up Time</summary>
     <div class="use-case-body">
-      <p>Once a commercial policy binds, the real cost sits in mid-term endorsements — added vehicles, changed limits, new locations, certificate requests — that flow across the agent portal, service centers, and underwriting for anything material. Endorsement backlogs and re-work drive agent NPS almost as much as claims do, and are invisible in the policy admin system's canned dashboards. AFPI maps the full endorsement lifecycle event log, isolates the endorsement types and agency segments that consistently generate the worst cycle-time outliers, and quantifies the servicing-cost-to-premium ratio by segment.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Policy Admin System (TBD), Agent Portal (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Middle+Market+Operations+The+Hartford">the Head of Middle Market Operations</a> (Head of Middle Market Operations)</p>
+      <p>Claims adjusters and CSRs handling FNOL, status calls, and mid-loss updates spend a material share of their day in after-call-work &mdash; updating claim notes, ordering vendor services, sending follow-up documents. Task mining captures each agent's on-screen actions to isolate the wrap steps and the tab-switching that eats handle time. This feeds a direct Agentforce for Service business case and quantifies which contact types are the best automation candidates. Metric: AHT and after-call-work minutes per contact type.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Contact-center console, claims platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Claims+Contact+Center+The+Hartford">Head of Claims Contact Center</a> (Head of Claims Contact Center)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. SOX &amp; Model Risk Compliance — Reserving and Actuarial Process Attestation</summary>
+    <summary>3. Policy-Servicing &amp; Endorsement Processing Desktop</summary>
     <div class="use-case-body">
-      <p>As an SEC-registered insurer, The Hartford operates under SOX Section 404 for financial reporting and NAIC Model Audit Rule / Model Risk Management for actuarial models — and every year the internal-audit and external-auditor teams reconstruct the actual process by which reserves, DAC, and reinsurance recoverables are calculated and reviewed. Today that reconstruction is largely interview-driven. AFPI turns the process-attestation exercise into a live artifact: the true event log across the actuarial workbench, reserving system, and financial close, with control points and segregation-of-duty breaks surfaced automatically. The metric moved is audit-cycle hours and Sarbanes control-deficiency findings.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Actuarial Workbench (TBD), Reserving System (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Auditor+The+Hartford">the Chief Auditor</a> (Chief Auditor and Chief Actuary)</p>
+      <p>Mid-term endorsements &mdash; added vehicles, changed limits, new locations, certificate requests &mdash; flow between the agent portal, service center desktops, and underwriting for anything material. Endorsement backlogs and rework drive agent NPS almost as much as claims do, but are invisible in the policy-admin system's canned dashboards. Task mining exposes exactly which endorsement types trigger the most desktop rework and re-keying between the portal and the policy-admin system. Metric: servicing cycle time per endorsement type and manual-touch count per endorsement.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Policy admin system, agent portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Middle+Market+Operations+The+Hartford">Head of Middle Market Operations</a> (Head of Middle Market Operations)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. SOX 404 &amp; NAIC Model Audit Rule Attestation for Reserving</summary>
+    <div class="use-case-body">
+      <p>As an SEC-registered insurer, The Hartford operates under SOX Section 404 and NAIC Model Audit Rule, with reserves, DAC, and reinsurance recoverables reconstructed each year by internal audit and the external auditor &mdash; largely via interview-driven walkthroughs. Compliance Center turns the process-attestation exercise into a live artifact: the true event log across the actuarial workbench, reserving system, and financial close, with control points and segregation-of-duty breaks surfaced automatically. Metric: audit-cycle hours and SOX control-deficiency findings per reporting unit.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Actuarial workbench, reserving / GL system</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Auditor+The+Hartford">Chief Auditor</a> (Chief Auditor / SOX Program Lead)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Multi-State DOI Unfair-Claims-Practices Controls</summary>
+    <div class="use-case-body">
+      <p>Every US state DOI enforces its own unfair-claims-practices act with strict statutory clocks on acknowledgement, coverage decision, and payment, plus mandatory reporting on complaints and denials. Today compliance is monitored via sample-based QA and periodic exam prep. Compliance Center codifies each state's clock as a control on the mined FNOL-to-payout event log, producing continuous evidence and auto-flagging deviations before the state does. Metric: complaint volume, exam-finding count, and time-to-evidence per DOI request.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Claims platform, complaint / regulatory case-management system</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Compliance+Officer+The+Hartford">Chief Compliance Officer</a> (Chief Compliance Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Model Risk Management for AI-Driven Underwriting &amp; Claims Triage</summary>
+    <div class="use-case-body">
+      <p>Predictive models drive small-commercial pricing, claims triage severity, and disability case escalation &mdash; each subject to NAIC AI/ML principles and internal model-risk management standards. Today model lifecycle governance is spreadsheet-plus-committee. Compliance Center codifies model promote / monitor / retire as a controlled workflow tied to the actual training / deployment / drift-detection event log, producing continuous evidence for internal audit and state DOI examiners. Metric: audit-ready models covered and mean-time-to-evidence.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Model registry / MLOps pipeline, model-risk management platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Model+Risk+Officer+The+Hartford">Chief Model Risk Officer</a> (Chief Model Risk Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help The Hartford Financial Services Group, Inc. by mining FNOL-to-payout, quote-to-bind, and group-benefits case-management event logs across its claims, policy-admin, and case-management estate, task-mining underwriter and claims-adjuster desktops to expose the swivel-chair work that Agentforce can eliminate, and running SOX 404, multi-state DOI unfair-claims, and model-risk controls through Compliance Center to shrink cycle time, LAE, and audit-cycle hours while producing always-on evidence for the SEC, NAIC, and 50 state DOIs.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-06-30. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

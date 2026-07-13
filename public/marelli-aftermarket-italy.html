@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -108,51 +113,49 @@
   <h1>Marelli Aftermarket Italy S.p.A.</h1>
   <div class="snapshot">
     <p><strong>Manufacturing, Automotive Aftermarket (Parts &amp; Services)</strong></p>
-    <p><strong>Revenue:</strong> €1.26B &nbsp;|&nbsp; <strong>Employees:</strong> 3,361 &nbsp;|&nbsp; <strong>HQ:</strong> Sesto San Giovanni (Milan), Italy</p>
+    <p><strong>Revenue:</strong> &euro;1.26B &nbsp;|&nbsp; <strong>Employees:</strong> 3,361 &nbsp;|&nbsp; <strong>HQ:</strong> Sesto San Giovanni, Italy</p>
     <p><strong>Major Subsidiaries:</strong> Magneti Marelli Aftermarket Poland, Magneti Marelli Aftermarket GmbH (Germany), Magneti Marelli Checkstar network, Marelli Aftermarket Iberica, Marelli Aftermarket France</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (SFA), Service Cloud (Call Center), Marketing Cloud / B2B Customer Portal (e-Marelli), MuleSoft, CPQ, CRM Analytics, Einstein, Manufacturing Cloud, Privacy Center</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> SAP (ERP, confirmed via Capgemini SI engagement and Powertrain BU signals), plus internal e-Marelli B2B portal integrations</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> Marelli Aftermarket - Process Intelligence (<a href="https://org62.my.salesforce.com/006ed00000aFYr3AAG">$100k</a>) &nbsp;|&nbsp; MarelliAM_Apromore_BDR (<a href="https://org62.my.salesforce.com/006ed00000eevQMAAY">$80k</a>) &nbsp;|&nbsp; Marelli Aftermarket Italy S.p.A. Renewal 206 SFA + 278 Call Center + 5721 Customer Portal (<a href="https://org62.my.salesforce.com/0063y00001AOHbiAAH">$981k</a>)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (SFA), Service Cloud (Call Center), Marketing Cloud, B2B Commerce (e-Marelli), MuleSoft, CPQ, CRM Analytics, Einstein, Manufacturing Cloud</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> SAP</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> MarelliAM_Apromore_BDR (<a href="https://org62.my.salesforce.com/006ed00000eevQMAAY">$80k</a>) &nbsp;|&nbsp; CC_IT_NB_Marelli_B2B_upgrade e-Marelli (<a href="https://org62.my.salesforce.com/0063y00001B5r4rAAB">$178k</a>) &nbsp;|&nbsp; Marelli Aftermarket Italy S.p.A. Renewal &mdash; SFA + Call Center + Customer Portal (<a href="https://org62.my.salesforce.com/0063y00001AOHbiAAH">$981k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01GEMY0KPE">Marcello Fisicaro</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell AFPI Standalone</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">92/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">88/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Buyer &amp; Champion Fit</td><td>20/20</td><td class="cat-green">Two active Apromore opps ($100k Process Intelligence + $80k BDR) — champion is engaged, qualified and already in stage 02.</td></tr>
-        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud: Sales, Service, MC, MuleSoft, CPQ, CRMA, Einstein, Mfg Cloud — $981k SFA+CC+Portal renewal anchors the account.</td></tr>
-        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Active e-Marelli B2B upgrade ($178k), intl rollout ($115k), geographic extension Wave 2, Capgemini SI transformation program.</td></tr>
-        <tr><td>Industry / Vertical Priority</td><td>13/15</td><td class="cat-green">Automotive aftermarket — event-log-rich order-to-cash, warranty, and parts-distribution processes across 60+ countries.</td></tr>
-        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">Active Privacy Center opp signals GDPR pressure; KKR PE ownership adds quarterly ops-KPI discipline and audit rigor.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep multi-cloud install: Sales, Service, MC, B2B Commerce, MuleSoft, CPQ, CRMA, Einstein, Mfg Cloud &mdash; $981k renewal anchor.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">Active $80k Apromore BDR opp at stage 02 + $178k e-Marelli upgrade at stage 03 &mdash; funded, in-motion, viable.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Agentforce1000 opp, Data Cloud opp, e-Marelli B2B upgrade, intl rollout, KKR PE governance, Capgemini SI.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">Named IT sponsors (Madotto, Romano, Turo, Federico) plus SVP Aftermarket Sancassani &mdash; sponsor already engaged on Apromore BDR.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">Open $95k Privacy Center opp signals GDPR pressure; KKR quarterly ops-KPI reviews add PE audit discipline.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-orange">SAP inferred from SI footprint but not explicitly confirmed at Aftermarket BU; e-Marelli portal event logs need discovery.</td></tr>
-        <tr><td>Process-Pain Intensity</td><td>10/15</td><td class="cat-orange">No public failure trigger — pain is chronic (parts availability, warranty cycle, B2B portal adoption) rather than acute crisis.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>11/15</td><td class="cat-orange">Pain is chronic (portal adoption, warranty cycle, cross-country variance) rather than an acute public failure trigger.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-orange">SAP + Salesforce + MuleSoft present, but e-Marelli portal event-log access needs discovery in the BDR.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Marelli Aftermarket Italy S.p.A. by turning the two already-open Apromore opps ($100k Process Intelligence + $80k BDR) into a fast, funded process-mining wedge — mining the e-Marelli B2B portal, order-to-cash, warranty and parts-distribution event logs across Sales/Service/MC and SAP to protect the $981k SFA+Call-Center+Portal renewal, de-risk the international rollout, and give KKR quarter-over-quarter operating-KPI evidence.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. e-Marelli B2B Portal — Distributor Order-to-Cash &amp; Portal-Adoption</summary>
+    <summary>1. e-Marelli B2B Portal &mdash; Distributor Order-to-Cash</summary>
     <div class="use-case-body">
-      <p>The e-Marelli B2B portal is Marelli Aftermarket's primary channel to independent workshops, distributors and the Checkstar network across 60+ countries — and there are two active opps upgrading it ($178k B2B upgrade + $85k Phase 2). Portal-order variants that fall back to phone/email inbound bleed the Service Cloud call-center budget and slow cash conversion. AFPI mines the end-to-end distributor-order event log (Portal → Sales Cloud → SAP OTC → shipment) to quantify self-service leakage, exception-handling rework and cash-collection cycle time — feeding the upgrade with the real "as-is" map before Capgemini rebuilds it. Metric moved: portal self-service rate, DSO, cost per B2B order.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, SAP</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Roberto+Madotto+Marelli">Roberto Madotto</a> (Head of ICT Global — BU Marelli Aftermarket Parts &amp; Services)</p>
+      <p>The e-Marelli B2B portal is Marelli Aftermarket's primary channel to independent workshops, distributors and the Checkstar network across 60+ countries &mdash; and two active opps are upgrading it ($178k e-Marelli upgrade at stage 03 + $85k Phase 2). Portal-order variants that fall back to phone/email inbound bleed the 278-seat Service Cloud call-center budget and slow cash conversion. AFPI mines the end-to-end distributor-order event log (B2B Commerce &rarr; Sales Cloud &rarr; SAP OTC &rarr; shipment) to quantify self-service leakage, exception rework and DSO &mdash; feeding Capgemini's upgrade with the real "as-is" map before they rebuild it. Metric moved: portal self-service rate, DSO, cost per B2B order.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> B2B Commerce (Sales Cloud), SAP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Roberto+Madotto+Marelli">Roberto Madotto</a> (Head of ICT Global &mdash; BU Marelli Aftermarket Parts &amp; Services)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>2. International Rollout — Standardize the Process Before You Replicate It</summary>
+    <summary>2. International Rollout &mdash; Conformance Before Replication</summary>
     <div class="use-case-body">
-      <p>Marelli Aftermarket has an open "intl rollout" opp ($115k) and a Geographic Extension Wave 2 opp ($73k) — expanding the Italian aftermarket ops model into Poland, Germany, Iberia, France and beyond. Every country that goes live with divergent variants of order-management, warranty and returns hardens duplicate work that will haunt the group for years. AFPI mines Italy as the reference process and produces the conformance dashboard the rollout PM uses to force each new country into the reference variant on go-live rather than after. Metric moved: cross-country process conformance %, time-to-productive-go-live, post-go-live rework tickets.</p>
+      <p>Marelli Aftermarket has an open $115k intl rollout opp and a $73k Geographic Extension Wave 2 opp &mdash; expanding the Italian aftermarket ops model into Poland, Germany, Iberia, France and beyond. Every country that goes live with divergent variants of order-management, warranty and returns hardens duplicate work the group will pay for indefinitely. AFPI mines Italy as the reference process and produces the conformance dashboard the rollout PM uses to force each new country onto the reference variant at go-live rather than after. Metric moved: cross-country process conformance %, time-to-productive-go-live, post-go-live rework tickets.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, MuleSoft</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Andrea+Romano+Marelli">Andrea Romano</a> (IT Demand Manager)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -160,36 +163,82 @@
   </details>
 
   <details>
-    <summary>3. Warranty &amp; Returns — Claims Cycle Across Distributors</summary>
+    <summary>3. Warranty &amp; Returns &mdash; Claims Cycle Across Distributors</summary>
     <div class="use-case-body">
-      <p>Aftermarket parts (Magneti Marelli branded starters, alternators, lighting, suspension, brakes) carry warranty exposure that flows back through the distributor network as returns and credit-notes. Claim cycles that drag hurt margin twice: reserve carry cost, and distributor NPS. AFPI mines the warranty-claim event log across the call center, sales cloud case objects and SAP credit-note flow to expose why some claims sit 45+ days, which distributors are outliers, and where the AI-driven Copilot in Apromore can flag anomalies live. Metric moved: warranty cycle time, reserve accuracy, distributor satisfaction on claims.</p>
+      <p>Aftermarket parts (Magneti Marelli branded starters, alternators, lighting, suspension, brakes) carry warranty exposure that flows back through the distributor network as returns and credit-notes. Claim cycles that drag hurt margin twice: reserve carry cost and distributor NPS. AFPI mines the warranty-claim event log across the Call Center, Sales Cloud case objects and SAP credit-note flow to expose why some claims sit 45+ days, which distributors are outliers, and where Apromore's AI Copilot can flag anomalies live. Metric moved: warranty cycle time, reserve accuracy, distributor claim NPS.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, SAP</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Stefano+Sancassani+Marelli">Stefano Sancassani</a> (SVP Global Aftermarket)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>4. Renewal-Protection: SFA + Call Center + Customer Portal ($981k)</summary>
+    <summary>1. Call-Center Agent Desktop (278 Service Cloud Seats)</summary>
     <div class="use-case-body">
-      <p>The consolidated $981k renewal covering 206 SFA seats, 278 Call Center seats and 5,721 Customer Portal seats closes January 2029 but the diligence conversation with Fisicaro's team starts now. Renewal risk on this account is not price — it is proving that the seats bought are actually driving throughput. AFPI produces the utilization + process-conformance evidence pack (portal orders per seat, first-call-resolution per Service seat, opportunity-conversion per SFA seat) that converts a defensive renewal into a Manufacturing-Cloud + AF expansion conversation. Metric moved: renewal risk score, expansion attach rate, seat productivity.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, Service Cloud</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Fabrizio+Turo+Marelli">Fabrizio Turo</a> (ICT Infrastructure &amp; Architecture — Data Center Management)</p>
+      <p>Marelli Aftermarket's 278 Service Cloud call-center agents handle distributor inbound &mdash; order status, technical support, warranty questions &mdash; and today swivel between Service Cloud console, e-Marelli portal, SAP order/credit screens and email. Task mining captures each agent's on-screen actions to isolate the after-call-work steps and the tabs that eat wrap time, then targets the top three for Agentforce automation. Directly de-risks the seat-count line of the $981k renewal by proving productivity per seat. Metric moved: AHT, after-call-work minutes per contact type, calls-per-FTE.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud console, e-Marelli portal</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Fabrizio+Turo+Marelli">Fabrizio Turo</a> (ICT Infrastructure &amp; Architecture &mdash; Data Center Management)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>5. KKR Operating-KPI &amp; Digital Transformation Evidence</summary>
+    <summary>2. SFA Account Manager &mdash; Salesforce &harr; SAP Swivel-Chair</summary>
     <div class="use-case-body">
-      <p>Marelli's parent is KKR &amp; Co. — a PE owner that runs quarterly operating reviews and demands audit-grade evidence of where operating cost is dropping and where digital investments are paying back. The active Digital Transformation program (Flaminia Federico, DT Manager) plus the Capgemini SI engagement together represent a multi-million-euro commitment KKR will want mapped. AFPI's Compliance Center wedge produces the same process evidence for GDPR (Privacy Center opp), quarterly PE reviews, and ISO/IATF audits — one data pipeline, three deliverables. Metric moved: quarterly EBITDA reporting cycle, audit-finding rate, transformation ROI evidence.</p>
+      <p>The 206 SFA seats cover Marelli Aftermarket's field and inside account managers working distributor and workshop relationships across Europe. Today they toggle between Sales Cloud, CPQ, SAP pricing/credit, Marketing Cloud campaign lists and email &mdash; repeated lookups and copy/paste for every quote and order-status check. Task mining reveals which cross-app hops are most repetitive and which are the highest-value automation targets for Agentforce Sales. Metric moved: touch-time per opportunity, quote-to-order cycle time, seller admin ratio.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud + CPQ, SAP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Roberto+Madotto+Marelli">Roberto Madotto</a> (Head of ICT Global &mdash; BU Marelli Aftermarket Parts &amp; Services)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Distributor Onboarding &amp; Checkstar Certification Ops</summary>
+    <div class="use-case-body">
+      <p>Onboarding a new distributor or certifying a workshop into the Checkstar network is a documentation-heavy, back-office process: contracts, credit limits, portal provisioning, training, marketing enrollment. The team that runs it works across Sales Cloud, Marketing Cloud, e-Marelli admin screens, SAP customer master and shared drives. Task mining exposes the manual admin steps, then feeds an Agentforce-plus-MuleSoft automation of the highest-volume hops. Metric moved: distributor time-to-productive, admin FTE per 100 onboardings, portal activation rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Sales Cloud, e-Marelli B2B Commerce admin</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Andrea+Romano+Marelli">Andrea Romano</a> (IT Demand Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. GDPR / Privacy Center &mdash; Subject-Access &amp; Consent Evidence</summary>
+    <div class="use-case-body">
+      <p>Marelli Aftermarket has an open $95k Privacy Center opp &mdash; a signal that GDPR data-subject-access, consent and retention obligations across e-Marelli portal, Marketing Cloud campaigns and Sales/Service records are top-of-mind. Compliance Center codifies the DSAR / consent / erasure workflow as a controlled process with segregation-of-duties, sign-offs and continuous evidence for the Italian DPA. Wraps the Privacy Center product with the process-level control layer that auditors actually ask for. Metric moved: DSAR SLA hit-rate, consent-mismatch rate, DPA-audit findings.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Privacy Center, Marketing Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Fabrizio+Turo+Marelli">Fabrizio Turo</a> (ICT Infrastructure &amp; Architecture &mdash; Data Center Management)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. KKR PE Operating-KPI &amp; Quarterly-Review Evidence Pack</summary>
+    <div class="use-case-body">
+      <p>Marelli's parent is KKR &amp; Co. &mdash; a PE owner that runs quarterly operating reviews and demands audit-grade evidence of where operating cost is dropping and where digital investments are paying back. The active Digital Transformation program (Flaminia Federico, DT Manager) plus the Capgemini SI engagement together represent a multi-million-euro commitment KKR will want mapped end-to-end. Compliance Center produces the reproducible process-KPI + audit-trail pack that goes into the quarterly board pack without an army of analysts. Metric moved: quarterly reporting cycle time, KPI-evidence rework, transformation ROI defensibility.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> CRM Analytics, MuleSoft</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Flaminia+Federico+Marelli">Flaminia Federico</a> (Digital Transformation Manager)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline">No recent mentions found for Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate at this account. Note: Celonis is the German-market incumbent — assume a defensive Celonis conversation once the two active Apromore opps progress past stage 02.</span></h2><div class="actions">
+  <details>
+    <summary>3. IATF 16949 / ISO 9001 Automotive Quality &amp; Recall Controls</summary>
+    <div class="use-case-body">
+      <p>Automotive aftermarket parts sit under IATF 16949 / ISO 9001 quality regimes with strict expectations for traceability, non-conformance handling and field-action / recall management. Compliance Center runs the non-conformance-to-recall process as a controlled workflow across quality, engineering, aftermarket sales and SAP &mdash; producing the reproducible evidence auditors and OEM customers demand. Doubly valuable given cross-border trade &amp; safety scrutiny on aftermarket parts. Metric moved: non-conformance cycle time, recall lead-time, audit findings per site.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud (Case), SAP QM</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Stefano+Sancassani+Marelli">Stefano Sancassani</a> (SVP Global Aftermarket)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Marelli Aftermarket Italy S.p.A. by mining the e-Marelli B2B portal, distributor order-to-cash, warranty and international-rollout event logs across Sales/Service/B2B Commerce and SAP, task-mining the 278 call-center and 206 SFA desktops to expose the swivel-chair work Agentforce can automate, and running GDPR, KKR quarterly-KPI and IATF 16949 recall controls through Compliance Center &mdash; protecting the $981k SFA + Call-Center + Customer-Portal renewal, de-risking the international rollout, and delivering KKR quarter-over-quarter operating-KPI evidence.</p>
+
+  <div class="actions">
     <span>Generate PDF</span>
     <span>Generate Slack Canvas</span>
     <span>Generate Vercel Page</span>
@@ -198,7 +247,7 @@
     <span>Deal Support Request</span>
     <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>

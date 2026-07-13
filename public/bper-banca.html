@@ -53,6 +53,7 @@
   details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
             margin: 6px 0; background: #f9fbff; }
   details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary { font-size: 1.15em; color: #032d60; }
   .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
   .aproscore-t1 { color: #0f7d3e; }
   .aproscore-t2 { color: #b45c00; }
@@ -73,8 +74,9 @@
   .nurture-box strong { color: #e65100; }
   .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
              margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
-  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px; background: #0070d2; color: #fff; border: 1px solid #0070d2; cursor: default; white-space: nowrap; font-weight: 500; }
-
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
   .snapshot .group-break { margin-top: .55em; }
   .pov-topline { margin-top: .8em; }
   details.pov-aproscore { margin-top: .8em; }
@@ -91,12 +93,15 @@
 <body>
 <header class="banner">
   <div class="banner-inner">
-    <div class="banner-left"><a href="/" class="home-btn" title="Back to AproVista home">← Home</a><img src="/banner-logo.png" alt="AproVista"></div>
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
     <div class="lib-wrap">
-      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
       <div class="lib-menu" id="libMenu">
         <div class="lib-search">
-          <input type="text" id="libSearch" placeholder="Search library…"
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
                  oninput="filterLib(this.value)" autocomplete="off">
         </div>
         <div class="lib-list" id="libList"></div>
@@ -107,42 +112,40 @@
 <main>
   <h1>BPER Banca S.p.A.</h1>
   <div class="snapshot">
-    <p><strong>Financial Services, Banking (Universal / Retail &amp; Corporate)</strong></p>
-    <p><strong>Revenue:</strong> ~€5.3B &nbsp;|&nbsp; <strong>Employees:</strong> ~18,120 &nbsp;|&nbsp; <strong>HQ:</strong> Modena, Italy</p>
-    <p><strong>Major Subsidiaries:</strong> Banco di Sardegna, Banca Cesare Ponti, BPER Credit Management, Arca Vita, Banca Carige (absorbed)</p>
-    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (SFA), Financial Services Cloud, Marketing Cloud Engagement (ExactTarget), Analytics Cloud, Data Cloud, Loyalty Management, Feedback Management, Data 360, Informatica IDMC / MDM / EDC</p>
-    <p><strong>Current Non-Salesforce Systems:</strong> MongoDB Atlas, Google BigQuery [Slack: INFA opps reference both as data stores]</p>
-    <p class="opps"><strong>Relevant Open Opps:</strong> BPER | Apromore Pilot (<a href="https://org62.my.salesforce.com/006ed00000WdfvKAAR">$50K</a>) &nbsp;|&nbsp; Apromore — engagement process improvement (<a href="https://org62.my.salesforce.com/006ed00000Wl5TGAAZ">$50K</a>) &nbsp;|&nbsp; +xx FSC UE for Monte Paschi Integration (<a href="https://org62.my.salesforce.com/006ed00000fitnZAAQ">$101K</a>)</p>
+    <p><strong>Financial Services, Banking</strong></p>
+    <p><strong>Revenue:</strong> ~&euro;5.3B &nbsp;|&nbsp; <strong>Employees:</strong> ~18,120 &nbsp;|&nbsp; <strong>HQ:</strong> Modena, Italy</p>
+    <p><strong>Major Subsidiaries:</strong> Banco di Sardegna, Banca Cesare Ponti, BPER Credit Management, BPER Leasing, Arca Vita</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Financial Services Cloud, Marketing Cloud Engagement (ExactTarget), Analytics Cloud, Data Cloud, Data 360, Loyalty Management, Feedback Management, Informatica IDMC / MDM / EDC</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> MongoDB Atlas, Google BigQuery</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> BPER | Apromore Pilot (<a href="https://org62.my.salesforce.com/006ed00000WdfvKAAR">$50k</a>) &nbsp;|&nbsp; Apromore &mdash; engagement process improvement (<a href="https://org62.my.salesforce.com/006ed00000Wl5TGAAZ">$50k</a>) &nbsp;|&nbsp; BPER | +xx FSC UE for Monte Paschi Integration (<a href="https://org62.my.salesforce.com/006ed00000fitnZAAQ">$101k</a>)</p>
     <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U02T4PQAZ7B">Luciano Tapparo</a></p>
     <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0208A8H9RS">Martino Bettiga</a></p>
     <p class="group-break"><strong>Sales Motion:</strong> Sell Integrated with Salesforce Product (Financial Services Cloud + Data Cloud)</p>
   </div>
 
   <details class="pov-aproscore">
-    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">89/100</span> — T1 Pursue</summary>
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Apromore <span class="score aproscore-t1">89/100</span> &mdash; T1 Pursue</summary>
     <table>
       <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>Active Apromore pilot in-flight</td><td>19/20</td><td class="cat-green">$50K Apromore Pilot opp already open + separate $50K engagement-process-improvement opp — champion is bought in.</td></tr>
-        <tr><td>Regulated vertical (Italian bank, ECB/Bank of Italy, DORA, AML)</td><td>14/15</td><td class="cat-green">3rd/4th largest Italian bank under ECB direct supervision — DORA + AML + Reg-EU audit drives Compliance Center value.</td></tr>
-        <tr><td>Salesforce install base breadth (FSC, MC, Data Cloud, MuleSoft, Informatica)</td><td>14/15</td><td class="cat-green">$6.3M SFA/Analytics renewal + $1.4M MC ExactTarget renewal + FSC, Data 360, Loyalty, Feedback, MDM — massive canvas.</td></tr>
-        <tr><td>Recent M&amp;A / integration complexity (Carige absorbed; Monte Paschi in-flight)</td><td>13/15</td><td class="cat-green">Just absorbed Banca Carige and now integrating Monte Paschi retail flows — post-merger process variance is textbook AFPI.</td></tr>
-        <tr><td>Named process/organization function on the buyer side</td><td>9/10</td><td class="cat-green">Dedicated "Direzione Organizzazione di Gruppo" + Process Analyst + COO Office contacts already mapped in Org62.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>15/15</td><td class="cat-green">Italian universal bank under ECB direct supervision &mdash; priority AFPI vertical with DORA + AML tailwinds.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$6.3M SFA/Analytics renewal + $1.4M MC ExactTarget renewal + FSC, Data 360, Loyalty, Feedback, Informatica MDM.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>8/8</td><td class="cat-green">DORA go-live 2026-27, ECB SREP oversight, Italian AML/SAR filings &mdash; strong Compliance Center wedge.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Two Apromore opps in-flight + Agentforce L1 layer opp + Monte Paschi integration &mdash; textbook AFPI trigger.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Post-Carige merger variance + Monte Paschi FSC UE integration + engagement redesign already scoped by champion.</td></tr>
         <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
-        <tr><td>Data &amp; MDM readiness (active Informatica IDMC / MDM / EDC / masking work)</td><td>10/15</td><td class="cat-orange">Multiple active Informatica renewals + masking + BigQuery scanner — event-log staging will need MDM-clean data first.</td></tr>
-        <tr><td>Competitive process-mining landscape in Italy (Celonis strong in EMEA banking)</td><td>6/10</td><td class="cat-orange">Celonis has EMEA banking mindshare; win depends on positioning Apromore's no-code analyst model vs. SQL/PQL two-specialist stack.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>8/12</td><td class="cat-orange">Active Informatica IDMC/MDM/EDC + BigQuery scanner + MongoDB masking &mdash; event-log staging needs MDM-clean data first.</td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>4/6</td><td class="cat-orange">Two pilot opps sized at $50k each &mdash; below $200k ACV threshold; expansion path from pilot not yet contracted.</td></tr>
       </tbody>
     </table>
   </details>
 
-  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help BPER Banca S.p.A. by mining the personal/corporate customer-engagement, onboarding, and post-Carige/Monte-Paschi integration processes across FSC, Marketing Cloud, and Informatica MDM — converting the already-approved pilot into an evidenced roadmap that shortens time-to-fund, cuts complaint SLA breaches, and gives ECB/DORA auditors a defensible control trail.</p>
-
-  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+  <h2>Top 3 Process Mining Use Cases</h2>
 
   <details>
-    <summary>1. Personal &amp; Corporate Customer Engagement Redesign (Pilot Use Case)</summary>
+    <summary>1. Personal &amp; Corporate Customer Engagement Redesign</summary>
     <div class="use-case-body">
-      <p>The pilot Elena Voli and Emanuele Baruffa have already scoped is redesigning how BPER engages personal and corporate customers across multichannel CRM, branch, and digital — a classic case where the "designed" journey and the actual event log diverge sharply. AFPI mines the lead-to-serve process across FSC, Marketing Cloud Engagement, and the multichannel CRM Elena runs to expose where campaigns leak, where advisor hand-offs stall, and which segments never receive next-best-action follow-up. This is the exact scope of the two $50K opps already in Org62, so AFPI is not sold cold — it just needs execution to convert. Metric moved: campaign-to-appointment conversion and advisor next-best-action adherence.</p>
+      <p>The pilot Elena Voli and Emanuele Baruffa already scoped is redesigning how BPER engages personal and corporate customers across multichannel CRM, branch, and digital &mdash; a classic case where the "designed" journey and the actual event log diverge sharply. AFPI mines the lead-to-serve process across FSC and Marketing Cloud Engagement to expose where campaigns leak, where advisor hand-offs stall, and which segments never receive next-best-action follow-up. This is the exact scope of the two $50k opps already in Org62, so AFPI is not sold cold &mdash; it needs execution to convert. Metric moved: campaign-to-appointment conversion and advisor next-best-action adherence.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, Marketing Cloud Engagement</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Elena+Voli+BPER">Elena Voli</a> (Responsible of Multichannel CRM)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
@@ -152,53 +155,99 @@
   <details>
     <summary>2. Post-Merger Integration: Carige &amp; Monte Paschi Retail Harmonization</summary>
     <div class="use-case-body">
-      <p>BPER absorbed Banca Carige and is now integrating Monte Paschi retail flows — the "+xx FSC UE for Monte Paschi Integration" opp is live in Org62. Two-plus core banking stacks means duplicated onboarding, KYC, and account-servicing paths that vary by legacy brand. AFPI mines the merged event logs to quantify where variance costs cycle time and where legacy Carige branches still deviate from the target BPER process, giving Gianluca Formenton's COO organization a data-backed integration scorecard. Metric moved: process-variance rate across legacy vs. target brand, integration-milestone slippage.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, Core Banking (TBD)</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Gianluca+Formenton+BPER">Gianluca Formenton</a> (Chief Operating Officer)</p>
+      <p>BPER absorbed Banca Carige and is now integrating Monte Paschi retail flows &mdash; the "+xx FSC UE for Monte Paschi Integration" opp is live in Org62. Two-plus core banking stacks means duplicated onboarding, KYC, and account-servicing paths that vary by legacy brand. AFPI mines the merged event logs to quantify where variance costs cycle time and where legacy Carige branches still deviate from the target BPER process, giving the COO organization a data-backed integration scorecard. Metric moved: process-variance rate across legacy vs. target brand, integration-milestone slippage.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, Core Banking</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Operating+Officer+BPER+Banca">Chief Operating Officer, BPER Banca</a> (TBD &mdash; field verify)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
   <details>
-    <summary>3. AML Alert Investigation &amp; Suspicious-Activity Reporting</summary>
+    <summary>3. Credit Origination &amp; Underwriting (Retail + Commercial + Large Corporate)</summary>
     <div class="use-case-body">
-      <p>As an ECB-supervised universal bank, BPER files a large volume of Segnalazioni Antiriciclaggio (Italy's SAR equivalent) and is directly exposed to DORA operational-resilience requirements landing in 2026-2027. AFPI mines the alert-to-disposition process across transaction monitoring, L1/L2 investigation, and Auditing to expose reviewer variance, escalation rework, and SLA breaches. Compliance Center then produces the evidenced control trail Vincenzo Boldrini's audit function and Bank of Italy inspectors expect. Metric moved: alerts per investigator per day, SAR filing timeliness, false-positive rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Transaction Monitoring (TBD), Salesforce Platform</p>
-      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Vincenzo+Boldrini+BPER">Vincenzo Boldrini</a> (Responsabile Auditing)</p>
-      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
-    </div>
-  </details>
-
-  <details>
-    <summary>4. Credit Origination &amp; Underwriting (Retail + Commercial + Large Corporate)</summary>
-    <div class="use-case-body">
-      <p>BPER's Divisione Retail, Corporate, and Large Corporate teams each run distinct origination flows, and Livio Tempesta's Credit Risk Management function has to prove consistent risk decisions across all three. AFPI mines the application-to-decision-to-fund process across FSC and the LOS to quantify stage-level cycle times, exception paths, and covenant-review rework — the same evidence base that unlocks a targeted Agentforce underwriter assistant later. In a rising-NPL environment for Italian banks, this directly protects the cost-of-risk line. Metric moved: application-to-close cycle time, decision-consistency across divisions, exception rate.</p>
-      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, LOS (TBD)</p>
+      <p>BPER's Divisione Retail, Corporate, and Large Corporate teams each run distinct origination flows, and Credit Risk Management has to prove consistent decisions across all three. AFPI mines the application-to-decision-to-fund process across FSC and the LOS to quantify stage-level cycle times, exception paths, and covenant-review rework &mdash; the same evidence base that unlocks a targeted Agentforce underwriter assistant later. In a rising-NPL environment for Italian banks, this directly protects the cost-of-risk line. Metric moved: application-to-close cycle time, decision consistency across divisions, exception rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, LOS</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Livio+Tempesta+BPER">Livio Tempesta</a> (Responsabile Credit Risk Management Commercial Business)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
+  <h2>Top 3 Task Mining Use Cases</h2>
+
   <details>
-    <summary>5. Master-Data &amp; Customer-Governance Cleanup (Informatica MDM + Data Cloud)</summary>
+    <summary>1. Branch Advisor Desktop Swivel-Chair</summary>
     <div class="use-case-body">
-      <p>Multiple active Informatica renewals (IDMC, MDM, EDC scanner for BigQuery, MongoDB masking) plus a live Data 360 personalization compliance opp signal that BPER is still fighting master-data fragmentation across brands and product lines. Emanuele Baruffa's Customer Governance service is on the hook for the single-customer view. AFPI mines the steward and merge/split workflows in MDM to expose where rules are firing false positives, where stewards are rubber-stamping, and where the same customer is being serviced twice across Carige/BPER/Banco di Sardegna. Metric moved: single-customer-view coverage, steward hours per 1,000 records, downstream campaign-suppression accuracy.</p>
+      <p>Branch relationship managers hop between FSC, core banking, and legacy Carige screens to complete client requests, adjust products, or resolve service issues. Task mining the advisor desktop reveals how much time is lost to app-switching, re-keying customer data, and repeat lookups &mdash; the exact steps Agentforce can eliminate. This feeds a direct expansion of the current Apromore pilot into an Agentforce-for-branch business case. Metric moved: touch-time per advisor task and rekey-per-transaction count.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, Core Banking</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Elena+Voli+BPER">Elena Voli</a> (Responsible of Multichannel CRM)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. AML Investigator Desktop &amp; Case Triage</summary>
+    <div class="use-case-body">
+      <p>L1/L2 AML investigators toggle between the transaction-monitoring platform, customer data in FSC, and case notes in Salesforce &mdash; every additional screen is time not spent on a real disposition. Task mining the investigator desktop exposes which lookups repeat, where the same alert is re-opened, and which cases are ping-ponged between L1 and L2. Pairs with Compliance Center to shrink false-positive burden while proving SLA discipline for Bank of Italy. Metric moved: alerts cleared per investigator per day, average handle-time per alert.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Transaction Monitoring, Salesforce Platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+AML+Compliance+BPER+Banca">Head of AML Compliance, BPER Banca</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. MDM Steward &amp; Customer-Governance Desktop</summary>
+    <div class="use-case-body">
+      <p>Multiple active Informatica renewals (IDMC, MDM, EDC scanner for BigQuery, MongoDB masking) plus a live Data 360 personalization opp signal that BPER is still fighting master-data fragmentation across brands and product lines. Task mining the steward desktop exposes where merge/split decisions rubber-stamp, which rules chronically fire false positives, and which lookups the steward has to redo across Carige, BPER, and Banco di Sardegna. Metric moved: steward hours per 1,000 records and single-customer-view coverage rate.</p>
       <p><strong>Key System(s) to be Process Mined:</strong> Informatica IDMC / MDM, Data Cloud</p>
       <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Emanuele+Baruffa+BPER">Emanuele Baruffa</a> (Head of Customer Governance Service)</p>
       <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
     </div>
   </details>
 
-  <h2 style="margin-top: 1.6em;" class="competitive-mentions-h">Competitive Mentions: <span class="cm-inline"><a href="https://salesforce.enterprise.slack.com/archives/C09LK6XLXAL/p1773926249469549"><strong>Celonis</strong></a> — general EMEA banking mindshare risk; positioning language ("Apromore is like Celonis, only better") already circulating internally as the standard EMEA counter. No account-specific Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, or Power Automate footprint confirmed at BPER today.</span></h2><div class="actions">
-    <span class="disabled">Generate PDF</span>
-    <span class="disabled">Generate Slack Canvas</span>
-    <span class="disabled">Generate Vercel Page</span>
-    <span class="disabled">Generate Customer Email (Beta)</span>
-    <span class="disabled">Generate Proposal Template</span>
-    <span class="disabled">Deal Support Request</span>
-    <span class="disabled">Deeper Dive POV</span>
+  <h2>Top 3 Compliance Center Use Cases</h2>
+
+  <details>
+    <summary>1. DORA Operational Resilience &amp; ICT Third-Party Register</summary>
+    <div class="use-case-body">
+      <p>DORA is landing on ECB-supervised banks in 2026-27 and demands documented ICT risk management, incident classification, and a maintained register of ICT third-party arrangements. Compliance Center codifies the incident and third-party attestation processes as controlled workflows with evidence and SLA gates, and produces an always-on register auditors can read directly. Especially valuable given BPER's ongoing multi-brand integration where third-party inventory is genuinely hard. Metric moved: DORA register accuracy, incident classification timeliness, exam-ready evidence coverage.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ITSM, Salesforce Platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chief+Risk+Officer+BPER+Banca">Chief Risk Officer, BPER Banca</a> (TBD &mdash; field verify)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. AML Alert Investigation &amp; Suspicious-Activity Reporting</summary>
+    <div class="use-case-body">
+      <p>As an ECB-supervised universal bank, BPER files a large volume of Segnalazioni Antiriciclaggio (Italy's SAR equivalent) and answers to Bank of Italy inspectors. Compliance Center runs alert-to-disposition as a controlled workflow across L1/L2 investigation, escalation, and SAR filing with codified SLAs and evidence &mdash; the audit trail Auditing has to produce today by hand. Metric moved: SAR filing timeliness, alert-clearing SLA hit-rate, evidence coverage per case.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Transaction Monitoring, Salesforce Platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Vincenzo+Boldrini+BPER">Vincenzo Boldrini</a> (Responsabile Auditing)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Personalization &amp; Data-Consent Compliance (GDPR + Data 360)</summary>
+    <div class="use-case-body">
+      <p>The active "D360 for Personalisation Compliance Update" opp shows BPER is treating consent, purpose limitation, and re-use of customer data as an ongoing compliance workflow, not a one-off project. Compliance Center codifies consent-capture, marketing-suppression, and preference-change flows across FSC, Marketing Cloud, and Data 360 with segregation of duties and time-bound sign-offs. Metric moved: consent-refresh timeliness, marketing-suppression accuracy, DSAR turn-around.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Data Cloud / Data 360, Marketing Cloud Engagement</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Emanuele+Baruffa+BPER">Emanuele Baruffa</a> (Head of Customer Governance Service)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help BPER Banca S.p.A. by mining the customer-engagement, post-Carige/Monte-Paschi integration, and credit-origination processes across FSC, Marketing Cloud, and Informatica MDM, task-mining branch-advisor, AML-investigator, and MDM-steward desktops to expose the swivel-chair work Agentforce can eliminate, and running DORA, AML/SAR, and consent-personalization controls through Compliance Center to shorten time-to-fund, cut alert-handling time, and give ECB and Bank of Italy inspectors a defensible always-on control trail.</p>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
   </div>
-  <footer class="fine">Prepared on 2026-07-05. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
 </main>
 <script src="/library.js"></script>
 </body>
