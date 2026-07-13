@@ -247,11 +247,8 @@ window.addEventListener('DOMContentLoaded', function() {
 // Language bar — translates <main> on demand via /api/translate.
 // -------------------------------------------------------------
 const LANGS = [
-  { code: 'en', flag: '🇬🇧', title: 'English',    enabled: true  },
-  { code: 'it', flag: '🇮🇹', title: 'Italiano — coming soon',  enabled: false },
-  { code: 'fr', flag: '🇫🇷', title: 'Français — coming soon',  enabled: false },
-  { code: 'de', flag: '🇩🇪', title: 'Deutsch — coming soon',   enabled: false },
-  { code: 'es', flag: '🇪🇸', title: 'Español — coming soon',   enabled: false }
+  { code: 'en', flag: '🇬🇧', title: 'English',   enabled: true },
+  { code: 'it', flag: '🇮🇹', title: 'Italiano',  enabled: true }
 ];
 
 let ORIGINAL_MAIN_HTML = null;
@@ -361,7 +358,9 @@ window.addEventListener('DOMContentLoaded', function() {
     '.lang-btn:hover { background: #f0f4ff; }' +
     '.lang-btn.active { border-color: #0070d2; background: #f0f4ff; }' +
     '#langStatus { font-size: .75em; color: #667; margin-left: 6px; min-height: 1em; }' +
-    '@media (max-width: 640px) { .lang-btn { padding: 3px 4px; font-size: 1em; } }';
+    '@media (max-width: 640px) { .lang-btn { padding: 3px 4px; font-size: 1em; } }' +
+    '.fine { font-size: .88em !important; color: #888 !important; }' +
+    '.fine a { color: #888 !important; }';
   document.head.appendChild(style);
 
   const wrap = document.createElement('div');

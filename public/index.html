@@ -93,8 +93,8 @@
                       transition: background .12s, border-color .12s; }
   .hot-leads-list a:hover { background: #dde3f0; border-color: #b7c5df; }
   .hot-leads-list a::after { content: " ↗"; opacity: .55; font-size: .9em; }
-  footer { text-align: center; color: #aaa; font-size: .74em;
-           padding: 14px 20px 18px; margin-top: 20px; border-top: 1px solid #e6ecf5;
+  footer { text-align: center; color: #888; font-size: .88em;
+           padding: 16px 20px 22px; margin-top: 20px; border-top: 1px solid #e6ecf5;
            line-height: 1.5; }
   footer a { color: #aaa; text-decoration: underline; }
   footer a:hover { color: #667; }
@@ -159,21 +159,21 @@
 
     <div class="right-col">
       <div class="card">
-        <h2>Looking for Hot Prospect Accounts?</h2>
-        <ul class="hot-leads-list">
-          <li><a href="https://org62.lightning.force.com/lightning/r/Dashboard/01Zed000000x6FtEAI/view" target="_blank" rel="noopener">AproDash AMER</a></li>
-          <li><a href="https://org62.lightning.force.com/lightning/r/Dashboard/01Zed000000x62zEAA/view" target="_blank" rel="noopener">AproDash EMEA</a></li>
-          <li><a href="https://org62.lightning.force.com/lightning/r/Dashboard/01Zed000000x6HVEAY/view" target="_blank" rel="noopener">AproDash APAC</a></li>
-        </ul>
-      </div>
-
-      <div class="card">
         <h2>Existing POV Library</h2>
         <input type="text" class="search-box" id="landingSearch"
                placeholder="Search company name…" autocomplete="off"
                oninput="filterLanding(this.value)">
         <div id="landingList"></div>
         <div class="no-results" id="landingNoResults">No accounts match that search.</div>
+      </div>
+
+      <div class="card">
+        <h2>Looking for Hot Prospect Accounts?</h2>
+        <ul class="hot-leads-list">
+          <li><a href="https://org62.lightning.force.com/lightning/r/Dashboard/01Zed000000x6FtEAI/view" target="_blank" rel="noopener">AproDash AMER</a></li>
+          <li><a href="https://org62.lightning.force.com/lightning/r/Dashboard/01Zed000000x62zEAA/view" target="_blank" rel="noopener">AproDash EMEA</a></li>
+          <li><a href="https://org62.lightning.force.com/lightning/r/Dashboard/01Zed000000x6HVEAY/view" target="_blank" rel="noopener">AproDash APAC</a></li>
+        </ul>
       </div>
     </div>
   </div>
