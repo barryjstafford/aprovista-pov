@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rena-Ware International Inc — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Rena-Ware International Inc</h1>
+  <div class="snapshot">
+    <p><strong>Retail &amp; Consumer Goods, Direct-Sales Cookware</strong></p>
+    <p><strong>Revenue:</strong> $49.95M &nbsp;|&nbsp; <strong>Employees:</strong> 300 &nbsp;|&nbsp; <strong>HQ:</strong> Redmond, WA, USA</p>
+    <p><strong>Major Subsidiaries:</strong> Rena Ware de Colombia S.A.S., Rena Ware Peru, Rena Ware Mexico</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Service Cloud (114 Call Center licenses), Service Cloud Voice, Salesforce Knowledge, Digital Engagement, Slack Enterprise+ (in flight), Agentforce for Service (in flight), Premier Success</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> VTEX (e-commerce, confirmed via web); GS Cloud Solutions is the implementation partner [Slack]. ERP not confirmed [field verify with Juan Gutierrez, Global IT Director].</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Rena-Ware &ndash; Agentforce for Service 80 (<a href="https://org62.my.salesforce.com/006ed00000UsbAzAAJ">$107k</a>) &nbsp;|&nbsp; Rena-Ware &ndash; Slack Ent+ 75 (<a href="https://org62.my.salesforce.com/006ed00000b4hHDAAY">$33k</a>) &nbsp;|&nbsp; Rena-Ware &ndash; Agentforce Coworker $0 SKUs #AFPitchOnTheFly (<a href="https://org62.my.salesforce.com/006ed00000foJG1AAM">$0</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E4NTETS">Kaela Linscombe</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t3">58/100</span> &mdash; T3 Nurture</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>10/12</td><td class="cat-green">Multi-year Service Cloud customer (~114 licenses); active $140k+ open pipeline plus renewal.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>10/12</td><td class="cat-green">Agentforce for Service ($107k) + Agentforce Coworker pitch-on-the-fly in flight right now.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>10/15</td><td class="cat-orange">Multi-country direct-sales model: distributor onboarding, commissions, cross-border O2C.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>12/20</td><td class="cat-orange">CEO, COO, CIO, Global IT Director on file &mdash; no explicit process-mining sponsor yet.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>6/12</td><td class="cat-red">Rich SFDC event logs and VTEX order data; no confirmed SAP/Oracle backbone.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>3/8</td><td class="cat-red">Consumer goods &mdash; NSF, CCPA/GDPR for LATAM distributors; no high-stakes regulated regime.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>7/15</td><td class="cat-red">Retail &amp; CG direct-sales is a mid-priority vertical for AFPI, not a top target segment.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Rena-Ware International Inc by mining their Service Cloud, Voice, and VTEX event streams to expose service-center bottlenecks, distributor-onboarding friction across the U.S. and LATAM subsidiaries, and cross-border order-to-cash variance &mdash; giving Kaela and the Agentforce Coworker pitch a tangible, data-grounded ROI story to lift this $50M direct-sales account into a bigger AFPI + Agentforce co-sell.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Service Center Case-to-Resolution Optimization</summary>
+    <div class="use-case-body">
+      <p>The 114-seat Call Center resolves distributor and consumer cases across the U.S. and Latin American markets. Handle times, escalation loops, and Voice-to-Case handoffs are almost certainly the highest-friction workflow in the business and directly feed the in-flight Agentforce for Service opp. Mining Service Cloud + Service Cloud Voice event logs surfaces where AI Coworker automations will move the needle before deployment, and quantifies expected AHT and FCR lift. Metric moved: average handle time, first-call resolution, escalation rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Service Cloud Voice</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Bob+Petersen+Rena-Ware">Bob Petersen</a> (Service Center Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Distributor Onboarding &amp; Activation Time-to-First-Order</summary>
+    <div class="use-case-body">
+      <p>Rena-Ware runs an 80+ year direct-sales model where new distributors must be recruited, trained, credentialled, and shipped their starter kits across multiple countries. Every day between application and first commissioned order is lost revenue and cohort attrition. Mining the SFDC lead / partner community lifecycle plus the VTEX first-order event exposes drop-off between application, training completion, and first sale &mdash; ideal Agentforce Coworker automation candidates. Metric moved: distributor time-to-first-order, cohort retention at 30/60/90 days.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce (Partner Community, Sales Cloud), VTEX</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Mark+Jaquith+Rena-Ware">Mark Jaquith</a> (Director of Sales Development)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Cross-Border Order-to-Cash for U.S. + LATAM Markets</summary>
+    <div class="use-case-body">
+      <p>Rena Ware de Colombia S.A.S. and adjacent Peru / Mexico subsidiaries execute order-to-cash on regionally distinct payment methods, tax regimes, and delivery windows &mdash; a classic multi-country O2C variance problem. Mining the VTEX order stream against SFDC service events reveals where each country's happy-path deviates and where currency, tax, or logistics rework hits. Delivers the numbers a $50M business needs to justify an AFPI subscription on top of Agentforce. Metric moved: order-to-cash cycle time by country, exception rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> VTEX, Salesforce</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jeff+Roberts+Rena-Ware">Jeff Roberts</a> (VP Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Distributor Commission &amp; Payout Reconciliation</summary>
+    <div class="use-case-body">
+      <p>Direct-sales commissions are the beating heart of the business model &mdash; late, disputed, or reworked payouts drive distributor churn faster than anything else. The commission workflow bridges VTEX orders, Salesforce partner data, and a back-office finance system, meaning discrepancies are hard to see end-to-end. Mining the payout pipeline surfaces where reversals, holds, and manual adjustments concentrate. Metric moved: commission dispute rate, days-to-payout, manual rework hours.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce, ERP/Finance system (TBD)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Marcie+Dominguez+Rena-Ware">Marcie Dominguez</a> (Sales Administrative Manager)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Product Return, Warranty &amp; Replacement-Parts Handling</summary>
+    <div class="use-case-body">
+      <p>Rena-Ware sells a lifetime-guaranteed product with a dedicated replacement-parts line, so warranty and return flows are a permanent operational tax. Mining the Service Cloud case stream tied to VTEX order records shows where returns wait, which reasons drive rework, and which parts drive the most inbound volume &mdash; a prime Agentforce Coworker automation surface. Metric moved: return cycle time, warranty backlog, agent touches per return.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, VTEX</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Juan+Gutierrez+Rena-Ware">Juan Gutierrez</a> (Global IT Director)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent competitive process-mining mentions tied to Rena-Ware International were found in Slack, web, or news. Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, and Power Automate are all uncontested at this account &mdash; a clean field for Apromore to lead with the Agentforce co-sell.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

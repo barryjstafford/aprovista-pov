@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Public Service Enterprise Group Incorporated — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Public Service Enterprise Group Incorporated</h1>
+  <div class="snapshot">
+    <p><strong>Utilities, Electric &amp; Gas Utility</strong></p>
+    <p><strong>Revenue:</strong> $10.1B (FY24) &nbsp;|&nbsp; <strong>Employees:</strong> ~13,000 &nbsp;|&nbsp; <strong>HQ:</strong> Newark, New Jersey, USA</p>
+    <p><strong>Major Subsidiaries:</strong> Public Service Electric and Gas Company (PSE&amp;G), PSEG Power, PSEG Long Island, PSEG Nuclear, PSEG Services Corporation</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Service Cloud (Call Center), Field Service, Energy &amp; Utilities Cloud, CRM Analytics, Marketing Cloud (ExactTarget), Salesforce Platform, MuleSoft, Informatica (DQ / CDGC in scoping)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> SAP (ERP), ServiceNow (ITSM — under active replacement review), ACES (legacy appliance-services platform), Accenture-managed support layer <em>[Slack]</em></p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> PSEG ACES Apromore CSG (<a href="https://org62.my.salesforce.com/006ed00000ez9DqAAI">$74k</a>) &nbsp;|&nbsp; PSEG ACES Implementation CSG (<a href="https://org62.my.salesforce.com/0063y00001Acp1ZAAR">$2.47M</a>) &nbsp;|&nbsp; PSEG-ITSM ServiceNow Replacement #AIAgentsOnly (<a href="https://org62.my.salesforce.com/006ed00000amCVBAA2">$932k</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U01FTNP45KR">James Malone</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">87/100</span> — T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Buyer &amp; Champion Fit</td><td>20/20</td><td class="cat-green">CIO Zeeshan Sheikh explicitly requested Apromore against ACES; SVP Brian Clark engaged.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep install base: Service Cloud, Field Service, MuleSoft, E&amp;U Cloud, Marketing Cloud, Informatica.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>12/12</td><td class="cat-green">Active AI-native delivery push; 74→32 week ACES replacement; ITSM AI-agent motion in flight.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">Regulated US utility — priority vertical with rich event-log surface across ops and customer ops.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>14/15</td><td class="cat-green">Duplicate work orders, ACES↔MWIMS disconnect, manual handoffs, ITSM ticket sprawl.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>3/6</td><td class="cat-red">Current Apromore CSG opp is only $74k (below $200k ACV threshold) — pull-through hinges on ACES follow-on.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>6/8</td><td class="cat-orange">NERC CIP / FERC / NJ BPU oversight apply, but no active audit-driven urgency surfaced in signals.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Public Service Enterprise Group Incorporated by mining the ACES-to-Salesforce replacement pathway, the Appliance-Services × Gas-Distribution work-order handoff, and the ITSM ticket flow — giving CIO Zeeshan Sheikh the empirical evidence he needs to compress a 74-week implementation into 32 weeks, retire duplicate work-order paths, and validate scope for a $2.5M fixed-fee build.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. ACES Replacement — De-Risk the 74→32 Week Implementation</summary>
+    <div class="use-case-body">
+      <p>Zeeshan Sheikh named process mining the "critical next step" before funding the ACES-to-Salesforce build. Mining ACES event logs plus MWIMS (Salesforce) surfaces the real activity mix, exceptions and variant explosion driving Salesforce Professional Services' 32-week estimate. It directly answers Zeeshan's ask: "I don't care about cheaper. I care about less risk." Metric moved: implementation confidence + fixed-fee scope accuracy for the $2.5M build.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ACES, Salesforce Field Service (MWIMS)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Zeeshan+Sheikh+PSEG">Zeeshan Sheikh</a> (CIO)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Appliance Services × Gas Distribution — Duplicate Work-Order Elimination</summary>
+    <div class="use-case-body">
+      <p>SVP Appliance Services Brian Clark confirmed ACES and MWIMS "do not communicate effectively today," producing duplicate work orders, manual handoffs and customer-experience gaps at every cross-functional boundary. Process mining across both platforms exposes exactly where the same job is being logged twice, which handoffs are manual, and where first-time-fix is failing. Metric moved: reduced truck rolls, first-time-fix uplift, cycle-time from customer request to closed work order.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ACES, Salesforce Field Service (MWIMS)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Brian+Clark+PSEG">Brian Clark</a> (SVP Appliance Services)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. ITSM Ticket Flow — Fix the Root Cause Before Automating It</summary>
+    <div class="use-case-body">
+      <p>Zeeshan pushed back on the initial ServiceNow-to-Agentforce ITSM proposal, arguing that automating a password-reset that accounts for ~50% of tickets is "treating the symptom." Mining the ServiceNow incident log surfaces the underlying identity, access and authentication paths that cause reset volume in the first place — turning "AI over broken process" into "AI over redesigned process." Metric moved: ticket volume reduction, MTTR, cost-per-contact ahead of the $932k ITSM replacement decision.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> ServiceNow, Okta / IAM</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Giuseppe+PSEG+ITSM">Giuseppe (Head of IT Service Management)</a></p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. DER Interconnection — Compress Solar / Battery Onboarding Cycle</summary>
+    <div class="use-case-body">
+      <p>The Energy &amp; Utilities Cloud DER Interconnection Portal opp targets the multi-touch approval process customers hit when connecting solar, storage or EV chargers to the PSE&amp;G grid. Mining the current-state approval and engineering-review path exposes where applications sit, get bounced, or wait on manual data checks — the difference between a 30-day and 120-day interconnection. Metric moved: interconnection cycle time, application throughput, NJ BPU service-level attainment.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce E&amp;U Cloud, legacy interconnection tooling</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=DER+Interconnection+PSEG">DER Program Lead (PSE&amp;G T&amp;D)</a></p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. SAP Procure-to-Pay — Non-Invasive Wins Around the Untouchable ERP</summary>
+    <div class="use-case-body">
+      <p>Zeeshan has explicitly ring-fenced the SAP transformation as untouchable, but the MuleSoft-to-SAP PreProd opp and MuleSoft-SAP integration work show live event flows Apromore can consume without disturbing SAP itself. Mining P2P (requisition → PO → GR → invoice → payment) surfaces maverick spend, duplicate invoices and cycle-time hotspots that ROI-fund the ACES program politically without asking anyone to touch SAP. Metric moved: rework rate, cash-to-cash days, procurement leakage.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP ECC / S/4HANA, MuleSoft flow logs</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=PSEG+Procurement+SAP">Head of Procurement, PSEG</a></p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent competitive process-mining vendor mentions tied to PSEG surfaced in Slack or public news. ServiceNow appears only as a system PSEG is actively considering <em>replacing</em> (PSEG-ITSM ServiceNow Replacement, $932k) — not as a process-mining competitor.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toyota Motor Credit Corporation — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Toyota Motor Credit Corporation</h1>
+  <div class="snapshot">
+    <p><strong>Financial Services, Captive Auto Finance</strong></p>
+    <p><strong>Revenue:</strong> ~$12.0B &nbsp;|&nbsp; <strong>Employees:</strong> 10,001+ &nbsp;|&nbsp; <strong>HQ:</strong> Plano, TX, USA</p>
+    <p><strong>Major Subsidiaries:</strong> Toyota Financial Savings Bank, Toyota Insurance Management Solutions, Toyota Motor Insurance Services, Toyota Credit de Puerto Rico, Toyota Lease Trust</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Core), Service Cloud, Financial Services Cloud, Data Cloud, Marketing Cloud, Revenue Cloud (CPQ &rarr; RCA), Agentforce (Marketing, Loan Origination &amp; Precision Ops), Salesforce CTO Advisory, MuleSoft (Anypoint, Flex Gateway, Mainland Connector), Informatica CDGC &amp; CDQ</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> SAP ERP (parent Toyota), core loan servicing platform, DealerTrack / RouteOne dealer integrations, ServiceNow ITSM [Web] &mdash; deep-system list to field-verify with Vipin Gupta&rsquo;s team</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> TFS &ndash; Scientific Process Mining and Transformation (<a href="https://org62.my.salesforce.com/006ed00000Y8GVRAA3">$150k</a>) &nbsp;|&nbsp; TFS &ndash; Agentforce for Loan Origination &amp; Precision Ops (<a href="https://org62.my.salesforce.com/006ed00000d2FMHAA2">$175k</a>) &nbsp;|&nbsp; TFS &ndash; PIF Case Process Migration (<a href="https://org62.my.salesforce.com/006ed00000aGkLVAA0">$250k</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U027002VCR0">Jeff Gardner</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">84/100</span> &mdash; T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">$30M+ open pipeline across Core, MuleSoft, Informatica, Agentforce, Data Cloud, Revenue Cloud.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">Captive auto finance &mdash; top AFPI vertical for lending, servicing, dealer flow.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>11/12</td><td class="cat-green">MuleSoft + Informatica CDGC + FSC + Service Cloud yield rich, governable event logs.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Agentforce Loan Origination, Agentforce Marketing, and Data Cloud actively scoping.</td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>7/8</td><td class="cat-green">CFPB, Reg Z/B, SOX (Toyota Motor parent), state DMV title/lien, AML/KYC obligations.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>4/6</td><td class="cat-orange">Live Apromore opp at $150k &mdash; below the $200k ACV floor; needs expansion into transformation program.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>16/20</td><td class="cat-orange">Syed Talha owns the mining opp; economic buyer at the CDIO / Chief Ops level still to be locked.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Toyota Motor Credit Corporation by mining the loan-origination-to-funding, PIF/payoff, call-center servicing, and dealer floorplan flows to expose the friction driving CX complaints and cost-to-serve, unlocking 15-25% cycle-time reductions and a defensible baseline for the Agentforce Loan Origination &amp; Precision Ops rollout.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Retail Auto Loan &amp; Lease Origination-to-Funding</summary>
+    <div class="use-case-body">
+      <p>Applications flow from dealer DMS (DealerTrack / RouteOne) through underwriting, decisioning, funding, and title/lien perfection. TMCC is investing in Agentforce for Loan Origination &amp; Precision Ops precisely because manual touches, rework, and stipulation loops are stretching decision-to-fund times. Mining the end-to-end trace across the dealer portal, underwriting engine, and Financial Services Cloud will expose the exact stips-rework loops and dealer variability driving days-to-fund. Metric moved: median application-to-fund cycle time, first-decision auto-approval rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Financial Services Cloud, core loan origination platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=David+Nichols+Toyota+Financial+Services">David Nichols</a> (Group VP, Auto Finance)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Call-Center Servicing &amp; Case Resolution (Auto Cloud Migration)</summary>
+    <div class="use-case-body">
+      <p>The active $3M &ldquo;Call Center Auto Cloud Migration and Improvements&rdquo; opp signals a service-transformation program in flight. Mining Service Cloud + Genesys/telephony event logs surfaces the repeat-contact drivers, handoff loops between originations, servicing, and collections, and the exact case types that eat AHT. Feeds Agentforce Service with proof of where an agent lifts vs. where a human is required. Metric moved: first-contact resolution, repeat-contact rate, average handle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, telephony/CTI</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Nikki+Wheeler+Toyota+Financial+Services">Nikki Wheeler</a> (VP, Customer Experience)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Paid-in-Full / Payoff &amp; Title Release</summary>
+    <div class="use-case-body">
+      <p>The open &ldquo;TFS &ndash; PIF Case Process Migration&rdquo; opp shows Toyota is actively re-platforming the payoff and title-release flow &mdash; a top CFPB complaint category across captive lenders and a direct NPS driver at loan-end. Mining the trace across servicing, cashiering, title release, and state DMV interfaces exposes the specific states, product types, and case reasons that stall title release beyond regulatory windows. Metric moved: percent of payoffs closed inside 10 business days, DMV rework rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Service Cloud, core loan servicing platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Chris+Ballinger+Toyota+Financial+Services">Chris Ballinger</a> (SVP, Business Innovation &amp; Servicing)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Dealer Wholesale &amp; Floorplan Lifecycle</summary>
+    <div class="use-case-body">
+      <p>TMCC finances Toyota and Lexus dealer inventory through wholesale floorplan, dealer real-estate, and capital loans. Mining the request-to-fund, curtailment, and payoff cycles across the dealer portal, floorplan servicing, and MuleSoft integrations exposes dealer-level variability, exception rework, and delinquency escalation patterns. Directly feeds risk-tier pricing and dealer scorecards. Metric moved: floorplan curtailment on-time rate, exception cases per dealer per month.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Dealer portal, floorplan servicing platform</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Adam+Stam+Toyota+Financial+Services">Adam Stam</a> (VP, Dealer Services)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Collections &amp; Delinquency-to-Recovery</summary>
+    <div class="use-case-body">
+      <p>Captive-finance economics live and die by collections efficiency &mdash; every day of DPD delay compounds credit loss. Mining the trace from first missed payment through outbound contact strategy, promise-to-pay, deferral, repossession, and recovery reveals which action sequences actually pull accounts back to current versus those that only delay charge-off. Pairs naturally with Agentforce for outbound and Data Cloud for likelihood scoring. Metric moved: cure rate at 30/60/90 DPD, cost per recovered dollar.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Collections platform, Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Vipin+Gupta+Toyota+Financial+Services">Vipin Gupta</a> (Group VP, Chief Digital &amp; Information Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline"><a href="https://www.celonis.com/customer-success-stories/toyota-process-mining-manufacturing/"><strong>Celonis</strong></a> &mdash; publicly cited at Toyota Motor North America for manufacturing/supply-chain mining; captive-finance side is open. &nbsp;&middot;&nbsp; <a href="https://www.servicenow.com/customers/toyota.html"><strong>ServiceNow</strong></a> &mdash; entrenched in Toyota IT service management, adjacent to workflow-mining ambitions. &nbsp;&middot;&nbsp; <a href="https://www.uipath.com/resources/automation-case-studies/toyota-financial-services"><strong>UiPath</strong></a> &mdash; RPA footprint reported at TFS servicing operations; automation without a mining baseline.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-13. &ldquo;AproVista AI SDR Agent&rdquo; &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

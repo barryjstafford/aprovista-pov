@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>American Campus Communities Services, Inc. — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">← Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library ▾</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library…"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>American Campus Communities Services, Inc.</h1>
+  <div class="snapshot">
+    <p><strong>Real Estate, Student Housing REIT</strong></p>
+    <p><strong>Revenue:</strong> $943M &nbsp;|&nbsp; <strong>Employees:</strong> ~3,183 &nbsp;|&nbsp; <strong>HQ:</strong> Austin, Texas, USA</p>
+    <p><strong>Major Subsidiaries:</strong> American Campus Communities LLC, American Campus Communities Operating Partnership (owned by Blackstone / BREIT since 2022 take-private)</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud (Platform), Service Cloud (Support, Call Center), Marketing Cloud (ExactTarget, SMS), Tableau, plus in-flight Data Cloud (per MC-ACC-AO-DC Phase 2 opp)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://www.linkedin.com/search/results/people/?keywords=Jorge+De+Cardenas+American+Campus+Communities">Jorge De Cardenas</a>, EVP &amp; CTO] — property-management stack (Yardi expected) and finance backbone need confirmation before mining scope</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> ACC apromore (<a href="https://org62.my.salesforce.com/006ed00000amHLCAA2">$175k</a>) | MC - ACC - AO - DC Phase 2 (<a href="https://org62.my.salesforce.com/006ed00000MTeYUAA1">$200k</a>) | MS-American Campus Communities-Integration (<a href="https://org62.my.salesforce.com/006ed00000XRuazAAD">$120k</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U098MJ5Q9SM">Eric Bloomberg</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t2">75/100</span> — T2 Develop</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Commercial Timing &amp; Deal Viability</td><td>6/6</td><td class="cat-green">ACC apromore opp already open at $175k, Stage 01, close 2026-09-30, owner Eric Bloomberg.</td></tr>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>11/12</td><td class="cat-green">Multi-cloud: Sales, Service, Marketing (ExactTarget + SMS), Tableau, plus live Data Cloud opp.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>18/20</td><td class="cat-green">COO Beese, EVP Business Ops Greenberg, EVP CTO De Cardenas, SVP Facilities Barry all reachable.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>12/15</td><td class="cat-orange">167k-bed annual turn, work-order backlog, and touchless-renewal automation flag repeatable process pain.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>9/12</td><td class="cat-orange">Rich SF event logs; Yardi + finance stack assumed but not yet field-confirmed for log access.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>4/8</td><td class="cat-red">Post-take-private (no SOX); Fair Housing / Title IX / Clery obligations exist but light regulatory push.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>10/15</td><td class="cat-orange">Student housing REIT is not top-priority vertical, but Blackstone-portfolio ops rationalization helps.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help American Campus Communities Services, Inc. by mining its annual turn, resident renewal, and maintenance work-order lifecycles across Salesforce and Yardi to strip cycle-time and rework out of the 167k-bed operating machine, giving Blackstone-era leadership hard evidence for the touchless-renewal automation and Agentforce Data Cloud investments already in-flight.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Annual Turn: Move-Out to Move-In Across 200+ Properties</summary>
+    <div class="use-case-body">
+      <p>ACC's student-housing model concentrates ~90% of lease commencements into a two-week August window across 200+ properties and 167k beds — the "turn." Inspections, cleanings, damage assessments, punch lists, and move-in scheduling collide with billing, deposits, and customer-service load. Apromore can mine the turn-lifecycle across Yardi and Service Cloud to expose the properties, roles, and steps that miss commencement SLA — the single biggest operating risk of the year. Metric: percentage of units ready at day-zero and turn-labor cost per bed.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Yardi Voyager, Salesforce Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Dan+Barry+American+Campus+Communities">Dan Barry</a> (SVP Facilities Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Touchless Resident Renewal Automation</summary>
+    <div class="use-case-body">
+      <p>Two open Org62 opps ("ARY Touchless Renewal Automation Only") signal an active automation push on lease renewals — the highest-margin retention lever in student housing. Renewal decisions blend Marketing Cloud journeys, Sales Cloud follow-up, and Yardi lease creation, with parent/guarantor co-signer flows layered on top. Apromore can mine the current renewal path to find handoff drops and pricing-approval loops before Agentforce agents get bolted on. Metric: renewal conversion rate and days-to-lease-signature.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Marketing Cloud, Yardi Voyager</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Kimberly+Kelley+American+Campus+Communities">Kimberly Kelley</a> (EVP &amp; Chief Marketing Officer)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Maintenance Work-Order Lifecycle (167k-Bed Portfolio)</summary>
+    <div class="use-case-body">
+      <p>Maintenance ticket volume at 167k beds is enormous and highly variable seasonally; first-time-fix, technician routing, parts availability, and resident SLA drive resident-satisfaction and retention. Work orders originate in Service Cloud and complete in Yardi's facilities module, with a persistent gap in visibility across the two. Apromore mines the full ticket-to-resolution path, spotlighting re-visit drivers, aging categories, and property-level variants. Metric: mean-time-to-resolve and first-time-fix rate.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Yardi Voyager</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Thomas+Hickey+American+Campus+Communities">Thomas Hickey</a> (SVP Operations)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Lead-to-Lease Marketing Funnel</summary>
+    <div class="use-case-body">
+      <p>ACC runs Marketing Cloud (ExactTarget) plus SMS across university-partnered campaigns to drive tours, applications, and lease signatures. The $331k MC ExactTarget renewal plus a live SMS opp show the channel is core, but the conversion funnel spans MC, Sales Cloud, and Yardi with fractured attribution. Apromore mines the full journey to expose where prospects stall, which sources convert, and how much marketing spend is being wasted on properties already at target occupancy. Metric: cost-per-signed-lease and top-of-funnel-to-lease conversion.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Marketing Cloud, Salesforce Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Jerell+Binkley+American+Campus+Communities">Jerell Binkley</a> (VP Marketing Operations, Creative &amp; Production Services)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Property Onboarding &amp; Portfolio Integration Under Blackstone</summary>
+    <div class="use-case-body">
+      <p>Since the 2022 Blackstone take-private, ACC has continued to acquire and integrate properties into a shared operating model. Each property must be onboarded to Yardi, Salesforce, Marketing Cloud, and facilities systems on a compressed timeline — often before the next turn cycle. Apromore can map the "as-is" onboarding workflow, exposing where new-property integration lags and which handoffs (dev → operations → marketing → facilities) drop the ball. Metric: time from acquisition close to full-system operational readiness.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Yardi Voyager, Salesforce Sales Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Heather+Laney+American+Campus+Communities">Heather Laney</a> (SVP Development &amp; Property Integration)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline">No recent competitor mentions (Celonis, ARIS, Signavio, ABBYY, ServiceNow, Appian, UiPath, Power Automate) tied to American Campus Communities found in Slack or public sources — greenfield for Apromore ahead of the Stage 01 push to close.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" — Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>

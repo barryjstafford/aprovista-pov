@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stellantis N.V. — AFPI POV</title>
+<style>
+  body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0;
+         color: #1a1a1a; line-height: 1.45; background: #fff; }
+  .banner { background: #fff; padding: 14px 0 4px; }
+  .banner-inner { max-width: 880px; margin: 0 auto; padding: 0 28px;
+                  display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .banner img { height: 120px; width: auto; flex-shrink: 0; display: block; }
+  .lib-wrap { position: relative; }
+  .lib-btn { background: #f0f4ff; color: #032d60;
+             border: 1px solid #dde3f0; padding: 7px 13px;
+             border-radius: 6px; cursor: pointer; font-size: .85em;
+             font-family: inherit; white-space: nowrap; }
+  .lib-btn:hover { background: #dde3f0; }
+  .lib-menu { display: none; position: absolute; right: 0; top: calc(100% + 6px);
+              background: #fff; border-radius: 8px;
+              box-shadow: 0 4px 20px rgba(0,0,0,.2); min-width: 280px;
+              max-height: 60vh; overflow: hidden; z-index: 100; }
+  .lib-menu.open { display: flex; flex-direction: column; }
+  .lib-search { padding: 8px 10px; border-bottom: 1px solid #f0f4ff; background: #fff; }
+  .lib-search input { width: 100%; box-sizing: border-box; padding: 6px 10px;
+                      border: 1px solid #dde3f0; border-radius: 4px;
+                      font-size: .85em; font-family: inherit; outline: none; }
+  .lib-search input:focus { border-color: #0070d2; }
+  .lib-list { overflow-y: auto; max-height: calc(60vh - 44px); }
+  .lib-list a { display: block; padding: 8px 15px; color: #032d60;
+                text-decoration: none; font-size: .87em;
+                border-bottom: 1px solid #f0f4ff; }
+  .lib-list a:last-child { border-bottom: none; }
+  .lib-list a:hover { background: #f0f4ff; }
+  .lib-list a.hidden { display: none; }
+  main { max-width: 880px; margin: 16px auto; padding: 0 28px; }
+  h1 { color: #032d60; border-bottom: 3px solid #0070d2; padding-bottom: 6px;
+       margin: 0 0 10px; font-size: 1.85em; }
+  h2 { color: #032d60; margin: 1em 0 .3em; font-size: 1.2em; }
+  p { margin: .35em 0; }
+  ul { margin: .3em 0 .5em; padding-left: 22px; }
+  ul li { margin: .15em 0; }
+  strong { color: #032d60; }
+  a { color: #0070d2; }
+  table { border-collapse: collapse; width: 100%; margin: 4px 0; }
+  th, td { padding: 4px 12px; border-bottom: 1px solid #dde3f0; text-align: left;
+           vertical-align: top; }
+  th { background: #f0f4ff; font-weight: 600; }
+  .cat-green  { color: #0f7d3e; }
+  .cat-orange { color: #b45c00; }
+  .cat-red    { color: #b00020; }
+  details { border: 1px solid #dde3f0; border-radius: 6px; padding: 6px 14px;
+            margin: 6px 0; background: #f9fbff; }
+  details summary { cursor: pointer; font-weight: bold; font-size: 1.02em; }
+  .aproscore-summary .score { font-size: 1.18em; font-weight: 700; margin: 0 4px; }
+  .aproscore-t1 { color: #0f7d3e; }
+  .aproscore-t2 { color: #b45c00; }
+  .aproscore-t3 { color: #b00020; }
+  .use-case-body { margin-top: 8px; }
+  .deep-dive-btn { display: inline-block; margin-top: 8px; font-size: .76em;
+                   padding: 4px 10px; border-radius: 12px; background: #f5f5f5;
+                   color: #999; border: 1px solid #e5e5e5; cursor: not-allowed; }
+  hr { border: none; border-top: 1px solid #dde3f0; margin: 10px 0; }
+  .fine { text-align: center; color: #aaa; font-size: .75em;
+          margin-top: 20px; padding-top: 8px; border-top: 1px solid #eee; }
+  .fine a { color: #aaa; }
+  .snapshot { padding-left: 20px; line-height: 1.35; margin-bottom: 2px; }
+  .snapshot p { margin: 0; }
+  .snapshot .opps a { font-size: .78em; }
+  .nurture-box { background: #fff8f0; border-left: 4px solid #e65100;
+                 padding: 8px 14px; border-radius: 0 6px 6px 0; margin: 10px 0; }
+  .nurture-box strong { color: #e65100; }
+  .actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;
+             margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid #eee; }
+  .actions span { font-size: .76em; padding: 6px 14px; border-radius: 14px;
+                  background: #0070d2; color: #fff; border: 1px solid #0070d2;
+                  cursor: default; white-space: nowrap; font-weight: 500; }
+  .snapshot .group-break { margin-top: .55em; }
+  .pov-topline { margin-top: .8em; }
+  details.pov-aproscore { margin-top: .8em; }
+  .competitive-mentions-h { font-size: 1.1em; }
+  .cm-inline { font-weight: normal; font-size: .78em; color: #444; }
+  .home-btn { display: inline-block; padding: 5px 11px; margin-right: 12px;
+              background: #f0f4ff; color: #032d60; border: 1px solid #dde3f0;
+              border-radius: 6px; text-decoration: none; font-size: .85em;
+              font-weight: 500; white-space: nowrap; }
+  .home-btn:hover { background: #dde3f0; }
+  .banner-left { display: flex; align-items: center; gap: 4px; }
+</style>
+</head>
+<body>
+<header class="banner">
+  <div class="banner-inner">
+    <div class="banner-left">
+      <a href="/" class="home-btn" title="Back to AproVista home">&larr; Home</a>
+      <img src="/banner-logo.png" alt="AproVista">
+    </div>
+    <div class="lib-wrap">
+      <button class="lib-btn" onclick="toggleLib()">Existing POV Library &#9662;</button>
+      <div class="lib-menu" id="libMenu">
+        <div class="lib-search">
+          <input type="text" id="libSearch" placeholder="Search library&hellip;"
+                 oninput="filterLib(this.value)" autocomplete="off">
+        </div>
+        <div class="lib-list" id="libList"></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <h1>Stellantis N.V.</h1>
+  <div class="snapshot">
+    <p><strong>Manufacturing, Automotive OEM &mdash; Parts &amp; Aftersales (Mopar)</strong></p>
+    <p><strong>Revenue:</strong> ~$189B (FY2024 group) &nbsp;|&nbsp; <strong>Employees:</strong> ~258,000 group / ~113,000 North America &nbsp;|&nbsp; <strong>HQ:</strong> Auburn Hills, Michigan (Mopar / FCA US); group HQ Amsterdam, Netherlands</p>
+    <p><strong>Major Subsidiaries:</strong> Chrysler, Jeep, Ram, Dodge, Fiat</p>
+    <p class="group-break"><strong>Current Salesforce Products:</strong> Sales Cloud, Service Cloud, Tableau (Stellantis NA COE-Tableau), Heroku (Stellantis NA COE-Heroku), MuleSoft, CRM Analytics, Agentforce (active), Genesys Cloud (partner)</p>
+    <p><strong>Current Non-Salesforce Systems:</strong> Not confirmed [field verify with <a href="https://salesforce.enterprise.slack.com/team/U05T2FB0RSS">Allie Miller</a>] &mdash; Mopar parts &amp; aftersales stack (typical mix of SAP / dealer DMS / ServiceNow) not attested in Org62 or Slack signals.</p>
+    <p class="opps"><strong>Relevant Open Opps:</strong> Stellantis Mopar - Apromore [AMER Split 50%] (<a href="https://org62.my.salesforce.com/006ed00000ZrRabAAF">$500k</a>) &nbsp;&middot;&nbsp; Stellantis FCA US - Fleet Management Phase 1 (<a href="https://org62.my.salesforce.com/006ed00000YlA5BAAV">$744k</a>) &nbsp;&middot;&nbsp; Stellantis Mopar #BeatBI Tableau [AMER Split 50%] (<a href="https://org62.my.salesforce.com/006ed00000VD7JZAA1">$78k</a>)</p>
+    <p class="group-break"><strong>Apromore AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U0A1E3Q4SGG">Charlie Stuard</a></p>
+    <p><strong>Salesforce AE:</strong> <a href="https://salesforce.enterprise.slack.com/team/U05T2FB0RSS">Allie Miller</a></p>
+    <p class="group-break"><strong>Sales Motion:</strong> Co-Sell with Agentforce Operations</p>
+  </div>
+
+  <details class="pov-aproscore">
+    <summary class="aproscore-summary">AproScore: Propensity to Buy Process Mining <span class="score aproscore-t1">85/100</span> &mdash; T1 Pursue</summary>
+    <table>
+      <thead><tr><th>Category</th><th>Score</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Salesforce Footprint &amp; Relationship</td><td>12/12</td><td class="cat-green">Deep SF footprint: Sales/Service/Tableau/Heroku/MuleSoft/Agentforce + Allie Miller relationship.</td></tr>
+        <tr><td>Industry / Vertical Priority</td><td>14/15</td><td class="cat-green">Automotive OEM aftersales &mdash; a priority vertical for process mining globally.</td></tr>
+        <tr><td>Transformation &amp; Agentic-AI Momentum</td><td>11/12</td><td class="cat-green">Active Agentforce, AutoAgents, Fleet Mgmt Phase 1, and a live Apromore POC opp.</td></tr>
+        <tr><td>Process-Pain Intensity</td><td>13/15</td><td class="cat-green">Mopar parts backorders, warranty cycle time, dealer service dispatch are well-known pains.</td></tr>
+        <tr><td>Systems &amp; Event-Log Readiness</td><td>10/12</td><td class="cat-orange">Salesforce Service &amp; Fleet event logs available; Mopar SAP/DMS stack not yet attested.</td></tr>
+        <tr><td colspan="3"><em>Top 2 negative scores</em></td></tr>
+        <tr><td>Compliance &amp; Risk Pressure</td><td>5/8</td><td class="cat-orange">NHTSA recall / warranty audit exposure exists, but not the primary buying driver at Mopar.</td></tr>
+        <tr><td>Buyer &amp; Champion Fit</td><td>15/20</td><td class="cat-orange">AE relationship strong; named process-mining sponsor at Mopar VP level still to be locked.</td></tr>
+      </tbody>
+    </table>
+  </details>
+
+  <p class="pov-topline"><strong>Topline POV:</strong> Apromore can help Stellantis N.V. by mining the Mopar parts order-to-cash, warranty claims, and dealer service processes end-to-end &mdash; collapsing dealer backorder cycle time, recovering warranty leakage, and giving the Agentforce rollout the process baseline it needs to prove ROI in weeks, not quarters.</p>
+
+  <h2>Top 5 Process Intelligence Use Cases to be Mined</h2>
+
+  <details>
+    <summary>1. Mopar Parts Order-to-Cash &amp; Dealer Backorder Reduction</summary>
+    <div class="use-case-body">
+      <p>Mine the end-to-end parts order path from dealer order entry through distribution center pick/pack, freight, and dealer receipt. Backorder churn and split shipments are the largest complaint driver in Mopar aftersales and directly hit dealer CSI scores. Apromore isolates the variants and bottlenecks driving late-order and no-fill events, feeding a targeted Agentforce Operations play on the top 10 SKUs. Metric moved: dealer fill-rate + order cycle time.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> SAP (parts ERP), Salesforce Service Cloud</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=VP+Mopar+Parts+Operations+Stellantis">VP Mopar Parts &amp; Service Operations</a> (Mopar aftersales leadership, Auburn Hills)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Warranty Claims Cycle-Time &amp; Leakage Recovery</summary>
+    <div class="use-case-body">
+      <p>Warranty claim processing at Mopar involves dealer submission, engineering adjudication, supplier chargeback, and payment &mdash; a highly variant workflow with material $ leakage. Mining the claim event log surfaces reject-and-resubmit loops, aged claims &gt; 45 days, and supplier recovery gaps. AFPI conformance checking against the standard claim policy targets recovery on aged inventory. Metric moved: claim adjudication cycle time + supplier chargeback recovery $.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, SAP (warranty module)</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Director+Warranty+Operations+Stellantis+Mopar">Director, Warranty Operations</a> (Mopar / FCA US)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Dealer Service Ticket Dispatch &amp; Fix-First-Visit</summary>
+    <div class="use-case-body">
+      <p>Service Cloud is already in-flight for the Mopar dealer network. Mine the ticket lifecycle from customer schedule through diagnostic, parts pull, tech dispatch, and close &mdash; especially the multi-visit repeat repair variant that erodes CSI. Apromore identifies the variant paths driving fix-first-visit misses so Agentforce Service Agents can pre-empt the parts/knowledge gap. Metric moved: first-visit resolution rate + repeat-repair %.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Service Cloud, Dealer DMS</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Director+Aftersales+Digital+Stellantis+Mopar">Director, Aftersales Digital / Service Experience</a> (Mopar)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Commercial Fleet Onboarding &amp; Order Fulfillment</summary>
+    <div class="use-case-body">
+      <p>The Stellantis FCA US Fleet Management Phase 1 opp ($744k, Stage 03) is a natural anchor. Mine the fleet customer journey from RFP through vehicle configuration, order placement, dealer allocation, delivery, and post-sale service enrollment. Late allocations and dealer swap loops are the biggest friction points that push out fleet revenue recognition. Metric moved: fleet order-to-delivery cycle + on-time delivery %.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, SAP</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Fleet+Sales+Stellantis+FCA+US">Head of Fleet Sales</a> (Stellantis FCA US)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <details>
+    <summary>5. Dealer Lead-to-Order &amp; Digital Retailing Handoff</summary>
+    <div class="use-case-body">
+      <p>Mine the dealer lead journey from OEM digital lead capture (Stellantis.com brand sites) through dealer CRM assignment, follow-up, and vehicle sale close. Lead leakage between the OEM digital layer and the dealer DMS is a chronic Mopar/Chrysler channel gap and a top Agentforce Sales use case candidate. Apromore quantifies where leads die, giving the Agentforce and Digital Retailing teams a targeted first play. Metric moved: lead-to-appointment conversion + speed-to-first-response.</p>
+      <p><strong>Key System(s) to be Process Mined:</strong> Salesforce Sales Cloud, Dealer DMS</p>
+      <p><strong>Key Contact:</strong> <a href="https://www.linkedin.com/search/results/people/?keywords=Head+of+Digital+Retail+Stellantis+North+America">Head of Digital Retail, North America</a> (Stellantis / Mopar brands)</p>
+      <span class="deep-dive-btn disabled">Deep Dive (coming soon)</span>
+    </div>
+  </details>
+
+  <h2 class="competitive-mentions-h" style="margin-top: 1.6em;">Competitive Mentions: <span class="cm-inline"><a href="https://www.celonis.com/customer-success-stories/"><strong>Celonis</strong></a> &mdash; Heavy automotive-OEM footprint (BMW, VW) makes Celonis the default incumbent to displace in any Mopar procurement conversation. &nbsp;&middot;&nbsp; <a href="https://www.servicenow.com/products/process-mining.html"><strong>ServiceNow</strong></a> &mdash; ServiceNow ITOM &amp; process mining likely present in Stellantis IT ops; scope carefully to business/aftersales processes to avoid overlap. &nbsp;&middot;&nbsp; <a href="https://www.uipath.com/"><strong>UiPath</strong></a> &mdash; RPA presence common in auto back-office; position Apromore as the process baseline that makes their automations targeted.</span></h2>
+
+  <div class="actions">
+    <span>Generate PDF</span>
+    <span>Generate Slack Canvas</span>
+    <span>Generate Vercel Page</span>
+    <span>Generate Customer Email (Beta)</span>
+    <span>Generate Proposal Template</span>
+    <span>Deal Support Request</span>
+    <span>Deeper Dive POV</span>
+  </div>
+  <footer class="fine">Prepared on 2026-07-13. "AproVista AI SDR Agent" &mdash; Created by <a href="https://salesforce.enterprise.slack.com/team/U01G8AACDMH">Barry Stafford</a>, VP Data Foundation, Salesforce, for Dr. Marcello La Rosa, Founder &amp; CEO, Apromore by Salesforce. June 2026.</footer>
+</main>
+<script src="/library.js"></script>
+</body>
+</html>
