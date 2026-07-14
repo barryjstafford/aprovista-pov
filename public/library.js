@@ -103,6 +103,7 @@ const LIBRARY = [
   { name: "Trex Company, Inc.", slug: "trex", region: "AMER", score: 76 },
   { name: "TripADeal Pty Ltd", slug: "tripadeal", region: "ANZ", score: 82 },
   { name: "U.S. Bancorp", slug: "us-bank", region: "AMER", score: 91 },
+  { name: "UniCredit S.p.A.", slug: "unicredit", region: "EMEA", score: 90 },
   { name: "Water Corporation", slug: "water-corporation-wa", region: "ANZ", score: 81 },
   { name: "Westernport Region Water Corporation", slug: "westernport-water", region: "ANZ", score: 52 },
   { name: "Westpac Banking Corporation", slug: "westpac", region: "ANZ", score: 87 },
