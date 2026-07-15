@@ -89,6 +89,7 @@ const LIBRARY = [
   { name: "Royal Automobile Club of Victoria (RACV) Ltd", slug: "racv", region: "ANZ", score: 87 },
   { name: "Safilo Group S.p.A.", slug: "safilo", region: "EMEA", score: 80 },
   { name: "South East Water Corporation", slug: "south-east-water", region: "ANZ", score: 90 },
+  { name: "Stellantis &You (Distrigo) Italy S.p.A.", slug: "stellantis-you-distrigo-italy", region: "EMEA", score: 89 },
   { name: "Stellantis Financial Services, Inc.", slug: "stellantis-financial", region: "AMER", score: 92 },
   { name: "Stellantis N.V.", slug: "stellantis", region: "AMER", score: 85 },
   { name: "Stowe Australia Pty Ltd", slug: "stowe-australia", region: "ANZ", score: 82 },
